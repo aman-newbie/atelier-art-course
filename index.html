@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atelier — The Complete Drawing Foundations Path</title>
+<meta name="description" content="A structured, free path from your first pencil line to professional-level drawing fundamentals.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="topbar">
+  <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </button>
+  <a href="#" class="brand" id="homeLink">
+    <svg class="brand-mark" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6">
+      <path d="M6 26 L22 10 L26 14 L10 30 Z" stroke-linejoin="round"/>
+      <path d="M22 10 L26 6 L29 9 L25 13" stroke-linejoin="round"/>
+      <path d="M6 26 L4 30 L8 28 Z" stroke-linejoin="round" fill="currentColor"/>
+    </svg>
+    <span class="brand-word">Atelier</span>
+  </a>
+  <div class="topbar-search">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+    <input type="search" id="searchInput" placeholder="Search modules…" aria-label="Search modules">
+  </div>
+  <div class="topbar-spacer"></div>
+  <div class="topbar-actions">
+    <div class="font-adjust" role="group" aria-label="Adjust text size">
+      <button id="fontDown" aria-label="Decrease text size">A−</button>
+      <button id="fontUp" aria-label="Increase text size">A+</button>
+    </div>
+    <span class="xp-pill" id="xpPill" title="Experience points earned"><span class="xp-label">XP</span> <b id="xpValue">0</b></span>
+    <button class="icon-btn" id="themeToggle" aria-pressed="false" aria-label="Toggle dark mode">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+<div class="app">
+  <nav class="sidebar" id="sidebar" aria-label="Curriculum navigation">
+    <div class="side-section">
+      <span class="side-label">Your path</span>
+      <div id="sideNav"></div>
+    </div>
+  </nav>
+
+  <main class="main" id="main"></main>
+</div>
+
+<div class="scroll-top" id="scrollTop" role="button" tabindex="0" aria-label="Scroll to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<div class="floating-player" id="floatingPlayer" hidden role="dialog" aria-label="Video player">
+  <div class="fp-header" id="fpHeader">
+    <span class="fp-drag-dots" aria-hidden="true">⠿</span>
+    <span class="fp-title" id="fpTitle">Video</span>
+    <div class="fp-actions">
+      <button class="fp-btn" id="fpMinBtn" aria-label="Minimize player">–</button>
+      <button class="fp-btn" id="fpCloseBtn" aria-label="Close player">×</button>
+    </div>
+  </div>
+  <div class="fp-body" id="fpBody">
+    <div class="fp-video" id="fpVideo"></div>
+    <div class="fp-notes">
+      <div class="fp-notes-label">Notes for this module</div>
+      <textarea id="fpNotesArea" class="fp-notes-textarea" placeholder="Jot something down while you watch…"></textarea>
+      <div class="fp-notes-status" id="fpNotesStatus"></div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <span>Atelier — a free, honestly-scoped art education project. Foundations arc live now; the rest of the roadmap is being built in the same way, one verified arc at a time.<br><span id="storageStatus" class="storage-status"></span></span>
+  <span class="footer-actions">
+    <button id="exportBtn">Export progress</button>
+    <button id="importBtn">Import progress</button>
+    <input type="file" id="importFile" accept="application/json" class="visually-hidden">
+    <button id="resetBtn">Reset progress</button>
+  </span>
+</footer>
+
+<script src="curriculum-1.js"></script>
+<script src="curriculum-2.js"></script>
+<script src="curriculum-3.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
