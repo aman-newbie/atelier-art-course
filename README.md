@@ -20,3 +20,7 @@ A free, verified-resource art education course — structured drawing fundamenta
 - `app.js` — combines the curriculum parts and holds all app logic (rendering, state, persistence, the floating video player)
 
 Open `index.html` in a browser, or host the folder anywhere that serves static files.
+
+## Workflow note
+
+Changes land on a branch first, get verified, then merge to `main` — nothing goes straight to `main` untested.
