@@ -808,9 +808,434 @@ const CURRICULUM_3 = [
       }
     ]
   },
-{id:'nature-arch', title:'Nature & Architecture', status:'soon', order:5,
-    desc:'Trees, plants, rocks, water, sky and weather — then buildings, interiors, and cities, built with the same construction logic as everything before it.',
-    moduleCount:22, sample:['Trees','Water','Clouds & Sky','Building Construction','Interiors','Cityscapes']},
+{id:'nature-arch', title:'Nature & Architecture', status:'live', order:5,
+    desc:'Trees, plants, rocks, water, sky and weather — then buildings, interiors, and cities, built with the same construction logic as everything before it. Batch 1 (nature) is live; buildings and cities are next.',
+    modules:[
+{
+"id": "m48",
+"plate": 48,
+"title": "Tree Structure & Branching",
+"difficulty": "Intermediate",
+"studyTime": "20 min",
+"practiceTime": "25\u201330 min/day",
+"prereq": ["m7", "m10"],
+"hook": "A tree is not a flat stick with green fluff \u2014 it is an expanding hydraulic network of tapering cylinders obeying Leonardo's branching law in three-dimensional space.",
+"whyItMatters": [
+  "Beginners almost always draw trees as 2D lollipop sticks or flat branching forks, ignoring the fact that a trunk is a heavy, grounded cylinder rooted in perspective.",
+  "This module directly applies the cylinder construction from Module 7 and the combine-and-cut logic from Module 10 to organic structures: every branch is a cylinder that twists, turns, and foreshortens in 3D space before splitting."
+],
+"coreIdea": [
+  "The trunk and branches are fundamentally <b>tapering cylinders</b>. The trunk starts widest at the root flare (where it anchors into the ground plane) and gradually narrows as it ascends. Every branch must emerge from the surface of the parent cylinder, not as a tangent line attached to the silhouette edge.",
+  "<b>Leonardo's branching rule</b> (the conservation of area) dictates that the combined cross-sectional thickness of all child branches at any fork roughly equals the thickness of the parent branch just before the split. A parent branch never becomes thinner than its child branches, and child branches never combine to exceed the parent's girth.",
+  "Branches grow in three dimensions around the full circumference of the trunk using <b>cylindrical cross-contours</b> (Module 7). Branches emerge toward the viewer (heavily foreshortened), away from the viewer (partially occluded), and out to the sides. Drawing only left-and-right branches flattens the tree into a pressed specimen.",
+  "Branch joints form an organic <b>collar joint</b> (a slight swelling or socket) where the child branch anchors into the parent wood. Branches change direction at growth nodes (phototropism), creating angular gestures and structural rhythm rather than limp, rubbery noodles."
+],
+"mistakes": [
+  "Drawing branches only on the 2D left and right silhouette edges, creating a flat, pressed-flower appearance without depth.",
+  "Violating the rule of taper: making child branches thicker than the parent trunk, or drawing uniform-width pipes without narrowing.",
+  "Attaching branches at sharp 90-degree right angles without organic collar joints or directional flow lines.",
+  "Drawing straight, rubbery limbs that lack the distinct angular direction changes at seasonal growth nodes."
+],
+"proTips": [
+  "Draw continuous centerline gesture curves through each branch before establishing the cylindrical volume and cross-contour ellipses.",
+  "Always draw the branches that point directly toward and away from the viewer first to lock in 3D depth before adding side branches.",
+  "Flay the base of the trunk outward into 3 or 4 visible root buttresses to anchor the tree firmly into the ground plane."
+],
+"practice": {
+  "warmup": "Construct 5 branching cylinders in 2-point perspective, ensuring child branch diameters sum to the parent branch diameter.",
+  "daily": "Draw one complete bare tree skeleton from reference, tracking the primary trunk, secondary boughs, and tertiary twigs in space.",
+  "weekly": "Do a comparative study of three distinct tree species (e.g., Oak with heavy angular boughs, Birch with slender upright curves, Pine with a dominant central mast) focusing purely on skeletal branching rules.",
+  "challenge": "Draw a large twisting deciduous tree viewed from an extreme low-angle perspective (worm's-eye view), with branches foreshortened overhead."
+},
+"resources": [
+  {"type": "Video", "title": "Pen & Ink Drawing Tutorials | How to draw tree trunks & branches", "creator": "Alphonso Dunn", "url": "https://www.youtube.com/watch?v=hvVNZUT7tDM", "why": "Demonstrates practical branch splitting, natural taper ratios, and bark contour lines.", "verified": true},
+  {"type": "Course", "title": "Lesson 3: Applying Construction to Plants", "creator": "Drawabox (Irshad Karim)", "url": "https://drawabox.com/lesson/3", "why": "Breaks down organic plant and tree structure into foundational geometric forms and continuous centerline flow, including branch construction specifically.", "verified": true}
+],
+"quiz": [
+  {"q": "What does Leonardo's branching rule state regarding the thickness of tree branches at a fork?", "options": ["Child branches are always twice as thick as the parent trunk", "The combined cross-sectional area of the child branches equals the cross-sectional area of the parent branch before the split", "Branches maintain a single uniform cylinder width from root to tip", "Every split cuts the branch thickness exactly in half regardless of branch count"], "correct": 1, "explain": "Leonardo's branching rule (conservation of area) states that the sum of the cross-sectional thicknesses of all child branches at a fork equals the thickness of the parent branch directly preceding the split."},
+  {"q": "Why does drawing branches only extending to the left and right silhouettes make a tree look unnatural?", "options": ["It violates the rule of perspective by ignoring light sources", "It flattens the tree into a 2D plane by omitting branches that grow toward and away from the viewer in the Z-axis", "It makes the trunk look too thick at the root base", "Trees in nature only grow in vertical spirals"], "correct": 1, "explain": "Branches emerge radially around the 360-degree circumference of the trunk; failing to draw foreshortened branches growing toward and away from the viewer destroys the 3D illusion."},
+  {"q": "What structural transition should be drawn where a secondary branch connects to the main trunk?", "options": ["A sharp 90-degree right angle with no transitional line", "A swollen organic collar joint where the branch cylinder anchors into the parent wood", "A perfectly straight tangent line along the outer contour", "A concave hemispherical sphere with no overlap"], "correct": 1, "explain": "A collar joint represents the organic swelling and wood layering where a branch anchors into the trunk, ensuring the branch reads as growing out of the volume rather than pasted on."}
+],
+"checklist": [
+  "I can anchor a tree trunk into the ground using spreading root flare buttresses.",
+  "I can apply Leonardo's branching rule so child branch thicknesses sum to the parent branch thickness.",
+  "I can draw branches emerging toward and away from the viewer using foreshortened cylindrical cross-contours.",
+  "I can show distinct angular direction changes at branch growth nodes rather than limp curves."
+],
+"nextStep": "Now that you have constructed the skeletal wooden armature of the tree in 3D space, Module 49 teaches you how to hang volumetric masses of foliage across these boughs without drawing individual leaves."
+},
+{
+"id": "m49",
+"plate": 49,
+"title": "Tree Foliage & Canopy Massing",
+"difficulty": "Intermediate",
+"studyTime": "20 min",
+"practiceTime": "25\u201330 min/day",
+"prereq": ["m48", "m12"],
+"hook": "A tree canopy is not millions of drawn leaves \u2014 it is a cloud of interlocking 3D geometric volumes lit by a single dominant light source, with leaf texture only suggested at the terminator edges.",
+"whyItMatters": [
+  "Beginners instinctively try to draw every single leaf with small scrawls or repetitive loops, which flattens the tree into visual static with zero depth or lighting structure.",
+  "This module connects tree construction (Module 48) directly to light and shadow (Module 11) and shading systems (Module 12): foliage behaves like solid spherical and cloud-like masses that catch light, cast shadows on lower masses, and reveal glimpses of the wooden armature underneath."
+],
+"coreIdea": [
+  "The foliage canopy simplifies into distinct <b>volumetric clusters</b> (macro-forms) resembling spheres, eggs, or rounded polyhedrons supported by the branch armature. Each cluster has its own distinct highlight, midtone, core shadow, and cast shadow.",
+  "A macro <b>global lighting hierarchy</b> governs the entire tree: the top of the overall tree catches the brightest sunlight, while lower clusters sit within the global shadow cast by upper canopy masses, regardless of individual cluster lighting.",
+  "<b>Negative space windows</b> (sky holes) are crucial for realism. Foliage never forms an impenetrable solid wall; it has intentional gaps where the sky peeks through and interior branches, rendered in deep shadow, become visible.",
+  "Leaf detail should only be rendered at the <b>terminator line</b> and outer silhouette edge (the texture-density principle from Module 13). Drawing crisp leaves inside deep shadow or pure light ruins the value massing and flattens the form."
+],
+"mistakes": [
+  "Drawing individual leaf outlines across the entire canopy, creating noisy visual clutter with no volume.",
+  "Treating the entire tree canopy as one giant solid green broccoli shape with no internal cluster separation or sky holes.",
+  "Shading each small foliage clump with full black-to-white contrast, ignoring the global light-to-shadow gradient of the whole tree.",
+  "Completely hiding the wooden branch structure inside a solid helmet of leaves instead of letting branches support and interweave with foliage clumps."
+],
+"proTips": [
+  "Squint at your reference until the foliage merges into 3-4 distinct value shapes (light, halftone, dark) before making any texture marks.",
+  "Leave 15\u201320% of your canopy open as 'sky holes' where background light and dark structural branches show through.",
+  "Use a broad, flat shading stroke to establish volume first, and use crisp leaf-shaped contour marks only along the shadow boundary (terminator)."
+],
+"practice": {
+  "warmup": "Draw 4 overlapping spheres and shade them with a single directional light source to simulate a 3D foliage cluster.",
+  "daily": "Draw a full tree canopy using only two values (sunlit mass vs. shadow mass) with visible sky holes and structural branch peek-throughs.",
+  "weekly": "Do a value study of a full deciduous tree in summer vs. early autumn, massing the canopy into 4 value tiers without drawing any individual leaves.",
+  "challenge": "Render a complex oak canopy under strong rim lighting / backlight, keeping interior shadow masses unified while carving out luminous silhouette edges."
+},
+"resources": [
+  {"type": "Video", "title": "How does Studio Ghibli paint trees this good?!", "creator": "Marco Bucci", "url": "https://www.youtube.com/watch?v=4BGaMO5SiBA", "why": "Explains how to treat foliage as sculptural 3D light-and-shadow masses before rendering individual leaf textures.", "verified": true},
+  {"type": "Video", "title": "How to Draw Trees with Pen & Ink", "creator": "Alphonso Dunn", "url": "https://www.youtube.com/watch?v=q_DSE4J3X8U", "why": "Shows how to group canopy volumes into distinct light, midtone, and shadow clusters using edge contour texturing.", "verified": true}
+],
+"quiz": [
+  {"q": "Where should individual leaf texture be concentrated when rendering a tree canopy?", "options": ["Uniformly across the entire tree, especially inside deep shadow areas", "Along the terminator line (boundary between light and shadow) and along the outer silhouette edges", "Only in the brightest specular highlight area", "Directly inside the darkest cast shadows under the trunk"], "correct": 1, "explain": "Following the texture density principle (Module 13), form texture is most legible along the terminator and silhouette where light rakes across edges; rendering detail inside deep shadow flattens the value mass."},
+  {"q": "What is the primary function of 'sky holes' (negative space windows) within a tree canopy?", "options": ["To save drawing time by leaving areas unfinished", "To break up the solid silhouette, show depth, and reveal the internal branch armature supporting the foliage", "To create artificial lens flares in the drawing", "To allow roots to receive direct sunlight"], "correct": 1, "explain": "Sky holes break up the unnatural 'solid helmet' appearance of beginner trees, providing negative space that proves the canopy is made of detached organic leaf masses supported by interior branches."},
+  {"q": "How does global lighting hierarchy affect individual foliage clumps on a tree?", "options": ["Every individual clump must have identical 100% white highlights and 100% black shadows", "Lower clumps sitting in the overall shadow of upper masses have darker highlights and compressed value ranges", "Global lighting only affects the trunk, while foliage creates its own independent light sources", "The bottom of the tree is always lighter than the top due to ground reflection"], "correct": 1, "explain": "The entire tree has a master light-and-shadow relationship: clumps positioned in the lower global shadow zone must have their values lowered and compressed so they do not compete with top sunlit masses."}
+],
+"checklist": [
+  "I can group a tree canopy into 3-5 distinct 3D volumetric masses (spherical/ovoid clusters).",
+  "I can establish a global light-to-shadow hierarchy across the entire tree before shading individual clumps.",
+  "I can integrate sky holes that reveal background light and interior skeletal branches.",
+  "I can concentrate leaf-edge texture strictly along the shadow terminator and outer silhouette."
+],
+"nextStep": "With tree trunks and canopy massing mastered, Module 50 moves down to ground level to construct bushes, overlapping shrubs, and wild undergrowth."
+},
+{
+"id": "m50",
+"plate": 50,
+"title": "Plants, Bushes & Undergrowth",
+"difficulty": "Intermediate",
+"studyTime": "20 min",
+"practiceTime": "20\u201325 min/day",
+"prereq": ["m49", "m13"],
+"hook": "Bushes and ground vegetation are not random scribble piles \u2014 they are layered, overlapping ribbons and domes that fan out from root centers and nest into the terrain.",
+"whyItMatters": [
+  "Ground plants and shrubs are what integrate hard architecture, trees, and ground planes into a believable, cohesive environment. When drawn poorly, they float like detached green pom-poms.",
+  "This module builds on leaf flow (Module 10 organic construction) and textural hierarchy (Module 13): small plants must obey 3D perspective grids and overlap each other in depth to establish atmospheric scale."
+],
+"coreIdea": [
+  "Leaves and blades of grass function as <b>bending 3D ribbons</b>. Every leaf follows a central spine (flow line) that curves through space in three dimensions, showing top surface, bottom surface, and foreshortened turns (the leaf construction method).",
+  "Bushes structure as <b>compound hemisphere masses</b> rooted into the soil at a central stem origin. Rather than sitting on top of the ground plane, undergrowth penetrates and overlaps the ground contours.",
+  "Use <b>depth layering</b> (foreground large/detailed, midground clumped masses, background flat silhouettes) to prevent undergrowth from turning into visual soup. Foreground plants establish species identification; background plants establish landscape volume.",
+  "Vary <b>silhouette rhythm</b>: natural undergrowth consists of alternating broad leaves, spiky ferns, delicate grasses, and dead organic debris. Uniformly sized bushes create artificial, manicured artificiality."
+],
+"mistakes": [
+  "Drawing grass and weeds as individual vertical spikes sticking out of a flat baseline like a hairbrush.",
+  "Drawing leaves as flat 2D teardrops without showing folding edges, twisting planes, or foreshortening.",
+  "Making all bushes the same spherical size and texture density, creating a repetitive pattern.",
+  "Floating shrubs above the terrain without drawing occlusion shadows and ground-contact embedding."
+],
+"proTips": [
+  "Draw the central curve line of a leaf first to determine its 3D bend before drawing the two outer contour edges.",
+  "Group grass and undergrowth into overlapping triangular wedges with dark occlusion shadows at the base rather than drawing single blades.",
+  "Place smaller pioneer weeds and leafy clusters at the base of large rocks and trees to anchor them into the scene."
+],
+"practice": {
+  "warmup": "Draw 10 twisting ribbon leaves bending toward and away from the viewer in 3D space, shading the underside darker than the top.",
+  "daily": "Construct 3 distinct shrubs (e.g., broadleaf bush, flowering perennial, spiky fern) using volumetric dome blocking.",
+  "weekly": "Draw a dense forest floor study showing 3 distinct depth layers: foreground high-detail fern, midground tangled bramble, background groundcover.",
+  "challenge": "Construct a complex roadside bank with embedded boulders, cascading ivy, wild grasses, and exposed root structures in 2-point perspective."
+},
+"resources": [
+  {"type": "Course", "title": "Lesson 3: An Introduction to Drawing Plants", "creator": "Drawabox (Irshad Karim)", "url": "https://drawabox.com/lesson/3/1", "why": "Covers how leaves bend in 3D space along flow lines and how complex vegetation forms are built from simple planes.", "verified": true},
+  {"type": "Course", "title": "Lesson 3: Applying Construction to Plants \u2014 Leaves exercise", "creator": "Drawabox (Irshad Karim)", "url": "https://drawabox.com/lesson/3/2", "why": "Demonstrates step-by-step construction of leaf clusters and grounded undergrowth using the same flow-line method.", "verified": true}
+],
+"quiz": [
+  {"q": "What is the recommended first step when constructing a curved leaf in 3D space?", "options": ["Draw the serrated jagged outline first", "Draw a single central flow line (spine) establishing the leaf's directional curve and bend in space", "Shade the entire leaf in solid black", "Draw the veins before establishing any boundary edges"], "correct": 1, "explain": "Drawing the centerline flow first establishes how the leaf moves through 3D space, allowing you to build the outer ribbon edges and foreshortening correctly around that motion."},
+  {"q": "How should grass and small undergrowth be drawn to avoid the 'hairbrush' mistake?", "options": ["Draw every blade of grass as an isolated straight vertical line along the bottom border", "Group grass blades into overlapping clumps and triangular wedges with dark occlusion shadows at the base", "Draw grass using only circular cross-hatching", "Color the ground green without drawing any shapes"], "correct": 1, "explain": "Grass grows in clustered tufts and overlapping blade masses. Grouping blades into volumetric wedges with base occlusion shadows conveys depth and physical volume."},
+  {"q": "Why is varying leaf shapes and plant types (silhouette rhythm) critical in landscape undergrowth?", "options": ["It forces the viewer to count every plant species", "It breaks unnatural repetition and creates organic visual interest by contrasting broad, spiky, and delicate textures", "It eliminates the need for perspective grids", "Different plants do not cast cast shadows"], "correct": 1, "explain": "Natural vegetation is diverse; alternating broadleaf forms, spiky grasses, and delicate fronds prevents artificial repetition and establishes believable environment scale."}
+],
+"checklist": [
+  "I can construct dynamic leaves as 3D bending ribbons using central flow lines.",
+  "I can group bushes into compound hemispherical masses fanning out from root origins.",
+  "I can render grass and weeds in overlapping clumps with dark base occlusion shadows.",
+  "I can integrate small undergrowth around the base of trees and rocks to anchor them to the ground."
+],
+"nextStep": "Now that you can construct organic living flora, Module 51 tackles rigid, inorganic landscape forms: faceted rocks, cliffs, and weathered stone formations."
+},
+{
+"id": "m51",
+"plate": 51,
+"title": "Rocks & Rock Formations",
+"difficulty": "Intermediate",
+"studyTime": "20 min",
+"practiceTime": "25\u201330 min/day",
+"prereq": ["m7", "m13"],
+"hook": "Rocks are not soft lumpy potatoes \u2014 they are faceted, hard-edged polyhedrons carved by directional fracture planes, jointing lines, and geological pressure.",
+"whyItMatters": [
+  "Beginners default to drawing smooth, round, featureless ovals that look like giant eggs or marshmallows rather than heavy, ancient mineral masses.",
+  "This module is the ultimate test of planar form construction (Module 7 and Module 10) and surface texture (Module 13): every boulder and cliff face is composed of distinct planar facets that face toward or away from the primary light source."
+],
+"coreIdea": [
+  "A rock simplifies to a <b>faceted polyhedron</b> (a block or prism with chipped and angled planar faces). Each facet is a flat or subtly curved plane with a distinct orientation in space, creating crisp value boundaries between light, halftone, and shadow.",
+  "Geological formations follow distinct <b>stratification and joint planes</b>: sedimentary rock breaks along horizontal beds and vertical stress fractures, while igneous rock forms angular blocky fissures. Cracks and breaks must follow these structural stress lines rather than meandering randomly.",
+  "The <b>sharp-versus-rounded edge hierarchy</b> dictates rock character: fresh fractures have knife-sharp edges with crisp cast shadows, while weathered tops and water-worn bases show softer bevels and rounded transitions.",
+  "Boulders must be <b>ground-embedded</b>. Rocks do not rest precariously on the top surface of the soil; sediment, dirt, and gravel accumulate around their base, sinking them into the ground plane with contact occlusion shadows."
+],
+"mistakes": [
+  "Drawing rocks with soft, pillowy, curving contours with no crisp planar facets or structural corners.",
+  "Adding random spiderweb cracks across the surface that ignore the underlying planar geometry and stress lines.",
+  "Giving all planar faces the same flat mid-tone value instead of calculating each plane's angle relative to the light source.",
+  "Placing isolated, perfectly round boulders on a smooth flat plane without contact shadows or base sediment."
+],
+"proTips": [
+  "Start every rock by carving a simple rectangular or polygonal box in perspective, then slice off corners with 3-4 bold straight planar cuts.",
+  "Keep your value steps crisp between adjacent facets \u2014 high edge contrast is what communicates mineral hardness.",
+  "Break large rock faces into a hierarchy of big master planes, medium fracture blocks, and small gravel debris at the base."
+],
+"practice": {
+  "warmup": "Draw 5 polyhedral rock blocks from imagination in 2-point perspective, shading each planar facet according to a single light direction.",
+  "daily": "Draw a clustered group of 3 overlapping boulders embedded into soil, showing distinct top, front, and side facets.",
+  "weekly": "Do a master study of a rugged cliff face or sea stack, mapping out major horizontal strata and vertical joint fractures.",
+  "challenge": "Construct a dynamic canyon scene with layered sedimentary rock walls receded in 1-point perspective under hard sunlight."
+},
+"resources": [
+  {"type": "Video", "title": "Pen & Ink Drawing Tutorials | How to draw rocks, stones and boulders", "creator": "Alphonso Dunn", "url": "https://www.youtube.com/watch?v=O7O7-EU4bgg", "why": "Teaches planar faceting, sharp vs. rounded edge transitions, and cross-contour shading on organic stone forms.", "verified": true},
+  {"type": "Course", "title": "Lesson 2: Contour Lines, Texture and Construction \u2014 Dissections", "creator": "Drawabox (Irshad Karim)", "url": "https://drawabox.com/lesson/2/7", "why": "Teaches the shadow-shape-based texture method (using rock piles as a direct worked example) for rendering hard mineral surfaces without outlining every individual chip.", "verified": true}
+],
+"quiz": [
+  {"q": "Why do beginner rock drawings often look soft, like potatoes or pillows?", "options": ["Because they use too much hard cross-hatching", "Because they draw continuous smooth curved contours instead of breaking the form into crisp, faceted geometric planes", "Because rocks are naturally spherical in nature", "Because they only use two values instead of ten"], "correct": 1, "explain": "Rock forms are defined by planar facets formed by brittle fracture. Drawing smooth rounded outlines without distinct planar face changes removes the feeling of mineral hardness."},
+  {"q": "How should cracks and fissures be drawn on a rock face to look believable?", "options": ["As random curved squiggles scattered symmetrically across the front", "Along existing joint lines, plane boundaries, and structural stress axes of the rock volume", "Exclusively around the outer silhouette edges", "Only in pure white highlight ink"], "correct": 1, "explain": "Geological fractures follow internal crystal lattice and stress planes; drawing cracks along planar edges and stratification axes reinforces the 3D volume."},
+  {"q": "What anchoring technique prevents a drawn boulder from looking like it is floating above the ground?", "options": ["Drawing the boulder perfectly round with no ground contact", "Sinking the base into the soil with dark contact occlusion shadows and surrounding it with smaller sediment and gravel", "Erasing all lines below the horizon", "Making the top of the boulder darker than the bottom"], "correct": 1, "explain": "Heavy boulders settle into the earth; drawing contact occlusion shadows, soil overlap, and surrounding gravel anchors the stone firmly into the terrain."}
+],
+"checklist": [
+  "I can construct rocks as faceted polyhedral volumes with distinct top, front, and side planes.",
+  "I can shade adjacent rock facets with distinct value steps according to light angle.",
+  "I can align fracture cracks along structural joint axes and plane boundaries.",
+  "I can embed boulders into the terrain using ground overlap, gravel debris, and contact occlusion shadows."
+],
+"nextStep": "Now that you can carve solid rock forms, Module 52 expands the camera outward to construct wide ground planes, rolling terrain, and topographical contours in deep perspective."
+},
+{
+"id": "m52",
+"plate": 52,
+"title": "Terrain & Ground Construction",
+"difficulty": "Intermediate",
+"studyTime": "25 min",
+"practiceTime": "25\u201330 min/day",
+"prereq": ["m51", "m14"],
+"hook": "The ground is not a single flat line at the bottom of the page \u2014 it is a stepped, curving 3D plane that tilts in perspective, sweeps across the horizon, and carries topographical mass.",
+"whyItMatters": [
+  "Most beginner landscapes collapse because the ground is treated as empty negative space beneath floating trees and buildings. Without solid terrain construction, nothing in the environment has a believable stage to stand on.",
+  "This module combines linear perspective (Module 8), cross-contours (Module 7), and composition depth planes (Module 14) to build expansive landscapes that recede believably from foreground to horizon."
+],
+"coreIdea": [
+  "Terrain is constructed using <b>topographical cross-contour lines</b>. Imagining the ground wrapped in a wireframe grid (like contour lines on an elevation map) reveals the rise, fall, rolling hills, and gullies in 3D perspective.",
+  "A landscape organizes into three distinct <b>depth stages</b>: the Foreground (high value contrast, crisp texture, prominent scale), the Midground (the primary narrative stage, moderate contrast), and the Background (low contrast, atmospheric fading, simplified silhouettes).",
+  "Use <b>overlapping ground planes</b> (stepped elevation tiers) to carve deep space. Foreground ridges must overlap midground slopes, which in turn overlap background mountain ranges, establishing unequivocal depth cues.",
+  "Ground planes exhibit <b>foreshortening and perspective compression</b>: horizontal plains compress into tight vertical bands as they approach the eye-level horizon line, while vertical cliffs maintain their height."
+],
+"mistakes": [
+  "Drawing the ground as a single flat horizontal line without elevation changes, depressions, or contour cross-lines.",
+  "Failing to compress horizontal distances as terrain approaches the horizon, making distant fields look like vertical walls.",
+  "Rendering foreground and background terrain with identical value contrast and detail sharpness, destroying atmospheric depth.",
+  "Placing trees, rocks, and buildings on top of the ground without carving matching horizontal landing planes for their footprints."
+],
+"proTips": [
+  "Lightly lay down 4-5 curved cross-contour grid lines across your ground plane to map slopes and dips before placing any landscape elements.",
+  "Stagger terrain ridges from alternating left-and-right sides to create an S-curve eye path leading the viewer into deep space.",
+  "Lighten your shadow values progressively for every ridge further back to simulate atmospheric perspective."
+],
+"practice": {
+  "warmup": "Draw a rolling hillside in 2-point perspective using a 3D wireframe grid to show a winding path dipping down and rising up.",
+  "daily": "Sketch a 3-layer terrain composition (foreground hillock, midground plateau, background mountain ridge) using silhouette overlaps.",
+  "weekly": "Draw a detailed mountain valley landscape from photo reference, tracking elevation contour lines and atmospheric value fade.",
+  "challenge": "Design a fantasy landscape environment with dramatic cliff terraces, winding riverbeds, and terraced paths in 3-point perspective."
+},
+"resources": [
+  {"type": "Video", "title": "Landscape Painting Tutorial: Start with Patches, Finish with Details", "creator": "James Gurney", "url": "https://www.youtube.com/watch?v=5wa4WwFmMYY", "why": "Demonstrates establishing macro ground planes, elevation shifts, and terrain values before adding surface detail.", "verified": true},
+  {"type": "Video", "title": "Pen and Ink Drawing Tutorials | How to draw a mountain landscape", "creator": "Alphonso Dunn", "url": "https://www.youtube.com/watch?v=qe4xN-bJS_U", "why": "Teaches terrain contour lines, ridge construction, and depth layering across ground planes.", "verified": true}
+],
+"quiz": [
+  {"q": "How does perspective affect flat horizontal ground as it approaches the horizon line?", "options": ["It expands vertically and becomes wider", "It undergoes extreme foreshortening, compressing horizontal distances into tight, narrow bands", "It curves into a perfect circle", "It disappears completely behind the sky"], "correct": 1, "explain": "Due to perspective foreshortening, horizontal expanses of terrain compress vertically as they approach the eye level, meaning distant kilometers occupy only millimeters of vertical canvas space."},
+  {"q": "What drawing tool or technique is most effective for visualizing slopes and depressions on uneven ground?", "options": ["Topographical cross-contour lines (surface wireframes)", "Random stippling dots across the entire bottom", "A ruler straight line across the center", "Pure black flat fills"], "correct": 0, "explain": "Topographical cross-contour lines wrap over the terrain's surface like wireframe elevation lines, mapping three-dimensional dips, ridges, and slopes clearly."},
+  {"q": "How should value contrast be managed between foreground and background terrain layers?", "options": ["Background layers should have the highest black-and-white contrast", "Foreground terrain should have high value contrast and crisp edges, while background layers have reduced contrast and lighter values due to atmospheric perspective", "All layers must have identical value ranges to ensure consistency", "Contrast should only be applied to man-made objects"], "correct": 1, "explain": "Atmospheric perspective scatters light across distance, compressing value contrast in distant mountain ridges and ground planes while preserving rich darks and crisp details in the foreground."}
+],
+"checklist": [
+  "I can construct uneven ground using topographical cross-contour elevation lines.",
+  "I can structure landscape depth into clear overlapping foreground, midground, and background stages.",
+  "I can foreshorten ground planes accurately as they approach the horizon line.",
+  "I can carve flat footprints for rocks, buildings, and trees so they stand firmly on slopes."
+],
+"nextStep": "With solid terrain established, Module 53 introduces dynamic reflective surfaces: still water, mirror reflections, and transparency."
+},
+{
+"id": "m53",
+"plate": 53,
+"title": "Water \u2014 Reflections & Stillness",
+"difficulty": "Intermediate",
+"studyTime": "20 min",
+"practiceTime": "20\u201325 min/day",
+"prereq": ["m11", "m14"],
+"hook": "Water reflection is not a vertical copy-paste \u2014 it is a perspective projection governed by the Fresnel effect, vertical alignment, and surface transparency.",
+"whyItMatters": [
+  "Beginners frequently draw reflections as upside-down clones flipped on the canvas, creating impossible perspective contradictions that immediately break the illusion of flat, horizontal liquid.",
+  "This module applies light physics (Module 11) and perspective projection (Module 8) to reflective horizontal planes: understanding why sky reflections darken, white objects reflect darker than their source, and shallow angles reflect while steep angles reveal the bed."
+],
+"coreIdea": [
+  "The <b>Fresnel effect</b> governs water reflectivity: when viewing water at a shallow glancing angle (near the horizon), it acts almost like a mirror, reflecting the sky and distant objects. When viewing water steeply from above (near the foreground), reflection drops drastically and the water becomes transparent, revealing the riverbed or deep dark water.",
+  "Reflections follow <b>vertical alignment projection</b>. Every reflected point falls on a strict vertical plumb line directly beneath the corresponding real-world point. If a tree trunk leans 30 degrees to the right, its reflection leans 30 degrees to the right in the water (mirroring downwards), aligned along vertical axis lines.",
+  "<b>Under-view perspective</b>: because the water surface is below the object, the water 'sees' the underside of objects that the viewer cannot see directly (such as the bottom of a bridge or boat hull). A reflection is a view from the water's perspective, not a mechanical 2D canvas flip.",
+  "Value rules of still water: reflected sky is almost always slightly <b>darker and more saturated</b> than the real sky above, while reflected dark landmasses are slightly <b>lighter and less saturated</b> than the real landmasses."
+],
+"mistakes": [
+  "Flipping an image upside-down mechanically without accounting for the water's under-view perspective of overhangs and boat hulls.",
+  "Angling reflection lines diagonally away from vertical plumb lines when objects sit at an angle.",
+  "Making water reflections brighter than the actual light source or sky, violating the conservation of reflected light energy.",
+  "Treating the entire water body as uniformly reflective from foreground to background, ignoring the Fresnel transparency shift."
+],
+"proTips": [
+  "Drop a vertical construction guideline straight down from every major landmark (mast, tree peak, roof corner) to locate its exact reflection point.",
+  "Make the reflected sky one value step darker than the sky above, and the reflected dark trees one value step lighter than the trees above.",
+  "In the immediate foreground, fade out surface reflection and render submerged stones with soft edges to create genuine depth."
+],
+"practice": {
+  "warmup": "Draw 3 simple geometric posts standing in still water, projecting their vertical reflection lines across a flat water plane.",
+  "daily": "Draw a small rowboat moored at a dock, showing the under-hull reflection and the Fresnel transparency shift in the foreground.",
+  "weekly": "Do a full tonal study of a calm mountain lake at dusk, capturing the value shift between the real sky/mountains and their water reflections.",
+  "challenge": "Draw an architectural arch bridge spanning still water from a 2-point perspective angle, correctly constructing the reflected underside of the arch."
+},
+"resources": [
+  {"type": "Article", "title": "Water Reflections, Part 1", "creator": "James Gurney", "url": "http://gurneyjourney.blogspot.com/2007/12/water-reflections-part-1.html", "why": "Explains Fresnel reflection physics, viewing angle compression, and value relationships between skies and calm water.", "verified": true},
+  {"type": "Video", "title": "Pen & Ink Drawing Tutorials | How to draw water reflection", "creator": "Alphonso Dunn", "url": "https://www.youtube.com/watch?v=iSioaE7oENc", "why": "Shows how to render vertical reflection projections and horizontal water ripples with precise value control.", "verified": true}
+],
+"quiz": [
+  {"q": "What happens to the reflectivity of water as your viewing angle becomes steeper (looking directly down into the water in the foreground)?", "options": ["It becomes 100% reflective like a mirror", "Reflectivity decreases significantly according to the Fresnel effect, making the water transparent to reveal subsurface depth", "The water turns bright white", "It reflects the stars regardless of time of day"], "correct": 1, "explain": "The Fresnel effect dictates that light hitting water at steep angles refracts into the liquid rather than reflecting, revealing subsurface bed rocks and darkness."},
+  {"q": "Along what axis does every reflected point in still water align relative to its source object point?", "options": ["A 45-degree diagonal line", "A strict vertical plumb line perpendicular to the water plane", "A horizontal line parallel to the horizon", "A radial line toward the vanishing point"], "correct": 1, "explain": "In planar reflection on horizontal water, every reflected landmark aligns directly beneath its real-world counterpart on a true vertical plumb line."},
+  {"q": "Why is a water reflection not an exact identical flip of what the artist sees above the water?", "options": ["Because water absorbs all light completely", "Because the water surface 'views' the object from a lower elevation, revealing undersides (like bridge soffits or boat hulls) hidden from the viewer's eye level", "Because reflections are always 50% smaller in scale", "Because water only reflects warm colors"], "correct": 1, "explain": "The water acts as an eye positioned at water level looking upward at the object, reflecting underside planes that the viewer standing above cannot directly see."}
+],
+"checklist": [
+  "I can construct reflections using strict vertical plumb lines from object landmarks.",
+  "I can apply the Fresnel effect (high reflection at shallow angles, transparency at steep angles).",
+  "I can render under-view perspective on reflected boat hulls, overhangs, and bridges.",
+  "I can maintain correct value relationships: reflected sky darker than the sky, reflected darks lighter than the land."
+],
+"nextStep": "Now that you understand calm, flat water planes, Module 54 introduces fluid dynamics: ripples, crashing waves, moving currents, and ocean foam."
+},
+{
+"id": "m54",
+"plate": 54,
+"title": "Water \u2014 Waves & Movement",
+"difficulty": "Advanced",
+"studyTime": "25 min",
+"practiceTime": "25\u201330 min/day",
+"prereq": ["m53"],
+"hook": "A wave is not an outline of blue squiggles \u2014 it is a rolling cylindrical volume of energy that lifts, rolls, breaks, and shatters into 3D foam ribbons in perspective.",
+"whyItMatters": [
+  "Moving water is considered one of the hardest natural subjects because it never sits still. Without understanding the anatomy of a wave cycle, drawings become chaotic noodle scribbles with zero mass or momentum.",
+  "This module builds directly upon Module 53: moving water breaks the flat mirror plane into thousands of miniature tilted facets that catch light from different parts of the sky, creating directional highlights, crest translucency, and trailing foam."
+],
+"coreIdea": [
+  "A breaking wave is fundamentally an <b>unrolling hollow cylinder</b>. The back slope rises gently, the crest steepens into a concave curve (the barrel), and the lip curls forward under gravity before collapsing into turbulent whitewash.",
+  "Wave ripples create <b>tilted reflective planes</b>. The front slope of a ripple tilts toward the viewer (reflecting the dark foreground or shoreline), while the back slope tilts away (reflecting the bright sky overhead), creating the classic alternating light-and-dark ribbon pattern of moving water.",
+  "<b>Subsurface scattering and translucency</b> occur at the thin crest of the wave. When sunlight hits a breaking wave from behind or above, the thick base remains deep blue/green shadow while the thin crest glows with vibrant, luminous emerald light.",
+  "<b>Foam networks</b> (reticulation) wrap around the 3D surface of the wave like cross-contour wireframes (Module 7). Foam stretches into elliptical webbing on the wave face and flattens into trailing horizontal ribbons in the trough."
+],
+"mistakes": [
+  "Drawing wave crests as sharp, random zigzag sawtooth lines instead of smooth cylindrical barrels in perspective.",
+  "Applying opaque white foam evenly everywhere without letting the foam lace follow the curved cross-contour of the wave form.",
+  "Missing the translucent light glow (subsurface scattering) where sunlight illuminates the thin curling wave crest.",
+  "Ignoring wave perspective: drawing ripples in the distance with the same size and spacing as waves in the foreground."
+],
+"proTips": [
+  "Block the entire wave as a simple curved architectural barrel vault in perspective before adding any foam or splash details.",
+  "Treat foam patterns as elliptical cross-contour lines that wrap around the curvature of the cylinder to prove its volume.",
+  "Keep the trough in deep shadow and reserve your purest white and highest contrast for the crashing impact zone of the lip."
+],
+"practice": {
+  "warmup": "Draw 5 stylized wave cylinders in perspective, sketching the curved barrel and the falling lip in 3D cross-section.",
+  "daily": "Draw a section of open ocean surface showing ripple frequency compressing toward the horizon in 1-point perspective.",
+  "weekly": "Do a master study of a breaking coastal wave, capturing the backlit translucent crest, the dark hollow barrel, and the trailing foam lattice.",
+  "challenge": "Draw a stormy sea with crashing shore waves colliding against faceted rock boulders (combining Module 51 and Module 54)."
+},
+"resources": [
+  {"type": "Article", "title": "How to Draw Waves \u2014 A Demonstration with Soft Pastels", "creator": "The Virtual Instructor", "url": "https://thevirtualinstructor.com/draw-waves-chalk-pastels.html", "why": "Breaks down wave cross-contour lines and the light-versus-dark diagonal ribbon pattern that gives a wave its rolling, cylindrical structure.", "verified": true},
+  {"type": "Video", "title": "Pen and Ink Drawing Tutorial | How to draw water", "creator": "Alphonso Dunn", "url": "https://www.youtube.com/watch?v=NGUg57qqyWg", "why": "Demonstrates wave rhythm, curved surface planes, and line density techniques for moving water.", "verified": true}
+],
+"quiz": [
+  {"q": "What basic 3D geometric primitive best describes the structure of a breaking wave barrel?", "options": ["A flat triangular pyramid", "An unrolling hollow horizontal cylinder (barrel vault) curling forward in perspective", "A solid static cube", "A series of concentric flat discs"], "correct": 1, "explain": "A breaking wave functions as a curling hollow cylinder of water whose lip rolls forward and falls over a concave trough in perspective."},
+  {"q": "Why does the thin crest of a sunlit wave appear to glow with vibrant translucent color?", "options": ["Because water contains bioluminescent chemicals everywhere", "Because of subsurface scattering: light penetrates through the thin section of water and scatters internally before reaching the eye", "Because the crest reflects only the moon", "Because foam acts as a mirror"], "correct": 1, "explain": "As the wave crest thins out, light penetrates through the water mass (subsurface scattering), illuminating the water internally with a luminous glow compared to the thick shadow base."},
+  {"q": "How should foam networks (reticulation) be drawn across the face of a moving wave?", "options": ["As random opaque circles stamped uniformly across the canvas", "As curved, stretched elliptical webs that follow the 3D cross-contour curvature of the wave cylinder", "As solid black grid lines", "Only along the vertical borders of the image"], "correct": 1, "explain": "Foam sits directly on the water surface and stretches with water velocity, acting like cross-contour lines that reveal the wave's 3D cylindrical curvature."}
+],
+"checklist": [
+  "I can construct a breaking wave as a 3D curving cylinder with a concave barrel and forward-pitching lip.",
+  "I can render alternating reflection planes on moving surface ripples.",
+  "I can show translucent subsurface glow at the thin curling crest under directional light.",
+  "I can wrap foam webbing across the wave face following its 3D cross-contour curvature."
+],
+"nextStep": "With the earth and waters constructed, Module 55 lifts our gaze to the sky: cloud volumes, atmospheric gradients, and weather systems."
+},
+{
+"id": "m55",
+"plate": 55,
+"title": "Clouds & Sky",
+"difficulty": "Intermediate",
+"studyTime": "20 min",
+"practiceTime": "25\u201330 min/day",
+"prereq": ["m11", "m14"],
+"hook": "Clouds are not flat cotton balls stuck to a blue backdrop \u2014 they are immense 3D floating sculptures with flat condensation bases, illuminated tops, and perspective depth stretching to the horizon.",
+"whyItMatters": [
+  "Beginners treat the sky as an empty, uniform blue wash with random cartoon puffs floating at random heights, destroying the sense of scale and atmosphere in an outdoor scene.",
+  "This module ties together light scattering (Module 11), atmospheric perspective (Module 8), and volumetric massing (Module 10): the sky is a ceiling plane, and clouds are massive geometric forms that cast shadows on themselves, on each other, and on the earth below."
+],
+"coreIdea": [
+  "The sky is a <b>curved dome ceiling in perspective</b>. Clouds do not hang randomly; they rest along a horizontal atmospheric altitude layer (the <b>condensation level</b>), giving cumulus clouds characteristically flat, horizontal bottoms and billowing, rounded tops.",
+  "Clouds recede in <b>perspective cloud streets</b>: clouds overhead appear gigantic and reveal their undersides, while clouds near the horizon compress into thin, dense, overlapping horizontal strips showing mostly their sunlit vertical faces.",
+  "The sky exhibits a continuous <b>atmospheric gradient</b>: deep saturated cyan/ultramarine at the zenith (straight up) transitioning to pale, warm, dusty yellow/white at the horizon due to Rayleigh scattering and dense air particulate near the ground.",
+  "Volumetric cloud lighting: treat each cloud puff as an interlocking <b>sphere cluster</b>. The top dome catches direct sunlight, the core shadow wraps around the middle, and the flat base catches warm ambient bounce light from the earth."
+],
+"mistakes": [
+  "Drawing clouds as isolated, round cotton balls with scalloped outlines and uniform white shading.",
+  "Giving clouds rounded, spherical bottoms instead of flat, horizontal bases aligned with the condensation plane.",
+  "Drawing distant horizon clouds the same scale and vertical height as overhead clouds, flattening sky perspective.",
+  "Shading clouds with dark charcoal/black shadows instead of soft, warm, or sky-reflected cool grays."
+],
+"proTips": [
+  "Draw a flat perspective plane (a ceiling grid) across your sky to anchor the flat bases of your cloud banks before sketching the billowing tops.",
+  "Paint the sky gradient first (dark blue at top to pale warm haze at bottom) before placing any cloud forms into the scene.",
+  "Use soft, blended edges on the shadow side and sharp, crisp edges only along the sunlit rim facing the light source."
+],
+"practice": {
+  "warmup": "Draw a perspective grid across the sky and block in 5 cloud masses with flat bottoms that compress toward the horizon.",
+  "daily": "Render a billowing cumulus cloud showing directional sunlight on top, a core shadow band, and ambient ground-bounce light on the base.",
+  "weekly": "Do a sky study at sunset or golden hour, tracking the color transition from zenith to horizon and the warm underlighting on cloud bases.",
+  "challenge": "Draw an expansive panorama featuring a dynamic storm cloud front (cumulonimbus) casting dramatic ground shadows across rolling terrain (integrating Module 52)."
+},
+"resources": [
+  {"type": "Article", "title": "What Happens to Light in Clouds?", "creator": "James Gurney", "url": "https://gurneyjourney.blogspot.com/2017/11/what-happens-to-light-in-clouds.html", "why": "Explains how sunlight scatters and bounces inside cloud masses, directly informing the core-shadow and bounce-light logic in this module.", "verified": true},
+  {"type": "Video", "title": "Pen and Ink Drawing Tutorials | How to draw clouds", "creator": "Alphonso Dunn", "url": "https://www.youtube.com/watch?v=YjjuLlV9bNA", "why": "Teaches overlapping puff construction, directional lighting on cloud masses, and sky gradients.", "verified": true}
+],
+"quiz": [
+  {"q": "Why do cumulus clouds have characteristically flat bottoms?", "options": ["Because wind cuts them with horizontal friction", "Because water vapor reaches dew point and condenses at a specific, uniform atmospheric altitude plane (the condensation level)", "Because they rest directly on mountain tops", "Because cloud weight compresses the lower half into a flat sheet"], "correct": 1, "explain": "As rising warm air cools, water vapor condenses into visible droplets at a specific altitude threshold called the lifted condensation level, forming a crisp, flat horizontal cloud base."},
+  {"q": "How does the clear sky color naturally transition from the zenith (straight above) down to the horizon?", "options": ["From pale white at the top to deep black at the horizon", "From deep saturated blue at the zenith to a lighter, warmer, desaturated hue near the horizon due to atmospheric scattering and dust", "It stays a single solid uniform color across the entire dome", "From bright yellow at the zenith to navy blue at the horizon"], "correct": 1, "explain": "Looking straight up passes through the thinnest slice of atmosphere (deep blue), while looking toward the horizon looks through miles of dense air and particulate, shifting the color paler, warmer, and hazier."},
+  {"q": "How should cloud size and spacing change as clouds approach the horizon?", "options": ["They grow larger and spread farther apart", "They compress in perspective, becoming smaller, flatter, and tightly overlapped near the horizon", "They maintain identical dimensions across the entire sky", "They rotate 90 degrees vertically"], "correct": 1, "explain": "Perspective compression causes distant cloud masses to overlap tightly, appearing as narrow horizontal bands stacked closely above the horizon line."}
+],
+"checklist": [
+  "I can anchor clouds to a flat horizontal condensation ceiling plane in perspective.",
+  "I can construct cloud masses as 3D interlocking sphere clusters with clear light, core shadow, and bounce light.",
+  "I can render an atmospheric sky gradient from deep zenith blue to pale horizon haze.",
+  "I can compress cloud scale and spacing as clouds recede into the distance."
+],
+"nextStep": "You have now completed the first batch of the Nature & Architecture arc. Trees, plants, rocks, terrain, water, and sky are all constructible \u2014 the next batch moves from natural landscape into buildings, interiors, and cities, built with the same construction logic."
+}
+    ]},
 {id:'creatures-hardsurface', title:'Creatures & Hard Surface', status:'soon', order:6,
     desc:'Comparative animal anatomy, birds, aquatic life, insects and original creature design, then vehicles, weapons, machines, and mecha.',
     moduleCount:21, sample:['Mammal Anatomy','Birds in Flight','Creature Design','Vehicles','Robotics & Mecha']},
