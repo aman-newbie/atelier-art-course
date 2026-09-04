@@ -6,7 +6,7 @@ const CURRICULUM_3 = [
       {
         id:'m31', plate:'31', title:'Hair', difficulty:'Intermediate',
         studyTime:'20 min', practiceTime:'20\u201325 min/day', prereq:['m22','m12'],
-        hook:"placeholder"
+        hook:"Not thousands of individual strands"
       }
     ]
   }
