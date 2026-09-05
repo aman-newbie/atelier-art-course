@@ -31,7 +31,7 @@
 :root, [data-theme="dark"]{
   --bg:#151318; --bg-raised:#1B1920; --surface:#1F1D25; --surface-2:#26232C;
   --border:#332F3B; --border-soft:#28252E;
-  --text:#F1EEE9; --text-muted:#A8A2AE; --text-faint:#736D7C;
+  --text:#F1EEE9; --text-muted:#A8A2AE; --text-faint:#9791A0;
   --blue:#6FB2E8; --blue-ink:#0E2A3E; --blue-soft:#1C2E3B;
   --red:#E2664A; --red-ink:#3A1712; --red-soft:#33201C;
   --green:#7CB88F;
@@ -40,7 +40,7 @@
 [data-theme="light"]{
   --bg:#EEECE6; --bg-raised:#F5F3EE; --surface:#FFFFFF; --surface-2:#F1EEE7;
   --border:#DCD7CB; --border-soft:#E6E2D8;
-  --text:#1B1812; --text-muted:#655F52; --text-faint:#928C7C;
+  --text:#1B1812; --text-muted:#655F52; --text-faint:#6B6558;
   --blue:#2F6CA6; --blue-ink:#E4EEF7; --blue-soft:#E4EEF7;
   --red:#B23F26; --red-ink:#FBE7E1; --red-soft:#FBE7E1;
   --green:#3E7A56;
