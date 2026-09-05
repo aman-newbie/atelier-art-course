@@ -360,6 +360,27 @@ function importProgressFile(file){
 /* ============================================================
    RENDERING
    ============================================================ */
+function updateDocumentTitle(){
+  const route = STATE.route;
+  const base = 'Atelier';
+  let title = base;
+  if(route.view === 'module'){
+    const m = findModule(route.moduleId);
+    if(m) title = `${m.title} \u00b7 ${base}`;
+  } else if(route.view === 'practice'){
+    title = `Practice Center \u00b7 ${base}`;
+  } else if(route.view === 'achievements'){
+    title = `Achievements \u00b7 ${base}`;
+  } else if(route.view === 'bookmarks'){
+    title = `Bookmarks \u00b7 ${base}`;
+  } else if(route.view === 'dashboard'){
+    title = `Dashboard \u00b7 ${base}`;
+  } else if(route.view === 'search'){
+    title = `Search \u00b7 ${base}`;
+  }
+  document.title = title;
+}
+
 function renderApp(){
   renderSidebar();
   const route = STATE.route;
@@ -379,12 +400,13 @@ function renderApp(){
     renderHome();
   }
   updateChrome();
+  updateDocumentTitle();
 }
 
 function updateChrome(){
   document.getElementById('xpValue').textContent = STATE.xp;
   document.documentElement.setAttribute('data-theme', STATE.theme);
-  document.getElementById('themeToggle').setAttribute('aria-pressed', String(STATE.theme === 'light'));
+  document.getElementById('themeToggle').setAttribute('aria-pressed', String(STATE.theme === 'dark'));
   document.documentElement.style.setProperty('--font-scale', STATE.fontScale);
 }
 
@@ -592,14 +614,14 @@ function renderModule(pathId, moduleId, tab){
   </div>
 
   <div class="tabs" role="tablist">
-    <button class="tab" role="tab" aria-controls="tabpanel" data-tab="overview" aria-selected="${tab==='overview'}">Overview</button>
-    <button class="tab" role="tab" aria-controls="tabpanel" data-tab="practice" aria-selected="${tab==='practice'}">Practice</button>
-    <button class="tab" role="tab" aria-controls="tabpanel" data-tab="resources" aria-selected="${tab==='resources'}">Resources</button>
-    <button class="tab" role="tab" aria-controls="tabpanel" data-tab="mastery" aria-selected="${tab==='mastery'}">Mastery</button>
-    <button class="tab" role="tab" aria-controls="tabpanel" data-tab="notes" aria-selected="${tab==='notes'}">Notes</button>
+    <button class="tab" role="tab" id="tab-overview" aria-controls="tabpanel" data-tab="overview" aria-selected="${tab==='overview'}">Overview</button>
+    <button class="tab" role="tab" id="tab-practice" aria-controls="tabpanel" data-tab="practice" aria-selected="${tab==='practice'}">Practice</button>
+    <button class="tab" role="tab" id="tab-resources" aria-controls="tabpanel" data-tab="resources" aria-selected="${tab==='resources'}">Resources</button>
+    <button class="tab" role="tab" id="tab-mastery" aria-controls="tabpanel" data-tab="mastery" aria-selected="${tab==='mastery'}">Mastery</button>
+    <button class="tab" role="tab" id="tab-notes" aria-controls="tabpanel" data-tab="notes" aria-selected="${tab==='notes'}">Notes</button>
   </div>
 
-  <div class="tabpanel" id="tabpanel" role="tabpanel">${renderTabContent(m, tab, checkedSet)}</div>
+  <div class="tabpanel" id="tabpanel" role="tabpanel" aria-labelledby="tab-${tab}">${renderTabContent(m, tab, checkedSet)}</div>
 
   <div class="module-nav">
     ${prev ? `<button class="nav-link-card" data-path="${pathId}" data-module="${prev.id}"><span>${ICONS.arrowLeft} Previous</span><b>${prev.title}</b></button>` : '<span></span>'}
@@ -946,12 +968,14 @@ function closeMobileSearch(){
 function toggleChecklistItem(moduleId, index){
   if(!STATE.checklist[moduleId]) STATE.checklist[moduleId] = new Set();
   const set = STATE.checklist[moduleId];
-  if(set.has(index)){ set.delete(index); }
+  if(set.has(index)){ set.delete(index); STATE.xp = Math.max(0, STATE.xp - 10); }
   else { set.add(index); STATE.xp += 10; }
   STATE.route.tab = 'mastery';
 
   const m = findModule(moduleId);
-  const justAutoCompleted = m && m.checklist && set.size === m.checklist.length && !STATE.completed.has(moduleId);
+  const answeredCount = m && m.quiz ? Object.keys(STATE.quizAnswers[moduleId] || {}).length : 0;
+  const quizSatisfied = !m || !m.quiz || !m.quiz.length || answeredCount >= m.quiz.length;
+  const justAutoCompleted = m && m.checklist && set.size === m.checklist.length && quizSatisfied && !STATE.completed.has(moduleId);
   if(justAutoCompleted){
     STATE.completed.add(moduleId);
     STATE.xp += 50;
@@ -1078,8 +1102,9 @@ function openFloatingPlayer(ytId, moduleId, resIdx, title){
   // First open in this session: place it in a sensible corner instead of at (0,0).
   if(!fp.style.left && !fp.style.top){
     const w = fp.offsetWidth || 340;
+    const h = fp.offsetHeight || 372;
     fp.style.left = Math.max(12, window.innerWidth - w - 20) + 'px';
-    fp.style.top = Math.max(12, window.innerHeight - 360) + 'px';
+    fp.style.top = Math.max(12, window.innerHeight - h - 20) + 'px';
   }
   clampFloatingPlayerToViewport();
 }
@@ -1097,7 +1122,8 @@ function clampFloatingPlayerToViewport(){
   const rect = fp.getBoundingClientRect();
   let left = rect.left, top = rect.top;
   left = Math.min(Math.max(left, 4), window.innerWidth - rect.width - 4);
-  top = Math.min(Math.max(top, 4), window.innerHeight - 44); // keep at least the header on-screen
+  const maxTop = Math.max(4, window.innerHeight - rect.height - 4);
+  top = Math.min(Math.max(top, 4), maxTop);
   fp.style.left = left + 'px';
   fp.style.top = top + 'px';
 }
@@ -1290,6 +1316,8 @@ function handleSearch(query){
 }
 
 function renderSearchResults(matches, query){
+  STATE.route.view = 'search';
+  updateDocumentTitle();
   let html = `<div class="hero"><div class="eyebrow">Search</div><h1 style="font-size:32px;">${matches.length} result${matches.length===1?'':'s'} for &ldquo;${escapeHtml(query)}&rdquo;</h1></div>`;
   if(matches.length === 0){
     html += `<div class="empty-state">${ICONS.empty}<p>No matches. All live arcs are searchable &mdash; the rest is mapped but not written yet.</p></div>`;
@@ -1309,12 +1337,26 @@ function renderSearchResults(matches, query){
    TOAST
    ============================================================ */
 let toastTimer = null;
+let toastQueue = [];
+let toastShowing = false;
+
 function showToast(msg){
+  toastQueue.push(msg);
+  if(!toastShowing) processToastQueue();
+}
+
+function processToastQueue(){
+  if(toastQueue.length === 0){ toastShowing = false; return; }
+  toastShowing = true;
+  const msg = toastQueue.shift();
   const el = document.getElementById('toast');
   el.innerHTML = `${ICONS.toastCheck}<span>${msg}</span>`;
   el.classList.add('show');
   clearTimeout(toastTimer);
-  toastTimer = setTimeout(()=>el.classList.remove('show'), 3200);
+  toastTimer = setTimeout(()=>{
+    el.classList.remove('show');
+    setTimeout(processToastQueue, 250);
+  }, 3200);
 }
 
 /* ============================================================
@@ -1452,11 +1494,17 @@ function initEvents(){
   });
 
   document.getElementById('fontUp').addEventListener('click', ()=>{
-    STATE.fontScale = Math.min(1.25, +(STATE.fontScale + 0.075).toFixed(3));
+    const old = STATE.fontScale;
+    let next = Math.min(1.25, +(old + 0.075).toFixed(3));
+    if(old < 1 && next > 1) next = 1;
+    STATE.fontScale = next;
     updateChrome(); saveProgress();
   });
   document.getElementById('fontDown').addEventListener('click', ()=>{
-    STATE.fontScale = Math.max(0.875, +(STATE.fontScale - 0.075).toFixed(3));
+    const old = STATE.fontScale;
+    let next = Math.max(0.875, +(old - 0.075).toFixed(3));
+    if(old > 1 && next < 1) next = 1;
+    STATE.fontScale = next;
     updateChrome(); saveProgress();
   });
 
@@ -1492,6 +1540,9 @@ function initEvents(){
     const open = sidebar.classList.toggle('open');
     backdrop.classList.toggle('show', open);
     menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.innerHTML = open
+      ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6L6 18"/></svg>'
+      : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>';
   });
   backdrop.addEventListener('click', closeMobileSidebar);
 
