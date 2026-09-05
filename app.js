@@ -914,12 +914,13 @@ function navigateModule(pathId, moduleId, tab){
   renderApp();
   window.scrollTo({top:0, behavior:'auto'});
   closeMobileSidebar();
+  closeMobileSearch();
 }
 function openPathOnHome(pathId){
   const path = CURRICULUM.find(p=>p.id===pathId);
   if(!path) return;
   if(path.status !== 'live'){
-    showToast(path.title + ' isn\u2019t built yet \u2014 Foundations is live now.');
+    showToast(path.title + ' isn\u2019t built yet \u2014 five other arcs are live now.');
     return;
   }
   navigateHome();
@@ -932,6 +933,11 @@ function closeMobileSidebar(){
   document.getElementById('sidebar').classList.remove('open');
   document.getElementById('sidebarBackdrop').classList.remove('show');
   document.getElementById('menuBtn').setAttribute('aria-expanded','false');
+}
+
+function closeMobileSearch(){
+  document.getElementById('topbarSearchBox').classList.remove('mobile-search-open');
+  document.getElementById('mobileSearchToggle').setAttribute('aria-expanded','false');
 }
 
 /* ============================================================
@@ -1286,7 +1292,7 @@ function handleSearch(query){
 function renderSearchResults(matches, query){
   let html = `<div class="hero"><div class="eyebrow">Search</div><h1 style="font-size:32px;">${matches.length} result${matches.length===1?'':'s'} for &ldquo;${escapeHtml(query)}&rdquo;</h1></div>`;
   if(matches.length === 0){
-    html += `<div class="empty-state">${ICONS.empty}<p>No matches. Only the live Foundations arc is searchable right now &mdash; the rest is mapped but not written.</p></div>`;
+    html += `<div class="empty-state">${ICONS.empty}<p>No matches. All live arcs are searchable &mdash; the rest is mapped but not written yet.</p></div>`;
   } else {
     html += '<div class="module-grid">' + matches.map(({path,m})=>`
       <button class="mcard" data-path="${path.id}" data-module="${m.id}">
@@ -1467,6 +1473,12 @@ function initEvents(){
       STATE.checklist = {};
       STATE.xp = 0;
       STATE.recentlyVisited = [];
+      STATE.quizAnswers = {};
+      STATE.notes = {};
+      STATE.resourcesOpened = {};
+      STATE.streak = 0;
+      STATE.lastVisitDate = null;
+      STATE.unlockedAchievements = new Set();
       saveProgress();
       navigateHome();
       showToast('Progress reset.');
@@ -1483,6 +1495,14 @@ function initEvents(){
   });
   backdrop.addEventListener('click', closeMobileSidebar);
 
+  const mobileSearchToggle = document.getElementById('mobileSearchToggle');
+  const topbarSearchBox = document.getElementById('topbarSearchBox');
+  mobileSearchToggle.addEventListener('click', ()=>{
+    const open = topbarSearchBox.classList.toggle('mobile-search-open');
+    mobileSearchToggle.setAttribute('aria-expanded', String(open));
+    if(open) document.getElementById('searchInput').focus();
+  });
+
   initFloatingPlayerDrag();
 
   const scrollTopBtn = document.getElementById('scrollTop');
@@ -1493,7 +1513,7 @@ function initEvents(){
   });
 
   document.addEventListener('keydown', (e)=>{
-    if(e.key === 'Escape') closeMobileSidebar();
+    if(e.key === 'Escape'){ closeMobileSidebar(); closeMobileSearch(); }
   });
 }
 
