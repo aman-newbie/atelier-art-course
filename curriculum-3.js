@@ -743,7 +743,7 @@ const CURRICULUM_3 = [
         },
         resources:[
           {type:'Course', title:'Character Design Track — Lesson 1: Shape Language', creator:'Art Prof (Clara Lieu)', url:'https://artprof.org/character-design-track/#shape-language', why:"A free, structured lesson from a full character design curriculum, with a concrete sketching prompt covering exactly this module's core idea.", verified:true},
-          {type:'Article', title:'Character Shape Language', creator:'CGWire', url:'https://www.cg-wire.com/blog/character-shape-language', why:"Uses real animated film examples to illustrate how dominant shapes communicate personality, a useful applied companion to the Art Prof lesson.", verified:true}
+          {type:'Article', title:'Character Shape Language', creator:'CGWire', url:'https://blog.cg-wire.com/character-shape-language/', why:"Uses real animated film examples to illustrate how dominant shapes communicate personality, a useful applied companion to the Art Prof lesson.", verified:true}
         ],
         quiz:[
           {q:"What personality associations do rounded, circular dominant shapes tend to carry?", options:["Dangerous and aggressive","Friendly, soft, harmless, or young","Stable and stubborn","No consistent association exists"], correct:1, explain:"These are strong defaults — useful for design, though skilled designers sometimes deliberately subvert them."},
