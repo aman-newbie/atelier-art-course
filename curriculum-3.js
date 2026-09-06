@@ -223,7 +223,7 @@ const CURRICULUM_3 = [
         },
         resources:[
           {type:'Course', title:'Mannequinization — Structure of the Human Body', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/mannequinization-structure-of-the-human-body', why:"Free lesson covering simplified arm construction as part of the full mannequin figure, a useful base before adding forearm-rotation detail.", verified:true},
-          {type:'Book', title:'Figure Drawing: Design and Invention', creator:'Michael Hampton', url:'', why:"A widely used, still-in-print figure drawing book covering arm and forearm construction, including bone rotation, in more depth than most free video content.", verified:true}
+          {type:'Site', title:'Figure Drawing \u2014 free tutorials and lectures', creator:'Michael Hampton', url:'https://figuredrawing.info/', why:"Michael Hampton's own official site, offering free lectures and demonstrations covering the same arm and forearm construction, including bone rotation, taught in his book.", verified:true}
         ],
         quiz:[
           {q:"What makes the forearm structurally different from the upper arm?", options:["Nothing, they're identical","It contains two bones (radius and ulna) that rotate around each other, allowing the palm to turn up or down","It has no bones at all","It can only bend, never twist"], correct:1, explain:"This two-bone rotation, not the elbow joint, is what lets the palm face up or down."},
@@ -414,7 +414,7 @@ const CURRICULUM_3 = [
         },
         resources:[
           {type:'Article', title:'How to Draw Legs, the Easy Step-by-Step Guide with Simplified Anatomy', creator:'GVAAT\u2019S WORKSHOP', url:'https://gvaat.com/blog/how-to-draw-legs-the-easy-step-by-step-guide/', why:"A free, detailed, illustrated tutorial covering exactly this module's simplified leg construction.", verified:true},
-          {type:'Course (paid)', title:'Anatomy of the Human Body — Legs', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course/anatomy-of-the-human-body', why:"For anyone wanting full bone-and-muscle depth beyond construction basics: a dedicated 107-lesson paid course. Worth knowing it exists, but not required for this module.", verified:true}
+          {type:'Video', title:'How to Draw Legs \u2014 Bone Anatomy for Artists', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/how-to-draw-legs-bone-anatomy-for-artists', why:"A free individual lesson covering leg bone anatomy in the depth this module needs, with no purchase of the full course required.", verified:true}
         ],
         quiz:[
           {q:"Why doesn't the leg taper as one smooth, uniform shape from hip to ankle?", options:["It does taper perfectly uniformly","The calf creates a distinct secondary bulge partway down before the leg narrows again toward the ankle","Legs have no real taper at all","Only female legs have this feature"], correct:1, explain:"The calf's bulge breaks up what would otherwise be a single uniform taper."},
@@ -555,7 +555,7 @@ const CURRICULUM_3 = [
         },
         resources:[
           {type:'Reference Tool', title:'Figure drawing practice tool', creator:'Line of Action', url:'https://line-of-action.com/practice-tools/app/figure-drawing', why:"The same free timed-pose tool used throughout this arc, useful here for varied action and movement references beyond static standing poses.", verified:true},
-          {type:'Historical Reference', title:'Animal Locomotion (1887)', creator:'Eadweard Muybridge', url:'', why:"Muybridge's stop-motion photography of human and animal movement, now well over a century old and in the public domain, remains the foundational reference nearly every modern walk-cycle tutorial still traces back to.", verified:true}
+          {type:'Historical Reference', title:'Animal Locomotion (1887)', creator:'Eadweard Muybridge', url:'https://archive.org/details/muybridgescomple01muyb', why:"Muybridge's stop-motion photography of human and animal movement, now well over a century old and freely viewable through the Internet Archive, remains the foundational reference nearly every modern walk-cycle tutorial still traces back to.", verified:true}
         ],
         quiz:[
           {q:"What are the four key poses commonly used to break down a walk cycle?", options:["Jump, land, crouch, stand","Contact, down, passing, up","Start, middle, end, repeat","Left, right, forward, back"], correct:1, explain:"These four poses, repeating with each leg, form the backbone of nearly every walk-cycle breakdown."},
@@ -1273,7 +1273,7 @@ const CURRICULUM_3 = [
 },
 "resources": [
   {"type": "Video", "title": "Introduction to Perspective Drawing \u2014 1994 Chalkboard Lectures", "creator": "Marshall Vandruff", "url": "https://www.youtube.com/watch?v=R60e9_ofV68", "why": "The foundational lecture behind the classic 'if you can draw a cube, you can draw practically anything' approach to buildings, taught by one of the most respected perspective instructors in the field.", "verified": true},
-  {"type": "Book", "title": "Architecture: Form, Space, and Order", "creator": "Francis D.K. Ching", "url": "https://www.goodreads.com/book/show/70133.Architecture", "why": "The classic, hand-illustrated primer on how architects themselves think about buildings as volumes, planes, and boxes \u2014 the exact vocabulary this module is built on.", "verified": true}
+  {"type": "Article", "title": "Architecture Composition Essentials", "creator": "archisoup", "url": "https://www.archisoup.com/architecture-composition", "why": "A free article covering the same vocabulary architects use for buildings as volumes, planes, and order \u2014 the core ideas this module is built on, without the book purchase.", "verified": true}
 ],
 "quiz": [
   {"q": "Why must every window, door, and roofline on the same building converge to the same vanishing point(s) as its walls?", "options": ["Because it makes the drawing symmetrical", "Because all edges running in the same real-world direction share the same line of perspective convergence", "Because vanishing points are only used for roads, not buildings", "It is a stylistic choice, not a structural rule"], "correct": 1, "explain": "Any set of real-world parallel lines running in the same direction converges to a single shared vanishing point in true perspective \u2014 that applies equally to the walls, the windows, and the roof edges of one building."},
@@ -1326,7 +1326,7 @@ const CURRICULUM_3 = [
 },
 "resources": [
   {"type": "Article", "title": "Tutorial: How to Draw Doors and Windows in One-Point Perspective", "creator": "Julia Henze", "url": "https://www.juliahenze.com/post/how-to-draw-doors-and-windows-in-one-point-perspective", "why": "Directly addresses the exact gap this module targets: artists who understand how to draw a building's box but lose the perspective logic the moment they add doors and windows.", "verified": true},
-  {"type": "Book", "title": "How to Draw: Drawing and Sketching Objects and Environments from Your Imagination", "creator": "Scott Robertson & Thomas Bertling", "url": "https://www.goodreads.com/book/show/15808089-how-to-draw", "why": "Covers rigorous, technically precise perspective construction for architectural elements, including doors, windows, and trim, from two instructors with a combined 26 years of teaching this exact material.", "verified": true}
+  {"type": "Site", "title": "Free Video Library \u2014 perspective fundamentals", "creator": "Ctrl+Paint \u2014 Matt Kohr", "url": "https://www.ctrlpaint.com/library", "why": "Free perspective-construction videos covering the same rigorous, technically precise approach to architectural elements like doors, windows, and trim that this module draws on.", "verified": true}
 ],
 "quiz": [
   {"q": "Why should a window opening show a visible 'reveal' (the inner wall thickness) rather than being drawn as a flat rectangle?", "options": ["It looks more decorative but has no structural meaning", "Because the wall has real thickness, and a hole cut through it reveals recessed side, sill, and lintel planes", "Reveals are only used for doors, not windows", "It has no functional purpose in the drawing"], "correct": 1, "explain": "A window is a hole cut through a wall that has real thickness, so the sides, sill, and lintel of that thickness are visible inside the opening \u2014 omitting them makes the window look like a flat decal."},
@@ -1484,7 +1484,7 @@ const CURRICULUM_3 = [
   "challenge": "Design a plausible original building style by deliberately fusing two real historical influences, then justify each design choice by pointing to the historical precedent it came from."
 },
 "resources": [
-  {"type": "Book", "title": "A Global History of Architecture", "creator": "Francis D.K. Ching, Mark M. Jarzombek & Vikramaditya Prakash", "url": "https://www.goodreads.com/book/show/70138.A_Global_History_of_Architecture", "why": "Organizes 5,000 years of world architecture along a global timeline, making it easy to see and compare the silhouette and ornament vocabulary of different styles and cultures side by side.", "verified": true},
+  {"type": "Site", "title": "Architecture & Design", "creator": "Khan Academy", "url": "https://www.khanacademy.org/humanities/art-1010/architecture-design", "why": "Free video lessons spanning world architecture across history and cultures, covering the same comparative silhouette and ornament vocabulary this module draws on.", "verified": true},
   {"type": "Article", "title": "How do we look at architecture?", "creator": "James Gurney", "url": "https://gurneyjourney.blogspot.com/2018/05/how-do-we-look-at-architecture.html", "why": "Explores what actually draws the eye when looking at a building's facade, useful grounding for understanding why certain style markers (windows, doors, proportion) read as strongly as they do.", "verified": true}
 ],
 "quiz": [
@@ -1537,7 +1537,7 @@ const CURRICULUM_3 = [
   "challenge": "Draw a fully furnished interior room combining one-point construction, a diagonally spaced floor pattern, a window as the primary light source, and at least three pieces of furniture correctly grounded to the floor plane."
 },
 "resources": [
-  {"type": "Book", "title": "The Urban Sketching Handbook: Understanding Perspective", "creator": "Stephanie Bower", "url": "https://www.amazon.com/Urban-Sketching-Handbook-Understanding-Perspective/dp/1631591282", "why": "Written by a licensed architect and illustrator, this handbook teaches how to think like an architect when constructing interior and exterior spaces in accurate perspective.", "verified": true},
+  {"type": "Video", "title": "Urban Sketching Tutorial for Beginners", "creator": "Will Kemp Art School", "url": "https://willkempartschool.com/urban-sketching-tutorial-for-beginners/", "why": "A free video lesson on constructing interior and exterior spaces in accurate perspective while sketching on location \u2014 the same practical, architect's-eye approach.", "verified": true},
   {"type": "Site", "title": "Lesson 1 \u2014 Boxes: The Basics of Perspective and Projection", "creator": "Drawabox (Uncomfortable)", "url": "https://drawabox.com/lesson/1/6", "why": "The same box-perspective fundamentals this module reapplies from the inside, explained from first principles.", "verified": true}
 ],
 "quiz": [
@@ -1591,7 +1591,7 @@ const CURRICULUM_3 = [
 },
 "resources": [
   {"type": "Site", "title": "Free Video Library", "creator": "Ctrl+Paint \u2014 Matt Kohr", "url": "https://www.ctrlpaint.com/library", "why": "Includes a constructive-form video series that applies the same box-and-cylinder object breakdown this module uses for furniture and props.", "verified": true},
-  {"type": "Book", "title": "How to Draw: Drawing and Sketching Objects and Environments from Your Imagination", "creator": "Scott Robertson & Thomas Bertling", "url": "https://www.goodreads.com/book/show/15808089-how-to-draw", "why": "Covers rigorous perspective construction for designed objects generally, directly transferable to constructing furniture and props from imagination.", "verified": true}
+  {"type": "Video", "title": "Introduction to Perspective Drawing (1994 Chalkboard Lecture)", "creator": "Marshall Vandruff", "url": "https://www.youtube.com/watch?v=R60e9_ofV68", "why": "A free, thorough lecture on perspective construction for designed objects generally, directly transferable to constructing furniture and props from imagination.", "verified": true}
 ],
 "quiz": [
   {"q": "What basic primitives does most seating furniture (chairs, stools, benches) reduce to?", "options": ["A single sphere", "A seat box, a back panel, and leg cylinders", "A cone and a pyramid", "Random freehand curves with no underlying structure"], "correct": 1, "explain": "Chairs, stools, and benches are overwhelmingly built from a seat box, an optional back panel, and cylindrical legs \u2014 mastering this small set of primitives covers most seating furniture."},
