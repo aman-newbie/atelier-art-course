@@ -809,7 +809,7 @@ const CURRICULUM_3 = [
     ]
   },
 {id:'nature-arch', title:'Nature & Architecture', status:'live', order:5,
-    desc:'Trees, plants, rocks, water, sky and weather — then buildings, interiors, and cities, built with the same construction logic as everything before it. Batches 1–2 (nature, then core architecture and interiors) are live; urban environments and aerial views are next.',
+    desc:'Trees, plants, rocks, water, sky and weather — then buildings, interiors, and cities, built with the same construction logic as everything before it. All three batches are live — the arc is complete: nature, core architecture and interiors, and finally urban environments, aerial views, and environmental wear.',
     modules:[
 {
 "id": "m48",
@@ -1605,6 +1605,221 @@ const CURRICULUM_3 = [
   "I can check and correct a prop's scale against a known nearby object in the scene."
 ],
 "nextStep": "You have now completed the second batch of the Nature & Architecture arc. Buildings, their details, roofs, materials, styles, interiors, and furniture are all constructible \u2014 the final batch moves outward again, into full urban environments, aerial views, and the environmental wear that makes a scene feel real."
+},
+{
+"id": "m63",
+"plate": 63,
+"title": "Urban Environments & Streetscapes",
+"difficulty": "Intermediate",
+"studyTime": "20 min",
+"practiceTime": "25–30 min/day",
+"prereq": ["m59", "m56"],
+"hook": "A city block is not a row of separate buildings — it is one continuous depth exercise, with the same vanishing points, the same materials repeating with variation, and human-scale details that tell you how big everything really is.",
+"whyItMatters": [
+  "Beginners draw each building on a street as its own isolated box, so the street never reads as one coherent space — depth, scale, and light all disagree from structure to structure.",
+  "This module applies the box-and-materials construction from Modules 56–59 to a full streetscape, so buildings, signage, vehicles, and people can all share one perspective system and one consistent sense of scale."
+],
+"coreIdea": [
+  "A street is <b>one perspective system</b>: every building along it shares the same horizon line and vanishing points established in Module 56, even though each building's height, width, and style can vary freely.",
+  "<b>Repetition with variation</b> reads as a real street — windows, doors, and cornice lines repeat at a rhythm, but no two buildings are identical; pure repetition looks like a texture, not a place.",
+  "<b>Human-scale anchors</b> (doorways roughly 2m tall, cars roughly 1.5m tall, people roughly 1.7m tall) are what let a viewer judge the true size of everything else on the street — without at least one of these, a street of any size looks the same.",
+  "<b>Depth cues stack</b> along a street: linear perspective converging buildings, atmospheric perspective fading distant blocks, and overlapping foreground elements (a lamppost, a parked car) all combine to sell distance."
+],
+"mistakes": [
+  "Drawing each building as an isolated box with its own separate vanishing points instead of sharing the street's single perspective system.",
+  "Repeating identical buildings, windows, or signage with no variation, which reads as a texture pattern rather than a believable place.",
+  "Leaving out any human-scale reference (a doorway, a car, a figure), leaving the viewer with no way to judge how large the street actually is.",
+  "Relying on linear perspective alone for depth and skipping atmospheric fading or foreground overlap, which flattens the sense of distance."
+],
+"proTips": [
+  "Block in the street's horizon line and vanishing points first, from Module 56, before placing a single building — every structure gets built onto that shared grid.",
+  "Vary cornice height, window spacing, and material between neighboring buildings so the street reads as accumulated over time, not built in one pass.",
+  "Drop in at least one human-scale anchor (a doorway, car, or figure) early, and check every other object's size against it as you work.",
+  "Layer atmospheric perspective and foreground overlap on top of linear perspective — distance is sold by all three working together, not by converging lines alone."
+],
+"practice": {
+  "warmup": "Block in a street's horizon line and two vanishing points, then place five simple building boxes of varying height and width along it, all sharing the same perspective.",
+  "daily": "Take one blocked-in building from the warmup and add doors, windows, and a roofline from Modules 57–58, varying the details from its neighbors.",
+  "weekly": "Draw a full street block of four to six buildings with a human-scale anchor (car or figure) and at least one atmospheric-perspective fade toward the distance.",
+  "challenge": "Draw a busy street corner combining varied architecture, signage, at least two human-scale anchors, and both linear and atmospheric depth cues in one composition."
+},
+"resources": [
+  {"type": "Site", "title": "Tutorial: Atmospheric Perspective in Urban Sketching", "creator": "Julia Henze", "url": "https://www.juliahenze.com/post/tutorial-atmospheric-perspective-in-urban-sketching", "why": "A free, illustrated tutorial on using atmospheric perspective specifically to sell depth along a real city street, directly extending the linear perspective this module starts from.", "verified": true},
+  {"type": "Site", "title": "Architecture Detective: What types of architecture can you find in your neighborhood?", "creator": "Rachel Wintemberg — The Helpful Art Teacher", "url": "http://thehelpfulartteacher.blogspot.com/2013/08/architecture-detective-what-types-of.html", "why": "A free lesson in observing and recording the varied, mixed architecture of a real street, reinforcing this module's emphasis on repetition-with-variation.", "verified": true}
+],
+"quiz": [
+  {"q": "Why should every building on a street share the same vanishing points?", "options": ["It doesn't matter, each building can use its own perspective", "So the street reads as one coherent space rather than a set of disconnected boxes", "Only the tallest building needs correct perspective", "Vanishing points only apply to a single isolated building"], "correct": 1, "explain": "A believable street depends on every building sharing one horizon line and set of vanishing points, even though each structure's height, width, and style can vary freely."},
+  {"q": "What is the risk of drawing every building on a street as identical?", "options": ["There is no risk, identical buildings are more realistic", "It reads as a repeating texture pattern instead of a real, lived-in place", "It makes the perspective more accurate", "It removes the need for human-scale anchors"], "correct": 1, "explain": "Real streets show repetition with variation — similar rhythm of windows and doors, but no two buildings identical. Pure repetition reads as a texture, not a place."},
+  {"q": "Why does a streetscape need at least one human-scale anchor, like a car or figure?", "options": ["It is purely decorative", "It gives the viewer a reference to judge the true size of everything else in the scene", "It replaces the need for a horizon line", "It is only needed in aerial views, not street level"], "correct": 1, "explain": "Without a known-size reference like a doorway, car, or figure, a viewer has no way to judge whether a street scene is small and cozy or vast and monumental."}
+],
+"checklist": [
+  "I can construct a full street of buildings sharing one horizon line and set of vanishing points.",
+  "I vary window spacing, cornice height, and material between neighboring buildings instead of repeating them identically.",
+  "I include at least one human-scale anchor so the viewer can judge the true size of the scene.",
+  "I combine linear perspective with atmospheric fading and foreground overlap to sell depth along the street."
+],
+"nextStep": "With a full street built on one shared perspective system, the next module pulls the camera up and back — into aerial views, where that same street is seen from above using three-point perspective."
+},
+{
+"id": "m64",
+"plate": 64,
+"title": "Aerial Views & Bird's-Eye Perspective",
+"difficulty": "Intermediate",
+"studyTime": "20 min",
+"practiceTime": "25–30 min/day",
+"prereq": ["m63", "m56"],
+"hook": "Pull the camera up above the street and everything changes: a third vanishing point appears below the horizon, verticals start to converge downward, and the whole city becomes a pattern of rooftops and foreshortened figures.",
+"whyItMatters": [
+  "Beginners who are comfortable with one- and two-point perspective often freeze the moment a scene is viewed from above or below, because a third vanishing point for verticals feels like an entirely new system.",
+  "This module extends the box-and-perspective construction from Module 56 with a third vanishing point, so the same street built in Module 63 can now be drawn convincingly from a rooftop, a drone, or a tall window."
+],
+"coreIdea": [
+  "In a <b>bird's-eye view</b>, the third vanishing point sits below the horizon line, and all vertical edges (building corners, lampposts) converge downward toward it instead of staying parallel.",
+  "The <b>horizon line itself is often angled</b>, not perfectly level, because a real aerial viewpoint (a bird, a drone, a tall building) rarely holds a perfectly flat attitude — an angled horizon reads as more dynamic and convincing than a forced, static one.",
+  "<b>Figures and objects seen from above are heavily foreshortened</b>: a person becomes mostly the tops of their head and shoulders, a car becomes mostly its roof, and rooftops themselves show far more surface area than their walls.",
+  "The same <b>human-scale anchors</b> from Module 63 still apply from above — a foreshortened figure or vehicle is still the fastest way for a viewer to judge how high up, and how large, the aerial scene really is."
+],
+"mistakes": [
+  "Keeping all vertical lines perfectly parallel in an aerial view instead of converging them toward a third vanishing point below the horizon.",
+  "Forcing the horizon line perfectly level and centered, which makes an aerial composition feel static instead of like a real elevated viewpoint.",
+  "Drawing figures or vehicles from above the same way they would look from street level, ignoring the heavy foreshortening an aerial angle creates.",
+  "Dropping all human-scale anchors once the view shifts to aerial, leaving the viewer with no way to judge the height or scale of the scene."
+],
+"proTips": [
+  "Place the third vanishing point below the horizon first, then draw a single test cube converging to all three points before attempting a full aerial scene.",
+  "Tilt the horizon line off perfectly level on purpose — an angled horizon reads as a more dynamic, believable aerial viewpoint than a static, level one.",
+  "When placing a figure or vehicle from above, start from its known height and heavily compress it toward its top surface rather than drawing it as a shrunk street-level figure.",
+  "Reuse the streetscape built in Module 63 as the basis for an aerial version of the same scene, so the underlying geometry is already familiar."
+],
+"practice": {
+  "warmup": "Draw a single cube in three-point perspective from a bird's-eye view, with the third vanishing point placed below an angled horizon line.",
+  "daily": "Take the street built in Module 63's daily practice and redraw one building block from a bird's-eye view, converging its verticals to the new third vanishing point.",
+  "weekly": "Draw a full city block from a bird's-eye view, including at least two heavily foreshortened figures or vehicles as scale anchors.",
+  "challenge": "Draw an aerial view of a busy intersection combining varied rooftops, an angled horizon, foreshortened figures and vehicles, and both linear and atmospheric depth cues."
+},
+"resources": [
+  {"type": "Site", "title": "Three Point Perspective: Worm's Eye vs. Bird's Eye View", "creator": "Rachel Wintemberg — The Helpful Art Teacher", "url": "https://thehelpfulartteacher.blogspot.com/2011/01/three-point-perspectivethe-really.html", "why": "A free, step-by-step tutorial with printable worksheets specifically on constructing bird's-eye three-point perspective, including the angled-horizon approach this module recommends.", "verified": true},
+  {"type": "Site", "title": "Free Video Library", "creator": "Ctrl+Paint — Matt Kohr", "url": "https://www.ctrlpaint.com/library", "why": "Includes free perspective-fundamentals videos that reinforce vanishing-point construction, directly transferable to adding a third vanishing point for aerial views.", "verified": true}
+],
+"quiz": [
+  {"q": "In a bird's-eye view, where is the third vanishing point located?", "options": ["Above the horizon line", "Below the horizon line", "There is no third vanishing point in a bird's-eye view", "Exactly on the horizon line"], "correct": 1, "explain": "A bird's-eye (looking-down) view places the third vanishing point below the horizon, and vertical edges converge downward toward it."},
+  {"q": "Why might an artist deliberately tilt the horizon line in an aerial composition?", "options": ["A tilted horizon is always a mistake", "It makes the composition feel more dynamic, like a real elevated viewpoint", "It removes the need for a third vanishing point", "It only applies to worm's-eye views, never bird's-eye"], "correct": 1, "explain": "A real aerial viewpoint rarely holds a perfectly flat attitude, so an angled horizon line reads as more dynamic and convincing than a forced, perfectly level one."},
+  {"q": "How does a human figure typically appear when drawn from a bird's-eye view?", "options": ["Exactly as it would from street level", "Heavily foreshortened, showing mostly the top of the head and shoulders", "Invisible, since figures cannot be shown from above", "Taller than it would appear from street level"], "correct": 1, "explain": "Viewed from above, a figure is heavily foreshortened — mostly the top of the head and shoulders are visible, which is very different from a street-level view of the same figure."}
+],
+"checklist": [
+  "I can construct a bird's-eye view using a third vanishing point placed below the horizon.",
+  "I deliberately angle the horizon line in aerial compositions rather than forcing it level.",
+  "I draw figures and vehicles seen from above as heavily foreshortened, not as shrunk street-level versions.",
+  "I include human-scale anchors in aerial views so the viewer can judge the height and scale of the scene."
+],
+"nextStep": "Streets and skylines are now constructible from both eye level and above — the next module adds the layer that makes any of these scenes feel real rather than freshly built: environmental wear."
+},
+{
+"id": "m65",
+"plate": 65,
+"title": "Environmental Detail & Wear",
+"difficulty": "Intermediate",
+"studyTime": "20 min",
+"practiceTime": "25–30 min/day",
+"prereq": ["m59", "m64"],
+"hook": "A brand-new building and a building that has stood for eighty years share the same construction — the only difference is what has happened to its surfaces since: rust bleeding from a bolt, grime collecting in a corner, paint failing where water runs.",
+"whyItMatters": [
+  "A perfectly clean, evenly rendered surface reads as unfinished or artificial, even when its construction and materials (Module 59) are correct — real surfaces accumulate history, and that history is what makes a scene feel lived-in.",
+  "This module treats wear as something to place with intent rather than scattered randomly, so it reinforces the construction and reads as physically caused rather than decorative texture."
+],
+"coreIdea": [
+  "Wear <b>follows physics, not randomness</b>: grime collects where water runs and air stagnates (under ledges, inside corners), rust blooms at metal joints and fasteners, and paint fails first where sun and moisture do the most damage.",
+  "<b>Edges wear before flat surfaces</b> — corners get chipped, rounded, and worn smooth first, while the center of a flat wall stays comparatively pristine longest.",
+  "Wear should be placed with <b>restraint and intent</b>: a few well-chosen, physically-justified marks of age read as more convincing than dirt scattered evenly across an entire surface.",
+  "<b>Contrast sells wear</b> — a rust streak or grime patch only reads clearly against a comparatively clean surrounding surface; wear everywhere is the same as wear nowhere."
+],
+"mistakes": [
+  "Scattering dirt, rust, or grime evenly across a whole surface instead of placing it only where water, air, or contact would physically cause it.",
+  "Wearing down the center of a flat surface as heavily as its edges and corners, when in reality corners and edges wear first.",
+  "Adding so much wear that there is no clean surface left for it to contrast against, so the damage stops reading clearly.",
+  "Treating wear as decorative texture applied on top, rather than as a consequence of the specific material and construction established in Module 59."
+],
+"proTips": [
+  "Before adding any wear, ask where water would run and where air would stagnate on this specific surface — that answer tells you exactly where grime and rust belong.",
+  "Chip, round, and lighten corners and edges first; leave the center of flat surfaces comparatively cleaner and only lightly worn.",
+  "Place wear in a few concentrated, well-chosen areas rather than spreading it thin and even across the whole surface.",
+  "Step back periodically and check that clean surface still remains near your wear marks — without contrast, the damage stops reading."
+],
+"practice": {
+  "warmup": "Draw a single clean wall panel, then add rust and grime only at one corner and one seam, leaving the rest of the panel clean.",
+  "daily": "Take one building facade from Module 63 or 64 and add physically-justified wear — water staining below a windowsill, rust at a metal railing, chipped edges at a doorway.",
+  "weekly": "Take a full street or aerial scene from Modules 63–64 and selectively age three to four surfaces, keeping the rest of the scene comparatively clean for contrast.",
+  "challenge": "Draw the same building twice — once brand-new and once heavily weathered — keeping the underlying construction identical and changing only the surface history."
+},
+"resources": [
+  {"type": "Site", "title": "Free Video Tutorials (Design Cinema)", "creator": "FZD School — Feng Zhu", "url": "https://fengzhudesign.blogspot.com/p/free-tutorials.html", "why": "Hosts links to Feng Zhu's free Design Cinema lecture series, including Episode 107, ‘How to Add Details,’ which covers deciding where and why to place wear and detail so an environment reads as lived-in.", "verified": true},
+  {"type": "Video", "title": "FZD Design Cinema and Podcast (full playlist)", "creator": "FZD School — Feng Zhu", "url": "https://www.youtube.com/playlist?list=PLvNv1kRvuSwLYS2CkHTDS6-zVKSoUYzJO", "why": "The complete free lecture archive, useful for finding additional environment-detail, materials, and weathering episodes beyond #107.", "verified": true}
+],
+"quiz": [
+  {"q": "Where should grime and rust typically be placed on a surface?", "options": ["Scattered evenly across the entire surface", "Wherever water runs or collects, and wherever air stagnates, such as ledges and corners", "Only at the exact center of flat surfaces", "Wear should never be added to a construction that is otherwise correct"], "correct": 1, "explain": "Wear follows physics, not randomness — grime and rust accumulate where water runs and air stagnates, such as under ledges and in corners."},
+  {"q": "Which part of a surface typically wears first?", "options": ["The exact center of a flat surface", "Edges and corners", "Nothing wears first, wear is uniform", "Only surfaces facing away from weather"], "correct": 1, "explain": "Edges and corners take the most physical contact and exposure, so they chip, round, and wear smooth before the center of a flat surface does."},
+  {"q": "Why is restraint important when adding environmental wear?", "options": ["Restraint is not important, more wear is always more realistic", "Without a clean surface to contrast against, added wear stops reading clearly", "Wear should only ever be added to metal surfaces", "Restraint prevents the construction underneath from being visible"], "correct": 1, "explain": "Wear reads through contrast — a rust streak or grime patch is only visible against a comparatively clean surrounding surface; wear everywhere reads as nowhere."}
+],
+"checklist": [
+  "I place grime and rust only where water or air would physically cause it, not scattered evenly.",
+  "I wear down edges and corners before the center of flat surfaces.",
+  "I add wear with restraint, keeping enough clean surface nearby for the damage to contrast against.",
+  "I treat wear as a consequence of the material and construction underneath, not as decoration applied on top."
+],
+"nextStep": "Trees and weather, buildings and their materials, full streets seen from the ground and from above, and now the wear that gives any of it a history — the arc's final module brings all of it together in one finished scene."
+},
+{
+"id": "m66",
+"plate": 66,
+"title": "Nature & Architecture Capstone: A Living City Block",
+"difficulty": "Advanced",
+"studyTime": "20 min",
+"practiceTime": "40–60 min/day",
+"prereq": ["m63", "m64", "m65", "m48"],
+"hook": "Every system this arc has built — branching trees, weather and sky, box-constructed buildings, materials, interiors, full streets, aerial views, and the wear that ages all of it — now runs together, in professional order, on one finished scene.",
+"whyItMatters": [
+  "This is the first true capstone of the Nature & Architecture arc: trees, terrain, and sky from the arc's first batch have to coexist convincingly with the constructed buildings, streets, and interiors of its second and third batches, all sharing one light source and one perspective system.",
+  "Combining natural and built forms in a single composition is where most of this arc's individual skills either reinforce each other or expose gaps — a tree that ignores the street's vanishing points, or weather that lights the buildings but not the foliage, breaks the whole scene."
+],
+"coreIdea": [
+  "Work in <b>professional order</b>: block the perspective grid and horizon first, then place large masses (buildings, tree canopies, terrain), then construction detail (windows, branching, materials), then wear, and light and atmosphere last.",
+  "<b>One light source governs everything</b> in the scene — the same sun position that casts a building's shadow must also explain how light falls through a tree's canopy and across the street's surface.",
+  "<b>Nature and architecture share the same depth cues</b>: a tree at the end of a street obeys the same atmospheric fading and linear convergence as the buildings around it, not a separate set of rules.",
+  "A finished scene is a <b>record of choices, not an accumulation of everything you know</b> — the strongest capstone pieces choose one clear viewpoint, one clear light, and one or two focal points of detail and wear, rather than maximizing every skill from the arc at once."
+],
+"mistakes": [
+  "Building the architecture and the natural elements as if they were two separate drawings pasted together, with different perspective systems or light directions.",
+  "Skipping the professional order and jumping straight to fine detail or wear before the large masses and perspective grid are locked in.",
+  "Adding foliage, weather, and wear at maximum intensity everywhere in the scene instead of choosing a few focal points, leaving nothing for the eye to rest on.",
+  "Forgetting that trees and terrain need the same atmospheric perspective and convergence as buildings when they appear at similar distances in the scene."
+],
+"proTips": [
+  "Establish the horizon line, vanishing points, and one light source before placing a single tree or building — everything else in the scene answers to those three decisions.",
+  "Cross-check a tree or terrain feature against a nearby building using the exact same perspective and lighting logic, as if they were the same kind of object.",
+  "Choose one or two focal areas for the heaviest detail and wear, and let the rest of the scene stay comparatively simple so the focal points read clearly.",
+  "Step back from the piece periodically and ask whether it looks like one coherent moment in one place, or several separate exercises layered together."
+],
+"practice": {
+  "warmup": "Block a horizon line, vanishing points, and a single light source, then place one simplified tree mass and one simplified building mass sharing all three.",
+  "daily": "Take one composition from this arc's earlier batches (a tree study, an interior, a streetscape) and add one element from a different batch, matching its perspective and light to the original.",
+  "weekly": "Draw a mid-sized scene combining at least one tree or terrain feature, one full building, and one street-level human-scale anchor, all sharing one horizon and one light source.",
+  "challenge": "Draw a complete city block that transitions into a natural edge — a park, a riverbank, an overgrown lot — built in professional order, with one or two focal points of environmental wear and one governing light source across the entire scene."
+},
+"resources": [
+  {"type": "Site", "title": "Gurney Journey", "creator": "James Gurney", "url": "https://gurneyjourney.blogspot.com/", "why": "A long-running free blog combining exactly this arc's concerns — natural forms, architecture, light, and materials — within single finished illustrations, useful as ongoing reference once the arc's individual skills are combined.", "verified": true}
+],
+"quiz": [
+  {"q": "What is the recommended professional order for building a combined nature-and-architecture scene?", "options": ["Fine detail first, then large masses, then perspective grid", "Perspective grid and horizon, then large masses, then construction detail, then wear, then light and atmosphere", "Wear and weathering first, then everything else", "There is no particular order, any sequence works equally well"], "correct": 1, "explain": "Working in professional order — grid and horizon, then large masses, then detail, then wear, then light and atmosphere — keeps every later decision anchored to a stable foundation."},
+  {"q": "Why must trees and buildings in the same scene share one light source?", "options": ["They don't need to, natural and built forms can be lit differently", "Because a single sun position has to consistently explain shadows on both the architecture and the foliage", "Only architecture needs a defined light source", "Light source only matters for interior scenes, not exteriors"], "correct": 1, "explain": "One light source has to govern the entire scene — if a building's shadows imply a different sun position than the tree canopy's lighting, the scene reads as pasted together rather than one coherent moment."},
+  {"q": "What distinguishes the strongest capstone compositions from weaker ones, according to this module?", "options": ["Maximizing every skill from the arc at full intensity everywhere in the scene", "Choosing one clear viewpoint, one light source, and one or two focal points of detail and wear", "Avoiding any natural elements and focusing only on architecture", "Using as many different perspective systems as possible in one image"], "correct": 1, "explain": "A finished scene is a record of choices — the strongest pieces commit to one viewpoint, one light, and a small number of focal points, rather than trying to showcase everything from the arc at once."}
+],
+"checklist": [
+  "I establish one horizon line, vanishing point system, and light source before placing any specific element in a combined scene.",
+  "I apply the same perspective and lighting logic to natural elements (trees, terrain) as I do to architecture at a similar distance.",
+  "I choose a small number of focal points for detail and wear rather than maximizing intensity across the whole scene.",
+  "I can look at a finished piece and judge whether it reads as one coherent place and moment, or as separate exercises layered together."
+],
+"nextStep": "The Nature & Architecture arc is now complete, from a single branching tree to a full living city block. The next arc turns to Creatures & Hard Surface — comparative animal anatomy and the vehicles, props, and machines built from it."
 }
     ]},
 {id:'creatures-hardsurface', title:'Creatures & Hard Surface', status:'soon', order:6,
