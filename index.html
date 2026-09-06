@@ -94,6 +94,25 @@
   </div>
 </div>
 
+<div class="doubt-fab" id="doubtFab" role="button" tabindex="0" aria-label="Ask a doubt" aria-haspopup="dialog">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M9.2 9.5a2.8 2.8 0 015.4 1c0 1.6-1.6 2.1-2.3 2.8-.4.4-.5.8-.5 1.4"/><path d="M12 17.2h.01"/></svg>
+  <span>Ask a doubt</span>
+</div>
+
+<div class="doubt-panel" id="doubtPanel" hidden role="dialog" aria-label="Ask a doubt">
+  <div class="doubt-header">
+    <span class="doubt-title">Ask a doubt</span>
+    <button class="fp-btn" id="doubtCloseBtn" aria-label="Close">×</button>
+  </div>
+  <div class="doubt-messages" id="doubtMessages">
+    <div class="doubt-msg doubt-msg-bot">Hi! Ask me anything about what you're learning here \u2014 like &ldquo;I don't have many tools yet, what should I do for Module 2?&rdquo; I'll answer using the module you're currently on, plus whatever else you ask.</div>
+  </div>
+  <div class="doubt-input-row">
+    <input type="text" id="doubtInput" placeholder="Type your question\u2026" aria-label="Your question">
+    <button class="btn btn-primary" id="doubtSendBtn">Send</button>
+  </div>
+</div>
+
 <footer class="site-footer">
   <span>Atelier — a free, honestly-scoped art education project. Foundations arc live now; the rest of the roadmap is being built in the same way, one verified arc at a time.<br><span id="storageStatus" class="storage-status"></span></span>
   <span class="footer-actions">
@@ -104,6 +123,7 @@
   </span>
 </footer>
 
+<script src="config.js"></script>
 <script src="curriculum-1.js"></script>
 <script src="curriculum-2.js"></script>
 <script src="curriculum-3.js"></script>
