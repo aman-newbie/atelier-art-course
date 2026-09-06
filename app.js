@@ -1699,7 +1699,121 @@ function processToastQueue(){
 /* ============================================================
    EVENTS
    ============================================================ */
+
+/* ============================================================
+   ASK A DOUBT — contextual Q&A powered by the user's own free
+   Gemini API key (see config.js). Runs client-side; no backend.
+   ============================================================ */
+let doubtHistory = [];
+let doubtOpen = false;
+
+function getModuleContextForDoubt(){
+  const route = STATE.route;
+  if(route.view !== 'module' || !route.moduleId) return null;
+  const m = findModule(route.moduleId);
+  if(!m) return null;
+  const parts = ['Module: ' + L(m,'title')];
+  const hook = L(m,'hook');
+  if(hook) parts.push('Hook: ' + hook);
+  const why = m.whyItMatters;
+  if(Array.isArray(why) && why.length) parts.push('Why it matters: ' + why[0]);
+  if(Array.isArray(m.checklist) && m.checklist.length) parts.push('Self-check items: ' + m.checklist.slice(0,4).join('; '));
+  return parts.join('\n');
+}
+
+function toggleDoubtPanel(open){
+  const fab = document.getElementById('doubtFab');
+  const panel = document.getElementById('doubtPanel');
+  if(!fab || !panel) return;
+  doubtOpen = open;
+  fab.hidden = open;
+  panel.hidden = !open;
+  if(open){
+    const input = document.getElementById('doubtInput');
+    if(input) input.focus();
+  }
+}
+
+function appendDoubtMessage(role, text){
+  const wrap = document.getElementById('doubtMessages');
+  if(!wrap) return null;
+  const div = document.createElement('div');
+  div.className = 'doubt-msg doubt-msg-' + role;
+  div.textContent = text;
+  wrap.appendChild(div);
+  wrap.scrollTop = wrap.scrollHeight;
+  return div;
+}
+
+async function sendDoubtMessage(){
+  const input = document.getElementById('doubtInput');
+  if(!input) return;
+  const text = input.value.trim();
+  if(!text) return;
+
+  const cfg = window.ATELIER_CONFIG || {};
+  const apiKey = cfg.geminiApiKey || '';
+  if(!apiKey || apiKey.indexOf('PASTE_YOUR') === 0){
+    appendDoubtMessage('error', 'This needs a free Gemini API key added in config.js first \u2014 see the comment at the top of that file for how to get one.');
+    return;
+  }
+
+  appendDoubtMessage('user', text);
+  input.value = '';
+  doubtHistory.push({role:'user', text});
+  const loadingEl = appendDoubtMessage('loading', 'Thinking\u2026');
+
+  const moduleContext = getModuleContextForDoubt();
+  let systemInstruction = 'You are a friendly, encouraging drawing teacher\'s assistant embedded in the Atelier art course. Answer the student\'s question clearly and briefly (3-6 sentences unless the question truly needs more). If they lack tools or materials, suggest cheap or improvised alternatives rather than telling them to buy something. Stay grounded in practical, fundamentals-level drawing advice.';
+  if(moduleContext) systemInstruction += '\n\nThe student is currently on this module:\n' + moduleContext;
+
+  const model = cfg.geminiModel || 'gemini-2.5-flash';
+  const url = 'https://generativelanguage.googleapis.com/v1beta/models/' + model + ':generateContent?key=' + encodeURIComponent(apiKey);
+
+  const contents = doubtHistory.slice(-10).map(h=>({
+    role: h.role === 'user' ? 'user' : 'model',
+    parts: [{text: h.text}]
+  }));
+
+  try{
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({
+        system_instruction: {parts:[{text: systemInstruction}]},
+        contents: contents,
+        generationConfig: {maxOutputTokens: 400, temperature: 0.6}
+      })
+    });
+    const data = await res.json();
+    if(loadingEl) loadingEl.remove();
+    if(!res.ok){
+      const msg = (data && data.error && data.error.message) ? data.error.message : ('HTTP ' + res.status);
+      appendDoubtMessage('error', "Couldn't reach Gemini: " + msg);
+      return;
+    }
+    const cand = data && data.candidates && data.candidates[0];
+    const reply = cand && cand.content && cand.content.parts && cand.content.parts[0] && cand.content.parts[0].text;
+    if(!reply){
+      appendDoubtMessage('error', 'Got an empty response \u2014 try rephrasing the question.');
+      return;
+    }
+    appendDoubtMessage('bot', reply.trim());
+    doubtHistory.push({role:'model', text: reply.trim()});
+  }catch(err){
+    if(loadingEl) loadingEl.remove();
+    appendDoubtMessage('error', 'Network error reaching Gemini. Check your connection and try again.');
+  }
+}
+
 function initEvents(){
+  const doubtInputEl = document.getElementById('doubtInput');
+  if(doubtInputEl){
+    doubtInputEl.addEventListener('keydown', (e)=>{
+      if(e.key === 'Enter'){ e.preventDefault(); sendDoubtMessage(); }
+    });
+  }
+
   document.body.addEventListener('click', (e)=>{
     const homeBtn = e.target.closest('[data-nav-home]');
     if(homeBtn){ navigateHome(); return; }
@@ -1718,6 +1832,15 @@ function initEvents(){
 
     const calRemind = e.target.closest('[data-cal-remind]');
     if(calRemind){ handleCalendarReminder(calRemind.dataset.calRemind); return; }
+
+    const doubtFabBtn = e.target.closest('#doubtFab');
+    if(doubtFabBtn){ toggleDoubtPanel(true); return; }
+
+    const doubtCloseBtn = e.target.closest('#doubtCloseBtn');
+    if(doubtCloseBtn){ toggleDoubtPanel(false); return; }
+
+    const doubtSendBtn = e.target.closest('#doubtSendBtn');
+    if(doubtSendBtn){ sendDoubtMessage(); return; }
 
     const tabBtn = e.target.closest('.tab');
     if(tabBtn){
@@ -1960,8 +2083,15 @@ function initEvents(){
     if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); window.scrollTo({top:0, behavior:'smooth'}); }
   });
 
+  const doubtFabEl = document.getElementById('doubtFab');
+  if(doubtFabEl){
+    doubtFabEl.addEventListener('keydown', (e)=>{
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggleDoubtPanel(true); }
+    });
+  }
+
   document.addEventListener('keydown', (e)=>{
-    if(e.key === 'Escape'){ closeMobileSidebar(); closeMobileSearch(); }
+    if(e.key === 'Escape'){ closeMobileSidebar(); closeMobileSearch(); if(doubtOpen) toggleDoubtPanel(false); }
   });
 }
 
