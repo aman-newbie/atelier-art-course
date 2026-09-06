@@ -513,6 +513,7 @@ svg{display:block;}
 .nav-link-card:hover{border-color:var(--blue);}
 .nav-link-card.next{margin-left:auto; text-align:right; align-items:flex-end;}
 .nav-link-card span{font-family:var(--font-mono); font-size:10px; letter-spacing:1px; text-transform:uppercase; color:var(--text-faint);}
+.nav-link-card span svg{width:14px; height:14px; display:inline; vertical-align:-3px;}
 .nav-link-card b{font-size:15px; font-weight:500;}
 
 /* ============================================================
