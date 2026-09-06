@@ -2152,7 +2152,67 @@ const CURRICULUM_3 = [
     ]},
 {id:'worldbuilding', title:'World Building & Concept Art', status:'soon', order:7,
     desc:'Biomes, environmental storytelling, cinematic composition, color scripting, lighting, and the professional concept-art production pipeline.',
-    moduleCount:10, sample:['Biome Design','Cinematic Composition','Color Scripting','Concept Art Pipeline','Mood Design']},
+    moduleCount:10, sample:['Biome Design','Cinematic Composition','Color Scripting','Concept Art Pipeline','Mood Design'],
+    modules:[
+{
+"id": "m73",
+"plate": 73,
+"title": "Biome Design & Environmental Archetypes",
+"difficulty": "Intermediate",
+"studyTime": "20 min",
+"practiceTime": "25\u201330 min/day",
+"prereq": ["m48"],
+"hook": "A biome isn't scenery you paint behind a horizon line \u2014 it's a closed system where climate, geology, and life explain each other, and the instant one piece doesn't fit, the eye catches it before the brain can say why.",
+"whyItMatters": [
+  "Every module from Module 48 onward taught you how to construct one thing at a time: a tree, a rock formation, a mountain, a building. Biome design is the synthesis step \u2014 it's the set of rules for arranging those individual elements into a whole environment that reads as one coherent, believable place instead of a pile of unrelated assets.",
+  "Concept artists and environment designers are judged first on plausibility, not prettiness. An audience that couldn't name a single climate rule will still feel that a snowy mountain peak overlooking a tropical jungle floor is \\\"wrong,\\\" and that instinctive distrust breaks immersion faster than any drawing error in the trees or rocks themselves."
+],
+"coreIdea": [
+  "Real biomes are placed by <b>latitude, altitude, and ocean currents</b> \u2014 not creative whim. Mountains force moisture out of clouds on their windward side and starve the leeward side of rain (a rain shadow), which is why deserts sit right next to mountain ranges in the real world. Knowing this one rule lets you justify almost any biome placement in a fictional map with a single mountain chain.",
+  "Biomes are a <b>gradient, not a grid</b>. Two climatically similar biomes (temperate forest into boreal forest) can sit right next to each other with barely any transition. Two extreme opposites (scorching desert into arctic tundra) need either a long band of in-between zones (steppe, cold steppe, taiga) or a dramatic geographic excuse (a sheer mountain wall, a sudden altitude jump) to justify the jump without feeling arbitrary.",
+  "Each biome has its own <b>silhouette language</b> that reads before color or detail does \u2014 this is the concept-art-specific layer on top of the climate logic. Desert: long, low, horizontal dune masses with sparse, sharp vertical accents (mesas, cacti). Temperate forest: dense, rounded, overlapping canopy masses at a consistent mid-value. Tundra: flat, wide, pale, and empty, with texture doing the work that shape usually does. If you swapped every color in a thumbnail to grayscale and the biome was still identifiable from silhouette alone, the design is working.",
+  "You cannot fully invent atmospheric truth from memory. James Gurney's maquette method \u2014 building a rough physical model of a dune, cliff, or mountain out of clay, foam, or found objects and lighting it by hand \u2014 exists because real light bouncing off a real form produces \\\"accidents of truth\\\" (specific reflected color, specific shadow softness) that are extremely difficult to invent convincingly from imagination alone."
+],
+"mistakes": [
+  "Placing two climatically incompatible biomes directly against each other with no transition zone and no geographic feature (mountain wall, altitude cliff) to justify the abrupt change.",
+  "Treating \\\"biome\\\" as a palette swap \u2014 recoloring the same generic rolling hills orange and calling it a desert \u2014 instead of changing the actual silhouette and shape language of the landforms and vegetation.",
+  "Cramming every interesting biome signifier into one scene at once (glowing mushrooms, floating rocks, twisted dead trees, and lava vents all in the same frame) so the environment reads as generic \\\"fantasy soup\\\" instead of one specific, memorable place.",
+  "Designing architecture and props (Module 59) that ignore the biome they sit in \u2014 flat roofs in a heavy-snowfall region, thin walls in a scorching desert \u2014 which breaks the same plausibility the terrain worked hard to establish.",
+  "Skipping physical or photo reference for lighting because the scene \\\"feels imaginable,\\\" then producing atmosphere that looks flat or generically hazy instead of specific to that time of day and that biome's particular air quality."
+],
+"proTips": [
+  "Thumbnail the biome at a tiny scale (an inch or two) in pure silhouette before adding a single piece of detail. If the shape-read doesn't say \\\"desert\\\" or \\\"tundra\\\" at that size, no amount of surface detail will fix it later.",
+  "Pick one dominant biome signifier and at most one or two supporting ones. A desert scene built around \\\"towering mesas\\\" plus \\\"sparse dry scrub\\\" reads clearly; a desert scene also trying to include dunes, an oasis, quicksand, and a canyon all at once reads as noise.",
+  "Build a Gurney-style maquette (crumpled foil, clay, or even a pile of sand or rice photographed under a desk lamp) whenever a scene's lighting is the hard part \u2014 it takes minutes and gives you real shadow and reflected-light information a purely imagined sketch won't have.",
+  "Study real-world reference of your target biome specifically, not a generic stand-in \u2014 the Sonoran desert, the Sahara, and a cold high-altitude desert all read completely differently despite sharing the word \\\"desert.\\\""
+],
+"practice": {
+  "warmup": "Thumbnail 6 tiny (1-inch) silhouettes, one for each major biome type (desert, temperate forest, tundra, grassland, tropical rainforest, wetland), using shape alone \u2014 no line detail, no color.",
+  "daily": "Pick one biome and construct a single environment using only the shapes and structures from Modules 48\u201362 (trees, rock formations, architecture) arranged to match that biome's silhouette language.",
+  "weekly": "Design two adjacent regions on one canvas that transition between two contrasting biomes, and justify the transition with a visible geographic cause (a mountain range, a coastline, a sharp altitude change).",
+  "challenge": "Take one biome and redesign it three times using three different dominant signifiers each time (e.g., a desert built around mesas, then around dunes, then around a dry canyon), so it reads as three distinct, specific places rather than one generic template."
+},
+"resources": [
+  {"type": "Video", "title": "Design Cinema - Episode 104 - Environmental Composition", "creator": "Feng Zhu (FZD School)", "url": "https://www.youtube.com/watch?v=fsQ7eTmR27U", "why": "Covers camera placement and compositional rules specifically for environment design, the bridge between individual-element construction and a full readable scene.", "verified": true},
+  {"type": "Read", "title": "Landscape Maquettes", "creator": "James Gurney (Gurney Journey)", "url": "http://gurneyjourney.blogspot.com/2007/09/landscape-maquettes.html", "why": "Shows the physical-maquette technique for getting real, un-inventable lighting truth into an environment before painting it.", "verified": true},
+  {"type": "Article", "title": "Guide to Biomes in Fantasy Worldbuilding", "creator": "World Anvil Academy", "url": "https://academy.worldanvil.com/blog/fantasy-biomes-guide", "why": "Free breakdown of the climate, geography, and flora/fauna logic that makes a fictional biome feel internally consistent rather than arbitrary.", "verified": true}
+],
+"quiz": [
+  {"q": "Why do deserts often sit directly next to mountain ranges in the real world?", "options": ["Mountains attract sand from nearby oceans", "A rain shadow: mountains force moisture out of clouds on the windward side, leaving the leeward side dry", "Deserts always form at the exact center of continents", "Mountains block sunlight, which prevents plant growth nearby"], "correct": 1, "explain": "Rain shadows form when a mountain range forces moisture out of prevailing winds on one side, starving the other side of rainfall \u2014 this is the real mechanism behind many real-world desert placements."},
+  {"q": "According to biome gradient logic, what does a desert need before it can plausibly sit next to a tundra?", "options": ["Nothing \u2014 any two biomes can be placed adjacent to each other", "A long band of transitional biomes (steppe, cold steppe, taiga) or a dramatic geographic feature to justify the jump", "A body of water no larger than a small lake", "Identical vegetation density on both sides"], "correct": 1, "explain": "The more climatically different two biomes are, the more transition zone (or a strong geographic excuse like a sheer altitude change) they need between them, or the jump reads as arbitrary."},
+  {"q": "What does it mean for a biome to have its own \\\"silhouette language\\\"?", "options": ["Every biome must be drawn only in black and white", "Each biome type has a distinct shape/value read (e.g. desert's low horizontal masses vs. tundra's flat, sparse emptiness) that should be identifiable before color or detail is added", "Silhouettes are only useful for character design, not environments", "Biomes cannot be distinguished without labeling them with text"], "correct": 1, "explain": "If a thumbnail still reads as a specific biome once reduced to grayscale silhouette, the underlying shape design is doing its job \u2014 that's the silhouette language."},
+  {"q": "What is the main problem with cramming many interesting biome signifiers (glowing mushrooms, floating rocks, lava vents, dead trees) into one scene?", "options": ["It takes too long to paint", "It reads as generic \\\"fantasy soup\\\" rather than one specific, memorable place", "It violates copyright law", "It makes the file size too large"], "correct": 1, "explain": "Overloading a scene with every interesting idea at once removes the focus that makes a place feel specific \u2014 one dominant signifier plus at most one or two supporting ones reads far more clearly."},
+  {"q": "Why does James Gurney build physical maquettes (clay, foam, found objects) for landscape paintings instead of inventing the lighting from imagination?", "options": ["Maquettes are required by art schools", "Real light on a real form produces specific reflected color and shadow information that is very difficult to invent convincingly from memory alone", "It is faster than using photo reference", "Digital painting software cannot render imagined light correctly"], "correct": 1, "explain": "Gurney's own reasoning is that basing a painting on a real form in real light reveals \\\"accidents of truth\\\" \u2014 specific lighting behavior \u2014 that the imagination alone rarely invents convincingly."}
+],
+"checklist": [
+  "I can justify a biome's placement using at least one real climate rule (latitude, altitude, rain shadow, or ocean current).",
+  "I can design a transition zone or geographic excuse between two climatically different biomes instead of placing them side by side arbitrarily.",
+  "I can thumbnail a biome in pure silhouette and have it read as that specific biome before adding color or detail.",
+  "I can build a simple physical maquette or gather specific photo reference to solve a scene's lighting before painting it."
+],
+"nextStep": "You can now design a biome that feels climatically and visually coherent on its own. Module 74 moves from \\\"does this place make sense\\\" to \\\"does this place tell a story\\\" \u2014 environmental storytelling, or how to arrange objects and wear within a biome so it implies a history without a single word of text."
+}
+]},
 {id:'digital-fundamentals', title:'Digital Art Fundamentals', status:'soon', order:8,
     desc:'Software-agnostic digital basics — workspace, tablets, brush engines, layers, selections, transforms, and clean digital line art — built so the skill transfers across any application.',
     moduleCount:8, sample:['Digital Workspace','Drawing Tablets','Brushes','Layers','Selection Tools','Digital Line Art']},
