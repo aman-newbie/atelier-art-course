@@ -287,6 +287,7 @@ function serializeState(){
     lastVisitDate:STATE.lastVisitDate,
     activityLog:STATE.activityLog,
     unlockedAchievements:[...STATE.unlockedAchievements],
+    route:STATE.route,
     savedAt:new Date().toISOString()
   };
 }
@@ -310,6 +311,23 @@ function applyState(data){
   STATE.lastVisitDate = data.lastVisitDate || null;
   STATE.activityLog = data.activityLog || {};
   STATE.unlockedAchievements = new Set(data.unlockedAchievements || []);
+  restoreLastRoute(data.route);
+}
+
+function restoreLastRoute(route){
+  if(!route || typeof route !== 'object' || !route.view) return;
+  const restorableViews = ['module','practice','achievements','bookmarks','dashboard','calendar','library'];
+  if(!restorableViews.includes(route.view)) return; /* 'home' and 'search' are not worth resuming into */
+  if(route.view === 'module'){
+    const m = findModule(route.moduleId);
+    if(!m) return; /* module no longer exists (e.g. content reorganized) — fall back to home */
+    const ownerPath = CURRICULUM.find(p => p.modules && p.modules.some(mm => mm.id === route.moduleId));
+    const pathId = ownerPath ? ownerPath.id : route.pathId;
+    if(!pathId) return; /* can't resolve a real path — safer to fall back to home than render broken */
+    STATE.route = {view:'module', pathId, moduleId:route.moduleId, tab:route.tab || 'overview'};
+  } else {
+    STATE.route = {view:route.view, pathId:null, moduleId:null, tab:'overview'};
+  }
 }
 
 function todayKey(){
@@ -463,6 +481,7 @@ function renderApp(){
   }
   updateChrome();
   updateDocumentTitle();
+  if(STATE.route.view !== 'search') saveProgress();
 }
 
 function updateChrome(){
