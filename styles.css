@@ -733,3 +733,44 @@ svg{display:block;}
   margin-top:var(--sp-2); display:block;
 }
 .library-empty{padding:var(--sp-8) 0; text-align:center; color:var(--text-faint);}
+
+
+/* ---- Ask a doubt (Gemini-powered) ---- */
+.doubt-fab{
+  position:fixed; z-index:400; bottom:var(--sp-6); left:var(--sp-6);
+  display:flex; align-items:center; gap:var(--sp-2); padding:var(--sp-3) var(--sp-4);
+  background:var(--blue); color:var(--bg-raised); border-radius:999px;
+  font-family:var(--font-body); font-weight:600; font-size:13.5px; box-shadow:var(--shadow-md);
+  cursor:pointer; transition:all var(--dur) var(--ease); user-select:none;
+}
+.doubt-fab:hover{transform:translateY(-2px); box-shadow:var(--shadow-lg);}
+.doubt-fab svg{width:18px; height:18px; flex-shrink:0;}
+.doubt-fab[hidden]{display:none;}
+.doubt-panel{
+  position:fixed; z-index:500; bottom:var(--sp-6); left:var(--sp-6);
+  width:min(92vw,360px); max-height:min(70vh,520px); display:flex; flex-direction:column;
+  background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-lg); overflow:hidden;
+}
+.doubt-panel[hidden]{display:none;}
+.doubt-header{
+  display:flex; align-items:center; justify-content:space-between; padding:var(--sp-3) var(--sp-4);
+  background:var(--surface-2); border-bottom:1px solid var(--border-soft); flex-shrink:0;
+}
+.doubt-title{font-family:var(--font-display); font-size:17px;}
+.doubt-messages{flex:1; overflow-y:auto; padding:var(--sp-4); display:flex; flex-direction:column; gap:var(--sp-3); font-size:13.5px; line-height:1.5;}
+.doubt-msg{max-width:88%; padding:var(--sp-2) var(--sp-3); border-radius:var(--radius-md);}
+.doubt-msg-bot{background:var(--bg-raised); color:var(--text); align-self:flex-start; border:1px solid var(--border-soft);}
+.doubt-msg-user{background:var(--blue); color:var(--bg-raised); align-self:flex-end; font-weight:500;}
+.doubt-msg-error{background:transparent; color:var(--red); align-self:flex-start; font-size:12.5px; border:1px solid var(--red); opacity:.85;}
+.doubt-msg-loading{color:var(--text-faint); align-self:flex-start; font-style:italic; font-size:12.5px; background:none; padding:var(--sp-1) var(--sp-2);}
+.doubt-input-row{display:flex; gap:var(--sp-2); padding:var(--sp-3); border-top:1px solid var(--border-soft); flex-shrink:0;}
+.doubt-input-row input{
+  flex:1; background:var(--bg-raised); border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  padding:var(--sp-2) var(--sp-3); color:var(--text); font-family:var(--font-body); font-size:13.5px;
+}
+@media (max-width:520px){
+  .doubt-fab span{display:none;}
+  .doubt-fab{padding:var(--sp-3); border-radius:50%;}
+  .doubt-panel{left:var(--sp-3); right:var(--sp-3); width:auto;}
+}
