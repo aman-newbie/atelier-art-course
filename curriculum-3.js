@@ -2150,9 +2150,8 @@ const CURRICULUM_3 = [
 "nextStep": "With comparative anatomy established across predators and herbivores, the arc moves next into birds — introducing flight, wings, and an entirely new set of structural constraints."
 }
     ]},
-{id:'worldbuilding', title:'World Building & Concept Art', status:'soon', order:7,
+{id:'worldbuilding', title:'World Building & Concept Art', status:'live', order:7,
     desc:'Biomes, environmental storytelling, cinematic composition, color scripting, lighting, and the professional concept-art production pipeline.',
-    moduleCount:10, sample:['Biome Design','Cinematic Composition','Color Scripting','Concept Art Pipeline','Mood Design'],
     modules:[
 {
 "id": "m73",
