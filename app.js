@@ -37,6 +37,7 @@ const STATE = {
   storageBackend:'none',
   streak:0,
   lastVisitDate:null,
+  activityLog:{},
   unlockedAchievements:new Set()
 };
 
@@ -233,6 +234,7 @@ function serializeState(){
     fontScale:STATE.fontScale,
     streak:STATE.streak,
     lastVisitDate:STATE.lastVisitDate,
+    activityLog:STATE.activityLog,
     unlockedAchievements:[...STATE.unlockedAchievements],
     savedAt:new Date().toISOString()
   };
@@ -254,6 +256,7 @@ function applyState(data){
   if(typeof data.fontScale === 'number') STATE.fontScale = data.fontScale;
   STATE.streak = data.streak || 0;
   STATE.lastVisitDate = data.lastVisitDate || null;
+  STATE.activityLog = data.activityLog || {};
   STATE.unlockedAchievements = new Set(data.unlockedAchievements || []);
 }
 
@@ -264,6 +267,7 @@ function todayKey(){
 
 function updateStreak(){
   const today = todayKey();
+  STATE.activityLog[today] = true;
   if(STATE.lastVisitDate === today) return; /* already counted today */
   const yesterday = new Date(Date.now() - 86400000);
   const yKey = yesterday.getFullYear() + '-' + String(yesterday.getMonth()+1).padStart(2,'0') + '-' + String(yesterday.getDate()).padStart(2,'0');
@@ -375,6 +379,8 @@ function updateDocumentTitle(){
     title = `Bookmarks \u00b7 ${base}`;
   } else if(route.view === 'dashboard'){
     title = `Dashboard \u00b7 ${base}`;
+  } else if(route.view === 'calendar'){
+    title = `Calendar \u00b7 ${base}`;
   } else if(route.view === 'search'){
     title = `Search \u00b7 ${base}`;
   }
@@ -396,6 +402,8 @@ function renderApp(){
     renderBookmarks();
   } else if(route.view === 'dashboard'){
     renderDashboard();
+  } else if(route.view === 'calendar'){
+    renderCalendar();
   } else {
     renderHome();
   }
@@ -422,6 +430,9 @@ function renderSidebar(){
   </button></li>`;
   html += `<li><button class="side-module-item ${STATE.route.view==='practice'?'active':''}" data-view="practice">
     <span class="tool-icon">${ICONS.shuffle}</span><span style="flex:1">Practice Center</span>
+  </button></li>`;
+  html += `<li><button class="side-module-item ${STATE.route.view==='calendar'?'active':''}" data-view="calendar">
+    <span class="tool-icon">${ICONS.daily}</span><span style="flex:1">Calendar</span>
   </button></li>`;
   html += `<li><button class="side-module-item ${STATE.route.view==='achievements'?'active':''}" data-view="achievements">
     <span class="tool-icon">${ICONS.stamp}</span><span style="flex:1">Achievements</span><span class="m-num">${unlockedCount}/${ACHIEVEMENTS.length}</span>
@@ -640,6 +651,128 @@ function renderComingSoonModule(path){
       <p>It is being built to the same bar as Module 1 &mdash; full content, hand-checked resources, no filler.</p>
     </div>`;
 }
+
+let calendarMonthOffset = 0;
+
+function renderCalendar(){
+  const now = new Date();
+  const viewDate = new Date(now.getFullYear(), now.getMonth() + calendarMonthOffset, 1);
+  const year = viewDate.getFullYear();
+  const month = viewDate.getMonth();
+  const monthName = viewDate.toLocaleString('default', {month:'long'});
+  const firstWeekday = new Date(year, month, 1).getDay();
+  const daysInMonth = new Date(year, month+1, 0).getDate();
+  const todayStr = todayKey();
+  const monthPrefix = year + '-' + String(month+1).padStart(2,'0');
+
+  let cells = '';
+  for(let i=0;i<firstWeekday;i++){ cells += '<div class="cal-cell cal-cell-empty"></div>'; }
+  for(let day=1; day<=daysInMonth; day++){
+    const dateKey = monthPrefix + '-' + String(day).padStart(2,'0');
+    const isToday = dateKey === todayStr;
+    const isActive = !!STATE.activityLog[dateKey];
+    cells += `<div class="cal-cell ${isActive?'cal-active':''} ${isToday?'cal-today':''}"><span>${day}</span>${isActive?ICONS.check:''}</div>`;
+  }
+
+  const activeDaysThisMonth = Object.keys(STATE.activityLog).filter(k=>k.indexOf(monthPrefix)===0).length;
+
+  document.getElementById('main').innerHTML = `
+  <div class="breadcrumb"><button data-nav-home>Atelier</button> ${ICONS.chevronRight} <span>Calendar</span></div>
+  <div class="hero">
+    <div class="eyebrow">Consistency, visible</div>
+    <h1>Your practice <em>calendar</em></h1>
+    <p class="hero-sub">Every day you open a module or work through a checklist gets marked here, so the pattern is something you can actually see instead of guess at.</p>
+  </div>
+
+  <div class="stat-strip" style="margin-bottom:var(--sp-6);">
+    <div class="stat"><b>${STATE.streak}</b><span>Day streak</span></div>
+    <div class="stat"><b>${activeDaysThisMonth}</b><span>Active days this month</span></div>
+  </div>
+
+  <div class="cal-card">
+    <div class="cal-header">
+      <button class="icon-btn" data-calendar-nav="-1" aria-label="Previous month">${ICONS.arrowLeft}</button>
+      <b>${monthName} ${year}</b>
+      <button class="icon-btn" data-calendar-nav="1" aria-label="Next month">${ICONS.chevronRight}</button>
+    </div>
+    <div class="cal-weekdays"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+    <div class="cal-grid">${cells}</div>
+    <div class="cal-legend"><span class="cal-legend-dot"></span> Practiced that day</div>
+  </div>
+
+  <div class="cal-card">
+    <h3 style="font-family:var(--font-display); font-size:20px; margin-bottom:var(--sp-2);">Set a weekly reminder</h3>
+    <p class="cal-reminder-sub">Course notes often say &ldquo;this week, do X.&rdquo; Pick a day and time and it lands on your phone's calendar.</p>
+    <div class="cal-reminder-row">
+      <select id="reminderDay">
+        <option value="1">Monday</option>
+        <option value="2">Tuesday</option>
+        <option value="3">Wednesday</option>
+        <option value="4">Thursday</option>
+        <option value="5" selected>Friday</option>
+        <option value="6">Saturday</option>
+        <option value="0">Sunday</option>
+      </select>
+      <input type="time" id="reminderTime" value="18:00">
+    </div>
+    <div class="cal-reminder-actions">
+      <button class="btn btn-primary" data-cal-remind="google">${ICONS.link} Add to Google Calendar</button>
+      <button class="btn btn-ghost" data-cal-remind="ics">${ICONS.daily} Download .ics</button>
+    </div>
+  </div>`;
+}
+
+function handleCalendarReminder(type){
+  const day = parseInt(document.getElementById('reminderDay').value, 10);
+  const time = document.getElementById('reminderTime').value || '18:00';
+  const parts = time.split(':').map(Number);
+  const hh = parts[0], mm = parts[1];
+
+  const now = new Date();
+  const next = new Date(now);
+  next.setHours(hh, mm, 0, 0);
+  let diff = (day - next.getDay() + 7) % 7;
+  if(diff === 0 && next <= now) diff = 7;
+  next.setDate(next.getDate() + diff);
+  const end = new Date(next.getTime() + 45*60000);
+
+  const fmt = d => d.getUTCFullYear() + String(d.getUTCMonth()+1).padStart(2,'0') + String(d.getUTCDate()).padStart(2,'0') + 'T' + String(d.getUTCHours()).padStart(2,'0') + String(d.getUTCMinutes()).padStart(2,'0') + '00Z';
+
+  const title = 'Atelier practice session';
+  const details = "Weekly drawing practice - whatever this week's module points you to.";
+
+  if(type === 'google'){
+    const url = 'https://calendar.google.com/calendar/render?action=TEMPLATE'
+      + '&text=' + encodeURIComponent(title)
+      + '&dates=' + fmt(next) + '/' + fmt(end)
+      + '&details=' + encodeURIComponent(details)
+      + '&recur=' + encodeURIComponent('RRULE:FREQ=WEEKLY');
+    window.open(url, '_blank');
+    showToast('Opening Google Calendar...');
+  } else {
+    const ics = [
+      'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Atelier//Practice Reminder//EN',
+      'BEGIN:VEVENT',
+      'UID:' + Date.now() + '@atelier',
+      'DTSTAMP:' + fmt(new Date()),
+      'DTSTART:' + fmt(next),
+      'DTEND:' + fmt(end),
+      'RRULE:FREQ=WEEKLY',
+      'SUMMARY:' + title,
+      'DESCRIPTION:' + details,
+      'END:VEVENT','END:VCALENDAR'
+    ].join('\r\n');
+    const blob = new Blob([ics], {type:'text/calendar'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'atelier-practice-reminder.ics';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    showToast('Reminder file downloaded - open it to add to your calendar.');
+  }
+}
+
 
 function renderPractice(){
   document.getElementById('main').innerHTML = `
@@ -1373,6 +1506,12 @@ function initEvents(){
     const pathJump = e.target.closest('[data-path-jump]');
     if(pathJump){ openPathOnHome(pathJump.dataset.pathJump); return; }
 
+    const calNav = e.target.closest('[data-calendar-nav]');
+    if(calNav){ calendarMonthOffset += parseInt(calNav.dataset.calendarNav,10); renderCalendar(); return; }
+
+    const calRemind = e.target.closest('[data-cal-remind]');
+    if(calRemind){ handleCalendarReminder(calRemind.dataset.calRemind); return; }
+
     const tabBtn = e.target.closest('.tab');
     if(tabBtn){
       flushNotesSave();
@@ -1526,6 +1665,7 @@ function initEvents(){
       STATE.resourcesOpened = {};
       STATE.streak = 0;
       STATE.lastVisitDate = null;
+      STATE.activityLog = {};
       STATE.unlockedAchievements = new Set();
       saveProgress();
       navigateHome();
