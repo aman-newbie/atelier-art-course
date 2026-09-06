@@ -33,6 +33,7 @@ const STATE = {
   recentlyVisited:[],
   searchQuery:'',
   fontScale:1,
+  language:'en',
   xp:0,
   storageBackend:'none',
   streak:0,
@@ -189,6 +190,14 @@ function findModule(moduleId){
   }
   return null;
 }
+
+function L(m, field){
+  if(STATE.language === 'hi' && m && typeof TRANSLATIONS_HI !== 'undefined'){
+    const t = TRANSLATIONS_HI[m.id];
+    if(t && t[field] !== undefined) return t[field];
+  }
+  return m ? m[field] : undefined;
+}
 function findPathOfModule(moduleId){
   return CURRICULUM.find(p=>p.modules && p.modules.some(m=>m.id===moduleId));
 }
@@ -233,6 +242,7 @@ function serializeState(){
     xp:STATE.xp,
     theme:STATE.theme,
     fontScale:STATE.fontScale,
+    language:STATE.language,
     streak:STATE.streak,
     lastVisitDate:STATE.lastVisitDate,
     activityLog:STATE.activityLog,
@@ -255,6 +265,7 @@ function applyState(data){
   STATE.xp = data.xp || 0;
   if(data.theme) STATE.theme = data.theme;
   if(typeof data.fontScale === 'number') STATE.fontScale = data.fontScale;
+  if(data.language === 'hi' || data.language === 'en') STATE.language = data.language;
   STATE.streak = data.streak || 0;
   STATE.lastVisitDate = data.lastVisitDate || null;
   STATE.activityLog = data.activityLog || {};
@@ -371,7 +382,7 @@ function updateDocumentTitle(){
   let title = base;
   if(route.view === 'module'){
     const m = findModule(route.moduleId);
-    if(m) title = `${m.title} \u00b7 ${base}`;
+    if(m) title = `${L(m,'title')} \u00b7 ${base}`;
   } else if(route.view === 'practice'){
     title = `Practice Center \u00b7 ${base}`;
   } else if(route.view === 'achievements'){
@@ -421,6 +432,11 @@ function updateChrome(){
     btn.setAttribute('aria-pressed', String(btn.dataset.themeChoice === STATE.theme));
   });
   document.documentElement.style.setProperty('--font-scale', STATE.fontScale);
+  const langBtn = document.getElementById('langToggle');
+  if(langBtn){
+    langBtn.textContent = STATE.language === 'hi' ? '\u0939\u093f' : 'EN';
+    langBtn.setAttribute('aria-pressed', String(STATE.language === 'hi'));
+  }
 }
 
 function renderSidebar(){
@@ -459,7 +475,7 @@ function renderSidebar(){
       const path = findPathOfModule(id);
       const isActive = STATE.route.moduleId === id;
       html += `<li><button class="side-module-item ${isActive?'active':''}" data-path="${path.id}" data-module="${id}">
-        <span class="m-num">${m.plate}</span><span style="flex:1">${m.title}</span>
+        <span class="m-num">${m.plate}</span><span style="flex:1">${L(m,'title')}</span>
       </button></li>`;
     });
     html += '</ul></div>';
@@ -475,7 +491,7 @@ function renderSidebar(){
         const isDone = STATE.completed.has(m.id);
         html += `<li><button class="side-module-item ${isActive?'active':''}" data-path="${path.id}" data-module="${m.id}">
           <span class="m-num">${m.plate}</span>
-          <span style="flex:1">${m.title}</span>
+          <span style="flex:1">${L(m,'title')}</span>
           ${isDone ? `<span class="m-check">${ICONS.check}</span>` : ''}
         </button></li>`;
       });
@@ -504,7 +520,7 @@ function renderHome(){
     <h1>From your first line to <em>professional</em> fundamentals.</h1>
     <p class="hero-sub">${livePaths.length} arc${livePaths.length===1?'':'s'} (${allLive.length} modules) are fully built and live right now, with every resource checked by hand instead of recalled from memory. The rest of the roadmap below is real and correctly ordered &mdash; it is simply not written yet.</p>
     <div class="hero-row">
-      <button class="btn btn-primary" id="continueBtn">${ICONS.target} ${STATE.completed.size===0 ? 'Start here: ' + (next ? next.m.title : 'Mindset & Introduction') : (next ? 'Continue: ' + next.m.title : 'Everything live is complete')}</button>
+      <button class="btn btn-primary" id="continueBtn">${ICONS.target} ${STATE.completed.size===0 ? 'Start here: ' + (next ? L(next.m,'title') : 'Mindset & Introduction') : (next ? 'Continue: ' + L(next.m,'title') : 'Everything live is complete')}</button>
       <button class="btn btn-ghost" id="jumpFoundations">View Foundations</button>
     </div>
     <div class="stat-strip">
@@ -561,8 +577,8 @@ function renderHome(){
           ${isDone ? `<span class="stamp">${ICONS.stamp} Mastered</span>` : ''}
           ${isStartHere ? `<span class="stamp start-stamp">${ICONS.target} Start here</span>` : ''}
         </div>
-        <h3>${m.title}</h3>
-        <p class="mcard-hook">${m.hook || 'Coming shortly &mdash; being built to the same bar as Module 1.'}</p>
+        <h3>${L(m,'title')}</h3>
+        <p class="mcard-hook">${L(m,'hook') || 'Coming shortly &mdash; being built to the same bar as Module 1.'}</p>
         <div class="mcard-meta">
           <span class="meta-chip">${ICONS.clock} ${m.studyTime || '&mdash;'}</span>
           <span class="meta-chip">${ICONS.target} ${m.difficulty || 'Beginner'}</span>
@@ -604,7 +620,7 @@ function renderModule(pathId, moduleId, tab){
   <div class="breadcrumb">
     <button data-nav-home>Atelier</button> ${ICONS.chevronRight}
     <button data-path-jump="${pathId}">${path.title}</button> ${ICONS.chevronRight}
-    <span>${m.title}</span>
+    <span>${L(m,'title')}</span>
   </div>
 
   <div class="module-head">
@@ -615,12 +631,12 @@ function renderModule(pathId, moduleId, tab){
     </div>
     ${(!isDone && missingPrereqs.length) ? `
     <div class="status-banner is-prereq-warning">
-      ${ICONS.empty} <span>Skipping ahead? ${missingPrereqs.map(pm=>pm.title).join(', ')} ${missingPrereqs.length>1?'aren\u2019t':'isn\u2019t'} marked complete yet. This will likely make more sense once ${missingPrereqs.length>1?'those are':'that is'} done \u2014 nothing here is locked, just worth knowing.</span>
+      ${ICONS.empty} <span>Skipping ahead? ${missingPrereqs.map(pm=>L(pm,'title')).join(', ')} ${missingPrereqs.length>1?'aren\u2019t':'isn\u2019t'} marked complete yet. This will likely make more sense once ${missingPrereqs.length>1?'those are':'that is'} done \u2014 nothing here is locked, just worth knowing.</span>
     </div>` : ''}
     <div class="module-head-top">
       <div>
-        <h1>${m.title}</h1>
-        <p class="module-hook">${m.hook}</p>
+        <h1>${L(m,'title')}</h1>
+        <p class="module-hook">${L(m,'hook')}</p>
       </div>
       <button class="fav-btn" data-fav="${moduleId}" aria-pressed="${isFav}" aria-label="Toggle favorite">${ICONS.star}</button>
     </div>
@@ -905,8 +921,8 @@ function renderDashboard(){
       return `<button class="mcard" data-path="${path.id}" data-module="${m.id}">
         ${DECOR[MODULE_DECOR[m.id]] || ''}
         <div class="mcard-top"><span class="plate-id">PLATE ${m.plate}</span>${isDone?`<span class="stamp">${ICONS.stamp} Mastered</span>`:''}</div>
-        <h3>${m.title}</h3>
-        <p class="mcard-hook">${m.hook}</p>
+        <h3>${L(m,'title')}</h3>
+        <p class="mcard-hook">${L(m,'hook')}</p>
       </button>`;
     }).join('') + '</div>';
   }
@@ -930,8 +946,8 @@ function renderBookmarks(){
       <button class="mcard" data-path="${path.id}" data-module="${m.id}">
         ${DECOR[MODULE_DECOR[m.id]] || ''}
         <div class="mcard-top"><span class="plate-id">PLATE ${m.plate}</span></div>
-        <h3>${m.title}</h3>
-        <p class="mcard-hook">${m.hook}</p>
+        <h3>${L(m,'title')}</h3>
+        <p class="mcard-hook">${L(m,'hook')}</p>
       </button>`).join('') + '</div>';
   }
   document.getElementById('main').innerHTML = html;
@@ -980,7 +996,7 @@ function renderResourceCard(r, ri, m){
         <img src="https://img.youtube.com/vi/${ytId}/hqdefault.jpg" alt="" loading="lazy">
         <button class="video-play-btn" aria-label="Play video inline" data-yt-id="${ytId}" data-res-module="${m.id}" data-res-idx="${ri}">${ICONS.play}</button>
       </div>` : ''}
-      <span class="library-source">${m.title} \u00b7 Plate ${m.plate}</span>
+      <span class="library-source">${L(m,'title')} \u00b7 Plate ${m.plate}</span>
     </div>
   </div>`;
 }
@@ -1036,23 +1052,24 @@ function renderTabContent(m, tab, checkedSet){
   if(tab === 'overview'){
     return `<div class="prose">
       <h4>Why this matters</h4>
-      ${m.whyItMatters.map(p=>`<p>${p}</p>`).join('')}
+      ${L(m,'whyItMatters').map(p=>`<p>${p}</p>`).join('')}
       <h4>The core idea</h4>
-      ${m.coreIdea.map(p=>`<p>${p}</p>`).join('')}
+      ${L(m,'coreIdea').map(p=>`<p>${p}</p>`).join('')}
       <h4>Where beginners go wrong</h4>
-      <ul class="mistake-list">${m.mistakes.map(x=>`<li>${x}</li>`).join('')}</ul>
+      <ul class="mistake-list">${L(m,'mistakes').map(x=>`<li>${x}</li>`).join('')}</ul>
       <div class="tip-card">
         <h4>Professional habits</h4>
-        <ul>${m.proTips.map(x=>`<li>${x}</li>`).join('')}</ul>
+        <ul>${L(m,'proTips').map(x=>`<li>${x}</li>`).join('')}</ul>
       </div>
     </div>`;
   }
   if(tab === 'practice'){
+    const practice = L(m,'practice');
     const blocks = [
-      {icon:'warmup', label:'Warm-up', text:m.practice.warmup},
-      {icon:'daily', label:'Daily practice', text:m.practice.daily},
-      {icon:'weekly', label:"This week's assignment", text:m.practice.weekly},
-      {icon:'challenge', label:'Stretch challenge', text:m.practice.challenge}
+      {icon:'warmup', label:'Warm-up', text:practice.warmup},
+      {icon:'daily', label:'Daily practice', text:practice.daily},
+      {icon:'weekly', label:"This week's assignment", text:practice.weekly},
+      {icon:'challenge', label:'Stretch challenge', text:practice.challenge}
     ];
     return `<div class="practice-grid">${blocks.map(b=>`
       <div class="practice-block">
@@ -1089,20 +1106,23 @@ function renderTabContent(m, tab, checkedSet){
     }).join('')}`;
   }
   if(tab === 'mastery'){
-    const total = m.checklist.length;
+    const checklist = L(m,'checklist');
+    const quiz = L(m,'quiz');
+    const nextStep = L(m,'nextStep');
+    const total = checklist.length;
     const done = checkedSet.size;
     const quizState = STATE.quizAnswers[m.id] || {};
-    const hasQuiz = m.quiz && m.quiz.length > 0;
+    const hasQuiz = quiz && quiz.length > 0;
     const quizAnsweredCount = Object.keys(quizState).length;
-    const quizCorrectCount = hasQuiz ? m.quiz.reduce((n,q,qi)=> n + (quizState[qi]===q.correct?1:0), 0) : 0;
-    const quizDone = !hasQuiz || quizAnsweredCount >= m.quiz.length;
+    const quizCorrectCount = hasQuiz ? quiz.reduce((n,q,qi)=> n + (quizState[qi]===q.correct?1:0), 0) : 0;
+    const quizDone = !hasQuiz || quizAnsweredCount >= quiz.length;
     const alreadyComplete = STATE.completed.has(m.id);
 
     const quizHtml = hasQuiz ? `
-      <h4>Quick check <span class="quiz-progress">${quizAnsweredCount}/${m.quiz.length} answered${quizAnsweredCount>0 ? ' \u00b7 '+quizCorrectCount+' correct' : ''}</span></h4>
+      <h4>Quick check <span class="quiz-progress">${quizAnsweredCount}/${quiz.length} answered${quizAnsweredCount>0 ? ' \u00b7 '+quizCorrectCount+' correct' : ''}</span></h4>
       <p class="prose" style="margin-bottom:var(--sp-4);font-size:14px;color:var(--text-muted);">These test whether the ideas actually landed, not whether you clicked play. Answer every one \u2014 right or wrong \u2014 to unlock module completion below.</p>
       <div class="quiz-list">
-        ${m.quiz.map((q,qi)=>{
+        ${quiz.map((q,qi)=>{
           const answered = quizState.hasOwnProperty(qi);
           const selected = quizState[qi];
           return `<div class="quiz-card">
@@ -1125,19 +1145,19 @@ function renderTabContent(m, tab, checkedSet){
     ${quizHtml}
     <h4 style="font-family:var(--font-body);font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);margin:var(--sp-6) 0 var(--sp-3);font-weight:600;">Mastery checklist</h4>
     <div class="checklist" role="group" aria-label="Mastery checklist">
-      ${m.checklist.map((item,i)=>`
+      ${checklist.map((item,i)=>`
         <button class="check-item" role="checkbox" aria-checked="${checkedSet.has(i)}" data-check-module="${m.id}" data-check-index="${i}">
           <span class="check-box">${ICONS.check}</span>
           <span class="check-text">${item}</span>
         </button>`).join('')}
     </div>
     <div class="mastery-cta">
-      <p>${done}/${total} checked.${m.nextStep ? ' Next up: ' + m.nextStep : ''}</p>
+      <p>${done}/${total} checked.${nextStep ? ' Next up: ' + nextStep : ''}</p>
       ${alreadyComplete
         ? `<button class="btn btn-primary" data-complete-module="${m.id}">${ICONS.check} Marked complete</button>`
         : quizDone
           ? `<button class="btn btn-primary" data-complete-module="${m.id}">Mark module complete (+50 XP)</button>`
-          : `<button class="btn btn-primary" disabled title="Answer every quick-check question above first">Answer all ${m.quiz.length} quiz questions to unlock</button>`
+          : `<button class="btn btn-primary" disabled title="Answer every quick-check question above first">Answer all ${quiz.length} quiz questions to unlock</button>`
       }
     </div>`;
   }
@@ -1454,7 +1474,7 @@ function renderRefresherQuestion(){
   refresherState = {moduleId: pick.m.id, qi: pick.qi, answered: false};
   wrap.innerHTML = `
     <div class="quiz-card">
-      <p class="res-creator" style="margin-bottom:var(--sp-3)">From: ${pick.m.title}</p>
+      <p class="res-creator" style="margin-bottom:var(--sp-3)">From: ${L(pick.m,'title')}</p>
       <p class="quiz-question">${pick.q.q}</p>
       <div class="quiz-options" id="refresherOptions">
         ${pick.q.options.map((opt,oi)=>`<button class="quiz-option" data-refresher-opt="${oi}">${opt}</button>`).join('')}
@@ -1562,8 +1582,8 @@ function renderSearchResults(matches, query){
       <button class="mcard" data-path="${path.id}" data-module="${m.id}">
         ${DECOR[MODULE_DECOR[m.id]] || ''}
         <div class="mcard-top"><span class="plate-id">PLATE ${m.plate}</span></div>
-        <h3>${m.title}</h3>
-        <p class="mcard-hook">${m.hook}</p>
+        <h3>${L(m,'title')}</h3>
+        <p class="mcard-hook">${L(m,'hook')}</p>
       </button>`).join('') + '</div>';
   }
   document.getElementById('main').innerHTML = html;
@@ -1756,6 +1776,12 @@ function initEvents(){
       document.getElementById('themePickerMenu').classList.remove('open');
       document.getElementById('themeToggle').setAttribute('aria-expanded', 'false');
     });
+  });
+  document.getElementById('langToggle').addEventListener('click', ()=>{
+    STATE.language = STATE.language === 'hi' ? 'en' : 'hi';
+    saveProgress();
+    updateChrome();
+    renderApp();
   });
   document.addEventListener('click', (e)=>{
     if(!e.target.closest('.theme-picker')){
