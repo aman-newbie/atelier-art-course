@@ -622,3 +622,95 @@ svg{display:block;}
   .cal-reminder-actions{flex-direction:column;}
   .cal-reminder-actions .btn{width:100%; justify-content:center;}
 }
+
+
+/* ============================================================
+   ART BACKDROP — decorative construction-line / sketch motifs.
+   One fixed layer behind all content; which motif shows is
+   driven entirely by [data-theme], so no JS is needed for it.
+   ============================================================ */
+.art-backdrop{
+  position:fixed; inset:0; z-index:0; pointer-events:none;
+  opacity:.5; background-repeat:no-repeat;
+  background-position:-60px -40px, right -80px bottom -100px;
+  background-size:420px 420px, 480px 480px;
+  transition:opacity var(--dur-slow) var(--ease);
+}
+[data-theme="dark"] .art-backdrop{
+  opacity:.16;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 420'%3E%3Cg fill='none' stroke='%236FB2E8' stroke-width='1'%3E%3Ccircle cx='210' cy='210' r='150'/%3E%3Ccircle cx='210' cy='210' r='90'/%3E%3Cline x1='210' y1='10' x2='210' y2='410'/%3E%3Cline x1='10' y1='210' x2='410' y2='210'/%3E%3Cline x1='60' y1='60' x2='360' y2='360'/%3E%3Cline x1='360' y1='60' x2='60' y2='360'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 480'%3E%3Cg fill='none' stroke='%23E2664A' stroke-width='1'%3E%3Cpath d='M60 420 L280 90 L320 130 L100 460 Z'/%3E%3Cpath d='M280 90 L310 50 L350 90 L320 130 Z'/%3E%3Cpath d='M60 420 L40 460 L80 440 Z'/%3E%3C/g%3E%3C/svg%3E");
+}
+[data-theme="light"] .art-backdrop{
+  opacity:.10;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 420'%3E%3Cg fill='none' stroke='%231B1812' stroke-width='1'%3E%3Ccircle cx='210' cy='210' r='150'/%3E%3Ccircle cx='210' cy='210' r='90'/%3E%3Cline x1='210' y1='10' x2='210' y2='410'/%3E%3Cline x1='10' y1='210' x2='410' y2='210'/%3E%3Cline x1='60' y1='60' x2='360' y2='360'/%3E%3Cline x1='360' y1='60' x2='60' y2='360'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 480'%3E%3Cg fill='none' stroke='%23B23F26' stroke-width='1'%3E%3Cpath d='M60 420 L280 90 L320 130 L100 460 Z'/%3E%3Cpath d='M280 90 L310 50 L350 90 L320 130 Z'/%3E%3Cpath d='M60 420 L40 460 L80 440 Z'/%3E%3C/g%3E%3C/svg%3E");
+}
+[data-theme="sketchbook"] .art-backdrop{
+  opacity:.5;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 420'%3E%3Cg fill='none' stroke='%238A7A5E' stroke-width='1.4' stroke-linecap='round'%3E%3Ccircle cx='150' cy='150' r='95' stroke-dasharray='2 6'/%3E%3Ccircle cx='150' cy='150' r='60'/%3E%3Cpath d='M60 150 A90 90 0 0 1 240 150'/%3E%3Cpath d='M300 260 L360 200 M300 260 L340 320 M360 200 L340 320' /%3E%3Crect x='40' y='300' width='70' height='70' rx='4' transform='rotate(-8 75 335)'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 480'%3E%3Cg fill='none' stroke='%23A6472E' stroke-width='1.4' stroke-linecap='round'%3E%3Cpath d='M80 420 L300 90 L340 130 L120 460 Z'/%3E%3Cpath d='M300 90 L330 50 L370 90 L340 130 Z'/%3E%3Cpath d='M80 420 L60 460 L100 440 Z'/%3E%3Ccircle cx='390' cy='340' r='38' stroke-dasharray='1 5'/%3E%3C/g%3E%3C/svg%3E");
+}
+@media (prefers-reduced-motion:reduce){ .art-backdrop{transition:none;} }
+@media (max-width:768px){ .art-backdrop{background-size:280px 280px, 320px 320px;} }
+
+/* ---- Theme: Sketchbook (warm cream paper, visible pencil/sketch art) ---- */
+[data-theme="sketchbook"]{
+  --bg:#F3ECDC; --bg-raised:#FAF5E9; --surface:#FFFCF4; --surface-2:#F0E8D5;
+  --border:#DED0AE; --border-soft:#E9E0C9;
+  --text:#3A2E1E; --text-muted:#6E6047; --text-faint:#7A6C50;
+  --blue:#3D6E8C; --blue-ink:#E3EEF3; --blue-soft:#E3EEF3;
+  --red:#A6472E; --red-ink:#F7E5DE; --red-soft:#F7E5DE;
+  --green:#4C7A4A;
+  --paper-tint: rgba(58,46,30,.04);
+}
+[data-theme="sketchbook"] .topbar{background:color-mix(in srgb, var(--bg) 80%, transparent);}
+
+/* ============================================================
+   THEME PICKER — replaces the single dark/light toggle
+   ============================================================ */
+.theme-picker{position:relative;}
+.theme-picker-menu{
+  position:absolute; top:calc(100% + var(--sp-2)); right:0; z-index:200;
+  background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-md);
+  box-shadow:var(--shadow-md); padding:var(--sp-2); min-width:168px;
+  display:none; flex-direction:column; gap:2px;
+}
+.theme-picker-menu.open{display:flex;}
+.theme-option{
+  display:flex; align-items:center; gap:var(--sp-3); padding:var(--sp-2) var(--sp-3);
+  border-radius:var(--radius-sm); border:none; background:none; color:var(--text);
+  font-family:var(--font-body); font-size:13.5px; text-align:left; width:100%;
+}
+.theme-option:hover{background:var(--surface-2);}
+.theme-option[aria-pressed="true"]{background:var(--blue-soft); color:var(--blue);}
+.theme-swatch{width:18px; height:18px; border-radius:var(--radius-full); border:1px solid var(--border); flex-shrink:0;}
+.theme-swatch.dark{background:linear-gradient(135deg,#151318 50%,#6FB2E8 50%);}
+.theme-swatch.light{background:linear-gradient(135deg,#EEECE6 50%,#2F6CA6 50%);}
+.theme-swatch.sketchbook{background:linear-gradient(135deg,#F3ECDC 50%,#A6472E 50%);}
+
+/* ============================================================
+   LIBRARY — every resource across all live arcs, browsable
+   ============================================================ */
+.library-filters{display:flex; flex-wrap:wrap; gap:var(--sp-2); margin-bottom:var(--sp-5);}
+.library-filter-btn{
+  padding:var(--sp-2) var(--sp-4); border-radius:var(--radius-full); border:1px solid var(--border);
+  background:var(--surface); color:var(--text-muted); font-size:13px; font-family:var(--font-body);
+  display:flex; align-items:center; gap:var(--sp-2);
+}
+.library-filter-btn.active{background:var(--blue-soft); border-color:var(--blue); color:var(--blue);}
+.library-search{
+  display:flex; align-items:center; gap:var(--sp-2); background:var(--surface); border:1px solid var(--border);
+  border-radius:var(--radius-full); padding:var(--sp-2) var(--sp-4); margin-bottom:var(--sp-5); max-width:420px;
+}
+.library-search input{border:none; background:none; outline:none; color:var(--text); font-size:14px; width:100%; font-family:var(--font-body);}
+.library-search svg{width:16px; height:16px; color:var(--text-faint); flex-shrink:0;}
+.library-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(300px,1fr)); gap:var(--sp-4);}
+.library-source{
+  font-size:11.5px; color:var(--text-faint); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:.5px;
+  margin-top:var(--sp-2); display:block;
+}
+.library-empty{padding:var(--sp-8) 0; text-align:center; color:var(--text-faint);}
