@@ -1822,9 +1822,334 @@ const CURRICULUM_3 = [
 "nextStep": "The Nature & Architecture arc is now complete, from a single branching tree to a full living city block. The next arc turns to Creatures & Hard Surface — comparative animal anatomy and the vehicles, props, and machines built from it."
 }
     ]},
-{id:'creatures-hardsurface', title:'Creatures & Hard Surface', status:'soon', order:6,
-    desc:'Comparative animal anatomy, birds, aquatic life, insects and original creature design, then vehicles, weapons, machines, and mecha.',
-    moduleCount:21, sample:['Mammal Anatomy','Birds in Flight','Creature Design','Vehicles','Robotics & Mecha']},
+{id:'creatures-hardsurface', title:'Creatures & Hard Surface', status:'live', order:6,
+    desc:'Comparative animal anatomy, birds, aquatic life, insects and original creature design, then vehicles, weapons, machines, and mecha. Batch 1 (comparative animal anatomy) is live; birds, aquatic life, and insects are next.',
+    modules:[
+{
+"id": "m67",
+"plate": 67,
+"title": "Quadruped Skeletal Structure & Gait",
+"difficulty": "Intermediate",
+"studyTime": "20 min",
+"practiceTime": "25–30 min/day",
+"prereq": ["m32", "m34"],
+"hook": "A quadruped's skeleton is built from the same bones as yours — the same humerus, radius, ulna, femur, tibia — just rotated, stretched, and re-proportioned to run on four legs instead of stand on two.",
+"whyItMatters": [
+  "Beginners treat animal anatomy as an entirely separate system from human anatomy, memorizing each species from scratch instead of transferring the skeletal landmarks already learned in Modules 32–34.",
+  "Once the shared skeleton is understood, the specific silhouette of a dog, horse, or lion becomes a set of proportion changes on a known frame rather than a new subject to memorize from zero."
+],
+"coreIdea": [
+  "A quadruped's front leg is a rotated human arm: the shoulder blade rides high on the back, the wrist is far up the leg near what looks like a backward-bending knee, and what looks like a paw is actually the fingers.",
+  "The hind leg is a rotated human leg standing permanently on the balls of the feet (digitigrade stance) or on hooves (unguligrade stance), which is why the backward knee people point to on a dog is actually its ankle.",
+  "Gait sequences follow a fixed order of foot placement (for a walk: typically one hind foot, then the front foot on the same side, then the opposite hind, then the opposite front) — getting this sequence wrong is the fastest way to make a walking animal look broken.",
+  "The spine drives quadruped locomotion far more than a human's: it flexes and extends with each stride, especially in fast runners like cats and horses, adding reach that the legs alone don't provide."
+],
+"mistakes": [
+  "Treating an animal's foreleg as a simple straight post instead of the rotated, multi-jointed human arm it actually is, losing the shoulder blade, backward-bending wrist, and finger-paw.",
+  "Placing all four feet in a generic, unresearched order during a walk cycle instead of following the fixed diagonal sequence real quadrupeds use.",
+  "Drawing the spine as a rigid bar during running poses, missing the flexion and extension that gives fast quadrupeds their reach and speed.",
+  "Mislabeling the animal's ankle as a backward knee, which leads to bending the joint in the wrong direction entirely."
+],
+"proTips": [
+  "Before drawing any quadruped, mentally relabel its joints using your own arm and leg: shoulder, elbow, wrist, fingers on the front; hip, knee, ankle, toes on the back.",
+  "Look up the specific gait sequence for the pose you're drawing (walk, trot, gallop) rather than guessing — each has a distinct, fixed foot-placement order.",
+  "Exaggerate spine flexion slightly in running poses even if a reference photo looks stiffer — a bit of extra curve reads as more dynamic without becoming inaccurate.",
+  "Cross-reference a confusing joint against Module 32's human landmarks; if it doesn't make sense as an animal joint, it usually resolves once you find its human equivalent."
+],
+"practice": {
+  "warmup": "Draw a simple quadruped skeleton (a dog or horse) labeling each joint with its human equivalent: shoulder, elbow, wrist, hip, knee, ankle.",
+  "daily": "Draw the same quadruped skeleton in a walk-cycle sequence of four poses, following the correct diagonal foot-placement order.",
+  "weekly": "Draw a full musculature pass over one walk-cycle pose from the week, then a second pose showing the spine flexed in a running stride.",
+  "challenge": "Draw a four-pose gait sequence (walk, trot, gallop, and a stopped stance) for a single animal, keeping the skeleton and joint logic consistent across all four."
+},
+"resources": [
+  {"type": "Article", "title": "Quadruped Animals Tutorial", "creator": "SrahC — Clip Studio Tips", "url": "https://tips.clip-studio.com/en-us/articles/2301", "why": "A free tutorial specifically comparing the human and quadruped skeleton bone-by-bone, directly reinforcing this module's core idea.", "verified": true},
+  {"type": "Historical Reference", "title": "Animal Locomotion (1887)", "creator": "Eadweard Muybridge", "url": "https://archive.org/details/muybridgescomple01muyb", "why": "The foundational stop-motion photographic reference for real quadruped gait sequences, freely viewable through the Internet Archive.", "verified": true}
+],
+"quiz": [
+  {"q": "What is commonly mistaken for a dog's backward knee?", "options": ["Its actual knee, which bends unusually", "Its ankle, standing permanently on the balls of its feet", "An extra joint humans don't have", "Its hip joint"], "correct": 1, "explain": "What looks like a backward-bending knee on a dog's hind leg is actually its ankle — the animal stands permanently on the balls of its feet (digitigrade stance)."},
+  {"q": "Why does getting the gait sequence wrong break a walking animal drawing?", "options": ["Gait sequence doesn't matter visually", "Real quadrupeds place their feet in a fixed diagonal order that viewers recognize even unconsciously", "Only running gaits have a fixed sequence, walking does not", "Gait sequence only applies to hoofed animals"], "correct": 1, "explain": "Quadruped gaits follow a fixed order of foot placement; an incorrect sequence reads as visually wrong even to viewers who couldn't name the actual sequence."},
+  {"q": "What role does the spine play in fast quadruped locomotion that it doesn't in a human?", "options": ["None, the spine stays rigid in all quadrupeds", "It flexes and extends with each stride, adding extra reach", "It only matters for slow-moving animals", "It replaces the need for leg joints entirely"], "correct": 1, "explain": "In fast runners like cats and horses, the spine flexes and extends significantly with each stride, adding reach that the legs alone don't provide — unlike the comparatively rigid human spine during locomotion."}
+],
+"checklist": [
+  "I can relabel a quadruped's joints using human equivalents: shoulder, elbow, wrist, hip, knee, ankle.",
+  "I place feet in the correct diagonal sequence for a given gait rather than guessing.",
+  "I flex and extend the spine appropriately in fast running poses.",
+  "I can identify an animal's ankle rather than mislabeling it as a backward knee."
+],
+"nextStep": "With the shared skeleton and gait logic established, the next module builds the muscle mass and silhouette on top of that frame — the layer that gives a quadruped its recognizable, species-specific shape."
+},
+{
+"id": "m68",
+"plate": 68,
+"title": "Quadruped Muscle Mass & Silhouette",
+"difficulty": "Intermediate",
+"studyTime": "20 min",
+"practiceTime": "25–30 min/day",
+"prereq": ["m67", "m34"],
+"hook": "Two animals can share almost the exact same skeleton and still look nothing alike — a greyhound and a bulldog are both dogs, but the muscle mass draped over that skeleton, not the bones themselves, is what makes each silhouette instantly recognizable.",
+"whyItMatters": [
+  "Beginners who correctly build a quadruped skeleton often stop there, wrapping it in a generic, uniform layer of mass that erases every species difference the skeleton was meant to support.",
+  "This module treats muscle mass as a silhouette decision made early, the same way gesture and pose were treated as silhouette decisions for the human figure, rather than surface detail added at the end."
+],
+"coreIdea": [
+  "Muscle mass concentrates in different places depending on an animal's role: sprinters carry mass low and back for propulsion, while animals built for power carry heavier mass through the shoulders and neck.",
+  "The <b>overall pose and gesture</b> of an animal — not just its individual muscles — is what first reads as a specific species or mood; a slouched, low-slung gesture reads as an entirely different animal than an alert, high-chested one on the identical skeleton.",
+  "Silhouette is checked in <b>flat black shape</b> before any interior detail: if the silhouette alone doesn't communicate the right animal and mood, no amount of muscle rendering inside it will fix that.",
+  "Fat, fur, and loose skin sit <b>on top of</b> the muscle layer and can soften or completely hide individual muscle forms — muscle knowledge informs the silhouette even when no muscle is directly visible."
+],
+"mistakes": [
+  "Wrapping every quadruped skeleton in the same generic, uniform muscle mass regardless of the animal's actual build and role.",
+  "Rendering individual muscles in careful detail while neglecting the overall silhouette and gesture, which is what a viewer actually reads first.",
+  "Forgetting that fur, fat, and loose skin sit on top of muscle and can obscure it entirely, and rendering visible muscle striations on animals that would never show them.",
+  "Checking a drawing only in full detail and never stepping back to test it as a flat silhouette."
+],
+"proTips": [
+  "Block the animal's overall gesture and mass distribution as a solid, flat-black silhouette before adding a single line of interior detail.",
+  "Identify whether the animal is built for speed, power, or agility, and concentrate muscle mass accordingly rather than distributing it evenly.",
+  "After adding fur or fat over the muscle layer, check whether the underlying muscle logic still shows through appropriately for that species.",
+  "Compare silhouettes of two related animals (a wolf and a chihuahua, for example) side by side to see how differently mass can sit on a similar skeleton."
+],
+"practice": {
+  "warmup": "Draw three flat-black silhouettes of the same quadruped skeleton with mass distributed differently: built for speed, built for power, built for agility.",
+  "daily": "Take one silhouette from the warmup and render its muscle groups in line, keeping the original silhouette shape intact.",
+  "weekly": "Draw two different animals on a similar skeleton (a big cat and a domestic cat, or a wolf and a small dog breed) and compare how mass distribution changes their silhouettes.",
+  "challenge": "Draw a single animal in three different body conditions — lean and muscular, well-fed, and undernourished — keeping the skeleton identical and changing only the mass layer."
+},
+"resources": [
+  {"type": "Article", "title": "How to Draw Animals: The Importance of Drawing a Pose", "creator": "Monika Zagrobelna — Envato Tuts+", "url": "https://design.tutsplus.com/articles/how-to-draw-animals-the-importance-of-drawing-a-pose--vector-24537", "why": "A free article on why gesture and overall silhouette, not individual muscle rendering, is what makes an animal drawing read correctly — directly reinforcing this module's core idea.", "verified": true},
+  {"type": "Site", "title": "Free Video Library", "creator": "Ctrl+Paint — Matt Kohr", "url": "https://www.ctrlpaint.com/library", "why": "Free videos on gesture and mass distribution that transfer directly from human figure work to blocking in an animal's silhouette.", "verified": true}
+],
+"quiz": [
+  {"q": "Why can two animals with nearly identical skeletons look completely different?", "options": ["They can't, identical skeletons always look the same", "Muscle mass distribution over the skeleton, not the bones themselves, creates the recognizable silhouette", "Only fur color creates the difference", "Skeleton shape is the only thing that matters"], "correct": 1, "explain": "A greyhound and a bulldog share a similar canine skeleton, but very different muscle mass distribution creates their completely different, instantly recognizable silhouettes."},
+  {"q": "What should be checked before any interior muscle detail is added?", "options": ["Nothing, detail should come first", "The flat black silhouette, to confirm it reads as the right animal and mood on its own", "The fur color and pattern", "The exact number of visible muscle striations"], "correct": 1, "explain": "Silhouette is checked in flat black shape first; if it doesn't communicate the right animal and mood on its own, no amount of interior muscle detail will fix that."},
+  {"q": "How does fur or fat typically relate to the muscle layer underneath?", "options": ["Fur and fat have no relationship to the muscle layer", "They sit on top of muscle and can soften or hide individual muscle forms entirely", "They always reveal every individual muscle clearly", "They replace the need to understand muscle at all"], "correct": 1, "explain": "Fat, fur, and loose skin sit on top of the muscle layer and can soften or completely hide individual muscle forms, even though muscle knowledge still informs the overall silhouette."}
+],
+"checklist": [
+  "I distribute muscle mass according to an animal's actual build and role rather than applying a generic layer.",
+  "I block silhouette and gesture before adding interior muscle detail.",
+  "I check my drawing as a flat black silhouette to confirm it reads correctly on its own.",
+  "I account for fur, fat, and loose skin softening or hiding the muscle layer beneath them."
+],
+"nextStep": "With skeleton, gait, and mass distribution established as transferable skills, the next module tests them directly against the human anatomy already learned, making the shared logic explicit."
+},
+{
+"id": "m69",
+"plate": 69,
+"title": "Human vs. Animal Comparative Anatomy",
+"difficulty": "Intermediate",
+"studyTime": "20 min",
+"practiceTime": "25–30 min/day",
+"prereq": ["m67", "m32"],
+"hook": "Every land vertebrate, human or animal, is a variation on the exact same skeletal blueprint — the differences are proportion, angle, and emphasis, not a different set of parts.",
+"whyItMatters": [
+  "Treating human and animal anatomy as two unrelated subjects means re-learning structure from scratch for every new species, when the underlying logic was already covered in Modules 31–41.",
+  "Making the shared blueprint explicit turns animal anatomy into a transfer exercise — stretch this bone, rotate that joint, change this proportion — rather than an entirely separate body of knowledge."
+],
+"coreIdea": [
+  "The same landmark bones exist across species: skull, spine, ribcage, shoulder blade, humerus, radius and ulna, pelvis, femur, tibia and fibula — what changes between a human and a horse is length, angle, and which joints touch the ground.",
+  "A human stands with the whole foot flat (plantigrade); a dog stands on its toes (digitigrade); a horse stands on a single toe's nail, its hoof (unguligrade) — the same ankle and toe bones are present in all three, just used differently.",
+  "Proportional emphasis shifts with function: a human's arm is a manipulation tool with a mobile hand, while a horse's equivalent limb is a rigid, elongated support column optimized for speed, not grip.",
+  "<b>Mannequinization</b>, already used to simplify the human body in Module 34, applies just as directly to animals — the same simplified capsule-and-block logic, stretched into a different proportion."
+],
+"mistakes": [
+  "Learning each animal's anatomy as an isolated, unrelated system instead of mapping it back to the same skeletal landmarks already known from human anatomy.",
+  "Assuming an animal's stance (standing on toes or hooves) means it has fewer bones than a human, rather than the same bones used at a different angle.",
+  "Forgetting to adjust proportional emphasis for an animal's actual function, resulting in, for example, a horse's leg drawn with human-like arm proportions.",
+  "Skipping mannequinization for animals and jumping straight to detailed rendering, losing the simplified structural foundation that makes complex poses manageable."
+],
+"proTips": [
+  "When starting a new animal, list its major landmark bones first and explicitly match each one to its human equivalent before drawing anything else.",
+  "Note which joints touch the ground for a given species (whole foot, toes, or a single nail) before blocking in the legs, since this changes the entire limb's proportions.",
+  "Apply the same simplified mannequin blocks used for human figures to the animal's torso and limbs before adding any specific species detail.",
+  "When stuck on an animal's confusing anatomy, ask what a human doing the same action would look like, then adjust proportions from there rather than starting over."
+],
+"practice": {
+  "warmup": "Draw a simple human skeleton and a simple quadruped skeleton side by side, labeling matching bones with the same colors or letters.",
+  "daily": "Take one animal from this week's other practice and mannequinize it using the same block-and-capsule method used for the human figure in Module 34.",
+  "weekly": "Draw three different animals (for example a human, a dog, and a horse) in a similar pose, keeping the same landmark-bone logic visible in each.",
+  "challenge": "Draw an invented creature that blends human and animal proportions in a deliberate, anatomically consistent way, using the shared skeletal logic to justify every choice."
+},
+"resources": [
+  {"type": "Article", "title": "Quadruped Animals Tutorial", "creator": "SrahC — Clip Studio Tips", "url": "https://tips.clip-studio.com/en-us/articles/2301", "why": "Explicitly walks through matching human and quadruped skeletal landmarks bone by bone, which is the exact comparative exercise this module is built around.", "verified": true},
+  {"type": "Course", "title": "Mannequinization — Structure of the Human Body", "creator": "Proko (Stan Prokopenko)", "url": "https://www.proko.com/course-lesson/mannequinization-structure-of-the-human-body", "why": "The free lesson on simplifying the human body into blocks and capsules that this module extends directly to animal anatomy.", "verified": true}
+],
+"quiz": [
+  {"q": "What differs most between a human, dog, and horse skeleton?", "options": ["They have entirely different sets of bones", "Proportion, angle, and which joints touch the ground, not the underlying set of bones", "Only the number of ribs differs", "Nothing differs, all land vertebrates are identical"], "correct": 1, "explain": "The same landmark bones appear across species; what changes is length, angle, and stance — whether the whole foot, the toes, or a single hoof touches the ground."},
+  {"q": "What does it mean that a horse is unguligrade?", "options": ["It has no ankle bones at all", "It stands on the nail of a single toe, which we see as its hoof", "It stands flat-footed like a human", "It has an extra set of leg bones humans lack"], "correct": 1, "explain": "Unguligrade stance means standing on the nail of a single toe (the hoof); the same ankle and toe bones present in a human foot are still there, just used at a very different angle."},
+  {"q": "How does mannequinization apply to animal anatomy?", "options": ["It doesn't apply, mannequinization is human-only", "The same simplified block-and-capsule method used for humans applies directly, stretched into different proportions", "It only works for quadrupeds, never for birds or fish", "It replaces the need to learn any animal skeleton at all"], "correct": 1, "explain": "Mannequinization's simplified block-and-capsule logic transfers directly to animals — the same method, just stretched and reproportioned for a different skeleton."}
+],
+"checklist": [
+  "I can match an animal's major landmark bones to their human equivalents before drawing.",
+  "I identify which joints touch the ground for a given species and adjust leg proportions accordingly.",
+  "I adjust proportional emphasis based on an animal's actual function rather than defaulting to human proportions.",
+  "I apply mannequinization to animals using the same block-and-capsule logic learned for the human figure."
+],
+"nextStep": "With the shared blueprint established, the next module applies it to a specific, high-stakes case: big cats and other predators, where subtle proportion shifts separate a convincing lion from a stretched-out house cat."
+},
+{
+"id": "m70",
+"plate": 70,
+"title": "Big Cats & Predator Anatomy",
+"difficulty": "Intermediate",
+"studyTime": "20 min",
+"practiceTime": "25–30 min/day",
+"prereq": ["m69", "m68"],
+"hook": "A lion is not a house cat scaled up — its proportions, especially through the shoulders, paws, and skull, shift specifically to support ambush power and takedown force that a small cat never needs.",
+"whyItMatters": [
+  "Beginners scale a familiar house cat up or down to draw any feline, which quietly imports the wrong proportions onto lions, tigers, and other big cats built for very different mechanics.",
+  "Predator anatomy is a clear test case for everything built so far: shared skeleton, gait, mass distribution, and comparative proportion, all applied to animals where small errors are highly visible to viewers already familiar with these iconic species."
+],
+"coreIdea": [
+  "Big cats carry disproportionately <b>heavy, muscular forequarters</b> compared to small cats, since forelimb and neck strength drive the grappling and takedown power their hunting style depends on.",
+  "<b>Retractable claws and wide paws</b> are structural, not decorative — the paw pads and claw sheaths shape the whole foot's silhouette differently from a non-retracting predator like a dog.",
+  "Species-specific <b>coat patterns follow the body's form</b>: stripes and spots compress and stretch around the muscle masses and joints rather than sitting on the surface like a flat, unrelated print.",
+  "Facial structure varies meaningfully between species performing similar roles: a lion's heavier brow and jaw differ from a cheetah's lighter, more aerodynamic skull built for speed over pure power."
+],
+"mistakes": [
+  "Scaling a familiar house cat's proportions up to draw a lion or tiger, instead of adjusting the forequarter mass and skull structure specifically for a big predator.",
+  "Drawing paws as simple rounded shapes without accounting for the structural role of retractable claws and wide, spread pads.",
+  "Applying coat patterns as a flat, evenly spaced print over the finished form instead of letting stripes or spots compress and stretch with the underlying muscle and joints.",
+  "Using the same facial structure for every big cat species regardless of whether that species hunts through power (lion) or pure speed (cheetah)."
+],
+"proTips": [
+  "Study forequarter mass specifically when moving from small cats to big cats — it's the single proportion change that most affects believability.",
+  "Draw the paw's underlying pad-and-claw structure before adding fur, so the silhouette reflects the actual mechanism rather than a generic rounded shape.",
+  "Sketch the muscle form first, then lay the coat pattern on top following that form's curves, rather than adding pattern as a flat afterthought.",
+  "When designing a big cat species, decide whether it hunts through power or speed first, then let the skull and build follow from that decision."
+],
+"practice": {
+  "warmup": "Draw a house cat and a lion side by side at the same scale, exaggerating the lion's forequarter and neck mass difference.",
+  "daily": "Draw one big cat paw in detail, showing the underlying pad and claw structure before adding fur on top.",
+  "weekly": "Draw a full big cat in a hunting pose (stalking or mid-leap), applying a species-appropriate coat pattern that follows the body's form.",
+  "challenge": "Draw two different big cat species built for different hunting styles (for example a lion and a cheetah) in the same pose, showing how their proportions diverge."
+},
+"resources": [
+  {"type": "Article", "title": "How to Draw Animals: Big Cats, Their Anatomy and Patterns", "creator": "Monika Zagrobelna — Envato Tuts+", "url": "https://design.tutsplus.com/articles/how-to-draw-animals-big-cats-their-anatomy-and-patterns--vector-19237", "why": "A free tutorial covering lion, tiger, cheetah, and snow leopard anatomy and pattern, directly matching this module's focus.", "verified": true},
+  {"type": "Article", "title": "How to Draw Animals: Big Cats, Their Anatomy and Patterns — Part 2", "creator": "Monika Zagrobelna — Envato Tuts+", "url": "https://design.tutsplus.com/articles/how-to-draw-animals-big-cats-their-anatomy-and-patterns-part-2--vector-20399", "why": "Continues the same free series covering leopards and other wild cats, extending the species range this module draws on.", "verified": true}
+],
+"quiz": [
+  {"q": "Why shouldn't a lion be drawn as a simply scaled-up house cat?", "options": ["There is no meaningful proportional difference between them", "Big cats carry disproportionately heavier, more muscular forequarters suited to grappling and takedown power", "House cats are actually larger in proportion than lions", "Scaling up is the correct technique for all felines"], "correct": 1, "explain": "Big cats have disproportionately heavy, muscular forequarters compared to small cats, since forelimb and neck strength drive their grappling and takedown hunting style."},
+  {"q": "How should coat patterns like stripes or spots be applied to a big cat's form?", "options": ["As a flat, evenly spaced print applied over the finished form", "Compressed and stretched to follow the underlying muscle and joints", "Randomly, since pattern placement doesn't affect believability", "Only on the legs, never on the torso"], "correct": 1, "explain": "Coat patterns should compress and stretch around the body's muscle masses and joints, rather than sitting on the surface like an unrelated flat print."},
+  {"q": "What differentiates a lion's skull from a cheetah's?", "options": ["There is no meaningful difference between predator skulls", "A lion's heavier brow and jaw suit power-based hunting, while a cheetah's lighter skull suits speed", "Cheetahs have heavier skulls than lions", "Skull structure is identical across all big cat species"], "correct": 1, "explain": "Facial structure varies with hunting role: a lion's heavier brow and jaw support power-based hunting, while a cheetah's lighter, more aerodynamic skull supports hunting through pure speed."}
+],
+"checklist": [
+  "I adjust forequarter mass specifically when drawing big cats rather than scaling up a house cat.",
+  "I draw paws with their underlying pad-and-claw structure before adding fur.",
+  "I apply coat patterns so they follow the body's form rather than sitting flat on top.",
+  "I differentiate skull and build between power-hunting and speed-hunting predator species."
+],
+"nextStep": "From predators built for power and speed, the next module turns to canines — pack hunters whose anatomy and behavior-driven proportions differ from the solitary big cats just covered."
+},
+{
+"id": "m71",
+"plate": 71,
+"title": "Canines & Pack Animal Anatomy",
+"difficulty": "Intermediate",
+"studyTime": "20 min",
+"practiceTime": "25–30 min/day",
+"prereq": ["m69", "m68"],
+"hook": "A wolf, a chihuahua, and a greyhound share one skeleton and one basic canine proportion system — selective breeding has stretched, compressed, and exaggerated that same system into wildly different silhouettes.",
+"whyItMatters": [
+  "Canines cover an unusually extreme proportion range for a single species, so beginners either draw every dog as a generic dog shape or treat each breed as an unrelated design problem.",
+  "Understanding the wolf as the baseline canine proportion, with breeds as deliberate exaggerations of specific traits, makes any dog or wolf-relative (like a fox) a variation rather than a new subject."
+],
+"coreIdea": [
+  "The <b>wolf is the baseline canine proportion</b>: a balanced, medium-length muzzle, moderate leg length, and an even overall build that most domestic breeds either exaggerate or compress in a specific direction.",
+  "Domestic breeds are best understood as <b>deliberate proportion exaggerations</b> of the wolf baseline — a greyhound stretches leg length and narrows the torso for speed, while a bulldog compresses the muzzle and widens the chest for a completely different purpose.",
+  "Ear and tail carriage communicate <b>social and emotional state</b> in canines more clearly than in most other animal families, which matters as much for storytelling in a drawing as raw anatomical accuracy does.",
+  "Fox and wolf-relative anatomy diverges from domestic dogs mainly in <b>proportion and head shape</b> — a fox's skull is notably narrower and its legs proportionally more delicate than a similarly sized dog breed."
+],
+"mistakes": [
+  "Drawing every dog with the same generic proportions regardless of breed, missing the deliberate exaggerations that make each breed recognizable.",
+  "Treating each dog breed as an entirely unrelated design problem instead of a proportion variation on the shared wolf-baseline skeleton.",
+  "Ignoring ear and tail carriage as storytelling tools, leaving a canine's emotional state illegible even when the anatomy itself is accurate.",
+  "Drawing a fox with the same head and leg proportions as a similarly sized dog, missing its narrower skull and more delicate build."
+],
+"proTips": [
+  "Start from the wolf's balanced proportions as a mental baseline, then decide which direction a specific breed exaggerates from there.",
+  "Identify a breed's defining exaggeration (leg length, muzzle length, chest width) early and let it inform every other proportion decision in the drawing.",
+  "Use ear and tail position deliberately to communicate mood, the same way facial expression is used in Module 29's expression work.",
+  "When drawing foxes or other wolf-relatives, narrow the skull and lighten the leg build relative to a same-sized domestic dog."
+],
+"practice": {
+  "warmup": "Draw a wolf in a neutral standing pose, then redraw the same pose exaggerating leg length and narrowing the torso to suggest a greyhound-type breed.",
+  "daily": "Draw the same wolf baseline pose exaggerated toward a different breed direction (short legs, wide chest, or compressed muzzle).",
+  "weekly": "Draw three canines side by side — a wolf, a stretched breed, and a compressed breed — keeping the shared skeleton visible under each variation.",
+  "challenge": "Draw a canine expressing a clear emotional state (alert, submissive, aggressive) using ear and tail carriage as the primary storytelling tool alongside accurate anatomy."
+},
+"resources": [
+  {"type": "Article", "title": "How to Draw Animals: Dogs and Wolves, and Their Anatomy", "creator": "Monika Zagrobelna — Envato Tuts+", "url": "https://design.tutsplus.com/articles/how-to-draw-animals-dogs-and-wolves-and-their-anatomy--vector-18350", "why": "A free, thorough tutorial on canine anatomy starting from the wolf baseline and covering breed variation, matching this module directly.", "verified": true},
+  {"type": "Article", "title": "How to Draw Animals: Foxes", "creator": "Monika Zagrobelna — Envato Tuts+", "url": "https://design.tutsplus.com/tutorials/how-to-draw-animals-foxes--cms-19886", "why": "A free follow-up tutorial covering how fox anatomy and proportion diverge from domestic dogs and wolves.", "verified": true}
+],
+"quiz": [
+  {"q": "What is the baseline proportion that most domestic dog breeds exaggerate in one direction or another?", "options": ["A generic dog shape with no real anatomical baseline", "The wolf's balanced, medium-length proportions", "Each breed has a completely separate, unrelated baseline", "The chihuahua, since it is the most extreme breed"], "correct": 1, "explain": "The wolf represents the baseline canine proportion — a balanced build that most domestic breeds exaggerate or compress in a specific direction."},
+  {"q": "What does a greyhound's proportion exaggerate relative to the wolf baseline?", "options": ["Muzzle width and chest width, for power", "Leg length and torso narrowness, for speed", "Ear size only", "Nothing, greyhounds match the wolf baseline exactly"], "correct": 1, "explain": "A greyhound stretches leg length and narrows the torso specifically for speed, exaggerating the wolf baseline in that direction."},
+  {"q": "Why does ear and tail carriage matter in canine drawings beyond pure anatomy?", "options": ["It doesn't matter, only skeletal accuracy matters", "It communicates social and emotional state clearly, supporting the drawing's storytelling", "Ear and tail position is always fixed regardless of mood", "Only wolves show ear and tail expression, not domestic dogs"], "correct": 1, "explain": "Ear and tail carriage communicate social and emotional state clearly in canines, making them an important storytelling tool alongside anatomical accuracy."}
+],
+"checklist": [
+  "I use the wolf's balanced proportions as a mental baseline before drawing a specific breed.",
+  "I identify and exaggerate a breed's defining proportion trait rather than defaulting to a generic dog shape.",
+  "I use ear and tail carriage deliberately to communicate a canine's emotional state.",
+  "I narrow the skull and lighten the build appropriately when drawing foxes relative to similarly sized dogs."
+],
+"nextStep": "From pack predators, the next module turns to hooved animals and herbivores — built for endurance and defense rather than the takedown power and pack coordination just covered."
+},
+{
+"id": "m72",
+"plate": 72,
+"title": "Hooved Animals & Herbivore Anatomy",
+"difficulty": "Intermediate",
+"studyTime": "20 min",
+"practiceTime": "25–30 min/day",
+"prereq": ["m69", "m67"],
+"hook": "A horse runs on what is anatomically a single, heavily armored fingernail per leg — the hoof — and that one structural fact explains almost everything else about how a hooved animal's whole leg is built and moves.",
+"whyItMatters": [
+  "Hooved herbivores are frequently drawn with legs that are anatomically closer to a human's arm or leg than to the actual unguligrade structure a horse, deer, or cow relies on.",
+  "Herbivore anatomy also introduces defensive and grazing-specific features, like horns, antlers, and wide-set eyes, that predator anatomy from the previous two modules doesn't require."
+],
+"coreIdea": [
+  "In an unguligrade limb, what reads visually as the animal's knee or ankle is actually far more analogous to a human standing permanently on a single toe's nail, with the rest of the foot bones stacked vertically above it.",
+  "Grazing herbivores typically have <b>wide-set, laterally positioned eyes</b> for a broad field of view to watch for predators, unlike the forward-facing eyes of hunting predators covered in Modules 70–71.",
+  "<b>Horns and antlers differ structurally</b>: horns are permanent, unbranched, and grow continuously over an animal's life, while antlers are temporary, often branched, and shed and regrown annually in most deer species.",
+  "Long-necked and long-legged grazers (like giraffes) push proportional exaggeration to its most extreme case within herbivores, but rely on the same unguligrade leg logic as a horse or cow."
+],
+"mistakes": [
+  "Drawing a hooved animal's leg with human-arm or human-leg proportions and joint placement instead of the actual unguligrade, single-toe structure.",
+  "Placing a grazing herbivore's eyes in a forward-facing predator position instead of the wide-set, lateral position that gives it a broad field of view.",
+  "Treating horns and antlers as interchangeable decorative features rather than structurally different growths (permanent and unbranched versus shed-and-regrown, often branched).",
+  "Drawing extreme long-necked grazers like giraffes with a generic body plan that ignores how far their proportions stretch the same underlying unguligrade leg logic."
+],
+"proTips": [
+  "Before drawing a hooved leg, mentally trace it back to a single raised toe standing on its nail, then build the rest of the leg's proportions from that fact.",
+  "Position a grazing herbivore's eyes wide and to the side of the skull, distinctly different from the forward-facing eyes used for predator drawings.",
+  "Decide whether an animal has horns or antlers before drawing them, since their growth pattern and shape logic differ structurally, not just visually.",
+  "For extreme proportions like a giraffe's neck and legs, exaggerate confidently rather than timidly, since the underlying leg logic still holds even at that scale."
+],
+"practice": {
+  "warmup": "Draw a simple horse leg, labeling which bones correspond to a human ankle, foot, and toe, ending at the single hoof.",
+  "daily": "Draw a grazing herbivore head in profile and three-quarter view, placing the eyes in their correct wide-set, lateral position.",
+  "weekly": "Draw two herbivores side by side, one with horns and one with antlers, showing the structural difference between the two growths.",
+  "challenge": "Draw a full hooved herbivore (a horse, deer, or giraffe) in a running or alert pose, applying correct unguligrade leg logic, eye placement, and horn or antler structure together."
+},
+"resources": [
+  {"type": "Article", "title": "How to Draw Animals: Horses, Their Anatomy and Poses", "creator": "Monika Zagrobelna — Envato Tuts+", "url": "https://design.tutsplus.com/articles/how-to-draw-animals-horses-their-anatomy-and-poses--vector-18887", "why": "A free tutorial covering the unguligrade leg structure and running poses this module is built around.", "verified": true},
+  {"type": "Article", "title": "How to Draw Animals: Cows and Other Bovines", "creator": "Monika Zagrobelna — Envato Tuts+", "url": "https://design.tutsplus.com/tutorials/how-to-draw-animals-cows-and-other-bovines--cms-21683", "why": "A free tutorial covering cow, bison, buffalo, and yak anatomy, including horn structure, extending the herbivore range this module covers.", "verified": true}
+],
+"quiz": [
+  {"q": "What does an unguligrade limb, like a horse's leg, actually stand on?", "options": ["The whole flat foot, like a human", "The nail of a single raised toe — the hoof", "The animal's knee joint directly", "Multiple flattened toes spread wide"], "correct": 1, "explain": "An unguligrade limb stands on the nail of a single raised toe (the hoof), with the rest of the foot bones stacked vertically above it — not on a flat foot like a human's."},
+  {"q": "Why are a grazing herbivore's eyes typically wide-set and lateral rather than forward-facing?", "options": ["It has no functional benefit, it is purely decorative", "It gives a broad field of view to watch for predators while grazing", "Forward-facing eyes are actually more common in herbivores", "Eye placement doesn't differ between predators and herbivores"], "correct": 1, "explain": "Wide-set, laterally positioned eyes give grazing herbivores a broad field of view to detect predators, unlike the forward-facing eyes of hunting predators."},
+  {"q": "What is a key structural difference between horns and antlers?", "options": ["There is no structural difference, only a naming difference", "Horns are permanent and unbranched; antlers are shed and regrown annually, often branched", "Antlers are permanent and horns are shed annually", "Only male animals grow horns or antlers"], "correct": 1, "explain": "Horns are permanent, unbranched growths that persist over an animal's life, while antlers are typically branched and are shed and regrown annually in most deer species."}
+],
+"checklist": [
+  "I build a hooved animal's leg from the single-toe, unguligrade structure rather than human-like proportions.",
+  "I place a grazing herbivore's eyes wide-set and to the side rather than forward-facing.",
+  "I distinguish horns from antlers structurally rather than treating them as interchangeable decoration.",
+  "I confidently apply correct leg logic even to extreme proportions like a giraffe's neck and legs."
+],
+"nextStep": "With comparative anatomy established across predators and herbivores, the arc moves next into birds — introducing flight, wings, and an entirely new set of structural constraints."
+}
+    ]},
 {id:'worldbuilding', title:'World Building & Concept Art', status:'soon', order:7,
     desc:'Biomes, environmental storytelling, cinematic composition, color scripting, lighting, and the professional concept-art production pipeline.',
     moduleCount:10, sample:['Biome Design','Cinematic Composition','Color Scripting','Concept Art Pipeline','Mood Design']},
