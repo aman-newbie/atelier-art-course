@@ -1764,28 +1764,78 @@ function appendDoubtMessage(role, text){
   return div;
 }
 
+const DOUBT_ENGINE_KEY = 'atelier_doubt_engine';
+const DOUBT_LOCAL_MODEL_ID = 'HuggingFaceTB/SmolLM2-360M-Instruct';
+let localPipelinePromise = null;
+
+function getDoubtSystemInstruction(){
+  const moduleContext = getModuleContextForDoubt();
+  let systemInstruction = "You are a friendly, encouraging drawing teacher's assistant embedded in the Atelier art course. Answer the student's question clearly and briefly (3-6 sentences unless the question truly needs more). If they lack tools or materials, suggest cheap or improvised alternatives rather than telling them to buy something. Stay grounded in practical, fundamentals-level drawing advice.";
+  if(moduleContext) systemInstruction += '\n\nThe student is currently on this module:\n' + moduleContext;
+  return systemInstruction;
+}
+
+function showDoubtEngineChooser(){
+  const wrap = document.getElementById('doubtMessages');
+  if(!wrap || document.getElementById('doubtChooser')) return;
+  const div = document.createElement('div');
+  div.id = 'doubtChooser';
+  div.className = 'doubt-chooser';
+  div.innerHTML =
+    '<p>Pick how you want doubts answered \u2014 you can switch anytime with the \u21c4 button above.</p>' +
+    '<button class="btn btn-primary" data-doubt-engine="gemini">Cloud (Gemini) \u2014 better answers, needs a free key in config.js</button>' +
+    '<button class="btn btn-ghost" data-doubt-engine="local">On-device \u2014 no setup at all, but a ~200MB one-time download and weaker answers</button>';
+  wrap.appendChild(div);
+  wrap.scrollTop = wrap.scrollHeight;
+}
+
+function removeDoubtChooser(){
+  const el = document.getElementById('doubtChooser');
+  if(el) el.remove();
+}
+
+function chooseDoubtEngine(engine){
+  try{ localStorage.setItem(DOUBT_ENGINE_KEY, engine); }catch(e){ /* private browsing etc — falls back to asking each reload */ }
+  removeDoubtChooser();
+  sendDoubtMessage();
+}
+
+function switchDoubtEngine(){
+  try{ localStorage.removeItem(DOUBT_ENGINE_KEY); }catch(e){}
+  showDoubtEngineChooser();
+}
+
 async function sendDoubtMessage(){
   const input = document.getElementById('doubtInput');
   if(!input) return;
   const text = input.value.trim();
   if(!text) return;
 
-  const cfg = window.ATELIER_CONFIG || {};
-  const apiKey = cfg.geminiApiKey || '';
-  if(!apiKey || apiKey.indexOf('PASTE_YOUR') === 0){
-    appendDoubtMessage('error', 'This needs a free Gemini API key added in config.js first \u2014 see the comment at the top of that file for how to get one.');
-    return;
-  }
+  let engine = null;
+  try{ engine = localStorage.getItem(DOUBT_ENGINE_KEY); }catch(e){}
+  if(!engine){ showDoubtEngineChooser(); return; }
 
   appendDoubtMessage('user', text);
   input.value = '';
   doubtHistory.push({role:'user', text});
+
+  const systemInstruction = getDoubtSystemInstruction();
+  if(engine === 'local'){
+    await sendDoubtMessageLocal(systemInstruction);
+  } else {
+    await sendDoubtMessageGemini(systemInstruction);
+  }
+}
+
+async function sendDoubtMessageGemini(systemInstruction){
+  const cfg = window.ATELIER_CONFIG || {};
+  const apiKey = cfg.geminiApiKey || '';
+  if(!apiKey || apiKey.indexOf('PASTE_YOUR') === 0){
+    appendDoubtMessage('error', 'This needs a free Gemini API key added in config.js first \u2014 see the comment at the top of that file for how to get one. You can switch to the on-device option with the \u21c4 button above instead.');
+    return;
+  }
+
   const loadingEl = appendDoubtMessage('loading', 'Thinking\u2026');
-
-  const moduleContext = getModuleContextForDoubt();
-  let systemInstruction = 'You are a friendly, encouraging drawing teacher\'s assistant embedded in the Atelier art course. Answer the student\'s question clearly and briefly (3-6 sentences unless the question truly needs more). If they lack tools or materials, suggest cheap or improvised alternatives rather than telling them to buy something. Stay grounded in practical, fundamentals-level drawing advice.';
-  if(moduleContext) systemInstruction += '\n\nThe student is currently on this module:\n' + moduleContext;
-
   const model = cfg.geminiModel || 'gemini-2.5-flash';
   const url = 'https://generativelanguage.googleapis.com/v1beta/models/' + model + ':generateContent?key=' + encodeURIComponent(apiKey);
 
@@ -1825,6 +1875,69 @@ async function sendDoubtMessage(){
   }
 }
 
+async function getLocalPipeline(onProgress){
+  if(localPipelinePromise) return localPipelinePromise;
+  localPipelinePromise = (async ()=>{
+    const mod = await import('https://cdn.jsdelivr.net/npm/@huggingface/transformers@4/+esm');
+    const pipeline = mod.pipeline;
+    const progress_callback = (p)=>{
+      if(onProgress && p && p.status === 'progress' && p.total){
+        onProgress(Math.round((p.loaded / p.total) * 100));
+      }
+    };
+    try{
+      return await pipeline('text-generation', DOUBT_LOCAL_MODEL_ID, {dtype:'q4', device:'webgpu', progress_callback});
+    }catch(e){
+      return await pipeline('text-generation', DOUBT_LOCAL_MODEL_ID, {dtype:'q4', device:'wasm', progress_callback});
+    }
+  })();
+  return localPipelinePromise;
+}
+
+async function sendDoubtMessageLocal(systemInstruction){
+  const loadingEl = appendDoubtMessage('loading', 'Loading on-device model\u2026 first time only, this can take a bit.');
+  let generator;
+  try{
+    generator = await getLocalPipeline((pct)=>{
+      if(loadingEl) loadingEl.textContent = 'Downloading on-device model\u2026 ' + pct + '%';
+    });
+  }catch(e){
+    if(loadingEl) loadingEl.remove();
+    appendDoubtMessage('error', "Couldn't load the on-device model on this browser \u2014 try the cloud (Gemini) option instead with the \u21c4 button above.");
+    return;
+  }
+  if(loadingEl) loadingEl.textContent = 'Thinking\u2026';
+
+  const messages = [{role:'system', content: systemInstruction}].concat(
+    doubtHistory.slice(-6).map(h=>({role: h.role === 'user' ? 'user' : 'assistant', content: h.text}))
+  );
+
+  try{
+    const output = await generator(messages, {max_new_tokens:220, temperature:0.6, do_sample:true});
+    if(loadingEl) loadingEl.remove();
+    let reply = '';
+    if(Array.isArray(output) && output[0] && output[0].generated_text){
+      const gt = output[0].generated_text;
+      if(Array.isArray(gt)){
+        const last = gt[gt.length-1];
+        reply = (last && last.content) ? last.content : '';
+      } else if(typeof gt === 'string'){
+        reply = gt;
+      }
+    }
+    reply = (reply || '').trim();
+    if(!reply){
+      appendDoubtMessage('error', 'Got an empty response \u2014 try rephrasing, or switch to the cloud option.');
+      return;
+    }
+    appendDoubtMessage('bot', reply);
+    doubtHistory.push({role:'model', text: reply});
+  }catch(err){
+    if(loadingEl) loadingEl.remove();
+    appendDoubtMessage('error', 'The on-device model hit an error generating a reply. Try again, or switch to the cloud option.');
+  }
+}
+
 function initEvents(){
   const doubtInputEl = document.getElementById('doubtInput');
   if(doubtInputEl){
@@ -1860,6 +1973,12 @@ function initEvents(){
 
     const doubtSendBtn = e.target.closest('#doubtSendBtn');
     if(doubtSendBtn){ sendDoubtMessage(); return; }
+
+    const doubtEngineBtn = e.target.closest('[data-doubt-engine]');
+    if(doubtEngineBtn){ chooseDoubtEngine(doubtEngineBtn.dataset.doubtEngine); return; }
+
+    const doubtSwitchBtn = e.target.closest('#doubtSwitchEngine');
+    if(doubtSwitchBtn){ switchDoubtEngine(); return; }
 
     const tabBtn = e.target.closest('.tab');
     if(tabBtn){
