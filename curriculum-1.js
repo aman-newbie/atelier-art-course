@@ -38,7 +38,8 @@ const CURRICULUM_1 = [
         resources:[
           {type:'Read', title:'"I\'m teaching myself to draw. Now what?"', creator:'Ctrl+Paint — Matt Kohr', url:'https://www.ctrlpaint.com/blog/im-teaching-myself-to-draw-now-what', why:'A short, honest post on how to structure self-taught practice and what to draw when there\'s no assignment telling you what to do — exactly the gap this module is meant to fill.', verified:true},
           {type:'Article', title:'The Beginner\'s Guide to Deliberate Practice', creator:'James Clear', url:'https://jamesclear.com/beginners-guide-deliberate-practice', why:'A free, practical breakdown of the deliberate-practice research behind Ericsson and Pool\'s "Peak" \u2014 the same psychology, cited correctly, in a single free article instead of a book purchase.', verified:true},
-          {type:'Site', title:'Drawabox — How the course works', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/1', why:'You\'ll be using Drawabox heavily starting Module 4. Its homework-and-critique structure is itself a model of deliberate practice worth understanding before you start.', verified:true}
+          {type:'Site', title:'Drawabox — How the course works', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/1', why:'You\'ll be using Drawabox heavily starting Module 4. Its homework-and-critique structure is itself a model of deliberate practice worth understanding before you start.', verified:true},
+          {type:'Video', title:'6 Steps to Draw Anything', creator:'Proko (Antonio Stappaerts)', url:'https://www.youtube.com/watch?v=6T_-DiAzYBc', videoId:'6T_-DiAzYBc', why:'A professional concept artist walks through six repeatable steps for drawing anything, which is exactly the answer to the talent doubt Module 1 dismantles: drawing is a learnable skill made of steps, not a gift you either have or lack.', verified:true},
         ],
         quiz:[
           {q:"What does \"deliberate practice\" mean, based on this module?", options:["Drawing for as many hours as possible","Focused, feedback-driven repetition rather than passive volume","Only practicing subjects you already enjoy","Copying finished professional artwork exactly"], correct:1, explain:"Volume alone doesn't build skill efficiently \u2014 focused practice with feedback does."},
@@ -88,7 +89,8 @@ const CURRICULUM_1 = [
         },
         resources:[
           {type:'Site', title:'Lesson 1 — required tools', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/1', why:"States the exact tools needed for the course you will lean on heavily starting Module 4 (specifically felt-tip fineliners for the ink-based drills). Worth reading before buying anything.", verified:true},
-          {type:'Video Library', title:'Free Library — Traditional Drawing primer', creator:'Ctrl+Paint (Matt Kohr)', url:'https://www.ctrlpaint.com/library', why:"Section 2 of the free library is a short primer aimed at people without prior traditional drawing experience, including basic setup and tool use.", verified:true}
+          {type:'Video Library', title:'Free Library — Traditional Drawing primer', creator:'Ctrl+Paint (Matt Kohr)', url:'https://www.ctrlpaint.com/library', why:"Section 2 of the free library is a short primer aimed at people without prior traditional drawing experience, including basic setup and tool use.", verified:true},
+          {type:'Video', title:'Drawing Supplies I Use in My Videos', creator:'Proko', url:'https://www.youtube.com/watch?v=D_W9sZ8S7RM', videoId:'D_W9sZ8S7RM', why:'A working artist shows the actual short list of supplies he uses, confirming Module 2s core point that beginners need a small correct range of tools, not a big expensive set.', verified:true},
         ],
         quiz:[
           {q:"Which pencil grade range is recommended for this entire Foundations arc?", options:["6H\u20138H","HB\u20132B","6B\u20139B","You need all 12 grades"], correct:1, explain:"HB or 2B covers everything here \u2014 4B and 6B don't come in until Shading, later in the roadmap."},
@@ -136,7 +138,8 @@ const CURRICULUM_1 = [
         },
         resources:[
           {type:'Book', title:'Pen and Ink Drawing: A Simple Guide', creator:'Alphonso Dunn', url:'https://alphonsodunn.com/free-video-tutorials/', why:"Covers grip, posture, and arm movement together as one system and their direct effect on stroke quality and consistency — exactly this module's core idea, from an illustrator who teaches line work professionally.", verified:true},
-          {type:'Channel', title:'Alphonso Dunn — YouTube channel', creator:'Alphonso Dunn', url:'https://www.youtube.com/c/ALPHONSODUNN/videos', why:"Free video demonstrations of grip and stroke technique in motion, which is easier to absorb visually than from text alone.", verified:true}
+          {type:'Channel', title:'Alphonso Dunn — YouTube channel', creator:'Alphonso Dunn', url:'https://www.youtube.com/c/ALPHONSODUNN/videos', why:"Free video demonstrations of grip and stroke technique in motion, which is easier to absorb visually than from text alone.", verified:true},
+          {type:'Video', title:'How to Hold and Control Your Pencil', creator:'Proko', url:'https://www.youtube.com/watch?v=pMC0Cx3Uk84', videoId:'pMC0Cx3Uk84', why:'Demonstrates the tripod grip, overhand grip, drawing from the wrist versus the shoulder, and controlling line weight with different parts of the pencil, exactly the physical skills this module is about.', verified:true},
         ],
         quiz:[
           {q:"Which grip connects the pencil to your shoulder and elbow for longer, smoother strokes?", options:["Writing (tripod) grip","Overhand grip","There's no difference between grips","Grip has no effect on stroke length"], correct:1, explain:"Overhand grip moves from the shoulder, giving a much longer natural arc than finger-only writing grip."},
@@ -237,7 +240,8 @@ const CURRICULUM_1 = [
         },
         resources:[
           {type:'Article', title:'Blind Contour Drawing Can Help You Become a Better Artist', creator:'Artsy \u2014 on Nicola\u00efdes & Edwards\' contour method', url:'https://www.artsy.net/article/artsy-editorial-blind-contour-drawing-help-better-artist', why:"A free article covering the same blind-contour observation exercise Edwards popularized in her bestseller, with enough detail to actually run it without buying the book.", verified:true},
-          {type:'Video Library', title:'Free Library — Traditional Drawing, Visual Measuring', creator:'Ctrl+Paint (Matt Kohr)', url:'https://www.ctrlpaint.com/library', why:"Section 2 of the free library includes a visual-measuring and sighting primer aimed specifically at beginners without prior traditional training.", verified:true}
+          {type:'Video Library', title:'Free Library — Traditional Drawing, Visual Measuring', creator:'Ctrl+Paint (Matt Kohr)', url:'https://www.ctrlpaint.com/library', why:"Section 2 of the free library includes a visual-measuring and sighting primer aimed specifically at beginners without prior traditional training.", verified:true},
+          {type:'Video', title:'Blind Contour Drawing - Demonstration', creator:'Kathryn Stanley', url:'https://www.youtube.com/watch?v=mjNOS4fXUWg', videoId:'mjNOS4fXUWg', why:'A live demonstration of the blind contour exercise Module 5 assigns, showing what it feels like to draw what you actually see instead of what your brain names the object.', verified:true},
         ],
         quiz:[
           {q:"What is \"symbolic seeing\"?", options:["Drawing symbols instead of real objects on purpose","Your brain's habit of substituting a fast, generic shorthand for what you're actually looking at","A style of abstract art","A way of signing your artwork"], correct:1, explain:"It's efficient for recognition and bad for drawing, since it replaces the specific shape with a generic stand-in."},
@@ -286,7 +290,8 @@ const CURRICULUM_1 = [
         },
         resources:[
           {type:'Course', title:'Lesson 1 — organic and geometric shapes', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/1', why:"Its shape exercises build directly on the line and ellipse control practiced in Module 4, with the same ghosting and construction discipline applied to shape blocking.", verified:true},
-          {type:'Course Bundle', title:'Drawing Basics course bundle', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/browse/courses', why:"Proko's beginner bundle covers shape-based blocking-in as a first step, from an instructor whose figure drawing courses are widely used across the industry.", verified:true}
+          {type:'Course Bundle', title:'Drawing Basics course bundle', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/browse/courses', why:"Proko's beginner bundle covers shape-based blocking-in as a first step, from an instructor whose figure drawing courses are widely used across the industry.", verified:true},
+          {type:'Video', title:'The Basic Elements - Shape, Value, Color, Edge', creator:'Proko', url:'https://www.youtube.com/watch?v=TfAZt3O0sLY', videoId:'TfAZt3O0sLY', why:'The first element covered is shape design, which is this module: seeing the silhouette and the simple 2D shapes inside any subject before adding form or detail.', verified:true},
         ],
         quiz:[
           {q:"In shape hierarchy, what should you establish first?", options:["Tiny details like eyelashes","The single largest, primary shape","The signature or date","The background color"], correct:1, explain:"Biggest shape first, then secondary divisions, then small details last \u2014 reversing this order is the most common beginner mistake here."},
@@ -335,7 +340,8 @@ const CURRICULUM_1 = [
         },
         resources:[
           {type:'Course', title:'Lesson 1 — box construction', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/1', why:"The box-construction sequence begun here continues in later Drawabox lessons and is the most widely used free resource for this exact skill.", verified:true},
-          {type:'Course Bundle', title:'Drawing Basics course bundle', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/browse/courses', why:"Covers basic form construction as a bridge into the figure and portrait courses Proko is best known for.", verified:true}
+          {type:'Course Bundle', title:'Drawing Basics course bundle', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/browse/courses', why:"Covers basic form construction as a bridge into the figure and portrait courses Proko is best known for.", verified:true},
+          {type:'Video', title:'Structure Basics - Making Things Look 3D', creator:'Proko', url:'https://www.youtube.com/watch?v=3uEtdDvK6Xo', videoId:'3uEtdDvK6Xo', why:'The canonical lesson on turning flat shapes into 3D forms: spheres, cylinders and cubes, how to simplify any object into them, and how to draw each one so it reads as solid.', verified:true},
         ],
         quiz:[
           {q:"Which of these is NOT one of the four basic 3D forms taught in this module?", options:["Sphere","Cube","Torus","Cylinder"], correct:2, explain:"Sphere, cube, cylinder, and cone are the four. A torus (a ring shape) isn't part of this basic set."},
@@ -441,7 +447,8 @@ const CURRICULUM_1 = [
         },
         resources:[
           {type:'Tool', title:'Figure Drawing practice tool', creator:'Line of Action', url:'https://line-of-action.com/practice-tools/app/figure-drawing', why:"A free, configurable timed pose-reference tool \u2014 set duration, model type, and session length, and it runs the timed drill for you. Built specifically for this exercise.", verified:true},
-          {type:'Video', title:'How to Draw Gesture', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/how-to-draw-gesture', why:"Part of Proko's free \"Learning How to Draw\" series, covering the line of action and gesture fundamentals directly from a figure-drawing specialist.", verified:true}
+          {type:'Video', title:'How to Draw Gesture', creator:'Proko (Stan Prokopenko)', url:'https://www.youtube.com/watch?v=74HR59yFZ7Y', videoId:'74HR59yFZ7Y', why:"Part of Proko's free \"Learning How to Draw\" series, covering the line of action and gesture fundamentals directly from a figure-drawing specialist.", verified:true},
+          {type:'Article', title:'Gesture Drawing - The Ultimate Guide For Beginners', creator:'Dan Scott (Draw Paint Academy)', url:'https://drawpaintacademy.com/gesture-drawing/', why:'A complete written guide to gesture drawing: what it is, why short timed poses train seeing better than copying, and how to capture action with meaningful curved lines before anatomy. Complements the video with reading you can do away from a screen.', verified:true},
         ],
         quiz:[
           {q:"What is the \"line of action\"?", options:["A ruler used for straight lines","A single sweeping curve summarizing a pose's main thrust","The outline of a figure","A type of eraser"], correct:1, explain:"It's a single line, usually a C- or S-curve, that captures the main thrust of the whole pose."},
@@ -489,7 +496,7 @@ const CURRICULUM_1 = [
           challenge:"Construct an object you cannot currently see \u2014 something from memory or imagination, like an old telephone \u2014 using only the construction process, with no reference."
         },
         resources:[
-          {type:'Course', title:'Structure Basics \u2014 Making Things Look 3D', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course/drawing-basics', why:"A free lesson within Proko's Drawing Basics course covering exactly this combine-and-cut construction process.", verified:true},
+          {type:'Video', title:'Structure Basics \u2014 Making Things Look 3D', creator:'Proko (Stan Prokopenko)', url:'https://www.youtube.com/watch?v=3uEtdDvK6Xo', videoId:'3uEtdDvK6Xo', why:"A free lesson within Proko's Drawing Basics course covering exactly this combine-and-cut construction process.", verified:true},
           {type:'Course', title:'Lesson 1 and onward', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/1', why:"Its organic and box construction exercises are the same underlying discipline this module names explicitly, continuing past Lesson 1 into more complex form combination.", verified:true}
         ],
         quiz:[
@@ -538,8 +545,9 @@ const CURRICULUM_1 = [
           challenge:"Take a flat, evenly-lit photo and reason through where shadows would fall if a single strong light were introduced from one side, then sketch that lighting onto the form."
         },
         resources:[
-          {type:'Video', title:'Shading Light and Form \u2014 Basics', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/shading-light-and-form-basics', why:"One of 32 free lessons in Proko's Figure Drawing Fundamentals course, taught directly by Stan Prokopenko and covering this exact terminology and logic.", verified:true},
-          {type:'Video Series', title:'The Illusion of Depth (Contrast, Cast Shadow, Edge)', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/learning-how-to-draw', why:"A free video series covering how contrast, cast shadow, and edge quality work together as depth cues \u2014 directly relevant to reading light logic correctly. Linked via Proko's free-lessons hub page.", verified:true}
+          {type:'Video', title:'Shading Light and Form \u2014 Basics', creator:'Proko (Stan Prokopenko)', url:'https://www.youtube.com/watch?v=V3WmrWUEIJo', videoId:'V3WmrWUEIJo', why:"One of 32 free lessons in Proko's Figure Drawing Fundamentals course, taught directly by Stan Prokopenko and covering this exact terminology and logic.", verified:true},
+          {type:'Video Series', title:'The Illusion of Depth (Contrast, Cast Shadow, Edge)', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/learning-how-to-draw', why:"A free video series covering how contrast, cast shadow, and edge quality work together as depth cues \u2014 directly relevant to reading light logic correctly. Linked via Proko's free-lessons hub page.", verified:true},
+          {type:'Article', title:'Form - The Elements of Art', creator:'Matt Fussell (The Virtual Instructor)', url:'https://thevirtualinstructor.com/form.html', why:'Explains in plain language how light creates the illusion of form: highlight, midtone, core shadow and cast shadow on a single sphere - the exact light logic this module asks you to internalize before shading.', verified:true},
         ],
         quiz:[
           {q:"What's the difference between core shadow and cast shadow?", options:["There is no difference","Core shadow is on the object itself; cast shadow is thrown onto another surface","Core shadow is always darker","Cast shadow only happens outdoors"], correct:1, explain:"Core shadow lives on the object's own surface; cast shadow is what it throws onto something else."},
@@ -587,9 +595,10 @@ const CURRICULUM_1 = [
           challenge:"Take a photo reference with complex lighting and produce only a three-value rough \u2014 light, mid, dark masses, no technique, no detail \u2014 before rendering anything further."
         },
         resources:[
-          {type:'Video', title:'How to Shade a Drawing', creator:'Proko (Stan Prokopenko)', url:'https://www.classcentral.com/course/youtube-drawing-basics-proko-130372', why:"A free video walking through the actual shading process step by step, listed on the confirmed free-lesson index for Proko's Drawing Basics course.", verified:true},
-          {type:'Video', title:'Top 5 Shading Mistakes', creator:'Proko (Stan Prokopenko)', url:'https://www.classcentral.com/course/youtube-drawing-basics-proko-130372', why:"Free, focused directly on the failure modes this module warns about \u2014 a good check after practicing the techniques above. Same free-lesson index.", verified:true},
-          {type:'Video Library', title:'Free Video Library', creator:'Ctrl+Paint (Matt Kohr)', url:'https://www.ctrlpaint.com/library', why:"Its structured free fundamentals progression includes rendering and value logic that builds directly on this module.", verified:true}
+          {type:'Video', title:'How to Shade a Drawing', creator:'Proko (Stan Prokopenko)', url:'https://www.youtube.com/watch?v=-dqGkHWC5IU', videoId:'-dqGkHWC5IU', why:"A free video walking through the actual shading process step by step, listed on the confirmed free-lesson index for Proko's Drawing Basics course.", verified:true},
+          {type:'Video', title:'Top 5 Shading Mistakes', creator:'Proko (Stan Prokopenko)', url:'https://www.youtube.com/watch?v=LrHfrncvODQ', videoId:'LrHfrncvODQ', why:"Free, focused directly on the failure modes this module warns about \u2014 a good check after practicing the techniques above. Same free-lesson index.", verified:true},
+          {type:'Video Library', title:'Free Video Library', creator:'Ctrl+Paint (Matt Kohr)', url:'https://www.ctrlpaint.com/library', why:"Its structured free fundamentals progression includes rendering and value logic that builds directly on this module.", verified:true},
+          {type:'Article', title:'Transforming Shapes into Forms', creator:'Matt Fussell (The Virtual Instructor)', url:'https://thevirtualinstructor.com/shapes-into-forms.html', why:'A free illustrated lesson on shading the basic forms: where each value belongs on a sphere, cube and pyramid, and why location of value communicates the light source - the foundation under any shading system.', verified:true},
         ],
         quiz:[
           {q:"What does contour hatching do that regular hatching doesn't?", options:["Uses color","Follows the form's actual curvature instead of staying uniformly parallel","Is always faster","Requires a blending stump"], correct:1, explain:"Contour hatching lines wrap around the form, directly showing its 3D curvature."},
@@ -637,7 +646,8 @@ const CURRICULUM_1 = [
         },
         resources:[
           {type:'Video Library', title:'Free Video Library', creator:'Ctrl+Paint (Matt Kohr)', url:'https://www.ctrlpaint.com/library', why:"Its structured fundamentals progression includes surface and material rendering logic that builds directly on the shading systems from Module 12.", verified:true},
-          {type:'Course', title:'The Illusion of Depth \u2014 Edge, Line, Cast Shadow', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course/drawing-basics', why:"Covers how edge quality shifts with material and distance, directly relevant to how texture should behave across a scene.", verified:true}
+          {type:'Course', title:'The Illusion of Depth \u2014 Edge, Line, Cast Shadow', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course/drawing-basics', why:"Covers how edge quality shifts with material and distance, directly relevant to how texture should behave across a scene.", verified:true},
+          {type:'Video', title:'How to Draw Texture (wood, tree bark, glass & fabric)', creator:'Learning Basic Art', url:'https://www.youtube.com/watch?v=ENZcbLXkMLI', videoId:'ENZcbLXkMLI', why:'A step-by-step look at drawing four common textures with pencil, showing that texture is a pattern of small marks and value changes rather than a flat wallpaper fill.', verified:true},
         ],
         quiz:[
           {q:"What should happen before texture is added to a drawing, according to this module?", options:["Nothing, texture comes first","The underlying form's value structure and light logic should already be correct","The paper should be sanded","The drawing should be inked"], correct:1, explain:"Texture sits on top of a form that already reads as solid \u2014 it can't create that solidity on its own."},
@@ -686,7 +696,8 @@ const CURRICULUM_1 = [
         },
         resources:[
           {type:'Video', title:'Effective Composition Using Shapes', creator:'Sycra', url:'https://www.youtube.com/watch?v=SNmwQumlvbQ', why:"A free, well-regarded explanation of using shape and value contrast to build a focal point \u2014 directly matching this module's core idea.", verified:true},
-          {type:'Video Series', title:'Composition for Artists, Episode 1: Visualization', creator:'Sycra', url:'https://www.youtube.com/watch?v=Q7qonaAIDUk', why:"A free multi-part series expanding on composition fundamentals beyond the single video above.", verified:true}
+          {type:'Video Series', title:'Composition for Artists, Episode 1: Visualization', creator:'Sycra', url:'https://www.youtube.com/watch?v=Q7qonaAIDUk', why:"A free multi-part series expanding on composition fundamentals beyond the single video above.", verified:true},
+          {type:'Article', title:'A Comprehensive Guide to Composition for Artists', creator:'Dan Scott (Draw Paint Academy)', url:'https://drawpaintacademy.com/understanding-composition-for-artists/', why:'Readable guide covering focal point, rule of thirds, golden ratio, leading lines, framing and the two questions that outrank every rule - useful for the thumbnails this module assigns.', verified:true},
         ],
         quiz:[
           {q:"What usually draws a viewer's eye to a focal point, according to this module?", options:["Placing it exactly in the center","Contrast \u2014 of value, detail, sharpness, or color","Making it the largest object always","Bright colors only"], correct:1, explain:"The most different area of an image is what tends to draw the eye first."},

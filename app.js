@@ -9,6 +9,61 @@
 
 const CURRICULUM = [...CURRICULUM_1, ...CURRICULUM_2, ...CURRICULUM_3];
 
+/* ============================================================
+   i18n — English <-> Hinglish (window.I18N_HI from i18n-hi.js)
+   Curriculum text is overlaid in place, so every existing
+   renderer automatically shows the active language.
+   ============================================================ */
+const I18N = (typeof window!=='undefined' && window.I18N_HI) ? window.I18N_HI : null;
+const ORIG_CURRICULUM = JSON.parse(JSON.stringify(CURRICULUM));
+const UI_HI = (I18N && I18N.ui) || {};
+function T(k){ return (STATE.lang==='hi' && UI_HI[k]!=null) ? UI_HI[k] : k; }
+function Tf(k,map){ let s=T(k); if(map){ Object.keys(map).forEach(key=>{ s=s.replace('{'+key+'}', map[key]); }); } return s; }
+function deepCopy(o){ return JSON.parse(JSON.stringify(o)); }
+function applyLanguage(){
+  const base = deepCopy(ORIG_CURRICULUM);
+  if(STATE.lang==='hi' && I18N){
+    base.forEach(path=>{
+      const pt = I18N.paths && I18N.paths[path.id];
+      if(pt){ if(pt.title) path.title = pt.title; if(pt.desc) path.desc = pt.desc; }
+      (path.modules||[]).forEach(m=>{
+        const mt = I18N.modules && I18N.modules[m.id];
+        if(!mt) return;
+        ['title','hook','nextStep'].forEach(k=>{ if(mt[k]!=null) m[k]=mt[k]; });
+        ['whyItMatters','coreIdea','mistakes','proTips','checklist'].forEach(k=>{ if(Array.isArray(mt[k])) m[k]=mt[k]; });
+        if(mt.practice) m.practice = Object.assign({}, m.practice, mt.practice);
+        if(Array.isArray(mt.quiz)) m.quiz = mt.quiz;
+      });
+    });
+  }
+  CURRICULUM.length = 0;
+  base.forEach(p=>CURRICULUM.push(p));
+}
+const ARC_ART = {
+  foundations:'assets/arc/anime-foundations.jpg',
+  perspective:'assets/arc/anime-perspective.jpg',
+  portrait:'assets/arc/anime-portrait.jpg',
+  anatomy:'assets/arc/anime-anatomy.jpg',
+  'nature-arch':'assets/arc/anime-nature-arch.jpg',
+  'creatures-hardsurface':'assets/arc/anime-creatures.jpg',
+  worldbuilding:'assets/arc/anime-worldbuilding.jpg',
+  'digital-fundamentals':'assets/arc/anime-digital.jpg',
+  'digital-painting':'assets/arc/anime-digital-painting.jpg',
+  'advanced-digital':'assets/arc/anime-advanced-digital.jpg'
+};
+function localizeStatic(){
+  const hi = STATE.lang==='hi';
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    if(!el.getAttribute('data-i18n-en')) el.setAttribute('data-i18n-en', el.textContent); // remember English
+    const k=el.getAttribute('data-i18n');
+    el.textContent = (hi && UI_HI[k]!=null) ? UI_HI[k] : el.getAttribute('data-i18n-en');
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{ const k=el.getAttribute('data-i18n-placeholder'); if(hi && UI_HI[k]!=null) el.setAttribute('placeholder', UI_HI[k]); });
+  document.querySelectorAll('[data-i18n-aria]').forEach(el=>{ const k=el.getAttribute('data-i18n-aria'); if(hi && UI_HI[k]!=null) el.setAttribute('aria-label', UI_HI[k]); });
+  const langBtn = document.getElementById('langToggle');
+  if(langBtn){ langBtn.textContent = hi ? 'हिं' : 'EN'; langBtn.title = hi ? T('langToEn') : T('langToHi'); }
+}
+
 const QUOTES = [
   "The page doesn't know how many you've thrown away.",
   "Construction first. Likeness is what construction looks like from the outside.",
@@ -23,12 +78,15 @@ const QUOTES = [
    ============================================================ */
 const STATE = {
   theme:'dark',
+  backdrop:'motif',
+  lang:'en',
   route:{view:'home', pathId:null, moduleId:null, tab:'overview'},
   completed:new Set(),
   favorites:new Set(),
   checklist:{},
   quizAnswers:{},
   notes:{},
+  resNotes:{},
   resourcesOpened:{},
   recentlyVisited:[],
   searchQuery:'',
@@ -228,10 +286,13 @@ function serializeState(){
     checklist:checklistOut,
     quizAnswers:STATE.quizAnswers,
     notes:STATE.notes,
+    resNotes:STATE.resNotes,
     resourcesOpened:resOpenOut,
     recentlyVisited:STATE.recentlyVisited,
     xp:STATE.xp,
     theme:STATE.theme,
+    backdrop:STATE.backdrop,
+    lang:STATE.lang,
     fontScale:STATE.fontScale,
     streak:STATE.streak,
     lastVisitDate:STATE.lastVisitDate,
@@ -249,11 +310,15 @@ function applyState(data){
   Object.entries(data.checklist || {}).forEach(([k,v])=>{ STATE.checklist[k] = new Set(v); });
   STATE.quizAnswers = data.quizAnswers || {};
   STATE.notes = data.notes || {};
+  STATE.resNotes = data.resNotes || {};
   STATE.resourcesOpened = {};
   Object.entries(data.resourcesOpened || {}).forEach(([k,v])=>{ STATE.resourcesOpened[k] = new Set(v); });
   STATE.recentlyVisited = data.recentlyVisited || [];
   STATE.xp = data.xp || 0;
   if(data.theme) STATE.theme = data.theme;
+  const BACKDROP_OPTIONS = ['motif','city','graphite','portrait','field','anime-city','anime-nature'];
+  if(BACKDROP_OPTIONS.includes(data.backdrop)) STATE.backdrop = data.backdrop;
+  if(data.lang==='hi' || data.lang==='en') STATE.lang = data.lang;
   if(typeof data.fontScale === 'number') STATE.fontScale = data.fontScale;
   STATE.streak = data.streak || 0;
   STATE.lastVisitDate = data.lastVisitDate || null;
@@ -382,6 +447,8 @@ function updateDocumentTitle(){
     title = `Dashboard \u00b7 ${base}`;
   } else if(route.view === 'calendar'){
     title = `Calendar \u00b7 ${base}`;
+  } else if(route.view === 'help'){
+    title = `Help & FAQ \u00b7 ${base}`;
   } else if(route.view === 'search'){
     title = `Search \u00b7 ${base}`;
   }
@@ -403,6 +470,8 @@ function renderApp(){
     renderBookmarks();
   } else if(route.view === 'library'){
     renderLibrary();
+  } else if(route.view === 'help'){
+    renderHelp();
   } else if(route.view === 'dashboard'){
     renderDashboard();
   } else if(route.view === 'calendar'){
@@ -417,8 +486,12 @@ function renderApp(){
 function updateChrome(){
   document.getElementById('xpValue').textContent = STATE.xp;
   document.documentElement.setAttribute('data-theme', STATE.theme);
+  document.documentElement.setAttribute('data-backdrop', STATE.backdrop);
   document.querySelectorAll('.theme-option').forEach(btn=>{
     btn.setAttribute('aria-pressed', String(btn.dataset.themeChoice === STATE.theme));
+  });
+  document.querySelectorAll('.backdrop-option').forEach(btn=>{
+    btn.setAttribute('aria-pressed', String(btn.dataset.backdropChoice === STATE.backdrop));
   });
   document.documentElement.style.setProperty('--font-scale', STATE.fontScale);
 }
@@ -429,30 +502,33 @@ function renderSidebar(){
 
   const unlockedCount = computeUnlocked().size;
   html += '<div class="side-section" style="margin-bottom:var(--sp-5)">';
-  html += '<span class="side-label">Tools</span><ul>';
+  html += `<span class="side-label">${T('tools')}</span><ul>`;
   html += `<li><button class="side-module-item ${STATE.route.view==='dashboard'?'active':''}" data-view="dashboard">
-    <span class="tool-icon">${ICONS.chart}</span><span style="flex:1">Dashboard</span>
+    <span class="tool-icon">${ICONS.chart}</span><span style="flex:1">${T('dashboard')}</span>
   </button></li>`;
   html += `<li><button class="side-module-item ${STATE.route.view==='practice'?'active':''}" data-view="practice">
-    <span class="tool-icon">${ICONS.shuffle}</span><span style="flex:1">Practice Center</span>
+    <span class="tool-icon">${ICONS.shuffle}</span><span style="flex:1">${T('practiceCenter')}</span>
   </button></li>`;
   html += `<li><button class="side-module-item ${STATE.route.view==='calendar'?'active':''}" data-view="calendar">
-    <span class="tool-icon">${ICONS.daily}</span><span style="flex:1">Calendar</span>
+    <span class="tool-icon">${ICONS.daily}</span><span style="flex:1">${T('calendar')}</span>
   </button></li>`;
   html += `<li><button class="side-module-item ${STATE.route.view==='achievements'?'active':''}" data-view="achievements">
-    <span class="tool-icon">${ICONS.stamp}</span><span style="flex:1">Achievements</span><span class="m-num">${unlockedCount}/${ACHIEVEMENTS.length}</span>
+    <span class="tool-icon">${ICONS.stamp}</span><span style="flex:1">${T('achievements')}</span><span class="m-num">${unlockedCount}/${ACHIEVEMENTS.length}</span>
   </button></li>`;
   html += `<li><button class="side-module-item ${STATE.route.view==='bookmarks'?'active':''}" data-view="bookmarks">
-    <span class="tool-icon">${ICONS.star}</span><span style="flex:1">Bookmarks</span>${STATE.favorites.size?`<span class="m-num">${STATE.favorites.size}</span>`:''}
+    <span class="tool-icon">${ICONS.star}</span><span style="flex:1">${T('bookmarks')}</span>${STATE.favorites.size?`<span class="m-num">${STATE.favorites.size}</span>`:''}
   </button></li>`;
   html += `<li><button class="side-module-item ${STATE.route.view==='library'?'active':''}" data-view="library">
-    <span class="tool-icon">${ICONS.library}</span><span style="flex:1">Library</span>
+    <span class="tool-icon">${ICONS.library}</span><span style="flex:1">${T('library')}</span>
+  </button></li>`;
+  html += `<li><button class="side-module-item ${STATE.route.view==='help'?'active':''}" data-view="help">
+    <span class="tool-icon">${ICONS.note}</span><span style="flex:1">${T('helpFaq')}</span>
   </button></li>`;
   html += '</ul></div>';
 
   if(STATE.recentlyVisited.length){
     html += '<div class="side-section" style="margin-bottom:var(--sp-5)">';
-    html += '<span class="side-label">Recently viewed</span><ul>';
+    html += `<span class="side-label">${T('recentlyViewed')}</span><ul>`;
     STATE.recentlyVisited.forEach(id=>{
       const m = findModule(id);
       if(!m) return;
@@ -500,27 +576,27 @@ function renderHome(){
 
   let html = `
   <div class="hero">
-    <div class="eyebrow">A complete, honestly-scoped drawing path</div>
-    <h1>From your first line to <em>professional</em> fundamentals.</h1>
-    <p class="hero-sub">${livePaths.length} arc${livePaths.length===1?'':'s'} (${allLive.length} modules) are fully built and live right now, with every resource checked by hand instead of recalled from memory. The rest of the roadmap below is real and correctly ordered &mdash; it is simply not written yet.</p>
+    <div class="eyebrow">${T('homeEyebrow')}</div>
+    <h1>${T('homeTitle')}</h1>
+    <p class="hero-sub">${STATE.lang==='hi' ? Tf('homeSub',{arcs:livePaths.length,mods:allLive.length}) : livePaths.length+' arc'+(livePaths.length===1?'':'s')+' ('+allLive.length+' modules) are fully built and live right now, with every resource checked by hand instead of recalled from memory. The rest of the roadmap below is real and correctly ordered &mdash; it is simply not written yet.'}</p>
     <div class="hero-row">
-      <button class="btn btn-primary" id="continueBtn">${ICONS.target} ${STATE.completed.size===0 ? 'Start here: ' + (next ? next.m.title : 'Mindset & Introduction') : (next ? 'Continue: ' + next.m.title : 'Everything live is complete')}</button>
-      <button class="btn btn-ghost" id="jumpFoundations">View Foundations</button>
+      <button class="btn btn-primary" id="continueBtn">${ICONS.target} ${STATE.completed.size===0 ? Tf('startHere',{t:next ? next.m.title : 'Mindset & Introduction'}) : (next ? Tf('continueWith',{t:next.m.title}) : T('allLiveComplete'))}</button>
+      <button class="btn btn-ghost" id="jumpFoundations">${T('viewFoundations')}</button>
     </div>
     <div class="stat-strip">
-      <div class="stat"><b>${doneCount}/${TOTAL_MAPPED_MODULES}</b><span>Modules complete</span></div>
-      <div class="stat"><b>${STATE.xp}</b><span>XP earned</span></div>
-      <div class="stat"><b>${STATE.streak}${STATE.streak>0?' <svg class="streak-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2c1 4-4 5-4 9a4 4 0 008 0c0-2-1-3-1-5 2 1 3 3 3 5a6 6 0 01-12 0c0-5 4-6 6-9z"/></svg>':''}</b><span>Day streak</span></div>
-      <div class="stat"><b>${allLive.length}</b><span>Modules live now</span></div>
+      <div class="stat"><b>${doneCount}/${TOTAL_MAPPED_MODULES}</b><span>${T('modulesCompleteStat')}</span></div>
+      <div class="stat"><b>${STATE.xp}</b><span>${T('xpEarnedStat')}</span></div>
+      <div class="stat"><b>${STATE.streak}${STATE.streak>0?' <svg class="streak-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2c1 4-4 5-4 9a4 4 0 008 0c0-2-1-3-1-5 2 1 3 3 3 5a6 6 0 01-12 0c0-5 4-6 6-9z"/></svg>':''}</b><span>${T('dayStreakStat')}</span></div>
+      <div class="stat"><b>${allLive.length}</b><span>${T('modulesLiveStat')}</span></div>
     </div>
   </div>
 
-  <div class="quote-card"><p>&ldquo;${quote}&rdquo;</p><cite>Studio note</cite></div>
+  <div class="quote-card"><p>&ldquo;${quote}&rdquo;</p><cite>${T('studioNote')}</cite></div>
 
   <div class="pathmap-wrap">
     <div class="pathmap-head">
-      <h2>The full route</h2>
-      <p>Click an open module below. Locked arcs show what is coming, and in what order.</p>
+      <h2>${T('fullRouteTitle')}</h2>
+      <p>${T('fullRouteSub')}</p>
     </div>
     <div class="pathmap">`;
 
@@ -536,10 +612,10 @@ function renderHome(){
       <div class="station-body">
         <div class="station-top">
           <span class="station-title">${path.title}</span>
-          <span class="tag ${isOpen?'open':''}">${isOpen ? 'Available now' : 'Coming next'}</span>
+          <span class="tag ${isOpen?'open':''}">${isOpen ? T('availableNow') : T('comingNext')}</span>
         </div>
         <p class="station-desc">${path.desc}</p>
-        <div class="station-modcount">${isOpen ? `${doneInPath}/${path.modules.length} modules complete` : `${path.moduleCount} modules planned &mdash; ${path.sample.join(', ')}`}</div>
+        <div class="station-modcount">${isOpen ? Tf('modsCompleteCount',{a:doneInPath,b:path.modules.length}) : Tf('modsPlanned',{n:path.moduleCount,s:path.sample.join(', ')})}</div>
       </div>
     </button>`;
   });
@@ -548,7 +624,11 @@ function renderHome(){
 
   let seenFirstModule = false;
   livePaths.forEach(path=>{
-    html += `<div id="grid-${path.id}" style="margin-bottom:var(--sp-8)"><h2 style="font-size:26px;margin-bottom:var(--sp-4)">${path.title} modules</h2><div class="module-grid">`;
+    const artBanner = ARC_ART[path.id];
+    html += `<div id="grid-${path.id}" style="margin-bottom:var(--sp-8)">
+      ${artBanner ? `<div class="arc-banner" style="background-image:url('${artBanner}')"><h2>${path.title}</h2></div>`
+        : `<h2 style="font-size:26px;margin-bottom:var(--sp-4)">${STATE.lang==='hi' ? Tf('moduleGridHeading',{t:path.title}) : path.title+' modules'}</h2>`}
+      <div class="module-grid">`;
     path.modules.forEach(m=>{
       const isDone = STATE.completed.has(m.id);
       const isStartHere = STATE.completed.size===0 && !seenFirstModule;
@@ -610,8 +690,8 @@ function renderModule(pathId, moduleId, tab){
   <div class="module-head">
     <div class="status-banner ${isDone?'is-complete':'is-progress'}">
       ${isDone
-        ? `${ICONS.stamp} <span>Marked complete</span>`
-        : `${ICONS.target} <span>Not complete yet &mdash; ${checklistDone}/${checklistTotal} checklist items checked. Finish the <b>Mastery</b> tab to mark it done.</span>`}
+        ? `${ICONS.stamp} <span>${T('markedComplete')}</span>`
+        : `${ICONS.target} <span>${Tf('notComplete',{a:checklistDone,b:checklistTotal})}</span>`}
     </div>
     ${(!isDone && missingPrereqs.length) ? `
     <div class="status-banner is-prereq-warning">
@@ -625,26 +705,26 @@ function renderModule(pathId, moduleId, tab){
       <button class="fav-btn" data-fav="${moduleId}" aria-pressed="${isFav}" aria-label="Toggle favorite">${ICONS.star}</button>
     </div>
     <div class="meta-row">
-      <div class="meta-item"><span>Difficulty</span><b>${m.difficulty}</b></div>
-      <div class="meta-item"><span>Study time</span><b>${m.studyTime}</b></div>
-      <div class="meta-item"><span>Practice time</span><b>${m.practiceTime}</b></div>
-      <div class="meta-item"><span>Prerequisite</span><b>${m.prereq.length ? m.prereq.map(id=>findModule(id).title).join(', ') : 'None &mdash; start here'}</b></div>
+      <div class="meta-item"><span>${T('difficulty')}</span><b>${m.difficulty}</b></div>
+      <div class="meta-item"><span>${T('studyTime')}</span><b>${m.studyTime}</b></div>
+      <div class="meta-item"><span>${T('practiceTime')}</span><b>${m.practiceTime}</b></div>
+      <div class="meta-item"><span>${T('prerequisite')}</span><b>${m.prereq.length ? m.prereq.map(id=>findModule(id).title).join(', ')  : T('noneStartHere')}</b></div>
     </div>
   </div>
 
   <div class="tabs" role="tablist">
-    <button class="tab" role="tab" id="tab-overview" aria-controls="tabpanel" data-tab="overview" aria-selected="${tab==='overview'}">Overview</button>
-    <button class="tab" role="tab" id="tab-practice" aria-controls="tabpanel" data-tab="practice" aria-selected="${tab==='practice'}">Practice</button>
-    <button class="tab" role="tab" id="tab-resources" aria-controls="tabpanel" data-tab="resources" aria-selected="${tab==='resources'}">Resources</button>
-    <button class="tab" role="tab" id="tab-mastery" aria-controls="tabpanel" data-tab="mastery" aria-selected="${tab==='mastery'}">Mastery</button>
-    <button class="tab" role="tab" id="tab-notes" aria-controls="tabpanel" data-tab="notes" aria-selected="${tab==='notes'}">Notes</button>
+    <button class="tab" role="tab" id="tab-overview" aria-controls="tabpanel" data-tab="overview" aria-selected="${tab==='overview'}">${T('overview')}</button>
+    <button class="tab" role="tab" id="tab-practice" aria-controls="tabpanel" data-tab="practice" aria-selected="${tab==='practice'}">${T('practice')}</button>
+    <button class="tab" role="tab" id="tab-resources" aria-controls="tabpanel" data-tab="resources" aria-selected="${tab==='resources'}">${T('resources')}</button>
+    <button class="tab" role="tab" id="tab-mastery" aria-controls="tabpanel" data-tab="mastery" aria-selected="${tab==='mastery'}">${T('mastery')}</button>
+    <button class="tab" role="tab" id="tab-notes" aria-controls="tabpanel" data-tab="notes" aria-selected="${tab==='notes'}">${T('notes')}</button>
   </div>
 
   <div class="tabpanel" id="tabpanel" role="tabpanel" aria-labelledby="tab-${tab}">${renderTabContent(m, tab, checkedSet)}</div>
 
   <div class="module-nav">
-    ${prev ? `<button class="nav-link-card" data-path="${pathId}" data-module="${prev.id}"><span>${ICONS.arrowLeft} Previous</span><b>${prev.title}</b></button>` : '<span></span>'}
-    ${next ? `<button class="nav-link-card next" data-path="${pathId}" data-module="${next.id}"><span>Next ${ICONS.chevronRight}</span><b>${next.title}</b></button>` : '<span></span>'}
+    ${prev ? `<button class="nav-link-card" data-path="${pathId}" data-module="${prev.id}"><span>${ICONS.arrowLeft} ${T('previous')}</span><b>${prev.title}</b></button>` : '<span></span>'}
+    ${next ? `<button class="nav-link-card next" data-path="${pathId}" data-module="${next.id}"><span>${T('next')} ${ICONS.chevronRight}</span><b>${next.title}</b></button>` : '<span></span>'}
   </div>`;
 
   document.getElementById('main').innerHTML = html;
@@ -1032,6 +1112,111 @@ function renderLibrary(){
   document.getElementById('main').innerHTML = html;
 }
 
+/* ============================================================
+   HELP & FAQ — honest answers + real free communities.
+   (An on-site AI "ask" box was prototyped but the only free,
+   keyless text APIs turned out to be unreliable/paid — so this
+   ships FAQ + community links instead, which never break.)
+   ============================================================ */
+const HELP_FAQ = [
+  {q:"Do I need any experience to start?",
+   a:"No. Module 1 assumes nothing except that you can hold a pencil. The path is deliberately ordered so that every skill you are asked for was introduced in an earlier module — you are never expected to know something this course hasn't already taught."},
+  {q:"Which order should I follow?",
+   a:"The one on the page. Arcs unlock in a fixed sequence for a reason: perspective builds on hand control, the head builds on perspective, anatomy builds on both. Skipping ahead feels faster for a week and costs months later. If an arc is marked 'coming next', it simply isn't written yet — the order is already correct."},
+  {q:"Do I really need to answer the quizzes?",
+   a:"Yes — and they aren't a trap. Each quiz only checks whether the module's core idea landed (right or wrong, it unlocks after you answer every question). The checkpoint exists because clicking 'complete' without checking understanding is how people fool themselves into thinking they've learned something. It's for you, not against you."},
+  {q:"I don't have many tools. Can I still do this?",
+   a:"Yes. The Materials module (Module 2) exists precisely to stop tool anxiety: an HB or 2B pencil, cheap paper for practice, one good eraser, a sharpener and a ruler genuinely cover the entire Foundations arc. Almost every later module lists exactly what it needs and nothing more. Substitute freely — brand almost never matters at this stage."},
+  {q:"Are all the videos, articles and books really free?",
+   a:"Every resource on this site was chosen to be free and was re-checked against a live search rather than recalled from memory. Links can still die after the fact — if one does, that's useful information: use the link below to report it and it gets swapped for a verified replacement."},
+  {q:"Why do some videos play on this page and others open a new tab?",
+   a:"Videos hosted on YouTube (the majority) play right here in the floating player, with a notes box attached so you can write while you watch. A few resources live on sites that don't allow embedding — those open in a new tab by design. Books and articles are meant to be read on the page they point to; jot notes in the module's Notes tab or the note box under any resource."},
+  {q:"How is progress saved?",
+   a:"Automatically in your browser (or the platform's storage where available) — no account needed. Use Export progress any time to keep a backup file, and Import to restore it on another device."},
+  {q:"Is this really 'traditional' drawing only?",
+   a:"The live arcs (Foundations through Creatures & Hard Surface) are deliberately traditional: paper, pencil and observation skills that transfer to anything, including digital. The roadmap's later arcs are Digital Art Fundamentals, Digital Painting & Rendering and Advanced Digital Art — keeping them later is intentional, because software is far easier to learn once construction skill exists. The beginner sequence is correct as-is."},
+  {q:"I'm stuck or a resource feels wrong. What do I do?",
+   a:"First, post your work and a specific question in one of the communities below — real feedback from real artists beats any generic answer. If the issue is the site itself (a broken link, a bug, a confusing line), report it at the GitHub issues link below; every report gets the resource re-verified and swapped if needed."}
+];
+const HELP_COMMUNITY = [
+  {name:'r/learnart', desc:'Large, friendly critique subreddit — post WIPs and get specific feedback.', url:'https://www.reddit.com/r/learnart/', tag:'Critique'},
+  {name:'r/ArtistLounge', desc:'Calmer discussion space for practice habits, motivation and career talk.', url:'https://www.reddit.com/r/ArtistLounge/', tag:'Discussion'},
+  {name:'Proko community', desc:'Forum attached to the free video courses used across this curriculum.', url:'https://www.proko.com/community/topics', tag:'Forum'},
+  {name:'Drawabox community', desc:'Official Discord/community for the free exercise course this path leans on.', url:'https://drawabox.com/community', tag:'Discord'},
+  {name:'ConceptArt.org', desc:'Long-running forum with daily sketch threads and constructive critique.', url:'https://www.conceptart.org/forums/', tag:'Forum'},
+  {name:'Line of Action', desc:'Free timed figure/animal/hands practice tool used in several modules.', url:'https://line-of-action.com/', tag:'Practice'}
+];
+function renderHelp(){
+  if(STATE.lang==='hi' && I18N && I18N.help){ renderHelpHi(I18N.help, HELP_COMMUNITY); return; }
+  let html = `
+  <div class="breadcrumb"><button data-nav-home>Atelier</button> ${ICONS.chevronRight} <span>Help &amp; FAQ</span></div>
+  <div class="hero">
+    <div class="eyebrow">Questions, answered honestly</div>
+    <h1>Help &amp; FAQ</h1>
+    <p class="hero-sub">What this course is, how it works, and where to get real human feedback when a module doesn't answer your doubt.</p>
+  </div>
+  <div class="help-note">
+    <p><b>About the "ask an AI" idea:</b> an on-site question box was prototyped for exactly the doubts you'd expect ("I don't have many tools — what now?"). The only free, keyless text-AI endpoints turned out unreliable or paid, and this site refuses to add a paywalled tool, so you get the next best thing: every doubt that actually comes up is answered in the FAQ below, and anything deeper belongs in a community where artists answer — which is usually better than AI anyway.</p>
+  </div>
+  <h2 style="font-size:22px;margin:var(--sp-7) 0 var(--sp-4)">Common questions</h2>
+  <div class="faq-list" id="faqList">
+    ${HELP_FAQ.map((item,i)=>`
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" data-faq="${i}">
+          <span>${item.q}</span><span class="faq-caret" aria-hidden="true">${ICONS.chevronRight}</span>
+        </button>
+        <div class="faq-a" hidden><p>${item.a}</p></div>
+      </div>`).join('')}
+  </div>
+  <h2 style="font-size:22px;margin:var(--sp-7) 0 var(--sp-4)">Communities &amp; free practice</h2>
+  <p class="hero-sub" style="margin-bottom:var(--sp-5)">The best teacher after this site is a place where you post work and get eyes on it. All free.</p>
+  <div class="community-grid">
+    ${HELP_COMMUNITY.map(c=>`
+      <a class="community-card" href="${c.url}" target="_blank" rel="noopener">
+        <span class="community-tag">${c.tag}</span>
+        <h3>${c.name}</h3>
+        <p>${c.desc}</p>
+        <span class="community-go">Open ${ICONS.link}</span>
+      </a>`).join('')}
+  </div>
+  <div class="help-note" style="margin-top:var(--sp-7)">
+    <p><b>Found a dead link or a confusing line?</b> That is genuinely useful — resources get re-verified and swapped when one dies. Report it at <a href="https://github.com/aman-newbie/atelier-art-course/issues" target="_blank" rel="noopener">the project issues page</a>.</p>
+  </div>`;
+  document.getElementById('main').innerHTML = html;
+}
+
+function renderHelpHi(H, COMMUNITY){
+  const cards = COMMUNITY.map(c=>`
+      <a class="community-card" href="${c.url}" target="_blank" rel="noopener">
+        <span class="community-tag">${c.tag}</span>
+        <h3>${c.name}</h3>
+        <p>${c.desc}</p>
+        <span class="community-go">Open ${ICONS.link}</span>
+      </a>`).join('');
+  document.getElementById('main').innerHTML = `
+  <div class="breadcrumb"><button data-nav-home>Atelier</button> ${ICONS.chevronRight} <span>${H.heroTitle}</span></div>
+  <div class="hero">
+    <div class="eyebrow">${H.heroEyebrow}</div>
+    <h1>${H.heroTitle}</h1>
+    <p class="hero-sub">${H.heroSub}</p>
+  </div>
+  <div class="help-note"><p>${H.askAiNote}</p></div>
+  <h2 style="font-size:22px;margin:var(--sp-7) 0 var(--sp-4)">Aam sawaal</h2>
+  <div class="faq-list" id="faqList">
+    ${H.faq.map((item,i)=>`
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" data-faq="${i}">
+          <span>${item.q}</span><span class="faq-caret" aria-hidden="true">${ICONS.chevronRight}</span>
+        </button>
+        <div class="faq-a" hidden><p>${item.a}</p></div>
+      </div>`).join('')}
+  </div>
+  <h2 style="font-size:22px;margin:var(--sp-7) 0 var(--sp-4)">${H.communityHead}</h2>
+  <p class="hero-sub" style="margin-bottom:var(--sp-5)">${H.communityNote}</p>
+  <div class="community-grid">${cards}</div>
+  <div class="help-note" style="margin-top:var(--sp-7)"><p>${H.issuesNote}</p></div>`;
+}
+
 function renderTabContent(m, tab, checkedSet){
   if(tab === 'overview'){
     return `<div class="prose">
@@ -1078,6 +1263,13 @@ function renderTabContent(m, tab, checkedSet){
           <div class="res-badges">
             ${r.verified ? `<span class="res-verified">${ICONS.toastCheck} Checked</span>` : ''}
             ${opened ? `<span class="res-opened">${ICONS.check} Opened</span>` : ''}
+          </div>
+          <div class="res-note">
+            <button class="res-note-toggle" data-res-note="${m.id}" data-res-note-idx="${ri}" aria-expanded="false">${ICONS.note} Note while you learn</button>
+            <div class="res-note-box" data-res-note-box="${m.id}:${ri}" hidden>
+              <textarea data-res-note-area="${m.id}" data-res-note-idx="${ri}" placeholder="Jot what clicked, what didn't, or what to revisit for this resource…">${escapeHtml(STATE.resNotes[m.id+':'+ri]||'')}</textarea>
+              <span class="res-note-status" data-res-note-status="${m.id}:${ri}"></span>
+            </div>
           </div>
           ${ytId ? `
           <div class="video-embed-wrap" data-yt-id="${ytId}" data-res-module="${m.id}" data-res-idx="${ri}">
@@ -1609,6 +1801,28 @@ function initEvents(){
     const libFilterBtn = e.target.closest('[data-lib-filter]');
     if(libFilterBtn){ LIB_FILTER = libFilterBtn.dataset.libFilter; renderLibrary(); return; }
 
+    const faqBtn = e.target.closest('[data-faq]');
+    if(faqBtn){
+      const body = faqBtn.parentElement.querySelector('.faq-a');
+      const show = !!(body && body.hidden);
+      if(body) body.hidden = !show;
+      faqBtn.setAttribute('aria-expanded', String(show));
+      faqBtn.classList.toggle('is-open', show);
+      return;
+    }
+
+    const resNoteBtn = e.target.closest('[data-res-note]');
+    if(resNoteBtn){
+      const box = document.querySelector(`[data-res-note-box="${resNoteBtn.dataset.resNote}:${resNoteBtn.dataset.resNoteIdx}"]`);
+      if(box){
+        const show = box.hidden;
+        box.hidden = !show;
+        resNoteBtn.setAttribute('aria-expanded', String(show));
+        if(show) box.querySelector('textarea').focus();
+      }
+      return;
+    }
+
     const pathJump = e.target.closest('[data-path-jump]');
     if(pathJump){ openPathOnHome(pathJump.dataset.pathJump); return; }
 
@@ -1739,6 +1953,21 @@ function initEvents(){
       if(revived){ revived.focus(); revived.setSelectionRange(caret, caret); }
     }
   });
+  let resNoteSaveTimer = null;
+  document.body.addEventListener('input', (e)=>{
+    const resNoteArea = e.target.closest('[data-res-note-area]');
+    if(!resNoteArea) return;
+    const key = resNoteArea.dataset.resNoteArea + ':' + resNoteArea.dataset.resNoteIdx;
+    STATE.resNotes[key] = resNoteArea.value;
+    const st = document.querySelector(`[data-res-note-status="${key}"]`);
+    if(st) st.textContent = 'Saving\u2026';
+    clearTimeout(resNoteSaveTimer);
+    resNoteSaveTimer = setTimeout(()=>{
+      saveProgress();
+      const s = document.querySelector(`[data-res-note-status="${key}"]`);
+      if(s) s.textContent = 'Saved';
+    }, 600);
+  });
   document.getElementById('homeLink').addEventListener('click', (e)=>{ e.preventDefault(); navigateHome(); });
 
   document.getElementById('themeToggle').addEventListener('click', (e)=>{
@@ -1757,6 +1986,27 @@ function initEvents(){
       document.getElementById('themeToggle').setAttribute('aria-expanded', 'false');
     });
   });
+  document.querySelectorAll('.backdrop-option').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      STATE.backdrop = btn.dataset.backdropChoice;
+      saveProgress();
+      updateChrome();
+      document.getElementById('themePickerMenu').classList.remove('open');
+      document.getElementById('themeToggle').setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  const langToggleBtn = document.getElementById('langToggle');
+  if(langToggleBtn){
+    langToggleBtn.addEventListener('click', ()=>{
+      STATE.lang = (STATE.lang==='hi') ? 'en' : 'hi';
+      saveProgress();
+      applyLanguage();
+      localizeStatic();
+      renderApp();
+      updateDocumentTitle();
+    });
+  }
   document.addEventListener('click', (e)=>{
     if(!e.target.closest('.theme-picker')){
       document.getElementById('themePickerMenu').classList.remove('open');
@@ -1883,6 +2133,8 @@ window.addEventListener('unhandledrejection', (e)=>{
 async function init(){
   STATE.theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
   await loadProgress();
+  applyLanguage();
+  localizeStatic();
   updateStreak();
   initEvents();
   renderApp();

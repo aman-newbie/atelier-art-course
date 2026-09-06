@@ -128,7 +128,10 @@ svg{display:block;}
 /* ============================================================
    LAYOUT
    ============================================================ */
-.app{display:grid; grid-template-columns:var(--sidebar-w) 1fr; min-height:calc(100vh - var(--topbar-h));}
+.app{display:grid; grid-template-columns:var(--sidebar-w) 1fr; min-height:calc(100vh - var(--topbar-h)); position:relative; z-index:1;}
+.site-footer{position:relative; z-index:1;}
+/* keep any long titles/links from colliding or overflowing their cards */
+.res-title a, .res-why, .station-desc, .station-title, .mcard-hook, .mcard h3, .module-title, .hero h1, .fp-title, .faq-q span:first-child{overflow-wrap:anywhere;}
 
 /* ---- Sidebar ---- */
 .sidebar{
@@ -657,6 +660,34 @@ svg{display:block;}
 @media (prefers-reduced-motion:reduce){ .art-backdrop{transition:none;} }
 @media (max-width:768px){ .art-backdrop{background-size:280px 280px, 320px 320px;} }
 
+/* ---- Backdrop artwork options (user-switchable from the appearance menu) ----
+   Each choice swaps the decorative layer for one full-bleed generated study.
+   Kept faint enough that content text stays readable in every theme. */
+[data-backdrop="city"] .art-backdrop{background-image:url("assets/img/wall-ink-city.jpg"); background-size:cover; background-position:center;}
+[data-backdrop="graphite"] .art-backdrop{background-image:url("assets/img/wall-graphite.jpg"); background-size:cover; background-position:center;}
+[data-backdrop="portrait"] .art-backdrop{background-image:url("assets/img/wall-charcoal.jpg"); background-size:cover; background-position:center;}
+[data-backdrop="field"] .art-backdrop{background-image:url("assets/img/wall-field.jpg"); background-size:cover; background-position:center;}
+[data-backdrop="motif"] .art-backdrop{background-position:-60px -40px, right -80px bottom -100px; background-size:420px 420px, 480px 480px;}
+[data-backdrop="motif"]:not([data-theme]) .art-backdrop{background-image:none;}
+[data-theme="dark"][data-backdrop="city"] .art-backdrop{opacity:.10;}
+[data-theme="light"][data-backdrop="city"] .art-backdrop{opacity:.16;}
+[data-theme="sketchbook"][data-backdrop="city"] .art-backdrop{opacity:.2;}
+[data-theme="dark"][data-backdrop="graphite"] .art-backdrop{opacity:.16;}
+[data-theme="light"][data-backdrop="graphite"] .art-backdrop{opacity:.14;}
+[data-theme="sketchbook"][data-backdrop="graphite"] .art-backdrop{opacity:.2;}
+[data-theme="dark"][data-backdrop="portrait"] .art-backdrop{opacity:.22;}
+[data-theme="light"][data-backdrop="portrait"] .art-backdrop{opacity:.12;}
+[data-theme="sketchbook"][data-backdrop="portrait"] .art-backdrop{opacity:.22;}
+[data-theme="dark"][data-backdrop="field"] .art-backdrop{opacity:.12;}
+[data-theme="light"][data-backdrop="field"] .art-backdrop{opacity:.15;}
+[data-theme="sketchbook"][data-backdrop="field"] .art-backdrop{opacity:.2;}
+@media (max-width:768px){
+  [data-backdrop="city"] .art-backdrop,
+  [data-backdrop="graphite"] .art-backdrop,
+  [data-backdrop="portrait"] .art-backdrop,
+  [data-backdrop="field"] .art-backdrop{background-size:cover;}
+}
+
 /* ---- Theme: Sketchbook (warm cream paper, visible pencil/sketch art) ---- */
 [data-theme="sketchbook"]{
   --bg:#F3ECDC; --bg-raised:#FAF5E9; --surface:#FFFCF4; --surface-2:#F0E8D5;
@@ -676,21 +707,44 @@ svg{display:block;}
 .theme-picker-menu{
   position:absolute; top:calc(100% + var(--sp-2)); right:0; z-index:200;
   background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-md);
-  box-shadow:var(--shadow-md); padding:var(--sp-2); min-width:168px;
+  box-shadow:var(--shadow-md); padding:var(--sp-2); min-width:196px;
   display:none; flex-direction:column; gap:2px;
 }
 .theme-picker-menu.open{display:flex;}
+.picker-heading{
+  font-family:var(--font-mono); font-size:10.5px; letter-spacing:1.4px; text-transform:uppercase;
+  color:var(--text-faint); padding:var(--sp-2) var(--sp-3) var(--sp-1);
+}
+.picker-heading-alt{border-top:1px solid var(--border-soft); margin-top:var(--sp-2); padding-top:var(--sp-3);}
 .theme-option{
   display:flex; align-items:center; gap:var(--sp-3); padding:var(--sp-2) var(--sp-3);
   border-radius:var(--radius-sm); border:none; background:none; color:var(--text);
   font-family:var(--font-body); font-size:13.5px; text-align:left; width:100%;
 }
-.theme-option:hover{background:var(--surface-2);}
-.theme-option[aria-pressed="true"]{background:var(--blue-soft); color:var(--blue);}
+.theme-option:hover, .backdrop-option:hover{background:var(--surface-2);}
+.theme-option[aria-pressed="true"], .backdrop-option[aria-pressed="true"]{background:var(--blue-soft); color:var(--blue);}
+.backdrop-option{
+  display:flex; align-items:center; gap:var(--sp-3); padding:var(--sp-2) var(--sp-3);
+  border-radius:var(--radius-sm); border:none; background:none; color:var(--text);
+  font-family:var(--font-body); font-size:13.5px; text-align:left; width:100%; cursor:pointer;
+}
 .theme-swatch{width:18px; height:18px; border-radius:var(--radius-full); border:1px solid var(--border); flex-shrink:0;}
 .theme-swatch.dark{background:linear-gradient(135deg,#151318 50%,#6FB2E8 50%);}
 .theme-swatch.light{background:linear-gradient(135deg,#EEECE6 50%,#2F6CA6 50%);}
 .theme-swatch.sketchbook{background:linear-gradient(135deg,#F3ECDC 50%,#A6472E 50%);}
+.backdrop-swatch{
+  width:32px; height:20px; border-radius:4px; border:1px solid var(--border);
+  flex-shrink:0; background-size:cover; background-position:center; background-repeat:no-repeat;
+}
+.backdrop-swatch.motif{
+  border-radius:var(--radius-full); width:18px; height:18px;
+  background-image:repeating-linear-gradient(135deg, rgba(140,150,172,.85) 0 1px, transparent 1px 6px),
+    repeating-linear-gradient(45deg, rgba(140,150,172,.28) 0 1px, transparent 1px 9px);
+}
+.backdrop-swatch.city{background-image:url("assets/img/wall-ink-city.jpg");}
+.backdrop-swatch.graphite{background-image:url("assets/img/wall-graphite.jpg");}
+.backdrop-swatch.portrait{background-image:url("assets/img/wall-charcoal.jpg");}
+.backdrop-swatch.field{background-image:url("assets/img/wall-field.jpg");}
 
 /* ============================================================
    LIBRARY — every resource across all live arcs, browsable
@@ -714,3 +768,132 @@ svg{display:block;}
   margin-top:var(--sp-2); display:block;
 }
 .library-empty{padding:var(--sp-8) 0; text-align:center; color:var(--text-faint);}
+
+/* ============================================================
+   HELP & FAQ — accordion + community cards
+   ============================================================ */
+.help-note{
+  background:var(--surface-2); border:1px solid var(--border); border-left:3px solid var(--blue);
+  border-radius:var(--radius-md); padding:var(--sp-4) var(--sp-5); color:var(--text-muted);
+  font-size:14.5px; line-height:1.65; max-width:760px;
+}
+.help-note p{margin:0;}
+.help-note a{color:var(--blue);}
+.faq-list{max-width:760px; display:flex; flex-direction:column; gap:var(--sp-2);}
+.faq-item{
+  background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-md); overflow:hidden;
+}
+.faq-q{
+  width:100%; display:flex; align-items:center; justify-content:space-between; gap:var(--sp-4);
+  padding:var(--sp-4) var(--sp-5); background:none; border:none; cursor:pointer;
+  color:var(--text); font-family:var(--font-body); font-size:15.5px; font-weight:600; text-align:left;
+}
+.faq-q:hover{background:var(--surface-2);}
+.faq-caret{transition:transform var(--dur) var(--ease); color:var(--text-faint); display:flex; flex-shrink:0;}
+.faq-caret svg{width:16px; height:16px;}
+.faq-q.is-open .faq-caret{transform:rotate(90deg);}
+.faq-a{padding:0 var(--sp-5) var(--sp-4); color:var(--text-muted); font-size:14.5px; line-height:1.7;}
+.faq-a p{margin:0;}
+.community-grid{
+  display:grid; grid-template-columns:repeat(auto-fill, minmax(270px,1fr)); gap:var(--sp-4); max-width:980px;
+}
+.community-card{
+  background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-md);
+  padding:var(--sp-4) var(--sp-5); display:flex; flex-direction:column; gap:var(--sp-2); text-decoration:none;
+  color:var(--text); transition:border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+.community-card:hover{border-color:var(--blue); transform:translateY(-2px);}
+.community-card h3{margin:0; font-size:16.5px;}
+.community-card p{margin:0; color:var(--text-muted); font-size:13.5px; line-height:1.55; flex:1;}
+.community-tag{
+  align-self:flex-start; font-family:var(--font-mono); font-size:10.5px; letter-spacing:1px; text-transform:uppercase;
+  color:var(--blue); background:var(--blue-soft); padding:2px 8px; border-radius:var(--radius-full);
+}
+.community-go{display:flex; align-items:center; gap:var(--sp-2); color:var(--blue); font-size:13px; font-weight:600;}
+.community-go svg{width:14px; height:14px;}
+
+/* ============================================================
+   PER-RESOURCE NOTES — jot while watching/reading
+   ============================================================ */
+.res-note{margin-top:var(--sp-3);}
+.res-note-toggle{
+  display:inline-flex; align-items:center; gap:var(--sp-2); padding:var(--sp-1) var(--sp-3);
+  border-radius:var(--radius-full); border:1px solid var(--border); background:none;
+  color:var(--text-muted); font-family:var(--font-body); font-size:12.5px; cursor:pointer;
+}
+.res-note-toggle:hover{border-color:var(--blue); color:var(--blue);}
+.res-note-toggle[aria-expanded="true"]{border-color:var(--blue); color:var(--blue); background:var(--blue-soft);}
+.res-note-toggle svg{width:13px; height:13px;}
+.res-note-box{margin-top:var(--sp-2);}
+.res-note-box textarea{
+  width:100%; min-height:64px; resize:vertical; background:var(--surface);
+  border:1px solid var(--border); border-radius:var(--radius-md); padding:var(--sp-3);
+  color:var(--text); font-family:var(--font-body); font-size:13.5px; line-height:1.5; box-sizing:border-box;
+}
+.res-note-box textarea:focus{outline:none; border-color:var(--blue);}
+.res-note-status{font-size:11px; color:var(--text-faint); display:block; margin-top:2px; text-align:right;}
+
+/* ============================================================
+   ANIME BACKDROPS + ARC BANNERS + LANG TOGGLE (session addition)
+   ============================================================ */
+.backdrop-swatch.anime-city{background-image:url("assets/img/anime-city.jpg");}
+.backdrop-swatch.anime-nature{background-image:url("assets/img/anime-nature.jpg");}
+[data-backdrop="anime-city"] .art-backdrop{background-image:url("assets/img/anime-city.jpg"); background-size:cover; background-position:center;}
+[data-backdrop="anime-nature"] .art-backdrop{background-image:url("assets/img/anime-nature.jpg"); background-size:cover; background-position:center;}
+[data-theme="dark"][data-backdrop="anime-city"] .art-backdrop{opacity:.16;}
+[data-theme="light"][data-backdrop="anime-city"] .art-backdrop{opacity:.2;}
+[data-theme="sketchbook"][data-backdrop="anime-city"] .art-backdrop{opacity:.26;}
+[data-theme="dark"][data-backdrop="anime-nature"] .art-backdrop{opacity:.16;}
+[data-theme="light"][data-backdrop="anime-nature"] .art-backdrop{opacity:.2;}
+[data-theme="sketchbook"][data-backdrop="anime-nature"] .art-backdrop{opacity:.26;}
+@media (max-width:768px){
+  [data-backdrop="anime-city"] .art-backdrop,
+  [data-backdrop="anime-nature"] .art-backdrop{background-size:cover;}
+}
+
+.arc-banner{
+  position:relative; height:132px; border-radius:var(--radius-lg); overflow:hidden;
+  background-size:cover; background-position:center; border:1px solid var(--border);
+  box-shadow:var(--shadow-sm); margin-bottom:var(--sp-5);
+}
+.arc-banner::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(90deg, rgba(10,8,14,.62) 0%, rgba(10,8,14,.25) 52%, transparent 78%);
+}
+.arc-banner h2{
+  position:relative; z-index:1; margin:0; padding:var(--sp-5) var(--sp-6);
+  color:#fff; text-shadow:0 1px 10px rgba(0,0,0,.5);
+  font-family:var(--font-display); font-size:26px; letter-spacing:.2px;
+}
+.lang-toggle{
+  min-width:40px; font-family:var(--font-mono); font-size:12.5px; font-weight:600;
+  letter-spacing:1px;
+}
+@media (max-width:640px){
+  .arc-banner{height:104px;}
+  .arc-banner h2{font-size:20px; padding:var(--sp-4) var(--sp-5);}
+}
+
+/* ============================================================
+   OVERLAP FIXES (sidebar labels/badges + FAQ text) — session
+   ============================================================ */
+/* Sidebar rows: let the flexible label truncate instead of
+   colliding with plate numbers, checkmarks, or count badges. */
+.side-module-item > span[style*="flex"]{
+  min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.side-module-item{overflow:hidden;}
+.side-path-group, .side-module-list{min-width:0;}
+.side-path-header{min-width:0;}
+.side-path-header, .side-module-item{overflow-wrap:anywhere;}
+/* Tool icons and badges never shrink or wrap. */
+.side-module-item .tool-icon,
+.side-module-item .m-num,
+.side-module-item .m-check{white-space:nowrap;}
+
+/* FAQ rows: question text can wrap and shrink; caret stays
+   pinned to the right without overlapping the question. */
+.faq-q > span:first-child{flex:1 1 auto; min-width:0; overflow-wrap:anywhere;}
+.faq-a p{overflow-wrap:anywhere;}
+.help-note p, .help-note a{overflow-wrap:anywhere;}
+.community-card p{overflow-wrap:anywhere;}

@@ -75,7 +75,8 @@ const CURRICULUM_2 = [
           challenge:"Draw the same simplified skull from four angles — front, profile, three-quarter, tilted up — in one sitting, keeping landmark placement consistent across all four."
         },
         resources:[
-          {type:'Video', title:'How to Draw the Head / Face / Portrait — Part 1 (3 hours)', creator:'Steve Huston, via New Masters Academy', url:'https://www.youtube.com/watch?v=2T7cDY7YDsg', why:"A free sample from NMA's paid library that opens with exactly this module's subject — basic skull and head structure using simple forms — before moving into individual features.", verified:true}
+          {type:'Video', title:'How to Draw the Head / Face / Portrait — Part 1 (3 hours)', creator:'Steve Huston, via New Masters Academy', url:'https://www.youtube.com/watch?v=2T7cDY7YDsg', why:"A free sample from NMA's paid library that opens with exactly this module's subject — basic skull and head structure using simple forms — before moving into individual features.", verified:true},
+          {type:'Article', title:'Draw a Skull Inside a Portrait (Anatomy Exercise)', creator:'Art Prof (Clara Lieu)', url:'https://artprof.org/learn/fundamentals/anatomy/draw-a-skull-inside-a-portrait/', why:'A free art-school exercise with written walkthrough and 3D skull model: build the skull into a portrait early, with landmarks like the eye sockets, cheekbones, jaw and nasal bone - exactly Module 16s bone-first lesson.', verified:true},
         ],
         quiz:[
           {q:"Why does the brow ridge matter for drawing eyebrows convincingly?", options:["It doesn't, eyebrows are unrelated to bone structure","It's the bone landmark that explains where eyebrows sit and why eye sockets cast a natural shadow","It only matters for older subjects","It affects hair color"], correct:1, explain:"Eyebrow placement and eye-socket shadow both trace back to the brow ridge underneath."},
@@ -122,7 +123,8 @@ const CURRICULUM_2 = [
           challenge:"Construct three different imagined faces using the same proportion guide as a starting point, then deliberately push each one's proportions in a different direction to make them read as distinct individuals."
         },
         resources:[
-          {type:'Course', title:'Quickly Draw Heads with the Loomis Method — Part 1', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/quickly-draw-heads-with-the-loomis-method-part-1', why:"Teaches the same thirds-and-eye-width proportion system this module covers, as part of a complete construction method rather than an isolated measuring chart.", verified:true}
+          {type:'Course', title:'Quickly Draw Heads with the Loomis Method — Part 1', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/quickly-draw-heads-with-the-loomis-method-part-1', why:"Teaches the same thirds-and-eye-width proportion system this module covers, as part of a complete construction method rather than an isolated measuring chart.", verified:true},
+          {type:'Video', title:'How to Draw the Head - Front View', creator:'Proko', url:'https://www.youtube.com/watch?v=z4ZLkyTuX_w', videoId:'z4ZLkyTuX_w', why:'Proko draws the head from the front using the classical proportional landmarks, demonstrating the measuring system this module teaches (thirds, one-eye-width spacing, feature placement).', verified:true},
         ],
         quiz:[
           {q:"In the classical proportion system, where does the eye-line typically sit?", options:["At the bottom of the chin","At the vertical midpoint of the whole head, including the cranium","At the top of the hairline","There's no standard guideline for eye placement"], correct:1, explain:"A very common beginner error is placing the eye-line at the midpoint of the visible face instead of the whole head."},
@@ -171,7 +173,8 @@ const CURRICULUM_2 = [
         resources:[
           {type:'Course', title:'Quickly Draw Heads with the Loomis Method — Part 1', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/quickly-draw-heads-with-the-loomis-method-part-1', why:"A free, direct introduction to the full construction taught in this module, from the course most commonly credited with popularizing Loomis's method for a new generation.", verified:true},
           {type:'Course', title:'Draw ANY Head Type with the Loomis Method — Part 2', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/draw-any-head-type-with-the-loomis-method-part-2', why:"Free continuation covering how to adjust the standard construction for head types that don't match the average — directly matches this module's stretch challenge.", verified:true},
-          {type:'Book', title:'Drawing the Head and Hands', creator:'Andrew Loomis', url:'https://archive.org/details/andrew-loomis-drawing-the-head-hands', why:"The original 1956 source, free to read and download through the Internet Archive's lending library \u2014 its copyright was never renewed, so it has entered the public domain in the US.", verified:true}
+          {type:'Book', title:'Drawing the Head and Hands', creator:'Andrew Loomis', url:'https://archive.org/details/andrew-loomis-drawing-the-head-hands', why:"The original 1956 source, free to read and download through the Internet Archive's lending library \u2014 its copyright was never renewed, so it has entered the public domain in the US.", verified:true},
+          {type:'Video', title:'How to Draw the Head from Any Angle (The Loomis Method)', creator:'Proko', url:'https://www.youtube.com/watch?v=1EPNYWeEf1U', videoId:'1EPNYWeEf1U', why:'The famous summary of Andrew Loomis head construction: a sphere, a side plane, and guidelines that let you draw the head at any angle, which is the exact method Module 18 teaches.', verified:true},
         ],
         quiz:[
           {q:"What are the two core building blocks of the Loomis head construction?", options:["Two overlapping cubes","A sphere for the cranium and a flat side-plane for the face","A cylinder and a cone","A single flat oval"], correct:1, explain:"The sphere plus side-plane combination is the geometric core the rest of the construction builds from."},
@@ -218,7 +221,8 @@ const CURRICULUM_2 = [
           challenge:"Shade the same planar head under three different light directions — front, side, top — using only two values each time, and compare how differently the same structure reads."
         },
         resources:[
-          {type:'Article', title:'The Asaro Head: How to Master the Planes of the Head', creator:'Buesken Art', url:'https://bueskenart.com/asaro-head/', why:"A free, specific walkthrough of the two-value shading exercise and the form-shadow/cast-shadow distinction this module covers, with the actual reasoning behind each step.", verified:true}
+          {type:'Article', title:'The Asaro Head: How to Master the Planes of the Head', creator:'Buesken Art', url:'https://bueskenart.com/asaro-head/', why:"A free, specific walkthrough of the two-value shading exercise and the form-shadow/cast-shadow distinction this module covers, with the actual reasoning behind each step.", verified:true},
+          {type:'Video', title:'How The Asaro Head Will Improve Your Portrait Art', creator:'Selina Jelovic', url:'https://www.youtube.com/watch?v=L8HpaMZaBQQ', videoId:'L8HpaMZaBQQ', why:'A clear demonstration of the Asaro planar head and why mapping light and shadow onto its planes makes portrait shading predictable, the core idea of this module.', verified:true},
         ],
         quiz:[
           {q:"What problem is the Asaro head specifically designed to solve?", options:["Making noses easier to draw","Making it predictable where light and shadow fall, by flattening curved surfaces into clear planes","Teaching hair rendering","Replacing the skull entirely"], correct:1, explain:"Flat, clearly-angled planes make the light-versus-shadow decision explicit instead of an intuitive guess."},
@@ -264,7 +268,8 @@ const CURRICULUM_2 = [
           challenge:"Construct a head at an extreme angle — looking almost straight down or straight up — and identify exactly which part of the construction was hardest to keep consistent."
         },
         resources:[
-          {type:'Course', title:'Intuitive Portrait Sketching with the Loomis Method — Part 3', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/intuitive-portrait-sketching-with-the-loomis-method-part-3', why:"Continues directly from the two Loomis lessons in Module 18, specifically covering tilt, turn, and roll as the head moves through space.", verified:true}
+          {type:'Course', title:'Intuitive Portrait Sketching with the Loomis Method — Part 3', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/intuitive-portrait-sketching-with-the-loomis-method-part-3', why:"Continues directly from the two Loomis lessons in Module 18, specifically covering tilt, turn, and roll as the head moves through space.", verified:true},
+          {type:'Video', title:'How to Draw the Head from Extreme Angles', creator:'Proko', url:'https://www.youtube.com/watch?v=PgK90TpV5fA', videoId:'PgK90TpV5fA', why:'Tests the construction system the way this module does: rotating and tilting the head far beyond the comfortable front and three-quarter views, showing the guidelines still hold.', verified:true},
         ],
         quiz:[
           {q:"What are the three independent axes of head rotation covered in this module?", options:["Zoom, pan, rotate","Tilt, turn, and roll","Light, shadow, and form","Front, back, and side"], correct:1, explain:"Tilt (nodding), turn (shaking side to side), and roll (sideways head-tilt) are the three axes worth isolating."},
@@ -310,7 +315,8 @@ const CURRICULUM_2 = [
           challenge:"Construct a head from a dramatic low angle, as if looking up at someone standing over you, combining rotation, tilt, and genuine perspective foreshortening in one drawing."
         },
         resources:[
-          {type:'Video', title:'How to Draw the Head from Extreme Angles', creator:'Proko (Stan Prokopenko)', url:'https://www.classcentral.com/course/youtube-draw-the-head-from-any-angle-proko-55059', why:"Part of Proko's free head series, specifically addressing the extreme foreshortened angles this module covers, building directly on the Loomis and rotation lessons already used in this arc.", verified:true}
+          {type:'Video', title:'How to Draw the Head from Extreme Angles', creator:'Proko (Stan Prokopenko)', url:'https://www.youtube.com/watch?v=PgK90TpV5fA', videoId:'PgK90TpV5fA', why:"Part of Proko's free head series, specifically addressing the extreme foreshortened angles this module covers, building directly on the Loomis and rotation lessons already used in this arc.", verified:true},
+          {type:'Article', title:'How to Draw a Face from the 3/4 View - Looking Up (Loomis Method)', creator:'Darlene Nguyen (RapidFireArt)', url:'https://rapidfireart.com/2026/05/25/how-to-draw-a-face-from-the-3-quarter-view-looking-up-loomis-method/', why:'A step-by-step Loomis tutorial for a head tilted upward in three-quarter view: how the axis, brow ellipse and feature lines shift when the head leaves the comfortable front view - the exact camera-angle problem of this module.', verified:true},
         ],
         quiz:[
           {q:"What does this module cover that Module 20 (Head Rotation) doesn't?", options:["Facial expressions","Genuine perspective foreshortening from camera distance and extreme angles, not just rotation at a comfortable distance","Hair rendering","Color theory"], correct:1, explain:"Rotation alone assumes a comfortable, consistent distance; this module adds real perspective distortion from proximity and extreme angles."},
@@ -358,7 +364,8 @@ const CURRICULUM_2 = [
         },
         resources:[
           {type:'Article', title:'The Asaro Head: How to Master the Planes of the Head', creator:'Buesken Art', url:'https://bueskenart.com/asaro-head/', why:"Extends the broad plane thinking from Module 19 into the more specific transition areas this module focuses on, with concrete shading exercises.", verified:true},
-          {type:'Video', title:'Shading Light and Form — Basics', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/shading-light-and-form-basics', why:"The light-logic fundamentals from Module 11, worth revisiting here specifically applied to facial planes rather than a generic sphere.", verified:true}
+          {type:'Video', title:'Shading Light and Form — Basics', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/shading-light-and-form-basics', why:"The light-logic fundamentals from Module 11, worth revisiting here specifically applied to facial planes rather than a generic sphere.", verified:true},
+          {type:'Video', title:'Understanding the Planes of the Face Using Ellipses', creator:'Sycra', url:'https://www.youtube.com/watch?v=j-NEa0UNCNk', videoId:'j-NEa0UNCNk', why:'Sycra shows a practical way to map the planes of the face onto a 3D head, which is precisely the complete plane map this module covers before features are added.', verified:true},
         ],
         quiz:[
           {q:"What is this module's role in the Head & Portrait arc?", options:["It's an optional bonus module","It maps the specific facial planes that every feature module afterward will sit on and be shaded according to","It replaces the need for the skull module","It only matters for stylized art"], correct:1, explain:"It's the direct bridge from head structure into the individual-feature modules that follow."},
@@ -453,7 +460,8 @@ const CURRICULUM_2 = [
           challenge:"Draw a face with the eyebrows only — no eyes, nose, or mouth — and see how much emotional information the eyebrows alone communicate."
         },
         resources:[
-          {type:'Video', title:'How to Draw Eyes — Anatomy and Structure', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/how-to-draw-eyes-anatomy-and-structure', videoId:'u6-bCgRmcko', why:"Covers the brow ridge in detail as part of the eye lesson — there isn't a separate free Proko lesson for eyebrows alone, so this is the most relevant free source for the underlying bone structure eyebrows sit on.", verified:true}
+          {type:'Video', title:'How to Draw Eyes — Anatomy and Structure', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/how-to-draw-eyes-anatomy-and-structure', videoId:'u6-bCgRmcko', why:"Covers the brow ridge in detail as part of the eye lesson — there isn't a separate free Proko lesson for eyebrows alone, so this is the most relevant free source for the underlying bone structure eyebrows sit on.", verified:true},
+          {type:'Article', title:'How to Draw Eyebrows: Easy Step-by-Step Drawing Guide', creator:'Sky Rye Design', url:'https://skyryedesign.com/art/drawing-eyebrows/', why:'Walks through marking the brow start, arch and tail, why the lower edge controls expression, and how to draw hairs that follow real growth direction instead of a floating outline - exactly the structural gap this module targets.', verified:true},
         ],
         quiz:[
           {q:"What determines where an eyebrow sits, more than anything else?", options:["Personal artistic choice with no anatomical basis","The brow ridge bone structure underneath it","Hair color","The nose's position"], correct:1, explain:"Eyebrows follow the brow ridge — placement isn't really a free choice once the skull and Loomis construction are set."},
@@ -500,7 +508,8 @@ const CURRICULUM_2 = [
         },
         resources:[
           {type:'Video', title:'How to Draw a Nose — Anatomy and Structure', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/how-to-draw-a-nose-anatomy-and-structure', videoId:'nWZZ3SFmDS8', why:"Free lesson covering the exact four-plane construction and bone-versus-cartilage structure this module is built on.", verified:true},
-          {type:'Video', title:'How to Draw a Nose — Step by Step', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/how-to-draw-a-nose-step-by-step', why:"Follows directly from the anatomy lesson with a full rendering walkthrough: lay-in, two-value, dark accents, halftones, details.", verified:true}
+          {type:'Video', title:'How to Draw a Nose — Step by Step', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/how-to-draw-a-nose-step-by-step', why:"Follows directly from the anatomy lesson with a full rendering walkthrough: lay-in, two-value, dark accents, halftones, details.", verified:true},
+          {type:'Article', title:'How to Draw a Nose from the Side (Profile View) - 6 Steps', creator:'Darlene Nguyen (RapidFireArt)', url:'https://rapidfireart.com/2013/07/03/how-to-draw-the-nose-profile-view/', why:'Builds the nose from two circles and a triangle guide before shading, the same construction-first approach Module 25 teaches for the nose as half-bone, half-cartilage planes rather than an outline.', verified:true},
         ],
         quiz:[
           {q:"What are the nose's four major planes?", options:["Front, back, left, right","Top, two sides, and bottom","Bone, cartilage, fat, skin","There's only one plane"], correct:1, explain:"Top, two side planes, and a bottom plane — establishing these correctly matters more at first than any anatomical detail."},
@@ -548,7 +557,8 @@ const CURRICULUM_2 = [
         },
         resources:[
           {type:'Video', title:'How to Draw Lips — Anatomy and Structure', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/how-to-draw-lips-anatomy-and-structure', videoId:'Xq3aHSuKRyg', why:"Free lesson covering the tooth cylinder, staircase planes, and node anatomy this module is built directly from.", verified:true},
-          {type:'Video', title:'How to Draw Lips — Step by Step', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/how-to-draw-lips-step-by-step', why:"A full rendering walkthrough following the anatomy lesson, covering lay-in through final halftone detail.", verified:true}
+          {type:'Video', title:'How to Draw Lips — Step by Step', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/how-to-draw-lips-step-by-step', why:"A full rendering walkthrough following the anatomy lesson, covering lay-in through final halftone detail.", verified:true},
+          {type:'Article', title:'How to Draw Lips (The Only Tutorial You Need)', creator:'Darlene Nguyen (RapidFireArt)', url:'https://rapidfireart.com/2013/05/10/how-to-draw-lips/', why:'A clear triangle-based construction plus light-direction and shading steps for the mouth - a written companion that reinforces volume over outline for lips and the teeth mass behind them.', verified:true},
         ],
         quiz:[
           {q:"What structure pushes the lips outward from underneath, according to this module?", options:["Nothing, lips sit flat on the face","A simplified cylinder of teeth, like an inflated tuna can","The nose","The jaw hinge alone"], correct:1, explain:"The tooth cylinder underneath is the single most overlooked idea in beginner mouth drawing, per this module."},
@@ -595,7 +605,8 @@ const CURRICULUM_2 = [
         },
         resources:[
           {type:'Video', title:'How to Draw Ears — Anatomy and Structure', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/how-to-draw-ears-anatomy-and-structure', videoId:'Yqgw_iMWwlw', why:"Free lesson covering the megaphone volume, question-mark mnemonic, and tilt-based placement rules this module is built on.", verified:true},
-          {type:'Video', title:'How to Draw Ears — Step by Step', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/how-to-draw-ears-step-by-step', why:"A full rendering walkthrough covering linear lay-in through shadow mapping and final highlights.", verified:true}
+          {type:'Video', title:'How to Draw Ears — Step by Step', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/how-to-draw-ears-step-by-step', why:"A full rendering walkthrough covering linear lay-in through shadow mapping and final highlights.", verified:true},
+          {type:'Article', title:'Ultimate Guide to Drawing Ears', creator:'Eridey (Clip Studio Art Rocket)', url:'https://www.clipstudio.net/how-to-draw/archives/160418', why:'Explains the ear as a helix/antihelix/tragus structure drawn from a single contour plus a Y-shape inside, and how eyebrow/nose placement locks the ear in place - matching Module 27s megaphone-and-question-mark construction.', verified:true},
         ],
         quiz:[
           {q:"What happens to ear placement on a downward head tilt?", options:["The ears should be placed lower on the head","The ears should be placed higher on the head","Ear placement never changes with tilt","The ears disappear from view"], correct:1, explain:"Getting this backward is one of the fastest ways to break the illusion of a tilted head, even with everything else constructed correctly."},
@@ -641,7 +652,8 @@ const CURRICULUM_2 = [
           challenge:"Construct two different imagined faces starting from the same head proportions, deliberately varying only the feature-to-feature relationships, and compare how different they read as individuals."
         },
         resources:[
-          {type:'Course', title:'Quickly Draw Heads with the Loomis Method — Part 1', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/quickly-draw-heads-with-the-loomis-method-part-1', why:"Revisits the head-level proportion system from Module 17, worth reviewing again now that all four features sit on top of it.", verified:true}
+          {type:'Course', title:'Quickly Draw Heads with the Loomis Method — Part 1', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/quickly-draw-heads-with-the-loomis-method-part-1', why:"Revisits the head-level proportion system from Module 17, worth reviewing again now that all four features sit on top of it.", verified:true},
+          {type:'Video', title:'Portrait Drawing Basics (proportions demo)', creator:'Proko (Erik Gist)', url:'https://www.youtube.com/watch?v=u8-GkWGcL7A', videoId:'u8-GkWGcL7A', why:'Marvel artist Erik Gist builds a portrait from an envelope scaffold, separating hair from features and using rhythmic lines to check features against each other, exactly what Module 28 is about.', verified:true},
         ],
         quiz:[
           {q:"How does this module's proportion check differ from Module 17's?", options:["It's identical, just repeated","It checks features against each other, not just against the whole head","It only applies to cartoon styles","It replaces Module 17 entirely"], correct:1, explain:"Module 17 checks features against the head; this module checks them against each other, which is where individual likeness lives."},
@@ -687,7 +699,8 @@ const CURRICULUM_2 = [
           challenge:"Draw a face expressing one emotion with the mouth and a contradicting emotion with the eyes, then compare it to a version where both agree — notice how much less convincing the mismatched version reads."
         },
         resources:[
-          {type:'Video', title:'The Secret to Creating Clear Expressions (Art Tips #12)', creator:'Aaron Blaise', url:'https://www.youtube.com/watch?v=S94VIlQyFWo', why:"A free video from a 21-year Disney animator (The Lion King, Mulan, Brother Bear) on building legible expressions — his dedicated paid expressions course covers this in far more depth, but this free entry covers the core idea well.", verified:true}
+          {type:'Video', title:'The Secret to Creating Clear Expressions (Art Tips #12)', creator:'Aaron Blaise', url:'https://www.youtube.com/watch?v=S94VIlQyFWo', why:"A free video from a 21-year Disney animator (The Lion King, Mulan, Brother Bear) on building legible expressions — his dedicated paid expressions course covers this in far more depth, but this free entry covers the core idea well.", verified:true},
+          {type:'Article', title:'How to Draw Expressive Faces', creator:'Magda Prowski (Clip Studio Art Rocket)', url:'https://www.clipstudio.net/how-to-draw/archives/157239', why:'A concept artist breaks down which muscles move for joy, anger, fear, shock and disgust, with diagrams of brow, eye and mouth changes - the anatomy-of-expression reading this module pairs with its muscle logic.', verified:true},
         ],
         quiz:[
           {q:"What does this module recommend instead of memorizing a fixed template per emotion?", options:["Copying reference photos exactly","Understanding which specific muscles pull which points, and building the expression from that","Only drawing exaggerated expressions","Avoiding expressions until fully advanced"], correct:1, explain:"Understanding the underlying pull generalizes to new angles and intensities; a memorized template doesn't."},
@@ -734,7 +747,8 @@ const CURRICULUM_2 = [
           challenge:"Pull out your five Module 15 baseline drawings, draw the same five subjects again now, and compare the two sets honestly, side by side."
         },
         resources:[
-          {type:'Course', title:'How to Draw Facial Features (free series)', creator:'Proko (Stan Prokopenko)', url:'https://www.classcentral.com/course/youtube-how-to-draw-facial-features-proko-55060', why:"Worth revisiting as a complete hub now that every individual feature lesson in it connects to a specific module you've already completed.", verified:true}
+          {type:'Course', title:'How to Draw Facial Features (free series)', creator:'Proko (Stan Prokopenko)', url:'https://www.classcentral.com/course/youtube-how-to-draw-facial-features-proko-55060', why:"Worth revisiting as a complete hub now that every individual feature lesson in it connects to a specific module you've already completed.", verified:true},
+          {type:'Video', title:'Charcoal & Graphite Portrait Demo (Livestream)', creator:'Proko', url:'https://www.youtube.com/watch?v=r97ZPI9HpAY', videoId:'r97ZPI9HpAY', why:'A full portrait drawing from start to finish with narration, letting you watch every system from this arc (construction, proportions, features, values) run together on one head.', verified:true},
         ],
         quiz:[
           {q:"What is this module's central point?", options:["Teaching a brand-new construction technique","Proving, through practice, that every previously separate module actually connects into one coherent head","Replacing the Loomis method with a new system","Skipping straight to advanced shading"], correct:1, explain:"Integration tests whether the individually-practiced pieces from this whole arc actually work together, not new content."},
