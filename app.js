@@ -86,7 +86,8 @@ const DECOR = {
   grid:'<svg class="mcard-deco" viewBox="0 0 90 90" fill="none" stroke="currentColor" stroke-width="1"><line x1="0" y1="30" x2="90" y2="30"/><line x1="0" y1="60" x2="90" y2="60"/><line x1="30" y1="0" x2="30" y2="90"/><line x1="60" y1="0" x2="60" y2="90"/></svg>',
   lines:'<svg class="mcard-deco" viewBox="0 0 90 90" fill="none" stroke="currentColor" stroke-width="1"><line x1="10" y1="20" x2="80" y2="30"/><line x1="10" y1="45" x2="80" y2="40"/><line x1="10" y1="70" x2="80" y2="55"/></svg>',
   vanish:'<svg class="mcard-deco" viewBox="0 0 90 90" fill="none" stroke="currentColor" stroke-width="1"><line x1="80" y1="20" x2="10" y2="10"/><line x1="80" y1="20" x2="10" y2="45"/><line x1="80" y1="20" x2="10" y2="80"/><circle cx="80" cy="20" r="2" fill="currentColor"/></svg>',
-  spark:'<svg class="mcard-deco" viewBox="0 0 90 90" fill="none" stroke="currentColor" stroke-width="1"><path d="M20 70 L70 20 M20 20 L70 70"/></svg>'
+  spark:'<svg class="mcard-deco" viewBox="0 0 90 90" fill="none" stroke="currentColor" stroke-width="1"><path d="M20 70 L70 20 M20 20 L70 70"/></svg>',
+  library:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 016.5 17H20M4 19.5A2.5 2.5 0 006.5 22H20V2H6.5A2.5 2.5 0 004 4.5v15z"/></svg>'
 };
 const MODULE_DECOR = {m1:'spark', m2:'grid', m3:'lines', m4:'ellipse', m5:'eye', m6:'grid', m7:'box'};
 
@@ -400,6 +401,8 @@ function renderApp(){
     renderAchievements();
   } else if(route.view === 'bookmarks'){
     renderBookmarks();
+  } else if(route.view === 'library'){
+    renderLibrary();
   } else if(route.view === 'dashboard'){
     renderDashboard();
   } else if(route.view === 'calendar'){
@@ -414,7 +417,9 @@ function renderApp(){
 function updateChrome(){
   document.getElementById('xpValue').textContent = STATE.xp;
   document.documentElement.setAttribute('data-theme', STATE.theme);
-  document.getElementById('themeToggle').setAttribute('aria-pressed', String(STATE.theme === 'dark'));
+  document.querySelectorAll('.theme-option').forEach(btn=>{
+    btn.setAttribute('aria-pressed', String(btn.dataset.themeChoice === STATE.theme));
+  });
   document.documentElement.style.setProperty('--font-scale', STATE.fontScale);
 }
 
@@ -439,6 +444,9 @@ function renderSidebar(){
   </button></li>`;
   html += `<li><button class="side-module-item ${STATE.route.view==='bookmarks'?'active':''}" data-view="bookmarks">
     <span class="tool-icon">${ICONS.star}</span><span style="flex:1">Bookmarks</span>${STATE.favorites.size?`<span class="m-num">${STATE.favorites.size}</span>`:''}
+  </button></li>`;
+  html += `<li><button class="side-module-item ${STATE.route.view==='library'?'active':''}" data-view="library">
+    <span class="tool-icon">${ICONS.library}</span><span style="flex:1">Library</span>
   </button></li>`;
   html += '</ul></div>';
 
@@ -926,6 +934,101 @@ function renderBookmarks(){
         <p class="mcard-hook">${m.hook}</p>
       </button>`).join('') + '</div>';
   }
+  document.getElementById('main').innerHTML = html;
+}
+
+let LIB_FILTER = 'all';
+let LIB_QUERY = '';
+
+function categorizeResourceType(type){
+  const t = (type||'').toLowerCase();
+  if(t.includes('video') || t.includes('course') || t.includes('channel') || t.includes('playlist')) return 'video';
+  if(t.includes('book')) return 'book';
+  if(t.includes('article') || t.includes('site') || t.includes('historical')) return 'article';
+  return 'other';
+}
+
+function getAllLibraryResources(){
+  const rows = [];
+  CURRICULUM.forEach(path=>{
+    if(path.status !== 'live' || !path.modules) return;
+    path.modules.forEach(m=>{
+      (m.resources||[]).forEach((r, ri)=>{
+        rows.push({r, ri, m, path});
+      });
+    });
+  });
+  return rows;
+}
+
+function renderResourceCard(r, ri, m){
+  const ytId = r.videoId || getYouTubeId(r.url);
+  const opened = STATE.resourcesOpened[m.id] && STATE.resourcesOpened[m.id].has(ri);
+  return `
+  <div class="res-card">
+    <span class="res-type">${r.type}</span>
+    <div class="res-body">
+      <div class="res-title">${r.url ? `<a href="${r.url}" target="_blank" rel="noopener" data-res-open="${m.id}" data-res-index="${ri}">${r.title}</a>` : r.title}</div>
+      <div class="res-creator">${r.creator}</div>
+      <div class="res-why">${r.why}</div>
+      <div class="res-badges">
+        ${r.verified ? `<span class="res-verified">${ICONS.toastCheck} Checked</span>` : ''}
+        ${opened ? `<span class="res-opened">${ICONS.check} Opened</span>` : ''}
+      </div>
+      ${ytId ? `
+      <div class="video-embed-wrap" data-yt-id="${ytId}" data-res-module="${m.id}" data-res-idx="${ri}">
+        <img src="https://img.youtube.com/vi/${ytId}/hqdefault.jpg" alt="" loading="lazy">
+        <button class="video-play-btn" aria-label="Play video inline" data-yt-id="${ytId}" data-res-module="${m.id}" data-res-idx="${ri}">${ICONS.play}</button>
+      </div>` : ''}
+      <span class="library-source">${m.title} \u00b7 Plate ${m.plate}</span>
+    </div>
+  </div>`;
+}
+
+function renderLibrary(){
+  const all = getAllLibraryResources();
+  const counts = {all: all.length, video:0, article:0, book:0, other:0};
+  all.forEach(row=>{ counts[categorizeResourceType(row.r.type)]++; });
+
+  let filtered = LIB_FILTER === 'all' ? all : all.filter(row=>categorizeResourceType(row.r.type) === LIB_FILTER);
+  if(LIB_QUERY.trim()){
+    const q = LIB_QUERY.trim().toLowerCase();
+    filtered = filtered.filter(row=>
+      (row.r.title||'').toLowerCase().includes(q) ||
+      (row.r.creator||'').toLowerCase().includes(q) ||
+      (row.m.title||'').toLowerCase().includes(q)
+    );
+  }
+
+  const filterDefs = [
+    {key:'all', label:'All'},
+    {key:'video', label:'Videos'},
+    {key:'article', label:'Articles'},
+    {key:'book', label:'Books'},
+    {key:'other', label:'Other'}
+  ];
+
+  let html = `
+  <div class="breadcrumb"><button data-nav-home>Atelier</button> ${ICONS.chevronRight} <span>Library</span></div>
+  <div class="hero">
+    <div class="eyebrow">Every resource, in one place</div>
+    <h1>Resource Library</h1>
+    <p class="hero-sub">Every free video, article, and book cited across the whole course \u2014 ${all.length} resources so far, all checked, all free, all playable or readable without leaving Atelier.</p>
+  </div>
+  <div class="library-search">
+    ${ICONS.link}
+    <input type="search" id="librarySearchInput" placeholder="Search by title, creator, or module\u2026" value="${LIB_QUERY.replace(/"/g,'&quot;')}" aria-label="Search the library">
+  </div>
+  <div class="library-filters">
+    ${filterDefs.map(f=>`<button class="library-filter-btn ${LIB_FILTER===f.key?'active':''}" data-lib-filter="${f.key}">${f.label} <span class="m-num">${counts[f.key]}</span></button>`).join('')}
+  </div>`;
+
+  if(!filtered.length){
+    html += `<div class="library-empty">${ICONS.empty}<p>Nothing matches that search yet \u2014 try a different term or filter.</p></div>`;
+  } else {
+    html += `<div class="library-grid">${filtered.map(row=>renderResourceCard(row.r, row.ri, row.m)).join('')}</div>`;
+  }
+
   document.getElementById('main').innerHTML = html;
 }
 
@@ -1503,6 +1606,9 @@ function initEvents(){
     const viewBtn = e.target.closest('[data-view]');
     if(viewBtn){ navigateView(viewBtn.dataset.view); return; }
 
+    const libFilterBtn = e.target.closest('[data-lib-filter]');
+    if(libFilterBtn){ LIB_FILTER = libFilterBtn.dataset.libFilter; renderLibrary(); return; }
+
     const pathJump = e.target.closest('[data-path-jump]');
     if(pathJump){ openPathOnHome(pathJump.dataset.pathJump); return; }
 
@@ -1624,12 +1730,44 @@ function initEvents(){
   window.addEventListener('pagehide', flushNotesSave);
 
   document.getElementById('searchInput').addEventListener('input', (e)=>handleSearch(e.target.value));
+  document.body.addEventListener('input', (e)=>{
+    if(e.target.id === 'librarySearchInput'){
+      LIB_QUERY = e.target.value;
+      const caret = e.target.selectionStart;
+      renderLibrary();
+      const revived = document.getElementById('librarySearchInput');
+      if(revived){ revived.focus(); revived.setSelectionRange(caret, caret); }
+    }
+  });
   document.getElementById('homeLink').addEventListener('click', (e)=>{ e.preventDefault(); navigateHome(); });
 
-  document.getElementById('themeToggle').addEventListener('click', ()=>{
-    STATE.theme = STATE.theme === 'dark' ? 'light' : 'dark';
-    saveProgress();
-    updateChrome();
+  document.getElementById('themeToggle').addEventListener('click', (e)=>{
+    e.stopPropagation();
+    const menu = document.getElementById('themePickerMenu');
+    const willOpen = !menu.classList.contains('open');
+    menu.classList.toggle('open', willOpen);
+    document.getElementById('themeToggle').setAttribute('aria-expanded', String(willOpen));
+  });
+  document.querySelectorAll('.theme-option').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      STATE.theme = btn.dataset.themeChoice;
+      saveProgress();
+      updateChrome();
+      document.getElementById('themePickerMenu').classList.remove('open');
+      document.getElementById('themeToggle').setAttribute('aria-expanded', 'false');
+    });
+  });
+  document.addEventListener('click', (e)=>{
+    if(!e.target.closest('.theme-picker')){
+      document.getElementById('themePickerMenu').classList.remove('open');
+      document.getElementById('themeToggle').setAttribute('aria-expanded', 'false');
+    }
+  });
+  document.addEventListener('keydown', (e)=>{
+    if(e.key === 'Escape'){
+      document.getElementById('themePickerMenu').classList.remove('open');
+      document.getElementById('themeToggle').setAttribute('aria-expanded', 'false');
+    }
   });
 
   document.getElementById('fontUp').addEventListener('click', ()=>{
