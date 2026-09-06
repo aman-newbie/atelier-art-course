@@ -37,7 +37,7 @@ const CURRICULUM_1 = [
         },
         resources:[
           {type:'Read', title:'"I\'m teaching myself to draw. Now what?"', creator:'Ctrl+Paint — Matt Kohr', url:'https://www.ctrlpaint.com/blog/im-teaching-myself-to-draw-now-what', why:'A short, honest post on how to structure self-taught practice and what to draw when there\'s no assignment telling you what to do — exactly the gap this module is meant to fill.', verified:true},
-          {type:'Book', title:'Peak: Secrets from the New Science of Expertise', creator:'Anders Ericsson & Robert Pool', url:'', why:'The actual research behind "deliberate practice," written by the psychologist whose studies are cited (often secondhand and garbled) in nearly every "talent is a myth" art video on YouTube. Worth reading the primary source once.', verified:true},
+          {type:'Article', title:'The Beginner\'s Guide to Deliberate Practice', creator:'James Clear', url:'https://jamesclear.com/beginners-guide-deliberate-practice', why:'A free, practical breakdown of the deliberate-practice research behind Ericsson and Pool\'s "Peak" \u2014 the same psychology, cited correctly, in a single free article instead of a book purchase.', verified:true},
           {type:'Site', title:'Drawabox — How the course works', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/1', why:'You\'ll be using Drawabox heavily starting Module 4. Its homework-and-critique structure is itself a model of deliberate practice worth understanding before you start.', verified:true}
         ],
         quiz:[
@@ -236,7 +236,7 @@ const CURRICULUM_1 = [
           challenge:"Copy a simple reference image upside-down, then flip it right-side-up and compare the result to how the drawing would likely have gone the normal way. Write down what changed."
         },
         resources:[
-          {type:'Book', title:'Drawing on the Right Side of the Brain', creator:'Betty Edwards', url:'https://www.drawright.com/', why:"The definitive source for the upside-down drawing and symbolic-seeing exercises this module is built on. A multi-million-copy bestseller and still the clearest explanation available of why observation training works the way it does.", verified:true},
+          {type:'Article', title:'Blind Contour Drawing Can Help You Become a Better Artist', creator:'Artsy \u2014 on Nicola\u00efdes & Edwards\' contour method', url:'https://www.artsy.net/article/artsy-editorial-blind-contour-drawing-help-better-artist', why:"A free article covering the same blind-contour observation exercise Edwards popularized in her bestseller, with enough detail to actually run it without buying the book.", verified:true},
           {type:'Video Library', title:'Free Library — Traditional Drawing, Visual Measuring', creator:'Ctrl+Paint (Matt Kohr)', url:'https://www.ctrlpaint.com/library', why:"Section 2 of the free library includes a visual-measuring and sighting primer aimed specifically at beginners without prior traditional training.", verified:true}
         ],
         quiz:[
