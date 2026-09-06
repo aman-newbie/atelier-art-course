@@ -116,20 +116,60 @@ function totalQuizCorrect(){
   return n;
 }
 
+function arcProgress(pathId){
+  const path = CURRICULUM.find(p=>p.id===pathId);
+  if(!path) return {done:0, total:0};
+  const real = path.modules.filter(m=>!m.stub);
+  const done = real.filter(m=>STATE.completed.has(m.id)).length;
+  return {done, total:real.length};
+}
+function notedModuleCount(s){
+  return Object.values(s.notes).filter(t=>t && t.trim().length>0).length;
+}
+function totalResourcesOpened(s){
+  return Object.values(s.resourcesOpened).reduce((sum,set)=>sum + (set ? set.size : 0), 0);
+}
+
 const ACHIEVEMENTS = [
-  {id:'first-mark', title:'First Mark', desc:'Complete your first module.', check:s=>s.completed.size>=1},
-  {id:'foundations-grad', title:'Foundations Graduate', desc:'Complete every Foundations module.', check:()=>pathFullyComplete('foundations')},
-  {id:'perspective-grad', title:'Perspective Graduate', desc:'Complete every Perspective & Construction module.', check:()=>pathFullyComplete('perspective')},
-  {id:'portrait-grad', title:'Portrait Graduate', desc:'Complete every Head & Portrait module.', check:()=>pathFullyComplete('portrait')},
-  {id:'century', title:'Century Club', desc:'Earn 100 XP.', check:s=>s.xp>=100},
-  {id:'five-hundred', title:'500 Club', desc:'Earn 500 XP.', check:s=>s.xp>=500},
-  {id:'thousand', title:'1000 Club', desc:'Earn 1,000 XP.', check:s=>s.xp>=1000},
-  {id:'quiz-sharp', title:'Sharp', desc:'Answer 20 quick-check questions correctly.', check:()=>totalQuizCorrect()>=20},
-  {id:'three-day', title:'3-Day Streak', desc:'Come back three days in a row.', check:s=>s.streak>=3},
-  {id:'week-strong', title:'Week Strong', desc:'Come back seven days in a row.', check:s=>s.streak>=7},
-  {id:'month-strong', title:'Thirty Days In', desc:'Come back thirty days in a row.', check:s=>s.streak>=30},
-  {id:'curator', title:'Curator', desc:'Bookmark 3 modules.', check:s=>s.favorites.size>=3},
-  {id:'reflective', title:'Reflective Practice', desc:'Write your first note.', check:s=>Object.values(s.notes).some(t=>t&&t.trim().length>0)}
+  {id:'first-mark', title:'First Mark', desc:'Complete your first module.', check:s=>s.completed.size>=1,
+    progress:s=>`${Math.min(s.completed.size,1)}/1 modules`},
+  {id:'foundations-grad', title:'Foundations Graduate', desc:'Complete every Foundations module.', check:()=>pathFullyComplete('foundations'),
+    progress:()=>{const p=arcProgress('foundations'); return `${p.done}/${p.total} modules`;}},
+  {id:'perspective-grad', title:'Perspective Graduate', desc:'Complete every Perspective & Construction module.', check:()=>pathFullyComplete('perspective'),
+    progress:()=>{const p=arcProgress('perspective'); return `${p.done}/${p.total} modules`;}},
+  {id:'portrait-grad', title:'Portrait Graduate', desc:'Complete every Head & Portrait module.', check:()=>pathFullyComplete('portrait'),
+    progress:()=>{const p=arcProgress('portrait'); return `${p.done}/${p.total} modules`;}},
+  {id:'anatomy-grad', title:'Anatomy Graduate', desc:'Complete every Body & Anatomy module.', check:()=>pathFullyComplete('anatomy'),
+    progress:()=>{const p=arcProgress('anatomy'); return `${p.done}/${p.total} modules`;}},
+  {id:'nature-grad', title:'Nature Graduate', desc:'Complete every Nature & Architecture module.', check:()=>pathFullyComplete('nature-arch'),
+    progress:()=>{const p=arcProgress('nature-arch'); return `${p.done}/${p.total} modules`;}},
+  {id:'creature-grad', title:'Creature Feature', desc:'Complete every Creatures & Hard Surface module.', check:()=>pathFullyComplete('creatures-hardsurface'),
+    progress:()=>{const p=arcProgress('creatures-hardsurface'); return `${p.done}/${p.total} modules`;}},
+  {id:'well-rounded', title:'Well-Rounded', desc:'Complete at least one module in every live arc.', check:s=>getLivePaths().every(p=>p.modules.filter(m=>!m.stub).some(m=>s.completed.has(m.id))),
+    progress:s=>`${getLivePaths().filter(p=>p.modules.filter(m=>!m.stub).some(m=>s.completed.has(m.id))).length}/${getLivePaths().length} arcs started`},
+  {id:'halfway', title:'Halfway There', desc:'Complete half of all live modules.', check:s=>s.completed.size>=Math.ceil(TOTAL_LIVE_MODULES/2),
+    progress:s=>`${s.completed.size}/${Math.ceil(TOTAL_LIVE_MODULES/2)} modules`},
+  {id:'completionist', title:'Completionist', desc:'Complete every live module in Atelier.', check:s=>s.completed.size>=TOTAL_LIVE_MODULES,
+    progress:s=>`${s.completed.size}/${TOTAL_LIVE_MODULES} modules`},
+  {id:'century', title:'Century Club', desc:'Earn 100 XP.', check:s=>s.xp>=100, progress:s=>`${Math.min(s.xp,100)}/100 XP`},
+  {id:'five-hundred', title:'500 Club', desc:'Earn 500 XP.', check:s=>s.xp>=500, progress:s=>`${Math.min(s.xp,500)}/500 XP`},
+  {id:'thousand', title:'1000 Club', desc:'Earn 1,000 XP.', check:s=>s.xp>=1000, progress:s=>`${Math.min(s.xp,1000)}/1,000 XP`},
+  {id:'quiz-sharp', title:'Sharp', desc:'Answer 20 quick-check questions correctly.', check:()=>totalQuizCorrect()>=20,
+    progress:()=>`${Math.min(totalQuizCorrect(),20)}/20 correct`},
+  {id:'quiz-scholar', title:'Scholar', desc:'Answer 50 quick-check questions correctly.', check:()=>totalQuizCorrect()>=50,
+    progress:()=>`${Math.min(totalQuizCorrect(),50)}/50 correct`},
+  {id:'three-day', title:'3-Day Streak', desc:'Come back three days in a row.', check:s=>s.streak>=3, progress:s=>`${Math.min(s.streak,3)}/3 days`},
+  {id:'week-strong', title:'Week Strong', desc:'Come back seven days in a row.', check:s=>s.streak>=7, progress:s=>`${Math.min(s.streak,7)}/7 days`},
+  {id:'two-week', title:'Two Weeks Strong', desc:'Come back fourteen days in a row.', check:s=>s.streak>=14, progress:s=>`${Math.min(s.streak,14)}/14 days`},
+  {id:'month-strong', title:'Thirty Days In', desc:'Come back thirty days in a row.', check:s=>s.streak>=30, progress:s=>`${Math.min(s.streak,30)}/30 days`},
+  {id:'curator', title:'Curator', desc:'Bookmark 3 modules.', check:s=>s.favorites.size>=3, progress:s=>`${Math.min(s.favorites.size,3)}/3 bookmarks`},
+  {id:'collector', title:'Collector', desc:'Bookmark 6 modules.', check:s=>s.favorites.size>=6, progress:s=>`${Math.min(s.favorites.size,6)}/6 bookmarks`},
+  {id:'reflective', title:'Reflective Practice', desc:'Write your first note.', check:s=>notedModuleCount(s)>=1,
+    progress:s=>`${Math.min(notedModuleCount(s),1)}/1 notes`},
+  {id:'chronicler', title:'Chronicler', desc:'Write notes in 5 different modules.', check:s=>notedModuleCount(s)>=5,
+    progress:s=>`${Math.min(notedModuleCount(s),5)}/5 modules noted`},
+  {id:'resourceful', title:'Resourceful', desc:'Open 15 supplementary resources across any modules.', check:s=>totalResourcesOpened(s)>=15,
+    progress:s=>`${Math.min(totalResourcesOpened(s),15)}/15 opened`}
 ];
 
 function computeUnlocked(){
@@ -695,7 +735,7 @@ function renderCalendar(){
     const dateKey = monthPrefix + '-' + String(day).padStart(2,'0');
     const isToday = dateKey === todayStr;
     const isActive = !!STATE.activityLog[dateKey];
-    cells += `<div class="cal-cell ${isActive?'cal-active':''} ${isToday?'cal-today':''}"><span>${day}</span>${isActive?ICONS.check:''}</div>`;
+    cells += `<div class="cal-cell ${isActive?'cal-active':''} ${isToday?'cal-today':''}"><div class="cal-day-badge">${day}</div></div>`;
   }
 
   const activeDaysThisMonth = Object.keys(STATE.activityLog).filter(k=>k.indexOf(monthPrefix)===0).length;
@@ -821,6 +861,11 @@ function renderPractice(){
       <button data-mins="10">10 min</button>
       <button data-mins="20">20 min</button>
     </div>
+    <div class="timer-custom">
+      <input type="number" id="customMinutesInput" min="1" max="180" step="1" placeholder="Custom">
+      <span>min</span>
+      <button class="btn btn-ghost" id="setCustomTimer">Set</button>
+    </div>
     <div class="timer-controls">
       <button id="timerStart" class="btn btn-primary">${ICONS.play} Start</button>
       <button id="timerPause" class="btn btn-ghost">${ICONS.pause} Pause</button>
@@ -835,6 +880,12 @@ function renderPractice(){
   </div>`;
   resetTimer();
   refresherState = null;
+  const customInput = document.getElementById('customMinutesInput');
+  if(customInput){
+    customInput.addEventListener('keydown', (e)=>{
+      if(e.key === 'Enter'){ e.preventDefault(); document.getElementById('setCustomTimer').click(); }
+    });
+  }
 }
 
 function renderAchievements(){
@@ -849,13 +900,16 @@ function renderAchievements(){
   <div class="module-grid">`;
   ACHIEVEMENTS.forEach(a=>{
     const unlocked = current.has(a.id);
-    html += `<div class="mcard achievement-card ${unlocked?'unlocked':'locked'}">
+    const progressLabel = a.progress ? a.progress(STATE) : null;
+    const inProgress = !unlocked && progressLabel && !progressLabel.startsWith('0/');
+    html += `<div class="mcard achievement-card ${unlocked?'unlocked':(inProgress?'locked in-progress':'locked')}">
       <div class="mcard-top">
         <span class="plate-id">${unlocked?ICONS.stamp:ICONS.lock}</span>
         ${unlocked?'<span class="stamp">Unlocked</span>':''}
       </div>
       <h3>${a.title}</h3>
       <p class="mcard-hook">${a.desc}</p>
+      ${progressLabel ? `<p class="achv-progress">${unlocked?'Completed \u00b7 ':''}${progressLabel}</p>` : ''}
     </div>`;
   });
   html += '</div>';
@@ -1451,6 +1505,9 @@ function newPrompt(){
    or module completion, on purpose, so replaying it can't be used to farm
    XP through the completion gate. */
 let refresherState = null;
+let refresherQueue = [];
+let refresherPoolSignature = '';
+let lastRefresherKey = null;
 function pickRefresherPool(){
   const pool = [];
   getAllLiveModules().forEach(({m})=>{
@@ -1462,15 +1519,39 @@ function pickRefresherPool(){
   });
   return pool;
 }
+function shuffleArray(arr){
+  const a = arr.slice();
+  for(let i=a.length-1; i>0; i--){
+    const j = Math.floor(Math.random()*(i+1));
+    const tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+  }
+  return a;
+}
+function refresherKey(item){ return item.m.id + ':' + item.qi; }
+function nextRefresherItem(){
+  const pool = pickRefresherPool();
+  if(!pool.length) return null;
+  const signature = pool.map(refresherKey).sort().join(',');
+  if(signature !== refresherPoolSignature || refresherQueue.length === 0){
+    refresherPoolSignature = signature;
+    const shuffled = shuffleArray(pool);
+    if(shuffled.length > 1 && lastRefresherKey && refresherKey(shuffled[0]) === lastRefresherKey){
+      const tmp = shuffled[0]; shuffled[0] = shuffled[1]; shuffled[1] = tmp;
+    }
+    refresherQueue = shuffled;
+  }
+  const item = refresherQueue.shift();
+  lastRefresherKey = refresherKey(item);
+  return item;
+}
 function renderRefresherQuestion(){
   const wrap = document.getElementById('refresherWrap');
   if(!wrap) return;
-  const pool = pickRefresherPool();
-  if(!pool.length){
+  const pick = nextRefresherItem();
+  if(!pick){
     wrap.innerHTML = `<div class="empty-state" style="padding:var(--sp-6) var(--sp-4)">${ICONS.empty}<p>Answer a quiz question in any module first, then come back here \u2014 refreshers are pulled from things you've actually already studied.</p></div>`;
     return;
   }
-  const pick = pool[Math.floor(Math.random()*pool.length)];
   refresherState = {moduleId: pick.m.id, qi: pick.qi, answered: false};
   wrap.innerHTML = `
     <div class="quiz-card">
@@ -1713,6 +1794,18 @@ function initEvents(){
 
     const timerResetBtn = e.target.closest('#timerReset');
     if(timerResetBtn){ resetTimer(); return; }
+
+    const setCustomBtn = e.target.closest('#setCustomTimer');
+    if(setCustomBtn){
+      const input = document.getElementById('customMinutesInput');
+      let mins = parseFloat(input.value);
+      if(!mins || mins<=0){ showToast('Enter a number of minutes first.'); return; }
+      mins = Math.round(Math.min(Math.max(mins,1),180));
+      document.querySelectorAll('.timer-presets button').forEach(b=>b.classList.remove('active'));
+      setTimerPreset(mins, null);
+      showToast('Timer set to ' + mins + ' min.');
+      return;
+    }
 
     const continueBtn = e.target.closest('#continueBtn');
     if(continueBtn){
