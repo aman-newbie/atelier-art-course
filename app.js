@@ -1068,6 +1068,7 @@ function renderResourceCard(r, ri, m){
       <div class="res-title">${r.url ? `<a href="${r.url}" target="_blank" rel="noopener" data-res-open="${m.id}" data-res-index="${ri}">${r.title}</a>` : r.title}</div>
       <div class="res-creator">${r.creator}</div>
       <div class="res-why">${r.why}</div>
+      ${r.summary ? `<div class="res-summary"><span class="res-summary-label">What it teaches</span>${r.summary}</div>` : ''}
       <div class="res-badges">
         ${r.verified ? `<span class="res-verified">${ICONS.toastCheck} Checked</span>` : ''}
         ${opened ? `<span class="res-opened">${ICONS.check} Opened</span>` : ''}
@@ -1173,6 +1174,7 @@ function renderTabContent(m, tab, checkedSet){
           <div class="res-title">${r.url ? `<a href="${r.url}" target="_blank" rel="noopener" data-res-open="${m.id}" data-res-index="${ri}">${r.title}</a>` : r.title}</div>
           <div class="res-creator">${r.creator}</div>
           <div class="res-why">${r.why}</div>
+          ${r.summary ? `<div class="res-summary"><span class="res-summary-label">What it teaches</span>${r.summary}</div>` : ''}
           <div class="res-badges">
             ${r.verified ? `<span class="res-verified">${ICONS.toastCheck} Checked</span>` : ''}
             ${opened ? `<span class="res-opened">${ICONS.check} Opened</span>` : ''}
