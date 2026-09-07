@@ -654,6 +654,10 @@ svg{display:block;}
   background-position:-60px -40px, right -80px bottom -100px;
   background-size:420px 420px, 480px 480px;
   transition:opacity var(--dur-slow) var(--ease);
+  /* Fixed-position + a large background is expensive to repaint on scroll on
+     mobile GPUs. Promote it to its own compositor layer once, up front,
+     instead of letting the browser redo this work on every scroll frame. */
+  will-change:transform; transform:translateZ(0); contain:paint;
 }
 [data-theme="dark"] .art-backdrop{
   opacity:.16;
@@ -792,7 +796,10 @@ svg{display:block;}
 }
 [data-theme="custom"] .art-backdrop{
   opacity:.9; background-image:var(--custom-bg-image, none); background-size:cover;
-  background-position:center; filter:saturate(.85);
+  background-position:center;
+  /* No live filter here on purpose — a CSS filter on a full-viewport fixed
+     background forces the browser to re-rasterize it every scroll frame,
+     which is exactly what caused the load-in stutter while scrolling. */
 }
 [data-theme="custom"] .art-backdrop::after{
   content:''; position:absolute; inset:0; background:var(--bg); opacity:.72;
