@@ -487,15 +487,36 @@ function renderApp(){
   if(STATE.route.view !== 'search') saveProgress();
 }
 
+let lastAppliedCustomBg = undefined;
+function applyCustomBackground(url){
+  url = url || '';
+  if(url === lastAppliedCustomBg) return; /* already applied (or being applied) — avoid redoing this on every render */
+  if(!url){
+    document.documentElement.style.removeProperty('--custom-bg-image');
+    lastAppliedCustomBg = url;
+    return;
+  }
+  /* Preload fully before it ever becomes a CSS background, so it can't pop in
+     mid-scroll — by the time it's assigned, the browser has already decoded it. */
+  const img = new Image();
+  img.onload = ()=>{
+    if(STATE.customBgUrl === url){
+      document.documentElement.style.setProperty('--custom-bg-image', `url("${url.replace(/"/g,'')}")`);
+      lastAppliedCustomBg = url;
+    }
+  };
+  img.onerror = ()=>{
+    if(lastAppliedCustomBg === url) lastAppliedCustomBg = undefined;
+  };
+  img.src = url;
+}
 function updateChrome(){
   document.getElementById('xpValue').textContent = STATE.xp;
   document.documentElement.setAttribute('data-theme', STATE.theme);
   document.querySelectorAll('.theme-option').forEach(btn=>{
     btn.setAttribute('aria-pressed', String(btn.dataset.themeChoice === STATE.theme));
   });
-  if(STATE.customBgUrl){
-    document.documentElement.style.setProperty('--custom-bg-image', `url("${STATE.customBgUrl.replace(/"/g,'')}")`);
-  }
+  applyCustomBackground(STATE.customBgUrl);
   const customUrlInput = document.getElementById('themeCustomUrl');
   if(customUrlInput && document.activeElement !== customUrlInput) customUrlInput.value = STATE.customBgUrl || '';
   document.documentElement.style.setProperty('--font-scale', STATE.fontScale);
@@ -2181,7 +2202,7 @@ function initEvents(){
       const img = new Image();
       img.onload = ()=>{
         // Downscale to keep this lightweight in storage and fast to paint as a background.
-        const maxDim = 1600;
+        const maxDim = 1280; /* phone viewport widths rarely exceed this; lighter to decode + composite as a fixed full-screen background */
         let {width, height} = img;
         if(width > maxDim || height > maxDim){
           const scale = maxDim / Math.max(width, height);
