@@ -26,6 +26,6 @@
    free-tier "flash" model name and update geminiModel to match.
    ============================================================ */
 window.ATELIER_CONFIG = {
-  geminiApiKey: 'PASTE_YOUR_GEMINI_KEY_HERE',
+  geminiApiKey: 'AQ.Ab8RN6JDBCU1OuhwuaEjOcNYBTToT0bbcTAUWIcobQ9iR0BRVw',
   geminiModel: 'gemini-2.5-flash'
 };
