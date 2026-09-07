@@ -5,7 +5,6 @@
 const TRANSLATIONS_HI = {
 
   m1: {
-    title: 'Soch aur Shuruaat',
     hook: "'Talent' galat sawaal hai \u2014 asli cheez jo track karni chahiye, wo alag hai.",
     whyItMatters: [
       "Har professional artist jisse tum impress hote ho, usne bhi saalon tak bilkul waisi hi drawings banayi hain jaisi tumhari pehli drawings hongi. Drawing ek seekha hua visual-motor skill hai \u2014 kisi instrument seekhne jaisa, na ki lambi height jaisa. Aur research bhi isi baat ko support karta hai: psychologist Anders Ericsson ne apni dashko ki study mein expert performers pe research kiya, aur paaya ki deliberate, feedback-wali practice, talent se kahin zyada skill gap explain karti hai.",
@@ -50,7 +49,6 @@ const TRANSLATIONS_HI = {
   },
 
   m2: {
-    title: 'Materials aur Tools',
     hook: "Pehla mark banane se pehle asal mein kya chahiye, aur zyada tar beginner supply lists jitni lambi hoti hain, utni honi nahi chahiye.",
     whyItMatters: [
       "Beginners usually ya to kuch nahi kharidte aur bekaar tools se fight karte hain, ya sab kuch kharid lete hain aur ek confident line banane se pehle hi overwhelmed (aur broke) ho jaate hain. Dono mein se koi bhi kaam nahi aata. Ek short, correct list decision fatigue hata deti hai taaki tumhari energy actual skill pe jaaye, tool anxiety pe nahi.",
@@ -96,7 +94,6 @@ const TRANSLATIONS_HI = {
   },
 
   m3: {
-    title: 'Pencil Kaise Pakdein',
     hook: "Jo grip tumne handwriting ke liye seekha hai, wo drawing ki zaroorat ke aadhe hisse ke liye galat hai. Ye raha wo doosra aadha.",
     whyItMatters: [
       "Zyada tar log sirf writing grip jaante hain \u2014 pencil tip ke paas, haath page pe resting, thumb, index, aur middle finger ke beech tripod hold. Ye chhote, controlled, detailed marks ke liye excellent hai, aur un badi, confident, gestural strokes ke liye almost useless hai jo zyada tar early construction drawing (Module 4 onward) ko actually chahiye hoti hain. Jo beginners kabhi writing grip nahi chhodte unki drawings chhoti, cramped, aur overworked ho jaati hain, kyunki unke haath ko sirf yahi ek motion pata hai.",
@@ -140,7 +137,6 @@ const TRANSLATIONS_HI = {
   },
 
   m4: {
-    title: 'Haath Par Control',
     hook: "Is course ka sabse important motor-skill module: confident lines, clean ellipses, aur wo method jo professionals kisi mark ko commit karne se pehle plan karne ke liye use karte hain.",
     whyItMatters: [
       "Is module ke baad har skill \u2014 perspective, construction, rendering, anatomy \u2014 ye assume karti hai ki tumhara haath line ko wahi rakh sakta hai jahan tumhari aankh chahti hai, jitni length aur curve tum chahte ho, ek confident pass mein. Is foundation ke bina seedha \"fun\" subjects pe jump karna self-taught artists ke plateau hone ki sabse common wajah hai: unki understanding unke haath ki actual execution capability se aage nikal jaati hai, aur har drawing apne hi tools ke against ek fight jaisi feel hoti hai.",
