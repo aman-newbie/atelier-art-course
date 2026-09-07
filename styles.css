@@ -349,6 +349,13 @@ svg{display:block;}
 .res-title a:hover{color:var(--blue);}
 .res-creator{font-size:calc(12.5px * var(--font-scale)); color:var(--text-faint); margin-bottom:var(--sp-2); font-family:var(--font-mono);}
 .res-why{font-size:calc(13.5px * var(--font-scale)); color:var(--text-muted); line-height:1.6;}
+.res-summary{
+  background:var(--surface); border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+  padding:var(--sp-3) var(--sp-4); margin-top:var(--sp-2); font-size:calc(13px * var(--font-scale)); color:var(--text-muted); line-height:1.6;
+}
+.res-summary-label{
+  display:block; font-family:var(--font-mono); font-size:calc(9.5px * var(--font-scale)); letter-spacing:.5px; text-transform:uppercase; color:var(--text-faint); margin-bottom:4px;
+}
 .res-verified{
   display:inline-flex; align-items:center; gap:4px; font-family:var(--font-mono); font-size:calc(9.5px * var(--font-scale)); letter-spacing:.5px;
   color:var(--red); border:1px solid var(--red); border-radius:3px; padding:2px 6px; margin-top:var(--sp-2);
