@@ -137,6 +137,53 @@ const TRANSLATIONS_HI = {
       "Main construction lines ke liye final lines se noticeably lighter pressure use kar raha/rahi hoon."
     ],
     nextStep: "Hand Control \u2014 poore course ka sabse important motor-skill module: confident lines, clean ellipses, aur ghosting method jo professionals actually use karte hain."
+  },
+
+  m4: {
+    title: 'Haath Par Control',
+    hook: "Is course ka sabse important motor-skill module: confident lines, clean ellipses, aur wo method jo professionals kisi mark ko commit karne se pehle plan karne ke liye use karte hain.",
+    whyItMatters: [
+      "Is module ke baad har skill \u2014 perspective, construction, rendering, anatomy \u2014 ye assume karti hai ki tumhara haath line ko wahi rakh sakta hai jahan tumhari aankh chahti hai, jitni length aur curve tum chahte ho, ek confident pass mein. Is foundation ke bina seedha \"fun\" subjects pe jump karna self-taught artists ke plateau hone ki sabse common wajah hai: unki understanding unke haath ki actual execution capability se aage nikal jaati hai, aur har drawing apne hi tools ke against ek fight jaisi feel hoti hai.",
+      "Ye naturally steady hone ke baare mein nahi hai. Ye ek specific, seekhi ja sakne wali technique hai \u2014 repetition se practice ki jaati hai bilkul waise jaise kisi instrument pe scales practice ki jaati hain \u2014 aur professional illustrators bhi real kaam shuru karne se pehle inhi exact drills se warm up karte hain."
+    ],
+    coreIdea: [
+      "<b>Ghosting method</b>, jo Drawabox ki teaching ka core hai: kisi line ko real mein commit karne se pehle, paper ke thoda upar hi intended path ko hawa mein kayi baar trace karo, start point, end point, aur arc plan karte hue, taaki tumhara arm us motion ko paper pe hone se pehle hi jaan le. Phir usse ek confident, continuous stroke mein execute karo.",
+      "Shoulder se draw karo, wrist se nahi, kisi bhi cheez ke liye jo do-teen inch se lambi ho \u2014 ye directly Module 3 ke overhand grip pe based hai. Sirf-wrist motion ka natural arc chhota aur curved hota hai jo lambi straight lines ko wobble kara deta hai chahe tum kitna bhi careful raho.",
+      "<b>\"Drawing through\":</b> circles ya ellipses practice karte waqt, shape ke around do-teen baar ek continuous motion mein jao pencil uthane se pehle, single slow pass mein nail karne ki koshish karne ke bajaye. Repeated passes muscle memory banate hain aur shape ko smooth settle hone dete hain, chahe first pass wobble kare.",
+      "Ellipses ka ek <b>degree</b> hota hai (wo kitni narrow ya wide dikhti hain, viewer ke relative unki rotation ke hisaab se) aur ek <b>minor axis</b> (line jo ellipse ke narrowest point se guzarti hai). Ye directly Module 7 set up karta hai: ellipses cylinders ke ends ban jaate hain, jo un chaar basic 3D forms mein se ek hain jinse is course mein baaki sab kuch eventually banaya jaata hai.",
+      "Ek confident line, chahe wo imperfect hi ho, tumhare haath ko zyada sikhaati hai aur zyada resolved dikhti hai paanch overlapping, hesitant \"searching\" lines se jo sahi path dhoondh rahi hon. Loose, searching construction early blocking-in ke dauraan theek hai; final lines committed honi chahiye."
+    ],
+    mistakes: [
+      "Sirf wrist se draw karna, jo short, curved, uncontrolled lines banata hai lambi straight lines ke bajaye.",
+      "Ghosting step skip karna aur seedha jaana \u2014 jo exactly wahi wobbly, uncertain lines banata hai jo ye method rokne ke liye exist karta hai.",
+      "Ek \"perfect\" ellipse ek slow, careful pass mein banane ki koshish karna, usse draw-through karne ke bajaye. Slow aur careful yahan precision nahi, wobble banata hai.",
+      "Baar baar ek line pe scribble karke usse \"dhoondhne\" ki koshish karna, ek confident stroke commit karne ke bajaye, chahe wo flawed hi ho.",
+      "Ek lambi session mein hafte mein ek baar practice karna, most days short session karne ke bajaye. Ye ek motor-memory skill hai, aur motor memory ko frequent, short repetition chahiye, occasional marathon sessions se kahin zyada."
+    ],
+    proTips: [
+      "Kisi bhi precision drill se pehle tees second loose, goal-less scribbling se warm up karo \u2014 seedha cold precise lines pe jaana ek proper warm-up se worse results deta hai.",
+      "Agar koi line galat aaye, usse dobara jaake fix mat karo. Uske bagal mein hi corrected line draw karo aur aage badho. Ek single line ko overwork karna ek haarti hui ladai hai.",
+      "Ghosting ko is module ki har mark ke liye default habit maano, chahe simple marks ho bhi, sirf hard lines ke liye occasional technique nahi."
+    ],
+    practice: {
+      warmup: "Do minute loose scribbling koi goal ke bina, sirf arm aur shoulder loosen karne ke liye.",
+      daily: "Ek page superimposed lines ka (same straight line baar baar banana, exactly previous pass pe land karne ki koshish karte hue), ek page ghosted straight lines ka do dots ke beech, aur ek page circles aur ellipses ka jo har ek ko do-teen baar draw-through kiya gaya ho.",
+      weekly: "Drawabox ka poora ellipse-in-a-grid drill complete karo: boxes ke ek grid ko ellipses se bharo jo har box ke chaaron edges ko touch karein, ghosting aur draw-through dono saath use karte hue.",
+      challenge: "Ek page pe alag-alag length aur angle ki pachaas confident straight lines banao das minute se kam mein, koi bhi ghosting pause do second se zyada na ho. Speed stroke ke prati genuine commitment force karti hai."
+    },
+    quiz: [
+      {q:"\"Ghosting method\" kya hai?", options:["Bahut halka draw karna taaki lines invisible ho jaayein","Paper pe commit karne se pehle intended line path ko hawa mein trace karna","Line banane ke turant baad usse erase karna","Aankhen band karke draw karna"], correct:1, explain:"Motion ko pehle hawa mein plan karna matlab tumhara arm page pe pahunchne se pehle hi path jaanta hai."},
+      {q:"Ellipse draw karte waqt, tumhe usse ek slow, careful pass mein perfect karne ki koshish karni chahiye.", options:["True","False"], correct:1, explain:"Usse do-teen baar draw-through karna wo smoothness banata hai jo ek single slow pass nahi bana sakta."},
+      {q:"Ellipse ka \"degree\" kya describe karta hai?", options:["Paper ka temperature","Wo kitni narrow ya wide dikhti hai, viewer ke relative uski rotation ke hisaab se","Use kiya gaya pencil grade","Kitni baar tumne usse trace kiya"], correct:1, explain:"Degree hi wo cheez hai jo ek drawn cylinder ko lagta hai jaise wo actually space mein rotate kar raha hai."}
+    ],
+    checklist: [
+      "Main do points ke beech ek straight line confidently ek pass mein bana sakta/sakti hoon, ghosting method use karke.",
+      "Main ek ellipse ko do-teen baar draw-through karke bana sakta/sakti hoon, usse smooth aur even rakhte hue.",
+      "Main shoulder se draw kar raha/rahi hoon un lines ke liye jo kuch inches se lambi hain, sirf wrist se nahi.",
+      "Maine superimposed-lines exercise ka kam se kam ek poora page complete kiya hai.",
+      "Main ek confident line aur ek searching, sketchy line mein fark explain kar sakta/sakti hoon."
+    ],
+    nextStep: "Observation \u2014 tum kyun \"aankh\" ke liye ek symbol bana rahe ho apne saamne wali actual aankh ke bajaye, aur wo exercises jo is habit ko todte hain."
   }
 
 };
