@@ -1058,11 +1058,17 @@ function renderBookmarks(){
 let LIB_FILTER = 'all';
 let LIB_QUERY = '';
 
-function categorizeResourceType(type){
-  const t = (type||'').toLowerCase();
-  if(t.includes('video') || t.includes('course') || t.includes('channel') || t.includes('playlist')) return 'video';
+function categorizeResourceType(r){
+  const t = ((r && r.type) || '').toLowerCase();
+  /* A resolvable YouTube id means it actually plays inline here \u2014 that's
+     the real test for "video", not the label someone typed. This is what
+     keeps course-platform links and channel homepages (which just open an
+     external tab, same as an article) out of the Video tab. */
+  if(r && (r.videoId || getYouTubeId(r.url))) return 'video';
+  if(t.includes('course')) return 'course';
+  if(t.includes('video') || t.includes('playlist')) return 'video';
   if(t.includes('book')) return 'book';
-  if(t.includes('article') || t.includes('site') || t.includes('historical')) return 'article';
+  if(t.includes('article') || t.includes('site') || t.includes('historical') || t.includes('read')) return 'article';
   return 'other';
 }
 
@@ -1106,10 +1112,10 @@ function renderResourceCard(r, ri, m){
 
 function renderLibrary(){
   const all = getAllLibraryResources();
-  const counts = {all: all.length, video:0, article:0, book:0, other:0};
-  all.forEach(row=>{ counts[categorizeResourceType(row.r.type)]++; });
+  const counts = {all: all.length, video:0, course:0, article:0, book:0, other:0};
+  all.forEach(row=>{ counts[categorizeResourceType(row.r)]++; });
 
-  let filtered = LIB_FILTER === 'all' ? all : all.filter(row=>categorizeResourceType(row.r.type) === LIB_FILTER);
+  let filtered = LIB_FILTER === 'all' ? all : all.filter(row=>categorizeResourceType(row.r) === LIB_FILTER);
   if(LIB_QUERY.trim()){
     const q = LIB_QUERY.trim().toLowerCase();
     filtered = filtered.filter(row=>
@@ -1122,6 +1128,7 @@ function renderLibrary(){
   const filterDefs = [
     {key:'all', label:'All'},
     {key:'video', label:'Videos'},
+    {key:'course', label:'Courses'},
     {key:'article', label:'Articles'},
     {key:'book', label:'Books'},
     {key:'other', label:'Other'}
