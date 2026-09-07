@@ -631,7 +631,7 @@ function renderHome(){
 
   let seenFirstModule = false;
   livePaths.forEach(path=>{
-    html += `<div id="grid-${path.id}" style="margin-bottom:var(--sp-8)"><h2 style="font-size:26px;margin-bottom:var(--sp-4)">${path.title} modules</h2><div class="module-grid">`;
+    html += `<div id="grid-${path.id}" style="margin-bottom:var(--sp-8)"><h2 style="font-size:calc(26px * var(--font-scale));margin-bottom:var(--sp-4)">${path.title} modules</h2><div class="module-grid">`;
     path.modules.forEach(m=>{
       const isDone = STATE.completed.has(m.id);
       const isStartHere = STATE.completed.size===0 && !seenFirstModule;
@@ -738,7 +738,7 @@ function renderComingSoonModule(path){
     <div class="breadcrumb"><button data-nav-home>Atelier</button> ${ICONS.chevronRight} <span>${path.title}</span></div>
     <div class="empty-state">
       ${ICONS.empty}
-      <h2 style="font-family:var(--font-display);font-size:26px;margin-bottom:8px;">This module is not written yet</h2>
+      <h2 style="font-family:var(--font-display);font-size:calc(26px * var(--font-scale));margin-bottom:8px;">This module is not written yet</h2>
       <p>It is being built to the same bar as Module 1 &mdash; full content, hand-checked resources, no filler.</p>
     </div>`;
 }
@@ -792,7 +792,7 @@ function renderCalendar(){
   </div>
 
   <div class="cal-card">
-    <h3 style="font-family:var(--font-display); font-size:20px; margin-bottom:var(--sp-2);">Set a weekly reminder</h3>
+    <h3 style="font-family:var(--font-display); font-size:calc(20px * var(--font-scale)); margin-bottom:var(--sp-2);">Set a weekly reminder</h3>
     <p class="cal-reminder-sub">Course notes often say &ldquo;this week, do X.&rdquo; Pick a day and time and it lands on your phone's calendar.</p>
     <div class="cal-reminder-row">
       <select id="reminderDay">
@@ -900,7 +900,7 @@ function renderPractice(){
     </div>
   </div>
 
-  <h2 style="font-size:20px;margin:var(--sp-8) 0 var(--sp-3)">Quick refresher</h2>
+  <h2 style="font-size:calc(20px * var(--font-scale));margin:var(--sp-8) 0 var(--sp-3)">Quick refresher</h2>
   <p class="hero-sub" style="margin-bottom:var(--sp-4)">A random question from something you've already studied &mdash; recall fades faster than it feels like it should. Doesn't affect your module progress either way.</p>
   <div id="refresherWrap" style="max-width:520px">
     <button class="btn btn-primary" id="newRefresherBtn">${ICONS.shuffle} Get a refresher question</button>
@@ -959,7 +959,7 @@ function renderDashboard(){
     <h1>Dashboard</h1>
   </div>
 
-  <h2 style="font-size:20px;margin-bottom:var(--sp-4)">Progress by arc</h2>
+  <h2 style="font-size:calc(20px * var(--font-scale));margin-bottom:var(--sp-4)">Progress by arc</h2>
   <div class="dash-arc-list">`;
   livePaths.forEach(path=>{
     const real = path.modules.filter(m=>!m.stub);
@@ -990,7 +990,7 @@ function renderDashboard(){
     </div>
   </div>
 
-  <h2 style="font-size:20px;margin:var(--sp-7) 0 var(--sp-4)">Recently viewed</h2>`;
+  <h2 style="font-size:calc(20px * var(--font-scale));margin:var(--sp-7) 0 var(--sp-4)">Recently viewed</h2>`;
 
   const recent = STATE.recentlyVisited.map(id=>findModule(id)).filter(Boolean);
   if(!recent.length){
@@ -1203,7 +1203,7 @@ function renderTabContent(m, tab, checkedSet){
 
     const quizHtml = hasQuiz ? `
       <h4>Quick check <span class="quiz-progress">${quizAnsweredCount}/${quiz.length} answered${quizAnsweredCount>0 ? ' \u00b7 '+quizCorrectCount+' correct' : ''}</span></h4>
-      <p class="prose" style="margin-bottom:var(--sp-4);font-size:14px;color:var(--text-muted);">These test whether the ideas actually landed, not whether you clicked play. Answer every one \u2014 right or wrong \u2014 to unlock module completion below.</p>
+      <p class="prose" style="margin-bottom:var(--sp-4);font-size:calc(14px * var(--font-scale));color:var(--text-muted);">These test whether the ideas actually landed, not whether you clicked play. Answer every one \u2014 right or wrong \u2014 to unlock module completion below.</p>
       <div class="quiz-list">
         ${quiz.map((q,qi)=>{
           const answered = quizState.hasOwnProperty(qi);
@@ -1226,7 +1226,7 @@ function renderTabContent(m, tab, checkedSet){
     return `
     <p class="prose" style="margin-bottom:var(--sp-5)">Check a line only once you can do it on a blank page, not once it sounds familiar. That is what &ldquo;complete&rdquo; means here.</p>
     ${quizHtml}
-    <h4 style="font-family:var(--font-body);font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);margin:var(--sp-6) 0 var(--sp-3);font-weight:600;">Mastery checklist</h4>
+    <h4 style="font-family:var(--font-body);font-size:calc(12px * var(--font-scale));letter-spacing:1px;text-transform:uppercase;color:var(--text-faint);margin:var(--sp-6) 0 var(--sp-3);font-weight:600;">Mastery checklist</h4>
     <div class="checklist" role="group" aria-label="Mastery checklist">
       ${checklist.map((item,i)=>`
         <button class="check-item" role="checkbox" aria-checked="${checkedSet.has(i)}" data-check-module="${m.id}" data-check-index="${i}">
@@ -1297,8 +1297,8 @@ function closeMobileSidebar(){
 }
 
 function closeMobileSearch(){
-  document.getElementById('topbarSearchBox').classList.remove('mobile-search-open');
-  document.getElementById('mobileSearchToggle').setAttribute('aria-expanded','false');
+  const box = document.getElementById('topbarSearchBox');
+  if(box) box.classList.remove('mobile-search-open');
 }
 
 /* ============================================================
@@ -1684,7 +1684,7 @@ function handleSearch(query){
 function renderSearchResults(matches, query){
   STATE.route.view = 'search';
   updateDocumentTitle();
-  let html = `<div class="hero"><div class="eyebrow">Search</div><h1 style="font-size:32px;">${matches.length} result${matches.length===1?'':'s'} for &ldquo;${escapeHtml(query)}&rdquo;</h1></div>`;
+  let html = `<div class="hero"><div class="eyebrow">Search</div><h1 style="font-size:calc(32px * var(--font-scale));">${matches.length} result${matches.length===1?'':'s'} for &ldquo;${escapeHtml(query)}&rdquo;</h1></div>`;
   if(matches.length === 0){
     html += `<div class="empty-state">${ICONS.empty}<p>No matches. All live arcs are searchable &mdash; the rest is mapped but not written yet.</p></div>`;
   } else {
@@ -2281,13 +2281,6 @@ function initEvents(){
   });
   backdrop.addEventListener('click', closeMobileSidebar);
 
-  const mobileSearchToggle = document.getElementById('mobileSearchToggle');
-  const topbarSearchBox = document.getElementById('topbarSearchBox');
-  mobileSearchToggle.addEventListener('click', ()=>{
-    const open = topbarSearchBox.classList.toggle('mobile-search-open');
-    mobileSearchToggle.setAttribute('aria-expanded', String(open));
-    if(open) document.getElementById('searchInput').focus();
-  });
 
   initFloatingPlayerDrag();
 
