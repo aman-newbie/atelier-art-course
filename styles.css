@@ -336,6 +336,7 @@ svg{display:block;}
 .res-card{
   display:flex; gap:var(--sp-4); padding:var(--sp-4) var(--sp-5); border:1px solid var(--border-soft); border-radius:var(--radius-md);
   margin-bottom:var(--sp-3); transition:border-color var(--dur) var(--ease); align-items:flex-start;
+  background:var(--surface); position:relative; z-index:1;
 }
 .res-card:hover{border-color:var(--border);}
 .res-type{
@@ -795,11 +796,13 @@ svg{display:block;}
   --red:#B23F26; --red-ink:#F7E5DE; --red-soft:#F7E5DE;
 }
 [data-theme="custom"] .art-backdrop{
-  opacity:.9; background-image:var(--custom-bg-image, none); background-size:cover;
+  opacity:.45; background-image:var(--custom-bg-image, none); background-size:cover;
   background-position:center;
   /* No live filter here on purpose — a CSS filter on a full-viewport fixed
      background forces the browser to re-rasterize it every scroll frame,
-     which is exactly what caused the load-in stutter while scrolling. */
+     which is exactly what caused the load-in stutter while scrolling.
+     Opacity was 0.9, far above every other theme (0.1–0.5) — that, combined
+     with cards having no background fill, is what made text unreadable. */
 }
 [data-theme="custom"] .art-backdrop::after{
   content:''; position:absolute; inset:0; background:var(--bg); opacity:.72;
