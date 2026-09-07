@@ -501,7 +501,7 @@ function updateChrome(){
   document.documentElement.style.setProperty('--font-scale', STATE.fontScale);
   const langBtn = document.getElementById('langToggle');
   if(langBtn){
-    langBtn.textContent = STATE.language === 'hi' ? '\u0939\u093f' : 'EN';
+    langBtn.textContent = STATE.language === 'hi' ? 'HI' : 'EN';
     langBtn.setAttribute('aria-pressed', String(STATE.language === 'hi'));
   }
 }
