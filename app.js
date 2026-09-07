@@ -2169,6 +2169,45 @@ function initEvents(){
   document.getElementById('themeCustomUrl').addEventListener('keydown', (e)=>{
     if(e.key === 'Enter'){ document.getElementById('themeCustomApply').click(); }
   });
+  document.getElementById('themeCustomFile').addEventListener('click', (e)=>e.stopPropagation());
+  document.getElementById('themeCustomFile').addEventListener('change', (e)=>{
+    const file = e.target.files && e.target.files[0];
+    if(!file) return;
+    const label = document.querySelector('.theme-custom-upload');
+    const originalLabelHTML = label.innerHTML;
+    label.textContent = 'Reading photo\u2026';
+    const reader = new FileReader();
+    reader.onload = (ev)=>{
+      const img = new Image();
+      img.onload = ()=>{
+        // Downscale to keep this lightweight in storage and fast to paint as a background.
+        const maxDim = 1600;
+        let {width, height} = img;
+        if(width > maxDim || height > maxDim){
+          const scale = maxDim / Math.max(width, height);
+          width = Math.round(width * scale);
+          height = Math.round(height * scale);
+        }
+        const canvas = document.createElement('canvas');
+        canvas.width = width; canvas.height = height;
+        canvas.getContext('2d').drawImage(img, 0, 0, width, height);
+        const dataUrl = canvas.toDataURL('image/jpeg', 0.72);
+        STATE.customBgUrl = dataUrl;
+        STATE.theme = 'custom';
+        saveProgress();
+        updateChrome();
+        label.innerHTML = originalLabelHTML;
+        document.getElementById('themePickerMenu').classList.remove('open');
+        document.getElementById('themeToggle').setAttribute('aria-expanded', 'false');
+        document.getElementById('themeCustomRow').hidden = true;
+      };
+      img.onerror = ()=>{ label.innerHTML = originalLabelHTML; showToast("Couldn't read that photo \u2014 try a different one."); };
+      img.src = ev.target.result;
+    };
+    reader.onerror = ()=>{ label.innerHTML = originalLabelHTML; showToast("Couldn't read that photo \u2014 try a different one."); };
+    reader.readAsDataURL(file);
+    e.target.value = '';
+  });
   document.getElementById('langToggle').addEventListener('click', ()=>{
     STATE.language = STATE.language === 'hi' ? 'en' : 'hi';
     saveProgress();
