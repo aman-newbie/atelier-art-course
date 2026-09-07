@@ -507,6 +507,7 @@ function applyCustomBackground(url){
   };
   img.onerror = ()=>{
     if(lastAppliedCustomBg === url) lastAppliedCustomBg = undefined;
+    showToast("Couldn't load that as an image \u2014 it needs to be a direct link to a photo (ending in .jpg/.png/etc.), not a webpage or share link.");
   };
   img.src = url;
 }
