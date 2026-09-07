@@ -77,7 +77,8 @@ const ICONS = {
   play:'<svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M6 4l14 8-14 8V4z"/></svg>',
   pause:'<svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><rect x="5" y="4" width="5" height="16" rx="1"/><rect x="14" y="4" width="5" height="16" rx="1"/></svg>',
   shuffle:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h3l10 12h5M14 6h5v5M3 18h3l4-4.5M14 18h5v-5"/></svg>',
-  chart:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10M12 20V4M20 20v-7"/></svg>'
+  chart:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10M12 20V4M20 20v-7"/></svg>',
+  library:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 016.5 17H20M4 19.5A2.5 2.5 0 006.5 22H20V2H6.5A2.5 2.5 0 004 4.5v15z"/></svg>'
 };
 
 /* Small decorative construction-guide SVGs, thematically tied to content */
@@ -88,8 +89,7 @@ const DECOR = {
   grid:'<svg class="mcard-deco" viewBox="0 0 90 90" fill="none" stroke="currentColor" stroke-width="1"><line x1="0" y1="30" x2="90" y2="30"/><line x1="0" y1="60" x2="90" y2="60"/><line x1="30" y1="0" x2="30" y2="90"/><line x1="60" y1="0" x2="60" y2="90"/></svg>',
   lines:'<svg class="mcard-deco" viewBox="0 0 90 90" fill="none" stroke="currentColor" stroke-width="1"><line x1="10" y1="20" x2="80" y2="30"/><line x1="10" y1="45" x2="80" y2="40"/><line x1="10" y1="70" x2="80" y2="55"/></svg>',
   vanish:'<svg class="mcard-deco" viewBox="0 0 90 90" fill="none" stroke="currentColor" stroke-width="1"><line x1="80" y1="20" x2="10" y2="10"/><line x1="80" y1="20" x2="10" y2="45"/><line x1="80" y1="20" x2="10" y2="80"/><circle cx="80" cy="20" r="2" fill="currentColor"/></svg>',
-  spark:'<svg class="mcard-deco" viewBox="0 0 90 90" fill="none" stroke="currentColor" stroke-width="1"><path d="M20 70 L70 20 M20 20 L70 70"/></svg>',
-  library:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 016.5 17H20M4 19.5A2.5 2.5 0 006.5 22H20V2H6.5A2.5 2.5 0 004 4.5v15z"/></svg>'
+  spark:'<svg class="mcard-deco" viewBox="0 0 90 90" fill="none" stroke="currentColor" stroke-width="1"><path d="M20 70 L70 20 M20 20 L70 70"/></svg>'
 };
 const MODULE_DECOR = {m1:'spark', m2:'grid', m3:'lines', m4:'ellipse', m5:'eye', m6:'grid', m7:'box'};
 
