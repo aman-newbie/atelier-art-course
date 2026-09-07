@@ -2212,6 +2212,64 @@ const CURRICULUM_3 = [
   "I can build a simple physical maquette or gather specific photo reference to solve a scene's lighting before painting it."
 ],
 "nextStep": "You can now design a biome that feels climatically and visually coherent on its own. Module 74 moves from \\\"does this place make sense\\\" to \\\"does this place tell a story\\\" \u2014 environmental storytelling, or how to arrange objects and wear within a biome so it implies a history without a single word of text."
+},
+{
+"id": "m74",
+"plate": 74,
+"title": "Environmental Storytelling",
+"difficulty": "Intermediate",
+"studyTime": "20 min",
+"practiceTime": "25\u201330 min/day",
+"prereq": ["m73"],
+"hook": "A biome tells the viewer where they are. Environmental storytelling tells them what happened there \u2014 and it does it without a single word of dialogue or text.",
+"whyItMatters": [
+  "Module 73 gave you the tools to make a place feel climatically and visually plausible. This module is about making that same place feel like it has a past \u2014 the difference between a technically correct desert and a desert that makes a viewer stop and ask, \\\"wait, what happened here?\\\"",
+  "This is frequently what separates a competent background from a scene an art director calls genuinely strong: every object in the frame has a reason to exist beyond filling space. A prop placed to answer an implied question does more narrative work than an entire paragraph of lore text underneath the image."
+],
+"coreIdea": [
+  "The term \\\"environmental storytelling\\\" was coined by Don Carson, a former Disney Imagineer, who wrote about what game and set designers could learn from theme-park design \u2014 specifically, how a themed space can put a visitor inside a story before a single character appears.",
+  "There are two registers of it. <b>Static</b> environmental storytelling uses permanent, unchanging details \u2014 a skeleton still seated at a desk, a scorch mark on a wall \u2014 that act as fixed anchors a viewer can revisit and reinterpret as they learn more. <b>Dynamic</b> storytelling uses elements that can still change or react. Most strong scenes lean heavily on the static register because permanence is what makes a detail feel like real evidence rather than staged decoration.",
+  "The core technique is building a tableau: instead of illustrating an event directly, you select and arrange objects to show only its <i>outcome</i>, then let the viewer's imagination supply the missing cause. This makes the process collaborative rather than performative \u2014 the viewer does real interpretive work, which is why it sticks with them longer than a directly illustrated event does.",
+  "This is not a modern invention. In 1911, theatre designer Edward Gordon Craig argued that a stage's visual composition alone \u2014 light, shape, and arrangement, with no dialogue \u2014 could communicate a scene's full mood and meaning. Environmental storytelling in games and concept art is a direct descendant of that century-old idea: the space itself can narrate."
+],
+"mistakes": [
+  "Filling a scene with \\\"story props\\\" that don't causally connect to each other \u2014 a skeleton in one corner and an unrelated broken sign in another \u2014 so a viewer can't infer a single coherent event, just clutter.",
+  "Confusing environmental storytelling with worldbuilding. Worldbuilding is the lore and rules of a place in general; environmental storytelling is physical evidence of one specific event that happened in one specific space.",
+  "Over-explaining a scene with an obvious sign or written note instead of trusting the viewer to read the props and their arrangement.",
+  "Treating every detail as disposable and constantly changing the layout of a space, which removes the value of permanence \u2014 a detail only rewards a second look if it was actually still there to look at again.",
+  "Ignoring props that could double as gameplay or compositional cues \u2014 a hazard shown mid-accident, for instance, teaches the viewer something useful about the world's rules in addition to telling its story."
+],
+"proTips": [
+  "Privately write a one-paragraph backstory for what happened in a scene, then paint only the aftermath, never the event itself. Forcing every prop choice to trace back to that one cause keeps the tableau coherent instead of random.",
+  "Layer information in two passes: an obvious first-read that a casual viewer gets in two seconds, and a deeper layer of smaller details that rewards someone who lingers.",
+  "Choose two or three unmovable \\\"anchor\\\" details per scene \u2014 not twenty \u2014 so the story reads clearly instead of turning into noise.",
+  "Study real reference for how physical evidence naturally settles after an event (abandoned buildings, archaeological sites, even news photography of disaster aftermath) \u2014 real disorder looks different from invented disorder, and it shows."
+],
+"practice": {
+  "warmup": "Thumbnail 4 tiny scenes that each show only the aftermath of a different implied event (a meal interrupted, a struggle, a hasty departure, a long abandonment) \u2014 no figures, props only.",
+  "daily": "Take one biome scene from Module 73's practice and add a single coherent tableau to it: 3\u20135 props that all trace back to one specific backstory you write for yourself first.",
+  "weekly": "Design a full scene with two layers of story \u2014 an obvious first-read event and a subtler secondary detail that only rewards a closer look \u2014 and write down what each layer is meant to communicate.",
+  "challenge": "Redesign the same space three times to imply three completely different backstories, changing only the props and their arrangement, not the architecture or biome underneath."
+},
+"resources": [
+  {"type": "Video", "title": "How Level Design Can Tell a Story", "creator": "Game Maker's Toolkit (Mark Brown)", "url": "https://www.youtube.com/watch?v=RwlnCn2EB9o", "why": "A well-sourced breakdown of environmental storytelling, evocative architecture, and how spaces communicate narrative in games \u2014 with citations to the original GDC talks and articles that coined the technique.", "summary": "Mark Brown surveys how game levels tell stories without dialogue, covering environmental storytelling, evocative architecture, and contextualizing player identity through space, and points to the original sources (Don Carson's theme-park article, GDC talks by Harvey Smith and others) that established the technique.", "verified": true},
+  {"type": "Article", "title": "Environmental Storytelling in Video Games", "creator": "GameDesignSkills.com", "url": "https://gamedesignskills.com/game-design/environmental-storytelling/", "why": "Explicitly defines the static-vs-dynamic distinction and the common mistake of confusing environmental storytelling with worldbuilding.", "summary": "A practical guide to embedding narrative into level and environment design: it explains why static, permanent details work better as story anchors than changing ones, uses Fallout's worn-out books and patched-up tech as a working example, and directly addresses the common confusion between environmental storytelling and worldbuilding.", "verified": true},
+  {"type": "Book", "title": "On the Art of the Theatre", "creator": "Edward Gordon Craig (1911, public domain)", "url": "https://archive.org/details/cu31924081270328", "why": "The historical root of the idea that a space's visual composition alone can carry a scene's full narrative and mood, a century before the term \\\"environmental storytelling\\\" existed.", "summary": "A foundational, freely downloadable 1911 text by a pioneering stage designer who argued that scenery, light, and movement \u2014 not dialogue \u2014 are the true expressive tools of a director, an idea that concept art's use of environment-as-narrator directly inherits.", "verified": true}
+],
+"quiz": [
+  {"q": "Who is credited with coining the term \\\"environmental storytelling\\\"?", "options": ["A video game programmer", "Don Carson, a former Disney Imagineer", "Edward Gordon Craig", "A film director"], "correct": 1, "explain": "Don Carson wrote an influential article on what game developers could learn from theme-park design, which is where the term originated."},
+  {"q": "What is the key difference between static and dynamic environmental storytelling?", "options": ["Static uses color, dynamic uses black and white", "Static details are permanent and unchanging, acting as anchors a viewer can revisit; dynamic elements can still change or react", "Dynamic storytelling only works in animated films", "There is no meaningful difference"], "correct": 1, "explain": "Static, permanent details function as reliable anchors for the narrative that reward revisiting and reinterpretation as the viewer learns more."},
+  {"q": "What is the main difference between environmental storytelling and worldbuilding?", "options": ["They are the same thing", "Worldbuilding is the lore and rules of a place in general; environmental storytelling is evidence of one specific event in one specific space", "Environmental storytelling only applies to fantasy settings", "Worldbuilding cannot include any visual elements"], "correct": 1, "explain": "This is a commonly confused pair: worldbuilding sets up the general rules and history of a world, while environmental storytelling shows the specific aftermath of a specific event."},
+  {"q": "According to the tableau principle, what should a scene show to tell its story effectively?", "options": ["A direct illustration of the event as it happens, with characters present", "Only the outcome of a sequence of events, letting the viewer infer the cause", "Text captions explaining what occurred", "Nothing \u2014 props should be placed randomly"], "correct": 1, "explain": "Showing only the outcome and letting the viewer supply the cause makes the process collaborative, which is part of why it's more memorable than a directly illustrated event."},
+  {"q": "What did Edward Gordon Craig argue in his 1911 book that connects to modern environmental storytelling?", "options": ["That dialogue is the only important element of theatre", "That a stage's visual composition alone \u2014 light, shape, and arrangement \u2014 could communicate a scene's mood and meaning without dialogue", "That theatre should never use scenery", "That environmental storytelling was invented for video games"], "correct": 1, "explain": "Craig's argument that pure visual composition can carry narrative and mood is a direct historical ancestor of environmental storytelling as practiced in games and concept art today."}
+],
+"checklist": [
+  "I can explain the difference between static and dynamic environmental storytelling.",
+  "I can distinguish environmental storytelling from worldbuilding when designing a scene.",
+  "I can build a private backstory for a scene and choose props that all trace back to that one cause.",
+  "I can layer a scene with an obvious first-read and a subtler secondary detail for closer viewers."
+],
+"nextStep": "You can now make a place feel like it has a history. Module 75 gives you the compositional tools \u2014 camera position, framing, and staging \u2014 to make sure that history is actually seen in the order and emphasis you intend."
 }
 ]},
 {id:'digital-fundamentals', title:'Digital Art Fundamentals', status:'soon', order:8,
