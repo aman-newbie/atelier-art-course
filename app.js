@@ -33,6 +33,7 @@ const STATE = {
   recentlyVisited:[],
   searchQuery:'',
   fontScale:1,
+  customBgUrl:'',
   language:'en',
   xp:0,
   storageBackend:'none',
@@ -282,6 +283,7 @@ function serializeState(){
     xp:STATE.xp,
     theme:STATE.theme,
     fontScale:STATE.fontScale,
+    customBgUrl:STATE.customBgUrl,
     language:STATE.language,
     streak:STATE.streak,
     lastVisitDate:STATE.lastVisitDate,
@@ -306,6 +308,7 @@ function applyState(data){
   STATE.xp = data.xp || 0;
   if(data.theme) STATE.theme = data.theme;
   if(typeof data.fontScale === 'number') STATE.fontScale = data.fontScale;
+  if(typeof data.customBgUrl === 'string') STATE.customBgUrl = data.customBgUrl;
   if(data.language === 'hi' || data.language === 'en') STATE.language = data.language;
   STATE.streak = data.streak || 0;
   STATE.lastVisitDate = data.lastVisitDate || null;
@@ -490,6 +493,11 @@ function updateChrome(){
   document.querySelectorAll('.theme-option').forEach(btn=>{
     btn.setAttribute('aria-pressed', String(btn.dataset.themeChoice === STATE.theme));
   });
+  if(STATE.customBgUrl){
+    document.documentElement.style.setProperty('--custom-bg-image', `url("${STATE.customBgUrl.replace(/"/g,'')}")`);
+  }
+  const customUrlInput = document.getElementById('themeCustomUrl');
+  if(customUrlInput && document.activeElement !== customUrlInput) customUrlInput.value = STATE.customBgUrl || '';
   document.documentElement.style.setProperty('--font-scale', STATE.fontScale);
   const langBtn = document.getElementById('langToggle');
   if(langBtn){
@@ -2123,13 +2131,41 @@ function initEvents(){
     document.getElementById('themeToggle').setAttribute('aria-expanded', String(willOpen));
   });
   document.querySelectorAll('.theme-option').forEach(btn=>{
-    btn.addEventListener('click', ()=>{
+    btn.addEventListener('click', (e)=>{
+      if(btn.dataset.themeChoice === 'custom'){
+        e.stopPropagation();
+        const row = document.getElementById('themeCustomRow');
+        row.hidden = !row.hidden;
+        if(!row.hidden) document.getElementById('themeCustomUrl').focus();
+        if(STATE.customBgUrl){
+          STATE.theme = 'custom';
+          saveProgress();
+          updateChrome();
+        }
+        return;
+      }
       STATE.theme = btn.dataset.themeChoice;
       saveProgress();
       updateChrome();
       document.getElementById('themePickerMenu').classList.remove('open');
       document.getElementById('themeToggle').setAttribute('aria-expanded', 'false');
     });
+  });
+  document.getElementById('themeCustomApply').addEventListener('click', (e)=>{
+    e.stopPropagation();
+    const url = document.getElementById('themeCustomUrl').value.trim();
+    if(!url) return;
+    STATE.customBgUrl = url;
+    STATE.theme = 'custom';
+    saveProgress();
+    updateChrome();
+    document.getElementById('themePickerMenu').classList.remove('open');
+    document.getElementById('themeToggle').setAttribute('aria-expanded', 'false');
+    document.getElementById('themeCustomRow').hidden = true;
+  });
+  document.getElementById('themeCustomUrl').addEventListener('click', (e)=>e.stopPropagation());
+  document.getElementById('themeCustomUrl').addEventListener('keydown', (e)=>{
+    if(e.key === 'Enter'){ document.getElementById('themeCustomApply').click(); }
   });
   document.getElementById('langToggle').addEventListener('click', ()=>{
     STATE.language = STATE.language === 'hi' ? 'en' : 'hi';
