@@ -96,7 +96,6 @@ svg{display:block;}
   display:none; background:none; border:1px solid var(--border); color:var(--text);
   width:38px; height:38px; border-radius:var(--radius-sm); align-items:center; justify-content:center;
 }
-.mobile-search-toggle{display:none;}
 .topbar-search{
   flex:1; max-width:420px; display:flex; align-items:center; gap:var(--sp-2);
   background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-full);
@@ -575,12 +574,6 @@ svg{display:block;}
    ============================================================ */
 @media (max-width:900px){
   .menu-btn{display:flex;}
-  .topbar-search{display:none;}
-  .topbar-search.mobile-search-open{
-    display:flex; position:absolute; left:var(--sp-3); right:var(--sp-3); top:calc(var(--topbar-h) + var(--sp-2));
-    max-width:none; z-index:95; box-shadow:var(--shadow-lg);
-  }
-  .mobile-search-toggle{display:flex;}
   .app{grid-template-columns:1fr;}
   .sidebar{
     position:fixed; left:0; top:var(--topbar-h); height:calc(100vh - var(--topbar-h)); width:min(84vw,320px);
