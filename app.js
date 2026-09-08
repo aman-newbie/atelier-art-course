@@ -1764,6 +1764,22 @@ function processToastQueue(){
    ============================================================ */
 let doubtHistory = [];
 let doubtOpen = false;
+const DOUBT_HISTORY_KEY = 'atelier_doubt_history';
+
+function saveDoubtHistory(){
+  try{ localStorage.setItem(DOUBT_HISTORY_KEY, JSON.stringify(doubtHistory.slice(-40))); }catch(e){ /* private browsing etc */ }
+}
+
+function loadDoubtHistory(){
+  try{
+    const raw = localStorage.getItem(DOUBT_HISTORY_KEY);
+    if(!raw) return;
+    const saved = JSON.parse(raw);
+    if(!Array.isArray(saved)) return;
+    doubtHistory = saved;
+    doubtHistory.forEach(h=>appendDoubtMessage(h.role === 'user' ? 'user' : 'model', h.text));
+  }catch(e){ /* corrupted/old-format history — start fresh rather than crash */ }
+}
 
 function getModuleContextForDoubt(){
   const route = STATE.route;
@@ -1857,6 +1873,7 @@ async function sendDoubtMessage(){
   appendDoubtMessage('user', text);
   input.value = '';
   doubtHistory.push({role:'user', text});
+  saveDoubtHistory();
 
   const systemInstruction = getDoubtSystemInstruction();
   if(engine === 'local'){
@@ -1908,6 +1925,7 @@ async function sendDoubtMessageGemini(systemInstruction){
     }
     appendDoubtMessage('bot', reply.trim());
     doubtHistory.push({role:'model', text: reply.trim()});
+  saveDoubtHistory();
   }catch(err){
     if(loadingEl) loadingEl.remove();
     appendDoubtMessage('error', 'Network error reaching Gemini. Check your connection and try again.');
@@ -1918,6 +1936,12 @@ async function getLocalPipeline(onProgress){
   if(localPipelinePromise) return localPipelinePromise;
   localPipelinePromise = (async ()=>{
     const mod = await import('https://cdn.jsdelivr.net/npm/@huggingface/transformers@4/+esm');
+    // Explicit, defensive: this should already be the library default, but making it
+    // explicit rules out that as a cause of the model re-downloading on every reload.
+    // If it's still redownloading after this, it's almost certainly the browser (e.g.
+    // Brave Shields) restricting persistent Cache Storage for these third-party origins,
+    // not this code — worth testing in a different browser to confirm.
+    if(mod.env) mod.env.useBrowserCache = true;
     const pipeline = mod.pipeline;
     const progress_callback = (p)=>{
       if(onProgress && p && p.status === 'progress' && p.total){
@@ -1971,6 +1995,7 @@ async function sendDoubtMessageLocal(systemInstruction){
     }
     appendDoubtMessage('bot', reply);
     doubtHistory.push({role:'model', text: reply});
+  saveDoubtHistory();
   }catch(err){
     if(loadingEl) loadingEl.remove();
     appendDoubtMessage('error', 'The on-device model hit an error generating a reply. Try again, or switch to the cloud option.');
@@ -2372,6 +2397,7 @@ async function init(){
   updateStreak();
   initEvents();
   renderApp();
+  loadDoubtHistory();
   updateStorageStatus();
   checkAchievements();
   if(STATE.storageBackend === 'none'){
