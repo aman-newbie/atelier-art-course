@@ -1893,7 +1893,6 @@ async function sendDoubtMessageGemini(systemInstruction){
 
   const loadingEl = appendDoubtMessage('loading', 'Thinking\u2026');
   const model = cfg.geminiModel || 'gemini-2.5-flash';
-  const url = 'https://generativelanguage.googleapis.com/v1beta/models/' + model + ':generateContent?key=' + encodeURIComponent(apiKey);
 
   const contents = doubtHistory.slice(-10).map(h=>({
     role: h.role === 'user' ? 'user' : 'model',
@@ -1901,24 +1900,25 @@ async function sendDoubtMessageGemini(systemInstruction){
   }));
 
   try{
-    const res = await fetch(url, {
-      method: 'POST',
-      headers: {'Content-Type':'application/json'},
-      body: JSON.stringify({
-        system_instruction: {parts:[{text: systemInstruction}]},
-        contents: contents,
-        generationConfig: {maxOutputTokens: 400, temperature: 0.6}
-      })
+    // Using the official SDK (via dynamic import, same pattern as the local
+    // pipeline loader below) instead of a raw fetch() to the REST endpoint \u2014
+    // Google's new "AQ." auth-key format has been rejecting plain ?key= REST
+    // calls with 401 ACCESS_TOKEN_TYPE_UNSUPPORTED for many developers since
+    // the June 2026 key-format rollout. The SDK is the currently-recommended
+    // path; if this still fails, it's a Google-side issue, not this code.
+    const { GoogleGenAI } = await import('https://cdn.jsdelivr.net/npm/@google/genai@2.21.0/+esm');
+    const ai = new GoogleGenAI({apiKey: apiKey});
+    const response = await ai.models.generateContent({
+      model: model,
+      contents: contents,
+      config: {
+        systemInstruction: systemInstruction,
+        maxOutputTokens: 400,
+        temperature: 0.6
+      }
     });
-    const data = await res.json();
     if(loadingEl) loadingEl.remove();
-    if(!res.ok){
-      const msg = (data && data.error && data.error.message) ? data.error.message : ('HTTP ' + res.status);
-      appendDoubtMessage('error', "Couldn't reach Gemini: " + msg);
-      return;
-    }
-    const cand = data && data.candidates && data.candidates[0];
-    const reply = cand && cand.content && cand.content.parts && cand.content.parts[0] && cand.content.parts[0].text;
+    const reply = response && response.text;
     if(!reply){
       appendDoubtMessage('error', 'Got an empty response \u2014 try rephrasing the question.');
       return;
@@ -1928,7 +1928,8 @@ async function sendDoubtMessageGemini(systemInstruction){
   saveDoubtHistory();
   }catch(err){
     if(loadingEl) loadingEl.remove();
-    appendDoubtMessage('error', 'Network error reaching Gemini. Check your connection and try again.');
+    const msg = (err && err.message) ? err.message : 'Network error reaching Gemini. Check your connection and try again.';
+    appendDoubtMessage('error', "Couldn't reach Gemini: " + msg);
   }
 }
 
