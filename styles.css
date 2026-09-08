@@ -796,16 +796,20 @@ svg{display:block;}
   --red:#B23F26; --red-ink:#F7E5DE; --red-soft:#F7E5DE;
 }
 [data-theme="custom"] .art-backdrop{
-  opacity:.45; background-image:var(--custom-bg-image, none); background-size:cover;
+  opacity:.22; background-image:var(--custom-bg-image, none); background-size:cover;
   background-position:center;
-  /* No live filter here on purpose — a CSS filter on a full-viewport fixed
-     background forces the browser to re-rasterize it every scroll frame,
-     which is exactly what caused the load-in stutter while scrolling.
-     Opacity was 0.9, far above every other theme (0.1–0.5) — that, combined
-     with cards having no background fill, is what made text unreadable. */
+  /* Kept deliberately faint. A user-supplied photo can be arbitrarily bright, dark,
+     or busy (faces, high-contrast edges, etc.) — there's no opacity level for the
+     photo itself that guarantees text stays readable on top of it. So the photo is
+     treated as a subtle texture hint, and the scrim below (not this layer) is what
+     actually guarantees contrast, regardless of what image someone picks. */
 }
 [data-theme="custom"] .art-backdrop::after{
-  content:''; position:absolute; inset:0; background:var(--bg); opacity:.72;
+  content:''; position:absolute; inset:0; background:var(--bg); opacity:.93;
+}
+[data-theme="custom"] .hero, [data-theme="custom"] .stat-strip, [data-theme="custom"] .meta-row{
+  background:var(--surface); border-radius:var(--radius-lg); padding:var(--sp-5);
+  border:1px solid var(--border-soft);
 }
 .theme-swatch.custom{background:repeating-linear-gradient(45deg, var(--border), var(--border) 3px, var(--surface) 3px, var(--surface) 6px);}
 .theme-custom-row{display:flex; flex-direction:column; gap:var(--sp-2); padding:var(--sp-2) var(--sp-3); margin-top:2px;}
