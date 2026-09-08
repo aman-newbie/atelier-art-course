@@ -135,12 +135,17 @@
   </span>
 </footer>
 
-<script src="config.js"></script>
-<script src="curriculum-1.js"></script>
-<script src="curriculum-2.js"></script>
-<script src="curriculum-3.js"></script>
-<script src="translations-hi.js"></script>
-<script src="app.js"></script>
+<script>
+  // Cache-busting: this site updates multiple times a day right now (by more than one
+  // contributor), and stale cached JS was causing already-fixed bugs to look unfixed on
+  // repeat visits. Loading every script with a fresh timestamp query guarantees each page
+  // load gets the current version, no matter who last committed.
+  (function(){
+    var v = Date.now();
+    var files = ['config.js','curriculum-1.js','curriculum-2.js','curriculum-3.js','translations-hi.js','app.js'];
+    files.forEach(function(f){ document.write('<script src="' + f + '?v=' + v + '"><\/script>'); });
+  })();
+</script>
 
 </body>
 </html>
