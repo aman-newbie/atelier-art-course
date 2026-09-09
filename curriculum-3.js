@@ -2218,58 +2218,115 @@ const CURRICULUM_3 = [
 "plate": 74,
 "title": "Environmental Storytelling",
 "difficulty": "Intermediate",
-"studyTime": "20 min",
-"practiceTime": "25\u201330 min/day",
+"studyTime": "18 min",
+"practiceTime": "25 min/day",
 "prereq": ["m73"],
-"hook": "A biome tells the viewer where they are. Environmental storytelling tells them what happened there \u2014 and it does it without a single word of dialogue or text.",
+"hook": "A room with a single overturned chair, a cold cup of tea, and a door left open tells you more about what happened than any caption could \u2014 environmental storytelling is the craft of building that room on purpose.",
 "whyItMatters": [
-  "Module 73 gave you the tools to make a place feel climatically and visually plausible. This module is about making that same place feel like it has a past \u2014 the difference between a technically correct desert and a desert that makes a viewer stop and ask, \\\"wait, what happened here?\\\"",
-  "This is frequently what separates a competent background from a scene an art director calls genuinely strong: every object in the frame has a reason to exist beyond filling space. A prop placed to answer an implied question does more narrative work than an entire paragraph of lore text underneath the image."
+  "A believable biome (Module 73) tells you where you are. Environmental storytelling tells you what happened there. This is the layer that turns a well-constructed place into a place with a history \u2014 the skill that separates generic concept art from concept art that makes an art director stop scrolling.",
+  "This is a real, named professional skill, not a vague creative bonus: it's how games like Dark Souls, Fallout, and The Last of Us communicate entire backstories with zero dialogue, purely through object placement, wear, and lighting \u2014 and it's a specific, learnable set of choices, not an accident of mood."
 ],
 "coreIdea": [
-  "The term \\\"environmental storytelling\\\" was coined by Don Carson, a former Disney Imagineer, who wrote about what game and set designers could learn from theme-park design \u2014 specifically, how a themed space can put a visitor inside a story before a single character appears.",
-  "There are two registers of it. <b>Static</b> environmental storytelling uses permanent, unchanging details \u2014 a skeleton still seated at a desk, a scorch mark on a wall \u2014 that act as fixed anchors a viewer can revisit and reinterpret as they learn more. <b>Dynamic</b> storytelling uses elements that can still change or react. Most strong scenes lean heavily on the static register because permanence is what makes a detail feel like real evidence rather than staged decoration.",
-  "The core technique is building a tableau: instead of illustrating an event directly, you select and arrange objects to show only its <i>outcome</i>, then let the viewer's imagination supply the missing cause. This makes the process collaborative rather than performative \u2014 the viewer does real interpretive work, which is why it sticks with them longer than a directly illustrated event does.",
-  "This is not a modern invention. In 1911, theatre designer Edward Gordon Craig argued that a stage's visual composition alone \u2014 light, shape, and arrangement, with no dialogue \u2014 could communicate a scene's full mood and meaning. Environmental storytelling in games and concept art is a direct descendant of that century-old idea: the space itself can narrate."
+  "Objects are evidence, not decoration. Every prop you place should answer an implicit question: who used this, when, and why did they stop? A dropped tool, a half-eaten meal, a barricaded door \u2014 each one is a clue a viewer assembles into a story without being told.",
+  "Wear and damage are timestamps. Rust, dust, growth, scorch marks, and structural collapse all tell the viewer how much time has passed since something happened \u2014 fresh damage reads as a recent event; ivy fully reclaiming a wall reads as decades.",
+  "Contrast is what makes a detail readable as a clue instead of noise. If everything in a scene is equally worn and cluttered, nothing stands out as meaningful. One deliberately placed, slightly-too-clean or slightly-too-disturbed object against a consistent backdrop is what draws the eye and gets read as \\\"important.\\\"",
+  "The strongest environmental stories are told through absence and implication, not literal illustration \u2014 a burned village implies the fire and the people who fled without needing to paint either one."
 ],
 "mistakes": [
-  "Filling a scene with \\\"story props\\\" that don't causally connect to each other \u2014 a skeleton in one corner and an unrelated broken sign in another \u2014 so a viewer can't infer a single coherent event, just clutter.",
-  "Confusing environmental storytelling with worldbuilding. Worldbuilding is the lore and rules of a place in general; environmental storytelling is physical evidence of one specific event that happened in one specific space.",
-  "Over-explaining a scene with an obvious sign or written note instead of trusting the viewer to read the props and their arrangement.",
-  "Treating every detail as disposable and constantly changing the layout of a space, which removes the value of permanence \u2014 a detail only rewards a second look if it was actually still there to look at again.",
-  "Ignoring props that could double as gameplay or compositional cues \u2014 a hazard shown mid-accident, for instance, teaches the viewer something useful about the world's rules in addition to telling its story."
+  "Cluttering a scene with many \\\"interesting\\\" props that don't relate to each other, so the eye can't tell which details are meaningful clues and which are just texture.",
+  "Making every object equally worn or equally pristine, removing the contrast that makes a single detail read as a deliberate clue.",
+  "Explaining the story too literally (a sign that spells out exactly what happened) instead of trusting the viewer to infer it from physical evidence.",
+  "Forgetting that wear has a direction and a cause \u2014 damage should be consistent with a plausible source (wind-facing erosion, water-line staining, foot-traffic wear patterns), not scattered randomly for texture.",
+  "Treating environmental storytelling as a separate pass added after the environment is finished, instead of designing the props and the layout around the story from the start."
 ],
 "proTips": [
-  "Privately write a one-paragraph backstory for what happened in a scene, then paint only the aftermath, never the event itself. Forcing every prop choice to trace back to that one cause keeps the tableau coherent instead of random.",
-  "Layer information in two passes: an obvious first-read that a casual viewer gets in two seconds, and a deeper layer of smaller details that rewards someone who lingers.",
-  "Choose two or three unmovable \\\"anchor\\\" details per scene \u2014 not twenty \u2014 so the story reads clearly instead of turning into noise.",
-  "Study real reference for how physical evidence naturally settles after an event (abandoned buildings, archaeological sites, even news photography of disaster aftermath) \u2014 real disorder looks different from invented disorder, and it shows."
+  "Before placing a single prop, write one sentence describing what happened in this space. Every object you add should either support or complicate that one sentence.",
+  "Place one \\\"anchor\\\" object that's the emotional core of the story (a dropped photograph, a child's toy, a still-lit lamp) and let everything else in the scene support it rather than compete with it.",
+  "Study real abandoned-space photography (an old factory, a flooded house) for how real neglect actually looks \u2014 the specific direction of dust falls, water stains, and collapse is very hard to invent convincingly from memory.",
+  "Ask what's missing, not just what's present \u2014 an empty weapon rack or an unmade bed can tell a story as strongly as any object placed in the scene."
 ],
 "practice": {
-  "warmup": "Thumbnail 4 tiny scenes that each show only the aftermath of a different implied event (a meal interrupted, a struggle, a hasty departure, a long abandonment) \u2014 no figures, props only.",
-  "daily": "Take one biome scene from Module 73's practice and add a single coherent tableau to it: 3\u20135 props that all trace back to one specific backstory you write for yourself first.",
-  "weekly": "Design a full scene with two layers of story \u2014 an obvious first-read event and a subtler secondary detail that only rewards a closer look \u2014 and write down what each layer is meant to communicate.",
-  "challenge": "Redesign the same space three times to imply three completely different backstories, changing only the props and their arrangement, not the architecture or biome underneath."
+  "warmup": "List 5 objects that would tell the story \\\"this family left in a hurry\\\" without any of them being a note or sign with writing on it.",
+  "daily": "Design one small interior space (a room, a shop stall, a campsite) using only prop placement and wear to imply a specific one-sentence backstory you write down first.",
+  "weekly": "Take a biome you designed in Module 73 and add a single environmental-storytelling detail to it \u2014 one anchor object plus supporting wear \u2014 that implies a history for that specific place.",
+  "challenge": "Design the same room twice with two different backstories, using only prop choice and wear (no text, no figures) to make each version read as a distinct story."
 },
 "resources": [
-  {"type": "Video", "title": "How Level Design Can Tell a Story", "creator": "Game Maker's Toolkit (Mark Brown)", "url": "https://www.youtube.com/watch?v=RwlnCn2EB9o", "why": "A well-sourced breakdown of environmental storytelling, evocative architecture, and how spaces communicate narrative in games \u2014 with citations to the original GDC talks and articles that coined the technique.", "summary": "Mark Brown surveys how game levels tell stories without dialogue, covering environmental storytelling, evocative architecture, and contextualizing player identity through space, and points to the original sources (Don Carson's theme-park article, GDC talks by Harvey Smith and others) that established the technique.", "verified": true},
-  {"type": "Article", "title": "Environmental Storytelling in Video Games", "creator": "GameDesignSkills.com", "url": "https://gamedesignskills.com/game-design/environmental-storytelling/", "why": "Explicitly defines the static-vs-dynamic distinction and the common mistake of confusing environmental storytelling with worldbuilding.", "summary": "A practical guide to embedding narrative into level and environment design: it explains why static, permanent details work better as story anchors than changing ones, uses Fallout's worn-out books and patched-up tech as a working example, and directly addresses the common confusion between environmental storytelling and worldbuilding.", "verified": true},
-  {"type": "Book", "title": "On the Art of the Theatre", "creator": "Edward Gordon Craig (1911, public domain)", "url": "https://archive.org/details/cu31924081270328", "why": "The historical root of the idea that a space's visual composition alone can carry a scene's full narrative and mood, a century before the term \\\"environmental storytelling\\\" existed.", "summary": "A foundational, freely downloadable 1911 text by a pioneering stage designer who argued that scenery, light, and movement \u2014 not dialogue \u2014 are the true expressive tools of a director, an idea that concept art's use of environment-as-narrator directly inherits.", "verified": true}
+  {"type": "Video", "title": "How Level Design Can Tell a Story", "creator": "Game Maker's Toolkit (Mark Brown)", "url": "https://www.youtube.com/watch?v=RwlnCn2EB9o", "why": "A well-known, precise breakdown of how level and prop placement communicate narrative without dialogue, using real shipped games as examples.", "summary": "Mark Brown breaks down how games use the physical layout of a space \u2014 not text or cutscenes \u2014 to tell players what happened, using specific examples of prop placement, environmental damage, and spatial design choices that quietly build narrative context as the player moves through a level.", "verified": true},
+  {"type": "Article", "title": "Environmental Storytelling: The Art of Immersive World-Building", "creator": "Game Design Skills", "url": "https://gamedesignskills.com/game-design/environmental-storytelling/", "why": "Defines environmental storytelling clearly and connects it directly to level design and worldbuilding practice with named examples.", "summary": "Defines environmental storytelling as embedding narrative into visual and audio cues within a space rather than dialogue or cutscenes, and walks through how games like Dark Souls, Fallout, and Skyrim use architecture, object placement, and lighting to let players uncover a world's history through exploration alone.", "verified": true},
+  {"type": "Book", "title": "The Level Design Book \u2014 Worldbuilding chapter", "creator": "Level Design Book (open community text)", "url": "https://book.leveldesignbook.com/process/preproduction/worldbuilding", "why": "A free, continuously-updated open book chapter specifically on how professional level designers organize worldbuilding and backstory documentation.", "summary": "Covers how professional teams organize worldbuilding into maps, timelines, and notes, and makes the practical case for worldbuilding only what a project currently needs rather than over-building lore up front \u2014 useful discipline for keeping an environment's implied story focused instead of scattered.", "verified": true}
 ],
 "quiz": [
-  {"q": "Who is credited with coining the term \\\"environmental storytelling\\\"?", "options": ["A video game programmer", "Don Carson, a former Disney Imagineer", "Edward Gordon Craig", "A film director"], "correct": 1, "explain": "Don Carson wrote an influential article on what game developers could learn from theme-park design, which is where the term originated."},
-  {"q": "What is the key difference between static and dynamic environmental storytelling?", "options": ["Static uses color, dynamic uses black and white", "Static details are permanent and unchanging, acting as anchors a viewer can revisit; dynamic elements can still change or react", "Dynamic storytelling only works in animated films", "There is no meaningful difference"], "correct": 1, "explain": "Static, permanent details function as reliable anchors for the narrative that reward revisiting and reinterpretation as the viewer learns more."},
-  {"q": "What is the main difference between environmental storytelling and worldbuilding?", "options": ["They are the same thing", "Worldbuilding is the lore and rules of a place in general; environmental storytelling is evidence of one specific event in one specific space", "Environmental storytelling only applies to fantasy settings", "Worldbuilding cannot include any visual elements"], "correct": 1, "explain": "This is a commonly confused pair: worldbuilding sets up the general rules and history of a world, while environmental storytelling shows the specific aftermath of a specific event."},
-  {"q": "According to the tableau principle, what should a scene show to tell its story effectively?", "options": ["A direct illustration of the event as it happens, with characters present", "Only the outcome of a sequence of events, letting the viewer infer the cause", "Text captions explaining what occurred", "Nothing \u2014 props should be placed randomly"], "correct": 1, "explain": "Showing only the outcome and letting the viewer supply the cause makes the process collaborative, which is part of why it's more memorable than a directly illustrated event."},
-  {"q": "What did Edward Gordon Craig argue in his 1911 book that connects to modern environmental storytelling?", "options": ["That dialogue is the only important element of theatre", "That a stage's visual composition alone \u2014 light, shape, and arrangement \u2014 could communicate a scene's mood and meaning without dialogue", "That theatre should never use scenery", "That environmental storytelling was invented for video games"], "correct": 1, "explain": "Craig's argument that pure visual composition can carry narrative and mood is a direct historical ancestor of environmental storytelling as practiced in games and concept art today."}
+  {"q": "In environmental storytelling, what should every placed prop ideally do?", "options": ["Fill empty space so the scene doesn't look sparse", "Answer an implicit question \u2014 who used it, when, and why they stopped \u2014 functioning as a clue", "Match the color palette of the biome exactly", "Be as detailed and rendered as possible"], "correct": 1, "explain": "Props in environmental storytelling act as evidence the viewer assembles into a narrative \u2014 each one should imply something about who was there and what happened."},
+  {"q": "Why does contrast matter when placing storytelling details in a scene?", "options": ["It makes the scene more colorful", "If everything is equally worn or cluttered, no single detail reads as a meaningful clue", "It is required for good lighting", "It has no real effect on readability"], "correct": 1, "explain": "A deliberately placed detail only reads as significant against a consistent backdrop \u2014 uniform clutter or uniform wear removes the contrast that makes a clue noticeable."},
+  {"q": "What is a common mistake when trying to communicate backstory through an environment?", "options": ["Using props instead of text", "Explaining the story too literally, such as with a sign that spells it out", "Adding wear and damage to objects", "Studying reference photography of real abandoned spaces"], "correct": 1, "explain": "Over-explaining removes the inference the viewer would otherwise do themselves \u2014 the strongest environmental stories are implied through evidence, not stated outright."},
+  {"q": "According to the module, what should you do before placing any props in a storytelling-driven scene?", "options": ["Choose the color palette first", "Write one sentence describing what happened in the space, and let every object support or complicate it", "Finish the architecture and lighting completely", "Pick the most detailed props available"], "correct": 1, "explain": "Starting from a single clear backstory sentence keeps every prop choice purposeful instead of decorative."},
+  {"q": "Why is it useful to consider what's missing from a scene, not just what's present?", "options": ["Empty spaces are easier to paint", "An absence \u2014 like an empty weapon rack or unmade bed \u2014 can imply a story as strongly as any object that's there", "Missing objects save rendering time", "It has no storytelling value"], "correct": 1, "explain": "Absence is itself information \u2014 what's gone from a space can be just as narratively loaded as what remains."}
 ],
 "checklist": [
-  "I can explain the difference between static and dynamic environmental storytelling.",
-  "I can distinguish environmental storytelling from worldbuilding when designing a scene.",
-  "I can build a private backstory for a scene and choose props that all trace back to that one cause.",
-  "I can layer a scene with an obvious first-read and a subtler secondary detail for closer viewers."
+  "I can write a one-sentence backstory for a space before placing any props in it.",
+  "I can place a single anchor object and supporting details rather than scattering many competing props.",
+  "I can add wear and damage that's consistent with a specific, plausible cause and timeframe.",
+  "I can imply a story through absence, not just through what I place in a scene."
 ],
-"nextStep": "You can now make a place feel like it has a history. Module 75 gives you the compositional tools \u2014 camera position, framing, and staging \u2014 to make sure that history is actually seen in the order and emphasis you intend."
+"nextStep": "You can now make a place feel like something happened there. Module 75 shifts focus to how you physically arrange the frame itself \u2014 composition for concept art, the camera-level decisions that control where a viewer's eye goes first."
+},
+{
+"id": "m75",
+"plate": 75,
+"title": "Composition for Concept Art",
+"difficulty": "Intermediate",
+"studyTime": "18 min",
+"practiceTime": "25\u201330 min/day",
+"prereq": ["m74"],
+"hook": "Before a viewer reads a single detail in your environment, their eye has already been told where to look \u2014 composition is the decision of whether you made that choice on purpose or left it to chance.",
+"whyItMatters": [
+  "A biome (Module 73) and a story (Module 74) can both be strong and still fail if the frame around them doesn't guide the eye. Composition is the layer that controls the order in which a viewer discovers everything else you've built \u2014 it decides what's seen first, second, and last.",
+  "This is one of the most transferable skills in the entire curriculum: the same handful of compositional principles (focal point, leading lines, value grouping) apply whether you're framing a single character, a full environment, or a comic panel, which is why professional concept artists treat it as a distinct, deliberately practiced skill rather than something that happens automatically."
+],
+"coreIdea": [
+  "A composition needs exactly one clear focal point \u2014 the place the eye is meant to land first and return to. Every other element (value, line, color saturation, detail density) should be arranged to support that one point, not compete with it.",
+  "Leading lines \u2014 roads, rivers, fences, architecture, shorelines \u2014 are the most direct tool for steering the eye toward the focal point. A line that leads the eye off the edge of the frame or into a corner does the opposite of its job.",
+  "The Rule of Thirds (dividing the frame into a 3x3 grid and placing key elements on the lines or intersections) is a reliable starting default specifically because it avoids the two most common beginner failures: a dead-centered subject and a perfectly symmetrical horizon.",
+  "Grouping values into a small number of large, simple shapes (usually 3\u20134 value families) before adding any detail is what makes a composition read clearly from a distance \u2014 detail organizes viewers up close, but value structure organizes them from across the room."
+],
+"mistakes": [
+  "Centering the subject and the horizon line by default, producing a static, ordinary composition with no path for the eye to travel.",
+  "Adding leading lines that point out of the frame or toward a corner instead of toward the intended focal point.",
+  "Rendering full detail everywhere in the scene before establishing a clear value structure, so nothing pulls focus and everything competes for attention equally.",
+  "Treating the Rule of Thirds as a mandatory rule rather than a reliable default \u2014 refusing to ever break it produces compositions that are technically correct but repetitive.",
+  "Designing the composition after the content is already finalized, instead of thumbnailing the composition first and building content into it."
+],
+"proTips": [
+  "Squint at your thumbnail (or blur it digitally) and check whether one shape still reads as the clear focal point \u2014 if the blur makes everything equally gray and undifferentiated, the value structure isn't doing its job yet.",
+  "Sketch 3\u20135 tiny thumbnail variations of the same idea with different focal-point placement before committing to one \u2014 the first composition you think of is rarely the strongest.",
+  "Deliberately break the Rule of Thirds once you understand why it works, when a shot calls for stillness, symmetry, or unease \u2014 a dead-centered composition can be a strong deliberate choice, just rarely a strong accidental one.",
+  "Use a viewfinder (a cut cardboard rectangle, or a cropping tool on a reference photo) to isolate strong compositions from real photography and study why they work."
+],
+"practice": {
+  "warmup": "Thumbnail the same simple scene (a figure in a landscape) three times, moving the focal point to a different rule-of-thirds intersection each time.",
+  "daily": "Take one of your Module 73 or 74 environments and redesign its composition using leading lines that clearly guide the eye to a single focal point.",
+  "weekly": "Reduce a full composition down to 3\u20134 flat value shapes with no detail, and confirm the focal point still reads clearly at that reduced level.",
+  "challenge": "Compose the same subject twice \u2014 once following the Rule of Thirds, once deliberately breaking it with a centered or symmetrical composition \u2014 and write one sentence on what mood each version creates differently."
+},
+"resources": [
+  {"type": "Video", "title": "The Rule of Thirds in Art", "creator": "The Virtual Instructor", "url": "https://www.youtube.com/watch?v=sQyquPmATww", "why": "A focused, free breakdown of the Rule of Thirds specifically for drawing and painting composition.", "summary": "Walks through how dividing a canvas into a 3x3 grid gives reliable placement points for a focal point, and shows the technique applied to real reference photos \u2014 cropping and re-cropping the same image to demonstrate how shifting a subject onto a grid intersection changes how strong the composition reads.", "verified": true},
+  {"type": "Article", "title": "The Rule of Thirds in Landscape Painting", "creator": "Will Kemp Art School", "url": "https://willkempartschool.com/the-rule-of-thirds-in-landscape-painting/", "why": "Analyzes real historical landscape paintings (including a 17th-century Dutch windmill scene) to show the Rule of Thirds working in finished professional work, not just as an abstract rule.", "summary": "Uses a real 17th-century Dutch landscape painting to show how the artist aligned the horizon and a windmill focal point to rule-of-thirds guidelines, then explains how a low horizon line was used deliberately to give the sky more dramatic weight in the composition.", "verified": true}
+],
+"quiz": [
+  {"q": "What is the main job of a composition's focal point?", "options": ["To be the most colorful part of the image", "To give the eye a single clear place to land first and return to, with everything else supporting it", "To always sit in the exact center of the frame", "To contain the most fine detail in the piece"], "correct": 1, "explain": "A composition needs one clear focal point that other elements support rather than compete with \u2014 its position, not its detail level, is what matters most."},
+  {"q": "What's the problem with a leading line that points toward a corner or off the edge of the frame?", "options": ["It uses too much ink or paint", "It leads the eye away from the intended focal point instead of toward it", "It's technically difficult to draw", "There is no problem \u2014 all leading lines work the same way"], "correct": 1, "explain": "Leading lines are meant to steer the eye toward the focal point; one that exits the frame or leads to a corner works against that goal."},
+  {"q": "Why is grouping values into 3\u20134 large shapes before adding detail useful for composition?", "options": ["It saves time only", "It's what makes a composition read clearly from a distance, before any fine detail is visible up close", "Detail has no effect on composition at all", "It is only relevant for black-and-white artwork"], "correct": 1, "explain": "Value structure is what organizes a composition from across a room; detail only matters once a viewer is already close, so value grouping has to work first."},
+  {"q": "How should the Rule of Thirds be treated according to this module?", "options": ["As a mandatory rule that must never be broken", "As a reliable default that avoids common beginner mistakes, but one that can be deliberately broken once understood", "As an outdated technique with no modern use", "As a rule that only applies to photography, not painting"], "correct": 1, "explain": "The Rule of Thirds is presented as a strong starting default, not an absolute law \u2014 deliberately breaking it (for symmetry or stillness) is a valid choice once you understand why the default works."},
+  {"q": "Why is it useful to squint at or blur a thumbnail composition?", "options": ["To make the image look more artistic", "To check whether the value structure still produces one clear, differentiated focal point without fine detail to rely on", "Blurring has no diagnostic use in composition", "To hide mistakes from an art director"], "correct": 1, "explain": "Blurring or squinting removes fine detail, revealing whether the underlying value structure alone is strong enough to direct the eye to a single focal point."}
+],
+"checklist": [
+  "I can identify a single clear focal point in my own composition before adding detail.",
+  "I can design leading lines that guide the eye toward the focal point rather than out of the frame.",
+  "I can reduce a composition to 3\u20134 value shapes and confirm the focal point still reads at that stage.",
+  "I can explain when and why I would deliberately break the Rule of Thirds."
+],
+"nextStep": "You can now direct where the eye goes within a frame. Module 76 adds a layer on top of composition: color scripting \u2014 using a planned sequence of palettes across a piece or project to control mood and continuity, not just placement."
 }
 ]},
 {id:'digital-fundamentals', title:'Digital Art Fundamentals', status:'soon', order:8,
