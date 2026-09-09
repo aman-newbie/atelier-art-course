@@ -2386,6 +2386,64 @@ const CURRICULUM_3 = [
 ],
 "nextStep": "You now have both composition and color as deliberate, planned layers. Module 77 turns to mood and atmosphere \u2014 using weather, light quality, and time of day to make a single scene emotionally specific, building on the color-arc thinking from this module."
 }
+,
+{
+"id": "m77",
+"plate": 77,
+"title": "Mood & Atmosphere Design",
+"difficulty": "Intermediate",
+"studyTime": "18 min",
+"practiceTime": "25\u201330 min/day",
+"prereq": ["m76"],
+"hook": "The same landscape painted at dawn feels like hope, and painted at dusk in fog feels like a warning \u2014 nothing about the geography changed, only the mood and atmosphere around it.",
+"whyItMatters": [
+  "Color scripting (Module 76) plans emotion across a whole project. Mood and atmosphere is where that plan gets executed inside a single scene \u2014 the specific choices of light, weather, and value that make one moment feel calm, tense, nostalgic, or ominous.",
+  "This is the layer that turns a technically correct environment into one people actually feel something about. An art director can usually tell within seconds whether a piece has intentional atmosphere or just accurate geometry \u2014 mood is what separates the two."
+],
+"coreIdea": [
+  "Mood (the emotional response) and atmosphere (the sense of air, light, and depth in a scene) are related but distinct: atmosphere is largely built through value and edge control (softer, cooler, less-detailed as things recede), while mood comes from the interaction of color, lighting direction, and weather layered on top of that atmospheric structure.",
+  "Light direction and quality do most of the emotional work: a strong single light source with hard shadows (chiaroscuro) reads as dramatic or tense, while soft, diffused light reads as calm or nostalgic \u2014 the same subject can flip mood entirely just by changing how it's lit.",
+  "Weather and time of day are some of the most reliable, direct tools for mood because viewers already carry strong associations with them \u2014 fog reads as mystery or melancholy, a golden low sun reads as nostalgia, a storm reads as tension, largely regardless of what else is in the scene.",
+  "Consistency of light source is what holds atmosphere together. Once you decide where the light comes from and how strong it is, every shadow, highlight, and edge in the scene needs to agree with that decision, or the atmosphere reads as broken even if each individual element looks fine in isolation."
+],
+"mistakes": [
+  "Deciding on mood after the scene is already fully rendered, instead of choosing the emotional target first and building light, weather, and value around it from the start.",
+  "Ignoring or inconsistently applying the light source, causing shadows and highlights across the scene to disagree with each other and quietly break the atmosphere.",
+  "Overusing color to carry mood while neglecting value and edge control, which are what actually build the sense of depth and air that atmosphere depends on.",
+  "Cramming a scene with too many competing colors, which produces a chaotic, confusing image instead of a clear emotional read \u2014 limiting the palette is usually what makes a mood land.",
+  "Treating weather and time of day as decoration rather than as one of the most direct, reliable tools available for setting a specific mood."
+],
+"proTips": [
+  "Pick your emotional target in one word before you start (nostalgic, threatening, serene) and let every subsequent choice \u2014 light direction, weather, palette \u2014 be tested against whether it serves that one word.",
+  "Decide your light source and direction first, and check every shadow in the scene against it before adding any other detail \u2014 inconsistent light is one of the fastest ways to break atmosphere.",
+  "Paint or study the same scene at a few different times of day or weather conditions to see directly how much mood shifts with light alone, independent of the subject itself.",
+  "When a scene isn't reading emotionally, check value and edge control before reaching for more color \u2014 atmosphere is usually a value problem before it's a color problem."
+],
+"practice": {
+  "warmup": "Pick one word (nostalgic, threatening, serene, triumphant) and thumbnail the same simple landscape shape three times, changing only light direction and weather to hit that word each time.",
+  "daily": "Take one of your Module 73\u201376 environments and repaint its lighting and atmosphere twice \u2014 once for a calm mood, once for a tense one \u2014 keeping the geometry identical.",
+  "weekly": "Build one scene with a single consistent light source, and deliberately check every shadow and highlight against that source before calling it finished.",
+  "challenge": "Recreate the same location at dawn, midday, and dusk, and write one sentence for each on what specific mood that lighting condition alone produces."
+},
+"resources": [
+  {"type": "Video", "title": "Light, Value, and Color with Marco Bucci", "creator": "Marco Bucci (via Proko)", "url": "https://www.youtube.com/watch?v=yBsLhbeCPqg", "why": "A free livestream lesson from a working professional artist covering exactly the value-and-light foundation that atmosphere is built on.", "summary": "Marco Bucci works through how light, value, and color interact in a painting, demonstrating how shifting light quality and value relationships \u2014 not just hue \u2014 is what actually changes how a piece feels and reads for depth.", "verified": true},
+  {"type": "Article", "title": "Creating Mood and Atmosphere in Landscape Painting", "creator": "Angela Edwards", "url": "https://www.angelaedwards.co.uk/creating-mood-and-atmosphere-in-landscape-painting/", "why": "A thorough, free breakdown of exactly how color, lighting, composition, texture, and weather each independently contribute to mood, with real painting examples.", "summary": "Walks through five concrete levers for mood \u2014 color psychology, lighting and value (including chiaroscuro), composition, brush texture, and weather or time of day \u2014 using real paintings by Turner, Monet, van Gogh, and Caravaggio to show each lever in finished work, then lists common mistakes like overusing color or ignoring a consistent light source.", "verified": true}
+],
+"quiz": [
+  {"q": "What is the key difference between mood and atmosphere as defined in this module?", "options": ["They are exactly the same thing", "Atmosphere is built mainly through value and edge control (sense of air and depth); mood comes from color, light, and weather layered on top of that structure", "Mood only applies to portraits, atmosphere only to landscapes", "Atmosphere refers only to weather effects like fog or rain"], "correct": 1, "explain": "Atmosphere is the underlying sense of depth and air, built through value and edges; mood is the emotional read created by color, lighting, and weather choices layered on that foundation."},
+  {"q": "Why does a strong single light source with hard shadows tend to read as dramatic or tense?", "options": ["Hard shadows are technically harder to paint", "High-contrast, directional light (chiaroscuro) is strongly associated with drama and tension, while soft diffused light reads as calm", "Hard shadows always indicate nighttime", "There is no real emotional association with light quality"], "correct": 1, "explain": "Chiaroscuro-style strong, directional light with hard shadow edges reliably reads as dramatic or tense, while soft, diffused light reads as calmer or more nostalgic."},
+  {"q": "Why is consistent light direction important for atmosphere?", "options": ["It's a legal requirement for professional artwork", "Every shadow and highlight needs to agree with one light source, or the atmosphere reads as broken even if individual elements look fine alone", "Consistent light direction only matters for photography, not painting", "It has no real effect on how a scene reads"], "correct": 1, "explain": "Once a light source is chosen, every shadow and highlight in the scene needs to be consistent with it; disagreement between elements breaks the sense of atmosphere even if each piece looks fine in isolation."},
+  {"q": "According to the module, why are weather and time of day especially reliable tools for setting mood?", "options": ["They are the only tools that affect mood", "Viewers already carry strong existing associations with them (fog = mystery, golden light = nostalgia), making them direct and effective", "They are easier to render than lighting", "They have no measurable effect on a viewer's emotional response"], "correct": 1, "explain": "Weather and time of day work reliably because viewers bring pre-existing emotional associations to them, largely independent of what else is in the scene."},
+  {"q": "If a scene isn't reading emotionally the way you intended, what should you check before adding more color?", "options": ["Increase the resolution of the file", "Check value and edge control first, since atmosphere is usually a value problem before it's a color problem", "Add more objects to the scene", "Switch to a different software"], "correct": 1, "explain": "The module recommends checking value and edge control before reaching for more color, since atmosphere problems are usually rooted in value relationships rather than a lack of color."}
+],
+"checklist": [
+  "I can name a single-word emotional target for a scene before choosing its lighting and weather.",
+  "I can check every shadow and highlight in a scene against one consistent light source.",
+  "I can identify whether an atmosphere problem is really a value/edge problem before reaching for more color.",
+  "I can explain why fog, golden hour, and storm lighting each carry a specific, reliable emotional association."
+],
+"nextStep": "You now have composition, color, and mood as deliberate layers working together. Module 78 turns to lighting specifically for concept art \u2014 the practical logic of light sources, time of day, and how environmental lighting behaves physically, building directly on the mood work here."
+}
 ]},
 {id:'digital-fundamentals', title:'Digital Art Fundamentals', status:'soon', order:8,
     desc:'Software-agnostic digital basics — workspace, tablets, brush engines, layers, selections, transforms, and clean digital line art — built so the skill transfers across any application.',
