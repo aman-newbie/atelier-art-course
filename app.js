@@ -21,6 +21,8 @@ const QUOTES = [
 /* ============================================================
    STATE
    ============================================================ */
+const ORIGINAL_THEME = 'dark'; // the site's actual default, used by the theme-preview toggle
+let showingOriginalTheme = false;
 const STATE = {
   theme:'dark',
   route:{view:'home', pathId:null, moduleId:null, tab:'overview'},
@@ -34,6 +36,8 @@ const STATE = {
   searchQuery:'',
   fontScale:1,
   customBgUrl:'',
+  customHistory:[],
+  customScrimOpacity:0.55,
   language:'en',
   xp:0,
   storageBackend:'none',
@@ -78,6 +82,7 @@ const ICONS = {
   pause:'<svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><rect x="5" y="4" width="5" height="16" rx="1"/><rect x="14" y="4" width="5" height="16" rx="1"/></svg>',
   shuffle:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h3l10 12h5M14 6h5v5M3 18h3l4-4.5M14 18h5v-5"/></svg>',
   chart:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10M12 20V4M20 20v-7"/></svg>',
+  palette:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="9" cy="9" r="1.2" fill="currentColor" stroke="none"/><circle cx="14.5" cy="8" r="1.2" fill="currentColor" stroke="none"/><circle cx="16" cy="13" r="1.2" fill="currentColor" stroke="none"/><circle cx="10" cy="15.5" r="1.2" fill="currentColor" stroke="none"/></svg>',
   library:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 016.5 17H20M4 19.5A2.5 2.5 0 006.5 22H20V2H6.5A2.5 2.5 0 004 4.5v15z"/></svg>'
 };
 
@@ -284,6 +289,8 @@ function serializeState(){
     theme:STATE.theme,
     fontScale:STATE.fontScale,
     customBgUrl:STATE.customBgUrl,
+    customHistory:STATE.customHistory,
+    customScrimOpacity:STATE.customScrimOpacity,
     language:STATE.language,
     streak:STATE.streak,
     lastVisitDate:STATE.lastVisitDate,
@@ -309,6 +316,8 @@ function applyState(data){
   if(data.theme) STATE.theme = data.theme;
   if(typeof data.fontScale === 'number') STATE.fontScale = data.fontScale;
   if(typeof data.customBgUrl === 'string') STATE.customBgUrl = data.customBgUrl;
+  if(Array.isArray(data.customHistory)) STATE.customHistory = data.customHistory.slice(0, 6);
+  if(typeof data.customScrimOpacity === 'number') STATE.customScrimOpacity = data.customScrimOpacity;
   if(data.language === 'hi' || data.language === 'en') STATE.language = data.language;
   STATE.streak = data.streak || 0;
   STATE.lastVisitDate = data.lastVisitDate || null;
@@ -475,6 +484,8 @@ function renderApp(){
     renderBookmarks();
   } else if(route.view === 'library'){
     renderLibrary();
+  } else if(route.view === 'themes'){
+    renderThemes();
   } else if(route.view === 'dashboard'){
     renderDashboard();
   } else if(route.view === 'calendar'){
@@ -515,13 +526,12 @@ function applyCustomBackground(url){
 }
 function updateChrome(){
   document.getElementById('xpValue').textContent = STATE.xp;
+  showingOriginalTheme = false; // any real state change (nav, save, etc.) drops back out of the preview
   document.documentElement.setAttribute('data-theme', STATE.theme);
-  document.querySelectorAll('.theme-option').forEach(btn=>{
-    btn.setAttribute('aria-pressed', String(btn.dataset.themeChoice === STATE.theme));
-  });
-  applyCustomBackground(STATE.customBgUrl);
-  const customUrlInput = document.getElementById('themeCustomUrl');
-  if(customUrlInput && document.activeElement !== customUrlInput) customUrlInput.value = STATE.customBgUrl || '';
+  const themeBtn = document.getElementById('themeToggle');
+  if(themeBtn) themeBtn.setAttribute('aria-pressed', 'false');
+  document.documentElement.style.setProperty('--custom-scrim-opacity', STATE.customScrimOpacity);
+  applyCustomBackground(STATE.theme === 'custom' ? STATE.customBgUrl : '');
   document.documentElement.style.setProperty('--font-scale', STATE.fontScale);
   const langBtn = document.getElementById('langToggle');
   if(langBtn){
@@ -554,6 +564,9 @@ function renderSidebar(){
   </button></li>`;
   html += `<li><button class="side-module-item ${STATE.route.view==='library'?'active':''}" data-view="library">
     <span class="tool-icon">${ICONS.library}</span><span style="flex:1">Library</span>
+  </button></li>`;
+  html += `<li><button class="side-module-item ${STATE.route.view==='themes'?'active':''}" data-view="themes">
+    <span class="tool-icon">${ICONS.palette}</span><span style="flex:1">Themes</span>
   </button></li>`;
   html += '</ul></div>';
 
@@ -1111,6 +1124,91 @@ function renderResourceCard(r, ri, m){
       <span class="library-source">${L(m,'title')} \u00b7 Plate ${m.plate}</span>
     </div>
   </div>`;
+}
+
+function setCustomThemeBackground(newUrl){
+  if(STATE.customBgUrl && STATE.customBgUrl !== newUrl){
+    STATE.customHistory = [STATE.customBgUrl, ...STATE.customHistory.filter(h => h !== STATE.customBgUrl && h !== newUrl)].slice(0, 6);
+  } else {
+    STATE.customHistory = STATE.customHistory.filter(h => h !== newUrl);
+  }
+  STATE.customBgUrl = newUrl;
+  STATE.theme = 'custom';
+  saveProgress();
+  updateChrome();
+  renderThemes();
+}
+
+function renderThemes(){
+  const presets = [
+    {key:'dark', name:'Drafting Desk', desc:'The default \u2014 graphite tones, construction-line motifs.'},
+    {key:'light', name:'Paper', desc:'Bright and clean, like working on real paper.'},
+    {key:'sketchbook', name:'Sketchbook', desc:'Warm cream tones with visible pencil-sketch texture.'}
+  ];
+
+  let html = `
+  <div class="breadcrumb"><button data-nav-home>Atelier</button> ${ICONS.chevronRight} <span>Themes</span></div>
+  <div class="hero">
+    <div class="eyebrow">Make it yours</div>
+    <h1>Themes</h1>
+    <p class="hero-sub">Pick a preset, or set your own background from a photo. Your choice is saved and applied every time you open Atelier.</p>
+  </div>
+
+  <h2 class="section-title">Presets</h2>
+  <div class="theme-preset-grid">
+    ${presets.map(p => `
+      <button class="theme-preset-card ${STATE.theme===p.key?'active':''}" data-theme-preset="${p.key}">
+        <span class="theme-preset-swatch ${p.key}"></span>
+        <span class="theme-preset-name">${p.name}</span>
+        <span class="theme-preset-desc">${p.desc}</span>
+        ${STATE.theme===p.key?`<span class="theme-preset-check">${ICONS.check}</span>`:''}
+      </button>`).join('')}
+  </div>
+
+  <h2 class="section-title">Custom background</h2>
+  <div class="theme-custom-panel">
+    ${STATE.customBgUrl ? `
+      <div class="theme-custom-preview" style="background-image:url('${STATE.customBgUrl.replace(/'/g,"%27")}')">
+        ${STATE.theme==='custom' ? `<span class="theme-preset-check theme-custom-active-badge">${ICONS.check} Active</span>` : ''}
+      </div>
+    ` : `<div class="theme-custom-preview theme-custom-preview-empty">No custom background set yet</div>`}
+
+    <div class="theme-custom-controls">
+      <div class="library-search theme-url-row">
+        ${ICONS.link}
+        <input type="url" id="themesCustomUrl" placeholder="Paste an image URL\u2026" aria-label="Custom background image URL" value="${(STATE.customBgUrl && !STATE.customBgUrl.startsWith('data:')) ? STATE.customBgUrl.replace(/"/g,'&quot;') : ''}">
+        <button class="btn btn-sm" id="themesCustomApply">Set</button>
+      </div>
+      <label class="theme-custom-upload" for="themesCustomFile">
+        ${ICONS.link}
+        Or choose a photo from your device
+      </label>
+      <input type="file" accept="image/*" id="themesCustomFile" hidden>
+
+      ${STATE.customBgUrl ? `
+      <div class="theme-opacity-row">
+        <label for="themesOpacitySlider">Background strength</label>
+        <input type="range" id="themesOpacitySlider" min="20" max="85" value="${Math.round(STATE.customScrimOpacity*100)}">
+        <span class="theme-opacity-value" id="themesOpacityValue">${Math.round(STATE.customScrimOpacity*100)}%</span>
+      </div>
+      <p class="theme-opacity-hint">Lower = more of your photo shows through. Higher = stronger scrim, safest for busy or high-contrast photos. Text color adjusts automatically either way.</p>
+      ` : ''}
+    </div>
+  </div>
+
+  ${STATE.customHistory && STATE.customHistory.length ? `
+  <h2 class="section-title">Previously used</h2>
+  <div class="theme-history-grid">
+    ${STATE.customHistory.map((h, i) => `
+      <div class="theme-history-item">
+        <button class="theme-history-thumb" style="background-image:url('${h.replace(/'/g,"%27")}')" data-history-apply="${i}" aria-label="Use this background again"></button>
+        <button class="theme-history-remove" data-history-remove="${i}" aria-label="Remove from history">${ICONS.lock ? '\u00d7' : '\u00d7'}</button>
+      </div>`).join('')}
+  </div>
+  ` : ''}
+  `;
+
+  document.getElementById('main').innerHTML = html;
 }
 
 function renderLibrary(){
@@ -2125,6 +2223,39 @@ function initEvents(){
     const libFilterBtn = e.target.closest('[data-lib-filter]');
     if(libFilterBtn){ LIB_FILTER = libFilterBtn.dataset.libFilter; renderLibrary(); return; }
 
+    const themePresetBtn = e.target.closest('[data-theme-preset]');
+    if(themePresetBtn){
+      STATE.theme = themePresetBtn.dataset.themePreset;
+      saveProgress();
+      updateChrome();
+      renderThemes();
+      return;
+    }
+
+    const themesApplyBtn = e.target.closest('#themesCustomApply');
+    if(themesApplyBtn){
+      const val = document.getElementById('themesCustomUrl').value.trim();
+      if(val) setCustomThemeBackground(val);
+      return;
+    }
+
+    const historyApplyBtn = e.target.closest('[data-history-apply]');
+    if(historyApplyBtn){
+      const idx = parseInt(historyApplyBtn.dataset.historyApply, 10);
+      const url = STATE.customHistory[idx];
+      if(url) setCustomThemeBackground(url);
+      return;
+    }
+
+    const historyRemoveBtn = e.target.closest('[data-history-remove]');
+    if(historyRemoveBtn){
+      const idx = parseInt(historyRemoveBtn.dataset.historyRemove, 10);
+      STATE.customHistory.splice(idx, 1);
+      saveProgress();
+      renderThemes();
+      return;
+    }
+
     const pathJump = e.target.closest('[data-path-jump]');
     if(pathJump){ openPathOnHome(pathJump.dataset.pathJump); return; }
 
@@ -2284,109 +2415,69 @@ function initEvents(){
       const revived = document.getElementById('librarySearchInput');
       if(revived){ revived.focus(); revived.setSelectionRange(caret, caret); }
     }
+    if(e.target.id === 'themesOpacitySlider'){
+      const pct = parseInt(e.target.value, 10);
+      STATE.customScrimOpacity = pct / 100;
+      document.documentElement.style.setProperty('--custom-scrim-opacity', STATE.customScrimOpacity);
+      const label = document.getElementById('themesOpacityValue');
+      if(label) label.textContent = pct + '%';
+    }
+  });
+  document.body.addEventListener('change', (e)=>{
+    if(e.target.id === 'themesOpacitySlider'){
+      saveProgress(); // commit once dragging stops, not on every tick
+    }
+    if(e.target.id === 'themesCustomFile'){
+      const file = e.target.files && e.target.files[0];
+      if(!file) return;
+      const label = document.querySelector('.theme-custom-upload');
+      const originalLabelHTML = label ? label.innerHTML : '';
+      if(label) label.textContent = 'Reading photo\u2026';
+      const reader = new FileReader();
+      reader.onload = (ev)=>{
+        const img = new Image();
+        img.onload = ()=>{
+          const maxDim = 1280;
+          let {width, height} = img;
+          if(width > maxDim || height > maxDim){
+            const scale = maxDim / Math.max(width, height);
+            width = Math.round(width * scale);
+            height = Math.round(height * scale);
+          }
+          const canvas = document.createElement('canvas');
+          canvas.width = width; canvas.height = height;
+          canvas.getContext('2d').drawImage(img, 0, 0, width, height);
+          setCustomThemeBackground(canvas.toDataURL('image/jpeg', 0.72));
+        };
+        img.onerror = ()=>{ if(label) label.innerHTML = originalLabelHTML; showToast("Couldn't read that photo \u2014 try a different one."); };
+        img.src = ev.target.result;
+      };
+      reader.onerror = ()=>{ if(label) label.innerHTML = originalLabelHTML; showToast("Couldn't read that photo \u2014 try a different one."); };
+      reader.readAsDataURL(file);
+      e.target.value = '';
+    }
   });
   document.getElementById('homeLink').addEventListener('click', (e)=>{ e.preventDefault(); navigateHome(); });
 
-  document.getElementById('themeToggle').addEventListener('click', (e)=>{
-    e.stopPropagation();
-    const menu = document.getElementById('themePickerMenu');
-    const willOpen = !menu.classList.contains('open');
-    menu.classList.toggle('open', willOpen);
-    document.getElementById('themeToggle').setAttribute('aria-expanded', String(willOpen));
-  });
-  document.querySelectorAll('.theme-option').forEach(btn=>{
-    btn.addEventListener('click', (e)=>{
-      if(btn.dataset.themeChoice === 'custom'){
-        e.stopPropagation();
-        const row = document.getElementById('themeCustomRow');
-        row.hidden = !row.hidden;
-        if(!row.hidden) document.getElementById('themeCustomUrl').focus();
-        if(STATE.customBgUrl){
-          STATE.theme = 'custom';
-          saveProgress();
-          updateChrome();
-        }
-        return;
-      }
-      STATE.theme = btn.dataset.themeChoice;
-      saveProgress();
-      updateChrome();
-      document.getElementById('themePickerMenu').classList.remove('open');
-      document.getElementById('themeToggle').setAttribute('aria-expanded', 'false');
-    });
-  });
-  document.getElementById('themeCustomApply').addEventListener('click', (e)=>{
-    e.stopPropagation();
-    const url = document.getElementById('themeCustomUrl').value.trim();
-    if(!url) return;
-    STATE.customBgUrl = url;
-    STATE.theme = 'custom';
-    saveProgress();
-    updateChrome();
-    document.getElementById('themePickerMenu').classList.remove('open');
-    document.getElementById('themeToggle').setAttribute('aria-expanded', 'false');
-    document.getElementById('themeCustomRow').hidden = true;
-  });
-  document.getElementById('themeCustomUrl').addEventListener('click', (e)=>e.stopPropagation());
-  document.getElementById('themeCustomUrl').addEventListener('keydown', (e)=>{
-    if(e.key === 'Enter'){ document.getElementById('themeCustomApply').click(); }
-  });
-  document.getElementById('themeCustomFile').addEventListener('click', (e)=>e.stopPropagation());
-  document.getElementById('themeCustomFile').addEventListener('change', (e)=>{
-    const file = e.target.files && e.target.files[0];
-    if(!file) return;
-    const label = document.querySelector('.theme-custom-upload');
-    const originalLabelHTML = label.innerHTML;
-    label.textContent = 'Reading photo\u2026';
-    const reader = new FileReader();
-    reader.onload = (ev)=>{
-      const img = new Image();
-      img.onload = ()=>{
-        // Downscale to keep this lightweight in storage and fast to paint as a background.
-        const maxDim = 1280; /* phone viewport widths rarely exceed this; lighter to decode + composite as a fixed full-screen background */
-        let {width, height} = img;
-        if(width > maxDim || height > maxDim){
-          const scale = maxDim / Math.max(width, height);
-          width = Math.round(width * scale);
-          height = Math.round(height * scale);
-        }
-        const canvas = document.createElement('canvas');
-        canvas.width = width; canvas.height = height;
-        canvas.getContext('2d').drawImage(img, 0, 0, width, height);
-        const dataUrl = canvas.toDataURL('image/jpeg', 0.72);
-        STATE.customBgUrl = dataUrl;
-        STATE.theme = 'custom';
-        saveProgress();
-        updateChrome();
-        label.innerHTML = originalLabelHTML;
-        document.getElementById('themePickerMenu').classList.remove('open');
-        document.getElementById('themeToggle').setAttribute('aria-expanded', 'false');
-        document.getElementById('themeCustomRow').hidden = true;
-      };
-      img.onerror = ()=>{ label.innerHTML = originalLabelHTML; showToast("Couldn't read that photo \u2014 try a different one."); };
-      img.src = ev.target.result;
-    };
-    reader.onerror = ()=>{ label.innerHTML = originalLabelHTML; showToast("Couldn't read that photo \u2014 try a different one."); };
-    reader.readAsDataURL(file);
-    e.target.value = '';
+  document.getElementById('themeToggle').addEventListener('click', ()=>{
+    // Simple toggle now, not a menu: tap once to preview the site's original theme,
+    // tap again to go back to whatever you've actually chosen on the Themes page.
+    // This preview never gets saved — a fresh reload always shows your real preference.
+    showingOriginalTheme = !showingOriginalTheme;
+    const btn = document.getElementById('themeToggle');
+    btn.setAttribute('aria-pressed', String(showingOriginalTheme));
+    if(showingOriginalTheme){
+      document.documentElement.setAttribute('data-theme', ORIGINAL_THEME);
+    } else {
+      document.documentElement.setAttribute('data-theme', STATE.theme);
+      applyCustomBackground(STATE.theme === 'custom' ? STATE.customBgUrl : '');
+    }
   });
   document.getElementById('langToggle').addEventListener('click', ()=>{
     STATE.language = STATE.language === 'hi' ? 'en' : 'hi';
     saveProgress();
     updateChrome();
     renderApp();
-  });
-  document.addEventListener('click', (e)=>{
-    if(!e.target.closest('.theme-picker')){
-      document.getElementById('themePickerMenu').classList.remove('open');
-      document.getElementById('themeToggle').setAttribute('aria-expanded', 'false');
-    }
-  });
-  document.addEventListener('keydown', (e)=>{
-    if(e.key === 'Escape'){
-      document.getElementById('themePickerMenu').classList.remove('open');
-      document.getElementById('themeToggle').setAttribute('aria-expanded', 'false');
-    }
   });
 
   document.getElementById('fontUp').addEventListener('click', ()=>{
