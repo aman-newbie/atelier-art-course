@@ -2676,6 +2676,64 @@ const CURRICULUM_3 = [
 ],
 "nextStep": "You now have the full toolkit for designing a coherent world, from a single environment up to the systems connecting many of them. Module 82 is the capstone \u2014 bringing every skill from this arc together into one complete, finished environment concept piece."
 }
+,
+{
+"id": "m82",
+"plate": 82,
+"title": "Capstone: A Complete Environment Concept Piece",
+"difficulty": "Advanced",
+"studyTime": "15 min",
+"practiceTime": "2\u20134 hours (project)",
+"prereq": ["m81"],
+"hook": "Nine modules taught you nine separate skills. This one has no new theory \u2014 it just asks you to use all of them, at once, on a single piece, the way a real studio brief actually works.",
+"whyItMatters": [
+  "A portfolio isn't built from isolated exercises \u2014 it's built from finished pieces that prove you can hold nine different decisions in your head at the same time: a believable biome, an implied story, a guided composition, a planned color arc, a specific mood, consistent lighting, a real thumbnail-to-final process, and (if relevant) a coherent culture behind it.",
+  "This is also the most honest way to find your current weak point. Working on isolated skills hides gaps that only show up when everything has to work together \u2014 a capstone piece will surface whichever of the nine skills is actually your weakest, which is exactly the information you need to know what to practice next."
+],
+"coreIdea": [
+  "Start from a one-sentence brief, the way a real project would: what biome, what story is implied, what emotional target. Every later decision (composition, color, light) should be tested against whether it serves that one sentence, not chosen in isolation.",
+  "Follow the real pipeline order from Module 80: loose thumbnail exploration first (many small, disposable options), then direction-locking (committing to one composition and value structure), then the detailed pass (color, light, finished rendering) \u2014 resist jumping straight to final detail.",
+  "Treat this as a single decision at a time, checked against the module it came from: biome logic (73), a storytelling detail (74), one clear focal point (75), a planned color arc if this is part of a larger idea (76), one deliberate mood (77), one consistent light source (78). Trying to perfect all nine at once from the start is what causes overwhelm; work through them in roughly that order.",
+  "A capstone piece doesn't need to be large or complex to be complete \u2014 a single, well-considered environment that clearly applied each skill is more valuable than an ambitious piece that skipped the process to rush toward a final render."
+],
+"mistakes": [
+  "Skipping the thumbnail and exploration stage to jump straight into a detailed final piece, losing the chance to compare alternatives before committing.",
+  "Trying to perfect every skill simultaneously from the first mark instead of working through them in a rough, deliberate order (structure and biome first, rendering last).",
+  "Choosing a scene so large or complex that finishing it within a reasonable scope becomes the real obstacle, rather than applying the skills themselves.",
+  "Adding storytelling details, mood, or culture as decoration after the piece is 'done' instead of letting them inform decisions from the start.",
+  "Treating the finished piece as the end of the process instead of using it to honestly identify which of the nine skills is currently your weakest."
+],
+"proTips": [
+  "Write your one-sentence brief down before making a single mark, and keep it visible while you work \u2014 it's the fastest way to catch yourself drifting from the original intent.",
+  "Deliberately limit scope: a smaller, focused environment executed with real intention at every stage beats an ambitious one that runs out of time before the lighting and mood pass.",
+  "After finishing, go back through Modules 73\u201381 one at a time and honestly check your piece against each one's checklist \u2014 this turns the capstone into a real diagnostic, not just a finished picture.",
+  "Keep your thumbnail stage and any discarded alternate directions \u2014 showing that process alongside the final piece is exactly the kind of process documentation Module 80 identified as valuable to studios."
+],
+"practice": {
+  "warmup": "Write a one-sentence brief for an original environment: name its biome, one implied story detail, and one emotional target.",
+  "daily": "Work through one pipeline stage per session \u2014 thumbnails, then direction-locking, then color/mood, then lighting \u2014 rather than trying to complete the whole piece in one sitting.",
+  "weekly": "Complete one full capstone environment from brief to finished piece, keeping your thumbnail stage and discarded alternates alongside the final image.",
+  "challenge": "Go back through your finished capstone piece and score it honestly against the checklist from each of Modules 73\u201381 \u2014 identify your single weakest area and name one specific thing you'll practice next because of it."
+},
+"resources": [
+  {"type": "Article", "title": "Tips for Creating a Piece for Your Environment Art Portfolio Within Scope and Time", "creator": "Joyce Jiao, The Rookies", "url": "https://discover.therookies.co/2023/08/28/tips-for-creating-a-piece-for-your-environment-art-portfolio-within-scope-and-time/", "why": "A free, detailed, real first-person breakdown of taking one environment concept from planning through to a finished portfolio piece, including scope and time management.", "summary": "A working environment artist breaks down her full process on a real 4-week portfolio project: analyzing a concept, gathering reference, blocking geometry and lighting early, building assets, and layering foliage and atmosphere for realism, ending with honest advice on managing scope and energy within a tight timeframe.", "verified": true},
+  {"type": "Article", "title": "Environment Art", "creator": "The Level Design Book (open community text)", "url": "https://book.leveldesignbook.com/process/env-art", "why": "A free chapter explaining how concept art, paintovers, and model sheets function as real production documents in a professional pipeline.", "summary": "Explains how professional environment art production uses concept art, paintovers (painting directly over a rough 3D blockout), and model sheets with orthographic views to communicate a design clearly enough for other artists to build from, using real examples from Portal 2 and Spyro: Reignited.", "verified": true}
+],
+"quiz": [
+  {"q": "According to this capstone module, what should you start from before making any marks on a new environment piece?", "options": ["The most detailed rendering technique you know", "A one-sentence brief naming the biome, an implied story detail, and an emotional target", "A random color palette", "The largest, most ambitious scene you can imagine"], "correct": 1, "explain": "Starting from a one-sentence brief gives every later decision (composition, color, light) something concrete to be tested against, rather than being chosen in isolation."},
+  {"q": "What pipeline order does the module recommend following, based on Module 80?", "options": ["Finished rendering first, then thumbnails afterward as documentation", "Loose thumbnail exploration first, then direction-locking, then a detailed pass", "All nine skills perfected simultaneously from the very first mark", "Skip planning entirely and rely on instinct alone"], "correct": 1, "explain": "The recommended order mirrors the professional pipeline from Module 80: explore loosely first, lock a direction, then move into detailed color, light, and rendering."},
+  {"q": "Why does the module recommend limiting the scope of a capstone piece?", "options": ["Smaller pieces are always better art regardless of execution", "A focused environment executed with real intention at every stage beats an ambitious one that runs out of time before mood and lighting are addressed", "Scope has no effect on whether a piece succeeds", "Large environments are technically impossible to finish"], "correct": 1, "explain": "An overly ambitious scope risks running out of time before later-stage skills (mood, lighting) get real attention, so a smaller, fully-realized piece is more valuable than an unfinished ambitious one."},
+  {"q": "What is the recommended way to use the finished capstone piece after completing it?", "options": ["Move on immediately without further reflection", "Go back through each earlier module's checklist and honestly identify your weakest skill", "Delete any discarded thumbnails and alternate directions", "Compare it only against other people's work, not the checklists"], "correct": 1, "explain": "Checking the finished piece against each earlier module's checklist turns the capstone into a genuine diagnostic tool, revealing which specific skill is currently weakest and worth practicing next."},
+  {"q": "Why is it valuable to keep discarded thumbnail alternatives alongside a finished capstone piece?", "options": ["It has no real value and should be deleted", "It documents your process, which Module 80 identified as something studios specifically look for beyond just a polished final image", "Discarded thumbnails are required by copyright law", "It only matters for traditional media, not digital"], "correct": 1, "explain": "Keeping visible process work, including discarded directions, demonstrates decision-making ability \u2014 exactly the kind of documentation Module 80 identified as valuable to studios evaluating a portfolio."}
+],
+"checklist": [
+  "I can write a one-sentence brief before starting a new environment piece.",
+  "I can work through a piece in pipeline order (explore, lock direction, detail) rather than jumping straight to rendering.",
+  "I can honestly check a finished piece against the checklists from Modules 73\u201381 to identify my weakest skill.",
+  "I can keep and present discarded thumbnails and alternate directions as part of my process."
+],
+"nextStep": "You've completed the World Building & Concept Art arc \u2014 from a single believable biome to a full environment piece built through a real professional process. The skills here (composition, color, mood, lighting, pipeline thinking) carry forward directly into whichever arc you tackle next."
+}
 ]},
 {id:'digital-fundamentals', title:'Digital Art Fundamentals', status:'soon', order:8,
     desc:'Software-agnostic digital basics — workspace, tablets, brush engines, layers, selections, transforms, and clean digital line art — built so the skill transfers across any application.',
