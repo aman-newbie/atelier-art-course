@@ -2502,6 +2502,64 @@ const CURRICULUM_3 = [
 ],
 "nextStep": "You now have the full toolkit \u2014 biome, story, composition, color, mood, and lighting \u2014 for designing a single strong environment. Module 79 shifts to process: thumbnailing and concept iteration, the practical habit of generating and narrowing many small ideas before committing to one final piece."
 }
+,
+{
+"id": "m79",
+"plate": 79,
+"title": "Thumbnailing & Concept Iteration",
+"difficulty": "Intermediate",
+"studyTime": "16 min",
+"practiceTime": "25\u201330 min/day",
+"prereq": ["m78"],
+"hook": "Your best idea almost never shows up first \u2014 professionals don't trust idea number one, so they generate a page of small, disposable sketches before they let themselves commit to anything.",
+"whyItMatters": [
+  "Every skill so far \u2014 biome, story, composition, color, mood, lighting \u2014 has to be applied to a chosen idea before it's worth developing further. Thumbnailing is the process that generates and filters those ideas cheaply, before you've invested hours in a direction that turns out weak.",
+  "This is a named, standard step in professional pipelines specifically because committing to your first idea is a well-known trap: the first thing you think of is usually the most obvious, generic solution, and only by generating a real spread of options do the more interesting ones show up."
+],
+"coreIdea": [
+  "Thumbnails are disposable by design \u2014 small (roughly palm-sized), fast, and made with only 1\u20132 values or a rough gesture, specifically so you don't get emotionally attached to any single one before you've compared it to alternatives.",
+  "Quantity comes before quality at this stage: starting with around 5 or more thumbnails for a single idea is a reasonable baseline, because the goal is coverage of different compositions and solutions, not polish on any one of them.",
+  "Thumbnails should test composition and structure, not render quality \u2014 adding color, brush technique, or detail at this stage delays the actual goal, which is deciding what the piece is before deciding how it will look finished.",
+  "The aspect ratio of a thumbnail should match the intended final piece, and drawing a literal rectangle with space around it (rather than filling in a grid) keeps each idea visually distinct and easy to compare against the others."
+],
+"mistakes": [
+  "Committing to the first thumbnail that comes to mind instead of generating a real spread of alternatives to compare it against.",
+  "Adding rendering, color, or fine detail to thumbnails, which shifts focus away from composition and structure and slows down the whole process.",
+  "Drawing thumbnails at a large size or filling in a pre-drawn grid, which makes each idea harder to compare against the others at a glance.",
+  "Stopping after only one or two thumbnails instead of pushing for a genuine spread of different compositional solutions.",
+  "Skipping feedback on a set of thumbnails when it's available \u2014 getting outside eyes on a spread of ideas before committing is a normal, useful part of the process, not a sign of weakness."
+],
+"proTips": [
+  "Work on one wide canvas with several small rectangles laid out side by side, rather than one thumbnail per page, so you can compare ideas against each other at a glance.",
+  "If you get stuck, let 'surprises' from a rough or messy line drive the next idea \u2014 an accidental shape can become a completely different, more interesting direction than the one you started sketching.",
+  "Match your thumbnail's aspect ratio to your intended final piece from the start, so a strong thumbnail composition doesn't fall apart when you scale it up.",
+  "Treat thumbnailing as a time-management tool: the faster you can get a real spread of ideas down, the sooner you reach a confident final direction, rather than delaying that decision by polishing early."
+],
+"practice": {
+  "warmup": "In under 10 minutes, produce 8\u201310 tiny, one-value thumbnails of a single simple prompt (a doorway, a creature silhouette, a room), with zero detail beyond basic shapes.",
+  "daily": "Take one of your Module 73\u201378 environments and generate 5 alternate thumbnail compositions for it before deciding if your original composition was actually the strongest option.",
+  "weekly": "Do a full thumbnail spread (8+ ideas) for a new environment concept, matching your final piece's aspect ratio, then pick the strongest one and explain in one sentence why it beat the others.",
+  "challenge": "Get feedback on a thumbnail spread from another person (a friend, a classmate, an online critique group) before finalizing your choice, and note whether their pick matched yours."
+},
+"resources": [
+  {"type": "Video", "title": "How to Thumbnail for Concept Art", "creator": "Dave Greco (Proko)", "url": "https://www.proko.com/course-lesson/how-to-thumbnail-for-concept-art", "why": "A free lesson (from within a paid course, but this specific lesson is marked free) showing a real, complete thumbnailing process from blank canvas to a spread of usable concepts.", "summary": "Dave Greco demonstrates a full thumbnailing process starting from a character description, working on one wide canvas with a subtle color tint instead of pure white, sketching loose silhouettes and varied proportions quickly, and using unexpected marks to spark new ideas rather than forcing a single predetermined direction.", "verified": true},
+  {"type": "Article", "title": "Guide to Thumbnail Sketches", "creator": "Art Prof (Clara Lieu)", "url": "https://artprof.org/learn/tutorials-media/drawing/thumbnail-sketches/", "why": "A free, practical checklist-style guide from a nonprofit art education platform, covering concrete rules like sizing, aspect ratio, and avoiding overworking thumbnails.", "summary": "A practical rundown of thumbnailing rules: keep thumbnails palm-sized with no added detail, start with roughly 5 or more per idea, match the aspect ratio to the final piece, draw a literal rectangle rather than filling in a pre-made grid, and treat thumbnailing as a time-management tool for reaching a confident final composition faster rather than slower.", "verified": true}
+],
+"quiz": [
+  {"q": "Why are thumbnails deliberately kept small and rough rather than polished?", "options": ["Because polished sketches take too long to erase", "So you don't get emotionally attached to any single idea before comparing it against real alternatives", "Because software cannot handle large, detailed sketches", "There is no real reason, it's just a stylistic tradition"], "correct": 1, "explain": "Keeping thumbnails small, fast, and disposable is intentional \u2014 it prevents premature attachment to one idea before a real spread of alternatives has been generated and compared."},
+  {"q": "What should thumbnails primarily be used to test?", "options": ["Final rendering and brush technique", "Composition and structure, not render quality", "Color palette choices only", "File size optimization"], "correct": 1, "explain": "Thumbnails are meant to test composition and structure; adding color or fine rendering at this stage delays the real goal of deciding what the piece is before deciding how it will look finished."},
+  {"q": "Why is it recommended to start with around 5 or more thumbnails for a single idea?", "options": ["It's a strict rule with no flexibility", "Quantity provides real coverage of different compositional solutions rather than betting everything on the first idea", "Fewer than 5 thumbnails is technically impossible", "It matches a specific software's grid default"], "correct": 1, "explain": "Generating a genuine spread of options (roughly 5 or more) gives real coverage of possible compositions, rather than committing to the first, often most obvious, idea."},
+  {"q": "Why should a thumbnail's aspect ratio match the intended final piece?", "options": ["It has no real effect on the outcome", "A strong composition in one aspect ratio can fall apart when the piece is scaled up to a different final ratio", "Aspect ratio only matters for printed artwork", "Matching aspect ratio is only a stylistic preference with no functional reason"], "correct": 1, "explain": "If the thumbnail's proportions don't match the final piece, a composition that worked at thumbnail size may not hold together once scaled to the actual final aspect ratio."},
+  {"q": "According to the module, what can help when you get stuck while thumbnailing?", "options": ["Erasing everything and starting with a blank white canvas", "Letting an unexpected or accidental mark in a rough sketch suggest a new, different direction", "Adding full color and rendering immediately", "Stopping and waiting for inspiration before drawing anything else"], "correct": 1, "explain": "An accidental shape or rough mark can spark a genuinely different, more interesting idea than the one originally intended \u2014 letting surprises drive iteration is a practical way to break out of a stuck spot."}
+],
+"checklist": [
+  "I can generate at least 5 distinct thumbnail compositions for a single idea before choosing one.",
+  "I can keep my thumbnails small, rough, and free of color or fine detail.",
+  "I can match a thumbnail's aspect ratio to the intended final piece.",
+  "I can use an unexpected mark or accident in a rough sketch to generate a new compositional idea."
+],
+"nextStep": "You can now generate and filter a real spread of ideas quickly. Module 80 turns to the full concept art production pipeline \u2014 how a chosen thumbnail actually moves through value, color, and final stages in a professional studio workflow."
+}
 ]},
 {id:'digital-fundamentals', title:'Digital Art Fundamentals', status:'soon', order:8,
     desc:'Software-agnostic digital basics — workspace, tablets, brush engines, layers, selections, transforms, and clean digital line art — built so the skill transfers across any application.',
