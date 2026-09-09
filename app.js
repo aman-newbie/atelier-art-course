@@ -2040,12 +2040,26 @@ async function getLocalPipeline(onProgress){
 
 async function sendDoubtMessageLocal(systemInstruction){
   const loadingEl = appendDoubtMessage('loading', 'Loading on-device model\u2026 first time only, this can take a bit.');
+  // The model is a genuine ~200MB+ download — on a slow connection this can take a
+  // long time with no way to tell if it's still progressing or truly stuck. After 20s
+  // with no update, say so and point at the faster cloud option, rather than leaving
+  // someone staring at a percentage indefinitely with no escape hatch. The download
+  // itself isn't cancelled — it keeps going in the background for next time.
+  let patienceTimer = setTimeout(()=>{
+    if(loadingEl) loadingEl.textContent = 'Still loading (this is a large one-time download) \u2014 if this is taking a while, the \u21c4 button above switches to the faster cloud option.';
+  }, 20000);
   let generator;
   try{
     generator = await getLocalPipeline((pct)=>{
+      clearTimeout(patienceTimer);
+      patienceTimer = setTimeout(()=>{
+        if(loadingEl) loadingEl.textContent = 'Still loading (this is a large one-time download) \u2014 if this is taking a while, the \u21c4 button above switches to the faster cloud option.';
+      }, 20000);
       if(loadingEl) loadingEl.textContent = 'Downloading on-device model\u2026 ' + pct + '%';
     });
+    clearTimeout(patienceTimer);
   }catch(e){
+    clearTimeout(patienceTimer);
     if(loadingEl) loadingEl.remove();
     appendDoubtMessage('error', "Couldn't load the on-device model on this browser \u2014 try the cloud (Gemini) option instead with the \u21c4 button above.");
     return;
