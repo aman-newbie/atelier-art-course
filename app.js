@@ -1878,10 +1878,12 @@ function getModuleContextForDoubt(){
 function toggleDoubtPanel(open){
   const fab = document.getElementById('doubtFab');
   const panel = document.getElementById('doubtPanel');
+  const backdrop = document.getElementById('doubtBackdrop');
   if(!fab || !panel) return;
   doubtOpen = open;
   fab.hidden = open;
   panel.hidden = !open;
+  if(backdrop) backdrop.hidden = !open;
   if(open){
     const input = document.getElementById('doubtInput');
     if(input) input.focus();
@@ -2008,7 +2010,15 @@ async function sendDoubtMessageGemini(systemInstruction){
   saveDoubtHistory();
   }catch(err){
     if(loadingEl) loadingEl.remove();
-    const msg = (err && err.message) ? err.message : 'Network error reaching Gemini. Check your connection and try again.';
+    let msg = (err && err.message) ? err.message : 'Network error reaching Gemini. Check your connection and try again.';
+    // The SDK's ApiError.message is often the *raw JSON response body* rather
+    // than a short human string \u2014 pull out just the nested error.message
+    // field so the chat bubble stays short and readable instead of dumping
+    // the full JSON blob (which also broke text wrapping in the panel).
+    try{
+      const parsed = JSON.parse(msg);
+      if(parsed && parsed.error && parsed.error.message){ msg = parsed.error.message; }
+    }catch(_e){ /* not JSON, use msg as-is */ }
     appendDoubtMessage('error', "Couldn't reach Gemini: " + msg);
   }
 }
@@ -2129,6 +2139,9 @@ function initEvents(){
 
     const doubtCloseBtn = e.target.closest('#doubtCloseBtn');
     if(doubtCloseBtn){ toggleDoubtPanel(false); return; }
+
+    const doubtBackdropClick = e.target.closest('#doubtBackdrop');
+    if(doubtBackdropClick){ toggleDoubtPanel(false); return; }
 
     const doubtSendBtn = e.target.closest('#doubtSendBtn');
     if(doubtSendBtn){ sendDoubtMessage(); return; }
