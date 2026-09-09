@@ -1941,6 +1941,7 @@ function applyCustomThemeColors(brightness){
     root.setProperty('--border', 'rgba(255,255,255,0.16)');
     root.setProperty('--border-soft', 'rgba(255,255,255,0.10)');
   } else {
+    root.setProperty('--bg', '#EDECE899');
     root.setProperty('--custom-scrim-color', '#F5F3EC');
     root.setProperty('--surface', 'rgba(255,253,246,0.90)');
     root.setProperty('--surface-2', 'rgba(240,236,224,0.90)');
