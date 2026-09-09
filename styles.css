@@ -905,3 +905,17 @@ svg{display:block;}
   position:absolute; top:4px; right:4px; width:20px; height:20px; border-radius:50%;
   background:rgba(0,0,0,.6); color:#fff; font-size:14px; line-height:1; display:flex; align-items:center; justify-content:center;
 }
+
+
+/* ---- Collapsed "coming soon" roadmap (kept out of the way of live content by default) ---- */
+.soon-arcs-details{margin-top:var(--sp-4);}
+.soon-arcs-details summary{
+  cursor:pointer; list-style:none; display:flex; align-items:center; gap:var(--sp-2);
+  padding:var(--sp-3) var(--sp-4); border-radius:var(--radius-md); border:1px dashed var(--border);
+  color:var(--text-muted); font-size:calc(13px * var(--font-scale)); font-family:var(--font-mono);
+}
+.soon-arcs-details summary::-webkit-details-marker{display:none;}
+.soon-arcs-details summary::before{content:'\25B8'; transition:transform var(--dur) var(--ease);}
+.soon-arcs-details[open] summary::before{transform:rotate(90deg);}
+.soon-arcs-details summary:hover{background:var(--surface); color:var(--text);}
+.soon-pathmap{margin-top:var(--sp-3);}
