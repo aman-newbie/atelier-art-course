@@ -388,7 +388,19 @@ svg{display:block;}
 .floating-player{
   position:fixed; z-index:500; width:min(92vw, 340px); background:var(--surface); border:1px solid var(--border);
   border-radius:var(--radius-md); box-shadow:var(--shadow-lg); overflow:hidden; touch-action:none;
+  min-width:280px; max-width:96vw;
 }
+@media (min-width:900px){
+  /* Desktop default: the 340px cap made sense on a phone but was tiny on a wide screen.
+     This is still just a default — the resize handle lets you go bigger or smaller. */
+  .floating-player{width:min(34vw, 620px);}
+}
+.fp-resize-handle{
+  position:absolute; right:0; bottom:0; width:22px; height:22px; cursor:nwse-resize;
+  display:flex; align-items:flex-end; justify-content:flex-end; padding:3px; color:var(--text-faint); touch-action:none;
+}
+.fp-resize-handle svg{width:12px; height:12px;}
+.fp-resize-handle:hover{color:var(--text-muted);}
 .floating-player[hidden]{display:none;}
 .fp-header{
   display:flex; align-items:center; gap:var(--sp-2); padding:var(--sp-2) var(--sp-3); background:var(--surface-2);
@@ -485,9 +497,9 @@ svg{display:block;}
 .dash-arc-count{font-family:var(--font-mono); font-size:calc(12px * var(--font-scale)); color:var(--text-faint); font-weight:400;}
 .dash-stat-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(180px,1fr)); gap:var(--sp-4);}
 .dash-stat-card{background:var(--surface); border:1px solid var(--border-soft); border-radius:var(--radius-md); padding:var(--sp-5);}
-.dash-stat-label{display:block; font-family:var(--font-mono); font-size:calc(10.5px * var(--font-scale)); letter-spacing:1px; text-transform:uppercase; color:var(--text); opacity:.7; font-weight:600; margin-bottom:var(--sp-2);}
+.dash-stat-label{display:block; font-family:var(--font-mono); font-size:calc(10.5px * var(--font-scale)); letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); font-weight:600; margin-bottom:var(--sp-2);}
 .dash-stat-value{display:block; font-family:var(--font-display); font-size:calc(32px * var(--font-scale)); color:var(--text); margin-bottom:var(--sp-1);}
-.dash-stat-sub{display:block; font-size:calc(12px * var(--font-scale)); color:var(--text); opacity:.8;}
+.dash-stat-sub{display:block; font-size:calc(12px * var(--font-scale)); color:var(--text-muted);}
 
 /* ---- Practice Center ---- */
 .prompt-card{
@@ -531,7 +543,7 @@ svg{display:block;}
 .site-footer a{color:var(--text-faint);}
 .footer-actions{display:flex; gap:var(--sp-4);}
 .footer-actions button{background:none; border:none; color:var(--text-faint); font-size:calc(13px * var(--font-scale)); text-decoration:underline; font-family:inherit; padding:0;}
-.storage-status{font-family:var(--font-mono); font-size:calc(11px * var(--font-scale)); opacity:.75;}
+.storage-status{font-family:var(--font-mono); font-size:calc(11px * var(--font-scale)); color:var(--text-faint);}
 
 .scroll-top{
   position:fixed; bottom:var(--sp-6); right:var(--sp-6); width:44px; height:44px; border-radius:50%;
@@ -796,20 +808,23 @@ svg{display:block;}
   --red:#B23F26; --red-ink:#F7E5DE; --red-soft:#F7E5DE;
 }
 [data-theme="custom"] .art-backdrop{
-  opacity:.22; background-image:var(--custom-bg-image, none); background-size:cover;
+  opacity:1; background-image:var(--custom-bg-image, none); background-size:cover;
   background-position:center;
-  /* Kept deliberately faint. A user-supplied photo can be arbitrarily bright, dark,
-     or busy (faces, high-contrast edges, etc.) — there's no opacity level for the
-     photo itself that guarantees text stays readable on top of it. So the photo is
-     treated as a subtle texture hint, and the scrim below (not this layer) is what
-     actually guarantees contrast, regardless of what image someone picks. */
+  /* The photo itself is shown at full strength — readability now comes from
+     detecting whether the photo is bright or dark (see applyCustomThemeColors in
+     app.js) and switching to a matching light/dark text-and-surface scheme, plus
+     a moderate scrim below, rather than just fading the photo into invisibility. */
 }
 [data-theme="custom"] .art-backdrop::after{
-  content:''; position:absolute; inset:0; background:var(--bg); opacity:.93;
+  content:''; position:absolute; inset:0;
+  background:var(--custom-scrim-color, var(--bg)); opacity:.55;
 }
-[data-theme="custom"] .hero, [data-theme="custom"] .stat-strip, [data-theme="custom"] .meta-row{
-  background:var(--surface); border-radius:var(--radius-lg); padding:var(--sp-5);
-  border:1px solid var(--border-soft);
+[data-theme="custom"] .hero, [data-theme="custom"] .stat-strip, [data-theme="custom"] .meta-row,
+[data-theme="custom"] .mcard, [data-theme="custom"] .quote-card, [data-theme="custom"] .quiz-card,
+[data-theme="custom"] .res-card, [data-theme="custom"] .tip-card, [data-theme="custom"] .prompt-card,
+[data-theme="custom"] .nav-link-card, [data-theme="custom"] .cal-card, [data-theme="custom"] .dash-stat-card{
+  background:var(--surface); border-radius:var(--radius-lg);
+  border:1px solid var(--border-soft); backdrop-filter:blur(6px);
 }
 .theme-swatch.custom{background:repeating-linear-gradient(45deg, var(--border), var(--border) 3px, var(--surface) 3px, var(--surface) 6px);}
 .theme-custom-row{display:flex; flex-direction:column; gap:var(--sp-2); padding:var(--sp-2) var(--sp-3); margin-top:2px;}
