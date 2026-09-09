@@ -2444,6 +2444,64 @@ const CURRICULUM_3 = [
 ],
 "nextStep": "You now have composition, color, and mood as deliberate layers working together. Module 78 turns to lighting specifically for concept art \u2014 the practical logic of light sources, time of day, and how environmental lighting behaves physically, building directly on the mood work here."
 }
+,
+{
+"id": "m78",
+"plate": 78,
+"title": "Lighting for Concept Art",
+"difficulty": "Intermediate",
+"studyTime": "18 min",
+"practiceTime": "25\u201330 min/day",
+"prereq": ["m77"],
+"hook": "Two artists can paint the exact same rock, tree, and building \u2014 and one painting will look like a photo reference copy while the other looks like a place, because the second artist actually decided where the light comes from.",
+"whyItMatters": [
+  "Mood and atmosphere (Module 77) told you what a scene should feel like. Lighting is the physical, technical toolkit for actually producing that feeling \u2014 primary and secondary light sources, ambient bounce, and plane logic are the mechanics behind every mood decision you've made so far.",
+  "This is one of the most common technical gaps between an intermediate and a professional-looking piece: the geometry, color, and composition can all be correct while the lighting logic is inconsistent, and that inconsistency is usually the first thing an experienced eye catches, even if they can't immediately say why a piece feels 'off.'"
+],
+"coreIdea": [
+  "Think in planes, not objects. Any complex form \u2014 a face, a rock, a building \u2014 becomes far easier to light once you mentally simplify it into flat facets, then light each facet based on its angle to the light source rather than trying to light the whole complicated silhouette at once.",
+  "Ambient (bounce) light fills in what the primary light can't reach, and it takes its color from the environment around it \u2014 a white object in a blue-lit room will have blue-tinted shadows, not black ones, because the walls are bouncing blue light into the shadow side.",
+  "A second light source, placed roughly opposite the primary one, adds dimension and visual interest without contradicting the scene's main lighting logic \u2014 it can be faint and purely supportive, or nearly as strong as the primary light for a more dramatic, dynamic look.",
+  "Saturated, colored light generally reads as more alive and intentional than plain white or desaturated light, which tends to look flat, washed-out, or unconvincing \u2014 white light has its place but needs to be used deliberately, not as a default."
+],
+"mistakes": [
+  "Lighting a complex form all at once by eye instead of first simplifying it into planes and lighting each simplified facet based on its actual angle to the light source.",
+  "Leaving shadow areas pure black or neutral gray, instead of tinting them with the ambient/bounce color of the surrounding environment.",
+  "Relying entirely on a soft airbrush to paint every light source, which tends to produce a hazy, weak, artificial-looking result rather than a confidently lit scene.",
+  "Adding a second or third light source that contradicts or competes with the primary light's logic instead of supporting it from a complementary angle.",
+  "Defaulting to plain white light out of habit, when a saturated, deliberately chosen light color would read as more vivid and intentional."
+],
+"proTips": [
+  "When a form is giving you trouble, mentally reduce it to flat planes first (a tool like an Asaro head is a good practice reference) and light each plane based on its angle before adding any softening or detail.",
+  "Pick the ambient/bounce color from the dominant color of the environment surrounding your subject, and use it to tint shadow areas instead of leaving them neutral.",
+  "Use a harder-edged brush to 'sculpt' your primary light source with confidence, and reserve the airbrush mainly for soft secondary effects like faint bounce light or glow.",
+  "When choosing a color for a secondary light source, try picking one with a deliberate color-theory relationship (complementary or triadic) to your primary light for a more cohesive, intentional-looking result."
+],
+"practice": {
+  "warmup": "Take a simple geometric form (a sphere, cube, and cone) and light all three from the same direction, then add a colored ambient bounce to their shadow sides only.",
+  "daily": "Take one of your Module 73\u201377 environments and re-light it using plane-by-plane thinking rather than lighting the silhouette as a whole.",
+  "weekly": "Light a single scene with a primary light source, then add a second, complementary-colored light source from roughly the opposite direction without contradicting the primary light's logic.",
+  "challenge": "Paint the same subject twice \u2014 once using only a soft airbrush for all lighting, once using a harder brush to 'sculpt' the light \u2014 and compare how much more confident and readable the second version feels."
+},
+"resources": [
+  {"type": "Video", "title": "Contrast & Lighting In Concept Art \u2014 Process", "creator": "The Geek Artist", "url": "https://www.youtube.com/watch?v=YCmldYPNPHY", "why": "A free, real-time process video showing contrast and lighting decisions specifically applied to a landscape environment concept piece.", "summary": "Walks through the process of building contrast and lighting into a landscape environment concept piece, showing how deliberate light and dark grouping is used to direct focus and give the environment a sense of depth and mood as the painting develops.", "verified": true},
+  {"type": "Article", "title": "7 Techniques for Expressing Light", "creator": "Kyokusei, CLIP STUDIO TIPS", "url": "https://tips.clip-studio.com/en-us/articles/6452", "why": "A detailed, free, practical breakdown of 7 concrete lighting techniques from a working artist, covering plane thinking, ambient color, and secondary light sources directly.", "summary": "Covers seven concrete lighting techniques: using harder brushes to sculpt confident light instead of relying on airbrush, using saturated rather than white light for vibrancy, thinking of complex forms in simplified planes, tinting shadows with ambient bounce color from the environment, adding a secondary light source from the opposite direction, using layer blending modes for glow, and applying color theory to choose light colors deliberately.", "verified": true}
+],
+"quiz": [
+  {"q": "Why is it recommended to simplify a complex form into flat planes before lighting it?", "options": ["It reduces the file size of the artwork", "Lighting each simplified facet based on its angle to the light source is far more manageable than lighting a complicated silhouette all at once", "Planes are only relevant for architectural subjects", "It has no real benefit, it's just a stylistic preference"], "correct": 1, "explain": "Thinking in planes breaks a complex form into simple facets whose lighting is determined by their angle to the light source, making the whole form much easier to light consistently."},
+  {"q": "Why should shadow areas usually be tinted rather than left pure black or neutral gray?", "options": ["Pure black shadows are technically impossible to paint", "Ambient/bounce light from the surrounding environment fills shadow areas and takes on the color of that environment", "Tinted shadows are required by professional style guides", "There is no real reason \u2014 pure black shadows are always correct"], "correct": 1, "explain": "Since the primary light can't reach shadow areas, ambient bounce light from the environment fills in instead, and that bounce light carries the color of its surroundings rather than being colorless."},
+  {"q": "What is a common downside of lighting a whole scene exclusively with a soft airbrush?", "options": ["It is technically impossible in most software", "It tends to produce a hazy, weak, artificial-looking result rather than confident, readable light", "It uses too much memory in image-editing software", "There is no downside \u2014 airbrush is always the best choice"], "correct": 1, "explain": "Relying entirely on airbrush for lighting tends to look hazy and unconvincing; harder-edged brushes are generally better for sculpting a confident primary light source."},
+  {"q": "When adding a secondary light source, what should it generally do relative to the primary light?", "options": ["Completely override and replace the primary light's logic", "Support or complement the primary light's logic, often from a roughly opposite direction", "Always be exactly as bright as the primary light", "Always use pure white to avoid clashing"], "correct": 1, "explain": "A secondary light source is meant to add dimension and interest while supporting the primary light's overall logic, not contradicting or competing with it."},
+  {"q": "Why does saturated, colored light often read as more vivid and intentional than plain white light?", "options": ["Saturated light is always technically brighter", "Plain white or desaturated light tends to look flat and washed-out in most scenarios, while deliberate color choices feel more alive", "White light is more difficult to render digitally", "There is no actual visual difference between the two"], "correct": 1, "explain": "Using saturated, deliberately chosen light colors generally produces a more vibrant, intentional-feeling result, while plain white light tends to desaturate and flatten the colors beneath it."}
+],
+"checklist": [
+  "I can simplify a complex form into planes before deciding how to light it.",
+  "I can tint a shadow area with an ambient bounce color pulled from the surrounding environment.",
+  "I can add a secondary light source that supports rather than contradicts my primary light's logic.",
+  "I can choose a deliberate, saturated light color instead of defaulting to plain white."
+],
+"nextStep": "You now have the full toolkit \u2014 biome, story, composition, color, mood, and lighting \u2014 for designing a single strong environment. Module 79 shifts to process: thumbnailing and concept iteration, the practical habit of generating and narrowing many small ideas before committing to one final piece."
+}
 ]},
 {id:'digital-fundamentals', title:'Digital Art Fundamentals', status:'soon', order:8,
     desc:'Software-agnostic digital basics — workspace, tablets, brush engines, layers, selections, transforms, and clean digital line art — built so the skill transfers across any application.',
