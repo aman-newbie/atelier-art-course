@@ -662,13 +662,11 @@ svg{display:block;}
    driven entirely by [data-theme], so no JS is needed for it.
    ============================================================ */
 .art-backdrop{
-  /* Was position:fixed (pinned to the viewport forever, same spot no matter
-     how far you scrolled). Now it's part of the normal page and scrolls away
-     naturally with the content above it, like a banner at the top of the
-     page \u2014 which is also why it's capped at one screen tall instead of
-     stretching over the whole (very long) page: a full-page-tall background
-     would force "cover" sizing to zoom in absurdly on a narrow phone screen. */
-  position:absolute; top:0; left:0; right:0; height:100vh; z-index:0; pointer-events:none;
+  /* Fixed on purpose: this is meant to feel like the background of the whole
+     site, present no matter where you've scrolled to \u2014 not a banner that
+     scrolls away, and not tiled/repeated (which looks jarring as one copy
+     ends and the next begins). One image, always there, everywhere. */
+  position:fixed; inset:0; z-index:0; pointer-events:none;
   opacity:.5; background-repeat:no-repeat;
   background-position:-60px -40px, right -80px bottom -100px;
   background-size:420px 420px, 480px 480px;
