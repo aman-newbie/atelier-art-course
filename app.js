@@ -499,9 +499,11 @@ function applyCustomBackground(url){
   /* Preload fully before it ever becomes a CSS background, so it can't pop in
      mid-scroll — by the time it's assigned, the browser has already decoded it. */
   const img = new Image();
+  img.crossOrigin = 'anonymous';
   img.onload = ()=>{
     if(STATE.customBgUrl === url){
       document.documentElement.style.setProperty('--custom-bg-image', `url("${url.replace(/"/g,'')}")`);
+      applyCustomThemeColors(sampleImageBrightness(img));
       lastAppliedCustomBg = url;
     }
   };
@@ -1540,6 +1542,35 @@ function initFloatingPlayerDrag(){
   header.addEventListener('pointerup', endDrag);
   header.addEventListener('pointercancel', endDrag);
   window.addEventListener('resize', clampFloatingPlayerToViewport);
+
+  // Resize handle — remembered across sessions via localStorage (not part of the
+  // main progress save, since it's a UI preference rather than course data).
+  const handle = document.getElementById('fpResizeHandle');
+  let resizing = false, startX = 0, startWidth = 0;
+  const savedWidth = parseInt(localStorage.getItem('atelier_fp_width') || '', 10);
+  if(savedWidth && savedWidth >= 280) fp.style.width = Math.min(savedWidth, window.innerWidth - 8) + 'px';
+  handle.addEventListener('pointerdown', (e)=>{
+    resizing = true;
+    startX = e.clientX;
+    startWidth = fp.getBoundingClientRect().width;
+    handle.setPointerCapture(e.pointerId);
+    e.preventDefault();
+  });
+  handle.addEventListener('pointermove', (e)=>{
+    if(!resizing) return;
+    const delta = e.clientX - startX;
+    const rect = fp.getBoundingClientRect();
+    const maxWidth = window.innerWidth - rect.left - 8;
+    const newWidth = Math.min(Math.max(startWidth + delta, 280), Math.min(maxWidth, window.innerWidth - 8));
+    fp.style.width = newWidth + 'px';
+  });
+  const endResize = ()=>{
+    if(!resizing) return;
+    resizing = false;
+    try{ localStorage.setItem('atelier_fp_width', String(Math.round(fp.getBoundingClientRect().width))); }catch(e){}
+  };
+  handle.addEventListener('pointerup', endResize);
+  handle.addEventListener('pointercancel', endResize);
 }
 
 /* ============================================================
@@ -1762,6 +1793,55 @@ function processToastQueue(){
    ASK A DOUBT — contextual Q&A powered by the user's own free
    Gemini API key (see config.js). Runs client-side; no backend.
    ============================================================ */
+function sampleImageBrightness(img){
+  // Downscale to a tiny canvas — we only need an average, not per-pixel accuracy,
+  // and this keeps it fast even for a large photo.
+  try{
+    const size = 32;
+    const canvas = document.createElement('canvas');
+    canvas.width = size; canvas.height = size;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(img, 0, 0, size, size);
+    const data = ctx.getImageData(0, 0, size, size).data;
+    let total = 0;
+    for(let i = 0; i < data.length; i += 4){
+      // perceptual luminance weighting
+      total += data[i]*0.299 + data[i+1]*0.587 + data[i+2]*0.114;
+    }
+    return total / (data.length / 4); // 0-255
+  }catch(e){
+    // Cross-origin image without permissive CORS headers taints the canvas —
+    // getImageData throws. Fall back to a safe middle assumption rather than crash.
+    return 128;
+  }
+}
+
+function applyCustomThemeColors(brightness){
+  const dark = brightness < 128;
+  STATE.customThemeMode = dark ? 'dark' : 'light';
+  const root = document.documentElement.style;
+  if(dark){
+    root.setProperty('--bg', '#17151199');
+    root.setProperty('--custom-scrim-color', '#0F0D0A');
+    root.setProperty('--surface', 'rgba(30,27,22,0.88)');
+    root.setProperty('--surface-2', 'rgba(40,36,30,0.88)');
+    root.setProperty('--text', '#F2EEE4');
+    root.setProperty('--text-muted', '#C9C3B4');
+    root.setProperty('--text-faint', '#A39C8B');
+    root.setProperty('--border', 'rgba(255,255,255,0.16)');
+    root.setProperty('--border-soft', 'rgba(255,255,255,0.10)');
+  } else {
+    root.setProperty('--custom-scrim-color', '#F5F3EC');
+    root.setProperty('--surface', 'rgba(255,253,246,0.90)');
+    root.setProperty('--surface-2', 'rgba(240,236,224,0.90)');
+    root.setProperty('--text', '#22201B');
+    root.setProperty('--text-muted', '#5C584D');
+    root.setProperty('--text-faint', '#726D5E');
+    root.setProperty('--border', 'rgba(0,0,0,0.14)');
+    root.setProperty('--border-soft', 'rgba(0,0,0,0.08)');
+  }
+}
+
 let doubtHistory = [];
 let doubtOpen = false;
 const DOUBT_HISTORY_KEY = 'atelier_doubt_history';
