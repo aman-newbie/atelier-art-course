@@ -2560,6 +2560,64 @@ const CURRICULUM_3 = [
 ],
 "nextStep": "You can now generate and filter a real spread of ideas quickly. Module 80 turns to the full concept art production pipeline \u2014 how a chosen thumbnail actually moves through value, color, and final stages in a professional studio workflow."
 }
+,
+{
+"id": "m80",
+"plate": 80,
+"title": "The Concept Art Production Pipeline",
+"difficulty": "Intermediate",
+"studyTime": "18 min",
+"practiceTime": "30 min/day",
+"prereq": ["m79"],
+"hook": "A finished concept art piece isn't drawn in one pass \u2014 it's the last visible stage of a multi-step pipeline that starts with dozens of disposable sketches nobody outside the studio will ever see.",
+"whyItMatters": [
+  "Every skill you've built in this arc \u2014 biome, story, composition, color, mood, lighting, and thumbnailing \u2014 gets assembled through this one process. The production pipeline is the professional structure that turns those individual skills into a single, deliverable piece on schedule.",
+  "Studios exist to reduce risk before expensive production begins, and industry interviews with art directors consistently show that a large share of visual decision-making happens in this pre-production phase, even though it's a small fraction of a project's total schedule. Understanding this pipeline is what lets a junior concept artist work inside a real studio team instead of just making personal pieces in isolation."
+],
+"coreIdea": [
+  "The pipeline moves through four broad stages: ideation and visual exploration (fast, loose, many directions), direction locking (precision increases, visual rules get established), detailed reference development (turnarounds, material breakdowns, orthographic views), and production support (adjusting designs as real technical constraints appear).",
+  "Stage 1 is about range, not correctness \u2014 producing rough sketches, silhouette explorations, and multiple competing directions for the same idea, most of which are intentionally discarded and never seen outside internal folders.",
+  "Once a direction is approved, the work shifts from exploration to decision-making: defining material logic, establishing a consistent shape language, and locking down visual rules that protect consistency as the project scales across many artists.",
+  "The pipeline doesn't end at a pretty final image \u2014 it continues into production support, where a concept artist adapts a design to real technical constraints (an environment too dense for real-time performance, for example) while trying to preserve the original visual intent."
+],
+"mistakes": [
+  "Jumping to high-detail, fully rendered art too early, before a direction has actually been approved, wasting effort on a design that may get discarded.",
+  "Skipping the exploration stage under time pressure and locking in the first idea instead of generating and comparing real alternatives.",
+  "Treating the direction-locking stage as \\\"rendering time\\\" instead of \\\"decision time\\\" \u2014 this stage is really about defining material logic and visual rules, not just adding polish.",
+  "Producing a portfolio of only polished, finished images with no visible process, which signals risk to studios rather than the ability to think through a problem.",
+  "Assuming the job ends once a strong final image exists, instead of continuing to support production by adjusting designs when real technical constraints appear."
+],
+"proTips": [
+  "In the exploration stage, deliberately produce several genuinely different directions for the same idea (different materials, different dominant shapes) rather than small variations on one safe concept.",
+  "When a direction is approved, write down the specific visual rules being locked in (materials, shape language, how a certain kind of damage or wear should look) so consistency can be checked against them later.",
+  "Keep some of your rough, discarded exploration sketches visible in your portfolio or process documentation \u2014 showing range and decision-making is often more valuable to a studio than showing only finished pieces.",
+  "When a finished design runs into a real production constraint, treat the fix as a design problem to solve, not a failure \u2014 the ability to adapt a design without losing its core intent is a distinct, valuable skill."
+],
+"practice": {
+  "warmup": "Pick one simple environment idea and produce 3 genuinely different visual directions for it (different dominant material, different shape language) rather than 3 small variations of the same idea.",
+  "daily": "Take one of your Module 73\u201379 concepts through a mini two-stage pipeline: a loose exploration pass, then a direction-locked pass with specific material and shape rules written down.",
+  "weekly": "Take one finished environment concept and write a short list of the specific visual rules it locks in, as if handing it off to another artist to keep it consistent.",
+  "challenge": "Take a finished piece and impose one artificial technical constraint on it (reduce detail by half, change the time budget, remove one major structure) and redesign it to fit while preserving as much of the original intent as possible."
+},
+"resources": [
+  {"type": "Video", "title": "Concept Art Full Process: Sketching for Beginners | Environment Design for Games and Film", "creator": "Artof JoseVega", "url": "https://www.youtube.com/watch?v=RY2LDAbayPk", "why": "A free, real walkthrough of an environment concept moving through the sketching and process stages, from a working environment designer.", "summary": "Walks through the practical sketching stage of an environment concept art piece for games and film, showing how a working artist moves from initial rough ideas toward a more resolved sketch as part of a larger production process.", "verified": true},
+  {"type": "Article", "title": "From Idea to Production: The Concept Art Pipeline Explained", "creator": "MAGES Institute", "url": "https://mages.edu.sg/blog/from-idea-to-production-the-concept-art-pipeline-explained/", "why": "A detailed, free breakdown of the full four-stage professional concept art pipeline, with concrete studio examples at every stage.", "summary": "Breaks the concept art pipeline into four stages \u2014 ideation and exploration, direction locking, detailed sketch-to-final reference, and production support \u2014 using a worked example of a decaying coastal city concept moving from competing early directions through locked material rules to production-ready references for 3D and animation teams.", "verified": true}
+],
+"quiz": [
+  {"q": "What is the primary goal of Stage 1 (ideation and exploration) in the concept art pipeline?", "options": ["Producing a single, highly polished final image", "Generating range \u2014 multiple loose, competing directions \u2014 most of which will be discarded", "Establishing final material and shape rules", "Handing reference sheets to the 3D team"], "correct": 1, "explain": "Stage 1 is about speed and range: producing many loose, competing directions so the best one can be identified, with most of the work intentionally discarded afterward."},
+  {"q": "Why is the direction-locking stage better understood as \\\"decision time\\\" rather than \\\"rendering time\\\"?", "options": ["Because no drawing happens at this stage", "Because its real purpose is establishing material logic and visual rules that protect consistency, not just adding polish", "Because rendering is not allowed until the final stage", "There is no meaningful difference between the two framings"], "correct": 1, "explain": "Beginners often mistake this stage for polishing, but its real function is defining the visual rules (materials, shape language) that keep a project consistent as it scales."},
+  {"q": "What does a concept artist typically do during the production support stage?", "options": ["Nothing \u2014 their job is finished once a final image exists", "Adjust designs to real technical constraints (like performance limits) while trying to preserve the original visual intent", "Start the exploration stage over from scratch", "Only work on marketing materials"], "correct": 1, "explain": "The pipeline continues past the final image into production support, where designs are adapted to real technical constraints without losing their core visual intent."},
+  {"q": "Why might a portfolio showing only polished, finished images be a disadvantage when applying to a studio?", "options": ["Polished images are never wanted by studios", "It can signal risk, since studios also want to see process and decision-making, not just final results", "Finished images take too long to load on a portfolio site", "There is no disadvantage to this approach"], "correct": 1, "explain": "According to the module, portfolios showing only polished art without visible process can signal risk to studios, since decision-making ability matters as much as final rendering quality."},
+  {"q": "According to the module, what is one practical way to check consistency after a direction is locked in?", "options": ["Rely on memory alone with no documentation", "Write down the specific visual rules being locked in (materials, shape language, wear patterns) so they can be checked against later", "Avoid writing anything down to stay flexible", "Only the art director needs to know the rules"], "correct": 1, "explain": "Writing down the specific rules locked in during direction-locking gives a concrete reference other artists (and yourself) can check consistency against as the project scales."}
+],
+"checklist": [
+  "I can describe the four broad stages of a professional concept art pipeline.",
+  "I can generate several genuinely different directions for one idea instead of small variations on a single safe concept.",
+  "I can write down specific visual rules (materials, shape language) once a direction is locked in.",
+  "I can adapt a finished design to a new constraint while preserving its original intent."
+],
+"nextStep": "You now understand how an idea moves from rough exploration to a production-ready piece. Module 81 zooms out from a single piece to the bigger picture \u2014 world systems and culture design, how geography, history, and society inform coherent design decisions across an entire fictional world."
+}
 ]},
 {id:'digital-fundamentals', title:'Digital Art Fundamentals', status:'soon', order:8,
     desc:'Software-agnostic digital basics — workspace, tablets, brush engines, layers, selections, transforms, and clean digital line art — built so the skill transfers across any application.',
