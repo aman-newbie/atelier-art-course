@@ -628,7 +628,7 @@ function renderHome(){
       <button class="btn btn-ghost" id="jumpFoundations">View Foundations</button>
     </div>
     <div class="stat-strip">
-      <div class="stat"><b>${doneCount}/${TOTAL_MAPPED_MODULES}</b><span>Modules complete</span></div>
+      <div class="stat"><b>${doneCount}/${allLive.length}</b><span>Modules complete</span></div>
       <div class="stat"><b>${STATE.xp}</b><span>XP earned</span></div>
       <div class="stat"><b>${STATE.streak}${STATE.streak>0?' <svg class="streak-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2c1 4-4 5-4 9a4 4 0 008 0c0-2-1-3-1-5 2 1 3 3 3 5a6 6 0 01-12 0c0-5 4-6 6-9z"/></svg>':''}</b><span>Day streak</span></div>
       <div class="stat"><b>${allLive.length}</b><span>Modules live now</span></div>
@@ -644,11 +644,11 @@ function renderHome(){
     </div>
     <div class="pathmap">`;
 
-  CURRICULUM.forEach(path=>{
+  const stationHtml = (path)=>{
     const isOpen = path.status === 'live';
     const doneInPath = isOpen ? path.modules.filter(m=>STATE.completed.has(m.id)).length : 0;
     const allDone = isOpen && doneInPath === path.modules.length;
-    html += `<button class="station ${isOpen?'is-open':''} ${allDone?'is-done':''}" data-path-jump="${path.id}">
+    return `<button class="station ${isOpen?'is-open':''} ${allDone?'is-done':''}" data-path-jump="${path.id}">
       <div class="station-rail">
         <div class="station-node">${String(path.order).padStart(2,'0')}</div>
         <div class="station-line"></div>
@@ -662,9 +662,21 @@ function renderHome(){
         <div class="station-modcount">${isOpen ? `${doneInPath}/${path.modules.length} modules complete` : `${path.moduleCount} modules planned &mdash; ${path.sample.join(', ')}`}</div>
       </div>
     </button>`;
-  });
+  };
 
-  html += '</div></div>';
+  const soonPaths = CURRICULUM.filter(p=>p.status !== 'live');
+  livePaths.forEach(path=>{ html += stationHtml(path); });
+  html += '</div>';
+  if(soonPaths.length){
+    const soonModuleTotal = soonPaths.reduce((sum,p)=>sum + p.moduleCount, 0);
+    // Collapsed by default — the planned roadmap is still here for anyone curious,
+    // it just doesn't compete with the live lesson content for first-time visitors.
+    html += `<details class="soon-arcs-details">
+      <summary>${soonPaths.length} more arc${soonPaths.length===1?'':'s'} planned (${soonModuleTotal} modules) &mdash; see the full roadmap</summary>
+      <div class="pathmap soon-pathmap">${soonPaths.map(stationHtml).join('')}</div>
+    </details>`;
+  }
+  html += '</div>';
 
   let seenFirstModule = false;
   livePaths.forEach(path=>{
