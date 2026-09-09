@@ -2618,6 +2618,64 @@ const CURRICULUM_3 = [
 ],
 "nextStep": "You now understand how an idea moves from rough exploration to a production-ready piece. Module 81 zooms out from a single piece to the bigger picture \u2014 world systems and culture design, how geography, history, and society inform coherent design decisions across an entire fictional world."
 }
+,
+{
+"id": "m81",
+"plate": 81,
+"title": "World Systems & Culture Design",
+"difficulty": "Intermediate",
+"studyTime": "18 min",
+"practiceTime": "25\u201330 min/day",
+"prereq": ["m80"],
+"hook": "A fantasy city with floating towers and no explanation for who built them, why, or what they believe is a picture \u2014 a fantasy city with floating towers built by a specific culture for a specific reason is a world.", 
+"whyItMatters": [
+  "Everything so far \u2014 biome, story, composition, color, mood, lighting, thumbnailing, pipeline \u2014 has been about designing one strong piece. World systems and culture design is the layer above that: the logic connecting geography, history, and society that makes many different pieces feel like they belong to the same coherent world.",
+  "This is what separates a portfolio of unrelated, if individually strong, environments from a cohesive world bible or IP that a studio can actually build a project around \u2014 concept artists working on original IP or long-running franchises are expected to think at this level, not just at the level of a single scene."
+],
+"coreIdea": [
+  "Geography constrains culture before culture expresses itself visually: physical factors like climate, resources, and terrain shape what a society can realistically build, eat, wear, and value \u2014 designing the culture without first grounding it in its geography (Module 73) tends to produce disconnected, arbitrary-feeling results.",
+  "Cultural values can be usefully mapped along a small set of dimensions \u2014 individualism versus communitarianism, how a society applies its moral principles, how it treats time, hierarchy, or self-expression \u2014 and deciding where your fictional culture sits on a few of these dimensions gives concrete, checkable answers instead of vague mood-board impressions.",
+  "Language, architecture, and material culture are downstream signals of these deeper values, not decorations added afterward \u2014 a status-driven, hierarchical society and an egalitarian one will express that difference visibly, in how their buildings, clothing, and art treat scale, symmetry, and ornament.",
+  "You can't design one piece of a culture (architecture, economy, religion, government) in isolation \u2014 they inform each other, so a believable world system requires at least a rough pass across several interconnected areas rather than deep detail in just one."
+],
+"mistakes": [
+  "Designing striking visual culture (architecture, fashion, symbols) without first deciding what values or beliefs that culture actually holds, producing style without underlying logic.",
+  "Copying real-world cultural aesthetics wholesale without adapting them to your world's own geography and history, which tends to read as costume rather than a lived-in culture.",
+  "Treating cultural values as one-dimensional stereotypes (\\\"the warrior culture,\\\" \\\"the peaceful culture\\\") instead of situating them on several dimensions at once, the way real cultures hold complex, sometimes contradictory values.",
+  "Designing architecture, economy, and belief systems as disconnected pieces instead of letting them inform and constrain each other.",
+  "Over-building lore and detail in areas a current project doesn't actually need yet, instead of worldbuilding just enough to support the piece or story currently being made."
+],
+"proTips": [
+  "Before designing any visual culture, answer a handful of concrete questions from a cultural-dimensions framework (individualism vs. communitarianism, how status is shown, how time is treated) to give yourself checkable design constraints.",
+  "Ground your culture's visual choices in its geography and history first (why do they build this way, given their climate and resources?) before deciding what it should look like.",
+  "When two cultures in your world have contact with each other, let some influence leak between them \u2014 real neighboring cultures always trade, borrow, and clash with each other, and that's what makes a world feel historically real rather than static.",
+  "Worldbuild only as much as your current piece or story actually needs \u2014 a rough, consistent pass across several systems (geography, economy, belief) usually serves a project better than exhaustive depth in just one area nobody will see."
+],
+"practice": {
+  "warmup": "Pick a real-world cultural-dimensions question (individualism vs. communitarianism, how status is displayed) and write one paragraph deciding where a fictional culture of your own sits on it.",
+  "daily": "Take one of your Module 73 biomes and design one concrete cultural output (a building type, a clothing style, a craft object) that follows logically from that biome's geography and resources.",
+  "weekly": "Design a small culture across three interconnected areas at once (geography-driven economy, a belief system, and one visual/architectural expression of both), keeping each rough rather than deeply detailed.",
+  "challenge": "Design two neighboring cultures with contact and tension between them, and identify one specific way each culture's visual or material output shows influence from the other."
+},
+"resources": [
+  {"type": "Video", "title": "How to worldbuild Scifi & Fantasy Cultures & Societies: Biology, Families and Dynasties (part 1)", "creator": "World Anvil Worldbuilding", "url": "https://www.youtube.com/watch?v=BTZZ3cdycdc", "why": "A free video from an established worldbuilding platform's official channel, focused specifically on building believable fictional cultures and societies.", "summary": "Covers how to worldbuild believable cultures for fantasy and sci-fi settings, starting from foundational factors like biology and family structure and working outward to the dynastic and social systems that shape how a fictional society actually functions.", "verified": true},
+  {"type": "Article", "title": "A Worldbuilding Guide to Crafting Diverse Cultures", "creator": "SFWA (Amelia Wiens)", "url": "https://sfwa.org/2020/01/31/a-worldbuilding-guide-to-crafting-diverse-cultures/", "why": "A free article from the Science Fiction and Fantasy Writers of America, giving a concrete, checkable framework (based on Trompenaars' cultural dimensions) for designing a fictional culture's values.", "summary": "Provides a practical framework based on Trompenaars' model of cultural dimensions \u2014 including individualism versus communitarianism and how a society applies its moral principles \u2014 as a structured way to decide what a fictional culture actually values, instead of relying on vague, unconsciously default-to-your-own-culture assumptions.", "verified": true}
+],
+"quiz": [
+  {"q": "According to the module, what should generally ground a fictional culture's visual design?", "options": ["Whatever looks most visually striking, decided first", "Its geography and history, which constrain and inform what the culture can realistically build, eat, and value", "A random selection of real-world aesthetics", "The most popular fantasy tropes in the genre"], "correct": 1, "explain": "Geography and history are meant to come first, shaping what a culture realistically produces; visual style should follow from that logic rather than being decided in isolation."},
+  {"q": "Why is mapping a fictional culture onto cultural-value dimensions (like individualism vs. communitarianism) useful?", "options": ["It has no practical use, it's purely academic", "It gives concrete, checkable design answers instead of vague mood-board impressions", "It is required by copyright law for original settings", "It only applies to real-world cultures, not fictional ones"], "correct": 1, "explain": "Deciding where a fictional culture sits on a few concrete dimensions gives specific, checkable answers that can guide design decisions, rather than relying on a vague overall impression."},
+  {"q": "What is the problem with treating cultural values as one-dimensional stereotypes like \\\"the warrior culture\\\"?", "options": ["Stereotypes are too complicated to draw", "Real cultures hold complex, sometimes contradictory values across multiple dimensions, and reducing a culture to one label loses that complexity", "There is no problem, simple labels are always best", "Stereotypes take longer to design than complex cultures"], "correct": 1, "explain": "Real cultures are complex and multidimensional; reducing a fictional culture to a single stereotype loses the nuance that makes it feel like a real, lived-in society."},
+  {"q": "Why is it recommended that neighboring cultures in a world show some influence from each other?", "options": ["It saves design time by reusing assets", "Real neighboring cultures trade, borrow, and clash, and that exchange is part of what makes a world feel historically real rather than static", "Cultures in contact must always merge into one", "There is no benefit to showing cultural influence"], "correct": 1, "explain": "Letting neighboring cultures show some mutual influence reflects how real cultures interact through trade, contact, and conflict, adding a sense of history and realism to a fictional world."},
+  {"q": "What does the module recommend regarding how much of a world's systems to build out?", "options": ["Build every system to maximum depth regardless of project needs", "Worldbuild only as much as the current piece or story actually needs, rather than over-building unused lore", "Never worldbuild more than one system at all", "Skip worldbuilding entirely and focus only on rendering"], "correct": 1, "explain": "The module recommends a rough, consistent pass across the systems a current project actually needs, rather than exhaustively over-building depth in areas that won't be seen or used."}
+],
+"checklist": [
+  "I can ground a fictional culture's visual output in its geography and history before designing its aesthetics.",
+  "I can place a fictional culture on at least one concrete cultural-value dimension rather than relying on a vague impression.",
+  "I can design a small culture across several interconnected systems (economy, belief, visual expression) rather than one in isolation.",
+  "I can show visible mutual influence between two neighboring, interacting cultures."
+],
+"nextStep": "You now have the full toolkit for designing a coherent world, from a single environment up to the systems connecting many of them. Module 82 is the capstone \u2014 bringing every skill from this arc together into one complete, finished environment concept piece."
+}
 ]},
 {id:'digital-fundamentals', title:'Digital Art Fundamentals', status:'soon', order:8,
     desc:'Software-agnostic digital basics — workspace, tablets, brush engines, layers, selections, transforms, and clean digital line art — built so the skill transfers across any application.',
