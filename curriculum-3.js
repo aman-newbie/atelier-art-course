@@ -2328,6 +2328,64 @@ const CURRICULUM_3 = [
 ],
 "nextStep": "You can now direct where the eye goes within a frame. Module 76 adds a layer on top of composition: color scripting \u2014 using a planned sequence of palettes across a piece or project to control mood and continuity, not just placement."
 }
+,
+{
+"id": "m76",
+"plate": 76,
+"title": "Color Scripting",
+"difficulty": "Intermediate",
+"studyTime": "18 min",
+"practiceTime": "25\u201330 min/day",
+"prereq": ["m75"],
+"hook": "Before a single frame is animated or a single wall is textured, professional studios already know exactly how the color of every scene will feel \u2014 because they planned it, on paper, months in advance.",
+"whyItMatters": [
+  "A composition (Module 75) controls where the eye looks in one image. A color script controls how a whole sequence of images feels over time \u2014 it's the tool that makes an entire project's mood and emotional arc consistent instead of accidental, scene by scene.",
+  "This is a real, named production tool used at every major animation and game studio (Pixar, Blender Studio, and countless game teams) specifically because a non-linear, multi-artist production process needs one document everyone can check to know what a scene should feel like before it's finished \u2014 skipping it is a common reason a project's color ends up inconsistent."
+],
+"coreIdea": [
+  "A color script is a sequential map \u2014 usually a strip or grid of small thumbnails \u2014 of the color and lighting for every key scene in a story, planned before final art begins, so the emotional arc of color across the whole project is decided on purpose.",
+  "Color scripting starts from story questions, not color choices: how does a character or place change by the end? What should the audience feel at each beat? Only after answering that do you translate the answer into color and light.",
+  "Consistency needs anchors: decide early which colors are \\\"locked\\\" (a character's hair, a location's signature palette) so that everything else can shift around those fixed points without the whole piece feeling random.",
+  "\\\"Color bridges\\\" \u2014 deliberately carrying one color across a transition between two otherwise very different scenes \u2014 are what keep abrupt mood swings from feeling jarring instead of intentional."
+],
+"mistakes": [
+  "Treating color as a scene-by-scene decision made in the moment, rather than planning the emotional arc of color across the whole piece or project in advance.",
+  "Changing a story's \\\"locked\\\" colors (a character's signature palette, a location's established look) without a strong reason, breaking the audience's ability to track who or where something is.",
+  "Making every dramatic color shift equally abrupt, so shocking swings lose their impact because they're not contrasted against calmer, more gradual sections.",
+  "Skipping the story questions (what changes, what should the audience feel) and jumping straight to picking colors that simply look nice in isolation.",
+  "Building a color script as a rigid final document instead of a working one \u2014 refusing to adjust it as the piece develops and earlier assumptions turn out to be wrong."
+],
+"proTips": [
+  "Before choosing any color, write down what you want the audience to feel at each key beat in a plain sentence (\\\"I want this to suddenly feel unsafe\\\") \u2014 then translate that sentence into color and light.",
+  "Try condensing an entire project's color arc into a single short strip of thumbnails first, even before you know all the scenes in detail \u2014 it forces you to commit to the big emotional shape early.",
+  "Identify your \\\"locked\\\" colors (things that can't change scene to scene) before you start experimenting, so you know which constraints you're designing around.",
+  "Use a color bridge \u2014 one shared color carried across a hard scene transition \u2014 whenever two adjacent scenes need very different moods but shouldn't feel disconnected."
+],
+"practice": {
+  "warmup": "Condense a story you know well (a short film or fairy tale) into a 5-frame color strip using only color and value, no characters or detail.",
+  "daily": "Take one of your Module 75 compositions and write one sentence describing the emotional beat it should hit, then adjust its color and value to match that sentence.",
+  "weekly": "Build a small color script (4\u20136 thumbnails) for an original short scene, identifying which colors are \\\"locked\\\" and where you use a color bridge between two beats.",
+  "challenge": "Redo the same color script twice \u2014 once with abrupt, high-contrast mood swings between beats, once with slow gradual shifts \u2014 and note what kind of story each approach would suit better."
+},
+"resources": [
+  {"type": "Video", "title": "Journey Into Luca's Color Script", "creator": "Pixar (official)", "url": "https://www.youtube.com/watch?v=OU8NoLonf4Y", "why": "A real, official studio walkthrough of a color script used on an actual released Pixar film, straight from the source.", "summary": "Pixar's own team walks through the color script built for the film Luca, showing how the planned color and lighting choices were used to shape the film's emotional score scene by scene before final animation and lighting were completed.", "verified": true},
+  {"type": "Article", "title": "Color Scripting \u2014 Intro & Coffee Run", "creator": "Vivien Lulkowski, Blender Studio", "url": "https://studio.blender.org/blog/color-scripting/", "why": "A detailed, free, first-person account from a working concept artist explaining exactly how to start a color script and how one was built for a real open-source film.", "summary": "A concept artist at Blender Studio explains how to begin color scripting by asking story questions first, then shows how the color script for the film Coffee Run was built as a circular wheel, using locked colors and deliberate \\\"color bridges\\\" to keep abrupt mood swings feeling intentional rather than jarring.", "verified": true}
+],
+"quiz": [
+  {"q": "What is a color script primarily used to plan?", "options": ["The exact brush settings for final rendering", "The sequential color, lighting, and emotional beats across a whole story or project before final art begins", "The file naming convention for a production pipeline", "The marketing color palette for a film's poster"], "correct": 1, "explain": "A color script maps out color and lighting across an entire sequence of scenes in advance, so the emotional arc of color is planned rather than decided scene by scene in the moment."},
+  {"q": "According to the module, what should you decide before choosing any actual colors for a color script?", "options": ["The final render resolution", "What you want the audience to feel at each key story beat", "The software you'll use to paint it", "The runtime of the final film"], "correct": 1, "explain": "Color scripting starts from story and emotion questions; the color choices are a translation of those answers, not the starting point."},
+  {"q": "What is a \\\"color bridge\\\" in color scripting?", "options": ["A physical prop used on set", "Deliberately carrying one shared color across a transition between two otherwise very different scenes to keep it feeling intentional", "A gradient tool in image-editing software", "A rule that all scenes must use the same colors"], "correct": 1, "explain": "A color bridge is a deliberate continuity technique \u2014 carrying a color across a hard scene transition so an abrupt mood swing still feels connected rather than random."},
+  {"q": "Why is it useful to identify \\\"locked\\\" colors early in a project?", "options": ["Locked colors save file storage space", "They establish fixed points a viewer can use to track a character or place, so everything else can shift around them without feeling random", "Locked colors are required by copyright law", "They determine the aspect ratio of the final film"], "correct": 1, "explain": "Fixed, unchanging colors (like a character's signature hair color) give the audience an anchor to track identity and place, letting the rest of the palette shift meaningfully around them."},
+  {"q": "Why should abrupt, high-contrast color shifts not be used for every mood change in a color script?", "options": ["Abrupt shifts are technically impossible to paint", "If every shift is equally dramatic, the contrast that makes a truly shocking moment stand out gets lost", "Abrupt shifts always look bad", "There is no reason \u2014 all shifts should be abrupt"], "correct": 1, "explain": "Contrast is what makes a dramatic shift readable as significant; if every transition is equally abrupt, no single moment stands out as more important than the others."}
+],
+"checklist": [
+  "I can write a one-sentence emotional goal for a scene before choosing its colors.",
+  "I can identify which colors in a project should be \\\"locked\\\" versus which are free to shift.",
+  "I can use a color bridge to connect two scenes with very different moods.",
+  "I can condense an entire story's color arc into a short strip of thumbnails."
+],
+"nextStep": "You now have both composition and color as deliberate, planned layers. Module 77 turns to mood and atmosphere \u2014 using weather, light quality, and time of day to make a single scene emotionally specific, building on the color-arc thinking from this module."
+}
 ]},
 {id:'digital-fundamentals', title:'Digital Art Fundamentals', status:'soon', order:8,
     desc:'Software-agnostic digital basics — workspace, tablets, brush engines, layers, selections, transforms, and clean digital line art — built so the skill transfers across any application.',
