@@ -1166,7 +1166,12 @@ function migrateOversizedHistory(){
      down in the background so their saves stop being multi-MB too. */
   const big = STATE.customHistory
     .map((h, i) => ({h, i}))
-    .filter(({h}) => typeof h === 'string' && h.startsWith('data:') && h.length > 40000);
+    .filter(({h}) => typeof h === 'string' && h.startsWith('data:') && h.length > 150000);
+    /* Only catches genuinely oversized pre-thumbnailing entries (the original
+       bug). Entries already shrunk to 220px by the previous fix can't be
+       un-shrunk from here — the higher-resolution source is already gone —
+       so there's nothing to migrate for those; they age out of history
+       naturally as new photos get used. */
   if(!big.length) return;
   let remaining = big.length;
   big.forEach(({h, i}) => {
@@ -1182,7 +1187,14 @@ function makeThumbnailDataUrl(dataUrl, done){
   try{
     const img = new Image();
     img.onload = ()=>{
-      const maxDim = 220;
+      /* 220px caused a visible bug: reapplying a "previously used" entry
+         means THIS becomes the full-screen background via background-size:
+         cover, and stretching a 220px-wide image to cover a real phone
+         screen needs ~3-4x upscaling — a blurry, badly-cropped zoom into
+         one corner of the photo instead of the nice fitted portrait it was
+         originally. 640px is still ~4x smaller than the full upload, but
+         doesn't need dramatic upscaling on ordinary phone screens. */
+      const maxDim = 640;
       const scale = Math.min(1, maxDim / Math.max(img.width, img.height));
       const w = Math.max(1, Math.round(img.width * scale));
       const h = Math.max(1, Math.round(img.height * scale));
@@ -1190,7 +1202,7 @@ function makeThumbnailDataUrl(dataUrl, done){
       canvas.width = w; canvas.height = h;
       const ctx = canvas.getContext('2d');
       ctx.drawImage(img, 0, 0, w, h);
-      try{ done(canvas.toDataURL('image/jpeg', 0.55)); }
+      try{ done(canvas.toDataURL('image/jpeg', 0.6)); }
       catch(e){ done(null); } /* tainted canvas etc — just skip archiving this one rather than crash */
     };
     img.onerror = ()=>done(null);
