@@ -386,8 +386,22 @@ async function loadProgress(){
   STATE.storageBackend = 'none'; /* neither backend actually round-tripped — in-memory + export/import still work regardless */
 }
 
+let oversizeWarned = false;
 async function persistNow(){
   const payload = JSON.stringify(serializeState());
+  if(payload.length > 3500000){
+    /* Something is carrying much more data than it should (a stray full-size
+       photo that slipped past thumbnailing, for instance). Writing several
+       MB to localStorage synchronously on every interaction is what causes
+       the whole page to lock up, so refuse rather than repeat that. */
+    if(!oversizeWarned){
+      oversizeWarned = true;
+      showToast("Your theme photo history got too large to save smoothly \u2014 trimming it down.");
+      STATE.customHistory = STATE.customHistory.slice(0, 2);
+      renderThemes();
+    }
+    return;
+  }
   if(STATE.storageBackend === 'claude'){
     try{ await window.storage.set(STORAGE_KEY, payload, false); return; }
     catch(e){ /* fall through to localStorage below */ }
@@ -1138,17 +1152,76 @@ function renderResourceCard(r, ri, m){
   </div>`;
 }
 
+/* Uploaded photos land here as full-size data URLs (a few hundred KB each,
+   even after the upload-time downscale). Keeping several of those around in
+   "previously used" history meant every single save \u2014 which fires on
+   basically every click/navigation \u2014 was synchronously writing 1\u20133MB+
+   to localStorage. That's what caused everything to lock up: not just the
+   moment history was touched, but every interaction afterward, since each
+   one re-triggered that same oversized blocking write. Thumbnailing history
+   entries keeps storage in the tens of KB instead. */
+function migrateOversizedHistory(){
+  /* Anyone who already hit the history-bloat bug has large data-URL photos
+     sitting in customHistory from before thumbnailing existed. Shrink those
+     down in the background so their saves stop being multi-MB too. */
+  const big = STATE.customHistory
+    .map((h, i) => ({h, i}))
+    .filter(({h}) => typeof h === 'string' && h.startsWith('data:') && h.length > 40000);
+  if(!big.length) return;
+  let remaining = big.length;
+  big.forEach(({h, i}) => {
+    makeThumbnailDataUrl(h, thumb => {
+      if(thumb) STATE.customHistory[i] = thumb;
+      remaining--;
+      if(remaining === 0) saveProgress();
+    });
+  });
+}
+
+function makeThumbnailDataUrl(dataUrl, done){
+  try{
+    const img = new Image();
+    img.onload = ()=>{
+      const maxDim = 220;
+      const scale = Math.min(1, maxDim / Math.max(img.width, img.height));
+      const w = Math.max(1, Math.round(img.width * scale));
+      const h = Math.max(1, Math.round(img.height * scale));
+      const canvas = document.createElement('canvas');
+      canvas.width = w; canvas.height = h;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0, w, h);
+      try{ done(canvas.toDataURL('image/jpeg', 0.55)); }
+      catch(e){ done(null); } /* tainted canvas etc — just skip archiving this one rather than crash */
+    };
+    img.onerror = ()=>done(null);
+    img.src = dataUrl;
+  }catch(e){ done(null); }
+}
+
+function archiveToHistory(entry, newUrl){
+  if(!entry) return;
+  STATE.customHistory = [entry, ...STATE.customHistory.filter(h => h !== entry && h !== newUrl)].slice(0, 6);
+  saveProgress();
+  renderThemes();
+}
+
 function setCustomThemeBackground(newUrl){
-  if(STATE.customBgUrl && STATE.customBgUrl !== newUrl){
-    STATE.customHistory = [STATE.customBgUrl, ...STATE.customHistory.filter(h => h !== STATE.customBgUrl && h !== newUrl)].slice(0, 6);
-  } else {
-    STATE.customHistory = STATE.customHistory.filter(h => h !== newUrl);
-  }
+  const previous = STATE.customBgUrl;
   STATE.customBgUrl = newUrl;
   STATE.theme = 'custom';
   saveProgress();
   updateChrome();
   renderThemes();
+
+  if(previous && previous !== newUrl){
+    if(previous.startsWith('data:')){
+      makeThumbnailDataUrl(previous, thumb => archiveToHistory(thumb, newUrl));
+    } else {
+      archiveToHistory(previous, newUrl); /* plain URL — already a short string, no need to shrink it */
+    }
+  } else if(!previous){
+    STATE.customHistory = STATE.customHistory.filter(h => h !== newUrl);
+  }
 }
 
 function renderThemes(){
@@ -2606,6 +2679,7 @@ window.addEventListener('unhandledrejection', (e)=>{
 async function init(){
   STATE.theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
   await loadProgress();
+  migrateOversizedHistory();
   updateStreak();
   initEvents();
   renderApp();
