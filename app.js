@@ -528,7 +528,7 @@ function applyCustomBackground(url){
   img.onload = ()=>{
     if(STATE.customBgUrl === url){
       document.documentElement.style.setProperty('--custom-bg-image', `url("${url.replace(/"/g,'')}")`);
-      applyCustomThemeColors(sampleImageBrightness(img));
+      applyCustomThemeColors(sampleImageBrightness(img), sampleImageBands(img, 5));
       lastAppliedCustomBg = url;
     }
   };
@@ -2011,9 +2011,59 @@ function sampleImageBrightness(img){
   }
 }
 
-function applyCustomThemeColors(brightness){
+let lastCustomBands = null; // cached per-band brightness for the current photo, so the opacity slider can rebuild the gradient without re-sampling the image
+
+function sampleImageBands(img, bandCount){
+  // Same idea as sampleImageBrightness, but split into horizontal strips so a photo
+  // that's dark at the top and light at the bottom (or vice versa) gets a scrim that
+  // actually follows it, instead of one flat tone picked from the whole-image average.
+  try{
+    const w = 24, stripH = 8;
+    const h = stripH * bandCount;
+    const canvas = document.createElement('canvas');
+    canvas.width = w; canvas.height = h;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(img, 0, 0, w, h);
+    const data = ctx.getImageData(0, 0, w, h).data;
+    const bands = [];
+    for(let b = 0; b < bandCount; b++){
+      let total = 0, count = 0;
+      for(let y = b*stripH; y < (b+1)*stripH; y++){
+        for(let x = 0; x < w; x++){
+          const i = (y*w + x) * 4;
+          total += data[i]*0.299 + data[i+1]*0.587 + data[i+2]*0.114;
+          count++;
+        }
+      }
+      bands.push(count ? total/count : 128);
+    }
+    return bands;
+  }catch(e){
+    return new Array(bandCount).fill(128);
+  }
+}
+
+function buildScrimGradient(bands, dark, baseOpacity){
+  const rgb = dark ? '15,13,10' : '245,243,236';
+  const stops = bands.map((brightness, i)=>{
+    const pct = Math.round((i / (bands.length - 1)) * 100);
+    const norm = brightness / 255; // 0 = dark pixel, 1 = bright pixel
+    // Dark mode uses light text, so bright patches of the photo need MORE scrim to
+    // stay readable; light mode uses dark text, so it's dark patches that need more.
+    const need = dark ? norm : (1 - norm);
+    const alpha = Math.min(0.92, Math.max(0.18, baseOpacity + (need - 0.5) * 0.5));
+    return `rgba(${rgb},${alpha.toFixed(2)}) ${pct}%`;
+  });
+  return `linear-gradient(to bottom, ${stops.join(', ')})`;
+}
+
+function applyCustomThemeColors(brightness, bands){
   const dark = brightness < 128;
   STATE.customThemeMode = dark ? 'dark' : 'light';
+  if(bands) lastCustomBands = bands;
+  if(lastCustomBands){
+    document.documentElement.style.setProperty('--custom-scrim-gradient', buildScrimGradient(lastCustomBands, dark, STATE.customScrimOpacity));
+  }
   const root = document.documentElement.style;
   if(dark){
     root.setProperty('--bg', '#17151199');
@@ -2516,7 +2566,12 @@ function initEvents(){
     if(e.target.id === 'themesOpacitySlider'){
       const pct = parseInt(e.target.value, 10);
       STATE.customScrimOpacity = pct / 100;
-      document.documentElement.style.setProperty('--custom-scrim-opacity', STATE.customScrimOpacity);
+      if(lastCustomBands){
+        // Rebuild the banded gradient from the already-sampled photo — no need to
+        // re-load or re-sample the image just because the slider moved.
+        const dark = STATE.customThemeMode === 'dark';
+        document.documentElement.style.setProperty('--custom-scrim-gradient', buildScrimGradient(lastCustomBands, dark, STATE.customScrimOpacity));
+      }
       const label = document.getElementById('themesOpacityValue');
       if(label) label.textContent = pct + '%';
     }
