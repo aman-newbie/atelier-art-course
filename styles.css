@@ -820,7 +820,7 @@ svg{display:block;}
 }
 [data-theme="custom"] .art-backdrop::after{
   content:''; position:absolute; inset:0;
-  background:var(--custom-scrim-color, var(--bg)); opacity:var(--custom-scrim-opacity, .55);
+  background:var(--custom-scrim-gradient, var(--custom-scrim-color, var(--bg))); opacity:1;
 }
 [data-theme="custom"] .hero, [data-theme="custom"] .stat-strip, [data-theme="custom"] .meta-row,
 [data-theme="custom"] .mcard, [data-theme="custom"] .quote-card, [data-theme="custom"] .quiz-card,
