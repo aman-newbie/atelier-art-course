@@ -825,10 +825,16 @@ svg{display:block;}
 [data-theme="custom"] .hero, [data-theme="custom"] .stat-strip, [data-theme="custom"] .meta-row,
 [data-theme="custom"] .mcard, [data-theme="custom"] .quote-card, [data-theme="custom"] .quiz-card,
 [data-theme="custom"] .res-card, [data-theme="custom"] .tip-card, [data-theme="custom"] .prompt-card,
-[data-theme="custom"] .nav-link-card, [data-theme="custom"] .cal-card, [data-theme="custom"] .dash-stat-card{
+[data-theme="custom"] .nav-link-card, [data-theme="custom"] .cal-card, [data-theme="custom"] .dash-stat-card,
+[data-theme="custom"] .tabpanel, [data-theme="custom"] .status-banner, [data-theme="custom"] .library-search,
+[data-theme="custom"] .theme-preset-card, [data-theme="custom"] .theme-custom-panel{
   background:var(--surface); border-radius:var(--radius-lg);
   border:1px solid var(--border-soft); backdrop-filter:blur(6px);
 }
+/* The sidebar carries a lot of dense navigation text over many rows — it needs a fully
+   solid background of its own, not just a semi-transparent surface tone, or legibility
+   becomes inconsistent depending on what happens to be behind each row in the photo. */
+[data-theme="custom"] .sidebar{background:var(--bg-raised); backdrop-filter:blur(6px);}
 .theme-swatch.custom{background:repeating-linear-gradient(45deg, var(--border), var(--border) 3px, var(--surface) 3px, var(--surface) 6px);}
 .theme-custom-row{display:flex; flex-direction:column; gap:var(--sp-2); padding:var(--sp-2) var(--sp-3); margin-top:2px;}
 .theme-custom-row[hidden]{display:none;}
