@@ -2083,6 +2083,7 @@ function applyCustomThemeColors(brightness, bands){
   const root = document.documentElement.style;
   if(dark){
     root.setProperty('--bg', '#17151199');
+    root.setProperty('--bg-raised', '#1B1920'); // fully opaque — backs the sidebar; was never updated here, so it stayed stuck at the static light fallback even in dark mode, making sidebar text unreadable against its own nav background
     root.setProperty('--custom-scrim-color', '#0F0D0A');
     root.setProperty('--surface', 'rgba(30,27,22,0.88)');
     root.setProperty('--surface-2', 'rgba(40,36,30,0.88)');
@@ -2093,6 +2094,7 @@ function applyCustomThemeColors(brightness, bands){
     root.setProperty('--border-soft', 'rgba(255,255,255,0.10)');
   } else {
     root.setProperty('--bg', '#EDECE899');
+    root.setProperty('--bg-raised', '#F5F3EE'); // fully opaque, matches light mode
     root.setProperty('--custom-scrim-color', '#F5F3EC');
     root.setProperty('--surface', 'rgba(255,253,246,0.90)');
     root.setProperty('--surface-2', 'rgba(240,236,224,0.90)');
