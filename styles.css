@@ -822,19 +822,18 @@ svg{display:block;}
   content:''; position:absolute; inset:0;
   background:var(--custom-scrim-gradient, var(--custom-scrim-color, var(--bg))); opacity:1;
 }
-[data-theme="custom"] .hero, [data-theme="custom"] .stat-strip, [data-theme="custom"] .meta-row,
-[data-theme="custom"] .mcard, [data-theme="custom"] .quote-card, [data-theme="custom"] .quiz-card,
-[data-theme="custom"] .res-card, [data-theme="custom"] .tip-card, [data-theme="custom"] .prompt-card,
-[data-theme="custom"] .nav-link-card, [data-theme="custom"] .cal-card, [data-theme="custom"] .dash-stat-card,
-[data-theme="custom"] .tabpanel, [data-theme="custom"] .status-banner, [data-theme="custom"] .library-search,
-[data-theme="custom"] .theme-preset-card, [data-theme="custom"] .theme-custom-panel{
-  background:var(--surface); border-radius:var(--radius-lg);
-  border:1px solid var(--border-soft); backdrop-filter:blur(6px);
+/* No per-element "card" boxing here on purpose. Turning individual sections into
+   opaque islands (while gaps between them still showed raw photo) is what made the
+   page look patchy and inconsistent. Text sits directly on the adaptive scrim instead,
+   uniformly, with a text-shadow for legibility — see the rule below. The sidebar is
+   the one exception: it's a persistent nav panel, not page content, and a solid panel
+   there is a normal, expected pattern rather than a patchwork effect. */
+[data-theme="custom"] .sidebar{background:var(--bg-raised);}
+[data-theme="custom"] body, [data-theme="custom"] p, [data-theme="custom"] li, [data-theme="custom"] h1,
+[data-theme="custom"] h2, [data-theme="custom"] h3, [data-theme="custom"] h4, [data-theme="custom"] span,
+[data-theme="custom"] b, [data-theme="custom"] .stat b, [data-theme="custom"] .module-hook{
+  text-shadow:var(--custom-text-shadow, none);
 }
-/* The sidebar carries a lot of dense navigation text over many rows — it needs a fully
-   solid background of its own, not just a semi-transparent surface tone, or legibility
-   becomes inconsistent depending on what happens to be behind each row in the photo. */
-[data-theme="custom"] .sidebar{background:var(--bg-raised); backdrop-filter:blur(6px);}
 .theme-swatch.custom{background:repeating-linear-gradient(45deg, var(--border), var(--border) 3px, var(--surface) 3px, var(--surface) 6px);}
 .theme-custom-row{display:flex; flex-direction:column; gap:var(--sp-2); padding:var(--sp-2) var(--sp-3); margin-top:2px;}
 .theme-custom-row[hidden]{display:none;}
