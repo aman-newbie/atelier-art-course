@@ -2057,6 +2057,22 @@ function buildScrimGradient(bands, dark, baseOpacity){
   return `linear-gradient(to bottom, ${stops.join(', ')})`;
 }
 
+/* applyCustomThemeColors sets these directly via style.setProperty, which
+   means they're INLINE styles \u2014 those always win over any stylesheet
+   rule, including a preset's own [data-theme="x"]{...} colors, no matter
+   how specific. Switching to a preset never used to undo this, so once
+   you'd used a custom photo once, every preset after it silently kept
+   wearing the custom photo's leftover text/background colors \u2014 which
+   is exactly how you get invisible or badly-mismatched elements. */
+function clearCustomThemeOverrides(){
+  const root = document.documentElement.style;
+  ['--bg','--surface','--surface-2','--text','--text-muted','--text-faint',
+   '--border','--border-soft','--custom-scrim-color','--custom-scrim-gradient',
+   '--custom-bg-image'].forEach(prop => root.removeProperty(prop));
+  lastAppliedCustomBg = undefined; /* so switching back to custom later re-applies cleanly instead of no-op'ing */
+  lastCustomBands = null;
+}
+
 function applyCustomThemeColors(brightness, bands){
   const dark = brightness < 128;
   STATE.customThemeMode = dark ? 'dark' : 'light';
@@ -2374,6 +2390,7 @@ function initEvents(){
     const themePresetBtn = e.target.closest('[data-theme-preset]');
     if(themePresetBtn){
       STATE.theme = themePresetBtn.dataset.themePreset;
+      clearCustomThemeOverrides();
       saveProgress();
       updateChrome();
       renderThemes();
