@@ -2051,7 +2051,7 @@ function buildScrimGradient(bands, dark, baseOpacity){
     // Dark mode uses light text, so bright patches of the photo need MORE scrim to
     // stay readable; light mode uses dark text, so it's dark patches that need more.
     const need = dark ? norm : (1 - norm);
-    const alpha = Math.min(0.92, Math.max(0.18, baseOpacity + (need - 0.5) * 0.5));
+    const alpha = Math.min(0.92, Math.max(0.30, baseOpacity + (need - 0.5) * 0.5));
     return `rgba(${rgb},${alpha.toFixed(2)}) ${pct}%`;
   });
   return `linear-gradient(to bottom, ${stops.join(', ')})`;
@@ -2082,6 +2082,7 @@ function applyCustomThemeColors(brightness, bands){
   }
   const root = document.documentElement.style;
   if(dark){
+    root.setProperty('--custom-text-shadow', '0 1px 4px rgba(0,0,0,0.75), 0 1px 12px rgba(0,0,0,0.45)');
     root.setProperty('--bg', '#17151199');
     root.setProperty('--bg-raised', '#1B1920'); // fully opaque — backs the sidebar; was never updated here, so it stayed stuck at the static light fallback even in dark mode, making sidebar text unreadable against its own nav background
     root.setProperty('--custom-scrim-color', '#0F0D0A');
@@ -2093,6 +2094,7 @@ function applyCustomThemeColors(brightness, bands){
     root.setProperty('--border', 'rgba(255,255,255,0.16)');
     root.setProperty('--border-soft', 'rgba(255,255,255,0.10)');
   } else {
+    root.setProperty('--custom-text-shadow', '0 1px 4px rgba(255,255,255,0.85), 0 1px 12px rgba(255,255,255,0.5)');
     root.setProperty('--bg', '#EDECE899');
     root.setProperty('--bg-raised', '#F5F3EE'); // fully opaque, matches light mode
     root.setProperty('--custom-scrim-color', '#F5F3EC');
