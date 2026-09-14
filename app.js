@@ -2216,7 +2216,13 @@ async function sendDoubtMessage(){
 
   let engine = null;
   try{ engine = localStorage.getItem(DOUBT_ENGINE_KEY); }catch(e){}
-  if(!engine){ showDoubtEngineChooser(); return; }
+  if(!engine){
+    // Default to on-device \u2014 no key or setup needed for anyone.
+    // People who want the cloud (Gemini) option can still switch to it
+    // manually with the \u21c4 button, which brings up this same chooser.
+    engine = 'local';
+    try{ localStorage.setItem(DOUBT_ENGINE_KEY, engine); }catch(e){ /* private browsing etc \u2014 falls back to local each reload, which is a safe default */ }
+  }
 
   appendDoubtMessage('user', text);
   input.value = '';
