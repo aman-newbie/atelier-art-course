@@ -176,6 +176,64 @@ const CURRICULUM_4 = [
 ],
 "nextStep": "You now understand how a single brush stroke behaves. Module 86 moves from one stroke to a whole image \u2014 layers, and how stacking, opacity, and blend modes at the layer level let you organize and edit a piece non-destructively."
 }
+,
+{
+"id": "m86",
+"plate": 86,
+"title": "Layers",
+"difficulty": "Beginner",
+"studyTime": "16 min",
+"practiceTime": "25\u201330 min/day",
+"prereq": ["m85"],
+"hook": "Traditional painters have exactly one shot to get a mark right on the canvas. Digital artists have layers \u2014 the single feature that makes almost everything else about digital art forgiving, editable, and non-destructive.",
+"whyItMatters": [
+  "Module 83 introduced a basic sketch/line/color layer structure just to get you drawing. This module goes deeper into what layers actually let you do \u2014 stacking, opacity, and blend modes \u2014 which is the organizational backbone every piece you build from here forward will rely on.",
+  "Blend modes specifically are one of the highest-leverage tools in digital art: a single Multiply layer can add convincing shadow across an entire piece in seconds, and a single Overlay or Soft Light layer can shift a scene's entire mood \u2014 effects that would take far longer to achieve by hand-painting every affected pixel."
+],
+"coreIdea": [
+  "A layer stack works like transparent sheets stacked on top of each other: higher layers cover lower ones by default (Normal blend mode), and you can hide, reorder, or delete any single layer without touching the others \u2014 this is what \\\"non-destructive\\\" means.",
+  "A blend mode changes how a layer's colors combine with the layers beneath it, rather than simply covering them. The three you'll use constantly: Multiply darkens (perfect for shadows), Screen lightens (perfect for highlights, glows, and light effects like rain or snow), and Overlay boosts contrast by combining both (brightening light areas and darkening dark ones).",
+  "Layer opacity and blend mode work together, not separately \u2014 a common workflow is setting a layer to a blend mode like Multiply or Overlay first, then lowering that layer's opacity to control how strong the effect reads, rather than trying to get the exact right color on a Normal layer.",
+  "Grouping related layers together (for example, all the layers that make up one character or one prop) keeps a growing layer stack manageable, and clipping one layer to another restricts an effect (like a shadow or color adjustment) to only the pixels already on that layer below."
+],
+"mistakes": [
+  "Painting everything on a single layer, making it impossible to isolate or adjust one part of a piece without repainting it.",
+  "Trying to manually pick and paint the exact right shadow or highlight color on a Normal layer, instead of using Multiply or Screen at a lower opacity to get a similar result far faster.",
+  "Forgetting that white is invisible on a Multiply layer and black is invisible on a Screen layer, then being confused about why part of an effect layer isn't showing up.",
+  "Never grouping or organizing layers as a piece grows, leading to a long, unmanageable list that's hard to navigate or edit later.",
+  "Applying a blend-mode layer globally across the whole piece when the effect should only affect one specific object, instead of clipping it to that object's layer."
+],
+"proTips": [
+  "Use a Multiply layer at a lower opacity for shadows and a Screen layer at a lower opacity for highlights or glow effects \u2014 this is faster and more flexible than hand-mixing the exact colors on a Normal layer.",
+  "When an effect should only apply to one object (a character, a prop) rather than the whole canvas, clip the effect layer to that object's layer instead of painting across the whole piece and risking it bleeding outside the object's edges.",
+  "Group related layers together as soon as a piece grows past roughly 8\u201310 layers, so you can collapse and navigate sections instead of scrolling through a long flat list.",
+  "Keep a layered working file (not a flattened export) as you work, so masks, groups, and individual layers stay editable if you need to revise the piece later."
+],
+"practice": {
+  "warmup": "Create a small flat-colored shape on one layer, then add a Multiply layer above it and paint a shadow shape, and a Screen layer above that for a highlight, adjusting opacity on each.",
+  "daily": "Take a simple piece and add one Multiply shadow layer and one Overlay color-mood layer over the whole composition, adjusting each layer's opacity until the effect feels right.",
+  "weekly": "Build a small piece using at least three organized layer groups (for example: background, main subject, effects), keeping each group collapsed except when actively working in it.",
+  "challenge": "Take one finished flat-colored piece and transform its entire mood using only blend-mode layers (Multiply, Screen, Overlay) and their opacity \u2014 no repainting of the original colors allowed."
+},
+"resources": [
+  {"type": "Video", "title": "Useful Layer Blend Mode Tips!", "creator": "8edhead, CLIP STUDIO TIPS", "url": "https://tips.clip-studio.com/en-us/articles/5924", "why": "A free, practical walkthrough of the most useful blend modes (Multiply, Screen, Overlay) with real illustration examples showing exactly when to use each.", "summary": "Explains blend modes as a non-destructive way to change how a layer interacts with the layers beneath it, then demonstrates Multiply for dim lighting and shadow, Screen for highlights, snow, and rain textures, and Overlay for adding soft, vibrant color washes over a finished illustration.", "verified": true},
+  {"type": "Article", "title": "Ultimate Guide to Blending Modes", "creator": "Art Rocket (Clip Studio)", "url": "https://www.clipstudio.net/how-to-draw/archives/154182", "why": "A free, comprehensive reference covering every major blend mode with a clear description of what each one does, plus a worked example turning a daytime scene into a sunset.", "summary": "Catalogs every major blend mode grouped by effect (darkening, lightening, contrast-boosting), then demonstrates a concrete example: adding an orange gradient layer set to Hard Light at 85% opacity over a daytime sky to convincingly transform the entire scene into a sunset.", "verified": true}
+],
+"quiz": [
+  {"q": "What does \\\"non-destructive\\\" mean in the context of layers?", "options": ["The file can never be deleted", "You can hide, reorder, or delete a single layer without permanently altering the pixels on other layers", "The software cannot crash while layers are open", "Layers automatically save every few seconds"], "correct": 1, "explain": "Non-destructive editing means changes on one layer (or removing it entirely) don't permanently affect the pixels on other layers, unlike painting everything on a single flat layer."},
+  {"q": "Which blend mode is best suited for quickly adding shadow across a piece?", "options": ["Screen", "Multiply", "Normal", "Difference"], "correct": 1, "explain": "Multiply darkens colors beneath it and is the standard choice for shadow, since white on a Multiply layer is invisible and darker tones progressively darken what's underneath."},
+  {"q": "What is a common, efficient workflow for using a blend-mode layer like Multiply or Screen?", "options": ["Set the blend mode, then adjust that layer's opacity to control how strongly the effect reads", "Never adjust opacity once a blend mode is chosen", "Only use blend modes on the very bottom layer", "Blend modes should always stay at 100% opacity"], "correct": 0, "explain": "Combining a blend mode with adjusted opacity \u2014 rather than trying to hand-mix the exact right color on a Normal layer \u2014 is a fast, flexible way to control how strong an effect like shadow or a color mood layer reads."},
+  {"q": "What does clipping a layer to the layer below it accomplish?", "options": ["It merges the two layers permanently into one", "It restricts the clipped layer's effect to only the pixels already present on the layer below it", "It deletes the layer below automatically", "It changes the file format of the image"], "correct": 1, "explain": "Clipping restricts an effect layer (like a shadow or color adjustment) to the shape of the layer beneath it, preventing the effect from bleeding outside that object's edges."},
+  {"q": "Why is grouping related layers together recommended as a piece grows?", "options": ["It automatically improves image quality", "It keeps a growing layer stack manageable and easier to navigate than one long flat list", "Grouped layers render faster in every case", "It's required before a file can be exported"], "correct": 1, "explain": "Organizing related layers (like all the layers for one character or prop) into groups keeps a growing stack navigable, letting you collapse sections you're not actively working on."}
+],
+"checklist": [
+  "I can explain what makes layer editing non-destructive.",
+  "I can use a Multiply layer for shadow and a Screen layer for highlights or glow, adjusting opacity to control strength.",
+  "I can clip an effect layer to restrict it to a specific object rather than the whole canvas.",
+  "I can organize a growing layer stack into logical groups."
+],
+"nextStep": "You now understand how to structure and combine layers. Module 87 covers selection tools \u2014 how to isolate a specific area to edit, fill, or protect, which works hand-in-hand with layers and masks for precise, controlled changes."
+}
 ]},
 {id:'digital-painting', title:'Digital Painting & Rendering', status:'soon', order:9,
     desc:'Color theory, value control, lighting, material rendering, edge control, atmospheric effects, and a complete professional illustration workflow.',
