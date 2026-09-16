@@ -234,6 +234,64 @@ const CURRICULUM_4 = [
 ],
 "nextStep": "You now understand how to structure and combine layers. Module 87 covers selection tools \u2014 how to isolate a specific area to edit, fill, or protect, which works hand-in-hand with layers and masks for precise, controlled changes."
 }
+,
+{
+"id": "m87",
+"plate": 87,
+"title": "Selection Tools",
+"difficulty": "Beginner",
+"studyTime": "15 min",
+"practiceTime": "25\u201330 min/day",
+"prereq": ["m86"],
+"hook": "Some of the cleanest, most confident-looking digital paintings aren't built with a brush at all \u2014 they're built by selecting a hard-edged shape and filling it, a completely different way of thinking about construction than drawing freehand.",
+"whyItMatters": [
+  "Selections work hand-in-hand with the layers and masks from Module 86: a selection is how you tell the software exactly which pixels a fill, adjustment, or mask should affect, instead of it applying to the whole layer.",
+  "Beyond the obvious use (isolating an object to cut it out or protect it), selection-based construction \u2014 building shapes with the lasso tool and filling them \u2014 is a real, widely used technique among professional concept artists and illustrators for getting clean, confident, graphic shapes that freehand brushwork makes much harder to achieve."
+],
+"coreIdea": [
+  "The marquee tool selects basic rectangular or oval shapes, the lasso tool lets you draw a freeform (or polygonal, point-by-point) selection outline by hand, and the magic wand selects pixels based on color similarity within an adjustable tolerance \u2014 each is suited to a different kind of shape.",
+  "Selections can be combined: holding Shift while making a new selection adds it to the existing one, holding Alt/Option subtracts from it, letting you build up a complex selection area from several simpler ones.",
+  "Inverse selection (flipping a selection so everything NOT selected becomes selected) is a powerful shortcut: it's often far easier to select a plain background with the magic wand and then invert the selection than to try to trace a complicated object directly.",
+  "Feathering softens a selection's edge so a fill or cutout blends more naturally instead of having a harsh, jagged boundary \u2014 useful both for cutting an object out cleanly and for creating vignette-style fades."
+],
+"mistakes": [
+  "Trying to trace a complicated object directly with the lasso tool when selecting its simpler background and inverting the selection would be much faster and more accurate.",
+  "Forgetting to clear an active selection before continuing to paint elsewhere, then being confused why new brush strokes only appear inside a small, forgotten selected area.",
+  "Using a single flat tolerance setting on the magic wand for every image, instead of adjusting it based on how much color variation is actually in the area you're trying to select.",
+  "Leaving a cutout's edge completely hard and unfeathered when it needs to blend into a new background, producing an obviously pasted-in look.",
+  "Not combining selection tools \u2014 relying on only one (usually just the lasso) instead of mixing marquee, lasso, and magic wand with add/subtract to build a more precise selection faster."
+],
+"proTips": [
+  "When cutting an object out of a plain or simple background, try selecting the background with the magic wand and inverting the selection instead of tracing the object itself.",
+  "Use Shift to add to a selection and Alt/Option to subtract from it as your default habit, rather than trying to get a complex selection right in a single pass.",
+  "Try the lasso-and-fill construction technique deliberately at least once: instead of brushing in a shape, select its outline with the lasso tool and fill it with the paint bucket for a clean, confident, graphic result.",
+  "Add a small amount of feathering before cutting out or pasting an object into a new scene so the edge blends rather than looking sharply pasted-in."
+],
+"practice": {
+  "warmup": "Practice selecting a simple shape three different ways: once with the marquee, once with the freeform lasso, and once with the magic wand, comparing how each felt to control.",
+  "daily": "Select a plain background behind a simple object using the magic wand, invert the selection, and move the isolated object onto a new background layer.",
+  "weekly": "Build one small shape (a rock, a building silhouette, a simple prop) entirely using the lasso-and-fill technique instead of freehand brushing, and compare the edge quality to a brushed version.",
+  "challenge": "Combine at least three selection tools (marquee, lasso, magic wand) with Shift/Alt add-and-subtract to build one complex, precise selection area in a single image."
+},
+"resources": [
+  {"type": "Video", "title": "How to Paint With the Lasso Tool", "creator": "Forrest Imel", "url": "https://www.youtube.com/watch?v=d0uYH8pRyYw", "why": "A free, real demonstration from a working artist of the lasso-and-fill construction technique, showing how selections can be used to build a painting, not just cut objects out.", "summary": "Forrest Imel demonstrates painting by selecting shapes with the lasso tool and filling them, rather than brushing freehand, showing how this selection-based construction technique produces clean, confident edges and efficient, graphic shape-building in a finished painting.", "verified": true},
+  {"type": "Article", "title": "Selection Tools", "creator": "University of Washington, AccessComputing WebD2", "url": "https://www.washington.edu/accesscomputing/webd2/student/unit4/module4/selection_tools.html", "why": "A free, clear educational resource covering all core selection concepts \u2014 marquee, lasso, magic wand, feathering, and inverse selection \u2014 explicitly licensed for free educational use.", "summary": "Covers the core selection toolkit: the marquee for basic shapes, the lasso for freeform outlines, the magic wand for color-based selection with adjustable tolerance, and explains the practical trick of selecting a plain background and using inverse selection to isolate a more complex object, plus feathering to soften a selection's edge.", "verified": true}
+],
+"quiz": [
+  {"q": "Which selection tool is best suited for selecting pixels based on color similarity?", "options": ["Marquee tool", "Magic wand tool", "Eraser tool", "Eyedropper tool"], "correct": 1, "explain": "The magic wand tool selects pixels that match a similar color within an adjustable tolerance range, making it ideal for solid-color or low-variation areas."},
+  {"q": "What does inverse selection let you do?", "options": ["Undo the last selection made", "Flip a selection so everything that was NOT selected becomes selected, and vice versa", "Automatically feather a selection's edges", "Convert a selection into a new layer"], "correct": 1, "explain": "Inverse selection flips the selected and unselected areas, which is especially useful for isolating a complex object by first selecting its simpler background."},
+  {"q": "What is the lasso-and-fill construction technique?", "options": ["Erasing a drawing and starting over", "Selecting a shape's outline with the lasso tool and filling it, instead of brushing the shape in freehand", "A method for adjusting brush pressure sensitivity", "A way to organize layers into groups"], "correct": 1, "explain": "This technique builds shapes by selecting an outline with the lasso tool and filling it with color, producing clean, confident, graphic edges that are harder to achieve with freehand brushwork."},
+  {"q": "What does feathering a selection do?", "options": ["It deletes the selected area permanently", "It softens the selection's edge so a fill or cutout blends more naturally instead of having a harsh boundary", "It increases the selection's color tolerance", "It converts the selection to a perfect circle"], "correct": 1, "explain": "Feathering creates a soft, gradual transition at a selection's edge, useful for natural-looking cutouts or vignette-style fades."},
+  {"q": "According to the module, what keyboard modifiers are commonly used to add to or subtract from an existing selection?", "options": ["Only the spacebar", "Shift to add, Alt/Option to subtract", "Only the Tab key", "Ctrl+Z for both"], "correct": 1, "explain": "Holding Shift while making a new selection adds it to the existing one, while holding Alt/Option subtracts the new area, allowing complex selections to be built from simpler pieces."}
+],
+"checklist": [
+  "I can choose the right selection tool (marquee, lasso, or magic wand) based on the shape I need to select.",
+  "I can use inverse selection to isolate a complex object by selecting its simpler background first.",
+  "I can add to or subtract from a selection using Shift and Alt/Option.",
+  "I can use the lasso-and-fill technique to construct a clean shape instead of brushing it freehand."
+],
+"nextStep": "You now have precise control over which pixels an edit affects. Module 88 covers transform tools \u2014 moving, scaling, rotating, and distorting a selection or layer, and how to do it non-destructively as your piece develops."
+}
 ]},
 {id:'digital-painting', title:'Digital Painting & Rendering', status:'soon', order:9,
     desc:'Color theory, value control, lighting, material rendering, edge control, atmospheric effects, and a complete professional illustration workflow.',
