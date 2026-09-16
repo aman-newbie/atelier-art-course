@@ -7,7 +7,7 @@
    data here, not rewriting markup.
    ============================================================ */
 
-const CURRICULUM = [...CURRICULUM_1, ...CURRICULUM_2, ...CURRICULUM_3];
+const CURRICULUM = [...CURRICULUM_1, ...CURRICULUM_2, ...CURRICULUM_3, ...CURRICULUM_4];
 
 const QUOTES = [
   "The page doesn't know how many you've thrown away.",
