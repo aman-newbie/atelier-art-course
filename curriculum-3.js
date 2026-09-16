@@ -2734,26 +2734,5 @@ const CURRICULUM_3 = [
 ],
 "nextStep": "You've completed the World Building & Concept Art arc \u2014 from a single believable biome to a full environment piece built through a real professional process. The skills here (composition, color, mood, lighting, pipeline thinking) carry forward directly into whichever arc you tackle next."
 }
-]},
-{id:'digital-fundamentals', title:'Digital Art Fundamentals', status:'soon', order:8,
-    desc:'Software-agnostic digital basics — workspace, tablets, brush engines, layers, selections, transforms, and clean digital line art — built so the skill transfers across any application.',
-    moduleCount:8, sample:['Digital Workspace','Drawing Tablets','Brushes','Layers','Selection Tools','Digital Line Art']},
-{id:'digital-painting', title:'Digital Painting & Rendering', status:'soon', order:9,
-    desc:'Color theory, value control, lighting, material rendering, edge control, atmospheric effects, and a complete professional illustration workflow.',
-    moduleCount:10, sample:['Color Theory','Values','Lighting','Material Rendering','Edge Control','Illustration Workflow']},
-{id:'advanced-digital', title:'Advanced Digital Art', status:'soon', order:10,
-    desc:'Non-destructive workflow, blend modes, adjustment layers, photobashing, 3D-assisted painting, responsible AI-assisted workflow, speed painting, and master studies.',
-    moduleCount:10, sample:['Non-Destructive Workflow','Blend Modes','Photobashing','3D-Assisted Art','AI-Assisted Workflow','Speed Painting']},
-{id:'professional-production', title:'Professional Production & Specializations', status:'soon', order:11,
-    desc:'Editorial illustration, comics, manga, webtoon, visual development, concept art, game art, animation pre-production, print production, and client work.',
-    moduleCount:11, sample:['Comic Art','Manga','Webtoon','Concept Art','Game Art Pipeline','Animation Pre-Production']},
-{id:'portfolio-branding', title:'Portfolio & Personal Branding', status:'soon', order:12,
-    desc:'Building a studio-quality portfolio, case studies, online presence across ArtStation/Behance/Instagram, and a coherent personal brand.',
-    moduleCount:10, sample:['Building a Portfolio','Case Studies','Online Portfolios','Personal Branding','Social Media Strategy']},
-{id:'freelancing-business', title:'Freelancing & Business', status:'soon', order:13,
-    desc:'Finding clients, pricing, contracts, project management, finances, marketing, and avoiding the scams that target working artists.',
-    moduleCount:10, sample:['Finding Clients','Pricing Artwork','Contracts & Legal Basics','Finance for Artists','Marketing & Sales']},
-{id:'careers-growth', title:'Professional Careers & Lifelong Growth', status:'soon', order:14,
-    desc:'How studio pipelines and hiring actually work, career specializations, teamwork, ethics and copyright, and a realistic long-term growth plan.',
-    moduleCount:10, sample:['Art Specializations','Studio Pipelines','Recruitment & Hiring','Professional Ethics','Lifelong Artist Roadmap']}
+]}
 ];
