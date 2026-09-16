@@ -60,6 +60,64 @@ const CURRICULUM_4 = [
 ],
 "nextStep": "You can now navigate any digital art software's core workspace. Module 84 goes deeper into the primary input device itself \u2014 drawing tablets, pressure sensitivity, and the specific hand-eye adjustment of moving a pen on a flat surface while looking at a screen."
 }
+,
+{
+"id": "m84",
+"plate": 84,
+"title": "Drawing Tablets",
+"difficulty": "Beginner",
+"studyTime": "15 min",
+"practiceTime": "20\u201330 min/day",
+"prereq": ["m83"],
+"hook": "The first time you draw on a tablet, your hand moves on a flat pad while your eyes watch a completely separate screen \u2014 and for about a week, your brain treats that as a genuinely strange problem to solve.",
+"whyItMatters": [
+  "Every skill you build going forward runs through this one piece of hardware. Understanding what a tablet actually senses \u2014 position, pressure, and sometimes tilt \u2014 and how to configure it correctly is what determines whether your lines feel natural or fight you the whole time.",
+  "The single most common cause of frustrating, skewed, or unpredictable lines for a beginner isn't lack of skill \u2014 it's an unconfigured tablet: wrong area mapping, an uncalibrated pressure curve, or a missing driver. Fixing the hardware layer first means your practice time actually builds drawing skill instead of fighting the tool."
+],
+"coreIdea": [
+  "A tablet tracks three things: position (where the pen is), pressure (how hard you're pressing, typically 2,048+ levels), and on many tablets, tilt (the angle of the pen relative to the surface). Pressure is the one that matters most day-to-day, since it directly drives line thickness and opacity in almost every brush.",
+  "Tablet area mapping has to match your monitor's aspect ratio, or a circle you draw becomes an oval on screen. This is an easy, invisible-until-you-know-about-it setup step that fixes a huge share of \\\"my lines feel off\\\" frustration.",
+  "The pressure curve (how much physical force maps to how much digital effect) is adjustable in both the tablet driver and your software, and most factory defaults require more pressure than feels natural \u2014 softening the curve usually makes lines feel more responsive immediately.",
+  "The hand-eye disconnect of drawing on a screenless tablet (moving your hand on a flat surface while watching a separate monitor) is a real, temporary adjustment that most people stop consciously noticing within one to two weeks of consistent, short daily practice \u2014 it is not a sign you're using the wrong tool."
+],
+"mistakes": [
+  "Skipping the driver installation, which limits the tablet to basic cursor movement with no pressure sensitivity, tilt detection, or shortcut button support.",
+  "Never checking or correcting tablet area mapping, so circles come out as ovals and lines feel subtly wrong without an obvious cause.",
+  "Judging the tool as \\\"not for me\\\" after only two or three sessions, when the normal hand-eye adjustment period is closer to one to two weeks of consistent practice.",
+  "Leaving the factory-default pressure curve untouched when it feels too stiff, instead of softening it in the driver panel to match a natural hand pressure.",
+  "Prioritizing tilt-sensitive brushes and advanced features before pressure control feels confident and automatic, which fragments attention across too many variables at once."
+],
+"proTips": [
+  "Lock your tablet's active area to your monitor's aspect ratio in the driver panel before your first real drawing session \u2014 this single setting prevents a huge share of \\\"my lines feel off\\\" frustration.",
+  "If lines feel unresponsive or require too much force, open the driver's pressure curve settings and move it toward \\\"soft\\\" rather than assuming the tablet itself is the problem.",
+  "For your very first sessions, skip actual artwork and just draw long straight lines, smooth curves, and circles at different sizes \u2014 pure hand-eye calibration, not finished pictures.",
+  "Hold the stylus more like a pen than a mouse, and move from the shoulder and elbow rather than just the wrist for longer, smoother strokes."
+],
+"practice": {
+  "warmup": "Draw 20 straight lines and 20 smooth curves across your full canvas, focusing purely on control, not on making anything look good.",
+  "daily": "Spend 20\u201330 minutes drawing simple shapes and lines using only the default brush, paying attention to how pressure changes line thickness as you draw.",
+  "weekly": "Check and, if needed, correct your tablet's area mapping and pressure curve, then draw one simple finished sketch to compare against how it felt before the adjustment.",
+  "challenge": "Draw the same simple shape (a spiral, a wave) 10 times in a row, trying to make each one smoother and more consistent than the last, using full arm movement rather than just the wrist."
+},
+"resources": [
+  {"type": "Article", "title": "Beginner's guide to drawing tablets", "creator": "SevenPens (DrawTab documentation)", "url": "https://docs.sevenpens.com/drawtab/basics/beginners-guide", "why": "Clean, free, technical documentation explaining exactly what a tablet senses \u2014 hover, pressure, and tilt \u2014 without being tied to marketing for a specific brand.", "summary": "Explains the three core things a drawing tablet tracks \u2014 hover (pointer position up to about 10mm above the surface), pressure sensitivity (typically thousands of levels controlling stroke size), and pen tilt \u2014 and clarifies that a tablet uses absolute positioning, unlike a mouse's relative positioning, which is why the two feel so different to use.", "verified": true},
+  {"type": "Article", "title": "How to Use a Drawing Tablet: Complete Setup Guide for Beginners", "creator": "ugee", "url": "https://shop.ugee.com/blogs/tips-tricks/how-to-use-drawing-tablet", "why": "A free, detailed, step-by-step setup guide covering the specific configuration steps (driver, area mapping, pressure curve) that prevent common beginner frustrations.", "summary": "Walks through driver installation, connecting and verifying tablet detection, correctly mapping the tablet's physical area to your monitor's aspect ratio to avoid skewed lines, softening the pressure curve for a more natural feel, and sets realistic expectations that the hand-eye adjustment period normally takes about one to two weeks of consistent practice.", "verified": true}
+],
+"quiz": [
+  {"q": "What are the three things a drawing tablet primarily tracks?", "options": ["Color, brightness, and contrast", "Position, pressure, and (on many tablets) tilt", "File size, resolution, and DPI", "Layer count, blend mode, and opacity"], "correct": 1, "explain": "A drawing tablet senses the pen's position (including hover), how hard you're pressing (pressure sensitivity), and on many models, the angle of the pen (tilt)."},
+  {"q": "Why is correctly mapping the tablet's active area to your monitor's aspect ratio important?", "options": ["It has no real effect on drawing quality", "Mismatched mapping causes shapes like circles to come out skewed as ovals on screen", "It only affects battery life on wireless tablets", "It changes the tablet's pressure sensitivity levels"], "correct": 1, "explain": "If the tablet's physical drawing area doesn't match your monitor's aspect ratio proportionally, shapes get distorted on screen, which is a common invisible cause of \\\"my lines feel off\\\" frustration."},
+  {"q": "What is the recommended first response if lines feel unresponsive and require too much force?", "options": ["Immediately buy a more expensive tablet", "Soften the pressure curve in the driver panel", "Switch to a mouse instead", "Increase your monitor's brightness"], "correct": 1, "explain": "A stiff, unresponsive feel is often a pressure curve set too hard by default; softening it in the driver panel is the recommended first fix before assuming the hardware itself is the problem."},
+  {"q": "How long does the hand-eye adjustment period for a screenless drawing tablet typically take, according to the module?", "options": ["It never goes away", "About one to two weeks of consistent, short daily practice", "Exactly one single session", "Several months at minimum"], "correct": 1, "explain": "Most people stop consciously noticing the hand-eye disconnect after about one to two weeks of consistent practice \u2014 quitting after only two or three sessions is too early to judge the tool."},
+  {"q": "What does the module recommend prioritizing before exploring tilt-sensitive brushes and advanced features?", "options": ["Buying additional hardware accessories", "Building confident, automatic pressure control first", "Learning every keyboard shortcut available", "Switching between multiple different tablets"], "correct": 1, "explain": "Adding advanced features like tilt before pressure control feels natural fragments attention across too many variables; mastering pressure first gives a more solid foundation."}
+],
+"checklist": [
+  "I can explain the difference between position, pressure, and tilt tracking on a drawing tablet.",
+  "I can check and correct my tablet's area mapping to match my monitor's aspect ratio.",
+  "I can adjust a pressure curve if lines feel too stiff or unresponsive.",
+  "I can recognize the hand-eye adjustment period as normal and temporary rather than a sign I'm using the wrong tool."
+],
+"nextStep": "You now understand the hardware layer your hand interacts with directly. Module 85 moves to the software side of that same interaction \u2014 brushes and brush engines, and how settings like opacity, flow, and blending actually work underneath the presets."
+}
 ]},
 {id:'digital-painting', title:'Digital Painting & Rendering', status:'soon', order:9,
     desc:'Color theory, value control, lighting, material rendering, edge control, atmospheric effects, and a complete professional illustration workflow.',
