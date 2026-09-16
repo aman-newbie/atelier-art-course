@@ -2303,7 +2303,7 @@ async function getLocalPipeline(onProgress){
     // explicit rules out that as a cause of the model re-downloading on every reload.
     // If it's still redownloading after this, it's almost certainly the browser (e.g.
     // Brave Shields) restricting persistent Cache Storage for these third-party origins,
-    // not this code — worth testing in a different browser to confirm.
+    // not this code \u2014 worth testing in a different browser to confirm.
     if(mod.env) mod.env.useBrowserCache = true;
     const pipeline = mod.pipeline;
     const progress_callback = (p)=>{
@@ -2311,14 +2311,27 @@ async function getLocalPipeline(onProgress){
         onProgress(Math.round((p.loaded / p.total) * 100));
       }
     };
+    // WebGPU init can silently HANG (never resolve or reject) on some devices or
+    // browsers, instead of throwing \u2014 which otherwise leaves someone stuck on
+    // "loading" forever, since the WASM fallback below only ever runs on a thrown
+    // error, not a hang. Race it against a timeout so a hang is treated the same
+    // as a failure and we fall back to WASM instead of waiting indefinitely.
+    const withTimeout = (promise, ms) => new Promise((resolve, reject) => {
+      const t = setTimeout(()=>reject(new Error('webgpu-init-timeout')), ms);
+      promise.then(v=>{ clearTimeout(t); resolve(v); }, e=>{ clearTimeout(t); reject(e); });
+    });
     try{
-      return await pipeline('text-generation', DOUBT_LOCAL_MODEL_ID, {dtype:'q4', device:'webgpu', progress_callback});
+      return await withTimeout(
+        pipeline('text-generation', DOUBT_LOCAL_MODEL_ID, {dtype:'q4', device:'webgpu', progress_callback}),
+        20000
+      );
     }catch(e){
       return await pipeline('text-generation', DOUBT_LOCAL_MODEL_ID, {dtype:'q4', device:'wasm', progress_callback});
     }
   })();
   return localPipelinePromise;
 }
+
 
 async function sendDoubtMessageLocal(systemInstruction){
   const loadingEl = appendDoubtMessage('loading', 'Loading on-device model\u2026 first time only, this can take a bit.');
