@@ -118,6 +118,64 @@ const CURRICULUM_4 = [
 ],
 "nextStep": "You now understand the hardware layer your hand interacts with directly. Module 85 moves to the software side of that same interaction \u2014 brushes and brush engines, and how settings like opacity, flow, and blending actually work underneath the presets."
 }
+,
+{
+"id": "m85",
+"plate": 85,
+"title": "Brushes & Brush Engines",
+"difficulty": "Beginner",
+"studyTime": "16 min",
+"practiceTime": "25\u201330 min/day",
+"prereq": ["m84"],
+"hook": "Two settings you'll touch on almost every single stroke \u2014 opacity and flow \u2014 look nearly identical in the menu and behave completely differently, and confusing them is the single most common reason a beginner's blending looks muddy or patchy.",
+"whyItMatters": [
+  "You now have the workspace (Module 83) and the hardware (Module 84) sorted \u2014 brushes are the actual point of contact between your hand and the image. Understanding what a brush's core settings actually do, rather than just picking presets randomly, is what lets you get a specific, intentional result instead of fighting the tool.",
+  "Beginners consistently report muddy, patchy, or 'stuck' looking digital paintings, and the root cause is almost always confusing a small number of brush settings \u2014 mainly opacity, flow, and hardness \u2014 not a lack of drawing skill. Fixing this understanding has an outsized effect on how finished your work looks."
+],
+"coreIdea": [
+  "Opacity sets the maximum amount of color a single stroke can lay down \u2014 once you lift the pen, that stroke is capped at that opacity no matter how many times your path crosses itself, creating a hard, glass-like layering when stacked.",
+  "Flow controls the rate color builds up as you paint, even within one continuous stroke \u2014 a low-flow stroke can still reach full opacity if you paint back and forth over the same spot, producing a softer, more gradual, \\\"painterly\\\" buildup than opacity alone.",
+  "Hardness controls the brush's edge: a hard brush gives a crisp, clean edge good for linework and details, while a soft brush gives a feathered, gradual edge good for blending and atmosphere \u2014 mixing the two intentionally, rather than picking one for an entire piece, is what most blending techniques are built on.",
+  "You don't need many brushes to start. A single hard round brush and a single soft round brush, used with different opacity, flow, and hardness combinations, can carry an entire finished illustration \u2014 chasing more brushes before you understand these core settings is a common and easily avoidable trap."
+],
+"mistakes": [
+  "Confusing opacity and flow, or not knowing the difference, leading to unpredictable results when trying to blend or build up color gradually.",
+  "Using a single hardness/opacity setting for an entire painting instead of deliberately switching between harder settings for blocking in and detail, and softer settings for blending and atmosphere.",
+  "Downloading and researching many different brush packs before understanding the core settings (opacity, flow, hardness) that determine how any brush actually behaves.",
+  "Using a very soft, low-opacity brush for edges that need to stay clean and crisp, producing a hazy, undefined result instead of a controlled one.",
+  "Giving up on blending after a few muddy attempts instead of recognizing that constantly adjusting hardness and opacity throughout a painting, not finding one perfect setting, is the actual normal workflow."
+],
+"proTips": [
+  "If you want one flat, capped layer of translucent color, turn down opacity. If you want a natural, gradually-building painterly feel, turn down flow instead and keep opacity high.",
+  "Use the eyedropper tool (usually Alt/Option plus the brush tool) constantly while blending \u2014 picking a color directly from your canvas and painting a new stroke next to it is the core technique behind most manual color blending.",
+  "Start with brush Hardness and Opacity both around 50% for general blending practice, then deliberately push one setting at a time toward its extreme to feel what changes.",
+  "Limit yourself to one hard round brush and one soft round brush for your first several finished pieces before exploring specialty brushes \u2014 mastering the two core settings matters far more than the brush shape itself."
+],
+"practice": {
+  "warmup": "Paint one stroke at 100% opacity/100% flow, then one at 100% opacity/20% flow, then one at 20% opacity/100% flow, and compare how each one looks and builds up when you paint back over itself.",
+  "daily": "Pick two colors and blend them into each other using only the eyedropper-and-repaint technique, practicing until the transition looks smooth with no hard edges.",
+  "weekly": "Paint a small study using only a hard round brush for construction and a soft round brush for blending, deliberately switching hardness and opacity multiple times through the piece.",
+  "challenge": "Recreate the same small color blend three times \u2014 once using only opacity changes, once using only flow changes, once mixing both \u2014 and write one sentence comparing how each result felt to control."
+},
+"resources": [
+  {"type": "Article", "title": "A Complete Guide To Photoshop Brushes, Pt. I: The Toolbar", "creator": "C.S. Jones, via Wacom Community", "url": "https://community.wacom.com/en-us/guide-to-photoshop-brushes-pt-1/", "why": "A free, detailed, accurate breakdown of exactly what opacity, flow, and blend mode settings do and how they differ.", "summary": "Explains that opacity and flow are the two controls for stroke transparency: opacity caps how opaque a single stroke can get regardless of overlap, while flow controls how gradually color builds up even within one continuous stroke, producing a softer, more paint-like buildup that many artists prefer for natural blending.", "verified": true},
+  {"type": "Article", "title": "Quick Tip: How to Blend With the Brush Tool for Digital Paintings", "creator": "Melody Nieves, Envato Tuts+", "url": "https://design.tutsplus.com/tutorials/quick-tip-how-to-blend-with-the-brush-tool-for-digital-paintings--cms-23052", "why": "A free, practical, step-by-step exercise for the core manual blending technique using hardness, opacity, and the eyedropper tool together.", "summary": "Teaches a concrete blending technique: start a stroke at 100% opacity and hardness, drop both to around 50%, then repeatedly use the eyedropper tool to sample the edge of a stroke and paint a new one beside it, gradually fading colors into each other \u2014 with a clear warning that constantly adjusting hardness and opacity through a painting, not settling on one setting, is the normal workflow.", "verified": true}
+],
+"quiz": [
+  {"q": "What is the key difference between how opacity and flow affect a single brush stroke?", "options": ["They are exactly the same setting with different names", "Opacity caps how opaque one stroke can get no matter how much it overlaps itself; flow lets color build up gradually even within one continuous stroke", "Flow only affects erasers, not brushes", "Opacity only works with soft brushes"], "correct": 1, "explain": "Opacity sets a hard ceiling for a single stroke, while flow determines how gradually color accumulates as you paint, even while the stroke overlaps itself, producing a softer buildup."},
+  {"q": "What does brush hardness primarily control?", "options": ["The color saturation of the brush", "How crisp or feathered the brush's edge is", "The speed at which the brush moves", "The file size of the final image"], "correct": 1, "explain": "Hardness controls the brush's edge quality: a hard brush gives a crisp, clean edge, while a soft brush gives a feathered, gradual edge, useful for different purposes in the same piece."},
+  {"q": "According to the module, how many brushes does a beginner actually need to produce a full finished illustration?", "options": ["At least 20 different specialty brushes", "Potentially just one hard round brush and one soft round brush, used with different settings", "A different brush for every color used", "Only brushes purchased from a paid brush pack"], "correct": 1, "explain": "A single hard round brush and a single soft round brush, combined with deliberate changes to opacity, flow, and hardness, can carry an entire finished piece \u2014 chasing more brushes before understanding these settings is a common trap."},
+  {"q": "What is the core manual blending technique described in the Tuts+ resource?", "options": ["Applying a single blur filter to the whole image", "Repeatedly using the eyedropper tool to sample a stroke's edge and painting a new stroke beside it to gradually fade colors together", "Using only the fill tool for all color transitions", "Painting every color at 100% opacity and flow"], "correct": 1, "explain": "The technique involves alternating between the brush tool and the eyedropper tool, sampling the edge of a stroke and painting a new one next to it, gradually building a smooth transition between colors."},
+  {"q": "What is a common beginner mistake with hardness and opacity across a whole painting, according to the module?", "options": ["Adjusting them too frequently throughout the piece", "Using a single hardness/opacity setting for the entire painting instead of switching deliberately between harder and softer settings for different purposes", "Only using hard brushes, never soft ones", "Never using the eyedropper tool"], "correct": 1, "explain": "Sticking to one setting for an entire painting is a common mistake; the normal workflow involves deliberately switching between harder settings for blocking-in/detail and softer settings for blending, constantly."}
+],
+"checklist": [
+  "I can explain the difference between opacity and flow in my own words.",
+  "I can deliberately switch between hard and soft brush settings for different purposes within one piece.",
+  "I can use the eyedropper tool combined with a brush to manually blend two colors together.",
+  "I can produce a reasonably finished piece using only a hard round brush and a soft round brush."
+],
+"nextStep": "You now understand how a single brush stroke behaves. Module 86 moves from one stroke to a whole image \u2014 layers, and how stacking, opacity, and blend modes at the layer level let you organize and edit a piece non-destructively."
+}
 ]},
 {id:'digital-painting', title:'Digital Painting & Rendering', status:'soon', order:9,
     desc:'Color theory, value control, lighting, material rendering, edge control, atmospheric effects, and a complete professional illustration workflow.',
