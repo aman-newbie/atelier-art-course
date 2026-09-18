@@ -350,6 +350,64 @@ const CURRICULUM_4 = [
 ],
 "nextStep": "You now have the core toolkit \u2014 workspace, hardware, brushes, layers, selections, transforms \u2014 to construct and edit any digital piece. Module 89 focuses specifically on clean digital line art, bringing several of these tools together for confident, controlled linework."
 }
+,
+{
+"id": "m89",
+"plate": 89,
+"title": "Digital Line Art",
+"difficulty": "Beginner",
+"studyTime": "16 min",
+"practiceTime": "25\u201330 min/day",
+"prereq": ["m88"],
+"hook": "The line stabilizer setting you probably ignored in your software's menu is the single biggest lever for turning a shaky, uncertain hand into confident, clean linework \u2014 and most beginners never touch it.",
+"whyItMatters": [
+  "This module brings the workspace, tablet, brushes, layers, selections, and transforms from Modules 83\u201388 together into one concrete, practiced skill: clean confident line art is the most common finishing step for illustration, comics, and character work, and shaky or inconsistent lines undermine even a strong underlying drawing.",
+  "Clean linework is also a genuinely learnable, mechanical skill, not just raw talent \u2014 specific habits like stabilization settings, canvas rotation, and controlled pressure account for most of the visible difference between a beginner's shaky lines and a professional's confident ones."
+],
+"coreIdea": [
+  "A line stabilizer (sometimes called smoothing) delays and averages your pen's movement slightly to smooth out small hand tremors, producing steadier lines \u2014 a moderate setting (often around the middle of the available range) balances smoothness against responsiveness, since too much stabilization adds noticeable lag.",
+  "Confident lines come from slow, steady, complete strokes rather than many short hesitant ones \u2014 if a stroke doesn't come out right, undoing and trying again produces a cleaner result than trying to patch or trace over a bad line.",
+  "Rotating and moving the canvas as you draw (not just your hand) lets every stroke approach from a comfortable angle, similar to how traditional artists physically turn a piece of paper \u2014 awkward strokes are very often a canvas-angle problem, not a skill problem.",
+  "Line weight (varying a line's thickness along its length, usually by varying pen pressure) adds a sense of form, connection, and depth \u2014 thicker where lines connect or an object is closer to the viewer, thinner where it recedes or across simpler open space."
+],
+"mistakes": [
+  "Drawing every line with identical, flat weight, producing a stiff and uniform result rather than lines that feel connected and grounded to the shapes they define.",
+  "Trying to trace over or patch a bad stroke repeatedly instead of undoing it and drawing the whole stroke again in one confident pass.",
+  "Never adjusting canvas rotation, forcing awkward wrist angles on strokes that would be easy from a rotated position.",
+  "Setting stabilization very high for all situations, including loose sketching or fast hatching, where the resulting lag actually hurts more than it helps.",
+  "Drawing an entire character or scene's lineart on a single layer, making later cleanup, recoloring, or part-specific edits far more difficult than necessary."
+],
+"proTips": [
+  "Start with a stabilizer value around the middle of your software's range and adjust from there \u2014 too little won't smooth shaky strokes, too much will feel laggy and unresponsive.",
+  "Zoom in close enough that the area you're inking fills most of your screen; mistakes are far easier to catch at this scale than when working zoomed out.",
+  "Flip your canvas horizontally periodically while inking \u2014 it resets your eye and reveals proportion or symmetry issues you've gone blind to from staring at the same orientation too long.",
+  "Build line weight by varying pen pressure through a single stroke (lighter at the start, heavier through the middle, lighter again at the end) rather than drawing a flat line and trying to thicken parts of it afterward."
+],
+"practice": {
+  "warmup": "Draw 15 long, confident lines using only full-arm movement (not wrist-only), trying to keep each one steady from start to finish without lifting the pen partway through.",
+  "daily": "Ink one small sketch from an earlier module using a moderate stabilizer setting, rotating the canvas as needed, and separating major parts (like a head vs. body) onto different layers.",
+  "weekly": "Ink a slightly more complex piece, deliberately varying line weight to make connected areas (like where two shapes overlap) read as heavier than open, simple areas.",
+  "challenge": "Ink the same simple shape twice \u2014 once with a low stabilizer setting, once with a high one \u2014 and compare which strokes came out cleaner and which felt more or less responsive to control."
+},
+"resources": [
+  {"type": "Video", "title": "How to Quickly Improve your Digital Lineart", "creator": "CrimsyCreates", "url": "https://www.youtube.com/watch?v=YvcyUOJjVH4", "why": "A free, thorough video covering 15 concrete tips for cleaner digital line art, from sketch prep through stabilization to line weight.", "summary": "Covers 15 practical tips for cleaner digital inking, including keeping the underlying sketch clean before inking, using a moderate stabilizer setting (around the middle of the available range), rotating and moving the canvas for awkward angles, keeping line width consistent, flipping the canvas periodically to catch mistakes, and building line weight by varying pen pressure through a stroke.", "verified": true},
+  {"type": "Article", "title": "15 Quick Tips to Improve your Digital Lineart!", "creator": "CrimsyCreates, CLIP STUDIO TIPS", "url": "https://tips.clip-studio.com/en-us/articles/3891", "why": "The free written companion to the same 15 tips, useful as a reference to revisit specific techniques without rewatching the full video.", "summary": "A written, tip-by-tip breakdown covering sketch preparation, canvas size and resolution, stabilization settings, relaxed arm movement for smoother curves, rotating and flipping the canvas, multi-layered lineart organization by body part or material, and how to build line weight to show where forms connect and simulate proximity to the viewer.", "verified": true}
+],
+"quiz": [
+  {"q": "What does a line stabilizer (or smoothing) setting actually do?", "options": ["It automatically colors a finished line art", "It delays and averages pen movement slightly to smooth out small hand tremors", "It permanently locks the canvas in place", "It converts a raster layer into a vector layer"], "correct": 1, "explain": "A stabilizer smooths a line by slightly delaying and averaging the pen's tracked movement, reducing small tremors and producing steadier strokes, at the cost of some added lag at high settings."},
+  {"q": "What is the recommended response when a single inked stroke comes out wrong?", "options": ["Trace over it repeatedly until it looks better", "Undo it and draw the whole stroke again in one confident pass", "Leave it as is and move on to a different part of the piece", "Increase the canvas resolution to fix it"], "correct": 1, "explain": "Undoing and redrawing a full stroke tends to produce a cleaner result than trying to patch or trace over a stroke that already went wrong."},
+  {"q": "Why is rotating the canvas while inking recommended?", "options": ["It changes the file's color profile", "It lets every stroke approach from a comfortable angle, since awkward strokes are often a canvas-angle problem rather than a skill problem", "It automatically applies a stabilizer effect", "Canvas rotation has no real effect on line quality"], "correct": 1, "explain": "Rotating the canvas (like a traditional artist physically turning paper) lets you approach each stroke from a comfortable angle, fixing many strokes that feel awkward purely because of hand position."},
+  {"q": "What does varying line weight (thickness) along a stroke typically communicate?", "options": ["The file's resolution setting", "A sense of form, connection, and depth, with thicker lines often at points of connection or proximity to the viewer", "The brush's opacity setting", "Nothing meaningful; it is purely decorative"], "correct": 1, "explain": "Varying line weight, usually by adjusting pen pressure through a stroke, adds a sense of where forms connect and which elements are closer to the viewer, giving lineart more depth than uniformly flat lines."},
+  {"q": "Why is organizing lineart across multiple layers (rather than one single layer) recommended?", "options": ["It has no practical benefit, it's purely stylistic", "It makes later cleanup, recoloring, or editing specific parts (like hair versus a face) significantly easier", "Multiple layers are required by most software licenses", "It automatically improves line stabilization"], "correct": 1, "explain": "Separating lineart into multiple layers (for example, by body part or material) makes it much easier to edit, recolor, or clean up one part without affecting the rest of the linework."}
+],
+"checklist": [
+  "I can set a moderate line stabilizer value appropriate to the kind of stroke I'm drawing.",
+  "I can rotate my canvas to approach an awkward stroke from a more comfortable angle.",
+  "I can vary line weight within a stroke using pen pressure to suggest connection and depth.",
+  "I can organize a piece's lineart across multiple layers instead of drawing everything on one."
+],
+"nextStep": "You've completed the core toolkit of Digital Art Fundamentals \u2014 workspace, tablet, brushes, layers, selections, transforms, and clean line art. Module 90 closes out this arc with canvas setup and export: resolution, DPI, color modes, and getting a finished piece out of your software correctly for print or web."
+}
 ]},
 {id:'digital-painting', title:'Digital Painting & Rendering', status:'soon', order:9,
     desc:'Color theory, value control, lighting, material rendering, edge control, atmospheric effects, and a complete professional illustration workflow.',
