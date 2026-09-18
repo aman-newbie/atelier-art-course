@@ -469,7 +469,66 @@ const CURRICULUM_4 = [
 ]},
 {id:'digital-painting', title:'Digital Painting & Rendering', status:'soon', order:9,
     desc:'Color theory, value control, lighting, material rendering, edge control, atmospheric effects, and a complete professional illustration workflow.',
-    moduleCount:10, sample:['Color Theory','Values','Lighting','Material Rendering','Edge Control','Illustration Workflow']},
+    moduleCount:10, sample:['Color Theory','Values','Lighting','Material Rendering','Edge Control','Illustration Workflow'],
+    modules:[
+{
+"id": "m91",
+"plate": 91,
+"title": "Color Theory Fundamentals",
+"difficulty": "Intermediate",
+"studyTime": "18 min",
+"practiceTime": "25\u201330 min/day",
+"prereq": ["m90"],
+"hook": "Two colors can be mathematically \\\"correct\\\" on a color wheel and still make a painting feel dead \u2014 because color isn't really three separate ingredients, it's one relationship, and most beginners are only ever adjusting one dial at a time.",
+"whyItMatters": [
+  "Everything you've built through Digital Art Fundamentals (Modules 83\u201390) gave you the mechanical control to put color anywhere on a canvas. This arc is about knowing which color, and why \u2014 color theory is the first and most foundational decision-making layer of full-color rendering.",
+  "Working artists consistently point to one specific insight as the turning point in their color understanding: hue is the least important of the three properties of color, and value is what actually holds a painting together \u2014 skipping straight to hue choices without value control is one of the most common reasons colorful paintings still look muddy or flat."
+],
+"coreIdea": [
+  "Every color has three independent properties: hue (its name \u2014 red, blue, green), value (how light or dark it is), and saturation (how intense or muted it is). A painting can fail in each one differently: wrong hues feel off, weak values feel flat, and wrong saturation feels either chaotic or dull.",
+  "Value matters more than hue for a painting's basic readability. A composition that still reads clearly in grayscale has a sound value structure; if it collapses into a gray mush without color to lean on, the hue choices were doing work the values should have been doing.",
+  "Different pure hues carry different inherent values \u2014 a pure yellow is naturally much lighter than a pure blue at maximum saturation. This matters constantly when planning a value structure, since simply picking \\\"nice colors\\\" can accidentally produce weak value contrast.",
+  "Saturation should be spent deliberately, not spread evenly: reserving your most saturated color for a focal point (a glowing object, a key light source) while keeping the rest of the palette more muted creates a clear hierarchy of what the viewer should look at first."
+],
+"mistakes": [
+  "Choosing colors based on hue alone (\\\"this looks like a nice blue\\\") without checking whether the underlying value structure is doing the actual work of readability.",
+  "Assuming that colorful automatically means good \u2014 saturating everything in a painting equally removes the contrast that would otherwise direct the eye to a focal point.",
+  "Forgetting that different hues have different natural values, leading to value contrast that's accidentally weaker (or stronger) than intended when colors are chosen by eye alone.",
+  "Treating hue, value, and saturation as one combined \\\"color\\\" decision instead of three separate, individually adjustable properties that can each be diagnosed and fixed on their own.",
+  "Never testing a painting in grayscale, missing an easy, fast way to check whether the value structure holds up independent of color."
+],
+"proTips": [
+  "When a painting feels wrong, diagnose it property by property: if the colors feel off, check hue; if it looks flat, check value; if it feels chaotic or dull, check saturation \u2014 don't try to fix all three with one change.",
+  "Squint at your painting or apply a grayscale filter regularly while working, especially at the block-in stage, to confirm your value structure reads before you commit further detail on top of it.",
+  "Reserve your highest saturation for the single area you most want the eye to land on, and deliberately mute the saturation everywhere else to support that hierarchy.",
+  "When picking a limited palette, plan your values first using a grayscale value study, then assign hues to that existing value structure rather than picking colors and hoping the values work out."
+],
+"practice": {
+  "warmup": "Take five random color swatches at full saturation and rank them from lightest to darkest value without using any tool, then check your ranking with a grayscale filter.",
+  "daily": "Paint a small study using only value first (grayscale), then add a single limited hue on top at low opacity to see how much the existing value structure carries the piece.",
+  "weekly": "Paint the same small scene twice: once with saturation spread evenly across the whole image, once with saturation concentrated only at one focal point, and compare which reads more clearly.",
+  "challenge": "Take a finished piece from an earlier module and diagnose it property by property (hue, value, saturation) using the grayscale test, then make one deliberate fix in only the weakest property."
+},
+"resources": [
+  {"type": "Video", "title": "Something strange you should know about color", "creator": "Marco Bucci", "url": "https://www.youtube.com/watch?v=gJ2HOj22gDo", "why": "A free video from a widely-recommended professional colorist, explaining a core insight about how value and hue actually relate to each other in painting.", "summary": "Marco Bucci explains a counterintuitive fact about color perception that trips up most beginners: that value, not hue, is the property doing the most work in making a painting read clearly, and demonstrates how to check and control value independent of hue while painting.", "verified": true},
+  {"type": "Article", "title": "Hue, Value, and Saturation: The Holy Trinity of Color", "creator": "Lunar Academy", "url": "https://www.lunaracademy.co/post/hue-value-and-saturation", "why": "A free, clearly written breakdown of the three properties of color specifically aimed at digital artists, with concrete examples from games and illustration.", "summary": "Breaks color down into hue, value, and saturation as three independent, diagnosable properties, explaining that value is the single most important one for readability (a painting should read clearly even in grayscale), that different hues carry different inherent values, and that saturation should be reserved deliberately for areas of focus rather than spread evenly.", "verified": true}
+],
+"quiz": [
+  {"q": "According to this module, which of the three color properties matters most for a painting's basic readability?", "options": ["Hue", "Value", "Saturation", "All three matter equally with no priority"], "correct": 1, "explain": "Value (lightness or darkness) is presented as the most important property for readability \u2014 a painting with strong value contrast reads clearly even in grayscale, while weak values produce a flat or muddy result regardless of hue choices."},
+  {"q": "What is a simple, fast way to check whether a painting's value structure is working?", "options": ["Increase the saturation of every color", "Apply a grayscale filter or squint at the painting to see if it still reads clearly without color", "Add more detail to every area equally", "Switch the canvas to CMYK color mode"], "correct": 1, "explain": "Converting to grayscale or squinting removes hue and reveals whether the underlying value structure alone is strong enough to read clearly."},
+  {"q": "Why do different pure hues have different inherent values?", "options": ["This is a myth with no basis in how color works", "At maximum saturation, some hues (like yellow) are naturally much lighter than others (like blue), which affects value contrast even when colors are chosen only by eye", "All hues have identical value by definition", "It only applies to physical paint, not digital color"], "correct": 1, "explain": "Pure yellow is naturally much lighter in value than pure blue at the same saturation, which is why simply picking \\\"nice\\\" hues can accidentally produce unintended value contrast (or a lack of it)."},
+  {"q": "How should saturation ideally be distributed across a painting, according to the module?", "options": ["Spread as evenly and highly as possible across the whole image", "Reserved deliberately for a focal point, with the rest of the palette kept more muted", "Kept at the same low level everywhere with no variation", "Saturation has no effect on where the eye looks"], "correct": 1, "explain": "Concentrating the highest saturation on a single focal area while muting the rest creates a clear visual hierarchy, rather than spreading saturation evenly and losing that focus."},
+  {"q": "What is the recommended way to diagnose a painting that \\\"feels wrong\\\"?", "options": ["Change hue, value, and saturation all at once and hope it improves", "Check each property individually \u2014 hue, value, and saturation \u2014 since each one causes a different kind of visual problem", "Only ever adjust saturation, since it's the most important property", "Start the painting over completely"], "correct": 1, "explain": "Since hue, value, and saturation are independent properties that each cause distinct visual problems, diagnosing and adjusting them one at a time is more effective than changing all three simultaneously."}
+],
+"checklist": [
+  "I can name the three independent properties of color: hue, value, and saturation.",
+  "I can check a painting's value structure using a grayscale test.",
+  "I can explain why different hues have different inherent values at full saturation.",
+  "I can deliberately concentrate saturation at a focal point rather than spreading it evenly."
+],
+"nextStep": "You now understand color as three separate, diagnosable properties. Module 92 goes deeper specifically into value \u2014 how to plan and control a value structure across a full painting before color is even introduced."
+}
+]},
 {id:'advanced-digital', title:'Advanced Digital Art', status:'soon', order:10,
     desc:'Non-destructive workflow, blend modes, adjustment layers, photobashing, 3D-assisted painting, responsible AI-assisted workflow, speed painting, and master studies.',
     moduleCount:10, sample:['Non-Destructive Workflow','Blend Modes','Photobashing','3D-Assisted Art','AI-Assisted Workflow','Speed Painting']},
