@@ -408,6 +408,64 @@ const CURRICULUM_4 = [
 ],
 "nextStep": "You've completed the core toolkit of Digital Art Fundamentals \u2014 workspace, tablet, brushes, layers, selections, transforms, and clean line art. Module 90 closes out this arc with canvas setup and export: resolution, DPI, color modes, and getting a finished piece out of your software correctly for print or web."
 }
+,
+{
+"id": "m90",
+"plate": 90,
+"title": "Canvas Setup & Export",
+"difficulty": "Beginner",
+"studyTime": "16 min",
+"practiceTime": "15\u201320 min setup + review",
+"prereq": ["m89"],
+"hook": "DPI is probably the most misunderstood setting in every piece of digital art software \u2014 and the honest truth is that for anything staying on a screen, it does absolutely nothing at all.",
+"whyItMatters": [
+  "This closes out the Digital Art Fundamentals arc by covering the two moments that bookend every single piece you make: setting up the canvas correctly before you start, and exporting it correctly when you're done, so all the workspace, brush, layer, and line-art skills from this arc actually reach a viewer at full quality.",
+  "Getting this wrong is expensive in a way other mistakes aren't: a bad brush stroke can be undone, but a canvas started too small can't be scaled up later without visible quality loss \u2014 you can never add resolution you didn't capture while drawing."
+],
+"coreIdea": [
+  "Resolution is simply the total pixel count of your canvas (width \u00d7 height); DPI (dots per inch) only controls how densely those pixels get packed onto paper when printed. On a screen, DPI is meaningless \u2014 two canvases with identical pixel dimensions look completely identical on a monitor no matter what DPI number is set.",
+  "The practical rule: for screen-only work, ignore DPI entirely and focus on pixel dimensions; for print work, set DPI to 300 (the standard for sharp prints) and let your chosen pixel dimensions determine the physical print size.",
+  "Color mode matters at setup too: RGB is correct for anything that will be viewed on a screen (which is almost everything you'll make), while CMYK is only for professional offset printing, and switching modes after painting can shift your colors.",
+  "You can safely resize a canvas smaller or add empty space around existing art at any time, but scaling existing art larger degrades it, since the software has to invent pixel data that was never captured \u2014 which is why starting reasonably large (a common default is roughly A4 at 300 DPI) is safer than starting too small."
+],
+"mistakes": [
+  "Starting a canvas too small and trying to scale the finished art larger later, producing visible blurring since new pixel information can't be invented from nothing.",
+  "Worrying about DPI for art that will only ever be viewed on a screen, when pixel dimensions are the only setting that actually matters for screen display.",
+  "Exporting a working file's only copy as a flattened JPG and discarding the original layered file, losing the ability to make any future edits.",
+  "Leaving color mode set to CMYK for work that's only ever going to be viewed digitally, resulting in duller on-screen colors than RGB would show.",
+  "Starting a canvas so large that the software lags through every brush stroke, when a more modest size would have looked just as good in the final shared image."
+],
+"proTips": [
+  "Ask what the piece is actually for before creating the canvas: purely digital (ignore DPI, focus on pixel size) or possibly print (set 300 DPI and physical dimensions from the start) \u2014 deciding this first avoids the far more painful fix of upscaling later.",
+  "Always keep your native, layered working file (like a .psd, .clip, or .kra) even after exporting a flattened PNG or JPG for sharing \u2014 the export is disposable, the working file is not.",
+  "Use PNG for lossless sharing or anything needing transparency, and JPG at a high quality setting for smaller files where transparency isn't needed, since social platforms compress uploads anyway.",
+  "If your software feels laggy at your chosen canvas size, that's a real signal to work smaller rather than push through \u2014 a smooth, confidently-executed smaller piece usually looks better than a laggy, rushed large one."
+],
+"practice": {
+  "warmup": "Set up three canvases for three different purposes (a square social media post, an A4-equivalent print piece, and a 16:9 wallpaper) and note the different resolution and DPI choices for each.",
+  "daily": "Take a finished piece from an earlier module and export it twice \u2014 once as a PNG for a portfolio site, once as a JPG for social sharing \u2014 and compare file size and any visible quality difference.",
+  "weekly": "Deliberately test the scale-up problem: take a small canvas piece, scale it 300% larger, and examine the blurring up close, so the \\\"never scale up\\\" rule is felt firsthand rather than just read.",
+  "challenge": "Set up a canvas specifically intended for print (300 DPI, physical dimensions in inches or cm) and export a print-ready file, confirming the exported pixel dimensions match what you expect from the DPI math."
+},
+"resources": [
+  {"type": "Video", "title": "This is not how DPI works! Let me explain.", "creator": "VildrArt\u2122", "url": "https://www.youtube.com/watch?v=ecOgVkfyA9c", "why": "A free video specifically addressing common DPI misconceptions among digital artists, directly relevant to the most confusing setting covered in this module.", "summary": "Addresses widespread misconceptions about DPI among digital artists, clarifying what the setting actually controls and correcting the common assumption that a higher DPI number automatically means a better or more detailed image regardless of pixel dimensions.", "verified": true},
+  {"type": "Article", "title": "Canvas Size for Digital Art: The Complete Guide to Resolution, DPI, and Dimensions", "creator": "Allard Lavaritte", "url": "https://lavaritte.com/blogs/digital-canvas-sizes/", "why": "An extremely thorough, free reference covering resolution, DPI, color mode, software-specific canvas setup, performance troubleshooting, and export settings by destination, with concrete size tables.", "summary": "Covers the full lifecycle from canvas creation to export: explains that DPI only matters for print (screen display is identical regardless of DPI), gives concrete canvas size tables for social media, print, and merchandise, walks through software-specific setup in Clip Studio Paint, Procreate, and Krita, and ends with a file-format guide (PNG for lossless sharing, JPG for smaller social files, TIFF for professional print) plus the rule to always keep a native layered working file separate from any export.", "verified": true}
+],
+"quiz": [
+  {"q": "What does DPI actually control?", "options": ["The total pixel count of an image", "How densely pixels are packed onto paper when printed; it has no effect on how an image looks on a screen", "The color mode of the canvas", "The number of layers available in a document"], "correct": 1, "explain": "DPI (dots per inch) only affects print density. Two images with identical pixel dimensions look completely identical on a screen regardless of their DPI setting."},
+  {"q": "For art that will only ever be viewed on a screen (social media, portfolio sites), what setting should you focus on instead of DPI?", "options": ["Color mode only", "Pixel dimensions (resolution)", "File format exclusively", "Brush hardness"], "correct": 1, "explain": "Since DPI is meaningless for screen display, pixel dimensions (the actual resolution) are what determine how sharp an image looks on any monitor."},
+  {"q": "Why is scaling a finished piece of art to a larger canvas size risky?", "options": ["It has no real risk at all", "The software has to invent pixel data that was never captured, causing visible blurring", "It automatically changes the color mode", "It only affects the file format, not image quality"], "correct": 1, "explain": "Scaling up requires the software to generate new pixel information that doesn't exist in the original, which degrades quality \u2014 unlike scaling down, which only discards unneeded data."},
+  {"q": "Which color mode is correct for art that will only be viewed digitally?", "options": ["CMYK", "RGB", "Greyscale, always", "It doesn't matter at all"], "correct": 1, "explain": "RGB is the correct mode for anything displayed on a screen; CMYK is reserved for professional offset printing and can make on-screen colors look duller if used unnecessarily."},
+  {"q": "What should you always keep after exporting a flattened PNG or JPG for sharing?", "options": ["Nothing, the export is sufficient", "The native, layered working file (like a .psd, .clip, or .kra)", "Only a low-resolution thumbnail", "The canvas can be deleted immediately after export"], "correct": 1, "explain": "The native layered file preserves every layer and setting and allows future edits; a flattened export is meant for sharing, not as your only saved copy of the work."}
+],
+"checklist": [
+  "I can explain why DPI has no effect on how an image looks on a screen.",
+  "I can choose appropriate pixel dimensions and DPI based on whether a piece is for screen or print.",
+  "I can choose RGB versus CMYK appropriately based on a piece's intended use.",
+  "I can export a piece in an appropriate file format while keeping my native layered working file."
+],
+"nextStep": "You've completed Digital Art Fundamentals \u2014 workspace, tablet, brushes, layers, selections, transforms, line art, and canvas setup. Every one of these skills carries forward directly into the next arc, Digital Painting & Rendering, where they get applied to full-color, fully-rendered work."
+}
 ]},
 {id:'digital-painting', title:'Digital Painting & Rendering', status:'soon', order:9,
     desc:'Color theory, value control, lighting, material rendering, edge control, atmospheric effects, and a complete professional illustration workflow.',
