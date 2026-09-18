@@ -317,7 +317,7 @@ function applyState(data){
   if(typeof data.fontScale === 'number') STATE.fontScale = data.fontScale;
   if(typeof data.customBgUrl === 'string') STATE.customBgUrl = data.customBgUrl;
   if(Array.isArray(data.customHistory)) STATE.customHistory = data.customHistory.slice(0, 6);
-  if(typeof data.customScrimOpacity === 'number') STATE.customScrimOpacity = data.customScrimOpacity;
+  if(typeof data.customScrimOpacity === 'number') STATE.customScrimOpacity = Math.max(0.40, data.customScrimOpacity);
   if(data.language === 'hi' || data.language === 'en') STATE.language = data.language;
   STATE.streak = data.streak || 0;
   STATE.lastVisitDate = data.lastVisitDate || null;
@@ -1285,7 +1285,7 @@ function renderThemes(){
       ${STATE.customBgUrl ? `
       <div class="theme-opacity-row">
         <label for="themesOpacitySlider">Background strength</label>
-        <input type="range" id="themesOpacitySlider" min="20" max="85" value="${Math.round(STATE.customScrimOpacity*100)}">
+        <input type="range" id="themesOpacitySlider" min="40" max="85" value="${Math.round(STATE.customScrimOpacity*100)}">
         <span class="theme-opacity-value" id="themesOpacityValue">${Math.round(STATE.customScrimOpacity*100)}%</span>
       </div>
       <p class="theme-opacity-hint">Lower = more of your photo shows through. Higher = stronger scrim, safest for busy or high-contrast photos. Text color adjusts automatically either way.</p>
@@ -2051,7 +2051,7 @@ function buildScrimGradient(bands, dark, baseOpacity){
     // Dark mode uses light text, so bright patches of the photo need MORE scrim to
     // stay readable; light mode uses dark text, so it's dark patches that need more.
     const need = dark ? norm : (1 - norm);
-    const alpha = Math.min(0.92, Math.max(0.30, baseOpacity + (need - 0.5) * 0.5));
+    const alpha = Math.min(0.92, Math.max(0.48, baseOpacity + (need - 0.5) * 0.6));
     return `rgba(${rgb},${alpha.toFixed(2)}) ${pct}%`;
   });
   return `linear-gradient(to bottom, ${stops.join(', ')})`;
