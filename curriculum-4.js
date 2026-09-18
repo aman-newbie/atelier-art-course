@@ -528,6 +528,64 @@ const CURRICULUM_4 = [
 ],
 "nextStep": "You now understand color as three separate, diagnosable properties. Module 92 goes deeper specifically into value \u2014 how to plan and control a value structure across a full painting before color is even introduced."
 }
+,
+{
+"id": "m92",
+"plate": 92,
+"title": "Value Control & Value Studies",
+"difficulty": "Intermediate",
+"studyTime": "18 min",
+"practiceTime": "25\u201330 min/day",
+"prereq": ["m91"],
+"hook": "One artist's advice, repeated constantly by people who've actually done it: try painting in pure black and white with only hard edges first \u2014 if an image reads clearly with nothing but that, every value in between becomes easy.",
+"whyItMatters": [
+  "Module 91 established that value is the single most important property for a painting's readability. This module gives you the actual practice for controlling it \u2014 grayscale studies, limited value ranges, and thumbnail value planning are the concrete techniques behind that principle.",
+  "This is a genuinely universal professional habit: working illustrators consistently follow the same sequence \u2014 value sketch, then grayscale or tonal study, then full color \u2014 specifically because a painting that fails structurally is far cheaper to fix at the thumbnail stage than after hours of color rendering."
+],
+"coreIdea": [
+  "A value study strips a reference or idea down to only light and dark masses, usually limited to 3\u20135 distinct values rather than a full smooth range \u2014 fewer values force you to think about the big shapes and their relationships instead of getting lost in detail too early.",
+  "Local value (an object's natural value before any light hits it) is only the starting point. A believable value study also accounts for the light source, core shadow, cast shadow, and reflected light bouncing back into the shadow side \u2014 skipping reflected light is a common reason grayscale studies look flat.",
+  "Different materials hold value differently under the same light: a more reflective material creates more contrast between its lit and shadowed sides, while a matte material holds a narrower value range \u2014 useful information you'll build on in Module 94's material rendering.",
+  "Contrast is the tool that creates a focal point within a value study \u2014 the area with the strongest value contrast (the biggest jump between light and dark) is where the eye naturally goes first, so a focal point without strong local contrast tends to get lost."
+],
+"mistakes": [
+  "Jumping straight into a full, smooth value range before testing whether the image reads with just 3\u20135 simplified values, skipping the step that would catch a weak composition early.",
+  "Giving every object the same local value, which (if translated to color) would mean every object is the same color \u2014 producing a flat, undifferentiated result.",
+  "Forgetting reflected light in shadow areas, leaving shadows pure flat dark instead of showing a subtle bounce of light and color from the environment.",
+  "Placing the strongest value contrast somewhere other than the intended focal point, accidentally pulling the eye to the wrong part of the image.",
+  "Treating a value study as throwaway busywork instead of as a genuine diagnostic tool that saves far more time than it costs by catching problems before full rendering."
+],
+"proTips": [
+  "When starting a new piece, do at least one 3-value study (light, midtone, dark) before adding any more \u2014 if the composition doesn't read at 3 values, more values won't fix it.",
+  "Deliberately add a touch of reflected light to shadow areas, pulled from the color of nearby surfaces, rather than leaving shadows uniformly dark and flat.",
+  "Use a posterize adjustment (or manually flatten a study to a few discrete tones) periodically while working, as a quick check that your value structure is still holding up as detail is added.",
+  "Place your strongest value contrast exactly where you want the eye to land first, and keep contrast elsewhere in the image comparatively lower to support that hierarchy."
+],
+"practice": {
+  "warmup": "Do three 5-minute thumbnail value studies of the same simple scene, using only 3 values each, and compare which composition reads most clearly.",
+  "daily": "Take a reference photo or one of your earlier pieces and desaturate it, then paint a grayscale study of it, paying attention to reflected light in shadow areas.",
+  "weekly": "Paint the same small scene at 3 values, then 5 values, then a full smooth range, and compare how much extra clarity each additional step of value range actually adds.",
+  "challenge": "Take a finished value study and deliberately move the strongest contrast to a different area, then evaluate how much that single change shifts where the eye goes first."
+},
+"resources": [
+  {"type": "Video", "title": "How I Learned GRAYSCALE | Self Taught Value Studies", "creator": "Adrift Arts", "url": "https://www.youtube.com/watch?v=rpMAHUAxIsg", "why": "A free, personal account of self-teaching value studies, including a widely-endorsed tip in the comments about starting with pure black-and-white, hard-edge studies before adding more values.", "summary": "Walks through a self-taught approach to learning grayscale value studies, with viewers in the comments reinforcing a specific technique: practicing with only pure black and white and hard edges first, since an image that reads clearly at that extreme makes every additional value afterward much easier to place correctly.", "verified": true},
+  {"type": "Article", "title": "Understanding Grayscale/Monochrome Art", "creator": "Konart, CLIP STUDIO TIPS", "url": "https://tips.clip-studio.com/en-us/articles/2893", "why": "An extremely detailed, free breakdown of how local value, light, cast shadow, and reflected light combine to build a believable value study, plus how limited value ranges are used for thumbnails.", "summary": "Explains how a believable grayscale value study is built from local value plus the effects of a light source, cast shadow, and reflected light bouncing off nearby surfaces, shows how more reflective materials create more value contrast than matte ones, and demonstrates using limited value ranges (3\u20135 values) for fast, clear thumbnails before adding detail.", "verified": true}
+],
+"quiz": [
+  {"q": "Why do artists often limit a value study to just 3\u20135 distinct values instead of a full smooth range?", "options": ["Software cannot render more than 5 values", "Fewer values force attention onto the big shapes and their relationships instead of getting lost in detail too early", "It is required by most digital painting software", "More values always look worse"], "correct": 1, "explain": "A limited value range forces a focus on the major light and dark masses and their composition, which is easier to evaluate and fix than trying to judge a full smooth value range from the start."},
+  {"q": "What is reflected light, and why does skipping it often make a value study look flat?", "options": ["It's a lighting effect only used in digital software, not in traditional value theory", "Light bouncing back into a shadow area from nearby surfaces; skipping it leaves shadows uniformly flat and dark instead of subtly varied", "It refers to the brightest highlight on an object, unrelated to shadows", "It only matters for transparent objects like glass"], "correct": 1, "explain": "Reflected light is light bouncing from the environment back into a shadow area; without it, shadows read as flat, uniform dark shapes rather than having the subtle variation seen in real lighting."},
+  {"q": "Why do more reflective materials generally show more value contrast under the same light than matte materials?", "options": ["Reflective materials always appear darker overall", "They bounce more light, creating a stronger difference between their lit and shadowed sides", "Material type has no effect on value contrast", "Matte materials always show more contrast than reflective ones"], "correct": 1, "explain": "A more reflective surface bounces more light, which tends to increase the contrast between its brightest lit areas and its shadow side, compared to a matte surface holding a narrower value range."},
+  {"q": "How does contrast help establish a focal point in a value study?", "options": ["Contrast has no relationship to where the eye looks", "The area with the strongest value contrast (biggest light-to-dark jump) naturally draws the eye first", "Only color contrast can create a focal point, not value contrast", "Focal points must always be placed in the exact center of the composition"], "correct": 1, "explain": "The eye is naturally drawn to the area of strongest value contrast, so placing that contrast deliberately at the intended focal point supports a clear visual hierarchy."},
+  {"q": "According to the module, what is the recommended order in a professional value-first workflow?", "options": ["Full color painting, then a value study, then a thumbnail sketch", "Value sketch or thumbnail, then grayscale or tonal study, then full color painting", "Full color painting only, skipping value studies entirely", "Value studies are only useful after a painting is already finished"], "correct": 1, "explain": "The typical professional sequence starts with a small value sketch or thumbnail, moves to a grayscale or tonal study, and only then proceeds to full color, catching structural problems while they're still cheap to fix."}
+],
+"checklist": [
+  "I can create a 3-value thumbnail study before starting a more detailed piece.",
+  "I can add reflected light to a shadow area rather than leaving it flat and uniformly dark.",
+  "I can explain why a more reflective material shows more value contrast than a matte one under the same light.",
+  "I can deliberately place the strongest value contrast at my intended focal point."
+],
+"nextStep": "You can now plan and control value independent of color. Module 93 moves into lighting specifically for rendering \u2014 form shadow, cast shadow, core shadow, and occlusion, the physical logic behind the value relationships you've been studying here."
+}
 ]},
 {id:'advanced-digital', title:'Advanced Digital Art', status:'soon', order:10,
     desc:'Non-destructive workflow, blend modes, adjustment layers, photobashing, 3D-assisted painting, responsible AI-assisted workflow, speed painting, and master studies.',
