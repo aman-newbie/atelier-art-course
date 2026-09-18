@@ -292,6 +292,64 @@ const CURRICULUM_4 = [
 ],
 "nextStep": "You now have precise control over which pixels an edit affects. Module 88 covers transform tools \u2014 moving, scaling, rotating, and distorting a selection or layer, and how to do it non-destructively as your piece develops."
 }
+,
+{
+"id": "m88",
+"plate": 88,
+"title": "Transform Tools",
+"difficulty": "Beginner",
+"studyTime": "16 min",
+"practiceTime": "20\u201325 min/day",
+"prereq": ["m87"],
+"hook": "Traditional artists can't casually pick up a finished drawing, stretch it wider, rotate it, or make a mirrored copy in two seconds \u2014 digital artists do this constantly, and it changes how freely you can experiment.",
+"whyItMatters": [
+  "Transform tools work directly with the layers (Module 86) and selections (Module 87) you've already learned \u2014 they're how you actually move, resize, rotate, or reshape whatever you've isolated, rather than repainting it from scratch.",
+  "Used well, transforming is a genuine construction technique, not just cleanup: mirroring a symmetrical shape, distorting a flat texture onto a 3D-looking surface, or nudging a proportion after the fact are all things that would take far longer to redo by hand than to transform."
+],
+"coreIdea": [
+  "The core transform operations are scale (resize), rotate, skew (slant), distort (move each corner independently), and perspective (move corners in linked opposite pairs, useful for matching a surface's perspective) \u2014 most software lets you access all of them from one combined tool rather than separate menu items.",
+  "The reference point (sometimes shown as a small target icon in the center of the transform box) marks the anchor a transformation happens around \u2014 moving it to an edge or corner before rotating or scaling changes the whole effect, which is exactly how tricks like mirrored or radial copies are built.",
+  "Every time you transform a normal (rasterized) layer, the software has to redraw its pixels, which gradually degrades quality if repeated \u2014 this is a destructive edit. Working on a smart object (or vector layer, where available) instead keeps the original data intact no matter how many times you transform it.",
+  "Holding Shift while dragging a scale handle is the standard shortcut for keeping (or, depending on the software's default, deliberately breaking) an image's proportional aspect ratio \u2014 knowing which behavior is the default in your software prevents accidentally squishing or stretching something you meant to scale evenly."
+],
+"mistakes": [
+  "Repeatedly scaling, rotating, or distorting the same rasterized layer directly, gradually degrading its quality instead of working on a smart object or vector layer that stays undamaged.",
+  "Not noticing or intentionally moving the reference point before a transform, then being confused why a rotation or scale isn't centered where expected.",
+  "Confusing Distort (each corner moves independently) with Perspective (opposite corners move together in linked pairs) and picking the wrong one for the effect intended.",
+  "Scaling an image non-proportionally by accident because the software's default Shift behavior wasn't what was expected, producing an unintentionally squished or stretched result.",
+  "Flattening a piece before confirming every transform is finalized, losing the ability to go back and adjust a transformation non-destructively."
+],
+"proTips": [
+  "Convert a layer to a smart object (or work in vector where available) before transforming it, especially if you expect to scale or rotate it more than once.",
+  "Deliberately move the reference point to an edge before flipping or rotating a copy of a shape \u2014 this is the core trick behind quick mirrored or radial-symmetry effects.",
+  "Use Perspective mode specifically when you need a flat texture or image to match the converging angles of a surface in your scene, rather than trying to eyeball it with Distort.",
+  "Check whether your software's default Shift behavior locks or breaks proportional scaling before you rely on muscle memory from a different program."
+],
+"practice": {
+  "warmup": "Take one simple shape and practice all five core transforms on copies of it: scale, rotate, skew, distort, and perspective, labeling which is which.",
+  "daily": "Convert a layer to a smart object, then scale and rotate it several times in a row, comparing its quality to a non-smart-object version transformed the same number of times.",
+  "weekly": "Create a mirrored or radially-symmetric shape by moving the reference point to an edge and flipping or rotating a duplicated layer around it.",
+  "challenge": "Take a flat texture or pattern and use Distort or Perspective mode to make it appear to wrap realistically onto an angled surface, like a sign on a building wall."
+},
+"resources": [
+  {"type": "Video", "title": "Edit Non-Destructively with Smart Objects in Photoshop | Day 13", "creator": "PHLEARN", "url": "https://www.youtube.com/watch?v=44KFPa6WzWI", "why": "A free, focused lesson from a well-established free Photoshop education channel, covering exactly why smart objects protect quality during repeated transforms.", "summary": "PHLEARN explains Smart Objects as the single biggest habit change for a non-destructive workflow, showing how converting a layer before transforming it protects the original image data so scaling, rotating, or applying filters repeatedly doesn't degrade quality the way working on a regular pixel layer would.", "verified": true},
+  {"type": "Article", "title": "How to use Free Transform in Photoshop", "creator": "Steve Patterson, Photoshop Essentials", "url": "https://www.photoshopessentials.com/basics/transform-and-warp-images-with-free-transform-in-photoshop-cc-2019/", "why": "An extremely thorough, free breakdown of every transform mode (scale, rotate, skew, distort, perspective) and the reference point, with clear step-by-step examples.", "summary": "Covers every transform mode in detail \u2014 proportional and non-proportional scaling, rotation, skew, the difference between Distort (independent corners) and Perspective (linked opposite corners) \u2014 and explains how moving the reference point (the target icon) changes the anchor of a transform, using it to build a four-way mirrored image as a concrete example.", "verified": true}
+],
+"quiz": [
+  {"q": "What is the key difference between Distort and Perspective transform modes?", "options": ["They are identical with different names", "Distort moves each corner handle independently, while Perspective moves opposite corners together in linked pairs", "Distort only works on text layers", "Perspective can only be used on circular shapes"], "correct": 1, "explain": "Distort lets each corner move freely and independently, while Perspective links opposite corners so they move together in opposite directions, which is useful for matching a surface's converging angles."},
+  {"q": "Why is transforming a smart object preferred over transforming a regular rasterized layer repeatedly?", "options": ["Smart objects load faster in every case", "Regular layers lose quality with each destructive transform, while a smart object preserves the original image data through repeated transforms", "Smart objects cannot be transformed at all", "There is no real difference between the two"], "correct": 1, "explain": "Repeatedly transforming a rasterized layer redraws its pixels each time, gradually degrading quality; a smart object keeps the original data intact no matter how many times it's transformed."},
+  {"q": "What does the reference point (target icon) control during a transform?", "options": ["The color of the transformed layer", "The anchor point that a rotation or scale happens around", "The file format of the exported image", "The brush size used afterward"], "correct": 1, "explain": "The reference point marks the center a transformation pivots or scales around; moving it to an edge, for example, changes a rotation from spinning in place to swinging around that edge instead."},
+  {"q": "What is a practical technique that relies on moving the reference point?", "options": ["Adjusting brush opacity", "Creating a mirrored or radially-symmetric copy by flipping or rotating around a moved reference point", "Changing the canvas resolution", "Selecting a color from the color picker"], "correct": 1, "explain": "Moving the reference point to an edge before flipping or rotating a duplicated layer is the core technique behind quick mirror-image or radial-symmetry effects."},
+  {"q": "What does holding Shift while dragging a scale handle typically control?", "options": ["The layer's blend mode", "Whether the image scales proportionally (keeping aspect ratio) or not, depending on the software's default behavior", "The brush hardness setting", "The selection tool being used"], "correct": 1, "explain": "Shift is the standard modifier for toggling proportional versus non-proportional scaling, though which behavior is the default versus the Shift-modified one can vary between software, so it's worth confirming in whichever program you use."}
+],
+"checklist": [
+  "I can explain the difference between Distort and Perspective transform modes.",
+  "I can convert a layer to a smart object before transforming it to avoid quality loss.",
+  "I can move a reference point to create a mirrored or radial-symmetry effect.",
+  "I can scale an image proportionally or non-proportionally on purpose, not by accident."
+],
+"nextStep": "You now have the core toolkit \u2014 workspace, hardware, brushes, layers, selections, transforms \u2014 to construct and edit any digital piece. Module 89 focuses specifically on clean digital line art, bringing several of these tools together for confident, controlled linework."
+}
 ]},
 {id:'digital-painting', title:'Digital Painting & Rendering', status:'soon', order:9,
     desc:'Color theory, value control, lighting, material rendering, edge control, atmospheric effects, and a complete professional illustration workflow.',
