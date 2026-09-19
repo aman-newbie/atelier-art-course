@@ -644,6 +644,64 @@ const CURRICULUM_4 = [
 ],
 "nextStep": "You now understand the physical logic of light and shadow on a generic form. Module 94 builds directly on this by rendering specific materials \u2014 skin and organic surfaces \u2014 where this same shadow logic gets modified by how a particular material actually behaves under light."
 }
+,
+{
+"id": "m94",
+"plate": 94,
+"title": "Material Rendering: Skin & Organic Surfaces",
+"difficulty": "Advanced",
+"studyTime": "20 min",
+"practiceTime": "30 min/day",
+"prereq": ["m93"],
+"hook": "Skin isn't just a colored surface \u2014 light actually enters it, bounces around beneath the surface, and comes back out somewhere else, which is exactly why flat, single-tone skin always looks like plastic no matter how carefully it's shaded.",
+"whyItMatters": [
+  "Module 93 gave you the universal shadow logic for any form. This module is the first of several that show how a specific material modifies that generic logic \u2014 skin is one of the most common and most demanding surfaces you'll render, since human eyes are extremely sensitive to anything that looks slightly wrong about a face.",
+  "Subsurface scattering, the core skin-specific effect covered here, is genuinely different from anything in Module 93: it's not a shadow type at all, but a property of the material itself letting light penetrate and re-emerge, which is why skin needs its own dedicated rendering approach rather than just generic shadow logic."
+],
+"coreIdea": [
+  "Subsurface scattering is light entering skin, bouncing around beneath the surface, and exiting nearby, rather than reflecting straight off the surface like a hard material would. This is why thin areas like ears, nostrils, and fingertips often show a warm reddish glow when strongly backlit \u2014 light is passing partway through them.",
+  "The terminator (the transition from light to shadow) is where subsurface scattering is most visible: instead of a flat, even transition, the terminator on skin often shows a warmer, more saturated color than either the highlight or the shadow, because light is scattering internally right at that edge.",
+  "In realistic lighting, shadows on skin should generally stay more muted and desaturated than mid-tones, since shadows absorb rather than reflect light \u2014 mid-tones, which receive direct illumination without being overexposed, typically carry the most saturated color information.",
+  "Skin doesn't exist in isolation: bounce light from the surrounding environment (a red shirt, a blue sky, a warm lamp) reflects subtly into skin's shadow areas, and including this is often what makes a rendered figure feel like it belongs in its scene rather than looking pasted on top of it."
+],
+"mistakes": [
+  "Treating skin like a hard, opaque material with a flat, single-tone shadow, missing the warm internal glow that subsurface scattering produces, especially in thin areas like ears and fingertips.",
+  "Making shadow areas on skin more saturated and colorful than the mid-tones, which tends to look unnatural in realistic lighting (though this can be an intentional stylistic choice in stylized or dramatically lit work).",
+  "Rendering skin in isolation from its environment, ignoring bounce light from nearby colored surfaces that would naturally reflect subtly into the shadow areas.",
+  "Relying only on mid-tones to define form instead of letting the transition between light and shadow do that work, which produces a dull, flat look.",
+  "Making skin perfectly smooth with zero texture, which reads as artificial and plastic rather than convincingly organic."
+],
+"proTips": [
+  "Add a soft, warm glaze (often orange-red) specifically at the terminator, using a low-opacity airbrush or an overlay-mode layer, to simulate the way subsurface scattering shows up most strongly at the light-to-shadow transition.",
+  "Keep shadow saturation lower than mid-tone saturation for a realistic look, and treat higher-saturation shadows as a deliberate stylistic choice for dramatic or stylized lighting rather than a default.",
+  "Pull a bounce-light color from a dominant nearby surface (clothing, background) and add it subtly to skin's shadow areas at low opacity, to visually connect the figure to its environment.",
+  "Add a very subtle noise or texture pass at the end of a skin render to break up perfectly smooth gradients, which otherwise tend to read as artificial or plastic-looking."
+],
+"practice": {
+  "warmup": "Render a simple sphere using skin-toned color, adding a warm terminator glaze and reflected bounce light, then compare it to the same sphere rendered with flat, single-tone shading.",
+  "daily": "Take a simple portrait or head study and render its skin using a base color, a Multiply shadow layer, a warm terminator glaze, and a Screen or Add layer for lit areas.",
+  "weekly": "Render a small figure illustration with one dominant colored surface nearby (a red shirt, a green background) and deliberately add that color as bounce light into the skin's shadow areas.",
+  "challenge": "Render the same face twice \u2014 once with muted, desaturated shadows and vibrant mid-tones (realistic), once with more saturated shadows (stylized) \u2014 and compare how each approach changes the overall feel."
+},
+"resources": [
+  {"type": "Video", "title": "Painting Skin Tones and How Light Affects Color", "creator": "Marco Bucci (via Proko)", "url": "https://www.youtube.com/watch?v=kYtGh2xTAlg", "why": "A free YouTube video from a respected colorist covering fleshtone values and how light and shadow specifically affect skin color.", "summary": "Marco Bucci paints the planes of a head with color, demonstrating fleshtone values and showing concretely how light and shadow interact with skin tones differently than with other materials, building directly on shadow logic with skin-specific color decisions.", "verified": true},
+  {"type": "Article", "title": "Mastering Skin Tones: Tips & Step-by-Step Process", "creator": "nadherinn, CLIP STUDIO TIPS", "url": "https://tips.clip-studio.com/en-us/articles/10434", "why": "An extremely detailed, free, step-by-step guide covering base color, subsurface scattering, shadow blending modes, the terminator glow, and bounce light specifically for skin.", "summary": "Walks through a complete skin-rendering workflow: establishing a base color, using a soft airbrush for subsurface scattering in thin areas, building shadows with a Multiply layer, adding a warm, saturated terminator glaze with an Overlay layer, adding lit areas with Screen or Add layers, and finishing with subtle bounce light and a light noise texture pass for realism.", "verified": true}
+],
+"quiz": [
+  {"q": "What is subsurface scattering, and where is it most visible on skin?", "options": ["A shadow type that only appears at night, most visible on the forehead", "Light entering skin and bouncing internally before exiting nearby; most visible in thin areas like ears, nostrils, and fingertips when backlit", "A brush setting in digital painting software with no real-world basis", "A blend mode used only for hard, reflective materials"], "correct": 1, "explain": "Subsurface scattering is light penetrating skin and re-emerging nearby rather than reflecting straight off the surface, and it's most visible in thin, backlit areas like ears and fingertips, which glow warmly."},
+  {"q": "According to the module, what should the terminator (light-to-shadow transition) on skin often show?", "options": ["A flat, even gray transition with no color variation", "A warmer, more saturated color than either the highlight or the shadow, due to internal light scattering", "Pure black with no color at all", "The exact same color as the highlight"], "correct": 1, "explain": "Because subsurface scattering is especially active right at the terminator, this transition zone on skin often shows a warmer, more saturated hue than the surrounding highlight or shadow."},
+  {"q": "In realistic lighting, how should shadow saturation on skin generally compare to mid-tone saturation?", "options": ["Shadows should always be more saturated than mid-tones", "Shadows should generally be more muted/desaturated than mid-tones, since shadows absorb rather than reflect light", "Saturation should be identical in shadows and mid-tones", "Saturation has no relevant effect on skin rendering"], "correct": 1, "explain": "In realistic lighting, mid-tones (which receive direct illumination) typically carry the most saturated color, while shadows tend to be more muted since they absorb rather than reflect light."},
+  {"q": "Why is bounce light from the environment important when rendering skin?", "options": ["It has no real effect on how skin looks in a scene", "It reflects subtly into shadow areas, helping a figure feel visually connected to its environment rather than pasted on top of it", "It only matters for rendering hard, reflective materials like metal", "Bounce light should always be avoided when rendering people"], "correct": 1, "explain": "Skin doesn't exist in isolation \u2014 bounce light from nearby colored surfaces reflecting subtly into shadow areas helps a rendered figure feel integrated into its scene rather than looking separately pasted in."},
+  {"q": "Why is adding a subtle texture or noise pass often recommended as a final step for skin rendering?", "options": ["It reduces the file size significantly", "Perfectly smooth skin tends to look artificial or plastic, so subtle texture helps it read as convincingly organic", "It is required by most software licenses", "It replaces the need for subsurface scattering entirely"], "correct": 1, "explain": "Completely smooth gradients on skin tend to look artificial or plastic; a light noise or texture pass breaks up that smoothness for a more convincingly organic result."}
+],
+"checklist": [
+  "I can explain what subsurface scattering is and where it's most visible on skin.",
+  "I can add a warm terminator glaze to simulate subsurface scattering at the light-to-shadow transition.",
+  "I can keep shadow saturation more muted than mid-tone saturation for a realistic result (or deliberately break this for a stylized look).",
+  "I can add bounce light from a nearby surface into a figure's shadow areas to integrate it with its environment."
+],
+"nextStep": "You now understand how one specific material (skin) modifies the generic shadow logic from Module 93. Module 95 applies the same modify-the-logic approach to hard surfaces \u2014 metal, glass, and stone \u2014 which behave very differently from organic material."
+}
 ]},
 {id:'advanced-digital', title:'Advanced Digital Art', status:'soon', order:10,
     desc:'Non-destructive workflow, blend modes, adjustment layers, photobashing, 3D-assisted painting, responsible AI-assisted workflow, speed painting, and master studies.',
