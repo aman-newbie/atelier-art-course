@@ -586,6 +586,64 @@ const CURRICULUM_4 = [
 ],
 "nextStep": "You can now plan and control value independent of color. Module 93 moves into lighting specifically for rendering \u2014 form shadow, cast shadow, core shadow, and occlusion, the physical logic behind the value relationships you've been studying here."
 }
+,
+{
+"id": "m93",
+"plate": 93,
+"title": "Light & Shadow Logic",
+"difficulty": "Intermediate",
+"studyTime": "20 min",
+"practiceTime": "25\u201330 min/day",
+"prereq": ["m92"],
+"hook": "A shadow isn't one flat shape \u2014 it's actually four distinct things working together (form shadow, cast shadow, core shadow, and occlusion shadow), and most beginners paint all four as a single uniform dark blob.",
+"whyItMatters": [
+  "Module 92 taught you to plan value structure; this module gives you the actual physical logic behind those values \u2014 the specific, nameable shadow types that make a form look convincingly three-dimensional under any single light source.",
+  "This is foundational, transferable knowledge: the exact same shadow logic applies whether you're rendering a character, a prop, or an environment, which is why it sits right before Module 94's material rendering \u2014 you need to understand how light behaves on a generic form before learning how different materials modify that behavior."
+],
+"coreIdea": [
+  "A form under one light source splits into a light zone and a shadow zone, separated by the terminator (the edge where planes turn away from the light). Form shadow is caused by a surface simply facing away from the light; cast shadow is a separate shape caused by one object blocking light from reaching another surface entirely.",
+  "Shadows are rarely pure black because of reflected light (or bounce light) \u2014 light bouncing off nearby surfaces back into the shadow side. The core shadow is a distinct, often darker band that appears near the terminator specifically where reflected light doesn't reach as strongly.",
+  "The occlusion shadow is the darkest shadow in a scene, appearing in tight areas where two surfaces meet or nearly touch (like where an object sits on the ground) \u2014 neither the main light nor reflected light can reach into that tight gap, so it reads darker than the surrounding form or cast shadow.",
+  "The highlight and the center light are often confused but are different things: the center light is simply the plane facing most directly toward the light source, while the highlight is a reflection of the light source itself and moves depending on the viewer's position, the way a reflection in a mirror does."
+],
+"mistakes": [
+  "Treating an entire shadow area as one flat, uniform dark shape instead of recognizing form shadow, cast shadow, core shadow, and occlusion shadow as distinct elements with different causes and values.",
+  "Painting shadows as pure black with no reflected light, producing a harsh, artificial look instead of the subtle bounce of color and light real shadows usually show.",
+  "Confusing the highlight (a moving reflection of the light source) with the center light (the plane facing the light source, which doesn't move with the viewer).",
+  "Forgetting the occlusion shadow entirely, which is often what's missing when two touching objects (a figure standing on ground, a prop resting on a table) don't feel properly grounded together.",
+  "Copying a reference's cast shadow shape exactly instead of adjusting it, when a cast shadow can be reshaped to better describe the form it's falling onto without breaking believability."
+],
+"proTips": [
+  "Practice the classic \\\"shade an egg\\\" exercise: light a real egg on white paper with a single desk lamp and identify each shadow type (form, cast, core, occlusion) on it directly from observation before trying to invent them from imagination.",
+  "When a shadow area looks flat or dead, check specifically for a missing core shadow or missing reflected light \u2014 these two elements are usually what's needed to add convincing dimensionality.",
+  "Don't be afraid to adjust the shape of a cast shadow to better describe the form it lands on (wrapping it around a cylindrical object, for example) \u2014 audiences rarely notice small deviations from geometric accuracy as long as the shadow still feels believable.",
+  "Use free 3D software like Blender to build a simple sphere-and-ground scene and directly manipulate the light source, watching form shadow, cast shadow, core shadow, and occlusion shadow change in real time \u2014 this makes the abstract concepts concrete and controllable."
+],
+"practice": {
+  "warmup": "Set up a real object (an egg, a ball, an apple) under a single desk lamp and identify all four shadow types on it: form shadow, cast shadow, core shadow, and occlusion shadow.",
+  "daily": "Render a simple sphere or geometric form digitally, deliberately including all four shadow types plus a distinguishable highlight and center light.",
+  "weekly": "Take one of your earlier value studies (Module 92) and add reflected light and a core shadow to its shadow areas if they're currently missing.",
+  "challenge": "Render two touching objects (a figure standing on ground, a cup resting on a table) and pay specific attention to rendering a convincing occlusion shadow where they meet."
+},
+"resources": [
+  {"type": "Video", "title": "Shading Light and Form \u2013 Basics", "creator": "Stan Prokopenko (Proko)", "url": "https://www.proko.com/course-lesson/shading-light-and-form-basics", "why": "A free lesson (marked free within a paid course) from a highly respected figure-drawing educator, covering all the named shadow types with a hands-on egg-shading assignment.", "summary": "Stan Prokopenko explains the terminator, form shadow, cast shadow, core shadow, reflected light, occlusion shadow, halftone, center light, and highlight, using a real egg lit by a desk lamp as the running example, and assigns a practical exercise of shading a real egg from observation to directly apply each concept.", "verified": true},
+  {"type": "Article", "title": "How to Use Blender to Learn About Light and Shadow", "creator": "Monika Zagrobelna", "url": "https://monikazagrobelna.com/2023/11/17/how-to-use-blender-to-learn-about-light-and-shadow/", "why": "A free, hands-on tutorial using free 3D software to let you directly manipulate and observe every shadow type in real time, rather than only reading about them.", "summary": "Walks through setting up a simple sphere-and-ground scene in the free software Blender, then shows how moving the light source and ground plane changes the terminator, form shadow, cast shadow, core shadow, occlusion shadow, and ambient (reflected) light in real time, turning abstract shadow theory into something directly observable and adjustable.", "verified": true}
+],
+"quiz": [
+  {"q": "What is the difference between form shadow and cast shadow?", "options": ["They are the same thing with different names", "Form shadow is caused by a surface facing away from the light source; cast shadow is a separate shape caused by one object blocking light from reaching another surface", "Form shadow only appears on spheres, cast shadow only on flat surfaces", "Cast shadow is always darker than form shadow"], "correct": 1, "explain": "Form shadow occurs on a surface simply turning away from the light, while cast shadow is an entirely separate shape produced when one object blocks light from reaching another surface."},
+  {"q": "Why do shadows usually appear lighter than pure black?", "options": ["Software cannot render pure black", "Reflected light (bounce light) from nearby surfaces fills into the shadow area", "Shadows are only dark in traditional media, not digital", "Pure black shadows are a legal requirement in professional work"], "correct": 1, "explain": "Light bouncing off nearby surfaces (reflected or bounce light) typically fills shadow areas with some brightness and color, which is why real shadows are rarely pure black."},
+  {"q": "What causes an occlusion shadow, and why is it usually the darkest shadow in a scene?", "options": ["It occurs in tight areas where two surfaces meet or nearly touch, where neither the main light nor reflected light can reach", "It's caused by direct sunlight only and never appears indoors", "It only appears on reflective materials", "It's the same thing as a highlight"], "correct": 0, "explain": "An occlusion shadow forms in tight gaps between touching or nearly-touching surfaces, where both the primary and reflected light are blocked, making it typically the darkest shadow in a scene."},
+  {"q": "What is the key difference between the highlight and the center light on a form?", "options": ["They are identical and interchangeable terms", "The center light is the plane facing the light source and stays fixed; the highlight is a reflection of the light source that moves depending on the viewer's position", "The highlight only appears on matte surfaces", "The center light only appears at night"], "correct": 1, "explain": "The center light is a fixed plane facing the light source, while the highlight is a reflection of the light source itself, which shifts position as the viewer's (or camera's) position changes, similar to a reflection in a mirror."},
+  {"q": "According to the module, is it acceptable to adjust the exact shape of a cast shadow from strict geometric accuracy?", "options": ["No, cast shadows must always be geometrically perfect", "Yes, a cast shadow can be reshaped to better describe the form it lands on, since small deviations rarely break believability", "Cast shadows should never be included in a rendering", "Only professional software can calculate correct cast shadow shapes"], "correct": 1, "explain": "The module notes that adjusting a cast shadow's shape (for example, wrapping it around a cylindrical form) to better describe the surface it falls on is a common, acceptable technique, since audiences rarely notice small deviations from strict geometric accuracy."}
+],
+"checklist": [
+  "I can identify form shadow, cast shadow, core shadow, and occlusion shadow on a real or rendered object.",
+  "I can add reflected light to a shadow area instead of leaving it pure black.",
+  "I can distinguish between a highlight (a moving reflection) and a center light (a fixed plane facing the light).",
+  "I can render a convincing occlusion shadow where two objects meet or touch."
+],
+"nextStep": "You now understand the physical logic of light and shadow on a generic form. Module 94 builds directly on this by rendering specific materials \u2014 skin and organic surfaces \u2014 where this same shadow logic gets modified by how a particular material actually behaves under light."
+}
 ]},
 {id:'advanced-digital', title:'Advanced Digital Art', status:'soon', order:10,
     desc:'Non-destructive workflow, blend modes, adjustment layers, photobashing, 3D-assisted painting, responsible AI-assisted workflow, speed painting, and master studies.',
