@@ -702,6 +702,64 @@ const CURRICULUM_4 = [
 ],
 "nextStep": "You now understand how one specific material (skin) modifies the generic shadow logic from Module 93. Module 95 applies the same modify-the-logic approach to hard surfaces \u2014 metal, glass, and stone \u2014 which behave very differently from organic material."
 }
+,
+{
+"id": "m95",
+"plate": 95,
+"title": "Material Rendering: Hard Surfaces",
+"difficulty": "Advanced",
+"studyTime": "20 min",
+"practiceTime": "30 min/day",
+"prereq": ["m94"],
+"hook": "Metal doesn't have a color of its own \u2014 a polished sword isn't really silver-gray, it's a distorted mirror showing you the sky, the ground, and everything else in the scene, which is exactly why painting it from imagination alone is so hard.",
+"whyItMatters": [
+  "Module 94 showed how one material (skin) modifies the generic shadow logic from Module 93. This module applies that same modify-the-logic approach to the opposite extreme: hard, reflective surfaces that behave almost nothing like organic materials, completing your range across the two most common material categories in illustration.",
+  "Metal, glass, and stone appear constantly in character and environment art \u2014 armor, weapons, windows, architecture \u2014 and getting them wrong (usually by under-committing to contrast) is one of the fastest ways a rendered piece reads as amateurish, even when everything else in the piece is strong."
+],
+"coreIdea": [
+  "A reflective surface borrows its color from its environment rather than having a fixed local color \u2014 the sky reflects into the top of a metal object, the ground into the bottom, and nearby colored objects into the sides. This is why metal painted in isolation, without thinking about the surrounding scene, tends to look flat and disconnected.",
+  "Reflective surfaces have extreme, abrupt value contrast: highlights close to pure white, shadows that can be nearly black, with a hard, sharp transition between them \u2014 unlike organic materials, where transitions are soft and gradual. Beginners consistently under-commit to this contrast, which is the single most common reason painted metal reads as plastic.",
+  "The reflected light band \u2014 a strip of lighter value at the bottom edge of a shadow area, where a surface catches light bounced from the ground or nearby objects \u2014 is especially pronounced and important on reflective materials, sometimes nearly as bright as the primary highlight itself.",
+  "Different hard materials sit at different points on a reflectivity spectrum (polished chrome, brushed steel, matte stone, rough rust), and where a material sits determines everything else: how sharp its highlights are, how extreme its value contrast is, and how much of the environment visibly reflects in it."
+],
+"mistakes": [
+  "Painting a hard, reflective surface in isolation from its environment, skipping the sky-colored top, ground-colored bottom, and nearby object reflections that make it feel like it belongs in the scene.",
+  "Keeping value contrast too moderate, producing a soft, plastic-like result instead of the sharp, extreme highlight-to-shadow jump that reads as genuinely reflective.",
+  "Making a highlight broad and soft instead of narrow and hard-edged, which is one of the fastest ways a metal surface reads as rubber or plastic rather than metal.",
+  "Treating every hard material the same way regardless of how reflective it actually is, instead of adjusting highlight sharpness and value contrast based on where a specific material sits on the reflectivity spectrum.",
+  "Adding surface wear (scratches, dents, rust) as random scattered marks rather than details with a believable cause and direction, which reads as decoration instead of history."
+],
+"proTips": [
+  "Before painting a metal or glass object, decide what's above it (sky, ceiling), below it (ground, floor), and beside it (nearby colored objects), and let those colors show up in the reflection \u2014 this single habit does more to sell metal than any brush technique.",
+  "Push your highlight and shadow values further apart than feels comfortable at first \u2014 extreme value contrast is what separates convincing metal from a flat, moderate-contrast result that reads as plastic.",
+  "Paint a metal object's primary highlight as one confident, narrow, hard-edged stroke rather than building it up from many small uncertain marks \u2014 hesitation shows in highlights more than almost anywhere else.",
+  "When adding scratches or wear, give each one a light side and a dark side (the two walls of the groove) rather than a single flat line \u2014 this is what makes a scratch read as a 3D groove instead of a drawn-on mark."
+],
+"practice": {
+  "warmup": "Paint the same sphere three times as three different hard materials (polished chrome, brushed steel, matte stone), adjusting highlight sharpness and value contrast for each.",
+  "daily": "Render one hard-surface object (a blade, a goblet, a window) with deliberate environment-color reflections \u2014 sky above, ground below, a nearby colored object to one side.",
+  "weekly": "Take a finished hard-surface render and push its value contrast noticeably further (brighter highlight, darker shadow) than your first instinct, and compare the result.",
+  "challenge": "Add believable wear (scratches, dents, or rust) to a hard-surface object, giving each mark a plausible cause and a light-and-dark paired edge rather than a single flat line."
+},
+"resources": [
+  {"type": "Video", "title": "How to draw and paint reflective windows \u2014 4 mediums (and a freebie!)", "creator": "Sandy Allnock", "url": "https://www.youtube.com/watch?v=J0CKna8A51I", "why": "A free video from an established art educator specifically on reading and simplifying reflections in glass, a core hard-surface skill.", "summary": "Sandy Allnock demonstrates how to simplify complicated glass reflections into simple, recognizable shapes rather than trying to render every detail, showing how squinting to find the essential shapes in a reflection is more effective than attempting photorealistic accuracy.", "verified": true},
+  {"type": "Article", "title": "How to Render Realistic Metal and Gold Digital Art Tutorial", "creator": "Allard Lavaritte", "url": "https://lavaritte.com/blogs/how-to-paint-realistic-metal/", "why": "An exceptionally thorough, free guide covering the physics of metal reflectivity, a complete step-by-step process, six specific metal types with color palettes, and common mistakes with fixes.", "summary": "Explains that metal borrows its color entirely from its environment rather than having a fixed local color, walks through a complete layer-based painting process (base color, Multiply shadows, a reflected light band, a sharp Screen/Add highlight, and environment reflections), and gives specific base colors, highlight qualities, and shadow behavior for six metal types (steel, gold, copper, bronze, silver, rusted iron), plus common mistakes like insufficient value contrast that make metal read as plastic.", "verified": true}
+],
+"quiz": [
+  {"q": "Why does a highly reflective surface like polished metal not have a fixed local color?", "options": ["Reflective surfaces are always painted gray by convention", "It borrows its color from its environment, reflecting the sky, ground, and nearby objects rather than having its own fixed hue", "Local color doesn't exist as a concept in digital painting", "Metal always appears white regardless of lighting"], "correct": 1, "explain": "A highly reflective surface acts like a distorted mirror, showing colors from its surroundings (sky above, ground below, nearby objects to the sides) rather than displaying one fixed local color."},
+  {"q": "What is a common beginner mistake regarding value contrast on reflective hard surfaces?", "options": ["Making the contrast too extreme", "Keeping the value contrast too moderate, producing a soft, plastic-like result instead of the sharp jump that reads as reflective", "Value contrast doesn't matter for hard surfaces", "Only using pure black and white with no mid-tones at all"], "correct": 1, "explain": "Beginners tend to under-commit to value contrast on reflective surfaces; pushing highlights brighter and shadows darker than feels comfortable is usually necessary for a convincingly reflective result."},
+  {"q": "What is the reflected light band, and where does it typically appear?", "options": ["A rainbow effect only seen on glass prisms", "A strip of lighter value at the bottom edge of a shadow area, where a surface catches light bounced from the ground or nearby objects", "A type of brush exclusive to painting fabric", "The brightest highlight on a surface, located at its center"], "correct": 1, "explain": "The reflected light band is a lighter strip typically found at the lower edge of a shadow area, caused by light bouncing up from the ground or nearby surfaces \u2014 it can be nearly as bright as the primary highlight on very reflective materials."},
+  {"q": "Why should a primary highlight on metal be painted as one confident, narrow stroke rather than built up gradually?", "options": ["It saves time only, with no visual benefit", "A narrow, hard-edged, confident highlight reads as metal, while a soft or hesitant one reads as plastic or rubber", "Multiple small strokes always look better on metal", "Highlights have no effect on how a material reads"], "correct": 1, "explain": "A sharp, confidently-placed highlight is one of the clearest signals of a reflective metal surface; a broad, soft, or hesitantly-built highlight tends to read as a softer, non-metallic material instead."},
+  {"q": "Why should surface wear like scratches have a believable cause and direction rather than being randomly placed?", "options": ["Random marks are always more visually interesting", "Deliberate, causally logical wear reads as history and adds believability, while random scattered marks read as decoration or noise", "Scratches must always be placed in the exact center of an object", "Wear marks have no effect on how convincing a render looks"], "correct": 1, "explain": "Wear marks placed with a plausible cause and direction (for example, concentrated where an object would logically take impact) tell a believable story about the object's history, while random scattering reads as arbitrary decoration."}
+],
+"checklist": [
+  "I can add environment-color reflections (sky, ground, nearby objects) to a hard-surface render.",
+  "I can push value contrast on a reflective surface further than feels immediately comfortable.",
+  "I can paint a confident, narrow, hard-edged highlight rather than a soft, built-up one.",
+  "I can add wear marks with a believable cause and a light-and-dark paired edge."
+],
+"nextStep": "You now have material rendering approaches for both organic (skin) and hard-reflective (metal, glass) surfaces. Module 96 shifts to edge control \u2014 the deliberate use of hard and soft edges across an entire piece to direct focus and describe form, a skill that applies across every material you've rendered so far."
+}
 ]},
 {id:'advanced-digital', title:'Advanced Digital Art', status:'soon', order:10,
     desc:'Non-destructive workflow, blend modes, adjustment layers, photobashing, 3D-assisted painting, responsible AI-assisted workflow, speed painting, and master studies.',
