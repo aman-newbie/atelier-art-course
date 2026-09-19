@@ -2171,10 +2171,78 @@ const DOUBT_ENGINE_KEY = 'atelier_doubt_engine';
 const DOUBT_LOCAL_MODEL_ID = 'HuggingFaceTB/SmolLM2-360M-Instruct';
 let localPipelinePromise = null;
 
-function getDoubtSystemInstruction(){
+// ---- Lightweight in-browser retrieval (BM25) over the whole curriculum ----
+// This lets the assistant answer using material from ANY module, not just
+// the one the student currently has open, without downloading another
+// model \u2014 it's plain JS text scoring against curriculum-index.json.
+let curriculumIndexPromise = null;
+
+function tokenizeForSearch(s){
+  return (String(s).toLowerCase().match(/[a-z0-9']+/g) || []).filter(w => w.length > 1);
+}
+
+async function loadCurriculumIndex(){
+  if(curriculumIndexPromise) return curriculumIndexPromise;
+  curriculumIndexPromise = (async () => {
+    const res = await fetch('curriculum-index.json');
+    const chunks = await res.json();
+    const df = new Map();
+    let totalLen = 0;
+    const docsTokens = chunks.map(c => {
+      const toks = tokenizeForSearch(c.t);
+      totalLen += toks.length;
+      new Set(toks).forEach(w => df.set(w, (df.get(w) || 0) + 1));
+      return toks;
+    });
+    return { chunks, docsTokens, df, avgdl: totalLen / (chunks.length || 1), N: chunks.length };
+  })().catch(e => { curriculumIndexPromise = null; throw e; });
+  return curriculumIndexPromise;
+}
+
+function bm25Score(queryTokens, docTokens, df, N, avgdl, k1, b){
+  const tf = new Map();
+  docTokens.forEach(w => tf.set(w, (tf.get(w) || 0) + 1));
+  const dl = docTokens.length || 1;
+  let score = 0;
+  queryTokens.forEach(qt => {
+    const f = tf.get(qt) || 0;
+    if(f === 0) return;
+    const n = df.get(qt) || 0;
+    const idf = Math.log((N - n + 0.5) / (n + 0.5) + 1);
+    score += idf * (f * (k1 + 1)) / (f + k1 * (1 - b + b * dl / avgdl));
+  });
+  return score;
+}
+
+async function searchCurriculum(query, topK){
+  try{
+    const idx = await loadCurriculumIndex();
+    const qTokens = tokenizeForSearch(query);
+    if(!qTokens.length) return [];
+    const scored = idx.chunks.map((c, i) => ({
+      c, score: bm25Score(qTokens, idx.docsTokens[i], idx.df, idx.N, idx.avgdl, 1.5, 0.75)
+    }));
+    scored.sort((a, b) => b.score - a.score);
+    return scored.filter(s => s.score > 0).slice(0, topK || 4).map(s => s.c);
+  }catch(e){
+    // Retrieval is a bonus, not a requirement \u2014 fail closed so the chat
+    // still works (just without cross-module context) if the index can't load.
+    return [];
+  }
+}
+
+async function getDoubtSystemInstruction(query){
   const moduleContext = getModuleContextForDoubt();
   let systemInstruction = "You are a friendly, encouraging drawing teacher's assistant embedded in the Atelier art course. Answer the student's question clearly and briefly (3-6 sentences unless the question truly needs more). If they lack tools or materials, suggest cheap or improvised alternatives rather than telling them to buy something. Stay grounded in practical, fundamentals-level drawing advice.";
   if(moduleContext) systemInstruction += '\n\nThe student is currently on this module:\n' + moduleContext;
+
+  if(query){
+    const hits = await searchCurriculum(query, 4);
+    if(hits.length){
+      systemInstruction += '\n\nRelevant material from elsewhere in the course (use it if it helps answer the question; ignore anything not relevant):\n' +
+        hits.map(h => '[' + h.m + '] ' + h.t).join('\n');
+    }
+  }
   return systemInstruction;
 }
 
@@ -2229,7 +2297,7 @@ async function sendDoubtMessage(){
   doubtHistory.push({role:'user', text});
   saveDoubtHistory();
 
-  const systemInstruction = getDoubtSystemInstruction();
+  const systemInstruction = await getDoubtSystemInstruction(text);
   if(engine === 'local'){
     await sendDoubtMessageLocal(systemInstruction);
   } else {
