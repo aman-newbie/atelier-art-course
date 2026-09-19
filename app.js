@@ -2066,9 +2066,14 @@ function buildScrimGradient(bands, dark, baseOpacity){
    is exactly how you get invisible or badly-mismatched elements. */
 function clearCustomThemeOverrides(){
   const root = document.documentElement.style;
-  ['--bg','--surface','--surface-2','--text','--text-muted','--text-faint',
+  ['--bg','--bg-raised','--surface','--surface-2','--text','--text-muted','--text-faint',
    '--border','--border-soft','--custom-scrim-color','--custom-scrim-gradient',
    '--custom-bg-image'].forEach(prop => root.removeProperty(prop));
+  /* --bg-raised was missing here — same variable, same class of bug as the
+     sidebar-illegibility fix, just in the clearing path this time: it stayed
+     stuck at whatever the last custom photo set it to, invisible on the very
+     next preset (same brightness family) and only surfacing as a real
+     collision once you hit a preset needing the opposite text color. */
   lastAppliedCustomBg = undefined; /* so switching back to custom later re-applies cleanly instead of no-op'ing */
   lastCustomBands = null;
 }
