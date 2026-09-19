@@ -175,7 +175,7 @@ svg{display:block;}
   color:var(--blue); margin-bottom:var(--sp-3); display:flex; align-items:center; gap:var(--sp-2);
 }
 .eyebrow::before{content:''; width:24px; height:1px; background:var(--blue);}
-.hero h1{font-size:clamp(38px,5.5vw,58px); line-height:1.05; max-width:15ch; margin-bottom:var(--sp-4);}
+.hero h1{font-size:clamp(calc(38px * var(--font-scale)), calc(5.5vw * var(--font-scale)), calc(58px * var(--font-scale))); line-height:1.05; max-width:15ch; margin-bottom:var(--sp-4);}
 .hero h1 em{color:var(--blue); font-style:italic;}
 .hero-sub{font-size:calc(17px * var(--font-scale)); color:var(--text-muted); max-width:56ch; margin-bottom:var(--sp-6);}
 .hero-row{display:flex; gap:var(--sp-4); align-items:center; flex-wrap:wrap; margin-bottom:var(--sp-7);}
@@ -286,7 +286,7 @@ svg{display:block;}
 .status-banner.is-prereq-warning{background:var(--blue-soft); color:var(--blue); border:1px solid var(--blue); margin-top:calc(-1 * var(--sp-3)); max-width:100%;}
 .status-banner b{color:var(--blue); font-weight:600;}
 .module-head-top{display:flex; justify-content:space-between; align-items:flex-start; gap:var(--sp-4);}
-.module-head h1{font-size:clamp(32px,4.5vw,46px); margin-bottom:var(--sp-2); line-height:1.08; max-width:18ch;}
+.module-head h1{font-size:clamp(calc(32px * var(--font-scale)), calc(4.5vw * var(--font-scale)), calc(46px * var(--font-scale))); margin-bottom:var(--sp-2); line-height:1.08; max-width:18ch;}
 .module-hook{font-size:calc(16px * var(--font-scale)); color:var(--text-muted); max-width:55ch; margin-bottom:var(--sp-5);}
 .fav-btn{background:none; border:1px solid var(--border); width:42px; height:42px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--text-muted); flex-shrink:0;}
 .fav-btn svg{width:18px; height:18px;}
