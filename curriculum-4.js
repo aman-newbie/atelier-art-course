@@ -760,6 +760,64 @@ const CURRICULUM_4 = [
 ],
 "nextStep": "You now have material rendering approaches for both organic (skin) and hard-reflective (metal, glass) surfaces. Module 96 shifts to edge control \u2014 the deliberate use of hard and soft edges across an entire piece to direct focus and describe form, a skill that applies across every material you've rendered so far."
 }
+,
+{
+"id": "m96",
+"plate": 96,
+"title": "Edge Control",
+"difficulty": "Advanced",
+"studyTime": "18 min",
+"practiceTime": "25\u201330 min/day",
+"prereq": ["m95"],
+"hook": "A painting where every single edge is perfectly sharp is, paradoxically, one of the fastest ways to make it feel amateurish \u2014 real depth comes from knowing exactly which edges to let go of.",
+"whyItMatters": [
+  "You've now rendered skin (Module 94) and hard surfaces (Module 95), each with their own edge qualities. Edge control is the skill that governs how those edges behave across an entire piece, deciding not just what a surface looks like up close, but where the viewer's eye actually travels.",
+  "Working painters describe edge control as a foundational skill, not a finishing touch \u2014 it determines how light wraps around form, how space reads as deep or flat, and how confidently the eye moves through a composition, tying directly back to the focal-point work from Module 75."
+],
+"coreIdea": [
+  "There are three broad edge types: hard edges (clear, abrupt transitions that attract attention and define structure), soft edges (gradual transitions that create atmosphere and distance), and lost edges (a transition that starts clearly, disappears, then reappears elsewhere, adding rhythm and inviting the viewer to complete the form mentally).",
+  "As a general rule, hard edges come forward and pull the eye, while soft edges recede and let the eye travel over them into the next shape \u2014 which is why hard edges are typically reserved for a focal area, and soft edges for backgrounds or less important passages.",
+  "An edge can disappear entirely when two adjacent shapes share nearly identical values \u2014 this isn't a mistake to fix, but a deliberate, sophisticated tool for unifying a painting and creating a sense of atmosphere.",
+  "Edge variety should be treated as a deliberate design decision made before or during painting, not an accident of technique: deciding in advance where your single sharpest edge (the focal point), your softest edge (an atmospheric recession), and a lost edge (where values merge) will go shapes the entire piece's mood and movement."
+],
+"mistakes": [
+  "Rendering every edge in a piece with the same hardness, producing either a brittle, cut-out look (all hard) or a mushy, undefined look (all soft) instead of a deliberate range.",
+  "Placing the sharpest, highest-contrast edges somewhere other than the intended focal point, unintentionally pulling the eye to the wrong part of the composition.",
+  "Treating a vanishing edge (where two shapes share a value) as an error to fix, rather than recognizing it as a legitimate, sophisticated technique for unity and atmosphere.",
+  "Deciding on edge treatment only after a piece is nearly finished, instead of planning the sharpest, softest, and lost edges as part of the composition from the start.",
+  "Softening or hardening an edge inconsistently with the rest of a shape's value logic, breaking the sense of form the edge was supposed to support."
+],
+"proTips": [
+  "Before finishing a piece, explicitly identify three edges: your single sharpest (the focal point), your softest (an atmospheric or receding passage), and one lost edge (where two shapes merge in value) \u2014 then check the rest of the painting supports that hierarchy.",
+  "Practice the direct comparison exercise: paint the same simple object twice, once with every contour sharp, once with most edges softened except one \u2014 compare which reads more naturally and where your eye goes first in each.",
+  "When two adjacent shapes are close in value, consider deliberately merging their edge rather than forcing a defining line between them, especially in background or non-focal areas.",
+  "Treat edge decisions as part of your composition planning (Module 75), not an afterthought \u2014 decide where hard, soft, and lost edges will go at the same stage you're deciding your focal point and value structure."
+],
+"practice": {
+  "warmup": "Paint a simple object (a cup, a rock) twice: once with all contours sharp, once with most edges softened except one \u2014 compare which feels more natural and note where your eye goes first in each.",
+  "daily": "Take one of your Module 94 or 95 material studies and deliberately vary its edges: hard at the focal point, soft toward the edges of the piece, with at least one lost edge where values merge.",
+  "weekly": "Create a small grayscale study with two adjacent shapes, then gradually adjust their values until the edge between them nearly disappears, and observe how your sense of depth changes.",
+  "challenge": "Take a finished piece from an earlier module and identify one edge you could intentionally lose (merge into a neighboring shape by matching value) without damaging the read of the form \u2014 then make that change."
+},
+"resources": [
+  {"type": "Article", "title": "How to Handle the Edges in Your Paintings", "creator": "Krista Hasson", "url": "https://kristahasson.com/edges-in-painting/", "why": "A free, clear, visually-demonstrated breakdown of hard versus soft edges and how they direct a viewer's eye through a composition.", "summary": "Explains that hard or high-contrast edges attract the eye and pull it along their length, making them ideal for a focal area, while soft edges let the eye travel over them into the next shape and are better suited to backgrounds, with a concrete example showing how a softer edge at a composition's outer border keeps the viewer's eye from exiting the painting.", "verified": true},
+  {"type": "Article", "title": "Mastering Edge Control in Painting: Skip Whitcomb Guide", "creator": "Gabor Svagrik (Skip Whitcomb), TAAO", "url": "https://tucsonartacademyonline.com/blog/2025/11/5/controlling-your-edges", "why": "A free, in-depth lesson from a working professional painter's teaching, covering hard, soft, and lost edges as a design tool with concrete practice exercises.", "summary": "Skip Whitcomb categorizes edges into hard (clear, attention-grabbing transitions), soft (gradual, atmosphere-creating transitions), and lost-and-found (edges that dissolve and reappear, adding rhythm and inviting the viewer to mentally complete the form), and explains that when two shapes share nearly identical values their edge can vanish entirely as a deliberate tool for unity, recommending painters decide their sharpest, softest, and lost edge in advance as part of composition planning.", "verified": true}
+],
+"quiz": [
+  {"q": "What is the general rule for how hard versus soft edges affect the eye?", "options": ["Both edge types have identical effects on where the eye looks", "Hard edges come forward and pull the eye along them; soft edges recede and let the eye travel over them into the next shape", "Soft edges always attract more attention than hard edges", "Edge hardness only matters in traditional media, not digital"], "correct": 1, "explain": "Hard, high-contrast edges attract and hold the eye, making them suited to focal areas, while soft edges let the eye pass over them into adjacent shapes, making them suited to backgrounds and less important passages."},
+  {"q": "What is a \\\"lost\\\" edge, according to the module?", "options": ["An edge that has been erased by mistake", "A transition that begins clearly, disappears, then reappears elsewhere, adding rhythm and inviting the viewer to complete the form mentally", "Any edge that is completely straight", "An edge that only appears in black-and-white value studies"], "correct": 1, "explain": "A lost edge starts clearly defined, dissolves (often where values merge), and reappears elsewhere, which adds visual rhythm and engages the viewer in mentally completing the form."},
+  {"q": "What happens when two adjacent shapes share nearly identical values, and how should this be treated?", "options": ["It's always a mistake that must be corrected with a defining line", "The edge between them can disappear, which is a legitimate, deliberate technique for unity and atmosphere, not necessarily an error", "This situation is technically impossible in painting", "It only happens in digital painting, never in traditional media"], "correct": 1, "explain": "When two shapes are close in value, their edge can vanish entirely; this is a sophisticated tool for creating unity and atmosphere rather than a flaw to fix."},
+  {"q": "According to the module, when should edge decisions (sharpest, softest, lost) ideally be planned?", "options": ["Only after a piece is completely finished", "As part of the composition planning stage, alongside decisions about the focal point and value structure", "Edge decisions should never be planned in advance", "Only the software's default settings should determine edge quality"], "correct": 1, "explain": "Edge control is treated as a foundational design decision, planned alongside the focal point and value structure, rather than an afterthought applied once a piece is otherwise finished."},
+  {"q": "What is the risk of rendering every edge in a painting with the same hardness?", "options": ["There is no risk; uniform edges are always ideal", "It produces either a brittle, cut-out look (if all hard) or a mushy, undefined look (if all soft), rather than a deliberate range that guides the eye", "Uniform edges automatically create the strongest possible focal point", "This only affects file size, not visual quality"], "correct": 1, "explain": "Using only one edge quality throughout a piece removes the contrast in edge treatment that normally guides the eye and creates depth, resulting in either an overly brittle or overly mushy overall feel."}
+],
+"checklist": [
+  "I can identify hard, soft, and lost edges in a reference painting or my own work.",
+  "I can place my sharpest edge deliberately at my intended focal point.",
+  "I can deliberately merge (lose) an edge between two shapes of similar value for unity.",
+  "I can plan edge treatment as part of my composition, alongside focal point and value structure."
+],
+"nextStep": "You now control edges as a deliberate design tool across an entire piece. Module 97 applies everything so far \u2014 color, value, light, material, edges \u2014 to atmospheric perspective, using these tools specifically to create a convincing sense of depth and distance in an environment."
+}
 ]},
 {id:'advanced-digital', title:'Advanced Digital Art', status:'soon', order:10,
     desc:'Non-destructive workflow, blend modes, adjustment layers, photobashing, 3D-assisted painting, responsible AI-assisted workflow, speed painting, and master studies.',
