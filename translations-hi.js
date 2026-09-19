@@ -660,7 +660,216 @@ const TRANSLATIONS_HI = {
       "Main identify kar sakta/sakti hoon ki face ke kaunse parts angles ke across shift hote hain aur kaunse proportionally stable rehte hain."
     ],
     nextStep: "The Skull \u2014 wo bone structure jise har facial feature jo tum kabhi draw karoge, quietly follow kar raha hota hai."
-  }
+  },
 
+  m16: {
+    hook: "Jo bhi facial feature tum kabhi draw karoge, wo neeche ki bone se mili instructions follow kar raha hota hai.",
+    whyItMatters: [
+      "Is arc ka har baad wala module \u2014 proportions, Loomis, Asaro, individual features \u2014 skull structure ke ek consequence ko describe kar raha hai. Skull ko skip karke seedha \"fun parts\" jaise eyes aur expressions pe pahunchna sabse common shortcut hai jo ek portrait artist ki ceiling cap kar deta hai, kyunki iska matlab hai ki har baad wala lesson samjha nahi, memorize kiya jaata hai."
+    ],
+    coreIdea: [
+      "Major landmarks jo feel se pehchan mein aane chahiye: <b>cranium</b> (rounded braincase), <b>brow ridge</b>, <b>zygomatic arch</b> (cheekbone), <b>eye sockets</b>, <b>nasal cavity</b>, aur <b>jaw / mandible</b>. Har ek directly explain karta hai ek facial feature ki placement jo warna arbitrary lagti \u2014 brow ridge isliye hai ki eyebrows wahin sit karti hain aur eye sockets natural shadow cast karte hain; zygomatic arch isliye hai ki cheekbone highlights aur unke neeche ka hollow exist karta hai; jaw hinge isliye hai ki mouths jis tarah open hote hain, hote hain.",
+      "Skull shape age ke saath meaningfully vary karti hai: ek child ki skull mein proportionally bada cranium aur chota jaw-face hota hai adult ke comparison mein, isiliye ek adult face ko simply shrink karna kabhi bhi convincing child jaisa nahi lagta. Ye sex ke hisaab se bhi thoda vary karti hai, typically male skulls mein thoda zyada pronounced brow ridge aur jaw hota hai, halaanki individual variation itna zyada hai ki ye ek tendency hai, rule nahi.",
+      "Skull ko flat anatomy-chart image ki tarah memorize nahi kiya jaata. Ise ek simplified 3D form ki tarah samjha jaata hai, bilkul waise jaise Module 7 mein sphere ya cube treat kiya gaya tha \u2014 rotate karke aur kisi bhi angle se check karne ke liye \u2014 aur yehi exact bridge hai kuch modules baad wale Loomis method tak."
+    ],
+    mistakes: [
+      "Skull study ko poori tarah skip karke seedha surface features jaise eyes aur lips pe jump karna.",
+      "Skull ko ek flat reference image ki tarah treat karna jo copy ki jaaye, na ki ek 3D form jo multiple angles se rotate karke samjhi jaaye.",
+      "Ek child ke face ko simply ek scaled-down adult face ki tarah draw karna, real skeletal proportion differences ko ignore karte hue."
+    ],
+    proTips: [
+      "Skull ko same teen-chaar angles se baar baar draw karo \u2014 front, profile, three-quarter, tilted \u2014 jab tak uske landmarks automatic na feel hone lagein, uske baad aage badho.",
+      "Jab bhi is arc mein baad mein koi feature ki placement arbitrary lage, use wapas kisi skull landmark tak trace karo. Ye almost kabhi actually arbitrary nahi hoti."
+    ],
+    practice: {
+      warmup: "Ek simplified skull shape draw karo \u2014 sirf major masses: cranium, jaw, cheekbone \u2014 front se, do minute se kam mein.",
+      daily: "Is hafte har din ek naye angle se skull ke major landmarks \u2014 cranium, brow ridge, zygomatic arch, jaw \u2014 draw karo.",
+      weekly: "Ek simplified adult skull ko ek simplified child skull ke saath side by side compare karo, kam se kam teen proportional differences label karte hue.",
+      challenge: "Same simplified skull ko char angles se \u2014 front, profile, three-quarter, tilted up \u2014 ek hi sitting mein draw karo, landmark placement char angles mein consistent rakhte hue."
+    },
+    quiz: [
+      {q:"Brow ridge eyebrows ko convincingly draw karne ke liye kyun matter karta hai?", options:["Nahi karta, eyebrows bone structure se unrelated hain","Ye wo bone landmark hai jo explain karta hai eyebrows kahan sit karti hain aur eye sockets natural shadow kyun cast karte hain","Ye sirf older subjects ke liye matter karta hai","Ye hair color affect karta hai"], correct:1, explain:"Eyebrow placement aur eye-socket shadow, dono neeche wale brow ridge tak trace hote hain."},
+      {q:"Simply ek adult face ko shrink karna ek convincing child face kyun nahi banata?", options:["Children ke faces mein adults se koi proportional differences nahi hote","Ek child ki skull mein proportionally bada cranium aur chota jaw hota hai adult ke comparison mein","Ye sirf ek stylistic preference hai","Scaling hamesha theek se work karti hai"], correct:1, explain:"Actual skeletal proportions alag hote hain, sirf overall size nahi \u2014 sirf scaling se ye miss ho jaata hai."},
+      {q:"Ye module skull ko structurally kaise treat karne ki recommend karta hai?", options:["Ek flat reference image ki tarah jo ek baar copy ki jaaye","Ek simplified 3D form ki tarah jise rotate karke multiple angles se samjha jaaye","Stylized art ke liye unnecessary","Kuch aisa jo chart ki tarah memorize kiya jaaye, draw nahi"], correct:1, explain:"Module 7 ke basic forms wala hi approach \u2014 ise rotate karo, angles se check karo, real spatial understanding build karo."}
+    ],
+    checklist: [
+      "Main ek simplified skull pe cranium, brow ridge, zygomatic arch, eye sockets, aur jaw ko naam le sakta/sakti hoon aur roughly place kar sakta/sakti hoon.",
+      "Main ek simplified skull ko kam se kam teen alag angles se draw kar sakta/sakti hoon.",
+      "Main ek child aur ek adult ki skull ke beech kam se kam do proportional differences describe kar sakta/sakti hoon.",
+      "Main kam se kam ek facial feature ki placement ko directly kisi specific skull landmark se connect kar sakta/sakti hoon."
+    ],
+    nextStep: "Proportions \u2014 features ke beech ke relationships jo ek constructed head ko ek specific, believable individual ki tarah read karwate hain."
+  },
+
+  m17: {
+    hook: "\"Eyes ek eye-width apart hoti hain\" ke peeche wala classical measuring system \u2014 aur ye kyun ek starting average hai, na ki koi rule jo sab actually follow karte hain.",
+    whyItMatters: [
+      "Proportion systems tumhe ek reliable starting average dete hain construct karne ke liye, especially jab imagination se kaam kar rahe ho bina kisi reference ke. Iske bina, beginners features ko guesswork se place karte hain, aur chhoti chhoti placement errors combine hoke ek aisa face bana deti hain jo \"wrong\" lagta hai even jab koi single feature badly drawn na ho.",
+      "Ek proportion system seekhne ka point ise hamesha rigidly apply karna nahi hai \u2014 real individual faces average se constantly deviate karte hain, aur wahi deviation exactly wo cheez hai jo ek specific face ko generic template ke bajaye khud jaisa dikhati hai. System beginners ke liye ek scaffold hai aur sabke liye ek diagnostic check, koi cage nahi."
+    ],
+    coreIdea: [
+      "Classical face ko often <b>vertical thirds</b> mein divide kiya jaata hai: hairline se brow tak, brow se nose ke base tak, aur nose ke base se chin tak, average adult face mein roughly equal. Ye individual features place karne se pehle bhi ek fast structural check deta hai.",
+      "Horizontally, classical guide eyes ko poore head ke roughly vertical midpoint pe place karta hai (face nahi \u2014 poora head, cranium ko bhi shaamil karte hue), do eyes ke beech roughly ek eye-width space ke saath, aur head apne widest point pe roughly paanch eye-widths chauda read hota hai.",
+      "Ye population averages hain jo ek starting construction ke liye useful hain, fixed laws nahi \u2014 real faces routinely deviate karte hain, aur average se jaanbujh kar kiya gaya deviation hi largely wo cheez hai jo stylization aur individual likeness actually hoti hai. Ek proportion system tumhe batata hai kahan se measure karna start karo, ye nahi ki har face ko kahan end hona chahiye.",
+      "Module 5 wala comparative measurement yahan directly apply hota hai: feature placement ko outright guess karne ke bajaye, ek relationship ko dusre ke against measure karo (jaise brow-to-nose distance ko nose-to-chin distance ke against) \u2014 bilkul waise jaise tum ek still life sight-measure karte."
+    ],
+    mistakes: [
+      "Proportion averages ko aise apply karna jaise wo strict rules hon jinhe har individual face exactly match kare.",
+      "Feature placement guess karna comparative measurement se use check karne ke bajaye.",
+      "Proportion system ek baar seekh lena aur kabhi wapas ek drawing ko usse check na karna jaise kaam aage badhta hai.",
+      "Eyes ko visible face ke midpoint pe place karna, poore head ke midpoint pe nahi jisme cranium bhi shaamil ho \u2014 ek bahut common placement error."
+    ],
+    proTips: [
+      "Thirds aur eye-width guides ko ek drawing ke beech mein ek fast diagnostic check ki tarah use karo, sirf ek starting grid ki tarah nahi.",
+      "Jab koi specific face average se \"off\" lage, to wo deviation usually us cheez ka part hota hai jo use us particular person jaisa dikhata hai \u2014 use default se wapas average ki taraf correct mat karo.",
+      "Proportion system ko invented, imaginary faces pe utna hi practice karo jitna real references pe, kyunki imagination hi wo jagah hai jahan beginner ki guessing habit sabse zyada dikhti hai."
+    ],
+    practice: {
+      warmup: "Ek simple oval draw karo aur classical vertical thirds aur head ke vertical midpoint pe eye-line mark karo, abhi koi feature add kiye bina.",
+      daily: "Ek face ko poore proportion guide se construct karo \u2014 thirds, eye-line, eye-width spacing \u2014 koi feature detail add karne se pehle.",
+      weekly: "Ek real reference photo lo aur measure karo ki wo classical average se har guideline pe actually kitna deviate karta hai. Note karo kaunse deviations us person ki likeness define karte hue feel hote hain.",
+      challenge: "Same proportion guide ko starting point ki tarah use karke teen alag imagined faces construct karo, phir jaanbujh kar har ek ki proportions ko alag direction mein push karo taaki wo distinct individuals ki tarah read hon."
+    },
+    quiz: [
+      {q:"Classical proportion system mein, eye-line typically kahan sit karti hai?", options:["Chin ke bottom pe","Poore head ke vertical midpoint pe, cranium ko shaamil karte hue","Hairline ke top pe","Eye placement ke liye koi standard guideline nahi hai"], correct:1, explain:"Ek bahut common beginner error eye-line ko visible face ke midpoint pe place karna hai, poore head ke bajaye."},
+      {q:"Ye module proportion averages ko kaise treat karne ki recommend karta hai?", options:["Strict rules ki tarah jinhe har face exactly match kare","Ek starting scaffold aur diagnostic check ki tarah, cage nahi","Real drawing ke liye irrelevant","Sirf realistic styles ke liye useful, stylized ke liye kabhi nahi"], correct:1, explain:"Ye ek reliable starting point aur check-in tool hain \u2014 inse deviation often wahi hota hai jo ek face ko ek specific person jaisa dikhata hai."},
+      {q:"Module 5 wali kaunsi technique facial proportions check karne mein directly apply hoti hai?", options:["Blind contour drawing","Comparative measurement \u2014 ek relationship ko dusre ke against measure karna","Sirf negative space drawing","Gesture drawing"], correct:1, explain:"Brow-to-nose ko nose-to-chin ke against measure karna, for example, Module 5 wala hi sighting principle hai jo ek face pe apply kiya gaya hai."}
+    ],
+    checklist: [
+      "Main ek simplified head ko classical vertical thirds mein divide kar sakta/sakti hoon.",
+      "Main eye-line ko correctly poore head ke vertical midpoint pe place kar sakta/sakti hoon, sirf visible face pe nahi.",
+      "Main comparative measurement use karke ek facial relationship ko dusre ke against check kar sakta/sakti hoon.",
+      "Main explain kar sakta/sakti hoon ki proportion average se deviation often individual likeness kyun create karta hai."
+    ],
+    nextStep: "The Loomis Method \u2014 sabse widely taught head-construction system, jo pichhle do modules wali skull aur proportions ko ek repeatable process mein combine karta hai."
+  },
+
+  m18: {
+    hook: "Illustration mein sabse widely taught head-construction system \u2014 ek sphere, ek side-plane, aur guidelines ka ek set jo kisi bhi angle se kaam karta hai.",
+    whyItMatters: [
+      "Loomis method, jo Andrew Loomis ne apni 1956 ki book Drawing the Head and Hands mein publish kiya tha, illustration instruction mein dominant head-construction system ek specific reason se bana raha hai: ye purely anatomical na hoke geometric hai, jiska matlab hai ki ek beginner sphere aur side-plane place karna zygomatic arch ka naam yaad karne se bahut pehle start kar sakta hai. Ye kisi bhi angle pe generalize hota hai jaise hi underlying logic click ho jaaye, har angle ke liye ek alag memorized template ki zaroorat nahi.",
+      "Ye wo module hai jahan skull (Module 16) aur proportions (Module 17) alag lessons hona band karke ek repeatable construction process mein combine ho jaate hain \u2014 Module 10 wala hi combine-and-cut logic, ab specifically head pe apply."
+    ],
+    coreIdea: [
+      "Core Loomis construction: cranium ke liye ek <b>sphere</b> se start karo, phir face ke liye ek flat <b>side-plane</b> carve ya attach karo, jo position aur angle head kis taraf turn hua hai uske hisaab se ho. Horizontal guidelines \u2014 <b>brow line</b>, <b>eye line</b>, <b>nose line</b>, <b>mouth line</b> \u2014 sphere aur side-plane ke around wrap karti hain, form ke saath curve karte hue, flat rehne ke bajaye \u2014 yehi wo cheez hai jo poore system ko ek angle pe convincingly kaam karwati hai, sirf straight-on se nahi.",
+      "<b>Ear-line</b> aur <b>jaw construction</b> side-plane se neeche extend hote hain, cranium sphere ko lower face aur chin se connect karte hue, Module 16 wali skull structure aur Module 17 wale proportion guides ke beech ka loop close karte hue.",
+      "Kyunki ye ek memorized template na hoke geometric scaffolding hai, Loomis sphere ko kisi bhi angle pe rotate kiya ja sakta hai, aur guidelines uske saath rotate hoti hain \u2014 yehi exact cheez hai jo ise imaginative work ke liye useful banati hai, sirf ek reference photo ko directly copy karne ke liye nahi.",
+      "Loomis ka apna construction khud drawing nahi hai \u2014 ye scaffolding hai jispe final drawing rest karti hai aur jisse refine karke door hoti hai, bilkul wahi relationship jo construction lines ka ek finished drawing se Module 10 se raha hai."
+    ],
+    mistakes: [
+      "Finished Loomis sphere-and-guidelines construction ko final drawing ki tarah treat karna, scaffolding ki jagah jise refine karke eventually uske upar draw karna hai.",
+      "Guidelines ko perfectly flat aur straight rakhna even jab head turned ya tilted ho, unhe sphere ke rotation ke around curve karne dene ke bajaye.",
+      "Har angle ke liye ek alag template memorize karne ki koshish karna, sphere-and-side-plane logic samajhne ke bajaye jo kisi bhi angle pe generalize ho.",
+      "Skull aur proportion foundation, pichle do modules wale, ke bina seedha is module pe jump karna \u2014 us context ke bina construction bahut kam sense banata hai."
+    ],
+    proTips: [
+      "Same average head shape pe construction ko baar baar practice karo, individual head types ke liye adjust karne se pehle \u2014 pehle standard system ko automatic banao.",
+      "Jab head tilted ya turned ho, kisi bhi cheez se pehle guideline curves adjust karo. Curved guidelines ko pehle sahi karna baaki sab kuch aasan bana deta hai.",
+      "Loomis construction ka ek physical ya digital 3D reference, apne intended angle se match karne ke liye rotate kiya hua, ek legitimate aid hai jab tak ye naya hai \u2014 ye ek scaffolding tool hai, koi shortcut nahi jo learning skip kare."
+    ],
+    practice: {
+      warmup: "Basic Loomis sphere aur side-plane front se draw karo, sirf chaar horizontal guidelines add karte hue \u2014 brow, eye, nose, mouth.",
+      daily: "Har din ek naye angle se ek full Loomis head construct karo \u2014 front, three-quarter, profile, tilted up, tilted down \u2014 har rotation ke saath guideline curves consistent rakhte hue.",
+      weekly: "Same imagined head ko teen alag angles se ek hi sitting mein construct karo, check karte hue ki proportions teenon mein consistent rahein.",
+      challenge: "Standard Loomis construction ko adjust karke ek jaanbujh kar alag head type banao \u2014 notably wider, narrower, longer-jawed \u2014 underlying sphere-and-guideline logic ko intact rakhte hue."
+    },
+    quiz: [
+      {q:"Loomis head construction ke do core building blocks kya hain?", options:["Do overlapping cubes","Cranium ke liye ek sphere aur face ke liye ek flat side-plane","Ek cylinder aur ek cone","Ek single flat oval"], correct:1, explain:"Sphere plus side-plane combination hi geometric core hai jisse baaki construction build hoti hai."},
+      {q:"Horizontal guidelines (brow, eye, nose, mouth) flat rehne ke bajaye curve kyun karti hain?", options:["Ye sirf ek stylistic choice hai","Ye sphere ke actual rotation ke around wrap karti hain, jo system ko ek angle pe kaam karwata hai","Curved lines erase karna aasan hota hai","Ye sirf profile view mein curve karti hain"], correct:1, explain:"Flat guidelines sirf face-on kaam karti hain; form ke saath curve karna hi construction ko kisi bhi angle pe hold karwata hai."},
+      {q:"Is module ke hisaab se, Loomis construction khud kya hai?", options:["Finished drawing","Scaffolding jispe final drawing rest karti hai aur jisse refine karke door hoti hai","Sirf cartoon art ke liye ek style choice","Skull seekhne ka ek replacement"], correct:1, explain:"Ye construction hai, final line art nahi \u2014 Module 10 se hi wahi relationship jo koi bhi construction lines ka hota hai."}
+    ],
+    checklist: [
+      "Main front se ek basic Loomis head \u2014 sphere, side-plane, chaar guidelines \u2014 construct kar sakta/sakti hoon.",
+      "Main same head ko three-quarter aur profile angle se construct kar sakta/sakti hoon, guidelines ko correctly curve karte hue.",
+      "Main standard construction ko adjust karke ek head type bana sakta/sakti hoon jo average se deviate kare.",
+      "Main Loomis construction ko refine karne wali scaffolding ki tarah treat karta/karti hoon, finished drawing ki tarah nahi."
+    ],
+    nextStep: "The Asaro Head \u2014 ek doosra, plane-based construction system jo specifically iss pe focus karta hai ki head pe light aur shadow kaise behave karte hain."
+  },
+
+  m19: {
+    hook: "Head ka ek faceted, planar version jo specifically isliye banaya gaya hai taaki light aur shadow predictably behave karein \u2014 aur curves ko strip away kiya jaaye jab tak sirf structure na bache.",
+    whyItMatters: [
+      "Loomis method, pichle module wala, primarily ek proportion aur placement system hai. Asaro head, jise fine artist John Asaro ne 1976 mein banaya tha, ek alag problem solve karta hai: ye head ki continuous curved surfaces ko flat, faceted planes mein simplify karta hai specifically taaki light aur shadow kahan girenge ye predictable aur reason karna aasan ho jaaye, ek intuitive guess ke bajaye.",
+      "Ye is arc ke head-construction work ko directly Module 11 wale light logic se wapas connect karta hai. Ek portrait ko convincingly shade karne ke liye jaanna padta hai ki skin ka koi diya hua patch actually 3D space mein kis direction face kar raha hai \u2014 Asaro head curves hata ke sirf flat, clearly-angled planes chhod ke isse explicit bana deta hai."
+    ],
+    coreIdea: [
+      "Asaro head ek real head ki continuous, curved surface ko flat planes ke ek set mein reduce karta hai \u2014 forehead, temple, cheek, jaw, waghera \u2014 har ek ek distinct direction face karta hua. Kyunki har plane flat hai aur ek clear direction face karta hai, wo ya to fully lit hai, ya fully shadow mein hai, ya dono ke beech ek predictable gradient mein hai, jo Module 11 wale light logic ko correctly apply karna kaafi aasan bana deta hai.",
+      "Ek classic training exercise, aur genuinely useful ek karne ke liye, Asaro head ko sirf do values use karke shade karna hai \u2014 ek light tone, ek dark tone, koi gradient nahi \u2014 jo har single plane pe ek clear light-versus-shadow decision force karta hai, ek middle gray se hedge karne ke bajaye. Ek baar ye two-value version convincingly ek head ki tarah read ho jaaye, uske baad zyada confidence ke saath zyada values wapas introduce ki ja sakti hain.",
+      "Form shadow (ek plane jo light se door turned ho) aur cast shadow (shadow jo head ke ek part se dusre pe throw hoti hai \u2014 nose ka cheek pe cast hona, brow ka eye socket mein cast hona) dono clearly ek planar Asaro head pe appear karte hain, jo isse Module 11 wale shadow vocabulary ko specifically ek face pe apply karne ke liye ek useful bridge banata hai.",
+      "Official Asaro Head John Asaro ke studio se becha jaane wala ek physical sculpted reference hai; concept se benefit lene ke liye ye required nahi hai, kyunki wahi planar thinking kisi bhi head reference, photo, ya pichle module wale Loomis construction ko khud flat planes mein simplify karke practice ki ja sakti hai."
+    ],
+    mistakes: [
+      "Ek portrait pe smooth, blended shading pe seedha jump karna, planar, two-value version ko pehle practice kiye bina.",
+      "Asaro head ko ek style choice ki tarah treat karna, ek training exercise ki jagah jo internalize karke aage badhna hai.",
+      "Form shadow (ek plane jo simply light se door face kare) ko cast shadow (ek shadow jo ek feature se dusre pe thrown ho) ke saath confuse karna jab ek face shade kar rahe ho.",
+      "Underlying light-versus-shadow structure ko sirf do values mein confidently samjhe bina seedha kai subtle value gradations pe jump karna."
+    ],
+    proTips: [
+      "Two-value shading exercise ko same simplified head pe multiple light directions se karo \u2014 front-lit, side-lit, top-lit \u2014 ye feel karne ke liye ki same planes ek alag light source ke saath kitna dramatically respond karte hain.",
+      "Ek real photo reference ko Asaro-style flat planes mein simplify karna practice karo shade karne se pehle, bina kisi actual Asaro model ke reference ke bhi.",
+      "Ek baar two-value exercise confident feel ho, exactly ek middle value add karo poori continuous gradients pe jump karne se pehle \u2014 teen values, pandrah nahi."
+    ],
+    practice: {
+      warmup: "Ek simple head shape ko paanch ya chhe flat planes mein simplify karo \u2014 forehead, cheek, jaw, temple, chin \u2014 abhi koi shading nahi, sirf plane divisions.",
+      daily: "Ek simplified planar head ko exactly do values use karke ek consistent light source ke neeche shade karo, har din light direction alternate karte hue.",
+      weekly: "Module 18 wale Loomis construction ko lo aur ise Asaro-style flat planes aur do values use karke shade karo, dono systems ko ek drawing mein connect karte hue.",
+      challenge: "Same planar head ko teen alag light directions ke neeche shade karo \u2014 front, side, top \u2014 har baar sirf do values use karke, aur compare karo ki same structure kitna differently read hota hai."
+    },
+    quiz: [
+      {q:"Asaro head specifically kaunsa problem solve karne ke liye designed hai?", options:["Noses ko draw karna aasan banana","Ye predictable banana ki light aur shadow kahan girenge, curved surfaces ko clear planes mein flatten karke","Hair rendering sikhana","Skull ko poori tarah replace karna"], correct:1, explain:"Flat, clearly-angled planes light-versus-shadow decision ko explicit bana dete hain, ek intuitive guess ke bajaye."},
+      {q:"Ek Asaro head pe two-value shading exercise ka point kya hai?", options:["Ye zyada values use karne se faster hai","Ye har plane pe ek clear light-or-shadow decision force karta hai, gray se hedge karne ke bajaye","Ye copyright ke liye required hai","Ye sirf female heads pe kaam karta hai"], correct:1, explain:"Middle ground hatane se har plane pe ek real decision force hota hai, subtlety add karne se pehle confidence build karte hue."},
+      {q:"Ek face pe form shadow aur cast shadow mein kya difference hai?", options:["Koi difference nahi hai","Form shadow ek plane hai jo light se door face karta hai; cast shadow ek feature se dusre pe thrown hota hai, jaise nose ka cheek pe","Cast shadow sirf raat ko hota hai","Form shadow sirf forehead pe apply hota hai"], correct:1, explain:"Module 11 wala hi core distinction, ab specifically facial planes jaise nose aur cheek pe apply."}
+    ],
+    checklist: [
+      "Main ek head shape ko paanch ya chhe clear flat planes mein simplify kar sakta/sakti hoon.",
+      "Main ek simplified planar head ko ek light source ke neeche exactly do values use karke shade kar sakta/sakti hoon.",
+      "Main ek simplified face pe kam se kam ek form shadow aur ek cast shadow identify kar sakta/sakti hoon.",
+      "Main same planar head ko kam se kam do alag light directions ke neeche convincingly shade kar sakta/sakti hoon."
+    ],
+    nextStep: "Head Rotation \u2014 is module aur pichle module ke dono construction systems ko ek space mein turn karti hui head pe apply karna, sirf still baithi hui pe nahi."
+  },
+
+  m20: {
+    hook: "Ek head jo sirf ek angle se kaam karti hai, wo constructed nahi hai, memorized hai \u2014 ye module wahi test karta hai.",
+    whyItMatters: [
+      "Is arc mein ab tak sab kuch ek specific capability ki taraf build ho raha tha: ek head ko space mein rotate karna jabki construction consistent rahe, har naye angle pe face ko scratch se dubara seekhne ke bajaye. Ye hi actual payoff hai Module 18 mein Loomis jaisa ek geometric system chunne ka, pure memorization ke bajaye \u2014 geometry predictably rotate karti hai; memorized templates nahi karte."
+    ],
+    coreIdea: [
+      "Rotation teen independent axes mein break down hoti hai, aur inhe combine karne se pehle har ek ko isolation mein practice karna worth hai: <b>tilt</b> (chin up ya down, nodding), <b>turn</b> (left ya right, jaise head shake karna), aur <b>roll</b> (head ko sideways ek shoulder ki taraf tilt karna, jaise ek curious head-tilt). Real poses usually in mein se do ya teen ko ek saath combine karte hain, par pehle inhe isolate karna har ek ka effect actually dekhna aur internalize karna aasan banata hai.",
+      "Jaise Loomis sphere rotate karta hai, uski guidelines \u2014 brow, eye, nose, mouth \u2014 saath mein curve aur shift karti hain, sphere ki actual surface ke along evenly spaced rehte hue, flat page pe evenly spaced rehne ke bajaye. Ye rotation attempt karte waqt beginners ka sabse common breakdown point hai: guidelines aise draw ki jaati hain jaise page flat ho, na ki jaise wo ek rotating 3D sphere ke around wrapped hon.",
+      "Ear-line ek especially reliable rotation check hai, kyunki ears brow aur nose lines ke relative ek consistent height pe sit karte hain rotation ke bawajood \u2014 agar ears baaki guidelines ke relative obviously wrong lagne lagein, to usually actual error rotation mein hi hoti hai, ear mein nahi.",
+      "Extreme angles \u2014 upar se lagbhag seedha neeche dekhna, ya neeche se seedha upar dekhna \u2014 Module 7 wale perspective concepts wale foreshortening ko specifically head pe apni limit tak push karte hain, un features ko compress karte hue jo warna evenly spaced hote. Inhe avoid karne ke bajaye jaanbujh kar practice karna worth hai, kyunki ye underlying construction ki kisi bhi weakness ko turant expose kar dete hain."
+    ],
+    mistakes: [
+      "Guideline spacing ko flat page pe even rakhna, sphere ki actual curved surface ke along even rakhne ke bajaye jaise wo rotate karti hai.",
+      "Sirf gentle three-quarter turns practice karna aur extreme angles avoid karna, jo construction weaknesses ko fix karne ke bajaye chhupa deta hai.",
+      "Tilt, turn, aur roll ko shuruaat se hi ek saath combine karna, pehle har axis ko individually isolate karne ke bajaye.",
+      "Rotation ke dauraan ear-line ka track kho dena, jo usually sabse fast tarika hai ye catch karne ka ki kahin aur rotation galat ho gaya hai."
+    ],
+    proTips: [
+      "Har rotation axis \u2014 tilt, turn, roll \u2014 ko completely isolation mein practice karo, kabhi bhi do ya teen ko combine karne se pehle.",
+      "Rotation practice ke dauraan ear-line ko ek running diagnostic ki tarah use karo \u2014 agar ye galat lage, to actual error almost hamesha isse upstream hoti hai.",
+      "Extreme up aur down angles ko avoid karne ke bajaye jaanbujh kar jaldi practice karo. Ye shuru mein uncomfortable specifically isliye hote hain kyunki ye real construction gaps expose karte hain."
+    ],
+    practice: {
+      warmup: "Same Loomis head teen baar draw karo, sirf tilt axis rotate karte hue \u2014 neutral, chin up, chin down \u2014 baaki sab kuch identical rakhte hue.",
+      daily: "Har din tilt, turn, aur roll ke ek randomly chosen combination pe ek head construct karo, guideline curvature aur ear-line placement carefully check karte hue.",
+      weekly: "Same head ko paanch alag rotations pe ek hi sitting mein draw karo, ek row mein arrange karte hue, check karte hue ki proportions genuinely paanchon mein consistent rahein.",
+      challenge: "Ek extreme angle pe ek head construct karo \u2014 lagbhag seedha neeche ya seedha upar dekhte hue \u2014 aur exactly identify karo ki construction ka kaunsa part consistent rakhna sabse hard tha."
+    },
+    quiz: [
+      {q:"Is module mein cover kiye gaye head rotation ke teen independent axes kya hain?", options:["Zoom, pan, rotate","Tilt, turn, aur roll","Light, shadow, aur form","Front, back, aur side"], correct:1, explain:"Tilt (nodding), turn (side to side shake), aur roll (sideways head-tilt) teen axes hain jinhe isolate karna worth hai."},
+      {q:"Ek Loomis construction ko rotate karte waqt sabse common beginner breakdown point kya hai?", options:["Bahut slowly draw karna","Guideline spacing ko flat page pe even rakhna, sphere ki actual curved surface ke along rakhne ke bajaye","Galat pencil grade use karna","Ek unrealistic hairstyle choose karna"], correct:1, explain:"Guidelines ko waise hi curve aur compress karna chahiye jaise ek actual rotating sphere pe karte, page pe evenly spaced rehne ke bajaye."},
+      {q:"Ear-line ko ek reliable rotation check kyun describe kiya gaya hai?", options:["Ears rotation ke bawajood kabhi move nahi karte","Ears brow aur nose lines ke relative ek consistent height pe sit karte hain, isliye agar galat lagein, to usually actual error rotation mein hoti hai","Ears sabse aasan feature hain draw karne ke liye","Ear placement likeness ke liye matter nahi karta"], correct:1, explain:"Agar ear-line off lage, to ye usually ek signal hai ki rotation logic kahin break down hui hai, ear specifically galat nahi hai."}
+    ],
+    checklist: [
+      "Main ek pure tilt, ek pure turn, aur ek pure roll pe, isolation mein, ek head construct kar sakta/sakti hoon.",
+      "Main do ya zyada rotation axes ko ek saath combine karke ek head construct kar sakta/sakti hoon.",
+      "Main guideline curvature ko sphere ke actual rotation ke consistent rakhta/rakhti hoon, flat page ke bajaye.",
+      "Main ear-line ko ek diagnostic check ki tarah use kar sakta/sakti hoon jab ek rotated construction galat lage."
+    ],
+    nextStep: "Perspective of the Head \u2014 full one-, two-, aur three-point perspective logic ko extreme head angles aur foreshortening pe apply karna."
+  }
 
 };
