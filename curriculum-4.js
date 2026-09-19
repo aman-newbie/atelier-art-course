@@ -818,6 +818,64 @@ const CURRICULUM_4 = [
 ],
 "nextStep": "You now control edges as a deliberate design tool across an entire piece. Module 97 applies everything so far \u2014 color, value, light, material, edges \u2014 to atmospheric perspective, using these tools specifically to create a convincing sense of depth and distance in an environment."
 }
+,
+{
+"id": "m97",
+"plate": 97,
+"title": "Atmospheric Perspective & Depth",
+"difficulty": "Advanced",
+"studyTime": "18 min",
+"practiceTime": "25\u201330 min/day",
+"prereq": ["m96"],
+"hook": "Distant mountains aren't actually blue \u2014 there's an entire ocean of air between you and them, and that air itself has a color, which is the whole secret behind why far-away things look hazy, pale, and cool.",
+"whyItMatters": [
+  "Everything from Modules 91\u201396 \u2014 color, value, light, material, edges \u2014 has mostly been applied to a single object or figure. Atmospheric perspective is where those same tools get used across an entire scene, to convince a viewer that some things are close and others are genuinely far away.",
+  "This directly extends the edge control from Module 96: atmospheric perspective is really edge control, value control, and color control all applied specifically along the axis of depth, using the same underlying skills for a new purpose."
+],
+"coreIdea": [
+  "Atmospheric perspective happens because the air between a viewer and a distant object scatters light through countless tiny particles (water vapor, dust, haze), which is the same effect that makes the sky blue. The more air between you and an object, the more that scattering affects how the object looks.",
+  "Three effects reliably increase with distance: reduced detail (individual leaves become a single tree-mass, then a single forest-mass), reduced value contrast (darks get lighter and lights get slightly darker, compressing the range), and a color shift toward cooler, less saturated hues, typically toward blue.",
+  "This is not just a landscape technique \u2014 it can be used within a single object too, such as making the far side of a large form (a big rock, a long wall) slightly cooler and less detailed than the near side to reinforce its size and depth.",
+  "A distant light source changes the rule: if the primary light is positioned near the horizon (a low sun), distant objects will be paler and warmer rather than cooler, since there's less atmosphere between the light source and the object to introduce blue \u2014 the underlying principle (less contrast, less detail with distance) stays the same even when the specific color shift changes."
+],
+"mistakes": [
+  "Keeping full sharp detail on background elements, which fights against the sense of depth the rest of the piece is trying to create.",
+  "Keeping value contrast and saturation just as strong in the background as the foreground, flattening the scene instead of letting distant elements recede.",
+  "Assuming distant objects must always shift toward blue regardless of lighting conditions, when a low warm light source (like sunset) can instead push distant objects toward pale warm tones.",
+  "Applying atmospheric perspective only at the very back of a scene instead of gradually, missing the middle-ground gradation that makes the effect read as continuous rather than a single hard jump.",
+  "Forgetting that atmospheric perspective can also describe depth within a single large object, not just across a whole landscape."
+],
+"proTips": [
+  "Push the value range you allow yourself as elements recede: keep your darkest darks and lightest lights reserved for the foreground, and compress the range noticeably as you move toward the background.",
+  "As a starting technique, mix a small amount of your sky color directly into far-background elements (mountains, distant buildings) rather than trying to invent the right cooled, desaturated color from scratch.",
+  "Combine physical texture with implied distance where your medium allows: heavier, more textured brushwork in the foreground and smoother, flatter brushwork in the background reinforces the sense of near versus far.",
+  "Check your scene's dominant light direction before deciding your distance color shift \u2014 default to cooler and paler for typical daylight, but expect warmer and paler for a low, warm light source near the horizon."
+],
+"practice": {
+  "warmup": "Paint three simple overlapping mountain shapes at different distances, using only reduced detail, reduced value contrast, and cooler, less saturated color to separate them.",
+  "daily": "Take one of your earlier environment pieces and add a foreground, middle-ground, and background layer of atmospheric perspective, checking that detail, contrast, and saturation all decrease together with distance.",
+  "weekly": "Paint the same simple scene twice: once under typical daylight (cooler, paler distance), once under a low warm light source like sunset (warmer, paler distance), and compare the difference.",
+  "challenge": "Apply atmospheric perspective within a single large object (a long wall, a big rock formation) rather than across a landscape, making its far side cooler and less detailed than its near side."
+},
+"resources": [
+  {"type": "Video", "title": "Quick Painting Tips | Atmospheric Perspective", "creator": "Roxane Lapa", "url": "https://www.youtube.com/watch?v=Wj7y3dtUTzQ", "why": "A free, fast, digital-art-focused explanation of atmospheric perspective as a practical painting technique.", "summary": "A quick, practical digital painting lesson demonstrating how to use (and deliberately push, or 'abuse') atmospheric perspective as a fast technique for separating foreground, middle-ground, and background elements in a painting.", "verified": true},
+  {"type": "Article", "title": "Aerial Perspective \u2014 How To Create Depth In Your Paintings", "creator": "Felix Auer, TwoInchBrush.com", "url": "https://blog.twoinchbrush.com/article/aerial-perspective-how-to-create-depth-in-your-paintings/", "why": "A free, clearly organized breakdown of the three core principles of atmospheric perspective, illustrated with real paintings by Monet.", "summary": "Explains that atmospheric perspective comes from light scattering through particles in the air, then organizes the effect into three principles: reduced detail and texture with distance, reduced value contrast (distant objects become lighter and lower-contrast), and a color shift toward cooler, less saturated hues, illustrated with Monet's 'The Thames at Westminster' and a tip about blending a touch of sky color into distant elements.", "verified": true}
+],
+"quiz": [
+  {"q": "What physically causes atmospheric (aerial) perspective?", "options": ["Objects genuinely change color as they get farther away", "Light scattering through countless tiny particles (water vapor, dust, haze) in the air between the viewer and the object \u2014 the same effect that makes the sky blue", "It is a purely artistic convention with no basis in real optics", "Distance affects only the size of objects, not their color or detail"], "correct": 1, "explain": "Atmospheric perspective results from light scattering through particles in the air; the more atmosphere between a viewer and an object, the more this scattering affects the object's apparent color, contrast, and detail."},
+  {"q": "Which three effects reliably increase with distance in atmospheric perspective?", "options": ["Increased detail, increased contrast, increased saturation", "Reduced detail, reduced value contrast, and a shift toward cooler, less saturated color", "Increased sharpness, increased darkness, no color change", "None of these effects are related to distance"], "correct": 1, "explain": "As distance increases, detail decreases, value contrast compresses (darks lighten, lights darken slightly), and color shifts toward cooler, less saturated hues, typically toward blue."},
+  {"q": "How does a low, warm light source (like a sunset) change the typical atmospheric perspective color shift?", "options": ["It has no effect; distant objects always shift toward blue regardless of light source", "Distant objects may shift toward pale warm tones rather than cool blue tones, since there's less atmosphere between the light source and object to introduce blue", "It only affects foreground objects, never background ones", "It eliminates atmospheric perspective entirely"], "correct": 1, "explain": "When the primary light source is low and warm, distant objects can appear paler and warmer instead of cooler, though the underlying principle of reduced contrast and detail with distance still applies."},
+  {"q": "Can atmospheric perspective be used within a single large object, not just across a whole landscape?", "options": ["No, it only applies to landscapes with multiple distinct elements", "Yes, the far side of a large object (like a long wall or big rock) can be made cooler and less detailed than the near side to reinforce its size and depth", "It only works underwater, never on land", "It is exclusively a linear perspective technique, unrelated to atmosphere"], "correct": 1, "explain": "Atmospheric perspective principles can be applied within a single large form, making its far side recede relative to its near side, reinforcing a sense of scale and depth even without a full landscape."},
+  {"q": "What is a practical starting technique for coloring distant background elements?", "options": ["Use pure black for all distant shadows", "Mix a small amount of the scene's sky color directly into far-background elements rather than inventing the color from scratch", "Always use the exact same color as foreground elements", "Avoid using the sky color anywhere except the sky itself"], "correct": 1, "explain": "Blending a touch of sky color into distant elements simulates the scattering of light into the line of sight, giving background elements a believable atmospheric tint without having to invent the exact color from imagination."}
+],
+"checklist": [
+  "I can explain why distant objects appear hazier, paler, and cooler due to atmospheric scattering.",
+  "I can reduce detail, value contrast, and saturation together as elements recede into the background.",
+  "I can adjust my atmospheric color shift based on whether the scene's light source is typical daylight or a low, warm light.",
+  "I can apply atmospheric perspective principles within a single large object, not just across a full landscape."
+],
+"nextStep": "You now control depth across an entire scene using color, value, and detail. Module 98 covers texture and surface detail \u2014 the finishing layer that adds believable wear, grain, and material specificity once the larger structural decisions from this arc are in place."
+}
 ]},
 {id:'advanced-digital', title:'Advanced Digital Art', status:'soon', order:10,
     desc:'Non-destructive workflow, blend modes, adjustment layers, photobashing, 3D-assisted painting, responsible AI-assisted workflow, speed painting, and master studies.',
