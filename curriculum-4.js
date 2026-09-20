@@ -876,6 +876,64 @@ const CURRICULUM_4 = [
 ],
 "nextStep": "You now control depth across an entire scene using color, value, and detail. Module 98 covers texture and surface detail \u2014 the finishing layer that adds believable wear, grain, and material specificity once the larger structural decisions from this arc are in place."
 }
+,
+{
+"id": "m98",
+"plate": 98,
+"title": "Texture & Surface Detail",
+"difficulty": "Advanced",
+"studyTime": "18 min",
+"practiceTime": "25\u201330 min/day",
+"prereq": ["m97"],
+"hook": "The exact same rendering skills you've built for skin and metal can be shortcut entirely for some materials \u2014 a photo of real fabric, lightly painted over, can outperform hours of hand-rendered texture, and knowing when to use which approach is its own skill.",
+"whyItMatters": [
+  "This module is the finishing layer on top of everything from Modules 91\u201397: color, value, light, material, edges, and depth are all structural decisions, while texture and surface detail are what a viewer notices up close, adding the specific, believable wear and material identity that makes a piece feel real rather than generic.",
+  "Texture decisions also have a genuine time-management dimension: knowing when to hand-paint a texture versus when to use a filter or a reference photo (photobashing) is a practical skill that affects how realistic a professional-speed workflow actually is."
+],
+"coreIdea": [
+  "A subtle noise or grain layer added near the end of a piece breaks up overly smooth digital gradients, which otherwise read as artificial or plastic \u2014 this is a fast, software-native technique (a noise filter) rather than something that needs to be hand-painted.",
+  "Different fabric types call for genuinely different rendering approaches: smooth, slippery fabrics (silk, satin) are rendered mostly through soft blended value shifts with almost no separate texture pass, while rough, textured fabrics (denim, tweed) benefit from a textured brush and more visible, broken brushwork.",
+  "Overlapping texture (also called photobashing for this purpose) \u2014 placing a desaturated, contrast-adjusted photo of a real texture on top of already-rendered form, then adjusting blend mode and opacity \u2014 is a legitimate, efficient technique for highly detailed textures like lace, chainmail, or close-up fabric weave, not a shortcut to be ashamed of.",
+  "Texture should follow the same wear-with-a-cause logic established for hard-surface scratches in Module 95: applied sparingly, concentrated where physical contact or stress would logically occur, rather than scattered evenly across a whole surface."
+],
+"mistakes": [
+  "Adding heavy texture uniformly across an entire piece regardless of material, when smooth or slippery materials should stay relatively textureless and let value do the work instead.",
+  "Skipping a final noise or grain pass entirely on a fully rendered piece, leaving smooth gradients that read as artificial or plastic-like.",
+  "Treating overlapping texture (using a real photo) as an illegitimate shortcut rather than a genuine professional technique appropriate for certain kinds of highly detailed surfaces.",
+  "Placing a texture photo directly onto a form without adjusting its contrast, saturation, and blend mode first, causing it to look pasted-on rather than integrated into the existing rendering.",
+  "Scattering wear and texture evenly across a surface instead of concentrating it where physical logic (contact points, stress areas, exposure) would place it."
+],
+"proTips": [
+  "Save a subtle noise/grain pass for near the very end of a piece, after color and value are otherwise finished, as a fast way to unify smooth digital gradients into something more textured and alive.",
+  "Match your rendering approach to the fabric: minimal separate texture work for smooth/slippery materials, visible textured brushwork for rough/stiff materials, and overlapping texture (photo reference) for extremely fine, detailed patterns like lace or chainmail.",
+  "When using a photo texture, always adjust its contrast and desaturate it first, then experiment with blend modes (Multiply for light fabrics, Lighten or Screen for dark ones) rather than pasting it in at full opacity and Normal blend mode.",
+  "Concentrate texture and wear detail at logical contact points (where a bag is gripped, where fabric stretches over a joint) rather than spreading it evenly, using the same wear-with-a-cause logic from Module 95's scratches."
+],
+"practice": {
+  "warmup": "Render three small identical shapes as three different fabric types (silk, denim, lace) using the appropriate technique for each: soft blending, textured brushwork, and overlapping photo texture.",
+  "daily": "Take a finished piece from an earlier module and add a final subtle noise/grain layer, comparing the result before and after.",
+  "weekly": "Render a piece of clothing with fabric folds, using overlapping texture (a real photo, desaturated and contrast-adjusted) for one detailed area, and hand-painted texture for the rest.",
+  "challenge": "Add wear or texture detail to a piece concentrated only at logical contact points (a bag's handle grip, a jacket's elbow) rather than spread evenly, and evaluate how much more specific and believable it feels."
+},
+"resources": [
+  {"type": "Video", "title": "[Custom Noise] Use noise filters to create textured art", "creator": "MediBang Paint (official)", "url": "https://medibangpaint.com/en/use/2022/09/how-to-use-the-custom-noise-function/", "why": "A free, official software tutorial from a completely free digital painting program, showing exactly how to add a fast, effective noise/grain texture pass.", "summary": "Demonstrates MediBang Paint's Custom Noise filter, walking through choosing a noise type, adjusting grain size and posterization, selecting a blend mode, and controlling opacity to add a fast, analog-style grain texture to a finished digital illustration.", "verified": true},
+  {"type": "Article", "title": "Drawing clothes and fabrics", "creator": "jozlixart, CLIP STUDIO TIPS", "url": "https://tips.clip-studio.com/en-us/articles/6809", "why": "A free, extremely detailed breakdown of fabric-specific rendering approaches, including both hand-painted texture and the overlapping-texture (photobashing) technique for highly detailed materials.", "summary": "Groups fabrics by rendering approach \u2014 smooth/slippery fabrics rendered through soft blended value shifts, rough/textured fabrics through visible textured brushwork \u2014 and explains the overlapping-texture technique of adjusting a real fabric photo's contrast and saturation, then blending it onto rendered cloth with an appropriate blend mode for highly detailed materials like lace or chainmail.", "verified": true}
+],
+"quiz": [
+  {"q": "What is the purpose of adding a subtle noise or grain layer near the end of a digital painting?", "options": ["To reduce the file size significantly", "To break up overly smooth digital gradients, which otherwise read as artificial or plastic", "It has no real visual effect and is purely optional decoration", "To automatically fix color mistakes"], "correct": 1, "explain": "A subtle noise or grain pass helps break up perfectly smooth digital gradients, giving a piece a more organic, less artificial feel."},
+  {"q": "How should smooth, slippery fabrics (like silk or satin) generally be rendered compared to rough, textured fabrics (like denim)?", "options": ["Both should be rendered identically with heavy visible texture", "Smooth fabrics mostly through soft blended value shifts with minimal separate texture; rough fabrics with more visible, broken textured brushwork", "Smooth fabrics need more texture than rough fabrics", "Fabric type has no effect on rendering approach"], "correct": 1, "explain": "Smooth, slippery materials read convincingly through value and blending alone, while rough or textured materials benefit from actual visible textured brushwork to communicate their surface quality."},
+  {"q": "What is \\\"overlapping texture\\\" (or photobashing for texture), and when is it appropriate?", "options": ["It's considered cheating and should never be used", "Placing an adjusted photo of a real texture on top of already-rendered form, appropriate for highly detailed surfaces like lace or chainmail", "It only applies to backgrounds, never to clothing or props", "It means copying another artist's finished painting"], "correct": 1, "explain": "Overlapping texture is a legitimate technique where a real texture photo, adjusted in contrast and saturation, is blended onto already-rendered form \u2014 particularly useful for very fine, detailed patterns that would take excessive time to hand-paint."},
+  {"q": "What should be adjusted on a texture photo before blending it onto a rendered surface?", "options": ["Nothing; paste it directly at full opacity", "Its contrast, saturation, and blend mode, so it integrates with the existing rendering instead of looking pasted-on", "Only its file format needs to change", "The photo should be used exactly as taken with no software adjustments"], "correct": 1, "explain": "Adjusting a texture photo's contrast, desaturating it, and choosing an appropriate blend mode (rather than pasting it at full opacity in Normal mode) is what allows it to integrate believably with the rendered surface beneath it."},
+  {"q": "According to the module, how should texture and wear detail generally be distributed across a surface?", "options": ["Spread perfectly evenly across the entire surface", "Concentrated at logical contact points or stress areas, following the same wear-with-a-cause logic as Module 95's scratches", "Applied randomly with no consideration of cause", "Texture should never be applied selectively"], "correct": 1, "explain": "Concentrating texture and wear at points where physical contact, stress, or exposure would logically occur produces more specific, believable results than spreading detail evenly across a whole surface."}
+],
+"checklist": [
+  "I can add a subtle noise/grain pass to unify a finished piece's smooth gradients.",
+  "I can choose an appropriate rendering approach (soft blending vs. textured brushwork) based on a fabric's properties.",
+  "I can use the overlapping-texture technique, adjusting a photo's contrast and blend mode before applying it to a rendered surface.",
+  "I can concentrate texture and wear detail at logical contact points rather than spreading it evenly."
+],
+"nextStep": "You now have every rendering tool this arc has covered \u2014 color, value, light, material, edges, depth, and texture. Module 99 brings them together into a complete illustration workflow, the professional sequence for taking a piece from first sketch to finished render."
+}
 ]},
 {id:'advanced-digital', title:'Advanced Digital Art', status:'soon', order:10,
     desc:'Non-destructive workflow, blend modes, adjustment layers, photobashing, 3D-assisted painting, responsible AI-assisted workflow, speed painting, and master studies.',
