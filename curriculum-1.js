@@ -135,7 +135,7 @@ const CURRICULUM_1 = [
           challenge:"Block in a simple object's gesture in overhand grip, then finish its details in writing grip, in one continuous sitting without stopping to think about the switch."
         },
         resources:[
-          {type:'Book', title:'Pen and Ink Drawing: A Simple Guide', creator:'Alphonso Dunn', url:'https://alphonsodunn.com/free-video-tutorials/', why:"Covers grip, posture, and arm movement together as one system and their direct effect on stroke quality and consistency — exactly this module's core idea, from an illustrator who teaches line work professionally.", verified:true},
+          {type:'Book', title:'Pen and Ink Drawing: A Simple Guide', creator:'Alphonso Dunn', url:'https://www.amazon.com/Pen-Ink-Drawing-Simple-Guide/dp/0997046538', why:"Covers grip, posture, and arm movement together as one system and their direct effect on stroke quality and consistency — exactly this module's core idea, from an illustrator who teaches line work professionally.", verified:true},
           {type:'Channel', title:'Alphonso Dunn — YouTube channel', creator:'Alphonso Dunn', url:'https://www.youtube.com/c/ALPHONSODUNN/videos', why:"Free video demonstrations of grip and stroke technique in motion, which is easier to absorb visually than from text alone.", verified:true}
         ],
         quiz:[
