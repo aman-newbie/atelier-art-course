@@ -1106,7 +1106,8 @@ function categorizeResourceType(r){
      the real test for "video", not the label someone typed. This is what
      keeps course-platform links and channel homepages (which just open an
      external tab, same as an article) out of the Video tab. */
-  if(r && (r.videoId || getYouTubeId(r.url))) return 'video';
+  if(t.includes('channel')) return 'channel';
+  if(r && (r.videoId || getYouTubeId(r.url) || getYouTubePlaylistId(r.url))) return 'video';
   if(t.includes('course')) return 'course';
   if(t.includes('video') || t.includes('playlist')) return 'video';
   if(t.includes('book')) return 'book';
@@ -1129,6 +1130,7 @@ function getAllLibraryResources(){
 
 function renderResourceCard(r, ri, m){
   const ytId = r.videoId || getYouTubeId(r.url);
+  const playlistId = !ytId ? getYouTubePlaylistId(r.url) : null;
   const opened = STATE.resourcesOpened[m.id] && STATE.resourcesOpened[m.id].has(ri);
   return `
   <div class="res-card">
@@ -1147,10 +1149,15 @@ function renderResourceCard(r, ri, m){
         <img src="https://img.youtube.com/vi/${ytId}/hqdefault.jpg" alt="" loading="lazy">
         <button class="video-play-btn" aria-label="Play video inline" data-yt-id="${ytId}" data-res-module="${m.id}" data-res-idx="${ri}">${ICONS.play}</button>
       </div>` : ''}
+      ${playlistId ? `
+      <div class="video-embed-wrap playlist-embed-wrap">
+        <button class="video-play-btn playlist-play-btn" aria-label="Play playlist inline" data-yt-playlist-id="${playlistId}" data-res-module="${m.id}" data-res-idx="${ri}">${ICONS.play} Play playlist inline</button>
+      </div>` : ''}
       <span class="library-source">${L(m,'title')} \u00b7 Plate ${m.plate}</span>
     </div>
   </div>`;
 }
+
 
 /* Uploaded photos land here as full-size data URLs (a few hundred KB each,
    even after the upload-time downscale). Keeping several of those around in
@@ -1329,6 +1336,7 @@ function renderLibrary(){
     {key:'course', label:'Courses'},
     {key:'article', label:'Articles'},
     {key:'book', label:'Books'},
+    {key:'channel', label:'Channels'},
     {key:'other', label:'Other'}
   ];
 
@@ -1389,9 +1397,16 @@ function renderTabContent(m, tab, checkedSet){
       </div>`).join('')}</div>`;
   }
   if(tab === 'resources'){
-    return `<div class="res-note">Every resource below was checked against a live search today rather than recalled from memory. Links can still change after the fact &mdash; if one is dead, that is useful to know, so flag it and it gets swapped.</div>
-    ${m.resources.map((r,ri)=>{
+    const mainRes = [];
+    const channelRes = [];
+    m.resources.forEach((r, ri) => {
+      if(categorizeResourceType(r) === 'channel') channelRes.push({r, ri});
+      else mainRes.push({r, ri});
+    });
+
+    const cardHtml = (r, ri) => {
       const ytId = r.videoId || getYouTubeId(r.url);
+      const playlistId = !ytId ? getYouTubePlaylistId(r.url) : null;
       const opened = STATE.resourcesOpened[m.id] && STATE.resourcesOpened[m.id].has(ri);
       return `
       <div class="res-card">
@@ -1410,9 +1425,30 @@ function renderTabContent(m, tab, checkedSet){
             <img src="https://img.youtube.com/vi/${ytId}/hqdefault.jpg" alt="" loading="lazy">
             <button class="video-play-btn" aria-label="Play video inline" data-yt-id="${ytId}" data-res-module="${m.id}" data-res-idx="${ri}">${ICONS.play}</button>
           </div>` : ''}
+          ${playlistId ? `
+          <div class="video-embed-wrap playlist-embed-wrap">
+            <button class="video-play-btn playlist-play-btn" aria-label="Play playlist inline" data-yt-playlist-id="${playlistId}" data-res-module="${m.id}" data-res-idx="${ri}">${ICONS.play} Play playlist inline</button>
+          </div>` : ''}
         </div>
       </div>`;
-    }).join('')}`;
+    };
+
+    return `<div class="res-note">Every resource below was checked against a live search today rather than recalled from memory. Links can still change after the fact &mdash; if one is dead, that is useful to know, so flag it and it gets swapped.</div>
+    ${mainRes.map(({r, ri}) => cardHtml(r, ri)).join('')}
+    ${channelRes.length ? `
+    <div class="res-channels-section">
+      <div class="res-channels-heading">Also worth following</div>
+      ${channelRes.map(({r, ri}) => {
+        const opened = STATE.resourcesOpened[m.id] && STATE.resourcesOpened[m.id].has(ri);
+        return `
+        <a class="res-channel-row" href="${r.url}" target="_blank" rel="noopener" data-res-open="${m.id}" data-res-index="${ri}">
+          <span class="res-type">${r.type}</span>
+          <span class="res-channel-title">${r.title}</span>
+          <span class="res-creator">${r.creator}</span>
+          ${opened ? `<span class="res-opened">${ICONS.check}</span>` : ''}
+        </a>`;
+      }).join('')}
+    </div>` : ''}`;
   }
   if(tab === 'mastery'){
     const checklist = L(m,'checklist');
@@ -1609,6 +1645,12 @@ function getYouTubeId(url){
   return m ? m[1] : null;
 }
 
+function getYouTubePlaylistId(url){
+  if(!url) return null;
+  const m = url.match(/[?&]list=([a-zA-Z0-9_-]+)/);
+  return m ? m[1] : null;
+}
+
 /* Honest framing matters here: this proves a link was clicked and a tab
    opened. It does not, and cannot, prove the person actually watched or
    read anything there. It's shown as "Opened", never as "Watched" or
@@ -1651,12 +1693,15 @@ function flushNotesSave(){
 let fpModuleId = null;
 let fpNotesSaveTimer = null;
 
-function openFloatingPlayer(ytId, moduleId, resIdx, title){
+function openFloatingPlayer(ytId, moduleId, resIdx, title, playlistId){
   const fp = document.getElementById('floatingPlayer');
   fpModuleId = moduleId;
-  document.getElementById('fpTitle').textContent = title || 'Video';
+  document.getElementById('fpTitle').textContent = title || (playlistId ? 'Playlist' : 'Video');
+  const embedSrc = playlistId
+    ? `https://www.youtube.com/embed/videoseries?list=${playlistId}&autoplay=1`
+    : `https://www.youtube.com/embed/${ytId}?autoplay=1`;
   document.getElementById('fpVideo').innerHTML =
-    `<iframe src="https://www.youtube.com/embed/${ytId}?autoplay=1" title="${escapeHtml(title||'Embedded video player')}" frameborder="0" allow="accelerated-video; autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>`;
+    `<iframe src="${embedSrc}" title="${escapeHtml(title||'Embedded video player')}" frameborder="0" allow="accelerated-video; autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>`;
   document.getElementById('fpNotesArea').value = STATE.notes[moduleId] || '';
   document.getElementById('fpNotesStatus').textContent = '';
   fp.classList.remove('minimized');
@@ -2566,6 +2611,18 @@ function initEvents(){
     const quizOpt = e.target.closest('[data-quiz-module]');
     if(quizOpt){
       answerQuiz(quizOpt.dataset.quizModule, parseInt(quizOpt.dataset.quizQ,10), parseInt(quizOpt.dataset.quizOpt,10));
+      return;
+    }
+
+    const playlistPlayBtn = e.target.closest('.playlist-play-btn');
+    if(playlistPlayBtn){
+      const playlistId = playlistPlayBtn.dataset.ytPlaylistId;
+      const modId = playlistPlayBtn.dataset.resModule;
+      const resIdx = parseInt(playlistPlayBtn.dataset.resIdx,10);
+      const m = findModule(modId);
+      const title = (m && m.resources[resIdx]) ? m.resources[resIdx].title : 'Playlist';
+      openFloatingPlayer(null, modId, resIdx, title, playlistId);
+      markResourceOpened(modId, resIdx);
       return;
     }
 
