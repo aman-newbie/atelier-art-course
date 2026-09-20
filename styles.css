@@ -384,6 +384,28 @@ svg{display:block;}
 .video-play-btn:hover{transform:translate(-50%,-50%) scale(1.08);}
 .video-play-btn svg{width:20px; height:20px; margin-left:3px;}
 
+.playlist-embed-wrap{
+  position:static; aspect-ratio:auto; height:auto; background:transparent; margin-top:var(--sp-3);
+  border:1px solid var(--border); border-radius:var(--radius-md); padding:var(--sp-2);
+}
+.playlist-play-btn{
+  position:static; transform:none; width:auto; height:auto; border-radius:var(--radius-sm);
+  background:var(--accent); color:#fff; padding:var(--sp-2) var(--sp-3); gap:var(--sp-2);
+  box-shadow:none; font-size:calc(13px * var(--font-scale));
+}
+.playlist-play-btn:hover{transform:none; filter:brightness(1.08);}
+.playlist-play-btn svg{width:14px; height:14px; margin-left:0;}
+
+.res-channels-section{margin-top:var(--sp-5); padding-top:var(--sp-4); border-top:1px dashed var(--border);}
+.res-channels-heading{font-size:calc(11px * var(--font-scale)); text-transform:uppercase; letter-spacing:.06em; color:var(--text-muted); margin-bottom:var(--sp-2);}
+.res-channel-row{
+  display:flex; align-items:center; gap:var(--sp-3); padding:var(--sp-2) 0; text-decoration:none; color:inherit;
+  border-bottom:1px solid var(--border-subtle, var(--border));
+}
+.res-channel-row:last-child{border-bottom:none;}
+.res-channel-title{font-weight:600; flex:1;}
+.res-channel-row .res-creator{color:var(--text-muted); font-size:calc(12px * var(--font-scale));}
+
 /* ---- Floating video player: draggable, stays open across tabs/pages, has its own notes ---- */
 .floating-player{
   position:fixed; z-index:500; width:min(92vw, 340px); background:var(--surface); border:1px solid var(--border);
