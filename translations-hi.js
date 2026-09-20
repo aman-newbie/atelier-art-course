@@ -870,6 +870,219 @@ m15: {
       "Ear-line ko ek diagnostic check ki tarah use kar sakta/sakti hoon jab koi rotated construction galat lage."
     ],
     nextStep: "Perspective of the Head \u2014 full one-, two-, aur three-point perspective logic ko extreme head angles aur foreshortening pe apply karna."
+  },
+
+m21: {
+    hook: "Jab head sirf rotate nahi, balki genuinely viewer ke kaafi kareeb ho, ya kisi dramatic camera angle se dikh rahi ho \u2014 to kya badalta hai, aur ye rotation se alag problem kyun hai.",
+    whyItMatters: [
+      "Module 20 mein rotation cover hua tha \u2014 head ko space mein ghumana, par viewer se ek consistent, comfortable distance pe rakhte hue. Ye module cover karta hai ki jab perspective khud involve ho jaaye to kya badalta hai: extreme foreshortening, face ke bahut kareeb ka camera, ya ek exaggerated low ya high angle. Ye comics, animation, aur concept art mein hardam dikhte hain, aur wo constructions tod dete hain jo sirf gentle, \"portrait photography\" jaisi distances pe hi kaam karte hain."
+    ],
+    coreIdea: [
+      "Module 8 wale perspective concepts \u2014 horizon line, vanishing points, foreshortening \u2014 head pe bilkul waise hi apply hote hain jaise kisi bhi doosri constructed form pe. Neeche se dekha gaya ek head ka apna local horizon line aur vanishing logic hota hai, bilkul jaise ek building ka hota hai; Module 18 wala Loomis sphere aur guidelines waise hi apply hote hain, bas unhe us perspective logic ke saath banana padta hai, use ignore karke nahi.",
+      "Foreshortening features ko unevenly compress karta hai, viewer se distance ke hisaab se: ek extreme close-up mein camera ki taraf lagbhag directly point karti hui nose, ek comfortable middle distance ke comparison mein dramatically chhoti aur chaudi dikhti hai, jabki camera se door wale features (ears, cranium ka peechla hissa) kam compress hote hain. Ye Module 8 wale general foreshortening concept ka head-specific version hai.",
+      "Camera distance apparent proportion ko badal deta hai even bina kisi rotation ke bhi \u2014 ek bahut kareeb ka camera jo bhi sabse nazdeek hai (usually nose) uska size, jo door hai (ears) uske relative exaggerate kar deta hai \u2014 yehi wajah hai ki extreme close-up portraits often thoda \"off\" lagte hain agar unhe standard middle-distance proportions se banaya jaaye, us compression ko account kiye bina.",
+      "Extreme low-angle aur high-angle head views rotation (Module 20) ko genuine perspective foreshortening ke saath ek saath combine karte hain, yahi wajah hai ki ye is poori arc mein sabse harder skills mein se ek hain \u2014 aur exactly isi wajah se inhe construction half ke end ke paas rakha gaya hai, jab rotation aur perspective fundamentals dono already jagah pe ho chuke hon."
+    ],
+    mistakes: [
+      "Ek extreme close-up pe standard middle-distance proportions apply karna, bina ye account kiye ki camera proximity khud apparent size ko kaise distort karti hai.",
+      "Ek extreme low ya high angle ko pure rotation samajh lena, uske upar layered genuine perspective foreshortening ko ignore karte hue.",
+      "Is module ki drills skip karna kyunki extreme angles bahut mushkil lagte hain \u2014 ye bilkul wahi angles hain jo dikhate hain ki pichle construction modules actually generalize hue ya sirf comfortable angles ke liye memorize kiye gaye the.",
+      "Ye bhool jaana ki head ka apna local horizon aur vanishing logic hota hai, bilkul Module 8 wali kisi bhi perspective-constructed form ki tarah."
+    ],
+    proTips: [
+      "Koi extreme angle draw karne se pehle, camera distance aur vertical angle ko alag alag decide karo \u2014 ye dono head ko alag, combinable tareekon se distort karte hain, aur inhe mix karna construction ko samajhna aur mushkil bana deta hai.",
+      "Same head ko pehle ek comfortable middle distance pe draw karo, phir dobara ek extreme close-up ki tarah, aur directly compare karo apparent proportions kitna shift hoti hain.",
+      "Jab koi extreme angle kaam na kare, pehle Module 20 wale plain rotation version pe wapas jao, confirm karo ki wo solid hai, phir uske upar perspective distortion add karo."
+    ],
+    practice: {
+      warmup: "Ek simple head shape ek comfortable middle distance pe banao, phir same head ko ek extreme close-up ki tarah dubara banao, proportion shift ko directly compare karte hue.",
+      daily: "Har din ek deliberately extreme angle pe ek head construct karo \u2014 sharply neeche se, sharply upar se, extreme close-up \u2014 Module 8 wale perspective logic ko Module 20 wale rotation ke upar apply karte hue.",
+      weekly: "Ek simple head construction lo aur use teen camera distances pe banao \u2014 door, medium, extreme close \u2014 same rotation angle se, distance ko akela variable rakhte hue.",
+      challenge: "Ek dramatic low angle se ek head construct karo, jaise koi tumhare upar khada dekh raha ho \u2014 rotation, tilt, aur genuine perspective foreshortening teeno ko ek hi drawing mein combine karte hue."
+    },
+    quiz: [
+      {q:"Ye module aisa kya cover karta hai jo Module 20 (Head Rotation) nahi karta?", options:["Facial expressions","Genuine perspective foreshortening jo camera distance aur extreme angles se aata hai, sirf comfortable distance pe rotation nahi","Hair rendering","Color theory"], correct:1, explain:"Sirf rotation ek comfortable, consistent distance assume karta hai; ye module proximity aur extreme angles wali real perspective distortion add karta hai."},
+      {q:"Standard proportions se banaya gaya ek extreme close-up portrait thoda \"off\" kyun lag sakta hai?", options:["Standard proportions hamesha galat hoti hain","Camera proximity jo bhi sabse nazdeek hai uska size, door wale ke relative exaggerate kar deti hai, aur standard proportions isse account nahi karti","Close-ups kabhi try hi nahi karne chahiye","Ye effect sirf professional cameras se hota hai"], correct:1, explain:"Proximity-based foreshortening apparent proportion ko badal deta hai, even bina kisi rotation ke bhi."},
+      {q:"Extreme low aur high head angles ko is arc mein sabse harder skills mein se kyun mana gaya hai?", options:["Inhe special pencils chahiye","Ye rotation aur genuine perspective foreshortening ko ek saath combine karte hain","Ye actually straight-on views se aasan hain","Ye sirf fantasy art pe apply hote hain"], correct:1, explain:"Do distortions ek saath stack hoti hain \u2014 rotation aur perspective \u2014 yahi wajah hai ki inhe is arc ke construction half ke end ke paas rakha gaya hai."}
+    ],
+    checklist: [
+      "Head ko rotate karne aur usme perspective foreshortening apply karne ka fark explain kar sakta/sakti hoon.",
+      "Same head ko do alag camera distances pe construct kar sakta/sakti hoon aur bata sakta/sakti hoon apparent proportions kaise shift hoti hain.",
+      "Ek head ko deliberately extreme low ya high angle se construct kar sakta/sakti hoon.",
+      "Kisi diye gaye perspective view mein head ka local horizon line aur vanishing logic identify kar sakta/sakti hoon."
+    ],
+    nextStep: "Planes of the Face \u2014 individual features pe jaane se pehle is arc ke structural half ko complete karna, har major facial plane ko map karke."
+  },
+
+  m22: {
+    hook: "Face ka complete plane map \u2014 is arc ka aakhri structural module individual features pe jaane se pehle, aur seedha link ki wo sab kaise light hone wale hain.",
+    whyItMatters: [
+      "Ye module Head & Portrait arc ke structural half ko close kar deta hai. Modules 15 se 21 ne head ki overall structure, proportion, construction method, aur rotation logic build ki; ye module har major facial plane ko detail mein map karta hai, jo agle set of modules \u2014 individual features \u2014 tak ka seedha bridge hai, kyunki har eye, nose, aur mouth yahin map kiye gaye planes pe sit karta hai aur usi ke hisaab se shade hota hai.",
+      "Is module ke bina, feature modules ek face pe floating memorized shapes ki list ban jaane ka risk rehta hai. Isse har feature ki placement aur shading logic ek specific, samjhe hue plane se wapas connect ho jaati hai."
+    ],
+    coreIdea: [
+      "Module 19 wale broad Asaro-style planes ke aage, face mein chhote, specific planes bhi hote hain jo individually jaanne worth hain: <b>forehead plane</b>, <b>temple planes</b> (brow se sharply peeche angled), <b>nose bridge plane</b> aur uski side planes, <b>cheek planes</b>, <b>jaw planes</b>, <b>chin plane</b>, aur eye socket ke around ke transitional planes jahan brow ridge, upper lid, aur cheek teeno alag angles pe milte hain.",
+      "Har plane ka angle, ek diye gaye light source ke relative, directly decide karta hai ki wo lit hai, core shadow mein hai, ya dono ke beech kisi gradient mein \u2014 wahi Module 11 wala light logic, ab ek generic sphere ya cube ki jagah specific, named facial geography pe map kiya gaya.",
+      "Planes ke beech ke transition zones \u2014 jahan forehead plane temple plane se milta hai, jahan nose bridge cheek se milta hai \u2014 yahin par ek portrait ki structural believability ka bada hissa actually rehta hai. Beginners often in transitions ko bahut jaldi smooth kar dete hain, plane change poori tarah kho dete hain aur face ki real structure flatten ho jaati hai.",
+      "Ye plane map wo cheez hai jispe agle aath modules \u2014 eyes, eyebrows, nose, mouth, ears, individual features ki proportions, expressions, aur full integration \u2014 sab kuch sit karta hai. Is module ko ek reference ki tarah treat karo jispe baar baar wapas aana hai, ek baar padh ke chhodne wali cheez ki tarah nahi."
+    ],
+    mistakes: [
+      "Plane transitions ko bahut jaldi smooth kar dena, us structural plane change ko kho dena jo face ko flat ki jagah solid dikhata hai.",
+      "Agle kai modules mein individual features seekhna bina har ek ko us specific plane se wapas connect kiye jispe wo actually sit karta hai.",
+      "Face ko sirf kuch broad planes wala samajhna (jaise simplified Asaro exercise mein), jab actual feature aur shading work shuru ho jaaye, is module wale fuller, zyada specific plane map ki jagah.",
+      "Ye ignore karna ki ek single light source paas paas ke multiple planes ko unke apne apne specific angle ke hisaab se alag alag affect karta hai, poore face ko ek flat logic se shade karne ke bajaye."
+    ],
+    proTips: [
+      "Agle kai modules pe kaam karte waqt is plane map ka apna reference sketch paas rakho \u2014 ye baar baar consult karne ke liye hai, ek sitting mein perfectly memorize karne ke liye nahi.",
+      "Is arc mein baad mein jab koi specific feature shade karte waqt sahi na lage, check karo wo actually kaunse plane pe sit karta hai aur kya us plane ka light logic respect ho raha hai.",
+      "Plane centers hi nahi, plane transitions dhoondhna bhi practice karo \u2014 kyunki wahin par wo structural information hoti hai jo ek viewer actually read karta hai."
+    ],
+    practice: {
+      warmup: "Ek simplified head pe forehead, temple, cheek, jaw, aur chin planes ko straight construction lines se mark karo, abhi koi shading nahi.",
+      daily: "Ek facial region \u2014 eye socket transition, nose bridge aur uski sides, cheek-to-jaw transition \u2014 ko ek consistent light source ke neeche shade karo, specifically us region ke plane changes pe focus karte hue.",
+      weekly: "Ek full simplified face shade karo, shade karte waqt consciously har plane ka naam lete hue aur uski logic ko Module 11 ke light rules ke against check karte hue.",
+      challenge: "Ek real reference photo lo, usme jitne distinct facial planes identify kar sako karo directly ek printout ya overlay pe, aur apna plane map compare karo ki photo mein actual shadows kaise girte hain."
+    },
+    quiz: [
+      {q:"Head & Portrait arc mein is module ka role kya hai?", options:["Ye ek optional bonus module hai","Ye specific facial planes map karta hai jinpe baad ka har feature module sit karega aur unhi ke hisaab se shade hoga","Ye skull module ki zaroorat ko replace kar deta hai","Ye sirf stylized art ke liye matter karta hai"], correct:1, explain:"Ye head structure se individual-feature modules tak ka seedha bridge hai."},
+      {q:"Beginners forehead-to-temple jaisi plane transitions pe structural believability kyun kho dete hain?", options:["Wo wahan bahut zyada detail use karte hain","Wo transition ko bahut jaldi smooth kar dete hain, actual plane change kho dete hue","Transitions ka likeness se koi lena dena nahi","Plane transitions hamesha sharp lines honi chahiye"], correct:1, explain:"Plane change ko jaldi smooth kar dena, exactly wahi structural information flatten kar deta hai jise viewer solidity ki tarah read karta."},
+      {q:"Is module ke hisaab se, ek portrait ki structural believability actually kahan rehti hai?", options:["Sirf eyes mein","Planes ke beech ke transition zones mein, jaise jahan nose bridge cheek se milta hai","Sirf hair rendering mein","Sirf color choices mein"], correct:1, explain:"Transitions real structural information carry karte hain, sirf har plane ke flat center nahi."}
+    ],
+    checklist: [
+      "Ek simplified head pe forehead, temple, nose, cheek, jaw, aur chin planes identify aur mark kar sakta/sakti hoon.",
+      "Ek facial plane transition ko shade kar sakta/sakti hoon bina actual structural change ko smooth kiye.",
+      "Module 11 wala light logic kisi specific named facial plane pe apply kar sakta/sakti hoon, sirf generic sphere pe nahi.",
+      "Apna plane map ek real reference photo ke actual shadow pattern se compare kar sakta/sakti hoon."
+    ],
+    nextStep: "Head & Portrait ka structural half complete ho gaya. Next: khud facial features \u2014 eyes, eyebrows, nose, mouth, ears, aur expressions \u2014 har ek ko ek 3D form ki tarah build karna jo is module wale plane map pe sit karta hai."
+  },
+
+  m23: {
+    hook: "Ek socket mein ek sphere, ek awning ki tarah kaam karta brow ridge, aur glass ke do curved bowls \u2014 beginners jis almond outline se shuru karte hain, wo nahi.",
+    whyItMatters: [
+      "Doosre kisi bhi feature se zyada attention eyes ko beginners bhi dete hain, aur viewers bhi \u2014 human vision specifically eyes aur eye contact read karne ke liye tuned hai, yahi wajah hai ki ek flat outline ki tarah bana eye, ek real 3D form ki jagah, turant aur uncannily galat lagta hai, chahe kisi ko explain karna na aaye ki kyun.",
+      "Is module mein sab kuch already covered structure pe seedha sit karta hai: skull (Module 16) wala brow ridge, Asaro (Module 19) wala eye-socket plane, aur Loomis construction (Module 18) wali eye-line guideline. Ye module wahi jagah hai jahan wo abstractions ek specific, renderable feature mein badal jaate hain."
+    ],
+    coreIdea: [
+      "Eye pehle do simplified forms se banti hai, details baad mein. <b>Brow ridge</b> ek box ki tarah simplify hota hai jo thoda peeche tilted ho \u2014 uska front plane forehead hai, bottom plane eyebrow ke seedha neeche sit karta hai. <b>Eyeball</b> khud bas ek sphere hai, us socket ke andar sit karta hua jise brow ridge ek awning ki tarah protect karta hai.",
+      "Eye ka visible \"white\" part (<b>sclera</b>) ek sphere ki surface hai, koi flat white shape nahi \u2014 ise flat treat karna ek common aur bahut visible beginner mistake hai. <b>Iris</b> us sphere mein set ek thoda concave bowl hai, aur use cover karne wala <b>cornea</b> ek convex bowl hai, transparent, jaise contact lens. Kyunki cornea convex hai aur iris concave, dono same light ke neeche <i>opposite</i> directions mein shade hote hain \u2014 ye pair samajhna hi ek rendered eye ko wet aur dimensional dikhata hai, ek painted circle jaisa nahi.",
+      "Iris sirf straight-on se ek true circle hai. Eye jaise jaise center se door rotate karta hai, iris utna hi ek oval mein compress hota jaata hai \u2014 Module 4 aur Module 8 wala hi ellipse-degree logic, ab ek wheel ki jagah paanch-millimeter ke circle pe apply.",
+      "Eyelid shape ek specific, consistent tareeke se asymmetric hota hai: upper lid heavier hota hai aur lower se zyada cover karta hai, aur upper lid ka peak nose ke kareeb sit karta hai jabki lower lid ka peak ear ke kareeb. Ek symmetric \"almond\" ya \"goldfish cracker\" shape banana yahan ek sabse common beginner error hai. Tear duct lids ke vertical center se neeche sit karta hai, unke beech centered nahi.",
+      "Placement: eyes Loomis construction mein established eye-line pe sit karte hain, generally head ke vertical midpoint pe. Do eyes ke beech horizontal spacing, average pe, roughly ek eye-width hoti hai \u2014 aur ek bahut common beginner mistake eyes ko noticeably bada bana dena hai, kyunki hum intuitively eyes ko face ka sabse important feature treat karte hain aur size mein over-compensate kar dete hain, contrast aur detail ke through nahi."
+    ],
+    mistakes: [
+      "Sclera ko ek flat white shape ki tarah treat karna, sphere ki visible surface ki jagah jise apni subtle shading chahiye.",
+      "Symmetric, almond-shaped eyelids banana, actual asymmetric peaks ki jagah \u2014 upper lid heavier, peak nose ke kareeb; lower lid peak ear ke kareeb.",
+      "Tear duct ko lids ke beech center karna, use lower, bottom lid ki taraf rakhne ke bajaye.",
+      "Eyes ko unki importance signal karne ke liye bahut bada bana dena, contrast, sharper edges, aur detail use karke wahan aankh khinchne ke bajaye."
+    ],
+    proTips: [
+      "Ek bhi eyelash add karne se pehle brow ridge aur eye socket ko ek simplified box-and-sphere construction ki tarah banao \u2014 Module 10 wala hi construction-before-detail order.",
+      "Same simplified eyeball pe iris ko paanch-chhe alag gaze angles pe draw karna practice karo, dekhte hue ki center se hatte hi ellipse kaise compress hoti hai.",
+      "Yaad rakho cornea aur iris opposite directions mein shade hote hain \u2014 convex versus concave \u2014 aur ye specifically check karo jab bhi koi rendered eye flat lage."
+    ],
+    practice: {
+      warmup: "Brow ridge ko ek tilted box ki tarah aur eyeball ko uske neeche ek sphere ki tarah draw karo, abhi koi eyelids nahi, front se.",
+      daily: "Har din ek naye gaze direction se ek full eye \u2014 socket, sphere, iris, lids \u2014 draw karo, track karte hue iris ellipse kaise badalta hai.",
+      weekly: "Ek simplified head pe Loomis eye-line aur sahi one-eye-width spacing use karke eyes ka ek pair draw karo, Module 5 wale comparative measurement se check karte hue.",
+      challenge: "Same eye ko ek extreme close-up mein aur ek normal portrait distance pe draw karo, compare karte hue distance pe details kitne chhote aur schematic ho jaate hain."
+    },
+    quiz: [
+      {q:"Iris aur cornea ka shape kaisa hota hai, aur ye shading ke liye kyun matter karta hai?", options:["Dono flat discs \u2014 shading matter nahi karti","Iris ek concave bowl hai aur cornea ek convex bowl, isliye same light ke neeche dono opposite directions mein shade hote hain","Dono convex, same tarike se shade hote hain","Kisi ka bhi defined shape nahi hota"], correct:1, explain:"Concave versus convex ka matlab hai opposite shading directions \u2014 yahi ek rendered eye ko wet aur three-dimensional dikhata hai."},
+      {q:"Tear duct actually eyelids ke relative kahan sit karta hai?", options:["Lids ke bilkul beech mein centered","Lower, bottom lid ki taraf","Higher, top lid ki taraf","Ye kisi bhi angle se visible nahi hota"], correct:1, explain:"Tear duct center se neeche hota hai, symmetrically placed nahi \u2014 use center karna ek common beginner mistake hai."},
+      {q:"Eye size ko lekar ek common beginner mistake kya hai?", options:["Unhe itna chhota banana ki notice hi na ho","Unhe unki importance signal karne ke liye bahut bada bana dena","Kabhi pupils na draw karna","Jaanbujh kar dono eyes ko alag heights pe rakhna"], correct:1, explain:"Hum intuitively eyes ko over-size kar dete hain kyunki unhe sabse important treat karte hain \u2014 contrast aur detail size se zyada reliably importance signal karte hain."}
+    ],
+    checklist: [
+      "Ek eye ko ek tilted brow-ridge box aur ek spherical eyeball se shuru karke construct kar sakta/sakti hoon, lid details add karne se pehle.",
+      "Asymmetric eyelid shape correctly draw kar sakta/sakti hoon \u2014 heavier upper lid, peaks nose aur ear ki taraf offset.",
+      "Gaze angle center se door jaane pe iris ko compress hoti ellipse ki tarah draw kar sakta/sakti hoon.",
+      "Loomis eye-line aur roughly one-eye-width spacing use karke eyes ka ek pair place kar sakta/sakti hoon."
+    ],
+    nextStep: "Eyebrows \u2014 expression ke dauraan sabse zyada move karne wala ek single feature, jo seedha is module wale brow ridge pe sit karta hai."
+  },
+
+  m24: {
+    hook: "Expression ke dauraan doosre kisi bhi feature se zyada move karne wala feature, aur wo jise beginners bone ke peeche follow karti hui hair ki jagah ek floating line ki tarah draw karte hain.",
+    whyItMatters: [
+      "Eyebrows do wajahon se disproportionately important hain: wo seedha Module 16 wale brow ridge bone structure ke upar sit karte hain, isliye unki placement koi free artistic choice nahi hai \u2014 ye neeche ki anatomy se dictate hoti hai \u2014 aur wo legible facial expression ke do sabse bade drivers mein se ek hain (mouth, Module 26 mein, doosra hai), yahi wajah hai ki ye module Module 29 ki direct preparation ki tarah rakha gaya hai."
+    ],
+    coreIdea: [
+      "Eyebrows skull wale <b>brow ridge</b> ko follow karte hain \u2014 wo eye ke upar kahin floating shape nahi hain, wo us bone ke curve pe sit karte hain aur usi ko follow karte hain. Yahi wajah hai ki eyebrow placement, hairstyle ke unlike, ek baar underlying skull aur Loomis construction (Modules 16 aur 18) set ho jaayein, to really ek free design choice nahi rehti.",
+      "Hair growth direction consistent aur specific hoti hai: brow hair nose ke paas upward aur outward grow karti hai, phir temple ki taraf progressively downward aur outward angle leti hai. Har hair ko same direction mein ya ek uniform arc mein draw karna hi eyebrow ko painted-on dikhata hai, grown nahi.",
+      "Thickness, arch height, aur density individual, age, aur gender ke hisaab se almost kisi bhi doosre facial feature se zyada vary karte hain \u2014 jo eyebrows ko characters differentiate karne ya likeness push karne ke sabse fast tareekon mein se ek banata hai, ek baar underlying brow-ridge placement correctly anchor ho jaaye.",
+      "Expression work mein, eyebrows largely ek unit ki tarah brow ridge ke relative move karte hain \u2014 surprise ke liye raised, anger ya concentration ke liye lowered aur together drawn, skepticism ke liye asymmetrically raised. Module 29 isse depth mein cover karta hai; is module ka kaam pehle eyebrow ki resting placement aur construction solid karna hai."
+    ],
+    mistakes: [
+      "Eyebrows ko neeche wale brow ridge bone structure se disconnected, ek floating shape ki tarah draw karna.",
+      "Har brow hair ko ek uniform direction ya arc mein render karna, actual growth pattern follow karne ke bajaye \u2014 nose ke paas up aur out, temple ki taraf down aur out.",
+      "Eyebrow shape ko har character pe apply hone wala ek fixed template treat karna, age, individual, aur intended expression se juda ek variable ki jagah.",
+      "Head ke liye already established Loomis brow-line guideline ka reference liye bina eyebrows place karna."
+    ],
+    proTips: [
+      "Pehle brow ridge draw karo, phir uske upar eyebrow \u2014 kabhi ulta nahi.",
+      "Hair-direction strokes ko full eyebrow shapes se alag practice karo: inner corner se outward aur downward fan hoti short strokes.",
+      "Same simplified head ko teen alag eyebrow thicknesses aur arch heights ke saath sketch karo, dekhne ke liye ki sirf ek feature perceived age aur personality kitna badal sakta hai."
+    ],
+    practice: {
+      warmup: "Module 23 wale brow-ridge box ko paanch baar draw karo, har ek ke upar sirf ek simple eyebrow line add karke placement confirm karte hue.",
+      daily: "Har din ek naye simplified head pe correct hair-direction strokes use karke eyebrows ka ek pair draw karo.",
+      weekly: "Same head ko teen baar, alag eyebrow thickness aur arch ke saath draw karo, compare karte hue perceived age aur personality kitna shift hoti hai.",
+      challenge: "Ek face draw karo sirf eyebrows ke saath \u2014 koi eyes, nose, ya mouth nahi \u2014 aur dekho akele eyebrows kitni emotional information communicate karte hain."
+    },
+    quiz: [
+      {q:"Ek eyebrow kahan sit karega, ye sabse zyada kya decide karta hai?", options:["Bina kisi anatomical basis ke personal artistic choice","Uske neeche ka brow ridge bone structure","Hair color","Nose ki position"], correct:1, explain:"Eyebrows brow ridge ko follow karte hain \u2014 ek baar skull aur Loomis construction set ho jaayein, placement really ek free choice nahi rehti."},
+      {q:"Real eyebrow hair growth direction ko sabse achhe se kaunsa describe karta hai?", options:["Poori brow mein ek hi direction mein uniformly","Nose ke paas upward aur outward, temple ki taraf downward aur outward angling","Hamesha seedha neeche","Random, koi consistent pattern nahi"], correct:1, explain:"Direction inner se outer corner tak progressively shift hoti hai \u2014 uniform strokes painted-on lagte hain, grown nahi."},
+      {q:"Mouth ke saath, eyebrows ko is module mein kya describe kiya gaya hai?", options:["Sabse least expressive facial feature","Legible facial expression ke do sabse bade drivers mein se ek","Expression se irrelevant","Sirf cartoon styles mein relevant"], correct:1, explain:"Eyebrow aur mouth position mil ke ek expression ka zyada tar legible signal carry karte hain."}
+    ],
+    checklist: [
+      "Main eyebrows ko already-placed brow ridge ke upar draw karta/karti hoon, ek floating independent shape ki tarah nahi.",
+      "Main correct inner-to-outer growth direction follow karti hui eyebrow hair strokes render kar sakta/sakti hoon.",
+      "Main perceived age ya personality shift karne ke liye eyebrow thickness aur arch ko deliberately vary kar sakta/sakti hoon.",
+      "Main identify kar sakta/sakti hoon ki akele ek eyebrow pair kitna expression communicate karta hai, baaki features ke bina."
+    ],
+    nextStep: "The Nose \u2014 chaar major planes, aur beginner portraits mein sabse zyada flatten hone wala feature."
+  },
+
+  m25: {
+    hook: "Aadha bone, aadha cartilage, chaar major planes \u2014 aur wo feature jo sabse zyada chances mein ek flat 2D outline aur nostrils ke liye do holes ban ke reh jaata hai.",
+    whyItMatters: [
+      "Nose ko students often \u2014 including is module ke resources ke peeche wali actual course discussions mein \u2014 sabse hard single feature bataya jaata hai draw karna \u2014 isme eyes ya mouth se kam familiar landmarks hain, aur head rotation aur tilt ke saath iski form doosre kisi bhi feature se zyada dramatically badalti hai. Yahan comfortable ho jaana seedha aage ke har portrait mein kaam aata hai."
+    ],
+    coreIdea: [
+      "Nose <b>chaar major planes</b> mein simplify hoti hai: bridge ke neeche jaate hue ek top plane aur do side planes, aur ek bottom plane. In chaar planes ko sahi proportion aur perspective mein establish karna, kisi bhi anatomical detail se zyada shuru mein matter karta hai \u2014 ek crooked ya galat size wali structure ke upar details refine karne ka koi fayda nahi.",
+      "Structurally, nose aadhi bone hai aadhi cartilage: bridge ka upper half <b>nasal bone</b> hai, lower half <b>lateral cartilage</b> hai, jo do pieces mein wedge hoti hai jo nose ki <b>ball</b> banate hain. <b>Nostrils</b> (technically alar fat, cartilage nahi) septum se aur peeche attach hote hain, ball se hanging wings ki tarah.",
+      "Jaise head front se profile ki taraf turn hota hai, far side plane patla hota jaata hai aur eventually gayab ho jaata hai, jabki near side plane thick hota jaata hai \u2014 full profile tak, top aur bottom planes bhi visible nahi rehte. Jaise head upar ya neeche tilt hota hai, bottom plane ki visible height dramatically badalti hai, aur nose tip eyes ki taraf ya unse door move hoti hui dikhti hai \u2014 ek common beginner error upward tilt pe nose tip ko lower karna hai, uski jagah use raise karna chahiye.",
+      "<b>Glabella</b> \u2014 eyebrows ke beech ka keystone-shaped area, jo skull module mein conceptually already introduce ho chuka hai \u2014 nose ko seedha brow ridge structure se connect karta hai, aur usually ek subtle halftone carry karta hai jo dono eye sockets ko aapas mein jodta hai."
+    ],
+    mistakes: [
+      "Nose ko ek flat 2D outline ki tarah draw karna, ya usse bhi bura, nostrils, wings, aur septum ke liye koi surrounding volume ke bina bas do holes ki tarah.",
+      "Chaar major planes ke sahi proportion aur angle mein aane se pehle anatomical detail add karna.",
+      "Jab head upar tilt kare to nose tip ko lower karna, uski jagah correctly raise karne ke bajaye jaise bottom plane zyada visible hota jaata hai.",
+      "Ye ignore karna ki head profile ki taraf rotate hone pe far side plane kitna dramatically patla hokar gayab ho jaata hai."
+    ],
+    proTips: [
+      "Koi bhi anatomical detail add karne se pehle, chaar major planes ko bahut halki, erasable lines mein block in karo.",
+      "Module 10 wala carpenter's-eye check use karo: plane structure ko ek real 3D object ki tarah imagine karo aur socho ki kya dono sides center se equally distant hain aur correctly angled hain.",
+      "Same nose ko paanch head rotations pe draw karo \u2014 front, three-quarter, profile, tilted up, tilted down \u2014 taaki ek memorized front view ki jagah real angle-independent understanding bane."
+    ],
+    practice: {
+      warmup: "Ek simplified head pe chaar major nose planes \u2014 top, do sides, bottom \u2014 block in karo, abhi koi anatomical detail nahi.",
+      daily: "Har din ek naye angle se ek full nose \u2014 planes, bridge, ball, wings, septum \u2014 construct karo.",
+      weekly: "Same nose ko ek hi sitting mein paanch rotations pe draw karo: front, three-quarter, profile, tilted up, tilted down.",
+      challenge: "Strong side lighting wali ek reference photo dhoondo aur ek nose ko sirf chaar major planes plus Module 11 wale core aur cast shadow se shade karo, koi fine detail nahi."
+    },
+    quiz: [
+      {q:"Nose ke chaar major planes kaunse hain?", options:["Front, back, left, right","Top, do sides, aur bottom","Bone, cartilage, fat, skin","Sirf ek hi plane hai"], correct:1, explain:"Top, do side planes, aur ek bottom plane \u2014 inhe correctly establish karna shuru mein kisi bhi anatomical detail se zyada matter karta hai."},
+      {q:"Jab head upar tilt hota hai to nose tip ke saath kya hota hai?", options:["Wo mouth ki taraf lower hoti dikhti hai","Wo raise hoti hui aur eyes ke kareeb aati hui dikhti hai, jaise bottom plane zyada visible hota jaata hai","Head tilt se kuch nahi badalta","Wo poori tarah gayab ho jaati hai"], correct:1, explain:"Ek common beginner mistake upward tilt pe tip ko lower karna hai \u2014 usse bottom plane ka visible area badhne ke saath raise hona chahiye."},
+      {q:"Structurally, nose kaisi hoti hai?", options:["Poori tarah cartilage","Poori tarah bone","Roughly aadhi bone (upper bridge) aur aadhi cartilage (lower bridge aur ball)","Sirf ear jaisa hi tissue"], correct:2, explain:"Nasal bone upper bridge banati hai; lateral cartilage lower bridge banati hai aur nose ki ball mein wedge hoti hai."}
+    ],
+    checklist: [
+      "Koi anatomical detail add karne se pehle chaar major nose planes block in kar sakta/sakti hoon.",
+      "Roughly explain kar sakta/sakti hoon ki nose ka kaunsa part bone hai aur kaunsa cartilage.",
+      "Kam se kam teen head rotations mein ek nose convincingly draw kar sakta/sakti hoon.",
+      "Ek upward head tilt construct karte waqt nose tip ko correctly raise karta/karti hoon, lower nahi."
+    ],
+    nextStep: "The Mouth \u2014 teeth ke ek cylinder pe based, jo zyada tar beginners ko kabhi pata hi nahi chalta wahan hai."
   }
 
 };
