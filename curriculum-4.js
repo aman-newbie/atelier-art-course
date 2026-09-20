@@ -934,6 +934,64 @@ const CURRICULUM_4 = [
 ],
 "nextStep": "You now have every rendering tool this arc has covered \u2014 color, value, light, material, edges, depth, and texture. Module 99 brings them together into a complete illustration workflow, the professional sequence for taking a piece from first sketch to finished render."
 }
+,
+{
+"id": "m99",
+"plate": 99,
+"title": "The Complete Illustration Workflow",
+"difficulty": "Advanced",
+"studyTime": "18 min",
+"practiceTime": "2\u20134 hours (project)",
+"prereq": ["m98"],
+"hook": "Every skill in this arc so far has been a single tool in a toolbox. This module is about the order you actually pick them up in \u2014 because the same nine tools used in the wrong sequence produce a mess, and used in the right sequence produce a finished piece.",
+"whyItMatters": [
+  "Color theory, value, light, material, edges, depth, and texture (Modules 91\u201398) are all decisions. A workflow is the order those decisions get made in, and getting the order right is often what separates a piece that comes together smoothly from one that gets muddy and has to be reworked repeatedly.",
+  "This is also directly comparable to the concept-art pipeline from Module 80: a full-color illustration workflow is the same explore-then-commit logic applied specifically to a rendered, painterly piece rather than a concept-art production process."
+],
+"coreIdea": [
+  "The standard sequence is: sketch (loose, low-opacity, focused on proportion and gesture), line art (a clean, deliberate pass with varied line weight), flat colors (one color per element, no shading yet), then shading and rendering (light direction decided first, then shadows and highlights built on top of the flats).",
+  "Committing to a light direction before placing a single shadow is the single highest-leverage decision in the shading stage \u2014 every subsequent shadow and highlight decision flows from that one choice, and skipping it is a common reason shading ends up inconsistent.",
+  "Checking a stage in isolation before moving to the next one catches problems early: line art should read clearly with the sketch hidden, flat colors should look correct with no shading yet, because problems are far cheaper to fix at an earlier stage than after they've been built upon.",
+  "Line weight itself is an underused tool available even before any rendering happens \u2014 thicker lines on silhouettes and where shapes overlap, thinner lines on internal detail, add a sense of depth and hierarchy before a single shadow is painted."
+],
+"mistakes": [
+  "Jumping into detailed rendering before the sketch's proportions and gesture are solid, then spending far more time fixing structural problems than would have been needed at the sketch stage.",
+  "Adding shading before deciding on a light direction, producing shadows and highlights that don't agree with each other because there was no single guiding decision behind them.",
+  "Moving to the next stage without checking the current one in isolation (hiding the sketch to check line art alone, for example), missing problems that then compound into later stages.",
+  "Treating line weight as purely decorative instead of using it as an early, easy tool for depth and hierarchy before any color or shading exists.",
+  "Skipping flat colors and going straight from line art to full rendering, making it harder to isolate and fix a color choice without also affecting the shading built on top of it."
+],
+"proTips": [
+  "Keep your sketch on low opacity and your gesture loose \u2014 resist tightening it up until proportions and pose genuinely feel solid, since fixing structure later is much more expensive.",
+  "Before adding a single shadow, decide explicitly where your light is coming from, and refer back to that decision for every shadow and highlight placed afterward.",
+  "Check each stage in isolation before moving on: hide the sketch layer to verify line art alone reads clearly, hide the shading to verify flats look correct on their own.",
+  "Use line weight deliberately at the line art stage \u2014 heavier on silhouettes and overlapping shapes, lighter on internal detail \u2014 to build in depth and hierarchy before any color exists."
+],
+"practice": {
+  "warmup": "Take one simple subject through just the first two stages (sketch, then clean line art), checking that the line art reads clearly with the sketch layer hidden.",
+  "daily": "Complete one small piece through the full four-stage workflow (sketch, line art, flat colors, shading), deciding your light direction explicitly before starting to shade.",
+  "weekly": "Take a piece through the workflow, checking each stage in isolation (hide the previous layer) before moving to the next, and note any problem you catch early that you might otherwise have missed.",
+  "challenge": "Redo a finished piece's line art alone, focusing purely on deliberate line weight (heavy on silhouette/overlaps, light on interior detail), and compare it to a flat-weight version of the same lines."
+},
+"resources": [
+  {"type": "Video", "title": "Digital Painting Process Explained", "creator": "SamDoesArts", "url": "https://www.youtube.com/watch?v=0CDd22s3jec", "why": "A free, widely-viewed walkthrough of a full digital painting process from color blocking through to a finished piece.", "summary": "Walks through a complete digital painting workflow from initial color blocking through to a finished rendered piece, demonstrating how a deliberately simple layer structure (built around just a handful of layers) can carry an entire illustration from start to finish.", "verified": true},
+  {"type": "Article", "title": "How to Color Digitally: A Step-by-Step Guide for Beginners", "creator": "Artwod", "url": "https://artwod.com/blog/how-to-color-digitally-a-step-by-step-guide-for-beginners", "why": "A free, clearly staged breakdown of the sketch-to-shading workflow, with a specific emphasis on line weight and committing to a light direction before shading.", "summary": "Breaks the illustration process into sketch, line art, flat colors, and cel shading stages, emphasizing that a solid sketch prevents expensive fixes later, that line weight (thicker on silhouettes and overlaps, thinner on interior detail) adds depth before any rendering begins, and that deciding a light direction before placing the first shadow is the single most important shading decision.", "verified": true}
+],
+"quiz": [
+  {"q": "What is the standard four-stage sequence described in this module?", "options": ["Shading, line art, sketch, flat colors", "Sketch, line art, flat colors, shading and rendering", "Flat colors, sketch, shading, line art", "Rendering, sketch, shading, flats"], "correct": 1, "explain": "The standard sequence moves from a loose sketch, to clean line art, to flat colors with no shading yet, and finally to shading and rendering built on top of those flats."},
+  {"q": "According to the module, what is the single highest-leverage decision at the shading stage?", "options": ["Choosing the final export file format", "Deciding on a light direction before placing any shadow", "Picking the canvas resolution", "Selecting a brush pack"], "correct": 1, "explain": "Committing to a light direction before shading begins is presented as the decision every subsequent shadow and highlight should flow from; skipping it tends to produce inconsistent shading."},
+  {"q": "Why is it recommended to check each workflow stage in isolation before moving to the next?", "options": ["It has no real benefit and just wastes time", "Problems are far cheaper to catch and fix at an earlier stage than after later work has been built on top of them", "Isolating stages is required by most software", "It only matters for traditional media, not digital"], "correct": 1, "explain": "Checking a stage alone (like hiding the sketch to verify line art) catches problems while they're still cheap to fix, rather than discovering them after later stages have already been built on a flawed foundation."},
+  {"q": "How can line weight be used as a tool before any shading or color exists?", "options": ["Line weight has no visual effect and is purely stylistic preference", "Thicker lines on silhouettes and overlapping shapes, thinner lines on internal detail, add a sense of depth and hierarchy at the line art stage itself", "Line weight can only be adjusted after full rendering is complete", "All lines should always be the exact same weight for consistency"], "correct": 1, "explain": "Varying line weight \u2014 heavier on silhouettes and where shapes overlap, lighter on interior detail \u2014 is an early, easy way to build in depth and visual hierarchy before any color or shading is added."},
+  {"q": "What is a risk of skipping the flat colors stage and going directly from line art to full rendering?", "options": ["There is no risk; skipping stages is always more efficient", "It becomes harder to isolate and fix a color choice without also affecting the shading already built on top of it", "Flat colors are only relevant for traditional painting", "Skipping stages always improves the final quality"], "correct": 1, "explain": "Flat colors provide a clean base to check and adjust before shading is built on top; skipping straight to rendering makes it harder to fix a color problem without disturbing the shading layered above it."}
+],
+"checklist": [
+  "I can move through a piece in the order: sketch, line art, flat colors, shading.",
+  "I can decide a light direction explicitly before placing any shadow.",
+  "I can check a stage in isolation (hiding earlier layers) before moving to the next.",
+  "I can use line weight deliberately at the line art stage to add depth before any color exists."
+],
+"nextStep": "You now have a complete, repeatable workflow for taking a piece from first sketch to finished render. Module 100 is the capstone \u2014 bringing every skill from this entire arc together into one complete, fully rendered illustration."
+}
 ]},
 {id:'advanced-digital', title:'Advanced Digital Art', status:'soon', order:10,
     desc:'Non-destructive workflow, blend modes, adjustment layers, photobashing, 3D-assisted painting, responsible AI-assisted workflow, speed painting, and master studies.',
