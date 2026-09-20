@@ -1432,7 +1432,7 @@ const CURRICULUM_3 = [
 },
 "resources": [
   {"type": "Site", "title": "Lesson 2 \u2014 Texture Analysis", "creator": "Drawabox (Uncomfortable)", "url": "https://drawabox.com/lesson/2/6/purpose", "why": "Directly establishes the pattern-versus-texture distinction this module is built on, using brick itself as the primary teaching example.", "verified": true},
-  {"type": "Book", "title": "Pen and Ink Drawing: A Simple Guide", "creator": "Alphonso Dunn", "url": "https://alphonsodunn.com/free-video-tutorials/", "why": "Covers implicit, shadow-based texture rendering for exactly the surface types (wood, stone, brick) this module asks you to differentiate.", "verified": true}
+  {"type": "Book", "title": "Pen and Ink Drawing: A Simple Guide", "creator": "Alphonso Dunn", "url": "https://www.amazon.com/Pen-Ink-Drawing-Simple-Guide/dp/0997046538", "why": "Covers implicit, shadow-based texture rendering for exactly the surface types (wood, stone, brick) this module asks you to differentiate.", "verified": true}
 ],
 "quiz": [
   {"q": "According to the pattern-versus-texture distinction, what is a brick wall's repeating grid of rectangles considered?", "options": ["Texture", "Pattern", "Neither pattern nor texture", "Both simultaneously with no distinction"], "correct": 1, "explain": "The repeating grid of brick shapes is a pattern; the actual texture is the pitted, irregular surface of each brick plus the recessed mortar joints between them."},
