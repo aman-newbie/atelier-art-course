@@ -2013,6 +2013,135 @@ const TRANSLATIONS_HI = {
       "Ek stylized reference ko reverse-engineer karke identify kar sakta/sakti hoon ki ye likely kaunsi realistic structure pe built hai."
     ],
     nextStep: "Body & Anatomy complete ho gaya. Next: Nature & Architecture \u2014 trees, plants, rocks, water, sky, weather, phir buildings, interiors, aur cities."
+  },
+
+  m48: {
+    hook: "Ek tree ek flat stick nahi hai green fluff ke saath \u2014 ye Leonardo ke branching law ko three-dimensional space mein obey karta hua tapering cylinders ka ek expanding hydraulic network hai.",
+    whyItMatters: [
+      "Beginners almost hamesha trees ko 2D lollipop sticks ya flat branching forks ki tarah draw karte hain, is fact ko ignore karte hue ki ek trunk ek heavy, grounded cylinder hai perspective mein rooted.",
+      "Ye module Module 7 wale cylinder construction aur Module 10 wale combine-and-cut logic ko seedha organic structures pe apply karta hai: har branch ek cylinder hai jo split hone se pehle 3D space mein twist, turn, aur foreshorten karta hai."
+    ],
+    coreIdea: [
+      "Trunk aur branches fundamentally <b>tapering cylinders</b> hain. Trunk root flare pe (jahan ye ground plane mein anchor hota hai) sabse widest se start hota hai aur gradually ascend karte hue narrow hota jaata hai. Har branch ko parent cylinder ki surface se emerge hona chahiye, silhouette edge se attached ek tangent line ki tarah nahi.",
+      "<b>Leonardo ka branching rule</b> (conservation of area) dictate karta hai ki kisi bhi fork pe sabhi child branches ka combined cross-sectional thickness roughly parent branch ke thickness ke barabar hota hai split se seedha pehle. Ek parent branch kabhi apne child branches se patla nahi hota, aur child branches kabhi combine hokar parent ki girth se zyada nahi hote.",
+      "Branches trunk ke poore circumference ke around three dimensions mein <b>cylindrical cross-contours</b> (Module 7) use karke grow karti hain. Branches viewer ki taraf emerge karti hain (heavily foreshortened), viewer se door (partially occluded), aur sides ki taraf. Sirf left-and-right branches draw karna tree ko ek pressed specimen mein flatten kar deta hai.",
+      "Branch joints ek organic <b>collar joint</b> banate hain (ek slight swelling ya socket) jahan child branch parent wood mein anchor hoti hai. Branches growth nodes (phototropism) pe direction change karti hain, angular gestures aur structural rhythm create karte hue, limp, rubbery noodles ki jagah."
+    ],
+    mistakes: [
+      "Branches ko sirf 2D left aur right silhouette edges pe draw karna, ek flat, pressed-flower appearance create karte hue bina kisi depth ke.",
+      "Taper ke rule ko violate karna: child branches ko parent trunk se thicker banana, ya bina narrowing ke uniform-width pipes draw karna.",
+      "Branches ko sharp 90-degree right angles pe attach karna bina organic collar joints ya directional flow lines ke.",
+      "Straight, rubbery limbs draw karna jinme seasonal growth nodes pe distinct angular direction changes ki kami ho."
+    ],
+    proTips: [
+      "Har branch ke through continuous centerline gesture curves draw karo cylindrical volume aur cross-contour ellipses establish karne se pehle.",
+      "Hamesha pehle wo branches draw karo jo directly viewer ki taraf aur viewer se door point karti hain, side branches add karne se pehle 3D depth lock in karne ke liye.",
+      "Trunk ke base ko outward flay karo 3 ya 4 visible root buttresses mein, tree ko ground plane mein firmly anchor karne ke liye."
+    ],
+    practice: {
+      warmup: "5 branching cylinders 2-point perspective mein construct karo, ensure karte hue ki child branch diameters parent branch diameter tak sum ho jaayein.",
+      daily: "Reference se ek complete bare tree skeleton draw karo, primary trunk, secondary boughs, aur tertiary twigs ko space mein track karte hue.",
+      weekly: "Teen distinct tree species ka ek comparative study karo (jaise Oak heavy angular boughs ke saath, Birch slender upright curves ke saath, Pine ek dominant central mast ke saath), purely skeletal branching rules pe focus karte hue.",
+      challenge: "Ek large twisting deciduous tree draw karo ek extreme low-angle perspective (worm's-eye view) se, branches ko overhead foreshortened karte hue."
+    },
+    quiz: [
+      {q:"Leonardo ka branching rule tree branches ke ek fork pe thickness ke baare mein kya state karta hai?", options:["Child branches hamesha parent trunk se do guna thick hoti hain","Child branches ka combined cross-sectional area, split se pehle wale parent branch ke cross-sectional area ke barabar hota hai","Branches root se tip tak ek single uniform cylinder width maintain karti hain","Har split branch thickness ko exactly aadha kar deta hai, branch count chahe jo bhi ho"], correct:1, explain:"Leonardo ka branching rule (conservation of area) kehta hai ki ek fork pe sabhi child branches ke cross-sectional thicknesses ka sum, split se seedha pehle wale parent branch ki thickness ke barabar hota hai."},
+      {q:"Branches ko sirf left aur right silhouettes tak extend karke draw karna tree ko unnatural kyun banata hai?", options:["Ye light sources ignore karke perspective ke rule ko violate karta hai","Ye Z-axis mein viewer ki taraf aur door grow karti branches omit karke tree ko ek 2D plane mein flatten kar deta hai","Ye trunk ko root base pe bahut thick dikhata hai","Trees nature mein sirf vertical spirals mein grow karte hain"], correct:1, explain:"Branches trunk ke 360-degree circumference ke around radially emerge karti hain; viewer ki taraf aur door grow karti foreshortened branches draw na karna 3D illusion destroy kar deta hai."},
+      {q:"Jahan ek secondary branch main trunk se connect hoti hai wahan kaunsa structural transition draw hona chahiye?", options:["Ek sharp 90-degree right angle bina kisi transitional line ke","Ek swollen organic collar joint jahan branch cylinder parent wood mein anchor ho", "Ek perfectly straight tangent line outer contour ke along","Ek concave hemispherical sphere bina kisi overlap ke"], correct:1, explain:"Ek collar joint us organic swelling aur wood layering ko represent karta hai jahan ek branch trunk mein anchor hoti hai, ensure karte hue ki branch volume se grow hoti hui read ho, paste ki hui nahi."}
+    ],
+    checklist: [
+      "Ek tree trunk ko spreading root flare buttresses use karke ground mein anchor kar sakta/sakti hoon.",
+      "Leonardo ke branching rule ko apply kar sakta/sakti hoon taaki child branch thicknesses parent branch thickness tak sum hon.",
+      "Foreshortened cylindrical cross-contours use karke viewer ki taraf aur door emerge karti branches draw kar sakta/sakti hoon.",
+      "Branch growth nodes pe distinct angular direction changes dikha sakta/sakti hoon, limp curves ki jagah."
+    ],
+    nextStep: "Ab jab tumne tree ka skeletal wooden armature 3D space mein construct kar liya hai, Module 49 sikhata hai ki in boughs ke across foliage ke volumetric masses ko kaise hang karein, individual leaves draw kiye bina."
+  },
+
+  m49: {
+    hook: "Ek tree canopy millions drawn leaves nahi hai \u2014 ye interlocking 3D geometric volumes ka ek cloud hai jo ek single dominant light source se lit hai, leaf texture sirf terminator edges pe suggest ki gayi.",
+    whyItMatters: [
+      "Beginners instinctively har single leaf ko small scrawls ya repetitive loops se draw karne ki koshish karte hain, jo tree ko visual static mein flatten kar deta hai bina kisi depth ya lighting structure ke.",
+      "Ye module tree construction (Module 48) ko directly light aur shadow (Module 11) aur shading systems (Module 12) se connect karta hai: foliage solid spherical aur cloud-like masses ki tarah behave karta hai jo light catch karta hai, neeche wale masses pe shadows cast karta hai, aur neeche wale wooden armature ki glimpses reveal karta hai."
+    ],
+    coreIdea: [
+      "Foliage canopy distinct <b>volumetric clusters</b> (macro-forms) mein simplify hota hai jo spheres, eggs, ya rounded polyhedrons jaise resemble karte hain, branch armature se supported. Har cluster ka apna distinct highlight, midtone, core shadow, aur cast shadow hota hai.",
+      "Ek macro <b>global lighting hierarchy</b> poore tree ko govern karti hai: poore tree ka top sabse brightest sunlight catch karta hai, jabki lower clusters upper canopy masses ke cast kiye gaye global shadow ke andar sit karte hain, individual cluster lighting chahe jo bhi ho.",
+      "<b>Negative space windows</b> (sky holes) realism ke liye crucial hain. Foliage kabhi ek impenetrable solid wall nahi banata; isme intentional gaps hote hain jahan sky peek through karti hai aur interior branches, deep shadow mein rendered, visible ho jaate hain.",
+      "Leaf detail sirf <b>terminator line</b> aur outer silhouette edge pe render hona chahiye (Module 13 wala texture-density principle). Deep shadow ya pure light ke andar crisp leaves draw karna value massing ko ruin kar deta hai aur form ko flatten kar deta hai."
+    ],
+    mistakes: [
+      "Poori canopy ke across individual leaf outlines draw karna, bina kisi volume ke noisy visual clutter create karte hue.",
+      "Poore tree canopy ko ek giant solid green broccoli shape ki tarah treat karna bina kisi internal cluster separation ya sky holes ke.",
+      "Har chote foliage clump ko full black-to-white contrast ke saath shade karna, poore tree ke global light-to-shadow gradient ko ignore karte hue.",
+      "Wooden branch structure ko poori tarah ek solid helmet of leaves ke andar chhupa dena, branches ko foliage clumps support aur interweave karne dene ke bajaye."
+    ],
+    proTips: [
+      "Apne reference ko squint karo jab tak foliage 3-4 distinct value shapes (light, halftone, dark) mein merge na ho jaaye, koi bhi texture marks banane se pehle.",
+      "Apni canopy ka 15\u201320% 'sky holes' ki tarah open chhodo jahan background light aur dark structural branches show through hon.",
+      "Volume pehle establish karne ke liye ek broad, flat shading stroke use karo, aur sirf shadow boundary (terminator) ke along crisp leaf-shaped contour marks use karo."
+    ],
+    practice: {
+      warmup: "4 overlapping spheres draw karo aur unhe ek single directional light source se shade karo ek 3D foliage cluster simulate karne ke liye.",
+      daily: "Ek full tree canopy draw karo sirf do values use karke (sunlit mass vs. shadow mass) visible sky holes aur structural branch peek-throughs ke saath.",
+      weekly: "Ek full deciduous tree ka summer versus early autumn mein ek value study karo, canopy ko 4 value tiers mein massing karte hue bina kisi individual leaf draw kiye.",
+      challenge: "Ek complex oak canopy ko strong rim lighting / backlight ke neeche render karo, interior shadow masses ko unified rakhte hue jabki luminous silhouette edges carve karte hue."
+    },
+    quiz: [
+      {q:"Ek tree canopy render karte waqt individual leaf texture kahan concentrate hona chahiye?", options:["Poore tree mein uniformly, especially deep shadow areas ke andar","Terminator line (light aur shadow ke beech ki boundary) ke along aur outer silhouette edges ke along","Sirf brightest specular highlight area mein","Directly trunk ke neeche wale darkest cast shadows mein"], correct:1, explain:"Texture density principle (Module 13) follow karte hue, form texture terminator aur silhouette ke along sabse legible hoti hai jahan light edges ke across rake karti hai; deep shadow ke andar detail render karna value mass flatten kar deta hai."},
+      {q:"Ek tree canopy ke andar 'sky holes' (negative space windows) ka primary function kya hai?", options:["Areas unfinished chhodkar drawing time save karna","Solid silhouette ko break karna, depth dikhana, aur foliage ko support karti internal branch armature reveal karna","Drawing mein artificial lens flares create karna","Roots ko direct sunlight receive karne dena"], correct:1, explain:"Sky holes beginner trees wali unnatural 'solid helmet' appearance ko break karte hain, negative space provide karte hue jo prove karta hai ki canopy detached organic leaf masses se bani hai jo interior branches se supported hain."},
+      {q:"Global lighting hierarchy tree pe individual foliage clumps ko kaise affect karti hai?", options:["Har individual clump ke paas identical 100% white highlights aur 100% black shadows hone chahiye","Upper masses ke overall shadow mein sit karte lower clumps ke darker highlights aur compressed value ranges hote hain","Global lighting sirf trunk ko affect karti hai, jabki foliage apne independent light sources banata hai","Ground reflection ki wajah se tree ka bottom hamesha top se lighter hota hai"], correct:1, explain:"Poore tree ka ek master light-and-shadow relationship hota hai: lower global shadow zone mein positioned clumps ki values lower aur compress honi chahiye taaki wo top sunlit masses se compete na karein."}
+    ],
+    checklist: [
+      "Ek tree canopy ko 3-5 distinct 3D volumetric masses (spherical/ovoid clusters) mein group kar sakta/sakti hoon.",
+      "Individual clumps shade karne se pehle poore tree ke across ek global light-to-shadow hierarchy establish kar sakta/sakti hoon.",
+      "Sky holes integrate kar sakta/sakti hoon jo background light aur interior skeletal branches reveal karein.",
+      "Leaf-edge texture ko strictly shadow terminator aur outer silhouette ke along concentrate kar sakta/sakti hoon."
+    ],
+    nextStep: "Tree trunks aur canopy massing master hone ke baad, Module 50 ground level tak move karta hai bushes, overlapping shrubs, aur wild undergrowth construct karne ke liye."
+  },
+
+  m50: {
+    hook: "Bushes aur ground vegetation random scribble piles nahi hain \u2014 ye layered, overlapping ribbons aur domes hain jo root centers se fan out hote hain aur terrain mein nest karte hain.",
+    whyItMatters: [
+      "Ground plants aur shrubs hi wo cheez hain jo hard architecture, trees, aur ground planes ko ek believable, cohesive environment mein integrate karte hain. Jab poorly draw kiye jaayein, wo detached green pom-poms ki tarah float karte hain.",
+      "Ye module leaf flow (Module 10 organic construction) aur textural hierarchy (Module 13) pe build karta hai: small plants ko 3D perspective grids obey karna hota hai aur atmospheric scale establish karne ke liye depth mein ek doosre ke saath overlap karna hota hai."
+    ],
+    coreIdea: [
+      "Leaves aur grass ke blades <b>bending 3D ribbons</b> ki tarah function karte hain. Har leaf ek central spine (flow line) follow karta hai jo space mein three dimensions mein curve karta hai, top surface, bottom surface, aur foreshortened turns dikhata hua (leaf construction method).",
+      "Bushes <b>compound hemisphere masses</b> ki tarah structure karte hain, soil mein ek central stem origin pe rooted. Ground plane ke top pe sit karne ke bajaye, undergrowth ground contours ko penetrate aur overlap karta hai.",
+      "<b>Depth layering</b> use karo (foreground large/detailed, midground clumped masses, background flat silhouettes) undergrowth ko visual soup mein badalne se rokne ke liye. Foreground plants species identification establish karte hain; background plants landscape volume establish karte hain.",
+      "<b>Silhouette rhythm</b> ko vary karo: natural undergrowth mein alternating broad leaves, spiky ferns, delicate grasses, aur dead organic debris hote hain. Uniformly sized bushes artificial, manicured artificiality create karte hain."
+    ],
+    mistakes: [
+      "Grass aur weeds ko individual vertical spikes ki tarah draw karna ek flat baseline se ek hairbrush ki tarah nikalte hue.",
+      "Leaves ko flat 2D teardrops ki tarah draw karna bina folding edges, twisting planes, ya foreshortening dikhaye.",
+      "Sabhi bushes ko same spherical size aur texture density dena, ek repetitive pattern create karte hue.",
+      "Shrubs ko terrain ke upar float karwana bina occlusion shadows aur ground-contact embedding draw kiye."
+    ],
+    proTips: [
+      "Ek leaf ki central curve line pehle draw karo uska 3D bend determine karne ke liye, do outer contour edges draw karne se pehle.",
+      "Grass aur undergrowth ko overlapping triangular wedges mein group karo dark occlusion shadows ke saath base pe, single blades draw karne ke bajaye.",
+      "Bade rocks aur trees ke base pe smaller pioneer weeds aur leafy clusters place karo unhe scene mein anchor karne ke liye."
+    ],
+    practice: {
+      warmup: "10 twisting ribbon leaves draw karo viewer ki taraf aur door bend karte hue 3D space mein, underside ko top se darker shade karte hue.",
+      daily: "Teen distinct shrubs construct karo (jaise broadleaf bush, flowering perennial, spiky fern) volumetric dome blocking use karke.",
+      weekly: "Ek dense forest floor study draw karo jisme teen distinct depth layers dikhein: foreground high-detail fern, midground tangled bramble, background groundcover.",
+      challenge: "Ek complex roadside bank construct karo embedded boulders, cascading ivy, wild grasses, aur exposed root structures ke saath 2-point perspective mein."
+    },
+    quiz: [
+      {q:"3D space mein ek curved leaf construct karte waqt recommended pehla step kya hai?", options:["Serrated jagged outline pehle draw karo","Ek single central flow line (spine) draw karo jo leaf ki directional curve aur space mein bend establish kare","Poore leaf ko solid black mein shade karo","Kisi bhi boundary edges establish karne se pehle veins draw karo"], correct:1, explain:"Centerline flow pehle draw karna establish karta hai ki leaf 3D space mein kaise move karta hai, jisse tum us motion ke around outer ribbon edges aur foreshortening correctly build kar sakte ho."},
+      {q:"'Hairbrush' mistake avoid karne ke liye grass aur small undergrowth kaise draw kiye jaane chahiye?", options:["Har blade of grass ko bottom border ke along ek isolated straight vertical line ki tarah draw karo","Grass blades ko overlapping clumps aur triangular wedges mein group karo dark occlusion shadows ke saath base pe","Sirf circular cross-hatching use karke grass draw karo","Ground ko green color karo bina koi shapes draw kiye"], correct:1, explain:"Grass clustered tufts aur overlapping blade masses mein grow karta hai. Blades ko base occlusion shadows ke saath volumetric wedges mein group karna depth aur physical volume convey karta hai."},
+      {q:"Landscape undergrowth mein leaf shapes aur plant types (silhouette rhythm) vary karna critical kyun hai?", options:["Ye viewer ko har plant species count karne pe force karta hai","Ye unnatural repetition break karta hai aur broad, spiky, aur delicate textures contrast karke organic visual interest create karta hai","Ye perspective grids ki zaroorat eliminate karta hai","Different plants shadows cast nahi karte"], correct:1, explain:"Natural vegetation diverse hoti hai; broadleaf forms, spiky grasses, aur delicate fronds ko alternate karna artificial repetition rokta hai aur believable environment scale establish karta hai."}
+    ],
+    checklist: [
+      "Dynamic leaves ko central flow lines use karke 3D bending ribbons ki tarah construct kar sakta/sakti hoon.",
+      "Bushes ko root origins se fan out hoti compound hemispherical masses mein group kar sakta/sakti hoon.",
+      "Grass aur weeds ko overlapping clumps mein dark base occlusion shadows ke saath render kar sakta/sakti hoon.",
+      "Trees aur rocks ke base ke around small undergrowth integrate kar sakta/sakti hoon unhe ground se anchor karne ke liye."
+    ],
+    nextStep: "Ab jab tum organic living flora construct kar sakte ho, Module 51 rigid, inorganic landscape forms tackle karta hai: faceted rocks, cliffs, aur weathered stone formations."
   }
 
 };
