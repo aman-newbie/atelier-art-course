@@ -1170,6 +1170,64 @@ const CURRICULUM_4 = [
 ],
 "nextStep": "You now have a real color-grading toolkit built on non-destructive adjustment layers. Module 103 moves to photobashing \u2014 combining real photographic elements into a cohesive concept art or illustration piece, a technique that relies heavily on the color and tone matching skills from this module."
 }
+,
+{
+"id": "m103",
+"plate": 103,
+"title": "Photobashing",
+"difficulty": "Advanced",
+"studyTime": "18 min",
+"practiceTime": "30 min/day",
+"prereq": ["m102"],
+"hook": "A crowded photograph of a real city street can become a desolate warzone concept with a handful of confident edits \u2014 which is exactly why photobashing became standard practice for game and film concept artists working against tight deadlines.",
+"whyItMatters": [
+  "Photobashing pulls together nearly everything from this arc: non-destructive layers and masks (Module 101), blend modes and color grading (Module 102), and the material and lighting knowledge from the entire Digital Painting arc, all applied to blending real photographic elements into a single believable piece.",
+  "This technique exists specifically to solve a real production problem: concept artists are responsible for visualizing an overwhelming amount of content for a film or game, and photobashing lets a skilled artist reach a highly detailed, realistic result far faster than painting every element from scratch."
+],
+"coreIdea": [
+  "Photobashing is merging and blending photographs (or 3D-rendered assets) together while painting and compositing them into one finished piece \u2014 it's distinct from simple photo editing, which augments a single image without changing its underlying structure or combining multiple sources.",
+  "The technique doesn't replace fundamentals; it depends on them. An artist needs a functional understanding of lighting, composition, and form to select photos that will actually work together and to paint the connective tissue (shadows, lighting adjustments, integrated details) that makes bashed elements read as one coherent image.",
+  "Photo selection matters as much as the blending itself: high-quality, sharp, easy-to-cut-out images from reputable stock sources or free resources like Wikimedia Commons save enormous time compared to fighting with low-quality or awkwardly-lit source photos.",
+  "There is a genuine, ongoing debate in the art community about photobashing's legitimacy as \\\"true\\\" digital art (some contests reject photobashed entries), but there's wide agreement that skillful photobashing, used to serve a design and visualization goal, takes real artistic skill to execute well."
+],
+"mistakes": [
+  "Treating photobashing as simply cutting and pasting photos together without further work, when successfully integrating photos requires repainting lighting, adjusting color, and adding connective details.",
+  "Using low-quality, awkwardly-lit, or hard-to-cut-out source photos, which creates far more integration work than starting with clean, well-lit reference images.",
+  "Ignoring copyright and licensing when sourcing photos, instead of using licensed stock photography or genuinely free sources like Wikimedia Commons.",
+  "Relying on photobashing as a substitute for fundamentals instead of a speed tool built on top of them \u2014 without a grasp of lighting and form, bashed elements won't integrate believably no matter how they're blended.",
+  "Presenting photobashed work in a context (a contest or portfolio category) that explicitly excludes it, given the real, active debate about its categorization in some parts of the art community."
+],
+"proTips": [
+  "Start with a sketch or a base photograph that establishes the composition, then add and blend additional photo elements or painted details on top to make everything fit together.",
+  "Prioritize sourcing high-quality, sharp, easy-to-cut-out photos over settling for the first image found \u2014 the time saved in blending more than makes up for extra time spent searching.",
+  "Use free software like Krita or GIMP if you don't have Photoshop; both can handle the combination of photo editing and digital painting that photobashing requires.",
+  "When bashing multiple textures onto one surface (like feathers or fur), align pieces carefully to avoid an obvious tiled or repeated pattern, which is one of the fastest ways bashed texture reads as fake."
+],
+"practice": {
+  "warmup": "Find two free, high-quality photos (from a source like Wikimedia Commons) of related subjects and practice cutting one out cleanly and placing it into the other.",
+  "daily": "Take a rough sketch or painted background and photobash in one photographic element, adjusting its lighting and color to match the surrounding scene.",
+  "weekly": "Build a small concept piece that combines at least three photo sources with painted connective details (shadows, lighting adjustments, blended edges) to unify them.",
+  "challenge": "Take a real-world photo of a location and transform it into a completely different concept (a warzone, an overgrown ruin, a futuristic city) using photobashing and paint-overs, while keeping the underlying photo's composition and lighting logic intact."
+},
+"resources": [
+  {"type": "Video", "title": "Free Concept Art Tutorial: Photobashing Sci-Fi Environments", "creator": "Lincoln Hughes", "url": "https://lincoln-hughes.gumroad.com/l/usAdV", "why": "A genuinely free, hour-long lesson from a working concept artist covering photo-reference blending, lighting, and common mistakes specifically for sci-fi environments.", "summary": "Teaches how to seamlessly use photos to add realistic detail quickly, covering techniques for lighting, perspective, color, and composition when blending photo reference into a concept piece, along with common mistakes made when painting with photo reference and how to avoid them.", "verified": true},
+  {"type": "Article", "title": "What is Photobashing? (With Free Beginner Tutorials)", "creator": "Claire Heginbotham, Concept Art Empire", "url": "https://conceptartempire.com/photobashing/", "why": "A free, balanced overview of the technique, honestly addressing the legitimacy debate while explaining why professional concept artists rely on it, plus links to further free tutorials.", "summary": "Explains photobashing as merging and blending photographs or 3D assets while painting and compositing them into one piece, distinguishes it from simple photo editing, honestly presents the ongoing debate about its legitimacy as \\\"true\\\" digital art versus its practical value for concept art production, and recommends free software (Krita, GIMP) and free image sources (Wikimedia Commons) for artists without access to paid tools.", "verified": true}
+],
+"quiz": [
+  {"q": "How does photobashing differ from simply \\\"photoshopping\\\" a single image?", "options": ["They are exactly the same technique", "Photobashing merges and blends multiple photographs (or 3D assets) together while painting over them into one new piece, rather than just augmenting one existing image while keeping its structure", "Photobashing never involves any painting, only photo editing", "Photoshopping always requires more photos than photobashing"], "correct": 1, "explain": "Photoshopping augments and changes a single image while keeping its underlying structure; photobashing is more creative, combining multiple photos and painting over them into an entirely new composition."},
+  {"q": "Why do fundamentals like lighting, composition, and form still matter for photobashing?", "options": ["They don't matter at all once photos are being used", "Selecting photos that will actually work together and painting the connective details (shadows, adjusted lighting) that unify them both require a functional understanding of these fundamentals", "Fundamentals only apply to fully hand-painted digital art", "Photobashing eliminates the need to understand light and form entirely"], "correct": 1, "explain": "Photobashing depends on fundamentals: choosing compatible photos and painting the details that make them read as one coherent scene both require understanding lighting, composition, and form."},
+  {"q": "Why is sourcing high-quality, easy-to-cut-out photos worth the extra search time?", "options": ["Photo quality has no effect on the final result", "It significantly reduces the integration work needed later, since clean, well-lit photos blend more easily than low-quality or awkward source images", "Only paid stock photos can legally be used in any artwork", "Higher resolution photos always look worse when painted over"], "correct": 1, "explain": "Starting with high-quality, easy-to-work-with photos reduces the time and difficulty of the blending and integration work that follows, more than making up for the extra time spent searching."},
+  {"q": "What is the ongoing debate mentioned regarding photobashing?", "options": ["Whether photobashing is technically possible in modern software", "Whether photobashing counts as \\\"true\\\" digital art, since some digital art contests reject photobashed entries while others value it as a legitimate professional technique", "Whether photobashing requires expensive software", "There is no debate about photobashing in the art community"], "correct": 1, "explain": "There's a genuine, ongoing debate about photobashing's categorization as an art form, with some contests excluding it, while there's broad agreement that it requires real skill to execute well."},
+  {"q": "What is a good free source for photo reference mentioned for photobashing?", "options": ["There are no free, legal sources for photo reference", "Wikimedia Commons, alongside using free software like Krita or GIMP instead of paid tools", "Only paid stock photography sites can be used legally", "Screenshots from copyrighted films are recommended as a free source"], "correct": 1, "explain": "Wikimedia Commons is mentioned as a free, legitimate source for photo reference, and free software like Krita or GIMP can handle the photo editing and painting combination photobashing requires."}
+],
+"checklist": [
+  "I can explain the difference between photobashing and simple photo editing.",
+  "I can select clean, well-lit, easy-to-cut-out photos to reduce later integration work.",
+  "I can blend a photographic element into a painted or photographic scene by adjusting its lighting and color to match.",
+  "I can use free, legitimate photo sources and software for photobashing."
+],
+"nextStep": "You can now blend real photographic elements into a cohesive piece. Module 104 extends this further with 3D-assisted art \u2014 using free 3D software to build blockouts, lighting studies, and reference geometry that can be painted over, another major speed and accuracy tool for concept work."
+}
 ]},
 {id:'professional-production', title:'Professional Production & Specializations', status:'soon', order:11,
     desc:'Editorial illustration, comics, manga, webtoon, visual development, concept art, game art, animation pre-production, print production, and client work.',
