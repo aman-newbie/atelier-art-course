@@ -1228,6 +1228,64 @@ const CURRICULUM_4 = [
 ],
 "nextStep": "You can now blend real photographic elements into a cohesive piece. Module 104 extends this further with 3D-assisted art \u2014 using free 3D software to build blockouts, lighting studies, and reference geometry that can be painted over, another major speed and accuracy tool for concept work."
 }
+,
+{
+"id": "m104",
+"plate": 104,
+"title": "3D-Assisted Art",
+"difficulty": "Advanced",
+"studyTime": "18 min",
+"practiceTime": "30 min/day",
+"prereq": ["m103"],
+"hook": "A concept artist doesn't need to be a 3D modeler to use 3D \u2014 a handful of rough, ugly cubes arranged in free software can solve a perspective and lighting problem that would take hours to get right freehand.",
+"whyItMatters": [
+  "Like photobashing (Module 103), 3D-assisted art is a speed and accuracy tool that sits on top of your existing fundamentals, not a replacement for them \u2014 it's a widely used, well-established professional technique, not a shortcut unique to beginners.",
+  "3D blocking is especially valuable for exactly the kind of environments and hard-surface subjects this curriculum has focused on: anything with straight lines, consistent perspective, or complex lighting benefits the most, since 3D software calculates perspective and light physically instead of you estimating it by eye."
+],
+"coreIdea": [
+  "A 3D blockout uses simple, rough shapes (boxes, cylinders, spheres) arranged in a free 3D program like Blender to establish accurate perspective, proportion, and composition before any detailed painting begins \u2014 messy topology and ugly geometry are completely fine at this stage, since the blockout is a tool, not the final product.",
+  "The technique works especially well for straight-edged, architectural, or hard-surface subjects, where 3D can calculate consistent perspective and lighting logic automatically; very organic, curvy subjects (a flowing cape, a creature's soft anatomy) tend to benefit less and are often faster to handle by hand.",
+  "A common workflow moves between 2D and 3D repeatedly rather than treating 3D as a one-way pipeline: rough 2D thumbnails establish the idea, 3D blocks out accurate perspective and major forms, then a 2D paintover adds detail, texture, and painterly quality on top of the 3D render.",
+  "Don't let the blockout box you in \u2014 professional concept artists consistently emphasize treating the 3D base as a flexible starting point, freely adding new elements, scrapping parts that aren't working, or overpainting entirely, rather than being limited to exactly what was modeled."
+],
+"mistakes": [
+  "Spending excessive time perfecting a 3D blockout's topology or detail when its only job is to establish perspective, proportion, and rough lighting before a paintover.",
+  "Using 3D for subjects it's poorly suited to, like flowing fabric or soft organic anatomy, where freehand painting is often faster and more expressive.",
+  "Treating the 3D render as the finished piece instead of as a base for a 2D paintover that adds painterly detail, texture, and polish.",
+  "Feeling locked into exactly what was modeled in the blockout, rather than freely adding, removing, or scrapping parts of it during the paintover stage.",
+  "Skipping the development of freehand perspective and drawing skills because 3D can handle it, when a solid understanding of perspective is still what lets you judge whether a 3D blockout is even working."
+],
+"proTips": [
+  "Build blockouts intentionally messy and fast \u2014 rough box shapes with no clean topology are completely appropriate, since the blockout's only job is perspective, proportion, and rough composition.",
+  "Reserve 3D blocking for straight-edged or architectural subjects where it saves real time, and default to freehand painting for organic, flowing forms where 3D offers little advantage.",
+  "Move back and forth between 2D and 3D as needed rather than committing to a strict one-way pipeline \u2014 a rough 2D thumbnail, a 3D blockout, then a 2D paintover is a common, flexible sequence.",
+  "When paint-overing a 3D render, add rough brush strokes and deliberate imperfection early, since a raw 3D render can look too clean and 'physically correct' compared to a natural painting."
+],
+"practice": {
+  "warmup": "In free 3D software, block out a simple room or street using only cubes and cylinders, focusing purely on getting proportions and perspective right, not detail.",
+  "daily": "Take a rough 2D thumbnail idea for an architectural or hard-surface subject and build a quick 3D blockout of it, then take a screenshot to paint over.",
+  "weekly": "Complete one small piece using the full 2D-3D-2D workflow: a rough thumbnail, a 3D blockout for perspective and lighting, and a full paintover adding painterly detail and texture.",
+  "challenge": "Block out the same subject twice \u2014 once a hard-surface, straight-edged subject, once an organic, curvy one \u2014 and compare how much time and value 3D actually added in each case."
+},
+"resources": [
+  {"type": "Video", "title": "Blender Beginners For Concept Art \u2014 TUTORIAL", "creator": "Critical Giants", "url": "https://youtu.be/CHIZtZ2JU3A", "why": "A free, complete beginner walkthrough showing a simple Blender blockout becoming a finished mountain monastery concept piece in Photoshop.", "summary": "Walks a complete beginner through building a simple Blender blockout using basic shapes, then taking a screenshot render into Photoshop for a full paintover, demonstrating the whole 3D-to-2D concept art pipeline from a blank scene to a finished piece.", "verified": true},
+  {"type": "Article", "title": "How simple 3D blockouts help build realistic fantasy art", "creator": "Billy Christian, Creative Bloq", "url": "https://www.creativebloq.com/art/digital-art/how-simple-3d-blockouts-help-build-realistic-fantasy-art", "why": "A free, detailed, step-by-step breakdown from a working artist showing exactly which parts of a piece benefit from 3D (armor, hard surfaces) and which are better handled in 2D (hair, fabric folds).", "summary": "Walks through a real fantasy character piece, explaining that hard-surface elements like armor and architecture are modeled simply in Blender and lit with basic three-point lighting, while organic elements like hair and fabric folds are deliberately left to 2D repainting since they're more flexible and enjoyable to refine by hand, with color grading and final polish applied afterward in Photoshop.", "verified": true}
+],
+"quiz": [
+  {"q": "What is the main purpose of a 3D blockout in a concept art workflow?", "options": ["To produce the final, finished piece of art", "To establish accurate perspective, proportion, and composition using rough shapes before detailed painting begins", "To replace the need for any painting skill entirely", "To create game-ready assets with clean topology"], "correct": 1, "explain": "A blockout's job is to quickly and accurately establish perspective, proportion, and rough composition using simple shapes; it is not meant to be polished or final."},
+  {"q": "What kind of subjects benefit most from a 3D-assisted approach?", "options": ["Flowing fabric and soft organic anatomy", "Straight-edged, architectural, or hard-surface subjects, where 3D can calculate perspective and lighting automatically", "3D offers no advantage for any type of subject", "Only subjects with no straight lines at all"], "correct": 1, "explain": "3D blocking is especially useful for hard-surface, architectural subjects where consistent perspective and lighting logic are hard to estimate by eye, while organic, curvy forms often benefit less."},
+  {"q": "According to the module, what is a common, flexible workflow combining 2D and 3D?", "options": ["3D only, with no 2D work at any stage", "A rough 2D thumbnail, followed by a 3D blockout for perspective, followed by a 2D paintover for detail and polish", "2D only, with 3D never used at all", "A strict one-way pipeline where 3D is always the very last step"], "correct": 1, "explain": "A common, flexible sequence moves between 2D and 3D repeatedly: a rough 2D idea, a 3D blockout to nail perspective and lighting, then a 2D paintover for painterly detail and polish."},
+  {"q": "Why is it important not to feel locked into exactly what was modeled in a 3D blockout?", "options": ["Because 3D blockouts cannot be changed once created", "Professional concept artists emphasize treating the blockout as a flexible base, freely adding, removing, or scrapping parts during the paintover", "Because 3D software prevents any further painting", "It is not actually important to stay flexible"], "correct": 1, "explain": "Working artists consistently stress using the 3D base as a flexible starting point rather than being boxed in by it, freely adjusting or scrapping parts during the paintover stage."},
+  {"q": "Why might a raw 3D render need extra work before it looks like a natural painting?", "options": ["3D renders are always identical to hand-painted work", "A raw render can look too clean and 'physically correct,' so adding rough brush strokes and deliberate imperfection during paintover helps it feel painterly", "3D renders cannot be painted over at all", "This is not a real consideration in 3D-assisted art"], "correct": 1, "explain": "A physically accurate 3D render can look sterile compared to natural painting, so adding rough strokes and intentional imperfection during the paintover stage helps bridge that gap."}
+],
+"checklist": [
+  "I can build a rough, messy 3D blockout focused only on perspective and proportion, not detail.",
+  "I can judge whether a subject (hard-surface vs. organic) is a good candidate for 3D assistance.",
+  "I can move flexibly between 2D and 3D stages rather than following a strict one-way pipeline.",
+  "I can paint over a 3D render with deliberate texture and imperfection rather than leaving it looking sterile."
+],
+"nextStep": "You now have a genuine 3D-to-2D workflow in your toolkit. Module 105 turns to a newer, actively-debated tool \u2014 AI-assisted workflows \u2014 covering what responsible, disclosed use actually looks like for a working artist."
+}
 ]},
 {id:'professional-production', title:'Professional Production & Specializations', status:'soon', order:11,
     desc:'Editorial illustration, comics, manga, webtoon, visual development, concept art, game art, animation pre-production, print production, and client work.',
