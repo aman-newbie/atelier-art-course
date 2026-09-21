@@ -1,5 +1,5 @@
 const CURRICULUM_4 = [
-{id:'digital-fundamentals', title:'Digital Art Fundamentals', status:'soon', order:8,
+{id:'digital-fundamentals', title:'Digital Art Fundamentals', status:'live', order:8,
     desc:'Software-agnostic digital basics — workspace, tablets, brush engines, layers, selections, transforms, and clean digital line art — built so the skill transfers across any application.',
     moduleCount:8, sample:['Digital Workspace','Drawing Tablets','Brushes','Layers','Selection Tools','Digital Line Art'],
     modules:[
@@ -467,7 +467,7 @@ const CURRICULUM_4 = [
 "nextStep": "You've completed Digital Art Fundamentals \u2014 workspace, tablet, brushes, layers, selections, transforms, line art, and canvas setup. Every one of these skills carries forward directly into the next arc, Digital Painting & Rendering, where they get applied to full-color, fully-rendered work."
 }
 ]},
-{id:'digital-painting', title:'Digital Painting & Rendering', status:'soon', order:9,
+{id:'digital-painting', title:'Digital Painting & Rendering', status:'live', order:9,
     desc:'Color theory, value control, lighting, material rendering, edge control, atmospheric effects, and a complete professional illustration workflow.',
     moduleCount:10, sample:['Color Theory','Values','Lighting','Material Rendering','Edge Control','Illustration Workflow'],
     modules:[
