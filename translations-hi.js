@@ -2271,6 +2271,135 @@ const TRANSLATIONS_HI = {
       "Correct value relationships maintain kar sakta/sakti hoon: reflected sky, sky se darker; reflected darks, land se lighter."
     ],
     nextStep: "Ab jab tum calm, flat water planes samajhte ho, Module 54 fluid dynamics introduce karta hai: ripples, crashing waves, moving currents, aur ocean foam."
+  },
+
+  m54: {
+    hook: "Ek wave blue squiggles ka outline nahi hai \u2014 ye energy ka ek rolling cylindrical volume hai jo perspective mein lift karta hai, roll karta hai, break hota hai, aur 3D foam ribbons mein shatter hota hai.",
+    whyItMatters: [
+      "Moving water ko sabse hard natural subjects mein se ek mana jaata hai kyunki ye kabhi still nahi rehta. Wave cycle ki anatomy samjhe bina, drawings chaotic noodle scribbles ban jaate hain bina kisi mass ya momentum ke.",
+      "Ye module seedha Module 53 pe build karta hai: moving water flat mirror plane ko hazaaron miniature tilted facets mein tod deta hai jo sky ke alag alag parts se light catch karte hain, directional highlights, crest translucency, aur trailing foam create karte hue."
+    ],
+    coreIdea: [
+      "Ek breaking wave fundamentally ek <b>unrolling hollow cylinder</b> hai. Back slope gently rise karta hai, crest ek concave curve mein steepen hota hai (barrel), aur lip gravity ke neeche forward curl karta hai turbulent whitewash mein collapse hone se pehle.",
+      "Wave ripples <b>tilted reflective planes</b> create karti hain. Ek ripple ka front slope viewer ki taraf tilt karta hai (dark foreground ya shoreline ko reflect karte hue), jabki back slope door tilt karta hai (upar wali bright sky ko reflect karte hue), moving water ka classic alternating light-and-dark ribbon pattern create karte hue.",
+      "<b>Subsurface scattering aur translucency</b> wave ke thin crest pe hoti hai. Jab sunlight ek breaking wave pe peeche se ya upar se pade, thick base deep blue/green shadow mein rehta hai jabki thin crest vibrant, luminous emerald light se glow karta hai.",
+      "<b>Foam networks</b> (reticulation) wave ki 3D surface ke around cross-contour wireframes (Module 7) ki tarah wrap hote hain. Foam wave face pe elliptical webbing mein stretch hota hai aur trough mein trailing horizontal ribbons mein flatten ho jaata hai."
+    ],
+    mistakes: [
+      "Wave crests ko sharp, random zigzag sawtooth lines ki tarah draw karna, perspective mein smooth cylindrical barrels ki jagah.",
+      "Opaque white foam ko evenly everywhere apply karna, foam lace ko wave form ke curved cross-contour ke along follow karne diye bina.",
+      "Translucent light glow (subsurface scattering) miss kar dena jahan sunlight thin curling wave crest ko illuminate karta hai.",
+      "Wave perspective ignore karna: distance mein ripples ko foreground wali waves ke same size aur spacing se draw karna."
+    ],
+    proTips: [
+      "Poori wave ko ek simple curved architectural barrel vault ki tarah perspective mein block karo koi bhi foam ya splash details add karne se pehle.",
+      "Foam patterns ko elliptical cross-contour lines ki tarah treat karo jo cylinder ki curvature ke around wrap hokar uska volume prove karein.",
+      "Trough ko deep shadow mein rakho aur apna purest white aur highest contrast sirf lip ke crashing impact zone ke liye reserve karo."
+    ],
+    practice: {
+      warmup: "Perspective mein 5 stylized wave cylinders draw karo, curved barrel aur falling lip ko 3D cross-section mein sketch karte hue.",
+      daily: "Open ocean surface ka ek section draw karo jisme ripple frequency horizon ki taraf 1-point perspective mein compress hoti dikhe.",
+      weekly: "Ek breaking coastal wave ka ek master study karo, backlit translucent crest, dark hollow barrel, aur trailing foam lattice capture karte hue.",
+      challenge: "Ek stormy sea draw karo jisme crashing shore waves faceted rock boulders se collide kar rahi hon (Module 51 aur Module 54 combine karte hue)."
+    },
+    quiz: [
+      {q:"Ek breaking wave barrel ki structure ko sabse achhe se kaunsa basic 3D geometric primitive describe karta hai?", options:["Ek flat triangular pyramid","Ek unrolling hollow horizontal cylinder (barrel vault) jo perspective mein forward curl kare","Ek solid static cube","Concentric flat discs ki ek series"], correct:1, explain:"Ek breaking wave water ke ek curling hollow cylinder ki tarah function karti hai jiska lip forward roll karta hai aur perspective mein ek concave trough ke upar gir jaata hai."},
+      {q:"Ek sunlit wave ka thin crest vibrant translucent color se glow karta hua kyun dikhta hai?", options:["Kyunki water mein everywhere bioluminescent chemicals hote hain","Subsurface scattering ki wajah se: light water ke thin section ke through penetrate karti hai aur eye tak pahunchne se pehle internally scatter hoti hai","Kyunki crest sirf moon ko reflect karta hai","Kyunki foam ek mirror ki tarah act karta hai"], correct:1, explain:"Jaise jaise wave crest thin hota jaata hai, light water mass ke through penetrate karti hai (subsurface scattering), water ko internally ek luminous glow se illuminate karte hue thick shadow base ke comparison mein."},
+      {q:"Ek moving wave ke face ke across foam networks (reticulation) kaise draw kiye jaane chahiye?", options:["Canvas ke across uniformly stamped random opaque circles ki tarah","Curved, stretched elliptical webs ki tarah jo wave cylinder ke 3D cross-contour curvature ko follow karein","Solid black grid lines ki tarah","Sirf image ke vertical borders ke along"], correct:1, explain:"Foam directly water surface pe sit karta hai aur water velocity ke saath stretch hota hai, cross-contour lines ki tarah act karte hue jo wave ki 3D cylindrical curvature reveal karte hain."}
+    ],
+    checklist: [
+      "Ek breaking wave ko ek 3D curving cylinder ki tarah construct kar sakta/sakti hoon, ek concave barrel aur forward-pitching lip ke saath.",
+      "Moving surface ripples pe alternating reflection planes render kar sakta/sakti hoon.",
+      "Directional light ke neeche thin curling crest pe translucent subsurface glow dikha sakta/sakti hoon.",
+      "Foam webbing ko wave face ke across uski 3D cross-contour curvature follow karte hue wrap kar sakta/sakti hoon."
+    ],
+    nextStep: "Earth aur waters construct hone ke baad, Module 55 hamari gaze ko sky ki taraf lift karta hai: cloud volumes, atmospheric gradients, aur weather systems."
+  },
+
+  m55: {
+    hook: "Clouds ek blue backdrop se chipke flat cotton balls nahi hain \u2014 ye immense 3D floating sculptures hain flat condensation bases, illuminated tops, aur horizon tak stretch karti perspective depth ke saath.",
+    whyItMatters: [
+      "Beginners sky ko ek empty, uniform blue wash ki tarah treat karte hain random cartoon puffs random heights pe floating ke saath, ek outdoor scene mein scale aur atmosphere ka sense destroy karte hue.",
+      "Ye module light scattering (Module 11), atmospheric perspective (Module 8), aur volumetric massing (Module 10) ko saath baandhta hai: sky ek ceiling plane hai, aur clouds massive geometric forms hain jo khud pe, ek doosre pe, aur neeche wali earth pe shadows cast karte hain."
+    ],
+    coreIdea: [
+      "Sky perspective mein ek <b>curved dome ceiling</b> hai. Clouds randomly hang nahi karte; wo ek horizontal atmospheric altitude layer (<b>condensation level</b>) ke along rest karte hain, cumulus clouds ko characteristically flat, horizontal bottoms aur billowing, rounded tops dete hue.",
+      "Clouds <b>perspective cloud streets</b> mein recede karte hain: seedha upar wale clouds gigantic dikhte hain aur apni undersides reveal karte hain, jabki horizon ke paas wale clouds thin, dense, overlapping horizontal strips mein compress ho jaate hain jo zyada tar apni sunlit vertical faces dikhate hain.",
+      "Sky ek continuous <b>atmospheric gradient</b> exhibit karti hai: zenith pe (seedha upar) deep saturated cyan/ultramarine, horizon pe pale, warm, dusty yellow/white mein transition karta hua, Rayleigh scattering aur ground ke paas dense air particulate ki wajah se.",
+      "Volumetric cloud lighting: har cloud puff ko ek interlocking <b>sphere cluster</b> ki tarah treat karo. Top dome direct sunlight catch karta hai, core shadow middle ke around wrap karti hai, aur flat base earth se warm ambient bounce light catch karta hai."
+    ],
+    mistakes: [
+      "Clouds ko isolated, round cotton balls ki tarah scalloped outlines aur uniform white shading ke saath draw karna.",
+      "Clouds ko rounded, spherical bottoms dena, condensation plane ke saath aligned flat, horizontal bases ki jagah.",
+      "Distant horizon clouds ko upar wale clouds ke same scale aur vertical height se draw karna, sky perspective flatten karte hue.",
+      "Clouds ko dark charcoal/black shadows se shade karna, soft, warm, ya sky-reflected cool grays ki jagah."
+    ],
+    proTips: [
+      "Apni sky ke across ek flat perspective plane (ek ceiling grid) draw karo apne cloud banks ke flat bases ko anchor karne ke liye billowing tops sketch karne se pehle.",
+      "Scene mein koi bhi cloud forms place karne se pehle sky gradient pehle paint karo (top pe dark blue se bottom pe pale warm haze tak).",
+      "Shadow side pe soft, blended edges use karo, aur sharp, crisp edges sirf light source ki taraf face karti sunlit rim ke along."
+    ],
+    practice: {
+      warmup: "Sky ke across ek perspective grid draw karo aur 5 cloud masses block karo flat bottoms ke saath jo horizon ki taraf compress hote hain.",
+      daily: "Ek billowing cumulus cloud render karo jisme top pe directional sunlight, ek core shadow band, aur base pe ambient ground-bounce light dikhe.",
+      weekly: "Sunset ya golden hour pe ek sky study karo, zenith se horizon tak color transition aur cloud bases pe warm underlighting track karte hue.",
+      challenge: "Ek expansive panorama draw karo ek dynamic storm cloud front (cumulonimbus) featuring karta hua jo rolling terrain ke across dramatic ground shadows cast kare (Module 52 integrate karte hue)."
+    },
+    quiz: [
+      {q:"Cumulus clouds ke characteristically flat bottoms kyun hote hain?", options:["Kyunki wind unhe horizontal friction se cut karti hai","Kyunki water vapor dew point tak pahunchta hai aur ek specific, uniform atmospheric altitude plane (condensation level) pe condense hota hai","Kyunki wo directly mountain tops pe rest karte hain","Kyunki cloud weight lower half ko ek flat sheet mein compress kar deta hai"], correct:1, explain:"Jaise rising warm air cool hoti hai, water vapor ek specific altitude threshold pe visible droplets mein condense hota hai jise lifted condensation level kehte hain, ek crisp, flat horizontal cloud base banate hue."},
+      {q:"Clear sky ka color zenith (seedha upar) se horizon tak naturally kaise transition karta hai?", options:["Top pe pale white se horizon pe deep black tak","Zenith pe deep saturated blue se horizon ke paas ek lighter, warmer, desaturated hue tak, atmospheric scattering aur dust ki wajah se","Ye poore dome ke across ek single solid uniform color rehta hai","Zenith pe bright yellow se horizon pe navy blue tak"], correct:1, explain:"Seedha upar dekhna atmosphere ke sabse thinnest slice se guzarta hai (deep blue), jabki horizon ki taraf dekhna miles ki dense air aur particulate se guzarta hai, color ko paler, warmer, aur hazier bana deta hai."},
+      {q:"Clouds horizon ke paas aate hue unka size aur spacing kaise badalna chahiye?", options:["Wo bade ho jaate hain aur zyada spread ho jaate hain","Wo perspective mein compress hote hain, horizon ke paas smaller, flatter, aur tightly overlapped ban jaate hain","Wo poori sky mein identical dimensions maintain karte hain","Wo 90 degrees vertically rotate hote hain"], correct:1, explain:"Perspective compression distant cloud masses ko tightly overlap karwati hai, horizon line ke upar closely stacked narrow horizontal bands ki tarah dikhte hue."}
+    ],
+    checklist: [
+      "Clouds ko perspective mein ek flat horizontal condensation ceiling plane se anchor kar sakta/sakti hoon.",
+      "Cloud masses ko 3D interlocking sphere clusters ki tarah construct kar sakta/sakti hoon clear light, core shadow, aur bounce light ke saath.",
+      "Deep zenith blue se pale horizon haze tak ek atmospheric sky gradient render kar sakta/sakti hoon.",
+      "Clouds distance mein recede hote hue unka scale aur spacing compress kar sakta/sakti hoon."
+    ],
+    nextStep: "Ab tumne Nature & Architecture arc ka pehla batch complete kar liya hai. Trees, plants, rocks, terrain, water, aur sky sab constructible hain \u2014 agla batch natural landscape se buildings, interiors, aur cities ki taraf move karta hai, same construction logic use karke."
+  },
+
+  m56: {
+    hook: "Ek building ek flat postcard facade nahi hai \u2014 ye ek single massive box hai ground plane pe khada hua, aur har window, door, aur wing ek chota box hai jo us pehle wale mein combine ya cut kiya gaya hai.",
+    whyItMatters: [
+      "Beginners buildings ko ek flat front wall ki tarah draw karte hain windows stickers ki tarah paste kiye hue, side planes aur depth ko ignore karte hue jo ek structure ko real space occupy karta hua feel karwate hain.",
+      "Ye module Module 8 wale vanishing-point logic aur Module 10 wale combine-and-cut construction ko seedha architecture pe apply karta hai: ek building bas ek box hai (ya kai combined boxes) ek floor plan se extrude kiye hue, jiski sabhi edges same ek ya do vanishing points ko obey karti hain."
+    ],
+    coreIdea: [
+      "Har building ek single <b>bounding box</b> ki tarah start hoti hai \u2014 pehle ek horizon line aur ek ya do vanishing points establish karo, phir box ka footprint draw karo aur use upward extrude karo, kisi ek architectural detail add karne se pehle.",
+      "Complex buildings <b>boxes combine aur cut</b> karke banti hain (Module 10): ek garage wing ek chota box hai main box ke against pushed, ek dormer ek box hai roof plane mein cut kiya hua, ek porch ek box hai ek corner se subtract kiya hua.",
+      "Same real-world direction mein chalti har edge \u2014 har horizontal roofline, har window ka top aur bottom edge, har doorframe \u2014 building ki main walls ke <b>same vanishing point</b> pe converge honi chahiye. Ek window jo isse ignore kare, ek untrained eye ko bhi turant galat lagta hai.",
+      "One- aur two-point perspective mein, sabhi <b>vertical edges page pe perfectly vertical rehti hain</b>. Sirf true three-point perspective (sharply upar ya neeche dekhna) verticals ko ek third vanishing point ki taraf tip karta hai \u2014 ek normal eye-level scene mein unhe tilt karna sabse common beginner errors mein se ek hai."
+    ],
+    mistakes: [
+      "Ek building ki sirf front wall draw karna bina kisi visible side plane ke, ek flat cardboard-cutout look produce karte hue ek solid volume ki jagah.",
+      "Har window ya door ko apna khud ka vanishing point dena, har parallel edge ko building ke shared VPs se lock karne ke bajaye.",
+      "Ordinary two-point perspective mein vertical wall edges ko ek vanishing point ki taraf tilt karna, jahan verticals ko seedha upar-neeche rehna chahiye.",
+      "Structure ke footprint ko horizon line aur ground plane se pehle anchor kiye bina upward build karna, use floating ya sinking jaisa dikhwate hue."
+    ],
+    proTips: [
+      "Ek single wall draw karne se pehle horizon line draw karo aur dono vanishing points use pe mark karo \u2014 VPs hi wo skeleton hain jispe poori building hang karti hai.",
+      "Building ka floor plan pehle ek simple box footprint ki tarah sketch karo, phir har corner ko correct height tak seedha upar extrude karo koi bhi doors ya windows add karne se pehle.",
+      "Periodically ek suspicious edge ko horizon tak poori tarah extend karo confirm karne ke liye ki ye actually us vanishing point tak pahunchti hai jispe usse pahunchna chahiye; agar miss ho, to edge galat hai, vanishing point nahi."
+    ],
+    practice: {
+      warmup: "Ek horizon line draw karo do vanishing points ke saath, phir 8\u201310 simple boxes construct karo alag size aur position ke, jo sabhi correctly usi do points pe converge karein.",
+      daily: "Ek simple floor-plan footprint sketch karo, use ek full building box mein extrude karo, phir walls mein ek door-sized notch aur do window-sized boxes cut karo, har edge ko shared vanishing points se locked rakhte hue.",
+      weekly: "Ek street corner draw karo do adjoining buildings alag heights ke saath, ek single horizon line aur vanishing points share karte hue, check karte hue ki har window row perspective mein align kare.",
+      challenge: "Ek small building complex construct karo \u2014 ek main block, ek attached wing, aur ek porch \u2014 poori tarah boxes combine aur cut karke (Module 10) consistent two-point perspective mein."
+    },
+    quiz: [
+      {q:"Same building pe har window, door, aur roofline uski walls wale same vanishing point(s) pe kyun converge karne chahiye?", options:["Kyunki ye drawing ko symmetrical banata hai","Kyunki same real-world direction mein chalti sabhi edges perspective convergence ki same line share karti hain","Kyunki vanishing points sirf roads ke liye use hote hain, buildings ke liye nahi","Ye ek stylistic choice hai, structural rule nahi"], correct:1, explain:"Same direction mein chalti real-world parallel lines ka koi bhi set true perspective mein ek single shared vanishing point pe converge karta hai \u2014 ye equally ek building ki walls, windows, aur roof edges pe apply hota hai."},
+      {q:"Ordinary one- ya two-point perspective (eye-level view) mein, ek building ke vertical corner edges ka kya hona chahiye?", options:["Unhe nearest vanishing point ki taraf tilt karna chahiye","Unhe page pe perfectly vertical rehna chahiye","Unhe height suggest karne ke liye slightly curve karna chahiye","Unhe horizon line ki taraf converge karna chahiye"], correct:1, explain:"Verticals sirf true three-point perspective mein ek third vanishing point ki taraf tip hoti hain, sharply upar ya neeche dekhne ke liye use ki jaati hai. Normal eye level pe, verticals seedha upar-neeche rehti hain."},
+      {q:"Box method use karke ek building construct karte waqt correct pehla step kya hai?", options:["Pehle windows aur doors draw karo, phir unke around walls fit karo","Mood establish karne ke liye shadows render karo","Kisi bhi building geometry draw karne se pehle horizon line aur vanishing point(s) establish karo","Roof shape ko imagination se freehand draw karo"], correct:2, explain:"Vanishing points wo skeleton hain jispe building ki har doosri line depend karti hai; unhe pehle establish karna walls, windows, aur roof ko conflicting perspective systems pe khatam hone se rokta hai."}
+    ],
+    checklist: [
+      "Ek building ke basic volume ko ek single box ki tarah construct kar sakta/sakti hoon, horizon aur vanishing points se correctly anchored.",
+      "Secondary boxes (wings, porches, dormers) ko ek main building box pe Module 10 logic use karke combine aur cut kar sakta/sakti hoon.",
+      "Har window, door, aur roofline edge ko building ke shared vanishing points pe converging rakh sakta/sakti hoon.",
+      "One- aur two-point perspective scenes mein vertical edges ko perfectly vertical rakh sakta/sakti hoon."
+    ],
+    nextStep: "Basic building box control mein aane ke baad, agla module wo details add karta hai jo ek box ko ek specific building jaisa dikhwate hain: doors, windows, aur unke around ka architectural trim."
   }
 
 };
