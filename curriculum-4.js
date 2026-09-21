@@ -1053,7 +1053,66 @@ const CURRICULUM_4 = [
 ]},
 {id:'advanced-digital', title:'Advanced Digital Art', status:'soon', order:10,
     desc:'Non-destructive workflow, blend modes, adjustment layers, photobashing, 3D-assisted painting, responsible AI-assisted workflow, speed painting, and master studies.',
-    moduleCount:10, sample:['Non-Destructive Workflow','Blend Modes','Photobashing','3D-Assisted Art','AI-Assisted Workflow','Speed Painting']},
+    moduleCount:10, sample:['Non-Destructive Workflow','Blend Modes','Photobashing','3D-Assisted Art','AI-Assisted Workflow','Speed Painting'],
+    modules:[
+{
+"id": "m101",
+"plate": 101,
+"title": "Non-Destructive Workflow",
+"difficulty": "Advanced",
+"studyTime": "18 min",
+"practiceTime": "25\u201330 min/day",
+"prereq": ["m90"],
+"hook": "A client asks for one small change three weeks after you finished a piece \u2014 if your file is destructively flattened, that's an hour of rebuilding; if it's non-destructive, it's thirty seconds.",
+"whyItMatters": [
+  "You've used individual non-destructive tools throughout this course (layers in Module 86, transforms in Module 88) without necessarily treating them as one deliberate system. This module ties them together into a complete philosophy: never permanently commit to a decision until you're certain you won't need to revisit it.",
+  "This is the difference between a hobbyist workflow and a professional one. Revisions, client feedback, and your own changing judgment about a piece are normal and constant in real work \u2014 a non-destructive file survives all of that; a flattened one forces you to redo work from scratch."
+],
+"coreIdea": [
+  "A Smart Object is a container that preserves an image's original data even after repeated scaling, rotating, or warping \u2014 unlike a normal layer, which loses quality every time it's transformed, a Smart Object can be resized infinitely because the software always references the untouched original.",
+  "Adjustment layers (curves, hue/saturation, color balance) sit above other layers and modify how they look without altering their actual pixel data, and can be freely edited, hidden, or deleted at any point, unlike applying the same adjustment directly to a layer.",
+  "Filters applied to a Smart Object become Smart Filters, which remain fully editable afterward \u2014 you can reopen, adjust, or mask a Smart Filter's effect at any time, rather than the effect being permanently baked into the pixels.",
+  "Masks are the mechanism that ties all of this together: rather than erasing part of a layer or filter effect, a mask hides it reversibly, so painting on the mask can restore or hide the effect at any time without ever losing the original data underneath."
+],
+"mistakes": [
+  "Rasterizing or flattening layers early to \\\"clean up\\\" a file, permanently discarding the ability to revise individual elements later.",
+  "Applying an adjustment (like brightness or hue) directly to a layer instead of using an adjustment layer, making a later change to that decision require redoing the edit rather than just adjusting a setting.",
+  "Erasing part of a layer with the eraser tool instead of using a mask, permanently deleting pixel data that a mask would have hidden reversibly.",
+  "Skipping Smart Objects for elements that are likely to need resizing or repositioning later, risking visible quality loss from repeated destructive transforms.",
+  "Treating non-destructive workflow as only relevant for professional client work, when the same benefits (easy revision, less fear of \\\"ruining\\\" a piece) apply directly to personal practice pieces too."
+],
+"proTips": [
+  "Convert imported images and any element you expect to transform more than once into a Smart Object immediately, as a default habit rather than an afterthought.",
+  "Default to adjustment layers for color and tone changes (curves, hue/saturation, color balance) instead of applying the equivalent adjustment directly to a layer.",
+  "Use masks instead of the eraser whenever you're hiding part of a layer or effect, so the option to bring it back later stays available.",
+  "Keep your working file in its native, layered format (not a flattened export) for as long as you might conceivably want to revise the piece \u2014 export flattened versions only for sharing."
+],
+"practice": {
+  "warmup": "Take one imported image, convert it to a Smart Object, and transform (scale, rotate) it five times in a row, checking that its quality stays intact throughout.",
+  "daily": "Rework a color or tone decision on an existing piece using an adjustment layer instead of a direct edit, then adjust that decision twice more to feel how easy it is to revise.",
+  "weekly": "Build a small composite using Smart Objects for every imported element and masks (not the eraser) for every hidden area, then deliberately \\\"undo\\\" and restore several of those decisions.",
+  "challenge": "Take a finished piece and simulate a client request: change one color, resize one element, and adjust one masked area, timing how long each takes in a non-destructive file versus how long you estimate it would take in a flattened one."
+},
+"resources": [
+  {"type": "Article", "title": "Nondestructive editing", "creator": "Adobe (official documentation)", "url": "https://helpx.adobe.com/photoshop/using/nondestructive-editing.html", "why": "The authoritative, free official reference covering Smart Objects, Smart Filters, adjustment layers, and masks as a complete non-destructive system.", "summary": "Explains that nondestructive editing allows changes to an image without overwriting the original data, covering Smart Objects for nondestructive scaling and transforms, Smart Filters for reversible filter effects, adjustment and fill layers for tone and color changes without altering underlying pixels, and layer masks for reversibly hiding or revealing content.", "verified": true},
+  {"type": "Article", "title": "Master Smart Objects in Photoshop: The Non-Destructive Editing Game-Changer", "creator": "Kelvin Designs", "url": "https://photoshoptutorial.com/posts/master-smart-objects-in-photoshop-the-non-destructive-editing-game-changer/", "why": "A free, practical, first-person account of how Smart Objects change a working professional's compositing workflow, including linked Smart Objects for collaborative work.", "summary": "A working compositor explains how converting imported elements to Smart Objects immediately eliminated the fear of permanently damaging quality through repeated transforms, and shows how Linked Smart Objects let a composite automatically update when a source file elsewhere is changed, a significant time-saver for collaborative or iterative work.", "verified": true}
+],
+"quiz": [
+  {"q": "Why can a Smart Object be scaled up and down repeatedly without losing quality, unlike a normal layer?", "options": ["Smart Objects use a different color mode", "A Smart Object preserves the original image data as a container, so the software always references the untouched original rather than the repeatedly-transformed version", "Smart Objects are automatically higher resolution than normal layers", "There is no real difference between Smart Objects and normal layers"], "correct": 1, "explain": "A Smart Object acts as a container preserving the original data; every transform references that untouched original, avoiding the cumulative quality loss that repeated destructive transforms cause on a normal layer."},
+  {"q": "What is the main advantage of using an adjustment layer instead of applying an adjustment directly to a layer?", "options": ["Adjustment layers render faster with no other benefit", "An adjustment layer can be freely edited, hidden, or deleted at any point without altering the underlying pixel data", "Adjustment layers are required by most software licenses", "There is no functional difference between the two approaches"], "correct": 1, "explain": "An adjustment layer modifies how layers beneath it look without changing their actual pixel data, so the adjustment itself remains fully editable or removable later, unlike a direct edit."},
+  {"q": "What happens when a filter is applied to a Smart Object?", "options": ["The filter is applied destructively and cannot be changed", "It becomes a Smart Filter, which remains fully editable, maskable, and removable afterward", "Smart Objects cannot have filters applied to them at all", "The Smart Object is automatically converted back to a normal layer"], "correct": 1, "explain": "Filters applied to a Smart Object become Smart Filters, which can be reopened, adjusted, masked, or removed at any time, rather than being permanently baked into the pixels."},
+  {"q": "Why is using a mask preferred over using the eraser tool to hide part of a layer?", "options": ["Masks and the eraser produce functionally identical, irreversible results", "A mask hides content reversibly, so painting on the mask can restore the hidden area later, while the eraser permanently deletes pixel data", "The eraser tool is faster in every situation", "Masks can only be used on Smart Objects, never on regular layers"], "correct": 1, "explain": "A mask hides part of a layer or effect without permanently deleting the underlying pixel data, so the hidden content can be reversibly restored later, unlike erasing."},
+  {"q": "According to the module, why does a non-destructive workflow matter for professional work specifically?", "options": ["It has no particular relevance to professional work over personal practice", "Client feedback and revision requests are common in professional work, and a non-destructive file allows quick changes instead of rebuilding from scratch", "Non-destructive workflows are only useful for print work, not digital delivery", "It primarily affects file size, not editing flexibility"], "correct": 1, "explain": "Because revisions and client feedback are a normal part of professional work, a non-destructive file lets those changes happen quickly, while a flattened, destructive file can require redoing significant work from scratch."}
+],
+"checklist": [
+  "I can convert an imported element to a Smart Object before transforming it.",
+  "I can use an adjustment layer instead of a direct edit for color and tone changes.",
+  "I can use a mask instead of the eraser to hide part of a layer or effect reversibly.",
+  "I can keep a native layered working file separate from a flattened export for sharing."
+],
+"nextStep": "You now treat your file structure itself as a deliberate, reversible system. Module 102 goes deeper into blend modes and adjustment layers specifically, building on this non-destructive foundation with more advanced compositing and color-grading techniques."
+}
+]},
 {id:'professional-production', title:'Professional Production & Specializations', status:'soon', order:11,
     desc:'Editorial illustration, comics, manga, webtoon, visual development, concept art, game art, animation pre-production, print production, and client work.',
     moduleCount:11, sample:['Comic Art','Manga','Webtoon','Concept Art','Game Art Pipeline','Animation Pre-Production']},
