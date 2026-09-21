@@ -992,6 +992,64 @@ const CURRICULUM_4 = [
 ],
 "nextStep": "You now have a complete, repeatable workflow for taking a piece from first sketch to finished render. Module 100 is the capstone \u2014 bringing every skill from this entire arc together into one complete, fully rendered illustration."
 }
+,
+{
+"id": "m100",
+"plate": 100,
+"title": "Capstone: A Fully Rendered Illustration",
+"difficulty": "Advanced",
+"studyTime": "15 min",
+"practiceTime": "3\u20136 hours (project)",
+"prereq": ["m99"],
+"hook": "Nine modules of theory only prove themselves in one place: a single finished piece where color, value, light, material, edges, depth, and texture all have to work together at the same time.",
+"whyItMatters": [
+  "This closes out Digital Painting & Rendering by asking you to apply every skill from Modules 91\u201399 to one complete piece, the same way the Module 82 capstone closed out worldbuilding \u2014 a portfolio is built from finished pieces, not isolated exercises.",
+  "A capstone piece is also the most honest way to find your current weak point. Working on isolated skills hides gaps that only surface when everything has to work together at once, which is exactly the information you need to know what to practice next."
+],
+"coreIdea": [
+  "Follow the workflow from Module 99 in order: sketch, line art (or a painted block-in if working without hard lines), flat colors, then shading built on a light direction you decide before the first shadow.",
+  "As you render, apply each material's specific logic from Modules 94\u201395 (subsurface scattering for skin, environment reflections and extreme contrast for metal or glass) rather than treating every surface the same way.",
+  "Use edge control (Module 96) and atmospheric perspective (Module 97) together to direct the eye to one focal point and separate foreground from background, then add texture (Module 98) only at the end, concentrated at logical wear points.",
+  "A capstone piece doesn't need to be large or complex to be complete \u2014 a small, fully-considered piece that applies every skill deliberately is more valuable than an ambitious piece that skips steps to reach a finished-looking render faster."
+],
+"mistakes": [
+  "Jumping straight to rendering without deciding a light direction first, producing shading that doesn't agree with itself across different parts of the piece.",
+  "Rendering every material (skin, metal, fabric) with the same generic technique instead of applying the specific logic each one calls for.",
+  "Adding texture and wear evenly across the whole piece instead of concentrating it at points that make physical sense.",
+  "Choosing a piece so ambitious in scope that finishing every stage with real care becomes impossible within a reasonable timeframe.",
+  "Treating the finished piece as the end of the process instead of using it to honestly identify which of the nine arc skills is currently weakest."
+],
+"proTips": [
+  "Write your light direction down before shading begins, and physically check it against every shadow and highlight you place, the same discipline from Module 93.",
+  "Limit your palette of materials in the piece (skin, one hard surface, one fabric) so you can apply each one's specific rendering logic with real care rather than rushing several materials shallowly.",
+  "After finishing, go back through Modules 91\u201399 one at a time and honestly check your piece against each one's checklist \u2014 this turns the capstone into a genuine diagnostic, not just a finished picture.",
+  "Get outside feedback if you can (a critique community, a paint-over channel, a friend) \u2014 you lose the ability to see your own piece's problems clearly after staring at it for hours."
+],
+"practice": {
+  "warmup": "Write a one-sentence brief for your capstone piece: subject, one dominant material, one emotional target for the lighting.",
+  "daily": "Work through one workflow stage per session (sketch, line art or block-in, flats, shading) rather than trying to complete the whole piece in one sitting.",
+  "weekly": "Complete one full capstone illustration from brief to finished render, applying color, value, light, material-specific rendering, edges, depth, and texture deliberately at each stage.",
+  "challenge": "Score your finished capstone piece honestly against the checklist from each of Modules 91\u201399, identify your single weakest area, and name one specific thing you'll practice next because of it."
+},
+"resources": [
+  {"type": "Video", "title": "PAINTOVER PALS: Episode 5", "creator": "Sinix Design", "url": "https://www.youtube.com/watch?v=9XIWD9o2Kjw", "why": "A free, real critique episode focused on rendering tips, from a channel specifically known for diagnosing why competent art doesn't yet look professional.", "summary": "Sinix paints over real submitted artwork while narrating specific rendering problems and fixes, modeling exactly the kind of honest, skill-by-skill diagnosis this capstone module asks you to apply to your own finished piece.", "verified": true},
+  {"type": "Article", "title": "How to Color Digitally: A Step-by-Step Guide for Beginners", "creator": "Artwod", "url": "https://artwod.com/blog/how-to-color-digitally-a-step-by-step-guide-for-beginners", "why": "A free, concrete reference for the sketch-to-shading sequence this capstone piece should follow, useful to revisit while working through each stage.", "summary": "Reinforces the staged workflow (sketch, line art, flat colors, shading) with an emphasis on committing to a light direction before shading and pushing contrast confidently once that direction is chosen, both directly applicable to completing a capstone piece.", "verified": true}
+],
+"quiz": [
+  {"q": "What is the primary purpose of this capstone module?", "options": ["To teach an entirely new rendering technique", "To apply every skill from Modules 91\u201399 together in one finished piece, revealing your current weakest area", "To replace the need for the earlier modules in this arc", "To focus exclusively on speed painting"], "correct": 1, "explain": "The capstone has no new theory; it asks you to combine color, value, light, material, edges, depth, and texture in one piece, which reveals which specific skill is currently your weakest."},
+  {"q": "What should be decided before shading begins on the capstone piece, based on Module 93?", "options": ["The final export file format", "The light direction, checked against every shadow and highlight placed afterward", "The canvas resolution", "The brush pack to use"], "correct": 1, "explain": "Committing to a light direction before the first shadow is placed, and checking every subsequent shadow and highlight against it, prevents shading that disagrees with itself across the piece."},
+  {"q": "Why is it recommended to limit the palette of materials in a capstone piece?", "options": ["Limiting materials has no real benefit", "It allows each material's specific rendering logic (skin, metal, fabric) to be applied with real care rather than rendering several materials shallowly", "Only one material is technically allowed", "It reduces the file size significantly"], "correct": 1, "explain": "Focusing on fewer materials lets you apply each one's specific technique (subsurface scattering for skin, extreme contrast for metal, and so on) properly, rather than spreading effort thin across many surfaces."},
+  {"q": "How should texture and wear be applied in the finished capstone piece, based on Module 98?", "options": ["Spread evenly across the entire piece", "Concentrated at points that make physical sense, added near the end of the process", "Applied before any color or shading exists", "Texture should be avoided entirely in a capstone piece"], "correct": 1, "explain": "Texture and wear should be added near the end, concentrated at logical contact or stress points, following the same wear-with-a-cause logic established in Module 98."},
+  {"q": "What is the recommended way to use the finished capstone piece after completing it?", "options": ["Move on immediately without further reflection", "Go back through each of Modules 91\u201399's checklists and honestly identify the weakest skill to practice next", "Delete the working file immediately after exporting", "Compare it only to other people's finished work"], "correct": 1, "explain": "Checking the finished piece against each earlier module's checklist turns the capstone into a genuine diagnostic tool, revealing exactly which skill is worth focusing on next."}
+],
+"checklist": [
+  "I can complete a piece through the full workflow: sketch, line art, flat colors, shading.",
+  "I can apply material-specific rendering logic (skin vs. hard surface vs. fabric) rather than one generic technique for everything.",
+  "I can use edge control and atmospheric perspective together to direct focus and separate depth.",
+  "I can honestly score a finished piece against the checklists from Modules 91\u201399 to find my weakest skill."
+],
+"nextStep": "You've completed Digital Painting & Rendering \u2014 from the three properties of color to a fully rendered, material-aware illustration. These skills carry forward directly into Advanced Digital Art, where techniques like blend-mode compositing, photobashing, and speed painting build on everything rendered here."
+}
 ]},
 {id:'advanced-digital', title:'Advanced Digital Art', status:'soon', order:10,
     desc:'Non-destructive workflow, blend modes, adjustment layers, photobashing, 3D-assisted painting, responsible AI-assisted workflow, speed painting, and master studies.',
