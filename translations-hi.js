@@ -1717,6 +1717,217 @@ const TRANSLATIONS_HI = {
       "Foot ke wedge ko sub-sections mein split kar sakta/sakti hoon ek dynamic, bent pose construct karne ke liye."
     ],
     nextStep: "Complete Body Construction \u2014 ab tak build ki gayi har cheez, actual professional order of operations mein ek hi figure pe."
+  },
+
+  m41: {
+    hook: "Is poore arc ka har system, actual professional order mein, ek figure pe \u2014 wahi capstone test jo Module 30 ne head ke liye kiya tha, ab poori body ke liye.",
+    whyItMatters: [
+      "Ye Body & Anatomy arc ka pehla true capstone hai, jo Module 30 (Head + Features Integration) ne head ke liye jo kiya tha usko mirror karta hai. Torso, pelvis, arms, hands, legs, aur feet sab separately practice hue hain \u2014 integration wahi jagah hai jahan ye sab ek coherent, moving figure pe saath mein chalna hai, jo kisi ek part ko akela execute karne se genuinely alag aur harder skill hai."
+    ],
+    coreIdea: [
+      "Professional construction order, is arc ke ab tak ke har module se seedha aata hai: pehle <b>gesture</b> ya action line (Module 9), pose ki energy establish karne ke liye kisi bhi volume exist hone se pehle; phir <b>torso ke do ovals aur spine</b> (Module 34), us gesture ke relative <b>pelvis tilt</b> (Module 38) establish karte hue; phir <b>limbs</b> ko simplified tapering cylinders ki tarah block karo (arms Module 35 se, legs Module 39 se) correct shoulder aur hip sockets pe attach karte hue; <b>hands aur feet</b> ko last block karo unke apne simplified box aur wedge forms ki tarah (Modules 36 aur 40), kyunki wo sabse detailed parts hain aur poore skeleton ki proportion pehle se lock hone ka benefit uthate hain.",
+      "Poore figure pe successive passes mein <b>loose se detailed</b> kaam karna \u2014 wahi approach jo Module 30 ne head ke liye use kiya tha \u2014 ek body part ko poori tarah finish karne se pehle doosre pe jaane ke bajaye. Ek hand ko perfect karna jabki baaki figure abhi bhi unblocked ho, ek beautifully rendered hand ko ek proportionally broken body pe attach karne ka ek reliable tareeka hai.",
+      "Ek fast, genuinely useful whole-figure sanity check: skull ke base se, ya neck ke pit se seedha neeche dropped ek <b>plumb line</b>, ek standing pose mein generally weight-bearing foot ke through gira chahiye. Agar aisa nahi hota, to figure subtly falling over jaisa read hoga, even jab har individual part isolation mein correctly construct kiya gaya ho."
+    ],
+    mistakes: [
+      "Ek body part ko detail mein poori tarah render karna kisi doosre part ke block hone se pehle, poore figure pe loose se detailed kaam karne ke bajaye.",
+      "Gesture aur action-line step skip karke seedha construction pe jaana, ek technically correct par lifeless figure produce karte hue.",
+      "Balance aur plumb-line check bhool jaana, jisse ek standing figure girne wala jaisa read hota hai.",
+      "Torso aur pelvis ki core gesture aur tilt establish hone se pehle limbs block karna, isliye limbs ke paas attach karne ke liye kuch bhi coherent nahi hota."
+    ],
+    proTips: [
+      "Hamesha gesture ya action line se shuru karo, ek fast few-second wale se bhi, kisi bhi construction shuru hone se pehle.",
+      "Poore figure ke har part ko pehle pass mein loosely kaam karo, phir ek doosre, zyada detailed pass ke liye wapas aao, sequentially finish karne ke bajaye.",
+      "Neck se weight-bearing foot tak ek imaginary plumb line se balance check karo kisi bhi standing pose pe."
+    ],
+    practice: {
+      warmup: "Ek five-second gesture line draw karo, phir ek loose full-body blocking pass \u2014 torso, limbs, hands aur feet \u2014 total paanch minute se kam mein.",
+      daily: "Ek reference pose se ek full figure construct karo, do full passes mein loose-to-detailed kaam karte hue, kisi bhi single part ko pehle finish karne ke bajaye.",
+      weekly: "Ek standing figure construct karo aur neck se weight-bearing foot tak ek plumb line se uska balance check karo, check fail hone pe adjust karte hue.",
+      challenge: "Same pose ko do baar construct karo \u2014 ek baar har part sequentially finish karke, ek baar poore figure pe loose-to-detailed kaam karke \u2014 aur compare karo kaunsa zyada coherently read hota hai."
+    },
+    quiz: [
+      {q:"Is module ke describe kiye professional construction order mein recommended pehla step kya hai?", options:["Detailed hands aur feet","Gesture ya action line, kisi bhi volume add hone se pehle","Full facial detail","Clothing choose karna"], correct:1, explain:"Gesture pose ki energy establish karta hai kisi bhi construction volume exist hone se pehle, Module 9 wala hi principle."},
+      {q:"Is module ke recommended workflow mein \"loose to detailed\" ka kya matlab hai?", options:["Har body part ko doosre pe jaane se pehle poori tarah finish karna","Poore figure ke har part ko pehle loosely kaam karna, phir poore figure pe detailed passes ke liye wapas aana","Detail ko poori tarah skip karna","Sirf face ko detail karna"], correct:1, explain:"Ye ek beautifully rendered part ko ek otherwise unblocked, broken body pe attach karne se bachata hai."},
+      {q:"Plumb-line balance check kya test karta hai?", options:["Kya pencil kaafi sharp hai","Kya neck se ek line ek standing pose mein weight-bearing foot ke through girti hai","Figure ki exact height","Kya gesture line straight hai"], correct:1, explain:"Agar plumb line weight-bearing foot ke through nahi pass karti, to figure girne wala jaisa read hoga."}
+    ],
+    checklist: [
+      "Har full-figure construction ko volume add karne se pehle ek gesture ya action line se start karta/karti hoon.",
+      "Poore figure pe loose-to-detailed kaam karta/karti hoon, ek part ko doosre se pehle finish karne ke bajaye.",
+      "Neck se weight-bearing foot tak ek plumb line use karke ek standing figure ka balance check kar sakta/sakti hoon.",
+      "Hands aur feet ko unki apni simplified forms ki tarah construct kar sakta/sakti hoon, sirf poore skeleton ki proportion block hone ke baad."
+    ],
+    nextStep: "Body Movement \u2014 jab figure actually walk karna shuru karta hai to is construction ka kya hota hai."
+  },
+
+  m42: {
+    hook: "Contact, passing, contact phir se \u2014 lagbhag poora walk cycle, hamesha ke liye repeat hota hua.",
+    whyItMatters: [
+      "Ye pichle module wale static full-body construction mein time add karta hai. Walking, running, aur doosri repeated actions actual proving ground hain ye check karne ke liye ki ek constructed figure ek sequence ke across hold kar sakta hai ya nahi, sirf ek frozen pose survive karne ke bajaye."
+    ],
+    coreIdea: [
+      "Human walking ek chhote se number of repeating key poses mein todta hai, animation mein commonly <b>contact, down, passing, up</b> ki tarah sikhaya jaata hai: contact wo hai jab leading foot ground ko bas touch kar raha ho; passing wo hai jab moving leg body ke seedha neeche single-leg support mein swing kar rahi ho, body ke vertical movement ka highest point; cycle phir opposite leg ke saath repeat hota hai.",
+      "Body ka center of gravity har step ke saath genuinely thoda upar-neeche hota hai \u2014 passing pose ke dauraan highest, contact ke dauraan lowest. Ye chota vertical bob, pichle module wale balance aur plumb-line logic se seedha juda hua, ek bada hissa hai us cheez ka jo ek walk ko gliding ki jagah alive dikhata hai.",
+      "Arms aur legs <b>opposition</b> mein move karte hain: jaise right leg aage swing karti hai, left arm bhi aage swing karta hai, same-side limb nahi. Ye ek real, checkable rule hai jise notice kiye bina galat karna aasan hai, aur aisa karna ek walking figure ko galat dikhane ke sabse fast tareekon mein se ek hai.",
+      "Weight shift, Module 38 wale pelvis tilt se seedha juda hua, ek walk ke through continuously hota hai, sirf ek static standing pose mein nahi \u2014 weight-bearing hip har contact pose pe upar uthta hai, wahi mechanism us module se, ab motion mein play ho raha hai.",
+      "Running upar ki sab cheezein exaggerate karta hai: ek bada vertical bob, ek moment jahan dono feet ground se poori tarah upar uth jaate hain, aur poore figure ke through ek zyada pronounced forward lean."
+    ],
+    mistakes: [
+      "Ek walking figure draw karna jisme same-side arm aur leg saath mein aage swing karein, correct opposition ke bajaye.",
+      "Vertical bob ko poori tarah ignore karna, ek figure produce karte hue jo genuinely walk karne ke bajaye glide karta lagta hai.",
+      "Ek walk cycle ko ek static pose ki tarah treat karna jo identically repeat ho, genuinely distinct key poses ki ek sequence ke bajaye.",
+      "Ye bhool jaana ki pelvis tilt ek walk ke through continuously shift hoti hai, ek static standing pose ki tarah fixed rehne ke bajaye."
+    ],
+    proTips: [
+      "Four-pose walk breakdown \u2014 contact, down, passing, up \u2014 ko kisi bhi walking figure ke liye ek checklist ki tarah memorize karo.",
+      "Kisi bhi walking pose pe specifically arm-leg opposition check karo, kyunki notice kiye bina isse galat karna aasan hai.",
+      "Ek single frozen walking pose ko bhi clearly char key poses mein se ek represent karna chahiye, taaki uska weight aur balance apne aap mein sense bana sake."
+    ],
+    practice: {
+      warmup: "Char key walk poses \u2014 contact, down, passing, up \u2014 ek leg cycle ke liye, ek row mein draw karo.",
+      daily: "Har din ek walking figure draw karo, aage badhne se pehle deliberately arm-leg opposition check karte hue.",
+      weekly: "Ek full walk cycle ka vertical bob draw karo, char key poses mein se har ek pe head ki height mark karke, difference compare karte hue.",
+      challenge: "Same figure ko walking aur running draw karo, run ke liye vertical bob, forward lean, aur full airborne suspension ke moment ko exaggerate karte hue."
+    },
+    quiz: [
+      {q:"Ek walk cycle ko todne ke liye commonly use hone wale char key poses kaunse hain?", options:["Jump, land, crouch, stand","Contact, down, passing, up","Start, middle, end, repeat","Left, right, forward, back"], correct:1, explain:"Ye char poses, har leg ke saath repeat karte hue, almost har walk-cycle breakdown ka backbone bante hain."},
+      {q:"Ek normal walk ke dauraan arms aur legs ek doosre ke relative kaise move karte hain?", options:["Same-side arm aur leg saath mein aage swing karte hain","Opposition mein \u2014 ek diye gaye leg ke opposite arm aage swing karta hai","Ek normal walk ke dauraan arms move hi nahi karte","Dono arms same time pe aage swing karte hain"], correct:1, explain:"Is opposition ko galat karna ek walking figure ko galat dikhane ke sabse fast tareekon mein se ek hai."},
+      {q:"Ek walk cycle ke dauraan body ke center of gravity ka kya hota hai?", options:["Ye poori tarah level rehta hai","Ye thoda upar-neeche hota hai, passing pose pe highest aur contact pe lowest","Ye sirf running ke dauraan badalta hai, walking ke nahi","Ye side to side move karta hai par kabhi upar-neeche nahi"], correct:1, explain:"Ye vertical bob ek bada hissa hai us cheez ka jo ek walk ko gliding ki jagah alive dikhata hai."}
+    ],
+    checklist: [
+      "Char key walk poses \u2014 contact, down, passing, up \u2014 ek single leg cycle ke liye draw kar sakta/sakti hoon.",
+      "Kisi bhi walking figure pe arm-leg opposition check karta/karti hoon jo main construct karta/karti hoon.",
+      "Key poses ke across head height compare karke ek walk cycle ka vertical bob dikha sakta/sakti hoon.",
+      "Ek walk ko ek bade bob, forward lean, aur full suspension ke moment se run mein exaggerate kar sakta/sakti hoon."
+    ],
+    nextStep: "Foreshortening \u2014 jab ek limb picture plane ke across hone ke bajaye zyada tar viewer ki taraf point kare to kya hota hai."
+  },
+
+  m43: {
+    hook: "Viewer ki taraf seedha point karti ek arm sirf short nahi hoti \u2014 ye compressed hoti hai, aur construction hi wo cheez hai jo us compression ko classic \"T-rex arm\" mistake banne se rokta hai.",
+    whyItMatters: [
+      "Module 21 ne foreshortening specifically head ke liye introduce kiya tha. Ye module Module 8 wale same perspective logic ko poore limbs aur poore figure tak extend karta hai, jahan ye genuinely difficult ho jaata hai \u2014 aur jahan zyada tar beginners ke dynamic action poses quietly gir jaate hain."
+    ],
+    coreIdea: [
+      "Foreshortening tab hoti hai jab koi form \u2014 ek arm, ek leg, poora figure \u2014 picture plane ke across hone ke bajaye zyada tar viewer ki taraf ya usse door oriented ho. Ye Module 8 wala hi vanishing-point perspective logic hai, ab boxes ki jagah organic cylinders pe apply kiya gaya.",
+      "Ek foreshortened cylinder sirf chota nahi hota: uska near end bada dikhta hai, uska far end chota dikhta hai, aur uski visible length dramatically compress hoti hai, kabhi kabhi uski actual proportional length ke ek chote se fraction tak.",
+      "<b>Overlapping</b> foreshortening ko correctly read karne ke liye sabse important single cue hai. Viewer ki taraf reach karta hua ek forearm uske peeche wale upper arm ko overlap aur partially hide karega \u2014 in overlaps ko correctly karna often exact compressed proportions correctly karne se zyada matter karta hai.",
+      "Ek bahut common beginner mistake, kabhi kabhi \"T-rex arm\" kehlata hai, ek foreshortened limb ko under-compress karna hai us instinct ki wajah se jo uski \"correct\" length preserve karna chahta hai \u2014 ek arm produce karte hue jo bahut lambi read hoti hai aur body se disconnected float karti hai, viewer ki taraf genuinely point karne ke bajaye.",
+      "Construction hi wo cheez hai jo foreshortening ko survivable banati hai: underlying cylinder forms ko pehle build karna, already compressed perspective mein, Module 10 wala hi combine-and-cut logic use karke, proportions ko consistent rakhna kahin zyada aasan bana deta hai ek already-finished outline ko baad mein foreshorten karne ki koshish karne se."
+    ],
+    mistakes: [
+      "Ek foreshortened limb ko under-compress karna (T-rex arm problem), ek aisi cheez produce karte hue jo viewer ki taraf point karne ke bajaye bahut lambi read hoti hai.",
+      "Overlap cues ko ignore karna, isliye ek foreshortened limb actually body ke wo parts hide nahi karta jo usse hide karne chahiye.",
+      "Ek finished outline ko directly foreshorten karne ki koshish karna, underlying construction cylinders ko pehle perspective mein build karne ke bajaye.",
+      "Foreshortened poses ko poori tarah avoid karna kyunki wo difficult hain, unhe is poore arc ki construction skills ke ek deliberate test ki tarah treat karne ke bajaye."
+    ],
+    proTips: [
+      "Ek limb foreshorten karte waqt, compression ko instinct se zyada exaggerate karo \u2014 T-rex arm mistake under-compressing se aata hai, almost kabhi over-compressing se nahi.",
+      "Exact proportion ki chinta karne se pehle overlaps pehle check karo \u2014 correct overlap foreshortened read karwane ka zyada tar kaam kar deta hai.",
+      "Ek foreshortened outline directly try karne se pehle hamesha underlying construction cylinders ko perspective mein build karo."
+    ],
+    practice: {
+      warmup: "Ek simple cylinder draw karo jo viewer ki taraf seedha point kare, near-end aur far-end size difference ko deliberately exaggerate karte hue.",
+      daily: "Viewer ki taraf reach karti hui ek arm draw karo, exact proportion ke bajaye forearm aur upper arm ke beech overlap pe focus karte hue.",
+      weekly: "Ek genuinely foreshortened reference pose dhoondo aur use cylinders perspective mein use karke construct karo, koi bhi outline detail add karne se pehle.",
+      challenge: "Same reaching arm pose ko do baar draw karo \u2014 ek baar under-compressed (T-rex arm mistake, jaanbujh kar) aur ek baar correctly compressed \u2014 aur unhe side by side compare karo."
+    },
+    quiz: [
+      {q:"Viewer ki taraf seedha point karte ek cylinder ka actually kya hota hai, sirf \"chota hona\" se aage?", options:["Kuch aur nahi badalta","Uska near end bada dikhta hai aur far end chota, dramatically compress hone ke saath saath","Ye perfectly circular ho jaata hai","Ye view se poori tarah gayab ho jaata hai"], correct:1, explain:"Ye near-large, far-small relationship Module 8 wala hi perspective logic hai, ek organic form pe apply kiya gaya."},
+      {q:"\"T-rex arm\" mistake kya hai?", options:["Ek arm ko bahut short draw karna","Ek foreshortened limb ko under-compress karna, jisse ye viewer ki taraf point karne ke bajaye bahut lambi read hoti hai","Bahut zyada overlaps draw karna","Hand draw karna bhool jaana"], correct:1, explain:"Ek limb ki \"correct\" length preserve karne ka instinct hi exactly under-compression cause karta hai."},
+      {q:"Ye module kaunsa cue often exact compressed proportion se zyada matter karta hai kehta hai?", options:["Color","Overlapping \u2014 kya ek limb ka near part uske peeche wale part ko correctly hide karta hai","Line thickness","Shading direction"], correct:1, explain:"Correct overlap ek limb ko genuinely foreshortened read karwane ka zyada tar kaam kar deta hai."}
+    ],
+    checklist: [
+      "Ek simple cylinder ko viewer ki taraf foreshortened draw kar sakta/sakti hoon, correct near-large, far-small proportions ke saath.",
+      "Ek foreshortened limb construct karte waqt overlap accuracy ko priority deta/deti hoon.",
+      "Ek foreshortened outline directly try karne se pehle underlying construction cylinders ko perspective mein build karta/karti hoon.",
+      "Apne khud ke kaam mein ek \"T-rex arm\" under-compression mistake recognize aur correct kar sakta/sakti hoon."
+    ],
+    nextStep: "Clothing & Fabric \u2014 fabric ke folds actually neeche wale body construction ko kaise respond karte hain, ek separate decorative layer ki tarah draw hone ke bajaye."
+  },
+
+  m44: {
+    hook: "Fabric randomly fold nahi hota \u2014 ye gravity, tension, aur neeche wali body ko kuch repeatable patterns mein respond karta hai.",
+    whyItMatters: [
+      "Ye arc ka pehla module hai jo body se seedha alag kisi cheez ko cover karta hai, par ye poori tarah ab tak build ki gayi har cheez pe depend karta hai. Clothing folds neeche wale body construction ka ek direct consequence hain, koi separate decorative layer nahi \u2014 yahi exact wajah hai ki ye module whole-body construction ke baad aata hai, pehle nahi."
+    ],
+    coreIdea: [
+      "Fabric folds teen physical forces se drive hote hain: <b>gravity</b> jo fabric ko seedha neeche khinchti hai jahan bhi ye supported na ho, <b>tension</b> jahan fabric do points ke beech taut khinchi ho (ek fastened button, ek stretched elbow, ek belt), aur <b>compression</b> jahan fabric ek point pe bunch ho jaata hai jise body compress karti hai (ek bent knee, ek bent elbow).",
+      "Ek chhota sa number of repeatable fold types zyada tar real clothing account karta hai: ek tension point se outward radiate karti folds, ek compressed joint pe bunch hoti folds, aur relatively straight vertical lines mein hanging folds jahan bhi fabric freely drape kare bina kisi support ke.",
+      "Clothing kahin zyada convincingly read hoti hai jab neeche body ka construction <i>pehle</i> draw kiya gaya ho \u2014 seedha is arc ke pehle wale whole-body construction pe lean karte hue \u2014 fabric ko phir ek layer ki tarah add kiya jaaye jo us specific pose ko respond kare, folds ko abstractly design karne ke bajaye bina kisi body reference ke.",
+      "Folds ko simplify aur visual clarity ke liye edit kiya jaana chahiye, total photographic accuracy ke saath copy nahi. Real fabric ek drawing ki zaroorat se kahin zyada chote folds produce karta hai; actual skill ka ek hissa ye choose karna hai ki kaunse folds pose aur underlying form communicate karte hain, aur deliberately baaki ko drop karna."
+    ],
+    mistakes: [
+      "Neeche body ka pose pehle construct kiye bina clothing draw karna, aise folds produce karte hue jo kisi real joint ya tension point ko correspond nahi karte.",
+      "Reference se har visible fold ko bina kisi editing ke copy karna, visual clutter produce karte hue jo pose ko clarify karne ke bajaye obscure kar deta hai.",
+      "Gravity ko ignore karna, aise folds draw karna jo defy karte lagte hain ki actually neeche kaunsi direction hai.",
+      "Sabhi folds ko same type ki tarah treat karna, tension folds, compression folds, aur hanging folds ko genuinely alag patterns ki tarah recognize karne ke bajaye jinke causes alag hain."
+    ],
+    proTips: [
+      "Hamesha body ka pose pehle construct karo, phir uske upar fabric drape karo, clothing ko isolation mein design karne ke bajaye.",
+      "Ek bhi fold line draw karne se pehle ek garment ke actual tension points aur compression points identify karo.",
+      "Doubt hone pe, kam, bade, clearer folds draw karo bahut saari chhoti, accurate wali ke bajaye \u2014 clarity total fidelity se better hai."
+    ],
+    practice: {
+      warmup: "Ek simple standing figure construct karo, phir uske upar ek plain shirt drape karo, kam se kam ek tension fold aur ek compression fold identify karte hue.",
+      daily: "Har din same garment ko figure pe ek naye pose mein draw karo, track karte hue folds neeche wale body construction ke saath kaise badalte hain.",
+      weekly: "Ek clothing reference photo lo aur ek editing pass karo \u2014 use roughly aadhe fold lines ke saath dubara draw karo, pose ko poori tarah readable rakhte hue.",
+      challenge: "Same figure ko do alag fabrics mein draw karo \u2014 ek stiff jacket aur ek loose t-shirt \u2014 identical pose pe, compare karte hue har material ke folds kitna alag behave karte hain."
+    },
+    quiz: [
+      {q:"Is module ke hisaab se, fabric folds ko drive karne wali teen physical forces kaunsi hain?", options:["Heat, light, aur color","Gravity, tension, aur compression","Wind, water, aur pressure","Koi consistent forces hoti hi nahi \u2014 folds random hote hain"], correct:1, explain:"Ye teen forces zyada tar real clothing fold patterns account karti hain."},
+      {q:"Is module ke hisaab se, clothing se pehle kya draw hona chahiye?", options:["Kuch nahi, clothing ko isolation mein design kiya ja sakta hai","Neeche body ka construction aur pose, pehle","Background scene","Character ka face"], correct:1, explain:"Clothing folds neeche wali body ka ek consequence hain, ek independent decorative layer nahi."},
+      {q:"Fold accuracy versus clarity ke baare mein ye module kya recommend karta hai?", options:["Reference se har visible fold ko total accuracy se copy karo","Kam, bade, clearer folds choose karo jo pose communicate karein, har real fold copy karne ke bajaye","Folds draw karna poori tarah avoid karo","Sirf stylized art mein folds draw karo"], correct:1, explain:"Real fabric ek drawing ki zaroorat se zyada folds produce karta hai \u2014 clarity ke liye editing actual skill ka hissa hai."}
+    ],
+    checklist: [
+      "Uske upar clothing drape aur draw karne se pehle body ka pose construct karta/karti hoon.",
+      "Fold draw karne se pehle ek garment ke tension points aur compression points identify kar sakta/sakti hoon.",
+      "Aise folds draw karta/karti hoon jo gravity ki direction ko consistently respect karein.",
+      "Ek reference ke real folds ko ek chote, clearer set mein edit kar sakta/sakti hoon bina pose ki readability khoye."
+    ],
+    nextStep: "Body Language \u2014 facial expressions aur hand gestures wala hi specific-muscle-pull principle, ab poore body ki posture pe apply."
+  },
+
+  m45: {
+    hook: "Facial expressions aur hand gestures wala hi lesson, ek size bada \u2014 posture communicate karta hai kisi ek facial feature ke visible hone se bhi pehle.",
+    whyItMatters: [
+      "Ye Facial Expressions (Module 29) aur Hand Gestures (Module 37) mein chale \"muscles specific points khinchti hain, memorized templates nahi\" wale principle ka loop close karta hai, ab poore body ki posture pe apply \u2014 often ek viewer ek figure ke baare mein pehli cheez read karta hai, kisi bhi facial detail visible hone se pehle."
+    ],
+    coreIdea: [
+      "Sirf posture, even ek silhouette mein reduce ki gayi bina kisi facial detail ke, bahut kuch communicate karti hai: ek open, expanded chest ek raised head ke saath confident lagta hai; ek curled, closed posture shoulders forward ke saath defensive ya sad lagti hai; dono feet pe evenly distributed weight neutral ya alert lagta hai, jabki ek hip pe collapsed weight relaxed ya bored lagta hai.",
+      "Ye seedha Modules 38 aur 42 wale pelvis tilt aur weight-shift mechanics se connect karta hai \u2014 wahi physical mechanism jo ek walk cycle ko alive dikhata hai, wahi hai jo ek static standing pose ko ek specific emotional state jaisa dikhata hai.",
+      "Bilkul faces aur hands ki tarah, body language ko ek fixed pose-per-emotion library ki tarah memorize nahi karna chahiye. Ye samajhna ki body ke kaunse parts open hote hain versus close in hote hain, aur tension kahan concentrate hoti hai versus kahan release hoti hai, naye poses pe generalize hota hai bilkul jaise Module 29 mein facial muscle pulls samajhna karta tha.",
+      "Ek figure ki gesture line aur head tilt (Module 9, Module 20) baaki body ki posture se agree kar sakti hai ya deliberately conflict kar sakti hai \u2014 ek figure jiski body confident read ho par jiska head thoda door turn kare, kuch bahut zyada specific aur interesting communicate kar sakta hai us figure se jisme har part ek hi direction mein uniformly point kare."
+    ],
+    mistakes: [
+      "\"Confident pose\" ya \"sad pose\" templates ki ek fixed library memorize karna, ye samajhne ke bajaye ki ek diye gaye emotional read ke liye body ke kaunse parts open versus close hote hain.",
+      "Standing posture ke through mood convey karne ki koshish karte waqt weight distribution aur pelvis tilt ko ignore karna.",
+      "Ek figure ki body language ke har part ko same direction mein agree karwana, ek generic, uninteresting read produce karte hue ek zyada specific ki jagah.",
+      "Ye bhool jaana ki posture even silhouette mein clearly read hoti hai, bina kisi facial detail ke."
+    ],
+    proTips: [
+      "Ek pose ki body language test karo use silhouette mein reduce karke \u2014 Module 6 wala hi check, ab emotional readability pe apply.",
+      "Draw karne se pehle, specifically decide karo body ke kaunse parts open aur expanded dikhne chahiye versus closed aur contracted, intended feeling ke liye.",
+      "Head ya gesture line ko baaki body ki posture se deliberately thoda disagree karwane ki koshish karo, aur compare karo result kitna zyada specific feel hota hai."
+    ],
+    practice: {
+      warmup: "Same simple figure ko ek open, confident posture aur ek closed, defensive posture mein draw karo, sirf silhouette use karke \u2014 koi internal detail nahi.",
+      daily: "Har din ek posed figure ko solid silhouette mein reduce karo aur judge karo kya uska intended emotional read abhi bhi clear hai.",
+      weekly: "Ek figure draw karo jiski head ya gesture-line direction deliberately baaki body ki posture se disagree kare, aur use ek aise version se compare karo jisme sab kuch agree kare.",
+      challenge: "Same character ko paanch alag emotional states mein sirf posture aur weight distribution use karke draw karo, sabhi paanchon pe identical neutral facial expression rakhte hue."
+    },
+    quiz: [
+      {q:"Kya body posture bina kisi facial detail visible hue emotion communicate kar sakti hai?", options:["Nahi, kisi bhi emotion ko read karne ke liye facial detail required hai","Haan \u2014 sirf posture, even silhouette mein, bahut kuch communicate karti hai","Sirf cartoon styles mein","Sirf jab figure directly viewer ki taraf face kare"], correct:1, explain:"Ek open, expanded posture versus ek closed, curled wali, ek flat silhouette ki tarah bhi clearly read hoti hai."},
+      {q:"Ek fixed pose-per-emotion library memorize karne ke bajaye, ye module kya recommend karta hai?", options:["Reference photos ko exactly copy karna","Ye samajhna ki body ke kaunse parts open versus close hote hain, aur tension kahan concentrate versus release hoti hai","Advanced hone tak emotional poses avoid karna","Sirf facial expression use karna, kabhi posture nahi"], correct:1, explain:"Ye naye poses pe generalize hota hai bilkul jaise Module 29 mein facial muscle pulls samajhna karta tha."},
+      {q:"Jab ek figure ka head ya gesture line baaki body ki posture se deliberately disagree kare to kya ho sakta hai?", options:["Drawing hamesha broken ya galat read hoti hai","Ye kuch zyada specific aur interesting communicate kar sakta hai us sab se jo ek hi direction mein point kare","Iska read pe koi effect nahi hota","Ye sirf villains ke liye kaam karta hai"], correct:1, explain:"Head direction aur body posture ke beech ek halka disagreement often uniform agreement se zyada specific read hota hai."}
+    ],
+    checklist: [
+      "Open versus closed body language ko sirf silhouette use karke draw kar sakta/sakti hoon, bina facial detail ke.",
+      "Weight distribution aur pelvis tilt ko ek pose ke intended emotional read se connect karta/karti hoon.",
+      "Ek figure ki head direction ko deliberately uski body posture se disagree karwa sakta/sakti hoon ek zyada specific effect ke liye.",
+      "Ek pose ki emotional readability ko silhouette mein reduce karke check karta/karti hoon."
+    ],
+    nextStep: "Character Design \u2014 Module 6 wala circle-triangle-rectangle alphabet, ab jaanbujh kar personality build karne ke liye use kiya gaya, kisi ek detail draw hone se pehle."
   }
 
 };
