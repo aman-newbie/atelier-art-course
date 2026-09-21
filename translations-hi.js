@@ -623,7 +623,7 @@ const TRANSLATIONS_HI = {
     nextStep: "Perspective & Construction complete ho gaya. Next: Head & Portrait \u2014 skull anatomy, Loomis aur Asaro methods, aur kisi bhi angle se ek believable human head construct karna."
   },
 
-m15: {
+  m15: {
     hook: "Face memorize karne se kaam nahi banta \u2014 jab subject human head ho, to \"construction over copying\" ka asli matlab kya hota hai.",
     whyItMatters: [
       "Portraiture mein sabse zyada log isi wajah se fail hote hain: face ek aisi cheez hai jisme har viewer already expert hota hai \u2014 sabne zindagi bhar faces read ki hain. Beginners shortcut lete hain memorized formulas se (\"eyes ek eye-width apart hoti hain\"), bina us 3D structure ko samjhe jo ye formulas actually describe karte hain \u2014 result aisa face hota hai jo paper pe technically theek hai, phir bhi kuch off lagta hai.",
@@ -872,7 +872,7 @@ m15: {
     nextStep: "Perspective of the Head \u2014 full one-, two-, aur three-point perspective logic ko extreme head angles aur foreshortening pe apply karna."
   },
 
-m21: {
+  m21: {
     hook: "Jab head sirf rotate nahi, balki genuinely viewer ke kaafi kareeb ho, ya kisi dramatic camera angle se dikh rahi ho \u2014 to kya badalta hai, aur ye rotation se alag problem kyun hai.",
     whyItMatters: [
       "Module 20 mein rotation cover hua tha \u2014 head ko space mein ghumana, par viewer se ek consistent, comfortable distance pe rakhte hue. Ye module cover karta hai ki jab perspective khud involve ho jaaye to kya badalta hai: extreme foreshortening, face ke bahut kareeb ka camera, ya ek exaggerated low ya high angle. Ye comics, animation, aur concept art mein hardam dikhte hain, aur wo constructions tod dete hain jo sirf gentle, \"portrait photography\" jaisi distances pe hi kaam karte hain."
@@ -1083,6 +1083,218 @@ m21: {
       "Ek upward head tilt construct karte waqt nose tip ko correctly raise karta/karti hoon, lower nahi."
     ],
     nextStep: "The Mouth \u2014 teeth ke ek cylinder pe based, jo zyada tar beginners ko kabhi pata hi nahi chalta wahan hai."
+  },
+
+  m26: {
+    hook: "Neeche se lips ko bahar push karta hua ek inflated tuna can bhara hua teeth ka \u2014 beginner mouth drawing mein sabse zyada overlook ki jaane wali idea.",
+    whyItMatters: [
+      "Mouth, eyebrows (Module 24) ke saath expression equation ka doosra half hai, aur ise often ek flat shape ki tarah seedha skin pe draw kar diya jaata hai, bina ye samjhe ki use uski actual three-dimensional form mein kya push kar raha hai. Wo missing piece \u2014 neeche wale teeth \u2014 hi is module ki sabse zyada overlook ki jaane wali idea hai."
+    ],
+    coreIdea: [
+      "Lips face ke against flat nahi hote. Unke neeche teeth ka ek cylindrical structure hota hai, ek <b>inflated tuna can</b> ki tarah simplified \u2014 ye tooth cylinder peeche se lips ko bahar push karta hai, aur lips ki visible surface forms is underlying cylinder ki shape ka direct consequence hain.",
+      "Lips ke major planes nose ke base se chin tak ek <b>three-step staircase</b> ki tarah chalte hain, top-facing aur bottom-facing planes ke beech alternate karte hue \u2014 profile se dekho to poora face hi ek is tarah ke stepped staircase ki tarah read hota hai.",
+      "Top lip teen alag rounded forms se bana hota hai, aur bottom lip do se \u2014 top lip ka middle form, jise <b>tubercle</b> kehte hain, bottom lip ke do forms ke beech wedge hota hai. Ek angle se dekho to ye forms ek doosre ke upar visibly overlap karte hain, aur wahi overlap flat page pe depth ki tarah read hota hai.",
+      "Lips ke corners, jinhe <b>nodes</b> kehte hain, wahan hi bahut saari expression muscles (<b>orbicularis oris</b> aur kai aur) attach aur overlap hoti hain, yahi wajah hai ki smile ya frown ke dauraan nodes face ke almost kisi bhi doosre part se zyada visibly shape badalte hain \u2014 ye seedha Module 29 wale expression work se connect karta hai.",
+      "Local value \u2014 lips surrounding skin ke comparison mein kitni light ya dark read hoti hain \u2014 skin tone pe depend karta hai aur individual ke hisaab se vary karta hai, aur lips typically skin se sharper, brighter highlights dikhati hain unki thodi si moisture ki wajah se."
+    ],
+    mistakes: [
+      "Lips ko face pe ek flat shape ki tarah draw karna, bina isse aware hue ki neeche se tooth cylinder unhe bahar push kar raha hai.",
+      "Top aur bottom lip ko flat, undifferentiated shapes ki tarah treat karna, top pe teen aur bottom pe do overlapping forms ki jagah.",
+      "Corners ke nodes ko ignore karna, jahan se actually mouth ka zyada tar expressive movement start hota hai.",
+      "Lips ko bahut heavily outline karna, unki shape define karne ke liye value aur edge quality pe rely karne ke bajaye \u2014 course community bhi baar baar isi exact mistake pe feedback deti hai."
+    ],
+    proTips: [
+      "Pehle tooth cylinder ko ek simplified rounded form ki tarah draw karo, phir lips ko uske upar stretched skin ki tarah build karo \u2014 is arc ke har doosre feature wala hi construction-before-detail principle.",
+      "Three-step staircase of planes ko specifically profile view mein practice karo \u2014 ye dekhne ka sabse clear tarika hai ki mouth actually face se kaise protrude karta hai.",
+      "Shade karte waqt, koi bhi halftone nuance add karne se pehle lips ko pehle do value groups mein separate karo \u2014 light aur shadow \u2014 bilkul jaise Module 12 kisi bhi form ke liye sikhata hai."
+    ],
+    practice: {
+      warmup: "Tooth cylinder ko ek simple rounded cylinder shape ki tarah draw karo, abhi koi lips nahi, front se aur profile se.",
+      daily: "Har din ek naye angle se ek full mouth \u2014 tooth cylinder, three-step staircase planes, top aur bottom lip forms \u2014 construct karo.",
+      weekly: "Same mouth ko ek neutral expression, ek slight smile, aur ek slight frown mein draw karo, specifically ye dekhte hue ki nodes kaise badalte hain.",
+      challenge: "Ek mouth ko pehle sirf do values se shade karo \u2014 Module 19 wale Asaro head exercise wala hi two-value discipline \u2014 koi bhi halftone detail add karne se pehle."
+    },
+    quiz: [
+      {q:"Is module ke hisaab se, kaunsa structure neeche se lips ko bahar push karta hai?", options:["Kuch nahi, lips face pe flat sit karte hain","Teeth ka ek simplified cylinder, jaise ek inflated tuna can","Nose","Sirf jaw hinge"], correct:1, explain:"Neeche wala tooth cylinder is module ke hisaab se beginner mouth drawing mein sabse zyada overlook ki jaane wali idea hai."},
+      {q:"Top aur bottom lip kitne alag forms se milkar bante hain?", options:["Har ek ek hi flat form","Top pe teen, bottom pe do","Top pe paanch, bottom pe ek","Unke koi distinct forms hote hi nahi"], correct:1, explain:"Top lip ka middle form, tubercle, bottom lip ke do forms ke beech wedge hota hai."},
+      {q:"Lips ke corners (nodes) expression ke liye itna zyada kyun matter karte hain?", options:["Wo expression ko affect karte hi nahi","Wahan bahut saari expression muscles attach aur overlap hoti hain, isliye smile ya frown mein wo sabse zyada move karte hain","Wo mouth ka sirf color badalte hain","Wo eyebrow position control karte hain"], correct:1, explain:"Nodes wahan hain jahan multiple muscles khinchti hain, isliye expression ke dauraan mouth ka wo sabse zyada visibly active part hote hain."}
+    ],
+    checklist: [
+      "Ek simplified tooth cylinder se shuru karke mouth construct kar sakta/sakti hoon, lip detail add karne se pehle.",
+      "Nose ke base se chin tak planes ka three-step staircase draw kar sakta/sakti hoon, especially profile mein.",
+      "Top lip ke teen forms aur bottom lip ke do forms ko correct overlap ke saath draw kar sakta/sakti hoon.",
+      "Mouth ke corners ke nodes identify kar sakta/sakti hoon aur bata sakta/sakti hoon wo expression ke liye kyun matter karte hain."
+    ],
+    nextStep: "Ears \u2014 ek question mark ki shape ke, aur wo feature jise zyada tar beginners poori tarah skip kar dete hain."
+  },
+
+  m27: {
+    hook: "Ek question mark pehne hua megaphone shape \u2014 aur wo ek feature jiski placement genuinely ek head tilt ko bana ya bigaad deti hai.",
+    whyItMatters: [
+      "Ears wo feature hain jinhe beginners sabse zyada jaldbaazi mein karte hain ya poori tarah skip kar dete hain, kyunki inme koi obvious expression nahi hoti aur eyes ya mouth ki tarah study karna utna rewarding nahi lagta. Par ear placement sabse fast, sabse reliable checks mein se ek hai ye janne ka ki ek head rotation ya tilt actually sahi read ho raha hai ya nahi \u2014 isse galat karo aur poora construction quietly gir jaata hai, chahe baaki har feature perfect ho."
+    ],
+    coreIdea: [
+      "Ear ka overall volume ek <b>megaphone</b> shape mein simplify hota hai, head ke peeche se dekhna sabse aasan hai: <b>concha</b> wo tubular part hai jo skull se connect hota hai aur outer ear (<b>helix</b>) ko head se door push karta hai, bilkul megaphone ke narrow end se flare hokar uske wide mouth mein badalne jaisa.",
+      "Ear ke complex internal shapes ek simple mnemonic se yaad rakhna aasan ho jaata hai: poora ear ek <b>question mark</b> jaisa lagta hai, earlobe uska dot hai. <b>Helix</b> top ke upar se curve karta hai aur andar around jaakar almost ek circle complete kar deta hai; <b>antihelix</b> uske andar ka Y-shaped ridge hai; <b>tragus</b> aur <b>antitragus</b> ek doosre ki taraf point karti do chhoti bead-jaisi forms hain, jinke beech ek U-shaped notch hota hai.",
+      "Placement anatomically fixed hai, koi free choice nahi: ear face ke <b>middle third</b> mein sit karta hai (seedha Module 17 wale vertical-thirds proportion system se joda hua), uska top brow ridge se aligned hota hai aur bottom nose ke base se. Ek downward head tilt pe, ears head pe <i>upar</i> place hone chahiye; ek upward tilt pe <i>neeche</i> \u2014 isse ulta karna ek tilted head ke illusion ko todne ka sabse fast tareeka hai, chahe baaki har feature correctly construct kiya gaya ho.",
+      "<b>Earlobe</b> ear ka wo ek hi part hai jo cartilage nahi hai, yahi wajah hai ki wo alag tarike se hang karta hai aur shade hota hai \u2014 upar wale cartilage-based helix aur antihelix se softer, zyada rounded. Ye roughly poore ear ki height ka ek-tihai hota hai, halaanki individual ke hisaab se vary karta hai."
+    ],
+    mistakes: [
+      "Ears ko optional ya afterthought ki tarah treat karna kyunki inme eyes ya mouth se kam obvious expression hoti hai.",
+      "Head tilt ke bawajood ears ko ek fixed height pe rakhna, downward tilt pe unhe upar aur upward tilt pe neeche rakhne ke bajaye.",
+      "Internal ear shapes ko random confused squiggles ki tarah draw karna, unhe organize karne ke liye megaphone-and-question-mark structure use karne ke bajaye.",
+      "Poore ear ko uniformly shade karna, earlobe ko ek alag, non-cartilaginous material ki tarah recognize karne ke bajaye jise softer render karna chahiye."
+    ],
+    proTips: [
+      "Koi bhi internal detail try karne se pehle megaphone volume aur question-mark outline sketch karo \u2014 Module 6 wala hi big-shape-first order.",
+      "Ear ki brow ridge aur nose ke base ke saath alignment ko kisi bhi head construction pe ek running proportion check ki tarah use karo, tilted ho ya na ho.",
+      "Ears ko kabhi kabhar head ke peeche se bhi practice karo, sirf standard three-quarter view se nahi \u2014 ye samajhne ka sabse clear angle hai ki concha actually skull se kaise connect hota hai."
+    ],
+    practice: {
+      warmup: "Ek ear ka megaphone volume draw karo \u2014 koi internal detail nahi \u2014 side se aur peeche se.",
+      daily: "Har din ek naye angle se question-mark structure use karke ek full ear \u2014 helix, antihelix, tragus, antitragus, lobe \u2014 construct karo.",
+      weekly: "Ek clear up-tilt wala aur ek clear down-tilt wala full head construct karo, har baar ears ko correctly upar ya neeche place karte hue.",
+      challenge: "Module 12 wale organic-cylinder logic se ek ear shade karo, uske major volumes ko flat shapes ki jagah rounded forms ki tarah treat karte hue."
+    },
+    quiz: [
+      {q:"Ek downward head tilt pe ear placement ka kya hota hai?", options:["Ears ko head pe neeche place karna chahiye","Ears ko head pe upar place karna chahiye","Tilt se ear placement kabhi nahi badalta","Ears view se gayab ho jaate hain"], correct:1, explain:"Isse ulta karna ek tilted head ke illusion ko todne ka sabse fast tareeka hai, chahe baaki sab kuch correctly construct kiya ho."},
+      {q:"Ear ka kaunsa part ek hi part hai jo cartilage nahi hai?", options:["Helix","Tragus","Earlobe","Antihelix"], correct:2, explain:"Earlobe non-cartilaginous hai, yahi wajah hai ki ye ear ke baaki hisso se alag tarike se hang aur shade hota hai \u2014 softer aur zyada rounded."},
+      {q:"Ear ka top aur bottom kaunse do landmarks ke saath vertically align hota hai?", options:["Chin aur hairline","Brow ridge (top) aur nose ka base (bottom)","Eyes aur mouth","Koi reliable alignment nahi hoti"], correct:1, explain:"Ye seedha middle-third proportion system se juda hai \u2014 ear nose wala hi vertical zone cover karta hai."}
+    ],
+    checklist: [
+      "Koi internal detail add karne se pehle ear ka overall megaphone volume construct kar sakta/sakti hoon.",
+      "Question-mark structure use karke helix, antihelix, tragus, aur antitragus place kar sakta/sakti hoon.",
+      "Down-tilt pe ear placement correctly upar aur up-tilt pe neeche karta/karti hoon.",
+      "Bata sakta/sakti hoon ki earlobe baaki ear se alag tarike se kyun shade hota hai."
+    ],
+    nextStep: "Facial Proportions \u2014 is arc mein banaye gaye har feature ko doosre har feature ke against check karna, sirf poore head ke against nahi."
+  },
+
+  m28: {
+    hook: "Module 17 ne features ko poore head ke against check kiya tha. Ye module unhe ek doosre ke against check karta hai \u2014 jahan actually zyada tar likeness rehti hai.",
+    whyItMatters: [
+      "Module 17 ne poore head level pe proportion cover kiya tha: thirds, eye-line, overall eye spacing. Ye module ek level aur deep jaata hai, ab jab char major features individually construct ho chuke hain \u2014 eyes, nose, mouth, aur ears ko <i>ek doosre ke against</i> check karna, sirf head ke against nahi. Yahin par zyada tar wo cheez rehti hai jo ek face ko ek generic template ki jagah ek specific individual jaisa dikhati hai."
+    ],
+    coreIdea: [
+      "Feature-to-feature relationships sirf head ke against measure karne se kahin zyada useful checks dete hain. Kuch reliable starting averages: nose ka base pe width roughly wahi hoti hai jitni eyes ke beech ki distance; mouth ki width roughly seedha aage dekhte waqt irises ke inner edges se align hoti hai; ear ki height roughly nose jitni hi vertical distance cover karti hai, kyunki dono Module 27 mein establish hui brow-ridge-to-nose-base zone se anchored hain.",
+      "Ye relationships, Module 17 wale head-level proportions ki tarah hi, measure karne ke liye starting averages hain \u2014 fixed rules nahi jinhe har face follow kare. Module 5 wali comparative-measurement technique yahan seedha apply hoti hai: mouth zyada wide hai ya nahi guess karne ke bajaye, use pehle se place kiye gaye eye spacing ke against measure karo.",
+      "Features ke beech cross-checking wo errors pakadti hai jo ek feature ko isolation mein check karne se miss ho jaate hain. Apne aap mein correct lagta hua ek nose, eye spacing ke against measure karte hi bahut wide ya bahut narrow reveal ho sakta hai \u2014 yahi wajah hai ki professionals head feature-by-feature banate hain par pehle se placed cheezon ke against baar baar wapas check karte rehte hain, ek feature poori tarah finish karne ke baad hi doosra shuru karne ke bajaye.",
+      "In feature-to-feature relationships mein individual variation hi wo bada hissa hai jo ek recognizable, specific face banata hai, generic ki jagah \u2014 is module ka goal measure karne ke liye ek reliable set of starting relationships hona hai, aur jaanbujh kar unse deviate karna, ek rigidly follow karne wali rulebook nahi."
+    ],
+    mistakes: [
+      "Ek feature ko isolation mein perfect karna bina use kabhi doosre already-placed features ke against wapas check kiye.",
+      "Feature-to-feature ratios ko strict rules ki tarah treat karna, measure karne aur jaanbujh kar adjust karne ke liye starting averages ki jagah.",
+      "Proportions ko sirf drawing ke start mein check karna, jaise jaise features add hote hain continuously re-measure karne ke bajaye.",
+      "Feature width aur spacing guess kar lena, pehle se placed features ke against comparative measurement use karne ke bajaye."
+    ],
+    proTips: [
+      "Har naya feature place karne ke baad, use turant page pe pehle se maujood kam se kam ek feature ke against measure karo, sirf head ki overall guidelines ke against nahi.",
+      "Jab ek face thoda galat lage aur koi single feature obviously broken na lage, kisi ek feature ko dubara draw karne se pehle feature-to-feature relationships check karo.",
+      "Ye mentally (ya literally) note karo ki kaunse feature-to-feature relationships se tum jaanbujh kar deviate kar rahe ho \u2014 usually wahin par kisi subject ki actual likeness ban rahi hoti hai."
+    ],
+    practice: {
+      warmup: "Ek simplified head pe jahan eyes aur nose already place hain, comparative measurement se check karo ki nose ki width eye spacing se match karti hai ya nahi.",
+      daily: "Ek full face construct karo \u2014 eyes, eyebrows, nose, mouth, ears \u2014 aage badhte hue har naye feature ko pehle se placed features ke against re-measure karte hue.",
+      weekly: "Ek real reference photo lo aur uske actual feature-to-feature relationships ko is module ke averages ke against measure karo, note karte hue individual kahan deviate karta hai.",
+      challenge: "Same head proportions se shuru karke do alag imagined faces construct karo, jaanbujh kar sirf feature-to-feature relationships vary karte hue, aur compare karo wo individuals ki tarah kitna alag read hote hain."
+    },
+    quiz: [
+      {q:"Is module ka proportion check Module 17 se kaise alag hai?", options:["Ye identical hai, bas repeat kiya gaya hai","Ye features ko ek doosre ke against check karta hai, sirf poore head ke against nahi","Ye sirf cartoon styles pe apply hota hai","Ye Module 17 ko poori tarah replace kar deta hai"], correct:1, explain:"Module 17 features ko head ke against check karta hai; ye module unhe ek doosre ke against check karta hai, jahan individual likeness rehti hai."},
+      {q:"Is module ke hisaab se, base pe nose ki width roughly kis cheez ke comparable hoti hai?", options:["Poore head ki width","Eyes ke beech ki distance","Ear ki height","Chin ki width"], correct:1, explain:"Ye measure karne ke liye ek useful starting average hai, koi fixed rule nahi."},
+      {q:"Ek feature ko agle se pehle poori tarah perfect karne ke bajaye, ye module kya recommend karta hai?", options:["Ek session mein sirf ek hi feature pe kaam karna","Har naye feature ko pehle se placed features ke against continuously re-check karna","Measurement poori tarah skip karke instinct pe rely karna","Hamesha mouth se shuru karna"], correct:1, explain:"Pehle se placed features ke against wapas cross-checking wo errors pakadti hai jo ek feature ko isolation mein check karne se miss ho jaate hain."}
+    ],
+    checklist: [
+      "Comparative measurement se nose ki width ko eye spacing ke against measure kar sakta/sakti hoon.",
+      "Har naye feature ko sirf head-level guidelines ke against nahi, pehle se placed features ke against bhi re-check karta/karti hoon.",
+      "Ek real reference mein kam se kam ek feature-to-feature relationship identify kar sakta/sakti hoon jo average se deviate karti hai.",
+      "Explain kar sakta/sakti hoon ki feature-to-feature proportion, sirf head-level proportion se, likeness ke liye zyada kyun matter karti hai."
+    ],
+    nextStep: "Facial Expressions \u2014 jab in features ke neeche wali muscles actually unhe khinchna shuru karti hain, tab kya hota hai."
+  },
+
+  m29: {
+    hook: "Memorized \"sad face\" aur \"angry face\" templates ki koi library nahi \u2014 muscles specific points pe khinch rahi hain, aur jab tum result copy karne ke bajaye us khinchne ko samajh lete ho to kya hota hai.",
+    whyItMatters: [
+      "Beginners typically expressions usi tarike se seekhte hain jaise unhone Module 15 mein pehle pehle faces seekhne ki koshish ki thi: har emotion ke liye ek fixed template memorize karke. Ye same wajah se fail hota hai \u2014 ek memorized \"angry face\" ek three-quarter angle, ek subtler intensity, ya kisi specific individual ke face pe generalize nahi hota. Neeche wali muscles actually kya aur kahan khinchti hain ye samajhna, in sab pe generalize hota hai."
+    ],
+    coreIdea: [
+      "Expression is arc mein already covered specific points pe specific muscles khinchne se aata hai: mouth ke corners ke <b>nodes</b> (Module 26) ek saath kai muscles se khinche jaate hain aur face ke almost kisi bhi doosre point se zyada move karte hain; <b>eyebrows</b> (Module 24) brow ridge ke relative ek unit ki tarah shift hote hain; eye socket ka soft tissue eyeball ke around compress aur stretch hota hai (Module 23).",
+      "Professional animation aur portrait instruction expression ko organize karne ke liye commonly <b>Facial Action Coding System</b> (FACS) use karta hai, jise psychologist Paul Ekman ne develop kiya \u2014 individual muscle movements (\"action units\") ka ek systematic catalog jo mil ke har recognizable expression banate hain. Poora system yaad karne ki zaroorat nahi hai iske peeche ki idea se benefit uthane ke liye: ek expression ko uske overall silhouette copy karne ke bajaye, ye dekho ki specifically kaunse points khinche gaye hain.",
+      "Poore face mein consistency hi ek convincing expression ko ek unconvincing se alag karti hai. Ek genuine smile mouth ke nodes ko khinchta hai <i>aur</i> eyes ke around ki skin ko bhi visibly compress karta hai (ek authentic smile aur ek purely polite smile ka yahi fark hai, kabhi kabhi specifically eyes ke saath kiya jaana \"smizing\" bhi kehlata hai) \u2014 ek sirf-mouth wali smile jisme eyes unaffected rahein, false lagti hai, even un viewers ko bhi jo exactly explain nahi kar sakte ki kyun.",
+      "Subtlety utni hi matter karti hai jitni intensity. Ek halka sa raised eyebrow skepticism utni hi clearly communicate karta hai jitna ek poora furrowed brow anger communicate karta hai \u2014 aur exaggeration ek jaanbujh kar liya gaya storytelling choice hona chahiye (cartoon aur anime styles mein common), na ki wo ek hi intensity jo ek beginner ko draw karni aati hai."
+    ],
+    mistakes: [
+      "Har emotion ke liye ek fixed expression template memorize karna, ye samajhne ke bajaye ki kaunsi muscles kaunse points khinchti hain.",
+      "Ek aisi smile draw karna jo sirf mouth ko affect kare, eyes ko unaffected chhod ke \u2014 jo insincere lagti hai, viewer ko exactly wajah pata na hote hue bhi.",
+      "Hamesha sirf maximum-intensity expressions draw karna, un subtle, low-intensity versions ko practice karne ke bajaye jo utni hi information carry karte hain.",
+      "Kisi reference se ek expression ka overall outline copy karna, bina ye samjhe ki use banane ke liye specifically kaunse points khinche gaye the."
+    ],
+    proTips: [
+      "Mirror mein dekho aur slowly ek expression banao, specifically dekhte hue ki change kahan se start hota hai \u2014 usually nodes, eyebrows, ya eye socket \u2014 baaki face tak spread hone se pehle.",
+      "Same expression ko teen intensities pe draw karna practice karo: barely perceptible, moderate, aur full \u2014 barely perceptible wala version usually sabse hard aur sabse useful hota hai.",
+      "Jab koi expression unconvincing lage, check karo ki kya eyes aur mouth actually ek doosre se agree karte hain, sirf ye nahi ki mouth ki shape apne aap mein correct hai."
+    ],
+    practice: {
+      warmup: "Mirror mein, paanch alag expressions slowly banao aur note karo har ek mein pehle kaunsa single point move karta hai.",
+      daily: "Har din same simplified face pe ek expression draw karo, specifically mouth nodes aur eyebrows ko consistently saath mein move karne pe focus karte hue.",
+      weekly: "Same expression ko teen intensities \u2014 subtle, moderate, full \u2014 par same face pe draw karo.",
+      challenge: "Ek face draw karo jisme mouth ek emotion express kare aur eyes ek contradicting emotion \u2014 phir use ek aise version se compare karo jisme dono agree karte hon \u2014 dekho mismatched version kitna kam convincing lagta hai."
+    },
+    quiz: [
+      {q:"Har emotion ke liye ek fixed template memorize karne ke bajaye, ye module kya recommend karta hai?", options:["Reference photos ko exactly copy karna","Ye samajhna ki kaunsi specific muscles kaunse points khinchti hain, aur usse expression build karna","Sirf exaggerated expressions draw karna","Fully advanced hone tak expressions avoid karna"], correct:1, explain:"Underlying pull samajhna naye angles aur intensities pe generalize hota hai; ek memorized template nahi hota."},
+      {q:"Ek sirf-mouth wali smile often insincere kyun lagti hai?", options:["Aisa hota hi nahi \u2014 sirf mouth position matter karti hai","Ek genuine smile eyes ko bhi visibly affect karti hai, aur mouth aur eyes ke beech mismatch false lagta hai","Insincere smiles hamesha jaanbujh kar galat draw ki jaati hain","Expression read karne mein eyes ka koi role nahi hota"], correct:1, explain:"Eyes aur mouth ke beech consistency hi ek convincing expression ko ek unconvincing se alag karti hai."},
+      {q:"Facial Action Coding System (FACS) kya hai?", options:["Ek drawing app","Individual muscle movements ka ek systematic catalog jo mil ke expressions banate hain, Paul Ekman dwara develop kiya gaya","Ek pencil grade ka type","Poore body ke liye ek proportion system"], correct:1, explain:"FACS expressions ko specific muscle-driven action units mein todta hai, har emotion ko ek fixed shape treat karne ke bajaye."}
+    ],
+    checklist: [
+      "Identify kar sakta/sakti hoon ki ek real expression shuru hote waqt kaunse points \u2014 mouth nodes, eyebrows, eye socket \u2014 sabse pehle move karte hain.",
+      "Ek aisi smile draw kar sakta/sakti hoon jo mouth aur eyes dono ko visibly affect kare, sirf mouth ko nahi.",
+      "Same expression ko subtle, moderate, aur full intensity pe draw kar sakta/sakti hoon.",
+      "Apne shabdon mein explain kar sakta/sakti hoon ki eyes aur mouth ke beech mismatch ek unconvincing expression jaisa kyun lagta hai."
+    ],
+    nextStep: "Head + Features Integration \u2014 is poori arc ki sab cheezein ek coherent, constructed head mein combine karna."
+  },
+
+  m30: {
+    hook: "Is poori arc ka har system, ek saath, ek head pe chalte hue \u2014 iska actual test ki kya inme se kuch bhi genuinely seekha gaya tha.",
+    whyItMatters: [
+      "Ye Head & Portrait arc ka capstone hai. Ab tak ka har module \u2014 skull, proportions, Loomis, Asaro, rotation, perspective, planes, aur har individual feature \u2014 relative isolation mein practice hua hai. Integration wahi jagah hai jahan ye sab kuch ek saath, ek single, coherent head pe chalna hai, jo kisi bhi ek piece ko akela execute karne se genuinely alag aur harder skill hai.",
+      "Ye module jaanbujh kar kuch naya seekhne ke baare mein nahi hai. Ye practice ke through ye prove karne ke baare mein hai ki pieces actually connect hote hain \u2014 bilkul Module 15 mein set kiya gaya standard: construction jo kisi bhi angle, kisi bhi lighting, aur kisi bhi individual pe generalize ho, imagination se banaya gaya, ek single reference se copy kiya gaya nahi."
+    ],
+    coreIdea: [
+      "Full integrated workflow, order mein, is arc ke har pichle module se seedha aata hai: gesture ya orientation decision, Loomis sphere-and-guideline construction (Module 18) jo intended rotation (Module 20) aur perspective (Module 21) ke liye adjust ho, poore face mein map kiye gaye planes (Module 22), phir har feature \u2014 eyes, eyebrows, nose, mouth, ears (Modules 23\u201327) \u2014 us structure ke upar build hoke ek doosre ke against cross-checked (Module 28), aur expression (Module 29) sabse last apply hota hai kyunki ye is baat pe depend karta hai ki har feature already correctly place ho chuka ho.",
+      "Consistency hi integration ka poora point hai. Ek single light source ko har plane aur har feature pe ek saath sense banana padta hai \u2014 ek eye socket shadow jo nose ke cast shadow se agree nahi karta poori drawing ki credibility tod deta hai, chahe har feature apni alag assumed lighting mein isolation mein correct dikhta ho.",
+      "Feature-by-feature-to-completion ke bajaye back-to-front kaam karna hi wo professional habit hai jo ye module reinforce karta hai: pehle sabhi major features ko loosely, low detail mein block karo, overall proportion aur rotation check karte hue, kisi ek ko fully render karne se pehle \u2014 bilkul wahi shapes-before-forms-before-detail hierarchy jo Module 6 se poore course mein chalti aayi hai.",
+      "Ye module Module 15 wali baseline drawing pe wapas jaane ka bhi natural point hai \u2014 memory se banaye gaye paanch faces, is arc shuru hone se pehle date karke alag rakhe hue. Us baseline ko ek current construction ke saath honestly compare karna, is course ka sabse clear, sabse motivating evidence hai ki construction-based learning actually kaam karti hai."
+    ],
+    mistakes: [
+      "Ek feature ko poori tarah render karna baaki sabko roughly block karne se pehle, poore face pe ek saath loose-to-detailed kaam karne ke bajaye.",
+      "Multiple features ek saath render hote waqt ek single consistent light source ka track kho dena.",
+      "Integration ko bas already-practiced features ko ek doosre ke bagal mein rakhna samajh lena, Module 28 ki tarah unhe continuously ek doosre ke against cross-check karne ke bajaye.",
+      "Module 15 wale baseline drawings se comparison skip kar dena, jo isi baat ka sabse clear evidence hai ki actually kitna badla hai."
+    ],
+    proTips: [
+      "Poore head pe passes mein loose-to-detailed kaam karo \u2014 ek pass overall construction aur rotation ke liye, ek feature placement aur proportion ke liye, ek planes aur light logic ke liye, ek final detail ke liye \u2014 har feature ko sequence mein finish karne ke bajaye.",
+      "Drawing se baar baar peeche hato aur squint karo, Module 6 wala hi silhouette check, ab ek complete integrated head pe apply karte hue.",
+      "Ab Module 15 wale baseline drawings nikaalo, unke bagal mein ek naya set date karo, aur comparison ke baare mein honest raho \u2014 yehi actual point hai unhe pehle jagah pe banane ka."
+    ],
+    practice: {
+      warmup: "Paanch minute se kam mein ek poora head loosely block karo \u2014 Loomis construction, sabhi major features roughly placed, koi detail nahi.",
+      daily: "Imagination se ek complete head construct karo, poore face pe loose-to-detailed kaam karte hue, feature-by-feature-to-completion ke bajaye.",
+      weekly: "Same imagined character ke head ko teen alag angles pe construct karo, har feature ki proportion aur light source ko teeno mein poori tarah consistent rakhte hue.",
+      challenge: "Apne paanch Module 15 baseline drawings nikaalo, same paanch subjects ko ab dubara draw karo, aur dono sets ko honestly, side by side, compare karo."
+    },
+    quiz: [
+      {q:"Is module ka central point kya hai?", options:["Ek bilkul nayi construction technique sikhana","Practice ke through ye prove karna ki har pehle se alag module actually ek coherent head mein connect hota hai","Loomis method ko ek naye system se replace karna","Seedha advanced shading pe kood jaana"], correct:1, explain:"Integration test karta hai ki is poori arc ke individually-practiced pieces actually saath mein kaam karte hain ya nahi, koi naya content nahi."},
+      {q:"Ek fully integrated head ke liye ye module kaunsa order recommend karta hai?", options:["Ek feature poori tarah finish karo, phir agle pe jaao","Poore head pe loose-to-detailed passes: construction, phir feature placement, phir planes aur light, phir final detail","Hamesha eyes ke fine detail se shuru karo","Har baar random order"], correct:1, explain:"Poore face pe loose-to-detailed kaam karna us common mistake se bachata hai jisme ek feature baaki ke place hone se pehle hi over-finish ho jaata hai."},
+      {q:"Ye module Module 15 wale baseline drawings ke saath kya karne ki recommend karta hai?", options:["Unhe fenk do, ab wo relevant nahi hain","Unhe ab same subjects ki ek nayi koshish ke against honestly compare karo","Unhe grade ke liye submit karo","Unhe exactly same tarike se dubara draw karo"], correct:1, explain:"Wo honest side-by-side comparison hi is course ka sabse clear evidence hai ki construction-based learning actually kaam karti hai."}
+    ],
+    checklist: [
+      "Ek complete head \u2014 rotation, planes, aur sabhi major features \u2014 construct kar sakta/sakti hoon, feature-by-feature ke bajaye loose-to-detailed kaam karke.",
+      "Ek single integrated drawing mein har feature aur plane pe ek consistent light source rakhta/rakhti hoon.",
+      "Apna current kaam Module 15 baseline drawings ke against honestly compare kar chuka/chuki hoon.",
+      "Ek chosen angle pe, bina kisi single reference photo ko directly copy kiye, imagination se ek full head construct kar sakta/sakti hoon."
+    ],
+    nextStep: "Head & Portrait complete ho gaya. Next: Body & Anatomy \u2014 hair, neck, shoulders, torso, arms aur hands."
   }
 
 };
