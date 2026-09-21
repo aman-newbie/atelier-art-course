@@ -1295,6 +1295,217 @@ const TRANSLATIONS_HI = {
       "Ek chosen angle pe, bina kisi single reference photo ko directly copy kiye, imagination se ek full head construct kar sakta/sakti hoon."
     ],
     nextStep: "Head & Portrait complete ho gaya. Next: Body & Anatomy \u2014 hair, neck, shoulders, torso, arms aur hands."
+  },
+
+  m31: {
+    hook: "Hazaaron individual strands nahi \u2014 teen ya chaar value masses, ek aisi form ke upar sit karte hue jiska apna volume skull se alag hota hai.",
+    whyItMatters: [
+      "Hair ek aisi cheez hai jise beginners bahut pehle se hi strand-by-strand render karne ki koshish karte hain, aur ye almost kabhi convincing nahi lagta \u2014 result ek scratchy tangle hota hai jisme overall shape ka koi sense nahi hota. Real hair pehle large value masses ki tarah read hota hai; individual strands sirf ek already-correct structure ke upar accents ki tarah kaam karte hain.",
+      "Ye module seedha construction (Module 10, combine-and-cut forms) aur shading systems (Module 12, value massing before detail) ke upar sit karta hai \u2014 hair basically inhi do ideas ka ek specific, highly variable material pe apply hona hai."
+    ],
+    coreIdea: [
+      "Hair ka apna <b>volume</b> hota hai, us skull se alag jisse ye grow karte hain. Ye head ko ek painted-on cap ki tarah hug nahi karte \u2014 ye scalp se thoda door sit karte hain, shuru mein head ke cross-contour (Module 7) ko guide ki tarah follow karte hue, phir apni thickness aur gravity ke saath bahar push karte hue.",
+      "Real hair ko squint karke dekhna (Module 6 aur Module 12 wala hi trick) do ya teen large value masses reveal karta hai \u2014 lightest, mid, darkest \u2014 kisi bhi individual strand visible hone se bahut pehle. In masses ko pehle block karna, bilkul Module 19 wale two-value Asaro exercise ki tarah, hi rendered hair ko ek coherent shape ki tarah read karwata hai, noise ki jagah.",
+      "Hair scalp se ek consistent direction mein grow karta hai, ek ya do <b>whorl points</b> (commonly crown pe) se radiate karte hue, aur ek section ke andar har strand generally usi shared flow ko follow karta hai \u2014 yahi wajah hai ki koi bhi value ya detail se pehle draw ki gayi direction lines, zyada tar beginners ki expectation se zyada matter karti hain.",
+      "Individual strand detail \u2014 flyaways, stray highlights, kuch crisp accent lines \u2014 <i>sabse last</i> mein, sparingly add hoti hai, aur sirf un mid-tone areas mein jahan aankh actually detail read karti hai (Module 13 wala hi texture-density principle). Har strand ko equally detail karna, especially sabse dark shadow mass ke andar, exactly wahi value structure flatten kar deta hai jisne hair ko solid dikhaya tha."
+    ],
+    mistakes: [
+      "Kisi bhi overall value mass ya shape establish hone se pehle, bilkul first mark se hi individual strands draw karna.",
+      "Hair ko ek flat 2D silhouette ki tarah treat karna jo seedha skull pe painted ho, bina apne volume ya thickness ke.",
+      "Scalp ki growth direction aur whorl point ko ignore karna, isliye strands inconsistent ya arbitrary directions mein jaate hue dikhte hain.",
+      "Har strand ko equal sharpness aur density mein render karna, sabse darkest shadow areas ke andar bhi, jo us value hierarchy ko erase kar deta hai jisne mass ko solid dikhaya tha."
+    ],
+    proTips: [
+      "Ek reference (real hair ya photo) ko tab tak squint karo jab tak sirf do-teen value masses na bachein, aur ek bhi strand line touch karne se pehle unhe block karo.",
+      "Pehle ek simplified head pe crown se radiate karti kuch direction arrows draw karo, kisi bhi mass lay-in karne se pehle.",
+      "Individual strand accents ko bilkul end ke liye save karo, aur unhe mid-tones mein concentrate karo \u2014 sabse deep shadows mein nahi, sabse bright highlights mein bhi nahi."
+    ],
+    practice: {
+      warmup: "Ek simplified head pe, ek simple hairstyle ke liye teen value masses draw karo \u2014 light, mid, dark \u2014 koi strand lines bilkul nahi.",
+      daily: "Har din mass-first, strands-last order use karke ek naya hairstyle draw karo: growth direction arrows, phir value masses, phir kuch accent strands.",
+      weekly: "Hair ki ek reference photo lo aur do versions banao: ek shuru se strand-by-strand, ek mass-first jisme accents sabse last add ho. Compare karo kaunsa ek image ki tarah zyada convincingly read hota hai, sirf close-up nahi.",
+      challenge: "Same hairstyle ko teen alag lighting directions mein render karo, har baar mass-first order rakhte hue, aur compare karo value masses kaise shift hoti hain."
+    },
+    quiz: [
+      {q:"Is module ke hisaab se, koi bhi individual hair strand draw karne se pehle kya establish hona chahiye?", options:["Exact hair color","Do ya teen large value masses","Character ka naam","Ek full ink outline"], correct:1, explain:"Value masses pehle aati hain \u2014 real hair ko squint karke dekhna kisi bhi strand visible hone se bahut pehle sirf do-teen masses reveal karta hai."},
+      {q:"Individual strand accents kahan concentrate hone chahiye?", options:["Sabse deep shadows sameet, har value mein equally","Zyada tar mid-tones mein, sparingly","Sirf sabse bright highlights mein","Farak nahi padta, har jagah equally detail karo"], correct:1, explain:"Har strand ko equally detail karna, especially shadow mein, us value structure ko flatten kar deta hai jo hair ko solid dikhata hai."},
+      {q:"Ye module hair ka neeche wale skull ke saath relationship ke baare mein kya kehta hai?", options:["Hair ka apna koi volume nahi hota aur ise skull ko exactly hug karna chahiye","Hair ka apna volume hota hai, skull se alag, jo uske cross-contour ko sirf ek starting guide ki tarah follow karta hai","Hair ko hamesha ek flat silhouette ki tarah draw karna chahiye","Hair sirf stylized art mein matter karta hai"], correct:1, explain:"Hair scalp se thoda door apni thickness aur gravity ke saath sit karta hai, ek flat cap ki tarah painted nahi."}
+    ],
+    checklist: [
+      "Koi bhi strand detail add karne se pehle do-teen hair value masses block kar sakta/sakti hoon.",
+      "Ek simplified head pe whorl point se radiate karti growth-direction arrows draw kar sakta/sakti hoon.",
+      "Strand accents last mein add karta/karti hoon, evenly hote hue everywhere ki jagah mid-tones mein concentrated.",
+      "Hair ko uske apne volume ke saath draw karta/karti hoon, skull ki surface se alag aur thoda door."
+    ],
+    nextStep: "Neck \u2014 head aur torso ke beech ka connector, aur wo diagonal muscle landmark jo zyada tar beginners kabhi draw hi nahi karte."
+  },
+
+  m32: {
+    hook: "Ek vertical pole nahi jispe head sit karta hai \u2014 ek leaning cylinder ek diagonal muscle ke saath jo iski almost poori visible structure define karta hai.",
+    whyItMatters: [
+      "Neck, Module 20 wale head-rotation work aur do modules baad wale torso construction ke beech ka connector hai. Beginners frequently ise ek perfectly vertical, symmetrical cylinder ki tarah draw karte hain bina kisi defining structure ke \u2014 jo stiff lagta hai chahe uske dono taraf head aur shoulders achhe se construct kiye gaye hon."
+    ],
+    coreIdea: [
+      "Neck ek cylinder mein simplify hota hai, par ye vertical nahi hota: ye torso se thoda aage lean karta hai head ka weight support karne ke liye, aur iska exact angle posture ke saath shift hota hai \u2014 ek perfectly upright neck, shoulders ke seedha upar centered, ek figure ko artificially stiff dikhane ke sabse fast tareekon mein se ek hai.",
+      "Sabse useful single landmark <b>sternocleidomastoid</b> (SCM) hai, ek muscle jo ear ke seedha peeche se collarbone aur sternum tak ek clear diagonal ki tarah chalta hai. Ye diagonal side aur three-quarter view se neck ke zyada tar visible silhouette ko define karta hai, aur baaki kuch bhi draw karne se pehle ek guideline ki tarah draw karna worth hai.",
+      "<b>Trapezius</b> neck ke base se neeche aur bahar shoulders mein chalti sloped sides banata hai \u2014 agle module mein zyada construction depth ke saath cover hoga, par yahan note karna worth hai neck ke doosre major silhouette-defining edge ki tarah.",
+      "Head aur neck ko ek single rigid fused unit ki tarah move karne ki zaroorat nahi \u2014 neck ek taraf lean kar sakta hai jabki head doosri taraf tilt kare, bilkul jaise poori spine (Module 34) alag alag points pe independently bend kar sakti hai. Head-plus-neck ko ek single stiff block ki tarah treat karna ek common aur bahut fixable beginner habit hai."
+    ],
+    mistakes: [
+      "Neck ko ek perfectly vertical cylinder ki tarah draw karna, torso se uske natural forward lean ko ignore karte hue.",
+      "SCM diagonal ko poori tarah omit kar dena, neck ko bina kisi defining structural landmark ke chhodte hue.",
+      "Neck ko exactly shoulders aur torso ke center pe attach karna, uski jagah thoda aage jahan ye actually sit karta hai.",
+      "Head aur neck ko ek rigid unit ki tarah treat karna jo hamesha saath mein tilt aur rotate kare."
+    ],
+    proTips: [
+      "Kisi bhi neck pe SCM diagonal ko apni pehli guideline ki tarah draw karo, cylinder ke outline se pehle.",
+      "Check karo ki neck torso ki vertical line ke relative aage, peeche, ya ek taraf lean kar raha hai \u2014 ye ek natural pose mein almost kabhi perfectly plumb sit nahi karta.",
+      "Head ko neck ke apne lean se independently tilt karna practice karo, unhe fused treat karne ki habit todne ke liye."
+    ],
+    practice: {
+      warmup: "Front se ek simple head-neck-shoulder unit draw karo, dono sides pe SCM diagonal mark karte hue kisi doosri detail se pehle.",
+      daily: "Har din same head-neck-shoulder unit ko ek naye neck lean aur head tilt pe construct karo, dono ko ek doosre se independent rakhte hue.",
+      weekly: "Neck ko front, three-quarter, aur profile se draw karo, track karte hue SCM ka visible angle viewpoint ke saath kaise badalta hai.",
+      challenge: "Ek figure construct karo jo ek shoulder ke upar se dekh raha ho, jahan neck neeche wale torso se kaafi zyada rotate karta hai \u2014 independent head/neck/torso movement ka ek genuinely useful stress-test."
+    },
+    quiz: [
+      {q:"Is module ke hisaab se sabse useful single neck landmark kya hai?", options:["Adam's apple, hamesha","Sternocleidomastoid (SCM), jo ear ke peeche se collarbone tak diagonally chalta hai","Sirf trapezius","Koi useful neck landmark hota hi nahi"], correct:1, explain:"SCM diagonal neck ke zyada tar visible silhouette ko define karta hai aur baaki kuch bhi draw karne se pehle draw karna worth hai."},
+      {q:"Kya neck ek natural pose mein shoulders ke perfectly vertical sit karta hai?", options:["Haan, natural look ke liye hamesha vertical","Nahi, ye typically torso se thoda aage lean karta hai, aur exact angle posture ke saath shift hota hai","Sirf profile view mein","Sirf children mein"], correct:1, explain:"Ek perfectly vertical neck ek figure ko artificially stiff dikhane ke sabse fast tareekon mein se ek hai."},
+      {q:"Kya head neck ke apne lean se independently tilt kar sakta hai?", options:["Nahi, wo hamesha ek rigid unit ki tarah move karte hain","Haan \u2014 unhe fused treat karna ek common, fixable beginner habit hai","Sirf profile views mein","Sirf seedha aage dekhte waqt"], correct:1, explain:"Head aur neck kuch had tak independently move kar sakte hain, bilkul jaise spine alag alag points pe bend kar sakti hai."}
+    ],
+    checklist: [
+      "Neck ke outline se pehle SCM diagonal ko ek guideline ki tarah draw karta/karti hoon.",
+      "Neck ko ek natural forward lean ke saath construct karta/karti hoon, ek perfectly vertical cylinder ki jagah.",
+      "Neck ko torso pe thoda aage attach karta/karti hoon, dead-center ki jagah.",
+      "Ek head ko neck ke apne lean se independently tilt karte hue construct kar sakta/sakti hoon."
+    ],
+    nextStep: "Shoulders \u2014 ek collarbone jo beginners ki expectation se zyada bend karta hai, aur ek shoulder blade jo back ke across slide karta hai."
+  },
+
+  m33: {
+    hook: "Collarbone ek straight bar nahi hai \u2014 ye ek lazy double-curve hai jo swivel kar sakta hai, aur uske neeche wala shoulder blade actually ribs ke across slide karta hai jaise jaise arm move karta hai.",
+    whyItMatters: [
+      "Shoulders torso (do modules baad) ko arms (uske agle module) se connect karte hain, aur inhe kaise construct kiya jaata hai ye directly affect karta hai ki har baad wala arm pose believable lagega ya pasted-on. Beginners commonly shoulders ko ek single rigid horizontal bar ki tarah draw karte hain bina kisi internal movement ke, jo cap kar deta hai ki uske upar built koi bhi arm gesture kitna convincing ho sakta hai."
+    ],
+    coreIdea: [
+      "<b>Clavicle</b> (collarbone) straight nahi hota \u2014 iska ek gentle double-curve hota hai, jaise ek shallow S apni side pe lying \u2014 sternum se shoulder tak chalta hua. Ye shrug karte hue upar-neeche move kar sakta hai aur thoda aage-peeche rotate kar sakta hai, apne move hote hi poori upper-chest silhouette badalte hue.",
+      "<b>Scapula</b> (shoulder blade) rib cage ke peeche sit karta hai aur genuinely uski curved surface ke across slide karta hai jaise arm move karta hai \u2014 ye ek jagah fixed nahi hota. Jab arm raise hota hai, scapula ribs ke across upar aur bahar rotate aur glide karta hai; same rib cage position purely arm position ke hisaab se bahut alag back silhouettes produce kar sakti hai.",
+      "<b>Deltoid</b> shoulder joint ko cap karta hai aur arm position ke saath shape badalta hai \u2014 rounder aur fuller jab arm relaxed hang kare, flatter aur zyada stretched jab arm raise ho. Ye seedha agle module ke arm construction se connect karta hai.",
+      "Ek natural, weighted pose mein shoulders rarely level ya symmetrical hote hain \u2014 ek commonly higher, lower, aage, ya peeche hota hai weight shift, torso ke through ek twist, ya ek gestural lean ki wajah se. Default se dono shoulders ko perfectly level draw karna, ek unobserved, generic pose ka ek reliable sign hai."
+    ],
+    mistakes: [
+      "Clavicle ko ek straight, rigid bar ki tarah draw karna, uski actual gentle double-curve ki jagah.",
+      "Arm ke pose ke chahe jo bhi ho, scapula ko ek hi position pe fixed rakhna, use rib cage ke across slide karne dene ke bajaye.",
+      "Default se dono shoulders ko perfectly level aur symmetrical banana, ek clearly weighted ya twisting pose mein bhi.",
+      "Deltoid ki shape ek relaxed, hanging arm aur ek raised arm ke beech kaise badalti hai, ye ignore karna."
+    ],
+    proTips: [
+      "Clavicle ke double-curve ko deliberately sketch karo, ek quick gesture mein bhi \u2014 ek straight collarbone line ek unconsidered shoulder ke sabse fast tells mein se ek hai.",
+      "Jab pose mein arm raise ho, scapula ki position ko actively rib cage pe match karne ke liye move karo \u2014 use wahin mat chhodo jahan wo arm rest pe hone se sit karta.",
+      "Casual, weighted poses mein genuine shoulder asymmetry ke liye reference check karo, ek level, symmetrical bar ko default samajhne ke bajaye."
+    ],
+    practice: {
+      warmup: "Ek simplified rib cage draw karo jisme clavicle ka double-curve aur scapula placement mark ho, front se aur back se.",
+      daily: "Same shoulder construction ko arm rest pe, phir overhead raised, draw karo, track karte hue scapula aur deltoid ki shape kaise badalti hai.",
+      weekly: "Ek figure construct karo jisme clearly weight-shifted, asymmetrical shoulder line ho \u2014 ek shoulder doosre se higher aur zyada forward.",
+      challenge: "Same torso aur shoulder girdle ko front, back, aur side se draw karo, clavicle curve aur scapula placement teeno mein consistent rakhte hue."
+    },
+    quiz: [
+      {q:"Is module ke hisaab se clavicle actually kaisi shape ki hoti hai?", options:["Ek perfectly straight bar","Ek gentle double-curve, jaise ek shallow S apni side pe lying","Ek tight zigzag","Ek perfect semicircle"], correct:1, explain:"Ise ek straight rigid bar ki tarah draw karna uski actual gentle double-curve miss kar deta hai."},
+      {q:"Jab arm raise hoti hai to scapula ka kya hota hai?", options:["Kuch nahi, wo completely fixed rehta hai","Wo rib cage ke across upar aur bahar rotate aur glide karta hai","Wo rib cage se poori tarah detach ho jaata hai","Wo sirf tab move karta hai jab head turn kare"], correct:1, explain:"Scapula genuinely ribs ke across slide karta hai jaise arm move karta hai \u2014 ye ek jagah fixed nahi hota."},
+      {q:"Kya ek natural, weighted pose mein dono shoulders typically level aur symmetrical hote hain?", options:["Haan, hamesha perfectly level","Usually nahi \u2014 weight shift, twisting, ya gesture commonly ek shoulder ko higher, lower, forward, ya back kar dete hain","Sirf professional models mein","Sirf attention pe khade hone pe"], correct:1, explain:"Default se perfectly level, symmetrical shoulders ek unobserved, generic pose ka common sign hai."}
+    ],
+    checklist: [
+      "Clavicle ka actual double-curve draw kar sakta/sakti hoon, ek straight bar ki jagah.",
+      "Raised versus resting arm ke hisaab se scapula ki position rib cage pe move karta/karti hoon.",
+      "Ek genuinely asymmetrical, weight-shifted shoulder line construct kar sakta/sakti hoon.",
+      "Ek relaxed aur ek raised arm position ke beech deltoid ki shape adjust karta/karti hoon."
+    ],
+    nextStep: "Torso \u2014 do simple oval masses jo ek flexible spine se connected hain, ek rigid block nahi."
+  },
+
+  m34: {
+    hook: "Ek rigid block nahi \u2014 do overlapping ovals ek flexible spine pe, aur wo kitna overlap karte hain hi tumhara main tool hai bend, twist, aur lean dikhane ka.",
+    whyItMatters: [
+      "Torso wo core mass hai jisse is arc ki baaki har cheez attach hoti hai \u2014 upar head, neck, aur shoulders; sides pe arms; neeche legs aur pelvis. Iska construction decide karta hai ki poora figure alive lagega ya ek stiff mannequin \u2014 yahi wajah hai ki ye module ab tak ke poore Body & Anatomy arc ka load-bearing lesson hai."
+    ],
+    coreIdea: [
+      "Torso <b>do masses</b> mein simplify hota hai \u2014 rib cage ek egg-shaped oval ki tarah, pelvis ek chota bucket-shaped oval ki tarah \u2014 ek flexible spine se connected, ek approach jise widely \"the Bean\" ki tarah sikhaya jaata hai. Ye ek deliberate simplification hai: iska matlab seedha ek realistic figure produce karna nahi hai, balki us underlying concept ko sikhana hai jo do masses ek flexible connector pe hote hain, jispe har baad wala detailed torso build hota hai.",
+      "Rib cage ki true shape ek perfect oval nahi hoti (iska curve actually 10th rib ke around ruk jaata hai, phir wapas sternum tak swing karta hai), par construction purposes ke liye ise ek oval ki tarah treat karna kaafi accurate hai build karne ke liye aur alag alag angles mein consistent rakhna kahin zyada aasan.",
+      "Jaise torso bend, twist, ya lean karta hai, do ovals ke beech ka relationship badalta hai: aage bend karna ya twist karna unhe ek doosre ke kareeb le aata hai aur unka overlap badhata hai; peeche arch karna unhe aur separate kar deta hai. Ye overlap-versus-separation relationship torso movement dikhane ka primary tool hai, aur ise kisi bhi muscle ya surface detail se pehle establish hona chahiye.",
+      "Ek genuinely useful real proportion check: ek relaxed standing pose mein, rib cage ke bottom aur pelvis ke top ke beech ka gap roughly standing figure ki apni fist ki width jitna hota hai \u2014 ek fast, portable sanity check jise exact measurements yaad karne ki zaroorat nahi."
+    ],
+    mistakes: [
+      "Torso ko ek single rigid box ya cylinder ki tarah treat karna, rib cage aur pelvis masses ke beech koi distinction na rakhte hue.",
+      "Pose chahe jo bhi ho, do ovals ke beech same overlap ya gap rakhna, bend, twist, ya lean dikhane ke liye use badalne ke bajaye.",
+      "Pelvis oval ko rib cage oval ke same size ya usse bada draw karna, jabki ye generally dono mein se chota hota hai.",
+      "Standing poses pe fist-width rib-to-pelvis proportion check skip kar dena, jisse ek stretched ya compressed midsection ban jaata hai."
+    ],
+    proTips: [
+      "Koi bhi torso detail, muscle, ya clothing se pehle hamesha do ovals aur connecting spine line draw karo.",
+      "Ovals ke overlap ya separation ko torso movement dikhane ke apne primary tool ki tarah use karo, ek bhi muscle form upar add karne se pehle.",
+      "Standing reference poses pe rib cage aur pelvis ke beech fist-width gap check karo, ek fast, repeatable proportion sanity check ki tarah."
+    ],
+    practice: {
+      warmup: "Ek neutral standing pose ke liye rib cage oval, pelvis oval, aur connecting spine line draw karo, koi doosri detail nahi.",
+      daily: "Same two-oval torso ko aage bend karte hue, phir ek side twist karte hue construct karo, exactly track karte hue ovals ka overlap har baar kaise badalta hai.",
+      weekly: "Fist-width rib-to-pelvis gap ko ek real photo reference ya mirror mein apni khud ki standing pose ke against check karo.",
+      challenge: "Ek dynamic action pose construct karo \u2014 reach karte hue, twist karte hue, ek side bahut aage lean karte hue \u2014 sirf two-oval-and-spine method use karke, koi doosra body part add karne se pehle."
+    },
+    quiz: [
+      {q:"Torso ke do main simplified masses kaunse hain?", options:["Do identical cubes","Ek egg-shaped rib cage oval aur ek chota bucket-shaped pelvis oval","Ek single cylinder","Teen stacked spheres"], correct:1, explain:"Ye two-mass approach, kabhi kabhi \"the Bean\" kehlata hai, iska foundation hai jispe poora module build hota hai."},
+      {q:"Jab figure aage bend kare ya twist kare to do torso ovals ke beech overlap ka kya hota hai?", options:["Overlap kam ho jaata hai","Overlap badh jaata hai, ovals ko ek doosre ke kareeb la deta hai","Kuch nahi badalta","Ovals apni positions swap kar lete hain"], correct:1, explain:"Bend karna ya twist karna rib cage aur pelvis masses ko ek doosre ke kareeb le aata hai; peeche arch karna unhe aur separate karta hai."},
+      {q:"Ek standing pose mein rib-to-pelvis gap ke liye ek genuinely useful proportion check kya hai?", options:["Ye hamesha exactly ek head-height jitna hona chahiye","Ye roughly figure ki apni fist ki width jitna hota hai","Ye hamesha zero hona chahiye, directly touching","Koi reliable check hai hi nahi"], correct:1, explain:"Ye fist-width relationship ek fast, portable sanity check hai jise exact measurements yaad karne ki zaroorat nahi."}
+    ],
+    checklist: [
+      "Torso ko do ovals se, ek flexible spine se connected, construct kar sakta/sakti hoon, kisi bhi doosri detail se pehle.",
+      "Bending, twisting, ya leaning dikhane ke liye ovals ka overlap badalta/badalti hoon, ek fixed relationship rakhne ke bajaye.",
+      "Pelvis oval ko rib cage oval se chota draw karta/karti hoon.",
+      "Ek standing pose ke rib-to-pelvis gap ko fist-width proportion ke against check kar sakta/sakti hoon."
+    ],
+    nextStep: "Arms \u2014 do cylinders aur ek hinge, plus ek forearm jisme secretly do bones ek doosre ke around twist karti hain."
+  },
+
+  m35: {
+    hook: "Do cylinders aur ek hinge, sivaay iske ki forearm mein secretly do bones hoti hain jo ek doosre ke around twist karti hain \u2014 yahi poori wajah hai ki tumhari palm upar ya neeche face kar sakti hai.",
+    whyItMatters: [
+      "Arms do modules pehle wale shoulder construction ko agle module ke hands se connect karte hain. Elbow hinge ko, aur specifically forearm ki internal rotation ko, sahi karna hi ek gesture ko loose aur alive read karwane aur ek stiff, single-piece tube jaisa lagne ke beech ka fark hai."
+    ],
+    coreIdea: [
+      "Upper arm aur forearm elbow hinge pe connected <b>do cylinders</b> mein simplify hote hain. Upper arm cylinder sirf us ek hinge pe bend karta hai \u2014 seedha saada. Forearm genuinely zyada complex hai: isme <b>do bones</b> hoti hain, radius aur ulna, jo ek doosre ke around rotate karti hain. Yahi hai jo hand ko palm-up se palm-down (<b>supination</b> aur <b>pronation</b>) turn karne deta hai, bina elbow joint khud rotate kiye \u2014 ek distinction jo beginners commonly miss karte hain, poore forearm ko ek rigid, non-twisting tube ki tarah treat karte hue.",
+      "Is internal rotation ka ek visible consequence hai: biceps zyada prominently bulge karta hai jab forearm supinated ho (palm up), aur flatter ya rotated away dikhta hai jab pronated ho (palm down) \u2014 ek subtle cue jo seedha isse juda hai ki abhi do forearm bones kis taraf crossed hain.",
+      "Elbow ka bony point (<b>olecranon</b>, ulna ka part) ek reliable, easily observed landmark hai, especially jab arm bend kare to visible.",
+      "Beginners arm length ko commonly underestimate karte hain: ek fully extended arm typically same figure pe roughly mid-thigh tak pahunchta hai \u2014 pichle module wale torso construction ke against run karne worth ek fast proportion check."
+    ],
+    mistakes: [
+      "Forearm ko ek single rigid cylinder ki tarah treat karna bina kisi internal twist capacity ke, supination aur pronation ko poori tarah miss karte hue.",
+      "Ye bhool jaana ki biceps ki visible shape isse depend karti hai ki palm upar face kare ya neeche.",
+      "Arms ko unki real proportion se noticeably chota draw karna, especially torso aur legs ke relative.",
+      "Arm bend hote hi elbow ka bony landmark poori tarah kho dena, ek smooth, uninformative joint chhodte hue."
+    ],
+    proTips: [
+      "Forearm ki do bones sketch karo, chahe simplified do offset guide lines ki tarah, isse yaad rakhne ke liye ki ye elbow joint se independently khud twist kar sakta hai.",
+      "Ek drawn arm ki length ko torso ke fist-width proportion aur figure ki overall height ke against ek fast sanity check ki tarah check karo.",
+      "Same arm pose ko do baar draw karo \u2014 palm up, phir palm down \u2014 aur compare karo poore forearm ki silhouette kitni badalti hai, sirf hand nahi."
+    ],
+    practice: {
+      warmup: "Arm ko do simple cylinders ki tarah draw karo ek clear elbow hinge ke saath, teen alag bend angles se.",
+      daily: "Same arm pose draw karo har din palm ko ek nayi position pe rotate karte hue, track karte hue forearm ki shape aur biceps kaise respond karte hain.",
+      weekly: "Ek full gesture drawing ki arm length ko torso aur poori figure height ke against check karo, adjust karte hue agar ye bahut chhota read ho.",
+      challenge: "Ek arm construct karo jo body ke across reach kar raha ho, motion ke through jaise jaise hand ki orientation badalti hai forearm ko realistically twist karte hue."
+    },
+    quiz: [
+      {q:"Forearm ko upper arm se structurally kya alag banata hai?", options:["Kuch nahi, dono identical hain","Isme do bones (radius aur ulna) hoti hain jo ek doosre ke around rotate karti hain, jisse palm upar ya neeche turn kar sakti hai","Isme koi bones hoti hi nahi","Ye sirf bend kar sakta hai, kabhi twist nahi"], correct:1, explain:"Ye two-bone rotation, elbow joint nahi, hi palm ko upar ya neeche face karwati hai."},
+      {q:"Palm orientation ke hisaab se upper arm pe visibly kya badalta hai?", options:["Kuch nahi badalta","Biceps zyada bulge karta hai jab supinated ho (palm up) aur flatter dikhta hai jab pronated ho (palm down)","Elbow poori tarah position badal deta hai","Hand size badal jaata hai"], correct:1, explain:"Ye subtle cue seedha isse juda hai ki abhi do forearm bones kis taraf crossed hain."},
+      {q:"Ek rough proportion check ki tarah, ek fully extended arm same figure pe typically kahan tak pahunchta hai?", options:["Sirf waist tak","Roughly mid-thigh tak","Poori tarah ankle tak","Knee se aage shin tak"], correct:1, explain:"Beginners arm length ko commonly underestimate karte hain \u2014 mid-thigh torso ke against run karne worth ek useful check hai."}
+    ],
+    checklist: [
+      "Arm ko do cylinders aur ek clear elbow hinge se construct kar sakta/sakti hoon.",
+      "Same arm pose ko palm up versus palm down draw kar sakta/sakti hoon, forearm ki shape change dikhate hue.",
+      "Arm length ko guess karne ke bajaye torso ki proportions ke against check karta/karti hoon.",
+      "Arm bend hone pe elbow ka bony landmark visible rakhta/rakhti hoon."
+    ],
+    nextStep: "Hands \u2014 drawing mein sabse buri reputation wala feature, ek actual learnable structure mein break down kiya hua."
   }
 
 };
