@@ -1928,6 +1928,91 @@ const TRANSLATIONS_HI = {
       "Ek pose ki emotional readability ko silhouette mein reduce karke check karta/karti hoon."
     ],
     nextStep: "Character Design \u2014 Module 6 wala circle-triangle-rectangle alphabet, ab jaanbujh kar personality build karne ke liye use kiya gaya, kisi ek detail draw hone se pehle."
+  },
+
+  m46: {
+    hook: "Module 6 wala circle-rectangle-triangle alphabet, ab is baar deliberately use kiya gaya \u2014 ek silhouette mein kisi ek detail exist hone se pehle personality encode karne ke liye.",
+    whyItMatters: [
+      "Ye module Module 6 wale \"circle, rectangle, triangle ek alphabet ki tarah\" idea ko leta hai aur use ek deliberate design tool mein badal deta hai, sirf ek observational simplification technique se aage \u2014 shape language ki actual professional practice, ek character ki personality ko unke silhouette mein encode karne ke liye kisi bhi surface detail exist hone se pehle use ki jaati hai."
+    ],
+    coreIdea: [
+      "<b>Shape language</b> ek character ke dominant underlying shapes use karke personality communicate karne ki practice hai even detail add hone se pehle. Rounded, circular dominant shapes friendly, soft, harmless, ya young lagne ki tendency rakhte hain; angular, triangular shapes dangerous, dynamic, ya aggressive lagne ki tendency rakhte hain; blocky, rectangular shapes stable, reliable, strong, ya stubborn lagne ki tendency rakhte hain.",
+      "Ye associations strong defaults hain, absolute rules nahi \u2014 skilled designers kabhi kabhi deliberately inhe subvert karte hain (jaise ek round, harmless-looking villain) exactly isliye kyunki default expectation hi wo cheez hai jo subversion ko land karwati hai.",
+      "Ek character ke silhouette ko solid black mein check karna chahiye, bilkul Module 6 ke silhouette-readability test ki tarah. Ek strong design ko koi bhi color ya internal detail add hone se pehle, sirf uske outline se hi recognizable aur ek cast ke doosre characters se distinct rehna chahiye.",
+      "<b>Proportional exaggeration</b> \u2014 is poore arc mein establish ki gayi realistic baseline se specific proportions ko stretch ya shrink karna, jaise ek young ya comedic character ke liye ek bada head-to-body ratio, ya ek graceful ya sinister character ke liye lambe limbs \u2014 shape language ke saath kaam karne wala ek doosra major design tool hai."
+    ],
+    mistakes: [
+      "Ek character ke costume aur surface detail ko design karna ek clear dominant shape language establish karne se pehle, design ko fully detailed hone ke baad bhi koi coherent read na dete hue.",
+      "Ek shape language use karna jo accidentally character ki intended personality se contradict kare, bina kisi deliberate reason ke.",
+      "Silhouette check skip karna, ek design produce karte hue jo sirf color aur detail add hone ke baad hi correctly read hota hai, aur ek flat shape ki tarah gir jaata hai.",
+      "Ek cast ke har character ko same dominant shape language dena, unhe ek doosre se visually distinguish karna mushkil banate hue."
+    ],
+    proTips: [
+      "Ek character ki dominant shape language ko koi bhi surface detail add karne se pehle solid silhouette mein block karo, bilkul Module 6 wale shape-blocking exercise ki tarah.",
+      "Deliberately genuinely different dominant shapes ke saath ek full cast design karo, taaki har member sirf silhouette mein bhi distinguishable rahe.",
+      "Agar jaanbujh kar ek shape-language expectation subvert kar rahe ho, to sure karo ki ye ek deliberate choice ki tarah read ho, ek accident ki tarah nahi."
+    ],
+    practice: {
+      warmup: "Teen simple characters design karo sirf ek circle, ek triangle, aur ek rectangle ko unka dominant shape use karke, silhouette mein check kiya hua.",
+      daily: "Har din ek naya character design karo shape language se pehle start karke, surface detail sirf silhouette clearly read hone ke baad add karte hue.",
+      weekly: "Teen se chaar characters ka ek chota cast design karo, check karte hue ki har ek doosron se sirf silhouette mein bhi distinguishable rahe.",
+      challenge: "Ek existing simple design lo aur deliberately uski dominant shape language swap karo, compare karte hue perceived personality kaise badalti hai."
+    },
+    quiz: [
+      {q:"Rounded, circular dominant shapes kaunse personality associations le jaane ki tendency rakhte hain?", options:["Dangerous aur aggressive","Friendly, soft, harmless, ya young","Stable aur stubborn","Koi consistent association exist nahi karta"], correct:1, explain:"Ye strong defaults hain \u2014 design ke liye useful, halaanki skilled designers kabhi kabhi inhe deliberately subvert karte hain."},
+      {q:"Ye module ek character design ko silhouette mein check karne ki recommend kyun karta hai?", options:["Silhouette checks outdated aur unnecessary hain","Ek strong design ko color ya detail add hone se pehle sirf uske outline se hi recognizable aur distinct rehna chahiye","Silhouettes sirf villains ke liye relevant hain","Color hamesha shape se zyada matter karta hai"], correct:1, explain:"Ye Module 6 wala hi readability check hai, ab ek full character design pe apply."},
+      {q:"Ek cast ke har character ko same dominant shape language dene ka ek risk kya hai?", options:["Koi risk nahi, consistency hamesha achhi hoti hai","Characters ek doosre se visually distinguish karna mushkil ho jaate hain","Ye cast ko zyada professional dikhata hai","Iska readability pe koi effect nahi hota"], correct:1, explain:"Ek cast ko sirf silhouette mein bhi distinguishable rehne ke liye genuinely different dominant shapes chahiye."}
+    ],
+    checklist: [
+      "Ek character ko ek dominant shape \u2014 circle, triangle, ya rectangle \u2014 se shuru karke design kar sakta/sakti hoon, surface detail add karne se pehle.",
+      "Ek character design ki readability ko solid silhouette mein check karta/karti hoon.",
+      "Ek chota cast design kar sakta/sakti hoon jisme har character sirf silhouette se distinguishable rahe.",
+      "Character ki intended personality reinforce karne ke liye shape language ke saath proportional exaggeration use kar sakta/sakti hoon."
+    ],
+    nextStep: "Stylization \u2014 is arc ka final module, is baare mein ki har stylized art style ab tak build ki gayi har cheez ka ek deliberate distortion kyun hai, uske around ek shortcut nahi."
+  },
+
+  m47: {
+    hook: "Ek simplified shortcut nahi \u2014 exact usi realistic structure ka ek deliberate, informed distortion jise ye poora arc build kar raha tha.",
+    whyItMatters: [
+      "Ye Body & Anatomy arc ko close karta hai directly ek cheez address karke jo Module 15 (Understanding the Human Head) se implied thi: stylized art \u2014 anime, cartoon, chibi, koi bhi non-photorealistic approach \u2014 anatomy ke around ek shortcut nahi hai. Ye uska ek deliberate, informed distortion hai. Ye module us relationship ko arc ke final lesson ki tarah explicit banata hai."
+    ],
+    coreIdea: [
+      "Har stylized approach ko is poore Head & Portrait aur Body & Anatomy journey mein cover kiye gaye realistic structure ke upar apply kiye gaye deliberate distortions ke ek set ki tarah samajhna behtar hai \u2014 ek simplified alternative ki tarah nahi jo use seekhne ko skip kare.",
+      "Common, genuinely useful stylization moves: proportions ko exaggerate karna (zyada tar anime-adjacent styles mein badi eyes aur ek chota nose aur mouth; chibi ya cartoon styles mein ek bada head-to-body ratio) jabki underlying construction \u2014 Loomis sphere aur guidelines, box-method hands, tapering limb cylinders \u2014 ko exaggeration ke neeche poori tarah intact <i>rakhte</i> hue.",
+      "Rendering ko simplify karna (Module 22 wale full Asaro-style mapping se kam distinct planes, flatter color, Module 13 se reduced texture detail) jabki abhi bhi Module 11 wale underlying light logic ko respect karte hue, taaki simplified forms flat ki jagah solid read hon.",
+      "Alag alag stylized traditions alag specific distortions push karte hain: anime commonly eyes ko heavily exaggerate karta hai jabki nose aur mouth ko simplify karta hai; Western cartoon styles often exaggerated, elastic proportions push karte hain jo Module 9 wale gesture aur squash-and-stretch energy se seedha jude hote hain.",
+      "Ek genuinely informed stylized artist hamesha explain kar sakta hai ki unhone kaunsa specific realistic structure distort karne ke liye choose kiya aur kyun, aur typically pooche jaane pe same subject ko realistically bhi construct kar sakta hai. Wo reversibility hi actual test hai ki stylization ek deliberate skill ki tarah seekhi gayi thi, ya pehle jagah pe construction kabhi seekhe bina hi pahunchi \u2014 jo exactly wo standard hai jispe ye poora course Module 1 se build kar raha tha."
+    ],
+    mistakes: [
+      "Stylization ko construction aur anatomy seekhne ko skip karne ka ek tareeka treat karna, uski jagah uske upar build ek deliberate, informed distortion ki tarah.",
+      "Ek stylized reference ke surface look ko copy karna bina samjhe ki kaunse specific realistic proportions ya structures exaggerate kiye gaye the use produce karne ke liye.",
+      "Ek single figure ke across stylized proportions inconsistently apply karna \u2014 ek stylized head ek otherwise fully realistic body pe, bina kisi coherent overall distortion logic ke.",
+      "Ek simplified style mein kaam karte waqt underlying construction ko poori tarah kho dena, wahi floating-limb aur inconsistent-rotation problems cause karte hue jinhe ye poora arc rokne ki koshish kar raha tha."
+    ],
+    proTips: [
+      "Ek subject stylize karne se pehle, specifically identify karo tum kaunsi realistic proportions ya structures exaggerate karna intend karte ho, sab kuch instinct se uniformly distort karne ke bajaye.",
+      "Underlying construction \u2014 Loomis head, box-method hands aur feet, tapering limb cylinders \u2014 ko even ek heavily simplified style mein bhi active rakho. Ye abhi bhi rotation aur volume ko stylization ke neeche govern karta hai.",
+      "Apne aap ko periodically same subject ko realistically construct karke test karo, confirm karne ke liye ki ek stylized version ek deliberate choice hai, ek unlearned shortcut nahi."
+    ],
+    practice: {
+      warmup: "Same simple head ko realistically aur ek stylized (anime ya cartoon) proportion mein construct karo, dono ke liye same Loomis construction use karke.",
+      daily: "Har din ek stylized character design karo, ek sentence mein likhte hue ki look create karne ke liye kaunsi specific realistic proportion ya structure exaggerate ki gayi.",
+      weekly: "Ek stylized reference image lo aur paper pe reverse-engineer karo ki ye most likely kaunsi realistic structure ke upar built hai.",
+      challenge: "Same full-body pose ko poori tarah realistically aur ek heavily stylized proportion mein construct karo, dono ke beech har underlying construction step \u2014 gesture, torso ovals, box-method hands \u2014 identical rakhte hue."
+    },
+    quiz: [
+      {q:"Is module ke hisaab se, stylized art actually kis cheez ke upar built hai?", options:["Kuch nahi \u2014 ye anatomy poori tarah seekhne ko skip karne ka ek tareeka hai","Is poore course mein cover ki gayi same realistic structure ka ek deliberate, informed distortion","Random personal preference bina kisi underlying logic ke","Sirf color choices, structure nahi"], correct:1, explain:"Stylization realistic construction ke upar apply kiya gaya ek distortion hai, use seekhne ke around ek shortcut nahi."},
+      {q:"Kya ye actual test hai ki stylization ek deliberate skill ki tarah seekhi gayi thi?", options:["Resulting art style kitna popular ban jaata hai","Kya artist pooche jaane pe typically same subject ko realistically bhi construct kar sakta hai","Artist ne kitne YouTube tutorials dekhe hain","Kya style bright colors use karti hai"], correct:1, explain:"Wo reversibility \u2014 underlying realistic structure explain aur demonstrate kar paana \u2014 hi deliberate, informed stylization ka real marker hai."},
+      {q:"Even ek heavily simplified, stylized figure mein bhi kya intact rehna chahiye?", options:["Kuch bhi consistent rehne ki zaroorat nahi","Underlying construction \u2014 Loomis head, box-method hands, tapering limb cylinders \u2014 abhi bhi rotation aur volume govern karte hue","Sirf facial features","Specifically realistic muscle detail"], correct:1, explain:"Underlying construction ko poori tarah kho dena, even ek simplified style mein, wahi floating-limb problems cause karta hai jinhe ye course rokne ki koshish kar raha tha."}
+    ],
+    checklist: [
+      "Same subject ko poori tarah realistically aur ek stylized proportion mein construct kar sakta/sakti hoon, dono ke liye same underlying construction use karke.",
+      "Specifically naam le sakta/sakti hoon ki ek stylized design create karne ke liye maine kaunsi proportions ya structures exaggerate ki.",
+      "Loomis, box-method, aur cylinder construction ko even ek simplified, stylized style mein bhi active rakhta/rakhti hoon.",
+      "Ek stylized reference ko reverse-engineer karke identify kar sakta/sakti hoon ki ye likely kaunsi realistic structure pe built hai."
+    ],
+    nextStep: "Body & Anatomy complete ho gaya. Next: Nature & Architecture \u2014 trees, plants, rocks, water, sky, weather, phir buildings, interiors, aur cities."
   }
 
 };
