@@ -2142,6 +2142,135 @@ const TRANSLATIONS_HI = {
       "Trees aur rocks ke base ke around small undergrowth integrate kar sakta/sakti hoon unhe ground se anchor karne ke liye."
     ],
     nextStep: "Ab jab tum organic living flora construct kar sakte ho, Module 51 rigid, inorganic landscape forms tackle karta hai: faceted rocks, cliffs, aur weathered stone formations."
+  },
+
+  m51: {
+    hook: "Rocks soft lumpy potatoes nahi hain \u2014 ye faceted, hard-edged polyhedrons hain jo directional fracture planes, jointing lines, aur geological pressure se carve kiye gaye hain.",
+    whyItMatters: [
+      "Beginners default karte hain smooth, round, featureless ovals draw karne pe jo giant eggs ya marshmallows jaise dikhte hain, heavy, ancient mineral masses ki jagah.",
+      "Ye module planar form construction (Module 7 aur Module 10) aur surface texture (Module 13) ka ultimate test hai: har boulder aur cliff face distinct planar facets se bana hota hai jo primary light source ki taraf ya usse door face karte hain."
+    ],
+    coreIdea: [
+      "Ek rock ek <b>faceted polyhedron</b> mein simplify hota hai (ek block ya prism chipped aur angled planar faces ke saath). Har facet ek flat ya subtly curved plane hai space mein ek distinct orientation ke saath, light, halftone, aur shadow ke beech crisp value boundaries create karte hue.",
+      "Geological formations distinct <b>stratification aur joint planes</b> follow karte hain: sedimentary rock horizontal beds aur vertical stress fractures ke along breaks karta hai, jabki igneous rock angular blocky fissures banata hai. Cracks aur breaks in structural stress lines ko follow karne chahiye, randomly meander karne ke bajaye.",
+      "<b>Sharp-versus-rounded edge hierarchy</b> rock character dictate karta hai: fresh fractures mein knife-sharp edges hote hain crisp cast shadows ke saath, jabki weathered tops aur water-worn bases softer bevels aur rounded transitions dikhate hain.",
+      "Boulders <b>ground-embedded</b> hone chahiye. Rocks soil ki top surface pe precariously rest nahi karte; sediment, dirt, aur gravel unke base ke around accumulate hote hain, unhe ground plane mein sink karte hue contact occlusion shadows ke saath."
+    ],
+    mistakes: [
+      "Rocks ko soft, pillowy, curving contours ke saath draw karna bina kisi crisp planar facets ya structural corners ke.",
+      "Surface ke across random spiderweb cracks add karna jo underlying planar geometry aur stress lines ko ignore karte hain.",
+      "Sabhi planar faces ko same flat mid-tone value dena, har plane ka angle light source ke relative calculate karne ke bajaye.",
+      "Isolated, perfectly round boulders ko ek smooth flat plane pe rakhna bina contact shadows ya base sediment ke."
+    ],
+    proTips: [
+      "Har rock ko ek simple rectangular ya polygonal box carve karke perspective mein shuru karo, phir corners ko 3-4 bold straight planar cuts se slice karo.",
+      "Adjacent facets ke beech apni value steps crisp rakho \u2014 high edge contrast hi wo cheez hai jo mineral hardness communicate karta hai.",
+      "Large rock faces ko big master planes, medium fracture blocks, aur small gravel debris ke base ki ek hierarchy mein break karo."
+    ],
+    practice: {
+      warmup: "Imagination se 5 polyhedral rock blocks 2-point perspective mein draw karo, har planar facet ko ek single light direction ke hisaab se shade karte hue.",
+      daily: "Soil mein embedded 3 overlapping boulders ka ek clustered group draw karo, distinct top, front, aur side facets dikhate hue.",
+      weekly: "Ek rugged cliff face ya sea stack ka ek master study karo, major horizontal strata aur vertical joint fractures map karte hue.",
+      challenge: "Ek dynamic canyon scene construct karo layered sedimentary rock walls ke saath 1-point perspective mein hard sunlight ke neeche receded."
+    },
+    quiz: [
+      {q:"Beginner rock drawings often soft, potatoes ya pillows jaisi kyun dikhti hain?", options:["Kyunki wo bahut zyada hard cross-hatching use karte hain","Kyunki wo continuous smooth curved contours draw karte hain, form ko crisp, faceted geometric planes mein break karne ke bajaye","Kyunki rocks nature mein naturally spherical hote hain","Kyunki wo sirf do values use karte hain das ki jagah"], correct:1, explain:"Rock forms brittle fracture se bane planar facets se define hote hain. Bina distinct planar face changes ke smooth rounded outlines draw karna mineral hardness ka feeling remove kar deta hai."},
+      {q:"Ek rock face pe cracks aur fissures ko believable dikhne ke liye kaise draw kiya jaana chahiye?", options:["Front ke across symmetrically scattered random curved squiggles ki tarah","Rock volume ke existing joint lines, plane boundaries, aur structural stress axes ke along","Exclusively outer silhouette edges ke around","Sirf pure white highlight ink mein"], correct:1, explain:"Geological fractures internal crystal lattice aur stress planes follow karte hain; cracks ko planar edges aur stratification axes ke along draw karna 3D volume reinforce karta hai."},
+      {q:"Kaunsi anchoring technique ek drawn boulder ko ground ke upar floating dikhne se rokti hai?", options:["Boulder ko perfectly round draw karna bina kisi ground contact ke","Base ko soil mein sink karna dark contact occlusion shadows ke saath aur use smaller sediment aur gravel se surround karna","Horizon ke neeche ki sabhi lines erase karna","Boulder ke top ko bottom se darker banana"], correct:1, explain:"Heavy boulders earth mein settle hote hain; contact occlusion shadows, soil overlap, aur surrounding gravel draw karna stone ko terrain mein firmly anchor karta hai."}
+    ],
+    checklist: [
+      "Rocks ko faceted polyhedral volumes ki tarah construct kar sakta/sakti hoon distinct top, front, aur side planes ke saath.",
+      "Adjacent rock facets ko light angle ke hisaab se distinct value steps ke saath shade kar sakta/sakti hoon.",
+      "Fracture cracks ko structural joint axes aur plane boundaries ke along align kar sakta/sakti hoon.",
+      "Boulders ko ground overlap, gravel debris, aur contact occlusion shadows use karke terrain mein embed kar sakta/sakti hoon."
+    ],
+    nextStep: "Ab jab tum solid rock forms carve kar sakte ho, Module 52 camera ko outward expand karta hai wide ground planes, rolling terrain, aur topographical contours ko deep perspective mein construct karne ke liye."
+  },
+
+  m52: {
+    hook: "Ground page ke bottom pe ek single flat line nahi hai \u2014 ye ek stepped, curving 3D plane hai jo perspective mein tilt karta hai, horizon ke across sweep karta hai, aur topographical mass carry karta hai.",
+    whyItMatters: [
+      "Zyada tar beginner landscapes collapse hote hain kyunki ground ko floating trees aur buildings ke neeche empty negative space ki tarah treat kiya jaata hai. Bina solid terrain construction ke, environment mein kisi bhi cheez ke paas khade hone ke liye ek believable stage nahi hota.",
+      "Ye module linear perspective (Module 8), cross-contours (Module 7), aur composition depth planes (Module 14) ko combine karke expansive landscapes build karta hai jo foreground se horizon tak believably recede karte hain."
+    ],
+    coreIdea: [
+      "Terrain <b>topographical cross-contour lines</b> use karke construct hota hai. Ground ko ek wireframe grid mein wrapped imagine karna (elevation map pe contour lines jaisa) rise, fall, rolling hills, aur gullies ko 3D perspective mein reveal karta hai.",
+      "Ek landscape teen distinct <b>depth stages</b> mein organize hota hai: Foreground (high value contrast, crisp texture, prominent scale), Midground (primary narrative stage, moderate contrast), aur Background (low contrast, atmospheric fading, simplified silhouettes).",
+      "Deep space carve karne ke liye <b>overlapping ground planes</b> (stepped elevation tiers) use karo. Foreground ridges ko midground slopes overlap karna chahiye, jo bari mein background mountain ranges ko overlap karein, unequivocal depth cues establish karte hue.",
+      "Ground planes <b>foreshortening aur perspective compression</b> exhibit karte hain: horizontal plains eye-level horizon line ke paas aate hue tight vertical bands mein compress ho jaate hain, jabki vertical cliffs apni height maintain karte hain."
+    ],
+    mistakes: [
+      "Ground ko ek single flat horizontal line ki tarah draw karna bina kisi elevation changes, depressions, ya contour cross-lines ke.",
+      "Terrain horizon ke paas aane pe horizontal distances ko compress karne mein fail hona, distant fields ko vertical walls jaisa dikhate hue.",
+      "Foreground aur background terrain ko identical value contrast aur detail sharpness se render karna, atmospheric depth destroy karte hue.",
+      "Trees, rocks, aur buildings ko ground ke upar place karna bina unke footprints ke liye matching horizontal landing planes carve kiye."
+    ],
+    proTips: [
+      "Apne ground plane ke across 4-5 curved cross-contour grid lines lightly lay down karo slopes aur dips map karne ke liye, kisi bhi landscape elements place karne se pehle.",
+      "Terrain ridges ko alternating left-and-right sides se stagger karo ek S-curve eye path create karne ke liye jo viewer ko deep space mein le jaaye.",
+      "Har ridge ke further back hone ke saath apni shadow values ko progressively lighten karo atmospheric perspective simulate karne ke liye."
+    ],
+    practice: {
+      warmup: "Ek rolling hillside 2-point perspective mein draw karo ek 3D wireframe grid use karke ek winding path dikhane ke liye jo neeche dip karta hai aur upar rise karta hai.",
+      daily: "Ek 3-layer terrain composition sketch karo (foreground hillock, midground plateau, background mountain ridge) silhouette overlaps use karke.",
+      weekly: "Photo reference se ek detailed mountain valley landscape draw karo, elevation contour lines aur atmospheric value fade track karte hue.",
+      challenge: "Ek fantasy landscape environment design karo dramatic cliff terraces, winding riverbeds, aur terraced paths ke saath 3-point perspective mein."
+    },
+    quiz: [
+      {q:"Flat horizontal ground horizon line ke paas aate hue perspective se kaise affect hota hai?", options:["Ye vertically expand hota hai aur wider ho jaata hai","Ye extreme foreshortening se guzarta hai, horizontal distances ko tight, narrow bands mein compress karte hue","Ye ek perfect circle mein curve ho jaata hai","Ye sky ke peeche completely gayab ho jaata hai"], correct:1, explain:"Perspective foreshortening ki wajah se, terrain ke horizontal expanses eye level ke paas aate hue vertically compress hote hain, matlab distant kilometers vertical canvas space ke sirf millimeters occupy karte hain."},
+      {q:"Uneven ground pe slopes aur depressions visualize karne ke liye kaunsa drawing tool ya technique sabse effective hai?", options:["Topographical cross-contour lines (surface wireframes)","Poore bottom ke across random stippling dots","Center ke across ek ruler straight line","Pure black flat fills"], correct:0, explain:"Topographical cross-contour lines terrain ki surface ke upar wireframe elevation lines ki tarah wrap hoti hain, three-dimensional dips, ridges, aur slopes ko clearly map karte hue."},
+      {q:"Foreground aur background terrain layers ke beech value contrast ko kaise manage karna chahiye?", options:["Background layers ka black-and-white contrast sabse highest hona chahiye","Foreground terrain ka high value contrast aur crisp edges hona chahiye, jabki background layers ka reduced contrast aur lighter values ho atmospheric perspective ki wajah se","Consistency ensure karne ke liye sabhi layers ka identical value range hona chahiye","Contrast sirf man-made objects pe apply hona chahiye"], correct:1, explain:"Atmospheric perspective distance ke across light scatter karta hai, distant mountain ridges aur ground planes mein value contrast compress karte hue jabki foreground mein rich darks aur crisp details preserve karte hue."}
+    ],
+    checklist: [
+      "Uneven ground ko topographical cross-contour elevation lines use karke construct kar sakta/sakti hoon.",
+      "Landscape depth ko clear overlapping foreground, midground, aur background stages mein structure kar sakta/sakti hoon.",
+      "Ground planes ko horizon line ke paas aate hue accurately foreshorten kar sakta/sakti hoon.",
+      "Rocks, buildings, aur trees ke liye flat footprints carve kar sakta/sakti hoon taaki wo slopes pe firmly khade rahein."
+    ],
+    nextStep: "Solid terrain establish hone ke baad, Module 53 dynamic reflective surfaces introduce karta hai: still water, mirror reflections, aur transparency."
+  },
+
+  m53: {
+    hook: "Water reflection ek vertical copy-paste nahi hai \u2014 ye ek perspective projection hai jo Fresnel effect, vertical alignment, aur surface transparency se governed hai.",
+    whyItMatters: [
+      "Beginners frequently reflections ko upside-down clones ki tarah draw karte hain jo canvas pe flip ki gayi hon, impossible perspective contradictions create karte hue jo turant flat, horizontal liquid ki illusion ko break kar dete hain.",
+      "Ye module light physics (Module 11) aur perspective projection (Module 8) ko reflective horizontal planes pe apply karta hai: ye samajhna ki sky reflections kyun darken hote hain, white objects apne source se darker kyun reflect karte hain, aur shallow angles reflect karte hain jabki steep angles bed reveal karte hain."
+    ],
+    coreIdea: [
+      "<b>Fresnel effect</b> water reflectivity ko govern karta hai: jab water ko ek shallow glancing angle pe dekha jaaye (horizon ke paas), ye almost ek mirror ki tarah act karta hai, sky aur distant objects ko reflect karte hue. Jab water ko steeply upar se dekha jaaye (foreground ke paas), reflection drastically drop ho jaata hai aur water transparent ban jaata hai, riverbed ya deep dark water reveal karte hue.",
+      "Reflections <b>vertical alignment projection</b> follow karte hain. Har reflected point ek strict vertical plumb line pe girta hai corresponding real-world point ke seedha neeche. Agar ek tree trunk 30 degrees right ki taraf lean karta hai, uska reflection water mein 30 degrees right ki taraf lean karta hai (downwards mirror karte hue), vertical axis lines ke along aligned.",
+      "<b>Under-view perspective</b>: kyunki water surface object se neeche hota hai, water un objects ka underside 'dekhta' hai jo viewer directly nahi dekh sakta (jaise ek bridge ka bottom ya boat hull). Ek reflection water ke perspective se ek view hai, ek mechanical 2D canvas flip nahi.",
+      "Still water ke value rules: reflected sky almost hamesha real sky se thodi <b>darker aur zyada saturated</b> hoti hai, jabki reflected dark landmasses real landmasses se thoda <b>lighter aur kam saturated</b> hote hain."
+    ],
+    mistakes: [
+      "Ek image ko mechanically upside-down flip karna bina water ke overhangs aur boat hulls ke under-view perspective ko account kiye.",
+      "Reflection lines ko vertical plumb lines se diagonally door angle karna jab objects ek angle pe sit karein.",
+      "Water reflections ko actual light source ya sky se brighter banana, reflected light energy ke conservation ko violate karte hue.",
+      "Poore water body ko foreground se background tak uniformly reflective treat karna, Fresnel transparency shift ko ignore karte hue."
+    ],
+    proTips: [
+      "Har major landmark (mast, tree peak, roof corner) se seedha neeche ek vertical construction guideline drop karo uska exact reflection point locate karne ke liye.",
+      "Reflected sky ko upar wali sky se ek value step darker banao, aur reflected dark trees ko upar wale trees se ek value step lighter banao.",
+      "Immediate foreground mein, surface reflection ko fade out karo aur submerged stones ko soft edges ke saath render karo genuine depth create karne ke liye."
+    ],
+    practice: {
+      warmup: "Still water mein khade 3 simple geometric posts draw karo, unki vertical reflection lines ko ek flat water plane ke across project karte hue.",
+      daily: "Ek dock pe moored ek small rowboat draw karo, under-hull reflection aur foreground mein Fresnel transparency shift dikhate hue.",
+      weekly: "Dusk pe ek calm mountain lake ka ek full tonal study karo, real sky/mountains aur unke water reflections ke beech value shift capture karte hue.",
+      challenge: "Ek architectural arch bridge draw karo still water ke across span karta hua ek 2-point perspective angle se, arch ke reflected underside ko correctly construct karte hue."
+    },
+    quiz: [
+      {q:"Jaise jaise tumhara viewing angle steeper hota hai (foreground mein water ke andar directly neeche dekhte hue) water ki reflectivity ka kya hota hai?", options:["Ye 100% reflective ho jaati hai ek mirror ki tarah","Fresnel effect ke hisaab se reflectivity significantly decrease hoti hai, water ko transparent banate hue subsurface depth reveal karne ke liye","Water bright white ban jaati hai","Ye time of day chahe jo bhi ho, stars reflect karti hai"], correct:1, explain:"Fresnel effect dictate karta hai ki steep angles pe water pe girti light reflect hone ke bajaye liquid mein refract hoti hai, subsurface bed rocks aur darkness reveal karte hue."},
+      {q:"Still water mein har reflected point apne source object point ke relative kis axis ke along align hota hai?", options:["Ek 45-degree diagonal line","Water plane ke perpendicular ek strict vertical plumb line","Horizon ke parallel ek horizontal line","Vanishing point ki taraf ek radial line"], correct:1, explain:"Horizontal water pe planar reflection mein, har reflected landmark seedha apne real-world counterpart ke neeche ek true vertical plumb line pe align hota hai."},
+      {q:"Ek water reflection artist ko water ke upar dikhne wali cheez ka exact identical flip kyun nahi hota?", options:["Kyunki water poori light completely absorb karta hai","Kyunki water surface object ko ek lower elevation se 'dekhta' hai, undersides reveal karte hue (jaise bridge soffits ya boat hulls) jo viewer ki eye level se hidden hote hain","Kyunki reflections hamesha scale mein 50% chote hote hain","Kyunki water sirf warm colors reflect karta hai"], correct:1, explain:"Water ek eye ki tarah act karta hai jo water level pe position kiya gaya ho object ki taraf upward dekh raha ho, wo underside planes reflect karte hue jo viewer upar se directly nahi dekh sakta."}
+    ],
+    checklist: [
+      "Reflections ko strict vertical plumb lines use karke object landmarks se construct kar sakta/sakti hoon.",
+      "Fresnel effect apply kar sakta/sakti hoon (shallow angles pe high reflection, steep angles pe transparency).",
+      "Reflected boat hulls, overhangs, aur bridges pe under-view perspective render kar sakta/sakti hoon.",
+      "Correct value relationships maintain kar sakta/sakti hoon: reflected sky, sky se darker; reflected darks, land se lighter."
+    ],
+    nextStep: "Ab jab tum calm, flat water planes samajhte ho, Module 54 fluid dynamics introduce karta hai: ripples, crashing waves, moving currents, aur ocean foam."
   }
 
 };
