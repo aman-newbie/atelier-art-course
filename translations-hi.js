@@ -1506,6 +1506,217 @@ const TRANSLATIONS_HI = {
       "Arm bend hone pe elbow ka bony landmark visible rakhta/rakhti hoon."
     ],
     nextStep: "Hands \u2014 drawing mein sabse buri reputation wala feature, ek actual learnable structure mein break down kiya hua."
+  },
+
+  m36: {
+    hook: "Famously drawing ki sabse hard cheez \u2014 kisi curse ki wajah se nahi, specific, fixable wajahon se.",
+    whyItMatters: [
+      "Hands ki ek genuine cultural reputation hai body ka sabse hard part draw karne ke liye \u2014 itni ki unhe pockets mein ya backs ke peeche chhupana artists ke beech ek running joke hai. Ye module specifically isi reputation ko tod ke ek actual, learnable structure mein badalne ke liye hai, bilkul jaise Module 15 ne Head & Portrait arc ki shuruaat mein \"faces impossible hain\" wali baat ko tod diya tha."
+    ],
+    coreIdea: [
+      "<b>Box method</b>: ek bhi finger draw karne se pehle, poore hand \u2014 palm plus fingers saath mein \u2014 ko ek basic box ya wedge shape mein simplify karo, intended pose aur rotation ke hisaab se angled. Ye palm size aur finger length ke beech ka bada proportional relationship establish karta hai, individual fingers ke bahut harder kaam shuru hone se pehle.",
+      "Ek genuinely useful proportion: palm aur middle finger roughly same length ke hote hain. Har finger taper karta hai, aur har segment (phalange) fingertip ki taraf jaate hue chota hota jaata hai. <b>Thumb</b> ka apna alag range of motion hota hai aur ye hand pe beginners ki typical assumption se noticeably lower aur zyada peeche attach hota hai \u2014 baaki chaar fingers wali same knuckle row se nahi.",
+      "Fingers ke base ke chaar knuckles ek flat row mein sit nahi karte \u2014 wo arc karte hain, aur ye arc zyada pronounced ho jaata hai jaise hand ek fist ki taraf curl karta hai. Beginners jo knuckle line ko flat draw karte hain, ek stiff, mechanical-looking hand produce karte hain even otherwise reasonable proportions ke saath.",
+      "Fingers tapered cylinders hain visible joints ke saath, flat, uniform-width sausages nahi \u2014 aur thumb aur pinky ke base pe fleshy pads (kabhi kabhi Proko ki teaching mein \"hand butts\" kehlate hain) ka apna soft volume hota hai, neeche wale bone structure se alag, worth accounting for jab basic box aur fingers place ho chuke hon.",
+      "Hands genuinely imagination se construct ki ja sakti hain ek baar box-plus-knuckle-arc-plus-tapered-fingers structure internalize ho jaaye \u2014 par apna khud ka hand hamesha ek free, always-in-perspective reference ki tarah available hai, aur ise directly use karna (sirf stylized photos copy karne ke bajaye) yahan real confidence build karne ke sabse fast tareekon mein se ek hai."
+    ],
+    mistakes: [
+      "Fingers ko flat, uniform-width sausages ki tarah draw karna bina kisi tapering ya visible volume ke.",
+      "Thumb ko baaki fingers wali same knuckle row se attach karna, uski actual lower, further-back position ke bajaye.",
+      "Knuckle arc ko poori tarah ignore karna, ek flat, robotic-looking row of finger bases produce karte hue.",
+      "Box ya wedge blocking stage skip karke seedha finger outlines draw karna, jisse proportion unnoticed drift kar jaati hai jab tak hand almost finish nahi ho jaata."
+    ],
+    proTips: [
+      "Poore hand ko hamesha pehle ek box ya wedge shape ki tarah block karo, aur use individual fingers mein tab hi divide karo jab us box ki proportions sahi feel hon.",
+      "Apne khud ke hand ko ek always-available reference ki tarah use karo \u2014 use actual pose mein hold karo jo tum draw karne ki koshish kar rahe ho aur directly dekho, sirf memory ya ek photo pe rely karne ke bajaye.",
+      "Box method use karke kam se kam kuch hands poori tarah imagination se practice karo, kyunki yehi actual test hai ki structure seekha gaya hai ya sirf copy kiya gaya hai."
+    ],
+    practice: {
+      warmup: "Paanch alag hand poses ko sirf simple boxes ya wedges ki tarah block karo \u2014 abhi koi fingers nahi, sirf overall proportion aur rotation.",
+      daily: "Har din ek blocked hand mein tapered, jointed fingers ek visible knuckle arc ke saath add karo, har baar palm-to-middle-finger length ratio check karte hue.",
+      weekly: "Apne khud ke hand ko life se teen alag poses mein draw karo \u2014 relaxed, gripping, pointing \u2014 poore time box method use karte hue.",
+      challenge: "Ek full hand pose poori tarah imagination se construct karo, koi reference nahi bilkul, sirf is module wale box-and-knuckle-arc structure use karke."
+    },
+    quiz: [
+      {q:"Box method ke hisaab se, kisi bhi individual finger se pehle kya draw hona chahiye?", options:["Fingernails","Poore hand ke liye ek single box ya wedge shape, pose ke rotation ke hisaab se","Palm lines","Ek full ink outline"], correct:1, explain:"Poore hand ki proportion pehle block karna us finger-by-finger proportion drift ko rokta hai jo tab hoti hai jab fingers directly draw kiye jaate hain."},
+      {q:"Thumb actually baaki chaar fingers ke relative kahan attach hota hai?", options:["Exact same knuckle row se","Hand pe noticeably lower aur further back","Baaki fingers se higher","Ye hand se directly attach hota hi nahi"], correct:1, explain:"Beginners commonly thumb ko fingers wali same row se attach karte hain, jo anatomically incorrect hai."},
+      {q:"Jab hand ek fist mein curl karta hai to finger-base knuckle line ka kya hota hai?", options:["Ye perfectly flat rehti hai","Iska natural arc zyada pronounced ho jaata hai","Ye poori tarah gayab ho jaati hai","Ye sirf cartoon hands ke liye matter karti hai"], correct:1, explain:"Knuckles ek flat row mein sit karne ke bajaye arc karte hain, aur ye arc hand curl karne pe badh jaata hai."}
+    ],
+    checklist: [
+      "Poore hand ko individual fingers draw karne se pehle ek box ya wedge ki tarah block karta/karti hoon.",
+      "Tapered, jointed fingers draw kar sakta/sakti hoon, flat, uniform-width shapes ki jagah.",
+      "Thumb ko uski correct lower, further-back position pe attach karta/karti hoon, finger knuckle row pe nahi.",
+      "Box method use karke kam se kam ek hand pose poori tarah imagination se construct kar chuka/chuki hoon."
+    ],
+    nextStep: "Hand Gestures \u2014 hands kya communicate karte hain, aur poses ki ek library memorize karna facial expressions memorize karne ki tarah hi kyun fail hota hai."
+  },
+
+  m37: {
+    hook: "Hands almost utna hi communicate karte hain jitna faces \u2014 aur usi fixable wajah se utne hi generically draw kiye jaate hain.",
+    whyItMatters: [
+      "Ye Body & Anatomy ke upper-body unit ko close karta hai, pichle module wali hand structure ko actual storytelling se connect karte hue. Module 29 wala hi principle (facial expressions specific muscles se aata hai specific points khinchne se, kisi memorized template se nahi) yahan seedha apply hota hai: \"hand poses\" ki ek memorized library ek naye gesture ya angle pe generalize nahi hoti, jabki underlying tension aur relaxation samajhna hoti hai."
+    ],
+    coreIdea: [
+      "Hands ek major nonverbal communication channel hain: ek open, relaxed hand calm ya inviting lagta hai; ek clenched fist tension ya aggression jaisa lagta hai; pointing, steepled fingers, aur ek open palm har ek ka apna specific, culturally legible social meaning hota hai. <i>Kyun</i> ek pose ek certain tarike se read hoti hai \u2014 kaunse tendons taut hain, kaunse muscles grip kar rahe hain versus relax \u2014 ye samajhna, ek fixed set of \"reference\" hand poses memorize karne se behtar generalize karta hai.",
+      "Natural hand poses rarely perfectly symmetrical ya evenly spaced hote hain. Relaxed fingers thodi alag, cascading angles pe girti hain, uniformly curl karne ke bajaye \u2014 ek hand jisme har finger exact same angle pe bend kare, ek stiff, under-observed drawing ka sabse common aur sabse visible sign hai.",
+      "Ek hand jo koi object hold kar rahi ho, use us object ki actual shape aur weight ko visibly respond karna chahiye \u2014 fingers ek pen ke around aur ek cup ke around alag alag tarike se wrap aur pressure concentrate karte hain. Ek generic open hand draw karna aur ek object use ke paas rakh dena, uski grip ko object ke specific form ke around build karne ke bajaye, ek common shortcut hai jo unconvincing lagta hai.",
+      "Apne khud ke hand ko directly observe karna \u2014 mirror mein, ya bas hold karke dekhna \u2014 ek specific communicative pose mein is stage pe stylized reference photos copy karne se zyada valuable hai, kyunki ye Module 5 wali genuine observation habit force karta hai, passive copying ke bajaye."
+    ],
+    mistakes: [
+      "Har finger ko exact same uniform angle pe curl karna, ek stiff, mechanical-looking hand produce karte hue even otherwise correct proportions ke saath.",
+      "Hand poses ko ek memorized library ki tarah treat karna, us underlying tension-versus-relaxation logic ko samajhne ke bajaye jo naye poses pe generalize karta hai.",
+      "Ek hand \"holding\" ek object draw karna bina grip ko actually us object ki real shape aur weight ke around wrap aur respond kiye.",
+      "Sirf stylized reference photos pe rely karna, apne khud ke hand ko ek genuine pose mein directly observe karne ke bajaye."
+    ],
+    proTips: [
+      "Apne khud ke hand ko relaxed dekho, phir gently tensed, aur note karo exactly uski shape ke kaunse parts badalte hain aur kaunse same rehte hain.",
+      "Jab ek hand kuch hold karte hue draw kar rahe ho, pehle object draw karo, phir uske around hand ki grip build karo, ek generic hand draw karke baad mein object paas rakhne ke bajaye.",
+      "Ek resting pose mein bhi finger angles ko deliberately thoda vary karo \u2014 perfect uniformity ek unobserved hand ke sabse fast tells mein se ek hai."
+    ],
+    practice: {
+      warmup: "Apne khud ke relaxed hand ko life se draw karo, fingers ke natural, thode cascading angle ko note karte hue, ek uniform curl ki jagah.",
+      daily: "Har din apne hand ko ek naye deliberate, communicative pose mein draw karo \u2014 pointing, ek open stop gesture, ek loose fist \u2014 aur exactly note karo har baar kya badalta hai.",
+      weekly: "Ek specific object (ek pen, ek cup, ek phone) grip karta hua hand draw karo, ensure karte hue ki grip us object ki real shape aur weight ko visibly respond kare.",
+      challenge: "Same simple scene ko ek hand gesture ke do versions ke saath draw karo jo opposite emotional states communicate karein (relaxed aur welcoming versus tense aur closed off), pose ke baaki hisse ko identical rakhte hue."
+    },
+    quiz: [
+      {q:"Ye module hand gestures ko Module 29 ke facial expressions se kyun compare karta hai?", options:["Wo unrelated topics hain jo coincidence se saath rakhe gaye hain","Dono same tarike se fail hote hain jab ek fixed template ki tarah memorize kiye jaayein, underlying muscle tension aur relaxation samajhne ke bajaye","Hands aur faces identical muscles use karte hain","Facial expressions hands ke liye actually matter nahi karte"], correct:1, explain:"Dono cases mein underlying pull samajhna, ek memorized library se naye poses pe kahin zyada behtar generalize karta hai."},
+      {q:"Ek stiff, under-observed hand drawing ka ek common aur bahut visible sign kya hai?", options:["Ek relaxed pose mein thode alag finger angles","Har finger ka exact same uniform angle pe curl karna","Reference photos use karna","Thumb ko fingers se alag draw karna"], correct:1, explain:"Natural hands rarely perfect uniformity ke saath curl karte hain \u2014 wahi uniformity artificial lagti hai."},
+      {q:"Ek object hold karti hui hand draw karte waqt ye module kya recommend karta hai?", options:["Ek generic open hand draw karo aur baad mein object paas rakh do","Pehle object draw karo, phir uski actual shape aur weight ke around hand ki grip build karo","Objects ko kabhi bhi hands ke saath nahi dikhana chahiye","Object chahe jo bhi ho, hand ko hamesha ek fist mein draw karo"], correct:1, explain:"Grip ko us specific object ko visibly respond karna chahiye, ek generic hand shape ke paas float karne ke bajaye."}
+    ],
+    checklist: [
+      "Ek relaxed hand ko naturally cascading, non-uniform finger angles ke saath draw kar sakta/sakti hoon.",
+      "Identify kar sakta/sakti hoon ki apne khud ke hand ki shape ke kaunse parts relaxed aur tensed pose ke beech badalte hain.",
+      "Ek specific object grip karti hui hand draw kar sakta/sakti hoon taaki grip uski actual shape ko respond kare.",
+      "Apne khud ke hand ko directly observe karta/karti hoon, kam se kam utni baar jitna stylized reference photos copy karta/karti hoon."
+    ],
+    nextStep: "Is arc ka upper-body unit complete ho gaya. Next: Pelvis, Legs, Feet, full-body construction, movement, foreshortening, clothing, body language, aur character design."
+  },
+
+  m38: {
+    hook: "Ek tilting bucket, ek flat oval nahi \u2014 aur uska tilt hi actual mechanical wajah hai ki legs believably attach hote hain ya floating jaisa lagta hai.",
+    whyItMatters: [
+      "Torso module ne pelvis ko ek simple oval mass ki tarah introduce kiya tha. Ye module gehraayi mein jaata hai kyunki pelvis ka <b>tilt</b> hi wo single biggest factor hai ki legs ek figure pe believably attach hote hain ya nahi \u2014 ek flat, untilted pelvis classic \"floating legs\" problem produce karne ke sabse fast tareekon mein se ek hai, even jab legs khud correctly construct kiye gaye hon."
+    ],
+    coreIdea: [
+      "Pelvis ko ek flat oval se zyada ek <b>bucket ya basin</b> shape ki tarah samajhna behtar hai \u2014 iski real depth hoti hai, ek front rim, aur ye upar wali rib cage se independently aage, peeche, aur side to side tilt kar sakta hai, wahi independence jo torso ka two-oval system already establish kar chuka hai.",
+      "<b>ASIS</b> (anterior superior iliac spine) \u2014 hips ke front pe visible do bony points \u2014 ek genuinely useful, checkable landmark pair hain. Unhe ek imaginary line se connect karna bucket ka current tilt aur rotation kisi bhi pose mein read karne ka ek fast, reliable tareeka deta hai.",
+      "Hip joints, jahan legs attach hote hain, is bucket ke base pe sit karte hain, aur unka effective angle seedha bucket ke tilt se set hota hai. Ye <b>contrapposto</b> \u2014 classic weight-shifted standing pose \u2014 ka actual mechanical source hai, koi arbitrary stylistic curve nahi.",
+      "Jab weight ek leg pe shift hota hai, us leg ka hip upar uthta hai aur pelvis tilt hota hai \u2014 weight-bearing side pe ASIS line relaxed side se higher uth jaati hai. Ye ek single mechanical fact hi wo S-curve produce karta hai jo ek relaxed standing pose se associated hai."
+    ],
+    mistakes: [
+      "Pelvis ko ek flat oval ki tarah treat karna bina rib cage se independently kisi tilt ya rotation ke.",
+      "Ek drawn pelvis ka angle check karte waqt ASIS landmark pair ko ignore karna, uski jagah guesswork pe rely karna.",
+      "Weight shift chahe jo bhi ho, ek flat, untilted pelvis se legs ko seedha neeche attach karna, ek stiff ya floating stance produce karte hue.",
+      "Ye bhool jaana ki weight-bearing side ka hip ek weight-shifted pose mein upar uthta hai, doosri side ke level rehne ke bajaye."
+    ],
+    proTips: [
+      "Kisi bhi pelvis construction pe pehle do ASIS points mark karo, aur unke beech ki line ko ek running tilt gauge ki tarah use karo.",
+      "Jab ek standing pose correctly read na ho rahi ho, legs ko khud troubleshoot karne se pehle pelvis tilt check karo.",
+      "Pelvis ko upar wali rib cage se independently tilt karte raho \u2014 wahi relationship jo torso ke two ovals already establish kar chuke hain."
+    ],
+    practice: {
+      warmup: "Pelvis bucket ko dono ASIS points mark karke draw karo, front, side, aur back se.",
+      daily: "Same pelvis ko har din ek naye weight-shifted standing pose ke liye tilted draw karo, track karte hue ASIS line ka angle kaise badalta hai.",
+      weekly: "Ek full standing figure construct karo, sirf pelvis tilt correctly karne pe focus karte hue, legs ko kisi detail mein add karne se pehle.",
+      challenge: "Same standing pose ko do baar draw karo \u2014 ek flat, untilted pelvis ke saath aur ek correct contrapposto tilt ke saath \u2014 aur compare karo dono kitna alag read hote hain."
+    },
+    quiz: [
+      {q:"ASIS kya hai, aur pelvis draw karne ke liye ye kyun matter karta hai?", options:["Lower back mein ek muscle, pelvis se irrelevant","Hips ke front pe do bony landmark points, pelvis ka current tilt read karne ke liye useful","Ek pencil grade ka type","Hip socket ka hi naam"], correct:1, explain:"Do ASIS points ko ek imaginary line se connect karna pelvis tilt aur rotation check karne ka ek fast, reliable tareeka hai."},
+      {q:"Ek contrapposto (weight-shifted) standing pose ka actual mechanical source kya hai?", options:["Pure artistic stylization bina kisi anatomical basis ke","Pelvis ka tilt hona jaise weight ek leg pe shift hota hai, us side ka hip raise karte hue","Rib cage ka tilt hona, pelvis se unrelated","Dono legs ka equally bend hona"], correct:1, explain:"Weight-bearing hip pelvis tilt hone ke saath upar uthta hai \u2014 yehi classic S-curve pose ki mechanical wajah hai."},
+      {q:"Is module ke hisaab se, pelvis ko ek flat oval se behtar kaunsi shape describe karti hai?", options:["Ek flat plank","Ek bucket ya basin, real depth aur apne independent tilt ke saath","Ek perfect sphere","Ek flat triangle"], correct:1, explain:"Pelvis ko ek bucket ki tarah treat karna jo rib cage se independently tilt kar sake, hi legs ko believably attach karwata hai."}
+    ],
+    checklist: [
+      "Pelvis ko ek bucket shape ki tarah, ASIS landmark points mark karke, construct kar sakta/sakti hoon.",
+      "Pelvis ko upar wali rib cage se independently tilt kar sakta/sakti hoon.",
+      "Ek weight-shifted standing pose construct kar sakta/sakti hoon jisme weight-bearing side ka correct hip rise dikhe.",
+      "Standing pose correctly read na hone pe legs se pehle pelvis tilt check karta/karti hoon."
+    ],
+    nextStep: "Legs \u2014 hip pe sabse widest ek tapering column, ek uniform tube nahi, ek femur ke saath jo knee ki taraf inward angle karta hai."
+  },
+
+  m39: {
+    hook: "Hip pe widest, ankle pe narrowest, ek side pe ek bare shinbone aur doosri pe ek padded calf \u2014 ek uniform tube nahi.",
+    whyItMatters: [
+      "Legs pichle module wale pelvis tilt ko agle module ke feet se connect karti hain, aur body ka poora weight bear karti hain \u2014 unka construction directly decide karta hai ki ek standing ya walking figure genuinely grounded lagega ya subtly floating."
+    ],
+    coreIdea: [
+      "Leg ek <b>tapering column</b> mein simplify hota hai \u2014 hip aur thigh pe widest, ankle pe narrowest \u2014 is real fact ko match karte hue ki upper-leg bone aur muscle mass genuinely lower-leg mass se zyada hoti hai. Ye ek single smooth taper nahi hai, though: calf ek secondary bulge create karta hai halfway down, leg ankle ki taraf phir se narrow hone se pehle.",
+      "<b>Femur</b> (thighbone) hip se knee tak inward angle karta hai, ek perfectly vertical column ki tarah hang karne ke bajaye \u2014 yahi inward angle wajah hai ki do standing legs parallel tubes ki tarah read nahi hoti, aur ye ek wider pelvis ke saath zyada pronounced ho jaata hai.",
+      "<b>Knee</b> genuinely ek complex joint hai. Turant poori anatomical detail try karne ke bajaye, ise ek wedge ya box connector ki tarah treat karo do leg cylinders ke beech \u2014 Module 10 wala hi combine-and-cut logic \u2014 aur wahan se refine karo.",
+      "Ek specific, checkable asymmetry: <b>tibia</b> ki shin bone leg ke inner-front edge ke along seedha skin ke neeche sit karti hai, us line pe koi muscle padding nahi hoti, jabki lower leg ka outer aur back part meaty calf muscle carry karta hai. Apna khud ka shin feel karna ye turant confirm kar deta hai, aur yahi hai jo ek drawn lower leg ko ek uniform, padded tube jaisa dikhne se rokta hai."
+    ],
+    mistakes: [
+      "Leg ko ek uniformly tapering shape ki tarah draw karna, calf ke neeche wale distinct secondary bulge ko ignore karte hue.",
+      "Dono legs ko perfectly parallel vertical columns ki tarah draw karna, femur ke real inward angle ko hip se knee tak ignore karte hue.",
+      "Ek genuine wedge ya box knee construction skip karke do leg cylinders ko directly ek point pe merge kar dena.",
+      "Poori lower leg ko uniformly muscle se padded treat karna, tibia ke bare, bony inner edge ko ignore karte hue."
+    ],
+    proTips: [
+      "Legs ko do tapering cylinders ki tarah block karo ek wedge ya box knee se connected, kisi bhi muscle refinement se pehle.",
+      "Femur ke inward angle ko hip se knee tak check karo, straight, parallel legs default karne ke bajaye.",
+      "Apna khud ka shin haath se feel karo tibia ke bare edge ko internalize karne ke liye, ek lower leg draw karne se pehle."
+    ],
+    practice: {
+      warmup: "Ek leg ko do tapering cylinders ki tarah ek wedge knee connector ke saath block karo, front se aur side se.",
+      daily: "Har din ek standing leg pair draw karo, femur ka inward angle hip se knee tak pelvis width ke against check karte hue.",
+      weekly: "Ek lower leg draw karo bare tibia edge ko ek side track karte hue padded calf bulge ke against, multiple angles se.",
+      challenge: "Ek full pair of legs construct karo jo ek weight-shifted pose support kar rahi hon, seedha pichle module wale pelvis tilt se connect karte hue."
+    },
+    quiz: [
+      {q:"Leg hip se ankle tak ek smooth, uniform shape mein kyun taper nahi karti?", options:["Ye perfectly uniformly taper karti hai","Calf halfway down ek distinct secondary bulge create karta hai leg ke ankle ki taraf phir se narrow hone se pehle","Legs mein koi real taper hota hi nahi","Sirf female legs mein ye feature hota hai"], correct:1, explain:"Calf ka bulge us single uniform taper ko break kar deta hai jo warna hota."},
+      {q:"Femur ka real angle hip se knee tak kaisa dikhta hai?", options:["Perfectly vertical, doosri leg ke parallel","Inward angled, yahi wajah hai ki do standing legs parallel tubes nahi hoti","Body se door outward angled","Koi consistent angle hota hi nahi"], correct:1, explain:"Ye inward angle ek wider pelvis ke saath zyada pronounced ho jaata hai aur legs ko parallel columns jaisa read hone se rokta hai."},
+      {q:"Knee ko initially construct karne ka recommended tareeka kya hai?", options:["Turant full anatomical muscle detail","Do leg cylinders ke beech ek wedge ya box connector, wahan se refine karte hue","Knee ko poori tarah skip karke cylinders ko directly merge karo","Ise hamesha ek perfect sphere ki tarah draw karo"], correct:1, explain:"Module 10 wala hi combine-and-cut construction logic knee joint pe seedha apply hota hai."}
+    ],
+    checklist: [
+      "Ek leg ko do tapering cylinders ki tarah ek wedge knee se connected block kar sakta/sakti hoon.",
+      "Femur ka inward angle hip se knee tak construct karta/karti hoon, parallel vertical legs draw karne ke bajaye.",
+      "Ek lower leg draw kar sakta/sakti hoon jisme bare tibia edge padded calf side se distinct dikhe.",
+      "Ek constructed leg pair ko pichle module wale pelvis tilt se correctly connect karta/karti hoon."
+    ],
+    nextStep: "Feet \u2014 wahi box-before-detail method jisne hands ko learnable banaya, ab doosri famously tricky extremity pe apply kiya gaya."
+  },
+
+  m40: {
+    hook: "Ek wedge, ek toe box, aur ek ankle circle \u2014 wahi block-before-detail discipline jisne hands ko learnable banaya, ab ek doosri bad-reputation wali extremity pe apply kiya gaya.",
+    whyItMatters: [
+      "Feet leg ke construction ko complete karte hain aur, hands ki tarah, especially hard draw karne ki reputation carry karte hain. Achhi baat, seedha Hands module se established, ye hai ki wahi box-before-detail method yahan bhi equally achhe se kaam karta hai."
+    ],
+    coreIdea: [
+      "Foot teen forms mein simplify hota hai kisi bhi organic refinement se pehle: main foot mass ke liye ek <b>wedge</b> (heel pe taller, toes ki taraf tapering down), front pe ek separate <b>toe block</b>, aur ek <b>circle</b> jo ankle joint mark kare jahan leg connect hoti hai.",
+      "Wedge ka base ko us actual direction follow karna chahiye jispe foot point kar raha hai \u2014 galat karna aasan hai jab foot straight-on ki jagah ek angle pe draw kiya jaaye, aur har baar deliberately check karna worth hai.",
+      "Do <b>ankle bones</b> (malleoli) ek doosre ke level nahi hote: inner wala outer se noticeably higher sit karta hai. Ye ek genuinely useful, checkable landmark pair hai \u2014 foot ka equivalent hand ke knuckle arc ya pelvis ke ASIS line ka \u2014 aur apne khud ke foot pe directly confirm karna aasan hai.",
+      "Foot ka ek real, visible <b>arch</b> hota hai uski inner side ke along, heel se ball tak chalta hua, jo ek bada hissa hai us cheez ka jo wedge ko ek flat plank jaisa read hone se rokti hai. Dynamic poses ke liye \u2014 tip-toe, mid-stride \u2014 wedge ko teen sub-sections (heel, bridge, toes) mein split karna unke beech ke joint bending ko convincingly dikhana kaafi aasan bana deta hai."
+    ],
+    mistakes: [
+      "Wedge, toe-box, aur ankle-circle blocking stage skip karke seedha foot ka outline aur toes draw karna.",
+      "Dono ankle bones ko same height pe draw karna, inner wale ke outer se higher sit karne ke bajaye.",
+      "Foot ko ek flat, uniformly thick plank ki tarah treat karna bina kisi visible arch ke.",
+      "Wedge ke base direction ko us actual angle ke hisaab se adjust na karna jispe foot ek diye gaye pose mein point kar raha hai."
+    ],
+    proTips: [
+      "Kisi bhi detail se pehle wedge, toe box, aur ankle circle block karo \u2014 exactly hand wala box method, yahan apply kiya hua.",
+      "Apna khud ka ankle directly check karo: inner bone outer se higher sit karta hai, har baar.",
+      "Ek dynamic pose ke liye, wedge ko heel, bridge, aur toe sub-sections mein split karo unke beech ke joint bending ko dikhane ke liye."
+    ],
+    practice: {
+      warmup: "Ek foot ko ek wedge, toe box, aur ankle circle ki tarah teen alag angles se block karo.",
+      daily: "Har din ek simplified foot pe dono ankle bones mark karo, check karte hue ki inner wala consistently higher sit kare.",
+      weekly: "Ek foot ko tip-toe pe draw karo, wedge ko heel, bridge, aur toe sub-sections mein split karke bend dikhane ke liye.",
+      challenge: "Ek full leg-and-foot pair construct karo jo ek weight-shifted standing pose support kar rahi ho, foot ki wedge direction ko upar wali leg se connect karte hue."
+    },
+    quiz: [
+      {q:"Foot ke teen main construction forms kaunse hain?", options:["Do identical circles aur ek square","Main mass ke liye ek wedge, ek toe block, aur ek ankle circle","Ek single cylinder","Chaar separate triangles"], correct:1, explain:"Ye teen forms kisi bhi organic refinement se pehle establish hoti hain, hands ke liye use hui hi discipline."},
+      {q:"Kaunsa ankle bone higher sit karta hai, inner ya outer?", options:["Dono exactly same height pe sit karte hain","Inner ankle bone outer se higher sit karta hai","Outer ankle bone hamesha higher sit karta hai","Koi bhi ankle bone ek reliable landmark nahi hai"], correct:1, explain:"Ye ek genuinely useful, checkable landmark pair hai, apne khud ke foot pe directly confirm ki ja sakti hai."},
+      {q:"Foot ke wedge ko heel, bridge, aur toe sub-sections mein split karna kya dikhane mein help karta hai?", options:["Kuch nahi, ye ek unnecessary step hai","Dynamic poses jaise tip-toe ya mid-stride mein joint bending","Sirf shoe ka color","Foot mein exact bone count"], correct:1, explain:"Ye sub-division sections ke beech ke joint bending ko convincingly dikhana kaafi aasan bana deta hai."}
+    ],
+    checklist: [
+      "Ek foot ko ek wedge, toe box, aur ankle circle ki tarah, detail add karne se pehle, block kar sakta/sakti hoon.",
+      "Ankle bones mark kar sakta/sakti hoon, inner wale ke correctly outer se higher sit karte hue.",
+      "Foot ko ek visible arch ke saath draw karta/karti hoon, ek flat plank ki jagah.",
+      "Foot ke wedge ko sub-sections mein split kar sakta/sakti hoon ek dynamic, bent pose construct karne ke liye."
+    ],
+    nextStep: "Complete Body Construction \u2014 ab tak build ki gayi har cheez, actual professional order of operations mein ek hi figure pe."
   }
 
 };
