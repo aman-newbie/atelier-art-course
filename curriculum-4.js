@@ -1112,6 +1112,64 @@ const CURRICULUM_4 = [
 ],
 "nextStep": "You now treat your file structure itself as a deliberate, reversible system. Module 102 goes deeper into blend modes and adjustment layers specifically, building on this non-destructive foundation with more advanced compositing and color-grading techniques."
 }
+,
+{
+"id": "m102",
+"plate": 102,
+"title": "Blend Modes & Adjustment Layers",
+"difficulty": "Advanced",
+"studyTime": "18 min",
+"practiceTime": "25\u201330 min/day",
+"prereq": ["m101"],
+"hook": "Curves can do everything Levels can do, plus one thing Levels can't: bend the tonal range at more than one point at once, which is the real reason professional colorists reach for it over every other tool.",
+"whyItMatters": [
+  "Module 86 introduced blend modes for shadow and highlight layers, and Module 101 introduced adjustment layers as a non-destructive concept. This module goes deep on the single most powerful adjustment layer, Curves, and ties it together with blend modes into a real color-grading toolkit.",
+  "Color grading (adjusting the overall tone and mood of a finished piece) is a distinct skill from painting color in the first place \u2014 it's the final pass that unifies a piece's palette and can shift its entire mood without repainting a single object."
+],
+"coreIdea": [
+  "Curves represents an image's tonal range as a diagonal line from black (bottom-left) to white (top-right); dragging any point on that line up or down brightens or darkens that specific tonal range, and multiple points can be added and adjusted independently \u2014 this is what makes Curves more powerful than Levels, which only controls the endpoints and one midpoint.",
+  "An S-curve (pulling the upper-middle of the line up and the lower-middle down) is a classic, reliable way to add contrast: it brightens the highlights and darkens the shadows simultaneously without touching the true black and white points.",
+  "Setting white, black, and gray points with Curves' eyedroppers (clicking on what should be pure white, pure black, or neutral gray in the image) is a fast, reliable way to correct a color cast across an entire image in one move.",
+  "Layering multiple blend-mode adjustment layers (a Curves layer for contrast, an Overlay layer for a color wash, a Multiply layer for vignette) is how a complete color grade is typically built \u2014 each layer handles one specific job, stacked together rather than trying to do everything in one adjustment."
+],
+"mistakes": [
+  "Only ever using the endpoint sliders in Curves (equivalent to Levels) and never adding a midpoint, missing the tool's real advantage of independently controlling multiple points on the tonal range.",
+  "Applying a strong Curves S-curve globally when only a specific area needs more contrast, instead of using a mask to limit the effect to where it's actually needed.",
+  "Guessing at a color cast correction by eye instead of using the white/black/gray point eyedroppers, which give a fast, reliable starting correction to adjust from.",
+  "Trying to achieve a complete color grade with a single adjustment layer instead of stacking several simple ones (contrast, color wash, vignette), each handling one job.",
+  "Forgetting that adjustment layers affect everything beneath them in the layer stack by default, and not grouping or masking them when an adjustment should only apply to part of a piece."
+],
+"proTips": [
+  "Start any color grade with an S-curve for overall contrast before adding more stylized adjustments, since contrast is usually the first thing a flat-looking image needs.",
+  "Use the white, black, and gray point eyedroppers in Curves as a fast first pass for color-cast correction, then fine-tune manually from that starting point rather than guessing from scratch.",
+  "Mask a Curves adjustment layer to a specific area (using the same mask technique from Module 101) when only part of an image needs a contrast or tone change, rather than applying it globally.",
+  "Build a color grade in stages using several simple adjustment layers stacked together, rather than trying to solve contrast, color cast, and mood all in one complex adjustment."
+],
+"practice": {
+  "warmup": "Add a Curves adjustment layer to a flat-looking image and apply a simple S-curve, comparing the before and after contrast.",
+  "daily": "Take a piece with an unwanted color cast and correct it using the Curves white/black/gray point eyedroppers, then compare the result to a manual color adjustment.",
+  "weekly": "Build a full color grade on a finished piece using at least three stacked adjustment layers (a Curves contrast pass, an Overlay color wash, and a Multiply vignette).",
+  "challenge": "Mask a Curves adjustment layer to affect only one area of a piece (a single object or the background) rather than the whole image, and evaluate how that targeted change affects the composition's focus."
+},
+"resources": [
+  {"type": "Video", "title": "Couch to Photoshop: Episode 7 \u2014 Curves, Levels, and Color Grading Tutorial", "creator": "Scott Detweiler", "url": "https://www.youtube.com/watch?v=Wehtu7okml4", "why": "A free, structured lesson covering Curves and Levels together, including S-curves, sliders, and color grading built from the same tool.", "summary": "Covers the Curves tool in depth alongside Levels, including how to build a line S-curve for contrast, use curve masks to limit an adjustment's area, and apply Curves adjustment layers for stylistic color grading, along with common pitfalls to avoid when using the tool.", "verified": true},
+  {"type": "Article", "title": "Color Correction Using Curves", "creator": "Dan Rodney, Noble Desktop", "url": "https://www.nobledesktop.com/learn/photoshop/color-correction-using-curves-photoshop", "why": "A free, exact step-by-step exercise for setting white, black, and gray points with Curves and manipulating multiple midpoints.", "summary": "Walks through a concrete Curves exercise: setting the white point, black point, and gray point with the tool's eyedroppers to correct an image's tonal range and color cast, then demonstrates adding and manipulating multiple midpoints on the curve to fine-tune brightness in specific tonal ranges independently.", "verified": true}
+],
+"quiz": [
+  {"q": "What makes Curves more powerful than Levels for tonal adjustment?", "options": ["Curves only works on black and white images", "Curves allows multiple independent points to be added and adjusted along the tonal range, while Levels only controls the endpoints and one midpoint", "Levels and Curves are functionally identical tools", "Curves cannot be used as an adjustment layer"], "correct": 1, "explain": "Curves represents the tonal range as an editable line where multiple points can be added and adjusted independently, giving finer control than Levels' single midpoint and two endpoints."},
+  {"q": "What does a classic S-curve do to an image?", "options": ["It only affects the image's color saturation, not tone", "It brightens highlights and darkens shadows simultaneously, adding contrast without moving the true black and white points", "It flips the image horizontally", "It removes all color from the image"], "correct": 1, "explain": "An S-curve pulls the upper-middle of the tonal curve up and the lower-middle down, increasing contrast by brightening highlights and darkening shadows while leaving the true white and black points unchanged."},
+  {"q": "What is the benefit of using the white, black, and gray point eyedroppers in Curves?", "options": ["They only work on grayscale images", "They provide a fast, reliable way to correct a color cast across an entire image by clicking on areas that should be pure white, pure black, or neutral gray", "They permanently delete the image's original color data", "They can only be used once per document"], "correct": 1, "explain": "Clicking these eyedroppers on the corresponding tones in the image gives a quick, reliable starting correction for an unwanted color cast, which can then be fine-tuned further."},
+  {"q": "How is a complete color grade typically built, according to the module?", "options": ["Using a single complex adjustment layer that handles everything at once", "By stacking several simple adjustment layers (contrast, color wash, vignette), each handling one specific job", "Color grading requires repainting the entire piece from scratch", "Only Levels can be used for color grading, never Curves"], "correct": 1, "explain": "A complete color grade is usually built from several simple, stacked adjustment layers, each responsible for one job (like contrast, a color wash, or a vignette), rather than one adjustment trying to do everything."},
+  {"q": "Why should a Curves adjustment layer be masked when only part of an image needs a contrast change?", "options": ["Masking has no functional purpose for adjustment layers", "Adjustment layers affect everything beneath them in the layer stack by default, so a mask limits the effect to only the intended area", "Curves adjustment layers cannot be masked at all", "Masking a Curves layer converts it into a Levels layer"], "correct": 1, "explain": "Since an adjustment layer affects all layers beneath it by default, masking is necessary to restrict its effect to a specific area rather than the whole image."}
+],
+"checklist": [
+  "I can add a midpoint to a Curves adjustment and understand how it differs from Levels.",
+  "I can build a simple S-curve to add contrast to a flat image.",
+  "I can use the white/black/gray point eyedroppers to correct a color cast.",
+  "I can stack multiple adjustment layers to build a complete color grade."
+],
+"nextStep": "You now have a real color-grading toolkit built on non-destructive adjustment layers. Module 103 moves to photobashing \u2014 combining real photographic elements into a cohesive concept art or illustration piece, a technique that relies heavily on the color and tone matching skills from this module."
+}
 ]},
 {id:'professional-production', title:'Professional Production & Specializations', status:'soon', order:11,
     desc:'Editorial illustration, comics, manga, webtoon, visual development, concept art, game art, animation pre-production, print production, and client work.',
