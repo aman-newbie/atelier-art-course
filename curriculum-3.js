@@ -742,7 +742,7 @@ const CURRICULUM_3 = [
           challenge:"Take one existing simple design and deliberately swap its dominant shape language, comparing how the perceived personality changes."
         },
         resources:[
-          {type:'Course', title:'Character Design Track — Lesson 1: Shape Language', creator:'Art Prof (Clara Lieu)', url:'https://artprof.org/character-design-track/#shape-language', why:"A free, structured lesson from a full character design curriculum, with a concrete sketching prompt covering exactly this module's core idea.", verified:true},
+          {type:'Article', title:'Character Design Secrets Everyone Should Know', creator:'Proko (Evgeniy Evstratiy)', url:'https://www.proko.com/lesson/character-design-secrets-everyone-should-know', why:"A free lesson covering idea generation, silhouette, proportion and scale as the core levers of character design \u2014 the previous ArtProf link for this had gone dead.", verified:true},
           {type:'Article', title:'Character Shape Language', creator:'CGWire', url:'https://blog.cg-wire.com/character-shape-language/', why:"Uses real animated film examples to illustrate how dominant shapes communicate personality, a useful applied companion to the Art Prof lesson.", verified:true}
         ],
         quiz:[
@@ -790,8 +790,8 @@ const CURRICULUM_3 = [
           challenge:"Construct the same full-body pose both fully realistically and in a heavily stylized proportion, keeping every underlying construction step — gesture, torso ovals, box-method hands — identical between the two."
         },
         resources:[
-          {type:'Course', title:'The Loomis Method (revisited)', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/quickly-draw-heads-with-the-loomis-method-part-1', why:"Worth revisiting from Module 18 as the realistic foundation this module's stylized distortions are explicitly built on top of.", verified:true},
-          {type:'Article', title:'How to Draw Anime Girl Hair for Beginners', creator:'GVAAT\u2019S WORKSHOP', url:'https://gvaat.com/blog/how-to-draw-anime-hair/', why:"A concrete example of a stylized convention built directly on top of the realistic hair-massing principles from Module 31, from the same source already used for Legs, Feet, and Clothing.", verified:true}
+          {type:'Article', title:'How to Draw Stylized Faces', creator:'Instructables', url:'https://www.instructables.com/How-to-Draw-Stylized-Faces/', why:"A free, dedicated walkthrough of simplifying and exaggerating realistic facial proportions into a stylized result \u2014 directly on-topic, unlike the realistic Loomis construction lesson this replaces.", verified:true},
+          {type:'Article', title:'How to Draw Anime Girl Hair for Beginners', creator:'GVAAT\u2019S WORKSHOP', url:'https://gvaat.com/blog/how-to-draw-anime-girl-hair-for-beginners-4-steps/', why:"A concrete example of a stylized convention built directly on top of the realistic hair-massing principles from Module 31, from the same source already used for Legs, Feet, and Clothing.", verified:true}
         ],
         quiz:[
           {q:"According to this module, what is stylized art actually built on top of?", options:["Nothing — it's a way to skip learning anatomy entirely","A deliberate, informed distortion of the same realistic structure covered throughout this course","Random personal preference with no underlying logic","Only color choices, not structure"], correct:1, explain:"Stylization is a distortion applied on top of realistic construction, not a shortcut around learning it."},
