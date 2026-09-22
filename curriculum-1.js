@@ -587,8 +587,8 @@ const CURRICULUM_1 = [
           challenge:"Take a photo reference with complex lighting and produce only a three-value rough \u2014 light, mid, dark masses, no technique, no detail \u2014 before rendering anything further."
         },
         resources:[
-          {type:'Video', title:'How to Shade a Drawing', creator:'Proko (Stan Prokopenko)', url:'https://www.classcentral.com/course/youtube-drawing-basics-proko-130372', why:"A free video walking through the actual shading process step by step, listed on the confirmed free-lesson index for Proko's Drawing Basics course.", verified:true},
-          {type:'Video', title:'Top 5 Shading Mistakes', creator:'Proko (Stan Prokopenko)', url:'https://www.classcentral.com/course/youtube-drawing-basics-proko-130372', why:"Free, focused directly on the failure modes this module warns about \u2014 a good check after practicing the techniques above. Same free-lesson index.", verified:true},
+          {type:'Video', title:'How to Shade a Drawing', creator:'Proko (Stan Prokopenko)', url:'https://www.youtube.com/watch?v=-dqGkHWC5IU', why:"A free video walking through the actual shading process step by step, now linked directly so it plays inline instead of through a course-index page.", verified:true},
+          {type:'Video', title:'Top 5 Shading Mistakes', creator:'Proko (Stan Prokopenko)', url:'https://www.youtube.com/watch?v=LrHfrncvODQ', why:"Free, focused directly on the failure modes this module warns about \u2014 a good check after practicing the techniques above, now linked to the specific video directly.", verified:true},
           {type:'Video Library', title:'Free Video Library', creator:'Ctrl+Paint (Matt Kohr)', url:'https://www.ctrlpaint.com/library', why:"Its structured free fundamentals progression includes rendering and value logic that builds directly on this module.", verified:true}
         ],
         quiz:[
