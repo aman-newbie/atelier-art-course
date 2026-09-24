@@ -135,7 +135,7 @@ const CURRICULUM_1 = [
           challenge:"Block in a simple object's gesture in overhand grip, then finish its details in writing grip, in one continuous sitting without stopping to think about the switch."
         },
         resources:[
-          {type:'Article', title:'How to Hold and Control Your Pencil', creator:'Stan Prokopenko (Proko)', url:'https://www.proko.com/course-lesson/how-to-hold-and-control-your-pencil', why:"A free lesson (with video, transcript, and diagrams) covering grip, posture, and shoulder-vs-wrist arm movement as one system — exactly this module's core idea, from a widely-respected drawing instructor.", verified:true},
+          {type:'Video', title:'How to Hold and Control Your Pencil', creator:'Stan Prokopenko (Proko)', url:'https://youtu.be/pMC0Cx3Uk84', why:"Covers tripod vs overhand grip, and wrist-vs-shoulder control, as one system — exactly this module's core idea. Now linked directly to the free YouTube upload so it plays inline instead of opening Proko's site.", verified:true},
           {type:'Channel', title:'Alphonso Dunn — YouTube channel', creator:'Alphonso Dunn', url:'https://www.youtube.com/c/ALPHONSODUNN/videos', why:"Free video demonstrations of grip and stroke technique in motion, which is easier to absorb visually than from text alone.", verified:true}
         ],
         quiz:[
