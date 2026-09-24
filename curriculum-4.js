@@ -1344,6 +1344,64 @@ const CURRICULUM_4 = [
 ],
 "nextStep": "You now have a grounded, practical framework for a genuinely contested area, rather than a single unexamined opinion. Module 106 turns to speed painting \u2014 a purely technical skill for producing strong work quickly under real time constraints, building on the full toolkit from this arc."
 }
+,
+{
+"id": "m106",
+"plate": 106,
+"title": "Speed Painting",
+"difficulty": "Advanced",
+"studyTime": "16 min",
+"practiceTime": "25\u201345 min/day",
+"prereq": ["m105"],
+"hook": "A striking speed painting often looks messy up close and only fully makes sense from across the room \u2014 which is exactly the point, since the time limit forces you to solve the big problems and abandon the small ones.",
+"whyItMatters": [
+  "Speed painting is a deliberate practice constraint, not a shortcut around everything you've learned \u2014 it forces you to apply composition (Module 75), value (Module 92), and color (Module 91) decisions instantly, without the safety net of unlimited time to second-guess them.",
+  "It's also directly useful for professional pitching: when you want to present several illustration ideas quickly and aren't yet sure which is strongest, speed painting lets you generate real, comparable options fast, tying directly back to the thumbnailing and iteration skills from Module 79."
+],
+"coreIdea": [
+  "A speed painting is simply a piece made within a set time limit, commonly somewhere between 10 and 30 minutes; the specific number matters less than genuinely sticking to it, since going over the limit turns the exercise back into an ordinary, unconstrained painting.",
+  "Preparation is what makes speed possible: setting a strict timer, using a limited number of brushes and tools to avoid switching time, and establishing a limited color palette in advance (using the eyedropper tool to mix colors from what's already on the canvas rather than repeatedly returning to a color wheel) all remove decision points that would otherwise eat into the clock.",
+  "Clear, confident big shapes and a few areas of deliberately placed detail are what make a speed painting read as complete even though most of it is loose \u2014 a small amount of convincing detail implies the rest of the drawing to the eye, saving enormous time versus rendering everything evenly.",
+  "Speed painting is also a structured study tool, not only a technique for original ideas: studying a reference photo or an old master painting's composition, values, or color distribution under a time limit builds a mental library of solutions (a particular way of suggesting grass, a specific light-to-dark color relationship) that speeds up your normal, unconstrained work later."
+],
+"mistakes": [
+  "Going over the time limit without acknowledging it, which turns the exercise back into an ordinary painting and defeats the purpose of the speed constraint.",
+  "Switching between many brushes, tools, or techniques mid-session, which eats into the time savings the whole exercise is built around.",
+  "Trying to render every area of the painting with even, thorough detail instead of concentrating a small amount of convincing detail in a few key areas and leaving the rest loose.",
+  "Treating speed painting purely as a technique for finished pieces, rather than also using it as a structured study tool for absorbing composition, value, or color lessons from a reference or master painting under time pressure.",
+  "Picking a subject or reference so complex that even the big shapes can't be established within the time limit, defeating the exercise before it starts."
+],
+"proTips": [
+  "Set an actual timer before you start, and if you go over, treat that run as void and start a fresh attempt rather than quietly finishing an over-time piece \u2014 speed paintings tend to get faster in general the more of them you do.",
+  "Establish a limited color palette before starting, and use the eyedropper tool (rather than the color wheel) to mix new colors directly from what's already on the canvas, which is both faster and keeps the palette naturally harmonious.",
+  "Work small, both in canvas size and in how much detail you attempt, especially at the start \u2014 a smaller working area naturally discourages getting bogged down in unnecessary detail too early.",
+  "For a structured study session, pick one specific lesson to focus on per speed painting (just composition, just values, just color distribution) rather than trying to study everything about a reference at once."
+],
+"practice": {
+  "warmup": "Do three back-to-back 10-minute speed paintings of the same simple subject, using only one brush and a limited 4-color palette for each.",
+  "daily": "Pick an old master painting or strong reference photo and do a 20-minute speed painting focused on just one lesson: its composition, its value structure, or its color distribution.",
+  "weekly": "Generate three different illustration ideas for the same concept as three separate 15-minute speed paintings, then compare them to decide which direction is strongest before developing one further.",
+  "challenge": "Do the same speed painting twice with the same time limit \u2014 once trying to render everything evenly, once concentrating detail in only one or two key areas \u2014 and compare which one reads as more complete."
+},
+"resources": [
+  {"type": "Article", "title": "Expanding your Visual Library: Speed Painting", "creator": "ArtFrog, CLIP STUDIO TIPS", "url": "https://tips.clip-studio.com/en-us/articles/2766", "why": "A free, practical breakdown of concrete speed-painting preparation tips \u2014 timers, limited tools, and the eyedropper-based limited palette technique.", "summary": "Defines a speed painting simply as art made within a time limit, then gives concrete preparation tips: setting and sticking to a timer (restarting rather than continuing if time runs out), using a limited number of brushes and tools to avoid switching time, and establishing a limited color palette used with the eyedropper tool to mix new colors directly from the canvas rather than the color wheel.", "verified": true},
+  {"type": "Article", "title": "Speed Painting: How to Do It and Why?", "creator": "Chlo\u00e9 Pouteau, Dessindigo", "url": "https://dessindigo.com/en/blog/digital-painting-tutorial/speed-painting", "why": "A free, detailed walkthrough of speed painting as a structured study tool, with three separate worked examples for composition, values, and color under specific time limits.", "summary": "Demonstrates speed painting as a study method through three separate worked examples \u2014 a 10-minute composition study identifying leading lines and picture planes, a 20-minute grayscale value study of a lit landscape, and a 30-minute color-zone study \u2014 each showing how analyzing a reference first, then working within a tight time limit, builds a reusable mental library of compositions and techniques.", "verified": true}
+],
+"quiz": [
+  {"q": "What is the defining feature of a speed painting, according to the module?", "options": ["It must always be done in watercolor", "It is a piece of artwork completed within a set time limit that is genuinely respected, not just a loosely-timed painting", "It must always depict a landscape", "It requires at least 10 different brushes"], "correct": 1, "explain": "A speed painting is technically defined by having and sticking to a time limit; going over that limit turns it back into an ordinary, unconstrained painting."},
+  {"q": "Why is establishing a limited color palette and using the eyedropper tool recommended for speed painting?", "options": ["It has no real effect on speed", "It removes the time cost of repeatedly returning to a full color wheel, and mixing from the canvas keeps the palette naturally harmonious", "The eyedropper tool can only be used in traditional media", "A limited palette is required by copyright law"], "correct": 1, "explain": "Using the eyedropper to mix colors directly from what's already on the canvas, within a pre-established limited palette, removes decision points and color-wheel trips that would otherwise eat into the time limit."},
+  {"q": "Why does a small amount of concentrated detail often make a speed painting read as complete?", "options": ["Detail placement has no effect on how finished a piece looks", "Convincing detail in a few key areas implies the rest of the drawing to the eye, which is far faster than rendering everything evenly", "Every part of a speed painting must always be equally detailed", "Detail only matters in traditional, not digital, speed painting"], "correct": 1, "explain": "Concentrating detail in select areas while leaving the rest loose is what allows a piece to read as finished despite most of it being quick and unrefined \u2014 the eye fills in the rest based on the convincing parts."},
+  {"q": "How can speed painting be used as a structured study tool, beyond making original finished pieces?", "options": ["It cannot be used for studying, only for original work", "By analyzing a reference or master painting's composition, values, or color distribution under a time limit, to build a reusable mental library of solutions", "Study speed paintings must always be done with zero time limit", "It only applies to studying color, never composition or value"], "correct": 1, "explain": "Speed painting a specific lesson from a reference (like leading lines in a composition, or a value structure) under time pressure helps build a mental library of techniques that speeds up later, unconstrained work."},
+  {"q": "What should happen if a speed painting attempt goes over its set time limit?", "options": ["Nothing; time limits are only a suggestion", "The attempt should generally be treated as void, with a fresh attempt started, rather than quietly finishing the over-time piece", "The time limit should be permanently extended for all future attempts", "Going over time makes the resulting piece more valuable as practice"], "correct": 1, "explain": "Genuinely respecting the time limit is central to the exercise; going over it without treating the attempt as void (or starting fresh) defeats the purpose of the speed constraint."}
+],
+"checklist": [
+  "I can set and genuinely respect a time limit for a speed painting session.",
+  "I can establish a limited color palette and use the eyedropper tool to mix new colors from the canvas.",
+  "I can concentrate detail in a few key areas rather than trying to render everything evenly.",
+  "I can use speed painting as a structured study tool focused on one specific lesson (composition, value, or color) from a reference."
+],
+"nextStep": "You now have a real toolkit for working fast and decisively under real time constraints. Module 107 turns that same time-limited discipline toward copying master paintings directly \u2014 master studies, one of the oldest and most reliable ways to absorb technique from artists whose work has already stood the test of time."
+}
 ]},
 {id:'professional-production', title:'Professional Production & Specializations', status:'soon', order:11,
     desc:'Editorial illustration, comics, manga, webtoon, visual development, concept art, game art, animation pre-production, print production, and client work.',
