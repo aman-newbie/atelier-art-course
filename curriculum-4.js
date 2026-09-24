@@ -1286,6 +1286,64 @@ const CURRICULUM_4 = [
 ],
 "nextStep": "You now have a genuine 3D-to-2D workflow in your toolkit. Module 105 turns to a newer, actively-debated tool \u2014 AI-assisted workflows \u2014 covering what responsible, disclosed use actually looks like for a working artist."
 }
+,
+{
+"id": "m105",
+"plate": 105,
+"title": "Responsible AI-Assisted Workflow",
+"difficulty": "Advanced",
+"studyTime": "20 min",
+"practiceTime": "20\u201325 min (research + reflection)",
+"prereq": ["m104"],
+"hook": "This is the one module in the entire curriculum where the honest answer to \\\"what's the right way to do this\\\" is genuinely contested \u2014 by working artists, by courts, and by AI companies themselves \u2014 and pretending otherwise would do you a disservice.",
+"whyItMatters": [
+  "AI image tools are now a real part of many working artists' pipelines, used for reference gathering, rapid ideation, and mood-boarding, alongside the photobashing (Module 103) and 3D-assisted (Module 104) speed tools you've already learned. Understanding how professional and industry organizations think about using them responsibly is now a practical, professional skill, not an optional add-on.",
+  "This is also a genuinely unresolved area: artists, legal scholars, and AI companies disagree on core questions like training-data consent and what counts as meaningful human authorship. This module gives you the actual landscape and a practical decision framework, rather than a single verdict, so you can navigate it with your own judgment intact."
+],
+"coreIdea": [
+  "The central, unresolved debate is training data: AI image generators learn from very large sets of existing images, many scraped without the original artists' consent. Artists point to lost commissions and unauthorized use of their style as real harms; AI companies and users point to fair-use arguments and the transformative nature of the technology. Multiple lawsuits are working through courts worldwide with no single settled answer as of this writing.",
+  "Copyright law in the U.S. currently draws a real, practical line: purely AI-generated output with no human creative input is not copyrightable, while AI-assisted work where a human exercises substantial creative control (iterating on prompts, selecting, editing, compositing, adding original elements) may qualify for protection on those human-authored parts.",
+  "Professional guidelines converge on a small set of concrete, repeated practices regardless of where you land on the bigger debate: disclose AI involvement to clients and audiences, avoid prompting for a specific living artist's distinctive style, add substantial human creative input rather than using raw output as-is, and respect a platform or client contract's specific rules about AI use.",
+  "Where AI use sits ethically shifts by context: using it for personal ideation, mood boards, or rapid prototyping before human-made final work is broadly treated as unproblematic; passing off AI output as entirely hand-made, or deliberately mimicking a specific living artist's signature style for commercial gain, are the situations that draw the most consistent, serious concern across nearly every framework."
+],
+"mistakes": [
+  "Treating this as a settled, one-sided question in either direction \u2014 as either clearly fine or clearly forbidden \u2014 when it's a genuinely contested area with real, serious arguments and real stakeholders on multiple sides.",
+  "Using AI output as-is with minimal human input and then presenting it as fully hand-made work, which crosses from a contested gray area into straightforward misrepresentation.",
+  "Prompting to specifically mimic a named, living artist's distinctive style for commercial use without their involvement or compensation, which is the single most consistently flagged practice across professional guidelines.",
+  "Ignoring a client's or platform's explicit rules about AI use, treating your own comfort with the technology as the only relevant standard.",
+  "Assuming disclosure will hurt how your work is received; professional guidance and available research suggest transparency is generally received better than artists fear, and undisclosed use that's later discovered tends to cost far more trust."
+],
+"proTips": [
+  "If you use AI at any stage, default to disclosing it to clients and, where relevant, audiences \u2014 treat transparency as the baseline professional practice, not an optional extra.",
+  "When using AI for ideation or reference, add substantial human creative work on top (iterating deliberately, selecting critically, editing, compositing, painting over) both for the ethical strength of the practice and, in the U.S., for a stronger copyright claim.",
+  "Use general style language (\\\"cyberpunk,\\\" \\\"impressionist,\\\" \\\"heavy linework\\\") instead of naming a specific living artist when prompting, to avoid the most consistently flagged ethical issue in professional guidelines.",
+  "Read the specific terms of service or contract governing any project before using AI on it \u2014 many clients, contests, and platforms now have explicit AI policies, and \\\"I didn't check\\\" isn't a strong position if a problem comes up later."
+],
+"practice": {
+  "warmup": "Read the Graphic Artists Guild's Ethical Focus and Transparency sections in the resources below and write, in your own words, the single practice that seems most important to you and why.",
+  "daily": "If you use an AI tool for ideation this week, keep a short note of how you disclosed it and what human creative work you added on top of the AI output.",
+  "weekly": "Research one platform's or contest's current AI policy (a portfolio site, a competition, a stock art marketplace) and summarize what it specifically requires or prohibits.",
+  "challenge": "Write a one-paragraph personal policy for your own future use of AI tools in art \u2014 what you will and won't do, and how you'll disclose it \u2014 based on what you've read in this module, and revisit it as the legal and professional landscape develops."
+},
+"resources": [
+  {"type": "Article", "title": "Generative AI Ethical Use Guidelines", "creator": "Graphic Artists Guild", "url": "https://graphicartistsguild.org/general-ai-ethical-use-guidelines/", "why": "A free, authoritative set of guidelines from an established professional trade association representing illustrators and designers, organized around concrete, actionable practices.", "summary": "A professional artists' association's official guidelines, organized around ethical, inclusivity, human, and economic-empowerment lenses, recommending concrete practices: only using content you have rights to, clearly labeling AI-generated or AI-assisted work, informing clients when AI is used in any part of the process, being intentional about using AI to supplement rather than replace the creative process, and supporting collective licensing and transparency measures for training data.", "verified": true},
+  {"type": "Article", "title": "AI Art Ethics: A Practical Guide for Creators", "creator": "ZSky AI", "url": "https://zsky.ai/blog/ai-art-ethics-guide", "why": "A free, practically-organized guide that lays out both sides of the training-data debate honestly and gives a concrete decision framework for different use cases.", "summary": "Lays out the core training-data consent debate from both the artist and AI-company perspectives without resolving it, explains the current U.S. Copyright Office position that purely AI-generated work isn't copyrightable while AI-assisted work with substantial human direction may be, and offers a practical framework distinguishing clearly-uncontroversial uses (personal ideation, prototyping, accessibility) from genuinely murky ones (mimicking a specific living artist's style, passing AI work off as hand-made).", "verified": true}
+],
+"quiz": [
+  {"q": "What is the central, unresolved debate at the heart of AI art ethics discussions?", "options": ["Whether AI software is technically difficult to use", "Whether AI models were trained on artists' work without their consent, and what that means ethically and legally", "Which specific brand of AI software is the fastest", "Whether digital art itself is legitimate compared to traditional media"], "correct": 1, "explain": "The core, actively contested issue is training data consent: AI image generators learn from large image sets, many scraped without artists' explicit consent, and this is the foundation of most other ethical debates in the space."},
+  {"q": "According to current U.S. copyright guidance described in the module, what distinguishes copyrightable AI-assisted work from non-copyrightable purely AI-generated work?", "options": ["The file format used to save the image", "Whether a human exercised substantial creative control, such as iterating, selecting, editing, and adding original elements", "Whether the AI tool used was free or paid", "There is no distinction; all AI-related output is treated identically"], "correct": 1, "explain": "Purely AI-generated output with no human creative input is not copyrightable in the U.S., while AI-assisted work involving substantial human creative direction and modification may qualify for protection on those human-authored elements."},
+  {"q": "What practice is most consistently flagged as a serious ethical concern across professional guidelines?", "options": ["Using AI for personal mood boards", "Deliberately mimicking a specific living artist's distinctive style for commercial gain, or passing AI output off as entirely hand-made", "Using general style descriptors like 'watercolor' or 'cyberpunk'", "Disclosing AI use to clients"], "correct": 1, "explain": "Naming and mimicking a specific living artist's signature style commercially, and misrepresenting AI-generated work as fully hand-made, are the two practices that draw the most consistent concern across professional frameworks."},
+  {"q": "What does the module suggest about disclosing AI involvement to clients and audiences?", "options": ["Disclosure should always be avoided since it universally destroys trust", "Transparency is generally treated as the safer, more professional baseline, and available guidance suggests it's often received better than artists fear", "Disclosure is legally required in every context worldwide", "Disclosure only matters for large commercial projects, never smaller personal work"], "correct": 1, "explain": "Professional guidelines consistently recommend disclosure as a baseline practice, and available guidance suggests undisclosed use that's later discovered tends to cost more trust than upfront transparency would have."},
+  {"q": "According to the module, which use of AI tools is broadly treated as least ethically contested?", "options": ["Selling a raw, unedited AI generation as an original finished commission with no disclosure", "Using AI for personal ideation, mood boards, or rapid prototyping before creating human-made final work", "Naming a specific living artist in a prompt for a paid client project", "There is no use of AI that is considered uncontroversial"], "correct": 1, "explain": "Using AI tools for personal exploration, mood boards, or prototyping before human-made final work is broadly treated as close to ethically unambiguous across the guidelines discussed, unlike commercial misrepresentation or artist-style mimicry."}
+],
+"checklist": [
+  "I can describe the core training-data consent debate from both the artist and AI-company perspectives without taking it as settled.",
+  "I can explain what generally distinguishes copyrightable AI-assisted work from non-copyrightable purely AI-generated work in current U.S. guidance.",
+  "I can identify disclosure to clients/audiences as a baseline professional practice rather than an optional extra.",
+  "I can name the two practices (living-artist style mimicry, misrepresenting AI work as hand-made) most consistently flagged as serious concerns."
+],
+"nextStep": "You now have a grounded, practical framework for a genuinely contested area, rather than a single unexamined opinion. Module 106 turns to speed painting \u2014 a purely technical skill for producing strong work quickly under real time constraints, building on the full toolkit from this arc."
+}
 ]},
 {id:'professional-production', title:'Professional Production & Specializations', status:'soon', order:11,
     desc:'Editorial illustration, comics, manga, webtoon, visual development, concept art, game art, animation pre-production, print production, and client work.',
