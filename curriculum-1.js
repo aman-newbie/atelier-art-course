@@ -88,7 +88,7 @@ const CURRICULUM_1 = [
         },
         resources:[
           {type:'Site', title:'Lesson 1 — required tools', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/1', why:"States the exact tools needed for the course you will lean on heavily starting Module 4 (specifically felt-tip fineliners for the ink-based drills). Worth reading before buying anything.", verified:true},
-          {type:'Video Library', title:'Free Library — Traditional Drawing primer', creator:'Ctrl+Paint (Matt Kohr)', url:'https://www.ctrlpaint.com/library', why:"Section 2 of the free library is a short primer aimed at people without prior traditional drawing experience, including basic setup and tool use.", verified:true}
+          {type:'Video', title:'Unplugged: Pencils and Erasers', creator:'Ctrl+Paint (Matt Kohr)', url:'https://www.ctrlpaint.com/videos/unplugged-pencils-and-erasers', why:"The specific traditional-drawing-basics video (not just the library homepage) covering pencil and eraser setup for people without prior experience.", verified:true}
         ],
         quiz:[
           {q:"Which pencil grade range is recommended for this entire Foundations arc?", options:["6H\u20138H","HB\u20132B","6B\u20139B","You need all 12 grades"], correct:1, explain:"HB or 2B covers everything here \u2014 4B and 6B don't come in until Shading, later in the roadmap."},
@@ -237,10 +237,7 @@ const CURRICULUM_1 = [
         },
         resources:[
           {type:'Article', title:'Blind Contour Drawing Can Help You Become a Better Artist', creator:'Artsy \u2014 on Nicola\u00efdes & Edwards\' contour method', url:'https://www.artsy.net/article/artsy-editorial-blind-contour-drawing-help-better-artist', why:"A free article covering the same blind-contour observation exercise Edwards popularized in her bestseller, with enough detail to actually run it without buying the book.", verified:true},
-          {type:'Video Library', title:'Free Library — Traditional Drawing, Visual Measuring', creator:'Ctrl+Paint (Matt Kohr)', url:'https://www.ctrlpaint.com/library', why:"Section 2 of the free library includes a visual-measuring and sighting primer aimed specifically at beginners without prior traditional training.", verified:true}
-        ],
-        quiz:[
-          {q:"What is \"symbolic seeing\"?", options:["Drawing symbols instead of real objects on purpose","Your brain's habit of substituting a fast, generic shorthand for what you're actually looking at","A style of abstract art","A way of signing your artwork"], correct:1, explain:"It's efficient for recognition and bad for drawing, since it replaces the specific shape with a generic stand-in."},
+          {type:'Video', title:'Visual Measuring', creator:'Ctrl+Paint (Matt Kohr)', url:'https://www.ctrlpaint.com/videos/visual-measuring', why:"The specific visual-measuring video (not just the library homepage), directly teaching the comparative-measurement technique this module is about.", verified:true},
           {q:"Blind contour drawing is meant to produce a polished, accurate final image.", options:["True","False"], correct:1, explain:"It's a training drill for your eye-hand connection \u2014 messy results are expected and fine."},
           {q:"What does sighting with a pencil at arm's length help you do?", options:["Sharpen the pencil evenly","Compare relative proportions between parts of your subject","Test if the paper is too shiny","Mix graphite tones"], correct:1, explain:"It's how you check proportions by measurement instead of guessing."}
         ],
@@ -286,7 +283,7 @@ const CURRICULUM_1 = [
         },
         resources:[
           {type:'Course', title:'Lesson 1 — organic and geometric shapes', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/1', why:"Its shape exercises build directly on the line and ellipse control practiced in Module 4, with the same ghosting and construction discipline applied to shape blocking.", verified:true},
-          {type:'Course Bundle', title:'Drawing Basics course bundle', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/browse/courses', why:"Proko's beginner bundle covers shape-based blocking-in as a first step, from an instructor whose figure drawing courses are widely used across the industry.", verified:true}
+          {type:'Video', title:'Drawing shape: Contour Lines', creator:'Ctrl+Paint (Matt Kohr)', url:'https://www.ctrlpaint.com/videos/drawing-shape-contour', why:"A specific free video on contour-based shape drawing, replacing a generic course-browse page with the actual lesson.", verified:true}
         ],
         quiz:[
           {q:"In shape hierarchy, what should you establish first?", options:["Tiny details like eyelashes","The single largest, primary shape","The signature or date","The background color"], correct:1, explain:"Biggest shape first, then secondary divisions, then small details last \u2014 reversing this order is the most common beginner mistake here."},
@@ -335,7 +332,7 @@ const CURRICULUM_1 = [
         },
         resources:[
           {type:'Course', title:'Lesson 1 — box construction', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/1', why:"The box-construction sequence begun here continues in later Drawabox lessons and is the most widely used free resource for this exact skill.", verified:true},
-          {type:'Course Bundle', title:'Drawing Basics course bundle', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/browse/courses', why:"Covers basic form construction as a bridge into the figure and portrait courses Proko is best known for.", verified:true}
+          {type:'Video', title:'Constructive Form pt. 1', creator:'Ctrl+Paint (Matt Kohr)', url:'https://www.ctrlpaint.com/videos/constructive-form-pt-1', why:"A specific free video on constructing 3D form (not a course-browse page), directly matching this module's topic.", verified:true}
         ],
         quiz:[
           {q:"Which of these is NOT one of the four basic 3D forms taught in this module?", options:["Sphere","Cube","Torus","Cylinder"], correct:2, explain:"Sphere, cube, cylinder, and cone are the four. A torus (a ring shape) isn't part of this basic set."},
@@ -440,8 +437,8 @@ const CURRICULUM_1 = [
           challenge:"Pick one finished illustration or photo and draw its gesture only, in under a minute, reducing the whole pose to a single action line and a few supporting masses."
         },
         resources:[
-          {type:'Tool', title:'Figure Drawing practice tool', creator:'Line of Action', url:'https://line-of-action.com/practice-tools/app/figure-drawing', why:"A free, configurable timed pose-reference tool \u2014 set duration, model type, and session length, and it runs the timed drill for you. Built specifically for this exercise.", verified:true},
-          {type:'Video', title:'How to Draw Gesture', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/how-to-draw-gesture', why:"Part of Proko's free \"Learning How to Draw\" series, covering the line of action and gesture fundamentals directly from a figure-drawing specialist.", verified:true}
+          {type:'Video', title:'How to Draw Gesture', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/how-to-draw-gesture', why:"Part of Proko's free \"Learning How to Draw\" series, covering the line of action and gesture fundamentals directly from a figure-drawing specialist.", verified:true},
+          {type:'Tool', title:'Figure Drawing practice tool', creator:'Line of Action', url:'https://line-of-action.com/practice-tools/app/figure-drawing', why:"A free, configurable timed pose-reference tool \u2014 set duration, model type, and session length, and it runs the timed drill for you. Use this after the lesson above to practice.", verified:true}
         ],
         quiz:[
           {q:"What is the \"line of action\"?", options:["A ruler used for straight lines","A single sweeping curve summarizing a pose's main thrust","The outline of a figure","A type of eraser"], correct:1, explain:"It's a single line, usually a C- or S-curve, that captures the main thrust of the whole pose."},
@@ -589,7 +586,7 @@ const CURRICULUM_1 = [
         resources:[
           {type:'Video', title:'How to Shade a Drawing', creator:'Proko (Stan Prokopenko)', url:'https://www.youtube.com/watch?v=-dqGkHWC5IU', why:"A free video walking through the actual shading process step by step, now linked directly so it plays inline instead of through a course-index page.", verified:true},
           {type:'Video', title:'Top 5 Shading Mistakes', creator:'Proko (Stan Prokopenko)', url:'https://www.youtube.com/watch?v=LrHfrncvODQ', why:"Free, focused directly on the failure modes this module warns about \u2014 a good check after practicing the techniques above, now linked to the specific video directly.", verified:true},
-          {type:'Video Library', title:'Free Video Library', creator:'Ctrl+Paint (Matt Kohr)', url:'https://www.ctrlpaint.com/library', why:"Its structured free fundamentals progression includes rendering and value logic that builds directly on this module.", verified:true}
+          {type:'Video', title:'Crosshatching', creator:'Ctrl+Paint (Matt Kohr)', url:'https://www.ctrlpaint.com/videos/crosshatching', why:"A specific free video on crosshatching shading technique, replacing the generic library homepage with the actual lesson.", verified:true}
         ],
         quiz:[
           {q:"What does contour hatching do that regular hatching doesn't?", options:["Uses color","Follows the form's actual curvature instead of staying uniformly parallel","Is always faster","Requires a blending stump"], correct:1, explain:"Contour hatching lines wrap around the form, directly showing its 3D curvature."},
@@ -636,7 +633,7 @@ const CURRICULUM_1 = [
           challenge:"Render a scene with the same texture at three different distances \u2014 near, mid, far \u2014 deliberately reducing detail and contrast as distance increases."
         },
         resources:[
-          {type:'Video Library', title:'Free Video Library', creator:'Ctrl+Paint (Matt Kohr)', url:'https://www.ctrlpaint.com/library', why:"Its structured fundamentals progression includes surface and material rendering logic that builds directly on the shading systems from Module 12.", verified:true},
+          {type:'Video', title:'Real Object, Imaginary Details', creator:'Ctrl+Paint (Matt Kohr)', url:'https://www.ctrlpaint.com/videos/real-object-imaginary-details', why:"A specific free video on grounding invented surface/material details in observed reality, replacing the generic library homepage with the actual lesson.", verified:true},
           {type:'Course', title:'The Illusion of Depth \u2014 Edge, Line, Cast Shadow', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course/drawing-basics', why:"Covers how edge quality shifts with material and distance, directly relevant to how texture should behave across a scene.", verified:true}
         ],
         quiz:[
