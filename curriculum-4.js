@@ -1460,6 +1460,64 @@ const CURRICULUM_4 = [
 ],
 "nextStep": "You now have a disciplined, focused approach to learning from finished paintings. Module 108 turns to advanced compositing techniques, combining multiple painted and photographic elements into a single cohesive scene at a professional level of polish."
 }
+,
+{
+"id": "m108",
+"plate": 108,
+"title": "Advanced Compositing Techniques",
+"difficulty": "Advanced",
+"studyTime": "18 min",
+"practiceTime": "30 min/day",
+"prereq": ["m107"],
+"hook": "The single biggest giveaway of a fake composite has nothing to do with cutting an edge cleanly \u2014 it's mismatched light, and a professional compositor checks that before touching a mask or a blend mode.",
+"whyItMatters": [
+  "Photobashing (Module 103) introduced combining photo elements into a piece; this module goes deeper into the specific professional techniques \u2014 check layers, layer organization, and systematic light-and-color matching \u2014 that separate an amateur collage from a composite viewers accept as one real scene.",
+  "Compositing pulls together nearly every technical skill from this arc: non-destructive layers and masks (Module 101), blend modes and adjustment layers (Module 102), and photobashing (Module 103) all combine here into one cohesive professional workflow."
+],
+"coreIdea": [
+  "Mismatched lighting is the most common giveaway of a fake composite: your background photo's own lighting is very difficult to change, so the reliable approach is to treat the background as the fixed reference and adjust every added element's light and color to match it, not the other way around.",
+  "\\\"Check layers\\\" are a compositor's technique for seeing lighting and color mismatches more clearly: a Black & White adjustment layer over everything strips away color so light-level differences between elements become obvious, and a saturated Solid Color Fill layer set to the Saturation blend mode makes color mismatches easier to spot before you fix them with a clipped Color Balance or Curves layer.",
+  "Clear layer organization (a fixed base image at the bottom, adjustment layers clipped to specific elements in the middle, final detail work on top, each layer clearly named) is what keeps a growing composite manageable and lets you isolate and fix one element's match without disturbing the rest.",
+  "Shadows should be created using a Multiply layer with color sampled from the surface they're cast on, not plain black, and edges should be softened with a small amount of feathering and a low-opacity soft-brush mask rather than pasted in at a hard, sharp edge, since both of these small details matter as much as the big color match."
+],
+"mistakes": [
+  "Trying to change the lighting of the background photo to match an added element, instead of the more reliable approach of adjusting the added element to match the fixed background.",
+  "Judging color and light matches by eye alone in full color, instead of using check layers (black & white, saturation) to isolate exactly where mismatches are happening.",
+  "Leaving composite elements on an unorganized, unlabeled flat layer stack, making it hard to isolate and adjust one element's match without affecting everything else.",
+  "Using plain black for cast shadows in a composite instead of a Multiply layer colored from the surface the shadow falls on.",
+  "Pasting a cut-out element in with a hard, unfeathered edge, which reads as an obvious cutout even if the color and lighting are otherwise well matched."
+],
+"proTips": [
+  "Add a temporary Black & White adjustment layer over your whole composite early on to spot light-level mismatches clearly, then disable it once you've corrected the levels with a clipped Curves or Levels layer.",
+  "Use a saturated Solid Color Fill layer set to Saturation blend mode as a temporary check for color-temperature mismatches, then remove it once a clipped Color Balance layer has corrected the difference.",
+  "Name every layer clearly by its content and purpose (\\\"subject\\\", \\\"bg_replacement\\\", \\\"shadow_multiply\\\") as your composite grows, so you can navigate and isolate elements quickly later.",
+  "Feather a cutout selection by a small amount (2\u20133 pixels) before pasting it in, and use a soft-brush layer mask at low opacity to further blend its edge into the background rather than relying on a hard cutout alone."
+],
+"practice": {
+  "warmup": "Composite one simple cutout element onto a new background, then add a temporary Black & White check layer to see how well their light levels currently match.",
+  "daily": "Take a photobashed piece and add a Multiply shadow layer (colored from the surface, not black) beneath a composited element to ground it more convincingly.",
+  "weekly": "Build a small composite from at least three separate sources, using clearly named, organized layers and both check-layer techniques (black & white and saturation) to match light and color across all of them.",
+  "challenge": "Take a composite you're not fully happy with and diagnose it using check layers first \u2014 identify specifically whether the problem is light level, color temperature, edge softness, or shadow color \u2014 before making any further changes."
+},
+"resources": [
+  {"type": "Video", "title": "Match Light and Color in a Composite \u2014 Classic Day 28", "creator": "Aaron Nace, PHLEARN", "url": "https://phlearn.com/tutorial/30-days-photoshop-match-light-color/", "why": "A free, focused lesson from an established free Photoshop education channel, teaching the specific \\\"check layers\\\" technique professionals use to match light and color in composites.", "summary": "Introduces \\\"check layers\\\" as a compositor's technique: a temporary Black & White adjustment layer strips color to reveal light-level mismatches clearly, and a saturated Solid Color Fill layer set to the Saturation blend mode makes color-temperature mismatches easier to spot, both used as a guide before correcting the actual mismatch with clipped Levels/Curves and Color Balance adjustment layers.", "verified": true},
+  {"type": "Article", "title": "Master Photo Manipulation: A Practical Guide to Creating Seamless Composites", "creator": "Kelvin Designs", "url": "https://photoshoptutorial.com/posts/master-photo-manipulation-a-practical-guide-to-creating-seamless-composites/", "why": "A free, practical, first-person walkthrough covering layer organization, cutout technique, feathering, and adjustment-layer color matching for a complete composite workflow.", "summary": "Walks through a complete composite process: choosing a strong, well-lit base image as the fixed reference, organizing and clearly naming layers as the document grows, cutting out elements with a small amount of feathering for a soft rather than hard edge, using layer masks and blend modes (Multiply, Screen, Overlay) for natural integration, and finishing with clipped Curves and Color Balance adjustment layers plus Clone Stamp cleanup for blend-line artifacts.", "verified": true}
+],
+"quiz": [
+  {"q": "Why is the background photo generally treated as the fixed reference in a composite, rather than trying to change its lighting to match an added element?", "options": ["Background lighting has no effect on how a composite reads", "A background's own lighting is very difficult to change convincingly, so it's more reliable to adjust the added element to match it instead", "Background images are always higher resolution than added elements", "There is no real difference between adjusting the background or the added element"], "correct": 1, "explain": "Since a photographed background's lighting is hard to alter convincingly, the reliable workflow is to treat it as fixed and adjust the color and light of any added element to match it."},
+  {"q": "What do a Black & White adjustment layer and a saturated Solid Color Fill layer (set to Saturation blend mode) function as in compositing?", "options": ["Permanent final effects applied to the finished image", "Temporary \\\"check layers\\\" used to reveal light-level and color-temperature mismatches before correcting them", "Tools exclusively for adjusting file resolution", "Layers that permanently delete color data from the image"], "correct": 1, "explain": "These are used as temporary diagnostic tools: the Black & White layer isolates light-level differences, and the saturated Saturation-blend layer isolates color-temperature differences, both removed once the actual mismatch is corrected with other adjustment layers."},
+  {"q": "What color should be used for a composited element's cast shadow, according to the module?", "options": ["Pure black, regardless of the surface", "A color sampled from the surface the shadow falls on, applied via a Multiply layer", "Pure white with reduced opacity", "The exact same color as the element casting the shadow"], "correct": 1, "explain": "Shadows built from a Multiply layer colored from the surface they're cast on look more natural and grounded than a shadow made from plain black."},
+  {"q": "Why is clear, organized layer naming recommended as a composite grows in complexity?", "options": ["It has no functional benefit, only aesthetic preference", "It lets you quickly isolate and adjust a specific element's light/color match without affecting the rest of the composite", "Layer names are required by file format specifications", "Organized naming automatically improves image resolution"], "correct": 1, "explain": "Clearly named, organized layers make it much easier to navigate a growing composite and isolate one element to adjust without disturbing everything else."},
+  {"q": "Why is feathering a cutout selection before pasting it into a composite recommended?", "options": ["Feathering has no visible effect on the final result", "A small amount of feathering softens the edge so the element blends naturally rather than reading as an obvious hard-edged cutout", "Feathering is only relevant for text layers, not photo elements", "It permanently changes the element's color"], "correct": 1, "explain": "A small amount of feathering (a few pixels) softens a cutout's edge, helping it blend more naturally into the new scene instead of looking sharply pasted-in, even if the color and lighting are otherwise well matched."}
+],
+"checklist": [
+  "I can use a Black & White check layer to identify light-level mismatches in a composite.",
+  "I can use a saturated Saturation-blend check layer to identify color-temperature mismatches.",
+  "I can create a Multiply shadow layer colored from the surface it falls on, rather than using plain black.",
+  "I can organize and clearly name layers in a growing composite so elements can be isolated and adjusted individually."
+],
+"nextStep": "You now have a professional-level compositing toolkit. Module 109 shifts from technique to identity \u2014 personal style development, how the choices you've been making across this entire course start to combine into a recognizable artistic voice."
+}
 ]},
 {id:'professional-production', title:'Professional Production & Specializations', status:'soon', order:11,
     desc:'Editorial illustration, comics, manga, webtoon, visual development, concept art, game art, animation pre-production, print production, and client work.',
