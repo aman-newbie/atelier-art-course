@@ -1325,8 +1325,7 @@ const CURRICULUM_3 = [
   "challenge": "Design and draw an ornate doorway with an arched top, decorative trim, and a receding row of windows beside it, entirely from the box-and-arc logic in this module."
 },
 "resources": [
-  {"type": "Article", "title": "Tutorial: How to Draw Doors and Windows in One-Point Perspective", "creator": "Julia Henze", "url": "https://www.juliahenze.com/post/how-to-draw-doors-and-windows-in-one-point-perspective", "why": "Directly addresses the exact gap this module targets: artists who understand how to draw a building's box but lose the perspective logic the moment they add doors and windows.", "verified": true},
-  {"type": "Site", "title": "Free Video Library \u2014 perspective fundamentals", "creator": "Ctrl+Paint \u2014 Matt Kohr", "url": "https://www.ctrlpaint.com/library", "why": "Free perspective-construction videos covering the same rigorous, technically precise approach to architectural elements like doors, windows, and trim that this module draws on.", "verified": true}
+  {"type": "Article", "title": "Tutorial: How to Draw Doors and Windows in One-Point Perspective", "creator": "Julia Henze", "url": "https://www.juliahenze.com/post/how-to-draw-doors-and-windows-in-one-point-perspective", "why": "Directly addresses the exact gap this module targets: artists who understand how to draw a building's box but lose the perspective logic the moment they add doors and windows.", "verified": true}
 ],
 "quiz": [
   {"q": "Why should a window opening show a visible 'reveal' (the inner wall thickness) rather than being drawn as a flat rectangle?", "options": ["It looks more decorative but has no structural meaning", "Because the wall has real thickness, and a hole cut through it reveals recessed side, sill, and lintel planes", "Reveals are only used for doors, not windows", "It has no functional purpose in the drawing"], "correct": 1, "explain": "A window is a hole cut through a wall that has real thickness, so the sides, sill, and lintel of that thickness are visible inside the opening \u2014 omitting them makes the window look like a flat decal."},
@@ -1590,7 +1589,6 @@ const CURRICULUM_3 = [
   "challenge": "Draw a fully furnished, lived-in interior room combining everything from this arc's second batch: constructed architecture and windows, a grounded one- or two-point interior, and furniture and props at correct scale, completing this batch of the Nature & Architecture arc."
 },
 "resources": [
-  {"type": "Site", "title": "Free Video Library", "creator": "Ctrl+Paint \u2014 Matt Kohr", "url": "https://www.ctrlpaint.com/library", "why": "Includes a constructive-form video series that applies the same box-and-cylinder object breakdown this module uses for furniture and props.", "verified": true},
   {"type": "Video", "title": "Introduction to Perspective Drawing (1994 Chalkboard Lecture)", "creator": "Marshall Vandruff", "url": "https://www.youtube.com/watch?v=R60e9_ofV68", "why": "A free, thorough lecture on perspective construction for designed objects generally, directly transferable to constructing furniture and props from imagination.", "verified": true}
 ],
 "quiz": [
@@ -1698,8 +1696,7 @@ const CURRICULUM_3 = [
   "challenge": "Draw an aerial view of a busy intersection combining varied rooftops, an angled horizon, foreshortened figures and vehicles, and both linear and atmospheric depth cues."
 },
 "resources": [
-  {"type": "Site", "title": "Three Point Perspective: Worm's Eye vs. Bird's Eye View", "creator": "Rachel Wintemberg — The Helpful Art Teacher", "url": "https://thehelpfulartteacher.blogspot.com/2011/01/three-point-perspectivethe-really.html", "why": "A free, step-by-step tutorial with printable worksheets specifically on constructing bird's-eye three-point perspective, including the angled-horizon approach this module recommends.", "verified": true},
-  {"type": "Site", "title": "Free Video Library", "creator": "Ctrl+Paint — Matt Kohr", "url": "https://www.ctrlpaint.com/library", "why": "Includes free perspective-fundamentals videos that reinforce vanishing-point construction, directly transferable to adding a third vanishing point for aerial views.", "verified": true}
+  {"type": "Site", "title": "Three Point Perspective: Worm's Eye vs. Bird's Eye View", "creator": "Rachel Wintemberg — The Helpful Art Teacher", "url": "https://thehelpfulartteacher.blogspot.com/2011/01/three-point-perspectivethe-really.html", "why": "A free, step-by-step tutorial with printable worksheets specifically on constructing bird's-eye three-point perspective, including the angled-horizon approach this module recommends.", "verified": true}
 ],
 "quiz": [
   {"q": "In a bird's-eye view, where is the third vanishing point located?", "options": ["Above the horizon line", "Below the horizon line", "There is no third vanishing point in a bird's-eye view", "Exactly on the horizon line"], "correct": 1, "explain": "A bird's-eye (looking-down) view places the third vanishing point below the horizon, and vertical edges converge downward toward it."},
@@ -1806,7 +1803,7 @@ const CURRICULUM_3 = [
   "challenge": "Draw a complete city block that transitions into a natural edge — a park, a riverbank, an overgrown lot — built in professional order, with one or two focal points of environmental wear and one governing light source across the entire scene."
 },
 "resources": [
-  {"type": "Site", "title": "Gurney Journey", "creator": "James Gurney", "url": "https://gurneyjourney.blogspot.com/", "why": "A long-running free blog combining exactly this arc's concerns — natural forms, architecture, light, and materials — within single finished illustrations, useful as ongoing reference once the arc's individual skills are combined.", "verified": true}
+  {"type": "Video", "title": "Concept Art Full Process: Sketching for Beginners", "creator": "Artof JoseVega", "url": "https://www.youtube.com/watch?v=RY2LDAbayPk", "why": "A free, full start-to-finish sketching process for an environment illustration \u2014 directly matches this capstone's task of combining natural forms, architecture, and materials into one finished piece, replacing a generic blog homepage with a real walkthrough.", "verified": true}
 ],
 "quiz": [
   {"q": "What is the recommended professional order for building a combined nature-and-architecture scene?", "options": ["Fine detail first, then large masses, then perspective grid", "Perspective grid and horizon, then large masses, then construction detail, then wear, then light and atmosphere", "Wear and weathering first, then everything else", "There is no particular order, any sequence works equally well"], "correct": 1, "explain": "Working in professional order — grid and horizon, then large masses, then detail, then wear, then light and atmosphere — keeps every later decision anchored to a stable foundation."},
@@ -1917,8 +1914,7 @@ const CURRICULUM_3 = [
   "challenge": "Draw a single animal in three different body conditions — lean and muscular, well-fed, and undernourished — keeping the skeleton identical and changing only the mass layer."
 },
 "resources": [
-  {"type": "Article", "title": "How to Draw Animals: The Importance of Drawing a Pose", "creator": "Monika Zagrobelna — Envato Tuts+", "url": "https://design.tutsplus.com/articles/how-to-draw-animals-the-importance-of-drawing-a-pose--vector-24537", "why": "A free article on why gesture and overall silhouette, not individual muscle rendering, is what makes an animal drawing read correctly — directly reinforcing this module's core idea.", "verified": true},
-  {"type": "Site", "title": "Free Video Library", "creator": "Ctrl+Paint — Matt Kohr", "url": "https://www.ctrlpaint.com/library", "why": "Free videos on gesture and mass distribution that transfer directly from human figure work to blocking in an animal's silhouette.", "verified": true}
+  {"type": "Article", "title": "How to Draw Animals: The Importance of Drawing a Pose", "creator": "Monika Zagrobelna — Envato Tuts+", "url": "https://design.tutsplus.com/articles/how-to-draw-animals-the-importance-of-drawing-a-pose--vector-24537", "why": "A free article on why gesture and overall silhouette, not individual muscle rendering, is what makes an animal drawing read correctly — directly reinforcing this module's core idea.", "verified": true}
 ],
 "quiz": [
   {"q": "Why can two animals with nearly identical skeletons look completely different?", "options": ["They can't, identical skeletons always look the same", "Muscle mass distribution over the skeleton, not the bones themselves, creates the recognizable silhouette", "Only fur color creates the difference", "Skeleton shape is the only thing that matters"], "correct": 1, "explain": "A greyhound and a bulldog share a similar canine skeleton, but very different muscle mass distribution creates their completely different, instantly recognizable silhouettes."},
