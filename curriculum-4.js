@@ -1402,6 +1402,64 @@ const CURRICULUM_4 = [
 ],
 "nextStep": "You now have a real toolkit for working fast and decisively under real time constraints. Module 107 turns that same time-limited discipline toward copying master paintings directly \u2014 master studies, one of the oldest and most reliable ways to absorb technique from artists whose work has already stood the test of time."
 }
+,
+{
+"id": "m107",
+"plate": 107,
+"title": "Master Studies",
+"difficulty": "Advanced",
+"studyTime": "18 min",
+"practiceTime": "1\u20132 hours (project)",
+"prereq": ["m106"],
+"hook": "One artist copied over 50 master paintings with no specific goal, and the only thing he actually learned was to accidentally paint every face like a pin-up girl regardless of gender \u2014 proof that copying itself teaches nothing without a clear question in mind.",
+"whyItMatters": [
+  "Master studies are one of the oldest training methods in art history, going back centuries, and they remain a standard part of professional training today for a simple reason: a finished master painting already contains solved problems in composition, color, and technique that would take much longer to discover through trial and error alone.",
+  "This module also directly connects to the responsible-use principles from Module 105: a master study is a well-established, ethically clear form of learning from another artist's work, but only when it's treated as a labeled study, not represented or sold as original work \u2014 a distinction worth understanding clearly, not just assuming."
+],
+"coreIdea": [
+  "A master study works best with one specific, narrow learning goal chosen in advance \u2014 the design matrix and composition of a piece, its color relationships, or the paint application in one small section \u2014 rather than an unfocused, whole-canvas copy with no particular question in mind.",
+  "Studying the design matrix means identifying the large compositional structures (lead lines, implied lines of action, focal armatures) a master used to guide the eye, often by reducing a painting to a simple abstract diagram of its major shapes before ever touching paint.",
+  "A color study strips away a finished painting's optical detail and blending to find the pure, simplified hue relationships underneath \u2014 comparing a color's temperature and value relative to its neighbors, rather than trying to match one isolated color exactly.",
+  "A small-section study, focusing on just one difficult passage (a face, a fabric fold, a patch of foliage) at a larger scale, is often more valuable than a full-canvas copy, since it lets you slow down and truly understand the construction and paint handling in that one area."
+],
+"mistakes": [
+  "Copying many master paintings with no specific learning goal in mind, which risks absorbing surface habits (a particular artist's face shapes, a particular color scheme) without a real, transferable lesson underneath.",
+  "Trying to match an isolated color exactly instead of comparing its relationship (lighter, darker, warmer, cooler) to the colors around it, which is the judgment that actually transfers to original work.",
+  "Presenting or sharing a master study as if it were an original composition, rather than clearly labeling it as a study (for example, \\\"Study after [Artist's Name]\\\") and crediting the source.",
+  "Selling, exhibiting, or marketing a direct copy of a living or recently active artist's specific composition in a way that could suggest it's your own original creation, without checking applicable copyright and reproduction rules.",
+  "Stopping after completing the study itself instead of the more important final step: applying one or two of the specific lessons learned to a genuinely original composition afterward."
+],
+"proTips": [
+  "Before starting a master study, write down the one specific question you want it to answer (how does this artist handle edges? how is this composition's focal point constructed?) so you can evaluate afterward whether you actually learned it.",
+  "When studying color, ask relational questions (is this warmer or cooler, lighter or darker than its neighbor) rather than trying to precisely replicate one isolated swatch out of context.",
+  "Choose a small, specific section to study in depth (a hand, a patch of fabric, a stretch of foliage) rather than defaulting to a full-canvas copy every time \u2014 depth on one passage often teaches more than breadth across a whole piece.",
+  "Always label a shared master study clearly (\\\"Study after [Artist], [Painting Title]\\\") and follow up with an original piece that applies one specific lesson from the study to a new subject."
+],
+"practice": {
+  "warmup": "Choose one painting you admire and write down a single, specific learning goal for a study of it before making any marks.",
+  "daily": "Do a quick design-matrix breakdown of a painting's composition, reducing it to simple shapes and lead lines in a rough diagram, without adding any color or detail.",
+  "weekly": "Complete a focused master study of one small section of a painting (not the whole canvas), labeled clearly with the artist and title, focused on one specific technique.",
+  "challenge": "After completing a master study, create an original piece using a different subject that deliberately applies one specific lesson (a value pattern, a limited palette, a compositional structure) from that study."
+},
+"resources": [
+  {"type": "Article", "title": "Some Thoughts on Master Studies", "creator": "Ron Lemen, Muddy Colors", "url": "https://muddycolors.com/2017/12/some-thoughts-on-master-studies/", "why": "A free, first-person account from a working professional illustrator, giving three concrete, focused approaches to master studies instead of unfocused whole-canvas copying.", "summary": "A professional illustrator shares three focused approaches learned from a mentor: studying a painting's design matrix (its compositional armature of lead lines and shapes), studying the pure color relationships underneath a painting's optical blending, and studying just a small section of a canvas in depth to learn specific paint application \u2014 while cautioning that unfocused copying with no clear goal can lead to absorbing surface habits rather than real, transferable lessons.", "verified": true},
+  {"type": "Article", "title": "Let's Talk About Master Copies", "creator": "Miranda Meeks, Muddy Colors", "url": "https://muddycolors.com/2022/01/lets-talk-about-master-copies/", "why": "A free, practical breakdown of how to approach master copies responsibly, including the important distinction between educational study and passing work off as original.", "summary": "Explains that copying for educational purposes is broadly accepted, provided the copy isn't presented as original work and the source artist is credited when known, walks through a practical process for creating a master copy, and notes that copying an image directly for professional client work (rather than personal study) crosses into a different, more serious category.", "verified": true}
+],
+"quiz": [
+  {"q": "Why is it recommended to choose one specific learning goal before starting a master study?", "options": ["It has no real effect on the outcome", "Unfocused copying with no clear goal risks absorbing surface habits (a specific face shape, a particular palette) rather than a real, transferable lesson", "A specific goal is only relevant for traditional media, not digital", "Master studies without a goal always take less time to complete"], "correct": 1, "explain": "One artist's account in the module describes copying over 50 paintings with no specific goal and mainly absorbing surface habits rather than real technique, which is why choosing a focused question in advance matters."},
+  {"q": "What does studying a painting's \\\"design matrix\\\" mean?", "options": ["Copying the exact colors used in the painting", "Identifying the large compositional structures, like lead lines and focal armatures, that guide the eye through the piece", "Measuring the physical dimensions of the canvas", "Analyzing only the brand of paint used"], "correct": 1, "explain": "The design matrix refers to a painting's underlying compositional structure \u2014 lead lines, implied lines of action, and focal armatures \u2014 often studied by reducing the painting to a simple abstract diagram of its major shapes."},
+  {"q": "When studying color relationships in a master painting, what should you compare rather than trying to match an isolated color exactly?", "options": ["The exact pixel or paint values with no context", "How a color relates to its neighbors \u2014 whether it's lighter, darker, warmer, or cooler", "Only the most saturated color in the painting", "The color's popularity in modern palettes"], "correct": 1, "explain": "Comparing a color's relationship to its neighbors (relative lightness, warmth) builds the kind of visual judgment that transfers to original work, rather than memorizing one isolated, out-of-context color value."},
+  {"q": "According to the module, what should a master study be clearly labeled as when shared?", "options": ["An entirely original composition with no reference to the source", "A study, crediting the original artist and artwork when known (for example, \\\"Study after [Artist's Name]\\\")", "It should never be shared publicly under any circumstances", "The artist's own signature style"], "correct": 1, "explain": "Clearly labeling a master study and crediting the original artist distinguishes educational practice from presenting the work as an original composition, which is an important ethical distinction."},
+  {"q": "What is the recommended final step after completing a master study, according to the module?", "options": ["Simply moving on to a new master study with the same goal", "Applying one or two specific lessons learned from the study to an original composition with a different subject", "Deleting the study once it's finished", "Repeating the exact same study multiple times with no changes"], "correct": 1, "explain": "The greatest value of a master study comes from transferring its lessons into new, original work, applying a specific technique or principle to a different subject rather than the source painting's own composition."}
+],
+"checklist": [
+  "I can choose one specific learning goal before starting a master study.",
+  "I can break down a painting's design matrix into simple compositional shapes.",
+  "I can compare a color's relationship to its neighbors rather than matching it in isolation.",
+  "I can clearly label a master study and apply its lesson to an original piece afterward."
+],
+"nextStep": "You now have a disciplined, focused approach to learning from finished paintings. Module 108 turns to advanced compositing techniques, combining multiple painted and photographic elements into a single cohesive scene at a professional level of polish."
+}
 ]},
 {id:'professional-production', title:'Professional Production & Specializations', status:'soon', order:11,
     desc:'Editorial illustration, comics, manga, webtoon, visual development, concept art, game art, animation pre-production, print production, and client work.',
