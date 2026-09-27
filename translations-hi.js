@@ -2790,6 +2790,50 @@ const TRANSLATIONS_HI = {
       "Wear ko neeche wale material aur construction ke ek consequence ki tarah treat karta/karti hoon, upar apply ki gayi decoration ki tarah nahi."
     ],
     nextStep: "Trees aur weather, buildings aur unke materials, ground se aur upar se dekhi gayi full streets, aur ab wo wear jo inme se kisi ko bhi ek history deta hai \u2014 arc ka final module in sab ko ek finished scene mein saath laata hai."
+  },
+
+  m66: {
+    hook: "Is poori arc ne jitne bhi systems build kiye \u2014 branching trees, weather aur sky, box-constructed buildings, materials, interiors, full streets, aerial views, aur wo wear jo in sabko age deta hai \u2014 ab sab professional order mein, ek finished scene pe, saath mein chalte hain.",
+    whyItMatters: [
+      "Ye Nature & Architecture arc ka pehla true capstone hai: is arc ki pehli batch wale trees, terrain, aur sky ko uski second aur third batch ke constructed buildings, streets, aur interiors ke saath convincingly coexist karna hai, sab ek light source aur ek perspective system share karte hue.",
+      "Natural aur built forms ko ek single composition mein combine karna wahi jagah hai jahan is arc ki zyada tar individual skills ya to ek doosre ko reinforce karti hain ya gaps expose karti hain \u2014 ek tree jo street ke vanishing points ignore kare, ya weather jo buildings ko to light kare par foliage ko nahi, poori scene ko break kar deta hai."
+    ],
+    coreIdea: [
+      "<b>Professional order</b> mein kaam karo: pehle perspective grid aur horizon block karo, phir large masses (buildings, tree canopies, terrain), phir construction detail (windows, branching, materials), phir wear, aur light aur atmosphere sabse last.",
+      "<b>Ek light source poori scene ko govern karta hai</b> \u2014 wahi sun position jo ek building ka shadow cast karti hai, use ye bhi explain karna chahiye ki light ek tree ki canopy ke through aur street ki surface ke across kaise girti hai.",
+      "<b>Nature aur architecture same depth cues share karte hain</b>: ek street ke end mein ek tree, uske around ki buildings wale hi atmospheric fading aur linear convergence obey karta hai, koi separate set of rules nahi.",
+      "Ek finished scene <b>choices ka ek record hai, tumhe jo kuch bhi aata hai uska accumulation nahi</b> \u2014 sabse strongest capstone pieces ek clear viewpoint, ek clear light, aur detail aur wear ke ek ya do focal points choose karte hain, arc ki har skill ko ek saath maximize karne ke bajaye."
+    ],
+    mistakes: [
+      "Architecture aur natural elements ko aise build karna jaise wo do separate drawings hon jo saath mein paste ki gayi hon, alag perspective systems ya light directions ke saath.",
+      "Professional order skip karna aur seedha fine detail ya wear pe jump karna large masses aur perspective grid lock hone se pehle.",
+      "Foliage, weather, aur wear ko scene mein everywhere maximum intensity pe add karna, kuch focal points choose karne ke bajaye, aankh ke rest karne ke liye kuch bhi na chhodte hue.",
+      "Ye bhool jaana ki trees aur terrain ko buildings wala hi atmospheric perspective aur convergence chahiye jab wo scene mein similar distances pe appear karein."
+    ],
+    proTips: [
+      "Ek bhi tree ya building place karne se pehle horizon line, vanishing points, aur ek light source establish karo \u2014 scene mein baaki har cheez in teen decisions ko answer karti hai.",
+      "Ek tree ya terrain feature ko ek paas wali building ke against exact same perspective aur lighting logic use karke cross-check karo, jaise wo same kind ka object ho.",
+      "Sabse heavy detail aur wear ke liye ek ya do focal areas choose karo, aur baaki scene ko comparatively simple rehne do taaki focal points clearly read hon.",
+      "Piece se periodically peeche hato aur poocho ki ye ek jagah mein ek coherent moment jaisa lagta hai, ya kai separate exercises jo saath mein layer ki gayi hon."
+    ],
+    practice: {
+      warmup: "Ek horizon line, vanishing points, aur ek single light source block karo, phir ek simplified tree mass aur ek simplified building mass place karo jo teeno share karein.",
+      daily: "Is arc ki earlier batches se ek composition lo (ek tree study, ek interior, ek streetscape) aur ek alag batch se ek element add karo, uske perspective aur light ko original se match karte hue.",
+      weekly: "Ek mid-sized scene draw karo kam se kam ek tree ya terrain feature, ek full building, aur ek street-level human-scale anchor combine karte hue, sab ek horizon aur ek light source share karte hue.",
+      challenge: "Ek complete city block draw karo jo ek natural edge mein transition kare \u2014 ek park, ek riverbank, ek overgrown lot \u2014 professional order mein built, environmental wear ke ek ya do focal points ke saath aur poori scene ke across ek governing light source ke saath."
+    },
+    quiz: [
+      {q:"Ek combined nature-and-architecture scene build karne ka recommended professional order kya hai?", options:["Pehle fine detail, phir large masses, phir perspective grid","Perspective grid aur horizon, phir large masses, phir construction detail, phir wear, phir light aur atmosphere","Pehle wear aur weathering, phir baaki sab kuch","Koi particular order nahi hai, koi bhi sequence equally achhi tarah kaam karta hai"], correct:1, explain:"Professional order mein kaam karna \u2014 grid aur horizon, phir large masses, phir detail, phir wear, phir light aur atmosphere \u2014 har baad wale decision ko ek stable foundation se anchored rakhta hai."},
+      {q:"Same scene mein trees aur buildings ko ek light source kyun share karna chahiye?", options:["Zaroorat nahi hai, natural aur built forms ko alag alag light kiya ja sakta hai","Kyunki ek single sun position ko consistently architecture aur foliage dono ke shadows explain karne chahiye","Sirf architecture ko ek defined light source ki zaroorat hai","Light source sirf interior scenes ke liye matter karta hai, exteriors ke liye nahi"], correct:1, explain:"Ek light source poori scene ko govern karta hai \u2014 agar ek building ke shadows tree canopy wali lighting se alag sun position imply karein, to scene paste kiya hua lagta hai, ek coherent moment ki jagah."},
+      {q:"Is module ke hisaab se, sabse strongest capstone compositions ko weaker wali se kya distinguish karta hai?", options:["Scene mein everywhere arc ki har skill ko full intensity pe maximize karna","Ek clear viewpoint, ek light source, aur detail aur wear ke ek ya do focal points choose karna","Kisi bhi natural elements ko avoid karna aur sirf architecture pe focus karna","Ek image mein jitne possible ho utne alag perspective systems use karna"], correct:1, explain:"Ek finished scene choices ka ek record hai \u2014 sabse strong pieces ek viewpoint, ek light, aur focal points ki ek chhoti number commit karte hain, arc ki har cheez ek saath showcase karne ki koshish karne ke bajaye."}
+    ],
+    checklist: [
+      "Ek combined scene mein kisi bhi specific element place karne se pehle ek horizon line, vanishing point system, aur light source establish karta/karti hoon.",
+      "Natural elements (trees, terrain) pe wahi perspective aur lighting logic apply karta/karti hoon jo similar distance pe architecture pe karta/karti hoon.",
+      "Detail aur wear ke liye focal points ki ek chhoti number choose karta/karti hoon, poori scene ke across intensity maximize karne ke bajaye.",
+      "Ek finished piece ko dekh sakta/sakti hoon aur judge kar sakta/sakti hoon ki ye ek coherent jagah aur moment jaisa read hota hai, ya saath mein layer ki gayi separate exercises jaisa."
+    ],
+    nextStep: "Nature & Architecture arc ab complete ho chuki hai, ek single branching tree se ek full living city block tak. Agli arc Creatures & Hard Surface ki taraf move karti hai \u2014 comparative animal anatomy aur wo vehicles, props, aur machines jo usse build kiye jaate hain."
   }
 
 };
