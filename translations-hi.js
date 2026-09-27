@@ -2400,6 +2400,135 @@ const TRANSLATIONS_HI = {
       "One- aur two-point perspective scenes mein vertical edges ko perfectly vertical rakh sakta/sakti hoon."
     ],
     nextStep: "Basic building box control mein aane ke baad, agla module wo details add karta hai jo ek box ko ek specific building jaisa dikhwate hain: doors, windows, aur unke around ka architectural trim."
+  },
+
+  m57: {
+    hook: "Ek window wall pe painted ek flat rectangle nahi hai \u2014 ye ek wall ke through cut kiya gaya ek hole hai jiski real thickness hoti hai, aur ek door ek rectangular panel hai jo space mein apne khud ke arc ke through ek hinge pe swing karta hai.",
+    whyItMatters: [
+      "Beginners windows aur doors ko flat, zero-thickness rectangles ki tarah draw karte hain wall ki surface pe chipke hue, jabki reality mein ek wall ki real thickness hoti hai aur usme cut kiya gaya opening ek visible inner reveal plane reveal karta hai.",
+      "Ye module Module 56 wale box-cutting logic ko extend karta hai: ek window wall box se subtracted ek box hai, aur ek door ek rectangular panel hai jo ek arc ke along swing kar ke open hota hai, jiski extreme open positions ko bhi surrounding wall wala hi converging perspective obey karna chahiye."
+    ],
+    coreIdea: [
+      "Wall mein har opening ek <b>subtracted box</b> hai: wall ki poori thickness ke through ek window- ya door-sized hole cut karo, jo ek visible reveal plane (inner sides, sill, aur lintel) reveal kare jo wall ki depth mein recede kare.",
+      "Window aur door proportions aur spacing ko wall wale same vanishing points use karke measure karna chahiye: windows ki ek repeating row ko perspective mein recede hote hue evenly space karne ke liye <b>diagonal method</b> use karo, shrinking widths ko aankh se guess karne ke bajaye.",
+      "Ek door hinge pe floor plane mein ek <b>quarter-circle arc</b> ke through swing kar ke open hota hai; open door ki leading edge hamesha hinge point se same real-world length pe rehti hai, isliye perspective mein ye us same converging arc ke along shrink aur rotate hoti hui dikhti hai, kabhi ek freehand diagonal line ki tarah nahi.",
+      "Chote details \u2014 sills, lintels, mullions, aur trim \u2014 sirf tab convincing read hote hain jab unki thickness wall ya recessed reveal plane pe ek visible <b>cast shadow</b> cast kare; koi shadow na ho to ek flat outline ek decal jaisa lagta hai, ek real protruding object jaisa nahi."
+    ],
+    mistakes: [
+      "Windows aur doors ko wall surface pe seedha flat rectangles ki tarah paint karna bina kisi visible thickness, reveal, ya depth ke.",
+      "Receding windows ki ek row ko har ek ko ek guessed amount se shrink karke space karna, true perspective spacing dhoondhne ke liye diagonal method use karne ke bajaye.",
+      "Ek open door ki edge ko ek straight diagonal line ki tarah draw karna, uski constant hinge-to-edge distance ko match karti ek curved arc ki jagah.",
+      "Trim, sills, aur mullions ko clean outlines ke saath add karna par koi cast shadow nahi, unhe physically protruding lagne ke bajaye pasted-on jaisa dikhwate hue."
+    ],
+    proTips: [
+      "Diagonal method use karo: do known window positions ke far corners ko connect karo, aur line ka wall ki midline height se intersection, perspective mein correctly spaced agla window deta hai.",
+      "Har window aur door pe reveal (visible inner wall thickness) draw karo \u2014 ye ek chota sa detail hai jo turant structural depth ki tarah read hota hai, ek flat cutout ki jagah.",
+      "Ek open door ke liye, hinge point plot karo aur door ki known width ko ek arc ke through swing karo, uska perspective angle freehand guess karne ke bajaye."
+    ],
+    practice: {
+      warmup: "Ek single wall draw karo teen evenly receding window openings ke saath, diagonal method use karke spaced, har ek mein ek visible reveal plane dikhate hue.",
+      daily: "Ek door construct karo ek open position mein uske hinge arc pe, correctly foreshortened, ek wall mein set jiski visible thickness ho.",
+      weekly: "Ek full building facade draw karo windows ki ek repeating row, ek open door, aur trim details ke saath jo sab visible shadows cast karein.",
+      challenge: "Ek ornate doorway design aur draw karo ek arched top, decorative trim, aur ek receding row of windows uske saath, poori tarah is module wale box-and-arc logic se."
+    },
+    quiz: [
+      {q:"Ek window opening ko ek visible 'reveal' (inner wall thickness) kyun dikhana chahiye, ek flat rectangle ki tarah draw hone ke bajaye?", options:["Ye zyada decorative lagta hai par iska koi structural meaning nahi hai","Kyunki wall ki real thickness hoti hai, aur usme cut kiya gaya hole recessed side, sill, aur lintel planes reveal karta hai","Reveals sirf doors ke liye use hote hain, windows ke liye nahi","Drawing mein iska koi functional purpose nahi hai"], correct:1, explain:"Ek window ek wall mein cut kiya gaya hole hai jiski real thickness hoti hai, isliye us thickness ke sides, sill, aur lintel opening ke andar visible hote hain \u2014 inhe omit karna window ko ek flat decal jaisa dikhwata hai."},
+      {q:"Distance mein recede karti identical windows ki ek row ko space karne ka correct tareeka kya hai?", options:["Har ek ko ek fixed, guessed percentage se shrink karo","Known points se true perspective spacing dhoondhne ke liye diagonal method use karo","Har window ko same width rakho distance chahe jo bhi ho","Unhe paper pe ruler se measure karo, vanishing point ignore karte hue"], correct:1, explain:"Diagonal method known points ki geometry use karke agla correctly spaced point true perspective mein locate karta hai, aankh se spacing shrink karne wale guesswork se bachte hue."},
+      {q:"Jaise ek door apne hinge pe swing kar ke open hota hai, uski leading edge kaisa behave karti hai?", options:["Ye ek straight diagonal line ke along move karti hai","Ye hinge se ek fixed real-world distance pe rehti hai, ek curved arc trace karte hue","Iski width open hote hue badalti hai","Ye hinge position chahe jo bhi ho, randomly shrink hoti hai"], correct:1, explain:"Ek door ki leading edge apne hinge se ek constant real-world distance pe rehti hai, isliye ye floor plane mein ek circular arc ke through sweep karti hai, jo perspective mein ek curve ki tarah dikhti hai (ek straight line nahi)."}
+    ],
+    checklist: [
+      "Ek wall mein window ya door opening cut kar sakta/sakti hoon ek visible reveal plane ke saath, ek flat rectangle draw karne ke bajaye.",
+      "Windows ki ek receding row ko diagonal method use karke space kar sakta/sakti hoon, guess karne ke bajaye.",
+      "Ek open door ko uske hinge arc ke along correctly swing karte hue perspective mein draw kar sakta/sakti hoon.",
+      "Sills, lintels, aur trim ko visible cast shadows ke saath add kar sakta/sakti hoon taaki wo physically protruding ki tarah read hon."
+    ],
+    nextStep: "Doors aur windows ab real cut-through details ki tarah build ho chuke hain. Next: roofs \u2014 wo plane jo ek building ko cap karta hai aur is arc mein pehli inclined surfaces introduce karta hai."
+  },
+
+  m58: {
+    hook: "Ek roof ek box ke upar chipka hua triangle nahi hai \u2014 ye apne khud ke separate vanishing point wala ek inclined plane hai, building ke horizontal vanishing points ke seedha upar ek vanishing trace pe sit karta hua.",
+    whyItMatters: [
+      "Beginners roof slopes ko freehand triangles ki tarah draw karte hain jo actually kisi bhi consistent vanishing point ki taraf point nahi karte, roof ko aisa dikhwate hue jaise ye building se slide ho raha ho ya odd angles pe bend ho raha ho.",
+      "Ye module vanishing trace introduce karta hai: ek inclined plane ka vanishing point uski corresponding wall ke horizontal vanishing point ke seedha upar ya neeche ek vertical line pe sit karta hai, roof pitches ko ek precise, checkable construction method deta hue, guess ki jagah."
+    ],
+    coreIdea: [
+      "Ek roof plane ek <b>inclined plane</b> hai, aur har inclined plane ka apna vanishing point hota hai jo ek vertical line (vanishing trace) pe sit karta hai jo uski wall ke horizontal vanishing point ke seedha upar rise karta hai jispe wo sit karta hai.",
+      "Ek simple <b>gable roof</b> ke liye, building ki roof ridge height front aur back walls pe dhoondo, ridge line ke liye unhe connect karo, phir do roof slope edges ko eaves se upar ek shared roof vanishing point tak vanishing trace pe run karo.",
+      "Ek <b>hip roof</b> chaaron sides pe slope karta hai sirf do ki jagah; uske roof planes ka har ek same vertical trace pe ek vanishing point hota hai, hip lines (diagonal ridges) ko building ke actual corners aur vanishing points ki taraf wapas converge karte hue.",
+      "Roof <b>overhangs</b> (eaves) ek secondary parallel plane hain jo main roof plane se neeche aur bahar offset hoti hai \u2014 pehle roof ka true edge draw karo, phir same vanishing points use karke ek second parallel edge ko neeche aur bahar offset karo overhang construct karne ke liye."
+    ],
+    mistakes: [
+      "Roof ke sloped edges ko freehand draw karna unhe kisi checkable vanishing trace pe locate kiye bina, jisse do roof slopes visually disagree karte hain.",
+      "Ek gable roof ki ridge line ko ground ke non-parallel banana, isliye roof level rehne ke bajaye twist hota hua dikhta hai.",
+      "Ek hip roof ke sloped faces draw karna unke diagonal hip lines ko building ke actual corners aur vanishing points se wapas connect kiye bina.",
+      "Roof overhang ko seedha wall line se attach karna bina kisi separate offset plane ke, eave ko fascia ke against flat glued dikhwate hue, bahar project karne ki jagah."
+    ],
+    proTips: [
+      "Har wall vanishing point ke seedha upar (ya neeche) ek vertical vanishing trace draw karo \u2014 us wall ke orientation share karti har inclined roof plane ka vanishing point us same vertical line pe kahin hoga.",
+      "Roof ridge ko pehle ek simple line ki tarah block karo, ground plane ke parallel aur building box ke upar centered, koi ek bhi sloped roof edge draw karne se pehle.",
+      "Overhang ko main roof ke parallel ek second, chota offset roof plane ki tarah construct karo, eave ki thickness freehand draw karne ki koshish karne ke bajaye."
+    ],
+    practice: {
+      warmup: "Teen buildings draw karo same footprint ke saath par alag gable roof pitches ke saath, har roof ka vanishing point wall vanishing point ke upar correct vertical trace pe locate karte hue.",
+      daily: "Ek simple gable-roofed building construct karo visible eave overhangs ke saath, overhang plane ko true roof edge se correctly offset karte hue.",
+      weekly: "Ek hip-roofed building draw karo, sabhi char hip lines aur roof planes ko unke construction points tak correctly converge karte hue.",
+      challenge: "Ek combination roofline wali building design karo \u2014 ek main gable ek chote perpendicular gable ko intersect karta hua \u2014 aur valley line ko correctly construct karo jahan do roof planes milte hain."
+    },
+    quiz: [
+      {q:"Ek roof ke inclined plane ka vanishing point, uski wall ke horizontal vanishing point ke relative kahan sit karta hai?", options:["Horizon pe kahin bhi ek random point pe","Ek vertical line (vanishing trace) pe wall ke vanishing point ke seedha upar ya neeche","Iska koi vanishing point hota hi nahi kyunki ye horizontal nahi hai","Wall ke vanishing point wale exact same point pe"], correct:1, explain:"Ek inclined plane ka vanishing point vanishing trace pe sit karta hai \u2014 uski corresponding wall ke horizontal vanishing point ke through ek vertical line \u2014 jispe us line pe uski exact position roof ke pitch se determine hoti hai."},
+      {q:"Jab ek gable roof ki ridge line ground plane ke non-parallel draw ki jaaye to kaunsa visual problem hota hai?", options:["Kuch nahi; ridge lines koi bhi angle pe ho sakti hain","Roof twist karta hua ya unevenly baitha hua dikhta hai, ridge ke along level rehne ke bajaye","Ye roof ko actual se bada dikhata hai","Ye sirf color affect karta hai, construction nahi"], correct:1, explain:"Ridge line ko us ground plane ke parallel chalna chahiye jiske upar wo hai; use tilt karna roof ko twisted ya lopsided ki tarah read karwata hai, level ki jagah."},
+      {q:"Ek roof ka eave overhang kaise construct kiya jaana chahiye?", options:["Wall line pe freehand draw kiya jaaye bina kisi offset ke","Ek second plane ki tarah jo true roof edge se bahar aur neeche offset ho, same vanishing points use karke","Ye hamesha wall face se exactly align hona chahiye","Wall ka kuch part erase karke uske liye jagah banai jaaye"], correct:1, explain:"Overhang main roof ke parallel ek genuine second plane hai, bahar aur neeche offset kiya hua, aur believable projection ki tarah read hone ke liye ise main roof plane wale same vanishing points obey karne chahiye."}
+    ],
+    checklist: [
+      "Ek roof plane ka vanishing point uski wall ke vanishing point ke upar correct vertical trace pe locate kar sakta/sakti hoon.",
+      "Ek gable roof construct kar sakta/sakti hoon ek level ridge line aur correctly converging slopes ke saath.",
+      "Ek hip roof construct kar sakta/sakti hoon jiske sabhi char planes building ke corners tak correctly converge karein.",
+      "Ek roof overhang ko ek separate parallel plane ki tarah offset kar sakta/sakti hoon, use wall ke against flat draw karne ke bajaye."
+    ],
+    nextStep: "Building ki massing aur roof ab poori tarah constructible hain. Next: khud surfaces \u2014 brick, wood, stone, aur metal \u2014 wo materials jo ek structure ko uska texture aur age dete hain."
+  },
+
+  m59: {
+    hook: "Brick ek texture nahi hai \u2014 ye chhote forms ka ek pattern hai, aur texture wo grit, pitting, aur mortar shadow hai jo har individual brick ke around wrap karta hai.",
+    whyItMatters: [
+      "Beginners brick, wood grain, aur stone ko ek flat repeating pattern ki tarah render karte hain jo surface ke upar draw kiya gaya ho, har material ko chhote three-dimensional forms ki tarah treat karne ke bajaye jo light catch karte hain aur apni khud ki tiny shadows cast karte hain.",
+      "Ye module Module 13 wale texture logic ko specifically architecture pe extend karta hai: har material \u2014 brick, wood siding, cut stone, corrugated ya riveted metal \u2014 ki apni distinct small-scale form language hoti hai jise abhi bhi wall ke overall perspective aur light direction obey karna chahiye."
+    ],
+    coreIdea: [
+      "<b>Pattern versus texture</b>: ek brick wall ka grid (rows aur columns) ek pattern hai; actual texture har brick ki pitted, irregular surface plus unke beech ke recessed mortar joints hai, jo chote implicit shadow shapes ki tarah render kiye jaate hain, outlines nahi.",
+      "<b>Wood grain</b> board ke long axis ko follow karta hai aur knots ke around taper, split, aur curve karta hai; horizontal wood siding khud pe overlap karti hai, isliye har board apne neeche wale board pe ek thin shadow cast karta hai.",
+      "<b>Cut stone</b> varied sizes ke irregular block outlines ke through read hota hai, plus har block ke andar ek rougher, zyada broken-up surface texture, brick ki smoother, zyada uniform surface ke comparison mein.",
+      "<b>Metal</b> (corrugated siding, riveted panels, roofing) surface grit se kam aur sharp specular highlights aur hard-edged reflections se zyada define hota hai, kyunki metal typically brick, wood, ya stone se kahin zyada smooth aur reflective hota hai."
+    ],
+    mistakes: [
+      "Har individual brick ya stone block ko ek hard black line se outline karna, joints aur pitting ko shadow shapes ke through imply karne ke bajaye.",
+      "Brick ya stone patterns draw karna unhe wall ke perspective follow karne ke liye warp kiye bina, isliye material grid building ki converging lines se contradict karta hai.",
+      "Wood siding ko flat, straight parallel lines ki ek series ki tarah render karna bina boards ke beech koi overlap shadow ke.",
+      "Metal surfaces ko brick ya stone wala same soft, matte shading dena, un sharp highlights aur reflections ko miss karte hue jo eye ko metal jaisa lagte hain."
+    ],
+    proTips: [
+      "Kisi bhi brick, stone, ya siding grid ko wall pe uske khud ke vanishing points use karke warp karo \u2014 material pattern building ke perspective system se exempt nahi hai.",
+      "Material texture ko surface ke tiny forms follow karti implicit shadow marks ki tarah draw karo, har unit ke around trace ki gayi outlines ki tarah nahi \u2014 kam, well-placed dark shapes exhaustive outlining se zyada convincing texture ki tarah read hote hain.",
+      "Sabse sharpest, highest-contrast highlights metal aur glass ke liye save karo; brick, wood, aur stone ko ek softer, lower-contrast value range mein rakho taaki materials ek doosre se distinct read hon."
+    ],
+    practice: {
+      warmup: "Ek brick wall, ek wood plank, ek stone block, aur ek sheet of corrugated metal ka side by side ek texture study karo, outlines ke bajaye shadow shapes use karke.",
+      daily: "Ek full wall section render karo do alag materials combine karte hue (jaise, ek stone foundation upar wood siding ke saath), wall ke perspective pe correctly warped.",
+      weekly: "Ek full building facade draw karo kam se kam teen alag materials use karke, har material ka shadow logic aur contrast level distinct rakhte hue.",
+      challenge: "Ek weathered, aged building facade draw karo jahan materials wear dikhayein \u2014 cracked stone, peeling paint on wood, rust streaks on metal \u2014 underlying construction aur perspective ko correct rakhte hue."
+    },
+    quiz: [
+      {q:"Pattern-versus-texture distinction ke hisaab se, ek brick wall ke rectangles ka repeating grid kya mana jaata hai?", options:["Texture","Pattern","Na pattern na texture","Dono simultaneously bina kisi distinction ke"], correct:1, explain:"Brick shapes ka repeating grid ek pattern hai; actual texture har brick ki pitted, irregular surface plus unke beech ke recessed mortar joints hai."},
+      {q:"Ek brick ya stone pattern ko wall ke khud ke vanishing points use karke kyun warp karna chahiye?", options:["Nahi karna chahiye; patterns wall ke angle chahe jo bhi ho, flat draw kiye jaate hain","Kyunki pattern us surface pe sit karta hai jo already perspective mein hai, isliye pattern ke grid ko wall wale same vanishing points ke saath converge karna chahiye","Kyunki sirf metal ko perspective follow karne ki zaroorat hai","Warping sirf roofs ke liye necessary hai"], correct:1, explain:"Ek material pattern ek aisi surface pe apply hota hai jo already perspective mein exist karti hai, isliye pattern ka grid us wall wale same vanishing points pe converge hona chahiye jispe ye hai."},
+      {q:"Rendering mein metal ko brick, wood, ya stone se primarily kya distinguish karta hai?", options:["Metal ki koi texture hoti hi nahi","Metal typically smoother aur zyada reflective hota hai, surface grit ke bajaye sharp specular highlights se defined","Metal ko scene mein hamesha sabse darkest material hona chahiye","Metal ko texture nahi kiya ja sakta, sirf flat paint kiya ja sakta hai"], correct:1, explain:"Metal ki smoother, zyada reflective surface sharp specular highlights aur hard-edged reflections ke through read hoti hai, brick, wood, aur stone wale softer, grittier implicit shadow texture ke comparison mein."}
+    ],
+    checklist: [
+      "Ek material ke repeating pattern aur uski actual small-scale texture ke beech distinguish kar sakta/sakti hoon.",
+      "Brick, stone, aur wood texture ko implicit shadow shapes use karke render kar sakta/sakti hoon, outlines ke bajaye.",
+      "Ek material pattern ko wall ke existing perspective aur vanishing points pe correctly warp kar sakta/sakti hoon.",
+      "Metal ke sharp specular highlights ko brick, wood, aur stone ke softer, matte texture se differentiate kar sakta/sakti hoon."
+    ],
+    nextStep: "Construction, details, roofs, aur materials haath mein aa jaane ke baad, ye dekhna worth hai ki ye pieces kaise combine hokar history ke across recognizable architectural styles banate hain \u2014 agle module ka subject."
   }
 
 };
