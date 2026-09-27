@@ -2529,6 +2529,135 @@ const TRANSLATIONS_HI = {
       "Metal ke sharp specular highlights ko brick, wood, aur stone ke softer, matte texture se differentiate kar sakta/sakti hoon."
     ],
     nextStep: "Construction, details, roofs, aur materials haath mein aa jaane ke baad, ye dekhna worth hai ki ye pieces kaise combine hokar history ke across recognizable architectural styles banate hain \u2014 agle module ka subject."
+  },
+
+  m60: {
+    hook: "Ek building ki style random decoration nahi hai \u2014 ye proportion, roofline silhouette, aur ornament ki ek specific vocabulary se bana ek recognizable signature hai jo ek historical period aur culture ke across repeat hoti hai.",
+    whyItMatters: [
+      "Architectural styles ki ek working vocabulary ke bina, 'ek fantasy castle' ya 'ek old European town' draw karta hua artist ek single generic vague template pe default karta hai, jabki real historical buildings proportion, roofline, aur ornament mein period aur region ke hisaab se enormously vary karte hain.",
+      "Ye module ek recognition-focused overview hai, koi construction lesson nahi: ye tumhe real historical styles ko identify aur intentionally borrow karne ke liye visual vocabulary deta hai, pichle teen modules wale box, roof, aur material construction skills use karke actually us cheez ko build karne ke liye jise tum recognize karte ho."
+    ],
+    coreIdea: [
+      "Style primarily <b>silhouette aur proportion</b> se read hoti hai kisi bhi ornament add hone se pehle: ek squat, thick-walled Romanesque building ek soaring, narrow Gothic building se poori tarah alag read hoti hai, even plain gray boxes mein bina kisi decoration ke.",
+      "<b>Classical styles</b> (Greek, Roman, aur unke revivals) symmetry, defined orders follow karti columns, aur triangular pediments se define hoti hain; <b>Gothic</b> pointed arches, ribbed vaults, aur vertical thrust se define hoti hai; <b>Baroque</b> classical bones mein dramatic curves, exaggerated ornament, aur theatrical scale add karta hai.",
+      "<b>Vernacular aur regional styles</b> (half-timbered European towns, adobe Southwest architecture, Japanese post-and-beam construction) aesthetic taste jitna hi local material availability aur climate se shaped hote hain \u2014 ek steep roof pitch usually heavy snow ya rain signal karta hai, sirf decoration nahi.",
+      "<b>Modernist</b> styles (roughly early 20th century se onward) deliberately historical ornament strip away karte hain clean geometric volumes, large glass planes, aur exposed structural materials ke favor mein \u2014 Module 56 wala box-method construction, coincidence se nahi, is style mein sabse zyada visible aur sabse kam disguised hota hai."
+    ],
+    mistakes: [
+      "Unrelated historical periods aur regions ke ornament ko ek building pe bina kisi intentional reason ke mix karna, ek visually incoherent 'generic old building' produce karte hue ek specific recognizable style ki jagah.",
+      "Poori tarah surface ornament pe focus karna jabki ignore karna ki silhouette aur proportion hi ek style ki zyada tar actual identity carry karte hain.",
+      "Vernacular architectural choices ke peeche wale practical, climate-driven reasons ko ignore karna aur sabhi regional variation ko purely decorative treat karna.",
+      "Ye assume karna ki ek 'medieval fantasy' style ko maximally ornamented hona chahiye, jabki kisi bhi period ki many real historical buildings actually plain hoti hain, ornament specific focal areas jaise doorways aur cornices ke liye reserved hota hai."
+    ],
+    proTips: [
+      "Kisi bhi building design ko ornament add karne se pehle solid black mein silhouette-test karo \u2014 agar silhouette akele ek style suggest nahi karta, to ornament use fully save nahi karega.",
+      "Ek historical style choose karo aur uski actual proportion aur ornament vocabulary ke saath consistent raho, unrelated periods blend karne ke bajaye, jab tak goal ek deliberate, self-aware fusion na ho.",
+      "Ek style research karte waqt, uski zyada ordinary, everyday buildings dekho, sirf uske sabse famous landmark examples nahi \u2014 landmarks often exceptional cases hote hain, typical baseline nahi."
+    ],
+    practice: {
+      warmup: "Char building silhouettes side by side draw karo \u2014 Classical, Gothic, half-timbered vernacular, aur Modernist \u2014 sirf black shape use karke, koi line detail nahi, aur dekho har style already kitna recognizable hai.",
+      daily: "Ek specific historical style research karo aur us style mein ek single building construct karo, Modules 56-59 wale box, roof, aur material lessons apply karte hue.",
+      weekly: "Ek townscape draw karo do ya teen alag real historical styles ko side by side mix karte hue, jaise wo ek actual old city street pe alag eras mein built additions ke saath appear ho sakte hain.",
+      challenge: "Ek plausible original building style design karo do real historical influences ko deliberately fuse karke, phir har design choice ko justify karo us historical precedent ki taraf point karke jahan se ye aayi."
+    },
+    quiz: [
+      {q:"Kisi bhi ornament add hone se pehle bhi, ek building ki stylistic identity ko primarily kya carry karta hai?", options:["Paint color","Silhouette aur proportion","Sirf windows ka number","Sirf building ki age"], correct:1, explain:"Ek style pehle apni overall silhouette aur proportion se recognizable hoti hai \u2014 ek squat, heavy building ek tall, narrow wali se alag read hota hai even kisi ornament draw hone se pehle."},
+      {q:"Vernacular ya regional architectural styles ko purely decorative style choices se kya distinguish karta hai?", options:["Wo purely random aesthetic preferences hain","Wo significantly local climate aur available materials se shaped hoti hain, sirf aesthetics se nahi","Vernacular styles ka climate se koi relationship nahi hota","Wo sirf fantasy art mein appear karti hain, real buildings mein nahi"], correct:1, explain:"Vernacular architecture practical factors jaise climate aur locally available materials se utni hi shaped hoti hai jitni aesthetic taste se \u2014 ek steep roof usually heavy snowfall signal karta hai, for example."},
+      {q:"Convincingly draw karne ke liye ek historical style research karte waqt recommended approach kya hai?", options:["Sirf us style ke single sabse famous landmark ko dekho","Period ki ordinary, everyday buildings dekho, sirf landmark exceptions nahi","Real references ignore karo aur poori tarah memory se draw karo","Variety ke liye jitne possible ho utne unrelated styles combine karo"], correct:1, explain:"Landmark buildings often exceptional hoti hain, typical nahi, apni style ke examples; same period ki ordinary buildings ek zyada accurate baseline vocabulary deti hain."}
+    ],
+    checklist: [
+      "Ek building ki likely style ko sirf silhouette aur proportion se identify kar sakta/sakti hoon, ornament consider karne se pehle.",
+      "Kam se kam teen distinct historical ya regional architectural styles ke key visual markers naam le sakta/sakti hoon.",
+      "Explain kar sakta/sakti hoon ki climate aur material availability vernacular architectural choices ko kaise shape karte hain.",
+      "Ek specific, internally consistent historical style mein ek building construct kar sakta/sakti hoon pichle modules wale box, roof, aur material skills use karke."
+    ],
+    nextStep: "Exteriors aur unki styles ab cover ho chuki hain, arc andar move karta hai: interiors, room construction, aur wo furniture aur props jo unhe fill karte hain."
+  },
+
+  m61: {
+    hook: "Ek room ek box hai jo inside out palat diya gaya hai \u2014 ek exterior building wala hi construction logic, sivaay iske ki ab tum uske andar khade hoke uski khud ki walls, floor, aur ceiling ke interior faces dekh rahe ho.",
+    whyItMatters: [
+      "Interiors draw karte waqt beginners often exterior box method to sahi karte hain par same logic ko inside-out flip karne mein struggle karte hain, aise rooms produce karte hue jo flat stage sets jaise feel karte hain, enclosed volumes ki jagah jinme ek floor, ceiling, aur char walls sab correctly recede karein.",
+      "Ye module Module 56 wale exact box construction ko inverse case pe reapply karta hai: ek footprint se outward build karne ke bajaye, tum ek box ke andar rakhe gaye ek viewpoint se inward kaam kar rahe ho, vanishing points recede karti floor, ceiling, aur back wall ko control karte hue."
+    ],
+    coreIdea: [
+      "Ek interior ek box ki tarah construct hota hai jo <b>andar se</b> viewed ho: back wall far plane hai, floor aur ceiling walls wale same vanishing point(s) ki taraf recede karte hain, aur do side walls viewer ki taraf converge karne ke bajaye usse door converge karti hain.",
+      "Ek simple one-point interior mein, <b>back wall ek true, undistorted rectangle</b> rehti hai jo directly viewer ko face kare, jabki floor tiles, ceiling beams, aur side-wall details sab single central vanishing point ki taraf recede karte hain.",
+      "Exterior window spacing (Module 57) ke liye use hua <b>diagonal method</b> interior floor tiles, ceiling beams, aur receding furniture rows pe bhi utna hi directly apply hota hai \u2014 ise use karo repeating interior elements ko accurately space karne ke liye, guess karne ke bajaye.",
+      "Interior walls pe windows aur doors Module 57 wala hi reveal-and-thickness logic follow karte hain, par yahan reveal room ke <b>andar</b> face karta hai, aur ek window ke through aata hua light poore interior ki illumination shape karne wala ek major light source ban jaata hai."
+    ],
+    mistakes: [
+      "Ek one-point interior ki back wall ko ek slightly trapezoidal shape ki tarah draw karna, ek true rectangle ki jagah jo directly viewer ko face kare.",
+      "Floor aur ceiling ko walls se alag vanishing points pe converge hone dena, isliye room ke planes visually ek doosre se disagree karte hain.",
+      "Floor tiles ya ceiling beams ko shrinking sizes guess karke space karna, unki true perspective spacing dhoondhne ke liye diagonal method use karne ke bajaye.",
+      "Interior ko ek flat backdrop ki tarah treat karna aur uske upar furniture place karna bina har piece ko receding floor plane pe properly ground kiye."
+    ],
+    proTips: [
+      "Har one-point interior ko pehle back wall ke liye ek true, undistorted rectangle draw karke shuru karo \u2014 room ki har doosri receding line uske char corners se central vanishing point ki taraf spring karti hai.",
+      "Receding floor tiles, ceiling beams, aur furniture rows ko correctly space karne ke liye diagonal method use karo, spacing ko eyeball karne ke bajaye.",
+      "Ek window ko ek light source ki tarah treat karo ek baar wo built ho jaaye: kisi bhi doosri interior detail render karne se pehle block karo ki light floor aur walls ke across kahan girti hai."
+    ],
+    practice: {
+      warmup: "Ek bare one-point interior box construct karo \u2014 back wall, floor, ceiling, do side walls \u2014 bina kisi furniture ke, check karte hue ki sabhi receding lines ek single vanishing point pe milein.",
+      daily: "Ek one-point interior mein diagonal method use karke floor tiles ya ceiling beams ka ek correctly spaced grid add karo.",
+      weekly: "Ek two-point interior draw karo (ek room ke corner mein dekhte hue) ek wall pe ek window ke saath jo floor aur walls ke across light aur shadow cast kare.",
+      challenge: "Ek fully furnished interior room draw karo is arc ki second batch ki har cheez combine karte hue: constructed architecture aur windows, ek grounded one- ya two-point interior, aur furniture aur props correct scale pe, is batch ko complete karte hue."
+    },
+    quiz: [
+      {q:"Ek simple one-point perspective interior mein, back wall ko kaunsi shape ki tarah draw kiya jaana chahiye?", options:["Vanishing point ki taraf narrow hota ek trapezoid","Ek true, undistorted rectangle jo directly viewer ko face kare","Ek triangle","Use poori tarah omit kar dena chahiye"], correct:1, explain:"One-point interior ki back wall directly viewer ko face karti hai aur perspective system se distort nahi hoti \u2014 sirf floor, ceiling, aur side walls hi vanishing point ki taraf recede karte hain."},
+      {q:"Kaunsa common construction error ek interior room ke planes ko visually ek doosre se disagree karwata hai?", options:["Bahut zyada colors use karna","Floor aur ceiling ko walls se alag vanishing points pe converge hone dena","Bahut zyada furniture add karna","Room ko bahut chota banana"], correct:1, explain:"Ek room ke sabhi planes \u2014 walls, floor, aur ceiling \u2014 same shared vanishing point(s) ki taraf recede karne chahiye; unhe diverge hone dena room ki geometry ko visually khud se contradict karwata hai."},
+      {q:"Ek baar ek window interior wall pe construct ho jaaye, ye typically kaunsa role le leta hai?", options:["Purely decorative, baaki drawing pe koi effect nahi","Ek major light source jo floor aur walls ke across illumination shape kare","Use hamesha dark aur ignore rakhna chahiye","Room ki lighting se iska koi relationship nahi hota"], correct:1, explain:"Ek window outside light ka ek opening hai, isliye ek baar drawing mein exist karne ke baad, ye ek primary light source ban jaata hai jise baaki interior ke across shadows aur illumination shape karni chahiye."}
+    ],
+    checklist: [
+      "Ek one-point interior construct kar sakta/sakti hoon ek true, undistorted back wall aur correctly receding floor, ceiling, aur side walls ke saath.",
+      "Interior floor tiles, ceiling beams, ya furniture rows ko accurately space karne ke liye diagonal method use kar sakta/sakti hoon.",
+      "Ek two-point interior construct kar sakta/sakti hoon jo ek room ke corner mein dekhta ho.",
+      "Ek window ko ek primary light source ki tarah treat kar sakta/sakti hoon aur uske resulting light aur shadow ko room ke across block kar sakta/sakti hoon."
+    ],
+    nextStep: "Empty room ab poori tarah constructible hai. Next: use convincingly furniture aur props se fill karna, is arc ki har doosri cheez wala hi box logic use karke."
+  },
+
+  m62: {
+    hook: "Ek chair ek photo se copy ki gayi silhouette nahi hai \u2014 ye ek seat-box, ek back-panel, aur leg-cylinders hain, combined aur uske around wale room wale same floor plane se grounded.",
+    whyItMatters: [
+      "Beginners furniture ko ek reference photo se copy ki gayi flat silhouette ki tarah draw karte hain, jo gir jaati hai jaise hi object ko ek alag angle se dubara draw karna ho ya ek perspective room mein correctly place karna ho.",
+      "Ye module Module 10 wale combine-and-cut construction aur Module 56 wale box logic ko specifically furniture aur props pe apply karta hai, taaki ek chair, table, ya shelf kisi bhi angle se construct ki ja sake aur Module 61 mein build ki gayi receding floor pe correctly grounded ho."
+    ],
+    coreIdea: [
+      "Almost saara furniture combined primitives ke ek chota set mein reduce hota hai: ek <b>seat box</b>, ek <b>back panel</b>, aur <b>leg cylinders</b> chairs, stools, aur benches ki bahut badi majority account karte hain; tables aur shelves bas ek flat top box hain jo leg cylinders ya panel sides se supported hain.",
+      "Furniture ka har piece room ke floor plane pe <b>grounded</b> hona chahiye floor wale same vanishing points use karke \u2014 ek object ke leg-bottoms exactly wahin sit karne chahiye jahan floor ka perspective grid kehta hai unhe hona chahiye, uske relative float ya sink karne ke bajaye.",
+      "<b>Curved furniture pe ellipses</b> (ek round tabletop, ek cylindrical lamp base, ek curved chair back) ko kisi bhi doosre cylinder wale same major/minor axis logic use karke construct karna chahiye, room ke vanishing points ki taraf correctly oriented, ek freehand oval ki tarah draw nahi.",
+      "Chote props (books, lamps, dishes, tools) abhi bhi apne around wale furniture aur room ke relative <b>real-world scale</b> obey karte hain; ek common beginner error hero props ko oversized ya undersized draw karna hai kyunki wo isolation mein construct kiye gaye the bina unka scale kisi paas wale known object jaise ek chair seat height ke against check kiye."
+    ],
+    mistakes: [
+      "Furniture ke ek piece ko ek single reference photo se ek flat silhouette ki tarah copy karna, use ek alag angle se convincingly redraw karne ka koi tareeka na chhodte hue.",
+      "Furniture ko ek perspective room mein place karna uski legs ko actual floor-plane vanishing points se ground kiye bina, isliye ye float karta hua ya galat depth pe baitha hua dikhta hai.",
+      "Curved elements jaise tabletops ya lamp bases ko freehand ovals ki tarah draw karna, object ki real orientation se match ki gayi properly constructed ellipses ki jagah.",
+      "Chote props ko ek scale pe draw karna jo paas wale furniture se disconnected ho, ek book ya mug ko finished scene mein comically oversized ya undersized dikhwate hue."
+    ],
+    proTips: [
+      "Furniture ke kisi bhi piece ko upholstery, wood grain, ya hardware jaise surface detail ki chinta karne se pehle uske basic box-and-cylinder primitives mein break down karo.",
+      "Furniture ke har piece ko ground karo uski leg-bottoms ko floor ke perspective grid tak extend karke \u2014 agar legs wahan land nahi karti jahan grid kehta hai unhe hona chahiye, to object float kar raha hai.",
+      "Scene mein ek prop ke size ko finalize karne se pehle use paas wale ek known object (ek chair seat roughly knee height hoti hai, ek table roughly waist height) ke against check karo."
+    ],
+    practice: {
+      warmup: "Same basic seat-box, back-panel, aur leg-cylinder primitives se paanch alag chairs construct karo, har ek ek alag viewing angle se.",
+      daily: "Module 61 wale ek perspective interior mein ek constructed furniture piece place karo, uski legs ko floor ke vanishing points se correctly ground karte hue.",
+      weekly: "Ek room ka ek furnished corner draw karo \u2014 ek desk, chair, aur props ke saath ek shelf \u2014 check karte hue ki har object ka scale doosron ke relative consistent hai.",
+      challenge: "Ek fully furnished, lived-in interior room draw karo is arc ki second batch ki har cheez combine karte hue: constructed architecture aur windows, ek grounded one- ya two-point interior, aur correct scale pe furniture aur props, is batch ko complete karte hue."
+    },
+    quiz: [
+      {q:"Zyada tar seating furniture (chairs, stools, benches) kaunse basic primitives mein reduce hota hai?", options:["Ek single sphere","Ek seat box, ek back panel, aur leg cylinders","Ek cone aur ek pyramid","Random freehand curves bina kisi underlying structure ke"], correct:1, explain:"Chairs, stools, aur benches overwhelmingly ek seat box, ek optional back panel, aur cylindrical legs se banti hain \u2014 primitives ka ye chota set master karna zyada tar seating furniture cover kar leta hai."},
+      {q:"Furniture ka ek piece ek perspective interior mein kaise ground kiya jaana chahiye?", options:["Uski legs kahin bhi rakhi ja sakti hain jo visually pleasing lage","Uske leg-bottoms exactly floor ke apne perspective grid pe land karne chahiye, room ke vanishing points use karke","Furniture ko floor se ground karne ki zaroorat nahi hoti","Sirf furniture ka top matter karta hai, base nahi"], correct:1, explain:"Ek object ke floor ke saath contact points floor ke apne perspective grid aur vanishing points se align hone chahiye, warna object room mein visually float karega ya galat depth pe baithega."},
+      {q:"Ek chote prop ka scale scene ke andar correct hai ya nahi check karne ka ek reliable tareeka kya hai?", options:["Ise ek known nearby object se compare karo, jaise ek chair seat ya table height","Object story ke liye kitna important hai uske hisaab se guess karo","Sabhi props ko context chahe jo bhi ho, same size do","Scale irrelevant hai jab tak prop detailed dikhe"], correct:0, explain:"Ek prop ka size scene mein already correctly scaled ek known reference object ke against check karna \u2014 jaise ek chair seat ki typical knee height \u2014 un scale errors ko pakadta hai jo ek object isolation mein construct kiye jaane pe aasani se miss ho jaate hain."}
+    ],
+    checklist: [
+      "Common furniture ko combined box aur cylinder primitives ke ek chote set se construct kar sakta/sakti hoon.",
+      "Furniture ko room ke floor plane se correctly ground kar sakta/sakti hoon floor wale same vanishing points use karke.",
+      "Curved furniture elements (tabletops, lamp bases) ko properly oriented ellipses ki tarah construct kar sakta/sakti hoon, freehand ovals ki jagah.",
+      "Ek prop ke scale ko scene mein ek known nearby object ke against check aur correct kar sakta/sakti hoon."
+    ],
+    nextStep: "Nature & Architecture arc ki second batch ab complete ho chuki hai. Buildings, unki details, roofs, materials, styles, interiors, aur furniture sab constructible hain \u2014 final batch phir se outward move karta hai, full urban environments, aerial views, aur us environmental wear ki taraf jo ek scene ko real feel karwata hai."
   }
 
 };
