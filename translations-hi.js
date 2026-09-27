@@ -2658,6 +2658,138 @@ const TRANSLATIONS_HI = {
       "Ek prop ke scale ko scene mein ek known nearby object ke against check aur correct kar sakta/sakti hoon."
     ],
     nextStep: "Nature & Architecture arc ki second batch ab complete ho chuki hai. Buildings, unki details, roofs, materials, styles, interiors, aur furniture sab constructible hain \u2014 final batch phir se outward move karta hai, full urban environments, aerial views, aur us environmental wear ki taraf jo ek scene ko real feel karwata hai."
+  },
+
+  m63: {
+    hook: "Ek city block alag buildings ki ek row nahi hai \u2014 ye ek continuous depth exercise hai, same vanishing points ke saath, materials jo variation ke saath repeat hote hain, aur human-scale details jo batate hain ki sab kuch actually kitna bada hai.",
+    whyItMatters: [
+      "Beginners ek street pe har building ko apne khud ke isolated box ki tarah draw karte hain, isliye street kabhi ek coherent space ki tarah read nahi hoti \u2014 depth, scale, aur light sab structure se structure disagree karte hain.",
+      "Ye module Modules 56-59 wale box-aur-materials construction ko ek full streetscape pe apply karta hai, isliye buildings, signage, vehicles, aur people sab ek perspective system aur ek consistent scale ka sense share kar sakte hain."
+    ],
+    coreIdea: [
+      "Ek street <b>ek perspective system</b> hai: uske along har building Module 56 mein establish hui same horizon line aur vanishing points share karta hai, chahe har building ki height, width, aur style freely vary kare.",
+      "<b>Variation ke saath repetition</b> ek real street ki tarah read hoti hai \u2014 windows, doors, aur cornice lines ek rhythm mein repeat hote hain, par koi do buildings identical nahi hote; pure repetition ek texture jaisa lagta hai, ek jagah jaisa nahi.",
+      "<b>Human-scale anchors</b> (doorways roughly 2m tall, cars roughly 1.5m tall, people roughly 1.7m tall) hi wo cheez hain jo ek viewer ko street pe baaki har cheez ka true size judge karne dete hain \u2014 in mein se kam se kam ek ke bina, kisi bhi size ki street same dikhti hai.",
+      "<b>Depth cues stack</b> hote hain ek street ke along: linear perspective converging buildings, atmospheric perspective distant blocks ko fade karta hua, aur overlapping foreground elements (ek lamppost, ek parked car) \u2014 sab combine hokar distance sell karte hain."
+    ],
+    mistakes: [
+      "Har building ko ek isolated box ki tarah apne khud ke separate vanishing points ke saath draw karna, street ka single perspective system share karne ke bajaye.",
+      "Identical buildings, windows, ya signage ko bina kisi variation ke repeat karna, jo ek texture pattern jaisa read hota hai, ek believable jagah ki jagah.",
+      "Kisi bhi human-scale reference (ek doorway, ek car, ek figure) ko chhod dena, viewer ko koi tareeka na dete hue judge karne ka ki street actually kitni badi hai.",
+      "Depth ke liye sirf linear perspective pe rely karna aur atmospheric fading ya foreground overlap skip karna, jo distance ke sense ko flatten kar deta hai."
+    ],
+    proTips: [
+      "Ek bhi building place karne se pehle, Module 56 se, pehle street ki horizon line aur vanishing points block karo \u2014 har structure us shared grid pe hi built hoti hai.",
+      "Neighboring buildings ke beech cornice height, window spacing, aur material vary karo taaki street time ke saath accumulated dikhe, ek hi pass mein built nahi.",
+      "Kam se kam ek human-scale anchor (ek doorway, car, ya figure) jaldi drop karo, aur kaam karte hue har doosre object ka size uske against check karo.",
+      "Linear perspective ke upar atmospheric perspective aur foreground overlap layer karo \u2014 distance teeno ke saath kaam karne se sell hoti hai, akele converging lines se nahi."
+    ],
+    practice: {
+      warmup: "Ek street ki horizon line aur do vanishing points block karo, phir uske along alag height aur width ki paanch simple building boxes place karo, sab same perspective share karte hue.",
+      daily: "Warmup se ek blocked-in building lo aur Modules 57-58 se doors, windows, aur ek roofline add karo, details ko uske neighbors se vary karte hue.",
+      weekly: "Chaar se chhe buildings ka ek full street block draw karo ek human-scale anchor (car ya figure) ke saath aur distance ki taraf kam se kam ek atmospheric-perspective fade ke saath.",
+      challenge: "Ek busy street corner draw karo varied architecture, signage, kam se kam do human-scale anchors, aur linear aur atmospheric dono depth cues ko ek composition mein combine karte hue."
+    },
+    quiz: [
+      {q:"Ek street pe har building ko same vanishing points kyun share karne chahiye?", options:["Farak nahi padta, har building apna khud ka perspective use kar sakti hai","Taaki street ek coherent space ki tarah read ho, disconnected boxes ke set ki jagah","Sirf sabse tallest building ko correct perspective chahiye","Vanishing points sirf ek single isolated building pe apply hote hain"], correct:1, explain:"Ek believable street depend karti hai har building ke ek horizon line aur vanishing points ka set share karne pe, chahe har structure ki height, width, aur style freely vary kare."},
+      {q:"Ek street pe har building ko identical draw karne ka risk kya hai?", options:["Koi risk nahi, identical buildings zyada realistic hoti hain","Ye ek repeating texture pattern jaisa read hota hai, ek real, lived-in jagah ki jagah","Ye perspective ko zyada accurate banata hai","Ye human-scale anchors ki zaroorat remove kar deta hai"], correct:1, explain:"Real streets variation ke saath repetition dikhati hain \u2014 windows aur doors ka similar rhythm, par koi do buildings identical nahi. Pure repetition ek texture jaisa read hota hai, ek jagah jaisa nahi."},
+      {q:"Ek streetscape ko kam se kam ek human-scale anchor, jaise ek car ya figure, ki zaroorat kyun hoti hai?", options:["Ye purely decorative hai","Ye viewer ko ek reference deta hai scene ki baaki har cheez ka true size judge karne ke liye","Ye horizon line ki zaroorat replace kar deta hai","Iski zaroorat sirf aerial views mein hoti hai, street level pe nahi"], correct:1, explain:"Ek known-size reference jaise ek doorway, car, ya figure ke bina, ek viewer ke paas judge karne ka koi tareeka nahi hota ki ek street scene chota aur cozy hai ya vast aur monumental."}
+    ],
+    checklist: [
+      "Buildings ki ek full street construct kar sakta/sakti hoon jo ek horizon line aur vanishing points ka set share kare.",
+      "Neighboring buildings ke beech window spacing, cornice height, aur material vary karta/karti hoon, unhe identically repeat karne ke bajaye.",
+      "Kam se kam ek human-scale anchor include karta/karti hoon taaki viewer scene ka true size judge kar sake.",
+      "Linear perspective ko atmospheric fading aur foreground overlap ke saath combine karta/karti hoon street ke along depth sell karne ke liye."
+    ],
+    nextStep: "Ek full street ek shared perspective system pe built hone ke baad, agla module camera ko upar aur peeche kheenchta hai \u2014 aerial views mein, jahan wahi street three-point perspective use karke upar se dekhi jaati hai."
+  },
+
+  m64: {
+    hook: "Camera ko street se upar khींcho aur sab kuch badal jaata hai: horizon ke neeche ek teesra vanishing point appear hota hai, verticals downward converge karna shuru karte hain, aur poora city rooftops aur foreshortened figures ka ek pattern ban jaata hai.",
+    whyItMatters: [
+      "Beginners jo one- aur two-point perspective mein comfortable hain, often us moment freeze ho jaate hain jab ek scene upar ya neeche se viewed ho, kyunki verticals ke liye ek teesra vanishing point ek poori tarah nayi system jaisa feel hota hai.",
+      "Ye module Module 56 wale box-aur-perspective construction ko ek teesre vanishing point se extend karta hai, isliye Module 63 mein build ki gayi wahi street ab convincingly ek rooftop, ek drone, ya ek tall window se draw ki ja sakti hai."
+    ],
+    coreIdea: [
+      "Ek <b>bird's-eye view</b> mein, teesra vanishing point horizon line ke neeche sit karta hai, aur sabhi vertical edges (building corners, lampposts) parallel rehne ke bajaye uski taraf downward converge karti hain.",
+      "<b>Horizon line khud often angled</b> hoti hai, perfectly level nahi, kyunki ek real aerial viewpoint (ek bird, ek drone, ek tall building) rarely ek perfectly flat attitude hold karta hai \u2014 ek angled horizon ek forced, static wali se zyada dynamic aur convincing read hoti hai.",
+      "<b>Upar se dekhe gaye figures aur objects heavily foreshortened</b> hote hain: ek person zyada tar apne head aur shoulders ka top ban jaata hai, ek car zyada tar apni roof ban jaati hai, aur rooftops khud apni walls se kahin zyada surface area dikhate hain.",
+      "Module 63 wale wahi <b>human-scale anchors</b> upar se bhi apply hote hain \u2014 ek foreshortened figure ya vehicle abhi bhi ek viewer ke liye ye judge karne ka sabse fast tareeka hai ki aerial scene actually kitni upar hai, aur kitni badi hai."
+    ],
+    mistakes: [
+      "Ek aerial view mein sabhi vertical lines ko perfectly parallel rakhna, unhe horizon ke neeche ek teesre vanishing point ki taraf converge karne ke bajaye.",
+      "Horizon line ko perfectly level aur centered force karna, jo ek aerial composition ko static feel karwata hai, ek real elevated viewpoint ki jagah.",
+      "Figures ya vehicles ko upar se same tareeke se draw karna jaise wo street level se dikhte, ek aerial angle se create hoti heavy foreshortening ko ignore karte hue.",
+      "View aerial mein shift hote hi sabhi human-scale anchors drop kar dena, viewer ko koi tareeka na dete hue scene ki height ya scale judge karne ka."
+    ],
+    proTips: [
+      "Pehle teesra vanishing point horizon ke neeche place karo, phir ek full aerial scene attempt karne se pehle ek single test cube draw karo jo teeno points ki taraf converge kare.",
+      "Horizon line ko jaanbujh kar perfectly level se off tilt karo \u2014 ek angled horizon ek static, level wali se zyada dynamic, believable aerial viewpoint jaisa read hota hai.",
+      "Upar se ek figure ya vehicle place karte waqt, uski known height se shuru karo aur use uski top surface ki taraf heavily compress karo, use ek shrunk street-level figure ki tarah draw karne ke bajaye.",
+      "Module 63 mein build ki gayi streetscape ko same scene ke ek aerial version ke base ki tarah reuse karo, isliye underlying geometry already familiar hai."
+    ],
+    practice: {
+      warmup: "Ek single cube three-point perspective mein ek bird's-eye view se draw karo, teesra vanishing point ek angled horizon line ke neeche place kiya hua.",
+      daily: "Module 63 ki daily practice mein build hui street lo aur ek building block ko ek bird's-eye view se dubara draw karo, uski verticals ko naye teesre vanishing point tak converge karte hue.",
+      weekly: "Ek full city block ek bird's-eye view se draw karo, kam se kam do heavily foreshortened figures ya vehicles scale anchors ki tarah include karte hue.",
+      challenge: "Ek busy intersection ka ek aerial view draw karo varied rooftops, ek angled horizon, foreshortened figures aur vehicles, aur linear aur atmospheric dono depth cues combine karte hue."
+    },
+    quiz: [
+      {q:"Ek bird's-eye view mein, teesra vanishing point kahan located hota hai?", options:["Horizon line ke upar","Horizon line ke neeche","Ek bird's-eye view mein koi teesra vanishing point hota hi nahi","Exactly horizon line pe"], correct:1, explain:"Ek bird's-eye (neeche dekhta hua) view teesre vanishing point ko horizon ke neeche place karta hai, aur vertical edges uski taraf downward converge karte hain."},
+      {q:"Ek artist ek aerial composition mein horizon line ko jaanbujh kar kyun tilt kar sakta hai?", options:["Ek tilted horizon hamesha ek mistake hoti hai","Ye composition ko zyada dynamic feel karwata hai, ek real elevated viewpoint ki tarah","Ye teesre vanishing point ki zaroorat remove kar deta hai","Ye sirf worm's-eye views pe apply hota hai, bird's-eye pe kabhi nahi"], correct:1, explain:"Ek real aerial viewpoint rarely ek perfectly flat attitude hold karta hai, isliye ek angled horizon line ek forced, perfectly level wali se zyada dynamic aur convincing read hoti hai."},
+      {q:"Ek human figure typically ek bird's-eye view se draw kiye jaane pe kaisa dikhta hai?", options:["Exactly jaisa ye street level se dikhega","Heavily foreshortened, zyada tar head aur shoulders ka top dikhate hue","Invisible, kyunki figures upar se show nahi kiye ja sakte","Street level se dikhne wale se taller"], correct:1, explain:"Upar se viewed, ek figure heavily foreshortened hota hai \u2014 zyada tar head aur shoulders ka top visible hota hai, jo same figure ke street-level view se bahut alag hai."}
+    ],
+    checklist: [
+      "Ek bird's-eye view construct kar sakta/sakti hoon horizon ke neeche place kiya gaya ek teesra vanishing point use karke.",
+      "Aerial compositions mein horizon line ko jaanbujh kar angle karta/karti hoon, use level force karne ke bajaye.",
+      "Upar se dikhte figures aur vehicles ko heavily foreshortened draw karta/karti hoon, shrunk street-level versions ki tarah nahi.",
+      "Aerial views mein human-scale anchors include karta/karti hoon taaki viewer scene ki height aur scale judge kar sake."
+    ],
+    nextStep: "Streets aur skylines ab eye level aur upar dono se constructible hain \u2014 agla module wo layer add karta hai jo in mein se kisi bhi scene ko real feel karwata hai, freshly built ki jagah: environmental wear."
+  },
+
+  m65: {
+    hook: "Ek brand-new building aur ek building jo assi saal se khadi hai, ek same construction share karti hain \u2014 farak sirf itna hai ki tab se uski surfaces ke saath kya hua: ek bolt se rust bleed ho raha hai, ek corner mein grime collect ho raha hai, jahan water run karta hai wahan paint fail ho raha hai.",
+    whyItMatters: [
+      "Ek perfectly clean, evenly rendered surface unfinished ya artificial ki tarah read hoti hai, even jab uska construction aur materials (Module 59) correct hon \u2014 real surfaces history accumulate karti hain, aur wahi history hai jo ek scene ko lived-in feel karwati hai.",
+      "Ye module wear ko ek aisi cheez ki tarah treat karta hai jise intent ke saath place kiya jaaye, randomly scatter karne ke bajaye, isliye ye construction ko reinforce kare aur physically caused ki tarah read ho, decorative texture ki tarah nahi."
+    ],
+    coreIdea: [
+      "Wear <b>physics follow karta hai, randomness nahi</b>: grime wahan collect hoti hai jahan water run karta hai aur air stagnate karti hai (ledges ke neeche, corners ke andar), rust metal joints aur fasteners pe bloom karta hai, aur paint sabse pehle wahan fail hoti hai jahan sun aur moisture sabse zyada damage karte hain.",
+      "<b>Edges flat surfaces se pehle wear hoti hain</b> \u2014 corners sabse pehle chip, round, aur smooth wear hote hain, jabki ek flat wall ka center comparatively sabse lambe samay tak pristine rehta hai.",
+      "Wear ko <b>restraint aur intent</b> ke saath place karna chahiye: age ke kuch achhe se choose kiye gaye, physically-justified marks ek poori surface ke across evenly scattered dirt se zyada convincing read hote hain.",
+      "<b>Contrast wear ko sell karta hai</b> \u2014 ek rust streak ya grime patch sirf ek comparatively clean surrounding surface ke against clearly read hota hai; everywhere wear, nowhere wear ke barabar hai."
+    ],
+    mistakes: [
+      "Poori surface ke across evenly dirt, rust, ya grime scatter karna, use sirf wahan place karne ke bajaye jahan water, air, ya contact physically use cause karti.",
+      "Ek flat surface ke center ko utna hi heavily wear karna jitna uske edges aur corners, jabki reality mein corners aur edges pehle wear hote hain.",
+      "Itna zyada wear add kar dena ki uske contrast karne ke liye koi clean surface bache hi na, isliye damage clearly read hona band ho jaata hai.",
+      "Wear ko ek decorative texture ki tarah treat karna jo upar apply ki gayi ho, Module 59 mein establish hue specific material aur construction ke ek consequence ki jagah."
+    ],
+    proTips: [
+      "Koi bhi wear add karne se pehle poocho ki is specific surface pe water kahan run karega aur air kahan stagnate karegi \u2014 wo answer exactly batata hai ki grime aur rust kahan belong karte hain.",
+      "Corners aur edges ko pehle chip, round, aur lighten karo; flat surfaces ke center ko comparatively cleaner aur sirf lightly worn chhodo.",
+      "Wear ko kuch concentrated, well-chosen areas mein place karo, use poori surface ke across thin aur even spread karne ke bajaye.",
+      "Periodically peeche hato aur check karo ki apne wear marks ke paas abhi bhi clean surface bacha hai \u2014 contrast ke bina, damage read hona band ho jaata hai."
+    ],
+    practice: {
+      warmup: "Ek single clean wall panel draw karo, phir sirf ek corner aur ek seam pe rust aur grime add karo, panel ke baaki hisse ko clean chhodte hue.",
+      daily: "Module 63 ya 64 se ek building facade lo aur physically-justified wear add karo \u2014 ek windowsill ke neeche water staining, ek metal railing pe rust, ek doorway pe chipped edges.",
+      weekly: "Modules 63-64 se ek full street ya aerial scene lo aur teen se chaar surfaces ko selectively age karo, contrast ke liye scene ke baaki hisse ko comparatively clean rakhte hue.",
+      challenge: "Same building ko do baar draw karo \u2014 ek baar brand-new aur ek baar heavily weathered \u2014 underlying construction ko identical rakhte hue aur sirf surface history badalte hue."
+    },
+    quiz: [
+      {q:"Grime aur rust ko typically ek surface pe kahan place kiya jaana chahiye?", options:["Poori surface ke across evenly scattered","Jahan bhi water run kare ya collect ho, aur jahan bhi air stagnate kare, jaise ledges aur corners","Sirf flat surfaces ke exact center pe","Wear ko ek aisi construction mein kabhi add nahi karna chahiye jo otherwise correct ho"], correct:1, explain:"Wear physics follow karta hai, randomness nahi \u2014 grime aur rust wahan accumulate hote hain jahan water run karta hai aur air stagnate karti hai, jaise ledges ke neeche aur corners mein."},
+      {q:"Ek surface ka kaunsa part typically sabse pehle wear hota hai?", options:["Ek flat surface ka exact center","Edges aur corners","Kuch bhi pehle wear nahi hota, wear uniform hota hai","Sirf wo surfaces jo weather se door face karte hain"], correct:1, explain:"Edges aur corners sabse zyada physical contact aur exposure lete hain, isliye wo flat surface ke center se pehle chip, round, aur smooth wear ho jaate hain."},
+      {q:"Environmental wear add karte waqt restraint kyun important hai?", options:["Restraint important nahi hai, zyada wear hamesha zyada realistic hota hai","Contrast karne ke liye ek clean surface ke bina, added wear clearly read hona band ho jaata hai","Wear sirf kabhi metal surfaces pe add hona chahiye","Restraint neeche wale construction ko visible hone se rokta hai"], correct:1, explain:"Wear contrast ke through read hota hai \u2014 ek rust streak ya grime patch sirf ek comparatively clean surrounding surface ke against visible hota hai; everywhere wear, nowhere wear ki tarah read hota hai."}
+    ],
+    checklist: [
+      "Grime aur rust ko sirf wahan place karta/karti hoon jahan water ya air physically use cause kare, evenly scattered nahi.",
+      "Flat surfaces ke center se pehle edges aur corners wear karta/karti hoon.",
+      "Wear ko restraint ke saath add karta/karti hoon, damage ke contrast karne ke liye paas mein kaafi clean surface rakhte hue.",
+      "Wear ko neeche wale material aur construction ke ek consequence ki tarah treat karta/karti hoon, upar apply ki gayi decoration ki tarah nahi."
+    ],
+    nextStep: "Trees aur weather, buildings aur unke materials, ground se aur upar se dekhi gayi full streets, aur ab wo wear jo inme se kisi ko bhi ek history deta hai \u2014 arc ka final module in sab ko ek finished scene mein saath laata hai."
   }
 
 };
