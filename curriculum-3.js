@@ -223,7 +223,7 @@ const CURRICULUM_3 = [
         },
         resources:[
           {type:'Course', title:'Mannequinization — Structure of the Human Body', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course-lesson/mannequinization-structure-of-the-human-body', why:"Free lesson covering simplified arm construction as part of the full mannequin figure, a useful base before adding forearm-rotation detail.", verified:true},
-          {type:'Site', title:'Figure Drawing \u2014 free tutorials and lectures', creator:'Michael Hampton', url:'https://figuredrawing.info/', why:"Michael Hampton's own official site, offering free lectures and demonstrations covering the same arm and forearm construction, including bone rotation, taught in his book.", verified:true}
+          {type:'Video', title:'How to Draw Arm Bones \u2014 Anatomy for Artists', creator:'Proko (Stan Prokopenko)', url:'https://www.youtube.com/watch?v=Ai0s4KHi_js', why:"A free, direct lesson on the humerus, radius and ulna and how they rotate \u2014 the exact bone structure behind this module's forearm-rotation idea, replacing a general tutorials hub.", verified:true}
         ],
         quiz:[
           {q:"What makes the forearm structurally different from the upper arm?", options:["Nothing, they're identical","It contains two bones (radius and ulna) that rotate around each other, allowing the palm to turn up or down","It has no bones at all","It can only bend, never twist"], correct:1, explain:"This two-bone rotation, not the elbow joint, is what lets the palm face up or down."},
@@ -1749,7 +1749,7 @@ const CURRICULUM_3 = [
   "challenge": "Draw the same building twice — once brand-new and once heavily weathered — keeping the underlying construction identical and changing only the surface history."
 },
 "resources": [
-  {"type": "Site", "title": "Free Video Tutorials (Design Cinema)", "creator": "FZD School — Feng Zhu", "url": "https://fengzhudesign.blogspot.com/p/free-tutorials.html", "why": "Hosts links to Feng Zhu's free Design Cinema lecture series, including Episode 107, ‘How to Add Details,’ which covers deciding where and why to place wear and detail so an environment reads as lived-in.", "verified": true},
+  {"type": "Video", "title": "Design Cinema - Episode 107 - How to Add Details", "creator": "FZD School \u2014 Feng Zhu", "url": "https://www.youtube.com/watch?v=9_XZtUVPoOs", "why": "Feng Zhu on where, why and when to add detail and wear so an environment reads as lived-in rather than noisy \u2014 the exact lesson this module is built on, now linked directly instead of through a tutorials index page.", "verified": true},
   {"type": "Video", "title": "FZD Design Cinema and Podcast (full playlist)", "creator": "FZD School — Feng Zhu", "url": "https://www.youtube.com/playlist?list=PLvNv1kRvuSwLYS2CkHTDS6-zVKSoUYzJO", "why": "The complete free lecture archive, useful for finding additional environment-detail, materials, and weathering episodes beyond #107.", "verified": true}
 ],
 "quiz": [
