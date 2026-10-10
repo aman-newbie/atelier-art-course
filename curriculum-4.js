@@ -1576,6 +1576,64 @@ const CURRICULUM_4 = [
 ],
 "nextStep": "You now have a method for turning scattered technique into a recognizable voice. Module 110 is the capstone of Advanced Digital Art: one finished piece that combines non-destructive workflow, color grading, photobashing or 3D assistance, compositing and your emerging style."
 }
+,
+{
+"id": "m110",
+"plate": 110,
+"title": "Capstone: A Portfolio-Grade Digital Piece",
+"difficulty": "Advanced",
+"studyTime": "15 min",
+"practiceTime": "4\u20138 hours (project)",
+"prereq": ["m109"],
+"hook": "You now have a non-destructive file, a color grade, composite and 3D tricks, speed discipline, master-study habits and the beginnings of a style. The capstone asks one question: can you use them together on one piece without losing control of any of them?",
+"whyItMatters": [
+  "This closes Advanced Digital Art the same way Modules 82 and 100 closed their arcs: no new theory, just one finished piece that forces every skill to cooperate. Portfolios are built from finished work, and working under real scope and time limits is the skill studios actually hire for.",
+  "It is also the clearest diagnostic you will get. Isolated exercises hide weak spots; a full piece exposes whichever skill from Modules 101\u2013109 is currently holding you back, which tells you exactly what to train next."
+],
+"coreIdea": [
+  "Start with a one-sentence brief and a realistic scope. Choose a piece you can finish with real care in the time you have, then plan backward from that, because an over-ambitious scope is the most common reason capstone pieces stall before lighting and finishing.",
+  "Build the file non-destructively from the first layer (Module 101): Smart Objects for imported elements, adjustment layers for tone and color, masks instead of the eraser, and clearly named layers so any single decision can be revisited late in the process.",
+  "Use the speed tools deliberately and disclose them honestly. Decide whether photobashing (103), a 3D blockout (104) or neither fits the brief, keep your use of any AI assistance in line with the disclosure practices from Module 105, and paint over everything so the lighting and edges are yours.",
+  "Match light and color using check layers (Module 108) before polishing detail, grade the whole piece with stacked adjustment layers (Module 102), and let your own recurring choices from Module 109 steer the final look rather than copying any single reference."
+],
+"mistakes": [
+  "Choosing a scope so large that mood, lighting and finishing get rushed or skipped.",
+  "Flattening or rasterizing early, which makes any late revision expensive.",
+  "Polishing detail before light and color are matched, so effort goes into elements that later have to change.",
+  "Using photo, 3D or AI-assisted elements without adjusting them to the scene's light, or without being clear about what was used.",
+  "Treating the finished piece as the end of the process rather than using it to identify your weakest skill."
+],
+"proTips": [
+  "Write the brief and your time budget at the top of the working file, and check them before each session to catch scope creep early.",
+  "Save a thumbnail spread and one early block-in alongside the finished piece. Showing process is part of what makes a portfolio piece credible.",
+  "Run the check-layer routine (black and white, then saturation) at least twice: once at block-in and once before final polish.",
+  "When you finish, score the piece against the checklists from Modules 101\u2013109 and pick one weakest area to train deliberately next."
+],
+"practice": {
+  "warmup": "Write a one-sentence brief and a time budget for your capstone, and list which techniques from Modules 101\u2013109 it will use and which it will deliberately not use.",
+  "daily": "Work one stage per session: thumbnails and block-in, then composite or 3D base, then light and color matching, then grade and finishing.",
+  "weekly": "Complete one finished piece with a non-destructive layered file, keeping your thumbnails, early block-in and layered working file.",
+  "challenge": "Score the finished piece honestly against each checklist from Modules 101\u2013109, name your single weakest skill, and write one specific exercise you will do next to improve it."
+},
+"resources": [
+  {"type": "Article", "title": "Tips for Creating a Piece for Your Environment Art Portfolio Within Scope and Time", "creator": "Joyce Jiao, The Rookies", "url": "https://discover.therookies.co/2023/08/28/tips-for-creating-a-piece-for-your-environment-art-portfolio-within-scope-and-time/", "why": "A free first-person breakdown of taking one portfolio piece from planning to finish under real scope and time limits.", "summary": "A working artist walks through a full portfolio project: analyzing the concept, gathering reference, blocking out early, building and refining assets, and finishing with realistic atmosphere, ending with practical advice on keeping scope and energy under control inside a tight timeframe.", "verified": true},
+  {"type": "Video", "title": "Match Light and Color in a Composite \u2014 Classic Day 28", "creator": "Aaron Nace, PHLEARN", "url": "https://phlearn.com/tutorial/30-days-photoshop-match-light-color/", "why": "A free lesson on the check-layer technique that matters most when a capstone piece combines elements from different sources.", "summary": "Shows how to use a temporary Black & White adjustment layer to compare light levels and a saturated fill layer in Saturation blend mode to compare color, then correct mismatches with clipped Levels or Curves and Color Balance layers, treating the background as the fixed reference.", "verified": true}
+],
+"quiz": [
+  {"q": "What should a capstone start from?", "options": ["The most detailed rendering you can attempt", "A one-sentence brief and a realistic scope for your time budget", "A flattened copy of an old piece", "A random preset"], "correct": 1, "explain": "A clear brief and a scope you can actually finish keep every later decision purposeful and prevent the common failure of running out of time before lighting and finishing."},
+  {"q": "Why build the file non-destructively from the beginning?", "options": ["It makes the file smaller", "So any decision can be revised late without rebuilding the work", "It is required for exporting", "It removes the need for masks"], "correct": 1, "explain": "Smart Objects, adjustment layers and masks keep every decision editable, which matters because revisions are normal in real production."},
+  {"q": "What is the right order for polishing a composited piece?", "options": ["Fine detail first, then match light and color", "Match light and color with check layers first, then polish detail", "Export first, then adjust", "Add texture before any color work"], "correct": 1, "explain": "Light and color mismatches are the biggest giveaway of a fake composite, so they must be solved before detail effort is spent."},
+  {"q": "How should AI assistance or photo and 3D elements be handled in the capstone?", "options": ["Used silently with no adjustment", "Painted over and matched to the scene, with any AI use disclosed in line with Module 105", "Avoided entirely in every case", "Left untouched for speed"], "correct": 1, "explain": "Any imported element should be integrated by painting and matching light, and any AI-assisted use should follow the disclosure practices discussed earlier."},
+  {"q": "What is the best use of the finished capstone afterward?", "options": ["Move on without reflection", "Score it against Modules 101\u2013109's checklists and pick one weakest skill to train", "Compare it only to other people's finished pieces", "Delete the layered file"], "correct": 1, "explain": "Checking the finished piece against each checklist turns it into a diagnostic that tells you exactly what to practice next."}
+],
+"checklist": [
+  "I can write a one-sentence brief and a realistic scope before starting.",
+  "I can keep a piece fully non-destructive from first layer to final grade.",
+  "I can match light and color across sources using check layers before polishing.",
+  "I can score a finished piece against the arc's checklists and name my weakest skill."
+],
+"nextStep": "You have completed Advanced Digital Art: from a non-destructive foundation through grading, photobashing, 3D assistance, speed, master studies, compositing and the start of a personal style. These skills carry forward into Professional Production, where they get applied to specialization pipelines like comics, manga, webtoon and game art."
+}
 ]},
 {id:'professional-production', title:'Professional Production & Specializations', status:'soon', order:11,
     desc:'Editorial illustration, comics, manga, webtoon, visual development, concept art, game art, animation pre-production, print production, and client work.',
