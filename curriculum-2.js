@@ -734,7 +734,7 @@ const CURRICULUM_2 = [
           challenge:"Pull out your five Module 15 baseline drawings, draw the same five subjects again now, and compare the two sets honestly, side by side."
         },
         resources:[
-          {type:'Course', title:'How to Draw Facial Features (free series)', creator:'Proko (Stan Prokopenko)', url:'https://www.classcentral.com/course/youtube-how-to-draw-facial-features-proko-55060', why:"Worth revisiting as a complete hub now that every individual feature lesson in it connects to a specific module you've already completed.", verified:true}
+          {type:'Video', title:'How to Draw the Head (full construction, ~3 hrs)', creator:'New Masters Academy', url:'https://www.youtube.com/watch?v=2T7cDY7YDsg', why:"A complete free start-to-finish head drawing session \u2014 construction, feature placement, planes and finish in one continuous pass, which is exactly the integration this module tests. Long, so watch it in sittings.", verified:true}
         ],
         quiz:[
           {q:"What is this module's central point?", options:["Teaching a brand-new construction technique","Proving, through practice, that every previously separate module actually connects into one coherent head","Replacing the Loomis method with a new system","Skipping straight to advanced shading"], correct:1, explain:"Integration tests whether the individually-practiced pieces from this whole arc actually work together, not new content."},
