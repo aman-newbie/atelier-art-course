@@ -1518,6 +1518,64 @@ const CURRICULUM_4 = [
 ],
 "nextStep": "You now have a professional-level compositing toolkit. Module 109 shifts from technique to identity \u2014 personal style development, how the choices you've been making across this entire course start to combine into a recognizable artistic voice."
 }
+,
+{
+"id": "m109",
+"plate": 109,
+"title": "Personal Style Development",
+"difficulty": "Advanced",
+"studyTime": "16 min",
+"practiceTime": "30\u201345 min/day",
+"prereq": ["m108"],
+"hook": "Nobody wakes up with a style. Style is what is left over after you have made enough deliberate choices that you can finally name them, and that is something you can build on purpose.",
+"whyItMatters": [
+  "Across this arc you learned to copy, bash, composite and speed-paint your way through a lot of techniques. At some point a portfolio needs to look like it came from one person, and that consistency is style: the recurring choices in color, shape, line and subject that make your work recognizable.",
+  "This also connects directly to the ethics you studied in Module 105 and the master-study discipline from Module 107: the sustainable way to develop a style is to analyze what you admire, understand why it works, and rebuild those elements around your own subjects, not to imitate one living artist's surface look."
+],
+"coreIdea": [
+  "Style is built, not discovered by accident. A practical method is to pick three artists or styles you truly love, choose one favorite image for each, and write down the single artistic element in each image that grabs you first, why it grabs you, and how the artist achieved it, in specific terms like line quality, color relationships or light-and-dark structure.",
+  "The next step is to combine those analyzed elements, not the subject matter, into an original piece on the subject you draw most often. Because you chose the elements deliberately, the result is familiar enough to read as part of a tradition and different enough to be yours.",
+  "Style also emerges from the medium and subjects you commit to. Settle on a medium that suits how you work, play to your real strengths and interests (a landscape painter who is weak at figures can lean into landscapes rather than fight it), and keep a reference collection for personal inspiration only, respecting copyright.",
+  "A series is one of the fastest ways to see your own style. Producing a run of small pieces, each informing the next and each small enough to finish in a couple of days, lets you carry forward whatever worked and quickly reveals which choices keep recurring in your own hand."
+],
+"mistakes": [
+  "Copying one living artist's surface look wholesale and calling it a style, instead of analyzing why their work works and rebuilding those elements around your own subjects.",
+  "Writing vague observations like 'I like how they draw faces' instead of specific ones about line weight, color relationships, edge handling or lighting.",
+  "Combining the subject matter of your favorite artists rather than their artistic elements, which produces a mashup instead of a style.",
+  "Trying to force a style before you have enough finished work to see what keeps recurring, instead of making a body of pieces first and studying them afterward.",
+  "Boxing yourself in too early. Style evolves as your skills grow, so treating it as fixed can stop you from trying things that would improve it."
+],
+"proTips": [
+  "Write at least a full paragraph per reference image. The more specific the observation, the more usable it is when you rebuild the element in your own work.",
+  "Apply the extracted elements to the subject you already draw most, so you can see clearly what changed rather than learning a new subject and a new style at the same time.",
+  "Work in small, fast series of related pieces. Each piece should carry forward one thing that worked from the previous one.",
+  "After a dozen or so finished pieces, lay them side by side and list what repeats: colors, textures, shapes, themes. Those repeats are your style, and the next step is to push them further."
+],
+"practice": {
+  "warmup": "List three artists or styles you love, pick one favorite image for each, and write one specific paragraph per image about the single element that makes it work for you.",
+  "daily": "Redraw a subject you draw often, using one analyzed element from one of your three references, such as its line quality or its color relationships.",
+  "weekly": "Create a series of five small pieces on one subject, each informed by the last, then compare them to see which choices keep appearing.",
+  "challenge": "Combine one element from each of your three references into a single original piece on your favorite subject, then ask a friend which parts feel most like you."
+},
+"resources": [
+  {"type": "Article", "title": "4 Steps to Your Own Signature Art Style", "creator": "Copic Marker Tutorials", "url": "https://copicmarkertutorials.com/how-to-find-your-own-personal-drawing-style/", "why": "A free, step-by-step method for building a style on purpose by analyzing what you love and recombining the elements into your own subject matter.", "summary": "Lays out a four-step process: choose three artists or styles you love, pick one representative image for each, analyze the single artistic element that makes each image special by asking what grabs you, why, and how it was done, then combine those elements (not the subject matter) into an original drawing of your most-drawn subject. The author argues that analyzing rather than simply copying is what lets you deconstruct and rebuild an element in new ways.", "verified": true},
+  {"type": "Article", "title": "How to find your own artistic style", "creator": "Mark Harrison, Artists & Illustrators", "url": "https://www.artistsandillustrators.co.uk/how-to/art-theory/how-to-find-your-own-artistic-style/", "why": "A free, first-person account from a working painter covering medium, influences, strengths, inspiration and the value of working in a small series.", "summary": "A working painter shares five ways to develop a recognizable style: settle on a medium that suits how you work, study other artists but adapt only the aspects you find useful, play to your real strengths and interests, keep a personal inspiration collection while respecting copyright, and confront the blank canvas by painting a series of small pieces where each one informs the next.", "verified": true}
+],
+"quiz": [
+  {"q": "In the three-artist method, what should you do with each chosen reference image?", "options": ["Trace it exactly to learn the artist's hand", "Copy its subject matter into your own work", "Identify the single artistic element that makes it work and analyze what, why and how", "Blur it until only the colors remain"], "correct": 2, "explain": "The method asks you to find the one standout artistic element in each image and analyze what grabs you, why it grabs you, and how it was achieved, so you can rebuild that element yourself."},
+  {"q": "What should you combine from your references when building an original piece?", "options": ["The artistic elements you identified, applied to your own subject", "Their subject matter", "Their signatures", "Whole compositions pasted together"], "correct": 0, "explain": "You combine the analyzed artistic elements (line quality, color relationships, light structure) into a subject you draw often, not the subjects themselves, so the result stays yours."},
+  {"q": "Why is working in a series of small pieces useful for finding style?", "options": ["Small pieces are always better art", "Each piece can carry forward what worked in the last one, and recurring choices quickly become visible", "It removes the need to practice fundamentals", "It guarantees a unique style by the third piece"], "correct": 1, "explain": "A series of small, quickly finished pieces lets each one inform the next, and the choices that keep repeating show you what is becoming your style."},
+  {"q": "How does this module connect style development to Module 105's ethics guidance?", "options": ["Style development requires using AI tools", "It encourages mimicking one living artist as closely as possible", "Ethics only apply to commercial work", "It builds style by analyzing what you admire and rebuilding the elements around your own subjects, rather than imitating one living artist's look"], "correct": 3, "explain": "Analyzing and recombining elements is the sustainable, ethical route to style, in line with the earlier warning against mimicking a specific living artist's distinctive style for commercial use."},
+  {"q": "After you have finished a dozen or so pieces, what is the recommended way to see your style?", "options": ["Delete the weakest pieces", "Lay them side by side and list the colors, textures, shapes and themes that keep repeating", "Ask software to label your style", "Start over in a different medium"], "correct": 1, "explain": "Recurring elements across a body of work are what make up a style, so comparing finished pieces and listing what repeats shows you what to push further."}
+],
+"checklist": [
+  "I can pick three references I love and name the one element in each that makes it work, specifically.",
+  "I can combine analyzed elements, not subject matter, into an original piece.",
+  "I can use a small series of pieces to see which of my choices keep recurring.",
+  "I can explain why analyzing and rebuilding elements is a more sustainable way to build style than imitating one living artist."
+],
+"nextStep": "You now have a method for turning scattered technique into a recognizable voice. Module 110 is the capstone of Advanced Digital Art: one finished piece that combines non-destructive workflow, color grading, photobashing or 3D assistance, compositing and your emerging style."
+}
 ]},
 {id:'professional-production', title:'Professional Production & Specializations', status:'soon', order:11,
     desc:'Editorial illustration, comics, manga, webtoon, visual development, concept art, game art, animation pre-production, print production, and client work.',
