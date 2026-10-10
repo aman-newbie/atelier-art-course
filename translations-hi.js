@@ -2834,6 +2834,140 @@ const TRANSLATIONS_HI = {
       "Ek finished piece ko dekh sakta/sakti hoon aur judge kar sakta/sakti hoon ki ye ek coherent jagah aur moment jaisa read hota hai, ya saath mein layer ki gayi separate exercises jaisa."
     ],
     nextStep: "Nature & Architecture arc ab complete ho chuki hai, ek single branching tree se ek full living city block tak. Agli arc Creatures & Hard Surface ki taraf move karti hai \u2014 comparative animal anatomy aur wo vehicles, props, aur machines jo usse build kiye jaate hain."
+  },
+
+  m67: {
+    hook: "Ek quadruped ka skeleton wahi bones se bana hai jo tumhare hain \u2014 wahi humerus, radius, ulna, femur, tibia \u2014 bas rotated, stretched, aur re-proportioned taaki do pairon pe khade hone ke bajaye char legs pe run kar sake.",
+    whyItMatters: [
+      "Beginners animal anatomy ko human anatomy se poori tarah alag ek system ki tarah treat karte hain, har species ko scratch se memorize karte hue, Modules 32-34 mein already seekhe gaye skeletal landmarks ko transfer karne ke bajaye.",
+      "Ek baar shared skeleton samajh mein aa jaaye, ek dog, horse, ya lion ki specific silhouette ek known frame pe proportion changes ka ek set ban jaati hai, zero se memorize karne wala ek naya subject nahi."
+    ],
+    coreIdea: [
+      "Ek quadruped ki front leg ek rotated human arm hai: shoulder blade back pe high ride karta hai, wrist leg pe bahut upar hota hai us cheez ke paas jo ek backward-bending knee jaisi lagti hai, aur jo ek paw jaisa lagta hai wo actually fingers hain.",
+      "Hind leg ek rotated human leg hai jo permanently feet ke balls (digitigrade stance) ya hooves (unguligrade stance) pe khadi hoti hai, yahi wajah hai ki dog pe log jise backward knee bolte hain wo actually uski ankle hai.",
+      "Gait sequences foot placement ke ek fixed order follow karte hain (ek walk ke liye: typically ek hind foot, phir same side wala front foot, phir opposite hind, phir opposite front) \u2014 is sequence ko galat karna ek walking animal ko broken dikhwane ka sabse fast tareeka hai.",
+      "Spine quadruped locomotion ko ek human se kahin zyada drive karti hai: ye har stride ke saath flex aur extend hoti hai, especially cats aur horses jaise fast runners mein, ek reach add karte hue jo akele legs nahi de sakte."
+    ],
+    mistakes: [
+      "Ek animal ki foreleg ko ek simple straight post ki tarah treat karna, uske actual rotated, multi-jointed human arm ki jagah, shoulder blade, backward-bending wrist, aur finger-paw kho dete hue.",
+      "Ek walk cycle ke dauraan sabhi char feet ko ek generic, unresearched order mein place karna, real quadrupeds wale fixed diagonal sequence follow karne ke bajaye.",
+      "Running poses ke dauraan spine ko ek rigid bar ki tarah draw karna, wo flexion aur extension miss karte hue jo fast quadrupeds ko unki reach aur speed deti hai.",
+      "Animal ki ankle ko ek backward knee mislabel karna, jo joint ko poori tarah galat direction mein bend karwata hai."
+    ],
+    proTips: [
+      "Kisi bhi quadruped draw karne se pehle, apne khud ke arm aur leg use karke uske joints ko mentally relabel karo: shoulder, elbow, wrist, fingers front pe; hip, knee, ankle, toes back pe.",
+      "Jo pose draw kar rahe ho uske liye specific gait sequence (walk, trot, gallop) lookup karo guess karne ke bajaye \u2014 har ek ka ek distinct, fixed foot-placement order hota hai.",
+      "Running poses mein spine flexion ko thoda exaggerate karo even agar ek reference photo stiffer lage \u2014 thoda extra curve inaccurate hue bina zyada dynamic read hota hai.",
+      "Ek confusing joint ko Module 32 wale human landmarks ke against cross-reference karo; agar ye ek animal joint ki tarah sense nahi banata, to usually ye resolve ho jaata hai jab tum uska human equivalent dhoondte ho."
+    ],
+    practice: {
+      warmup: "Ek simple quadruped skeleton (ek dog ya horse) draw karo har joint ko uske human equivalent se label karte hue: shoulder, elbow, wrist, hip, knee, ankle.",
+      daily: "Same quadruped skeleton ko char poses ki ek walk-cycle sequence mein draw karo, correct diagonal foot-placement order follow karte hue.",
+      weekly: "Hafte ke ek walk-cycle pose pe ek full musculature pass draw karo, phir ek second pose jo spine ko ek running stride mein flexed dikhaye.",
+      challenge: "Ek single animal ke liye ek four-pose gait sequence (walk, trot, gallop, aur ek stopped stance) draw karo, sabhi char mein skeleton aur joint logic consistent rakhte hue."
+    },
+    quiz: [
+      {q:"Ek dog ki backward knee samajhi jaane wali cheez actually kya hai?", options:["Uska actual knee, jo unusually bend karta hai","Uski ankle, jo permanently uske feet ke balls pe khadi hoti hai","Ek extra joint jo humans ke paas nahi hoti","Uska hip joint"], correct:1, explain:"Ek dog ki hind leg pe jo backward-bending knee jaisi lagti hai wo actually uski ankle hai \u2014 animal permanently apne feet ke balls pe khadi hoti hai (digitigrade stance)."},
+      {q:"Gait sequence ko galat karna ek walking animal drawing ko kyun break kar deta hai?", options:["Gait sequence visually matter nahi karti","Real quadrupeds apne feet ko ek fixed diagonal order mein place karte hain jise viewers even unconsciously recognize karte hain","Sirf running gaits ka ek fixed sequence hota hai, walking ka nahi","Gait sequence sirf hoofed animals pe apply hoti hai"], correct:1, explain:"Quadruped gaits foot placement ke ek fixed order follow karte hain; ek incorrect sequence un viewers ko bhi visually galat lagta hai jo actual sequence naam nahi le sakte."},
+      {q:"Fast quadruped locomotion mein spine kaunsa role play karti hai jo ek human mein nahi karti?", options:["Koi nahi, sabhi quadrupeds mein spine rigid rehti hai","Ye har stride ke saath flex aur extend hoti hai, extra reach add karte hue","Ye sirf slow-moving animals ke liye matter karti hai","Ye leg joints ki zaroorat poori tarah replace kar deti hai"], correct:1, explain:"Cats aur horses jaise fast runners mein, spine har stride ke saath significantly flex aur extend hoti hai, ek reach add karte hue jo akele legs nahi de sakte \u2014 locomotion ke dauraan comparatively rigid human spine ke unlike."}
+    ],
+    checklist: [
+      "Ek quadruped ke joints ko human equivalents use karke relabel kar sakta/sakti hoon: shoulder, elbow, wrist, hip, knee, ankle.",
+      "Ek diye gaye gait ke liye feet ko correct diagonal sequence mein place karta/karti hoon, guess karne ke bajaye.",
+      "Fast running poses mein spine ko appropriately flex aur extend karta/karti hoon.",
+      "Ek animal ki ankle ko identify kar sakta/sakti hoon, use ek backward knee mislabel karne ke bajaye."
+    ],
+    nextStep: "Shared skeleton aur gait logic establish hone ke baad, agla module us frame ke upar muscle mass aur silhouette build karta hai \u2014 wo layer jo ek quadruped ko uska recognizable, species-specific shape deti hai."
+  },
+
+  m68: {
+    hook: "Do animals almost exact same skeleton share kar sakte hain aur phir bhi bilkul alag dikh sakte hain \u2014 ek greyhound aur ek bulldog dono dogs hain, par us skeleton pe draped muscle mass, khud bones nahi, hi wo cheez hai jo har silhouette ko turant recognizable banati hai.",
+    whyItMatters: [
+      "Beginners jo correctly ek quadruped skeleton build karte hain often wahin ruk jaate hain, use ek generic, uniform mass layer mein wrap karte hue jo har species difference erase kar deta hai jise skeleton support karne ke liye tha.",
+      "Ye module muscle mass ko ek silhouette decision ki tarah treat karta hai jo jaldi liya jaata hai, bilkul jaise gesture aur pose ko human figure ke liye silhouette decisions ki tarah treat kiya gaya tha, end mein add ki gayi surface detail ki jagah."
+    ],
+    coreIdea: [
+      "Muscle mass alag alag jagahon pe concentrate hoti hai ek animal ke role ke hisaab se: sprinters mass ko low aur back mein carry karte hain propulsion ke liye, jabki power ke liye built animals shoulders aur neck ke through heavier mass carry karte hain.",
+      "Ek animal ka <b>overall pose aur gesture</b> \u2014 sirf uski individual muscles nahi \u2014 wo cheez hai jo pehle ek specific species ya mood ki tarah read hoti hai; ek slouched, low-slung gesture identical skeleton pe ek alert, high-chested wale se poori tarah alag animal ki tarah read hoti hai.",
+      "Silhouette ko kisi bhi interior detail se pehle <b>flat black shape</b> mein check kiya jaata hai: agar silhouette akele correct animal aur mood communicate nahi karta, to uske andar kitna bhi muscle rendering ise fix nahi karega.",
+      "Fat, fur, aur loose skin muscle layer ke <b>upar</b> sit karte hain aur individual muscle forms ko soften ya poori tarah hide kar sakte hain \u2014 muscle knowledge silhouette ko inform karti hai even jab koi muscle directly visible na ho."
+    ],
+    mistakes: [
+      "Har quadruped skeleton ko same generic, uniform muscle mass mein wrap karna, animal ke actual build aur role chahe jo bhi ho.",
+      "Individual muscles ko careful detail mein render karna jabki overall silhouette aur gesture ko neglect karna, jo actually ek viewer pehle read karta hai.",
+      "Ye bhool jaana ki fur, fat, aur loose skin muscle ke upar sit karte hain aur use poori tarah obscure kar sakte hain, aur un animals pe visible muscle striations render karna jo unhe kabhi show nahi karenge.",
+      "Ek drawing ko sirf full detail mein check karna aur ise ek flat silhouette ki tarah test karne ke liye kabhi peeche na hatna."
+    ],
+    proTips: [
+      "Animal ke overall gesture aur mass distribution ko ek solid, flat-black silhouette ki tarah block karo interior detail ki ek bhi line add karne se pehle.",
+      "Identify karo ki animal speed, power, ya agility ke liye built hai, aur muscle mass ko uske hisaab se concentrate karo, evenly distribute karne ke bajaye.",
+      "Muscle layer ke upar fur ya fat add karne ke baad, check karo ki kya underlying muscle logic us species ke liye appropriately still show through karta hai.",
+      "Do related animals (jaise ek wolf aur ek chihuahua) ki silhouettes ko side by side compare karo dekhne ke liye ki mass ek similar skeleton pe kitna differently sit kar sakta hai."
+    ],
+    practice: {
+      warmup: "Same quadruped skeleton ki teen flat-black silhouettes draw karo mass differently distributed ke saath: speed ke liye built, power ke liye built, agility ke liye built.",
+      daily: "Warmup se ek silhouette lo aur uske muscle groups ko line mein render karo, original silhouette shape ko intact rakhte hue.",
+      weekly: "Ek similar skeleton pe do alag animals draw karo (ek big cat aur ek domestic cat, ya ek wolf aur ek small dog breed) aur compare karo mass distribution unki silhouettes ko kaise badalta hai.",
+      challenge: "Ek single animal ko teen alag body conditions mein draw karo \u2014 lean aur muscular, well-fed, aur undernourished \u2014 skeleton ko identical rakhte hue aur sirf mass layer badalte hue."
+    },
+    quiz: [
+      {q:"Nearly identical skeletons wale do animals poori tarah alag kyun dikh sakte hain?", options:["Nahi dikh sakte, identical skeletons hamesha same dikhte hain","Skeleton ke upar muscle mass distribution, khud bones nahi, recognizable silhouette create karta hai","Sirf fur color difference create karta hai","Sirf skeleton shape matter karta hai"], correct:1, explain:"Ek greyhound aur ek bulldog similar canine skeleton share karte hain, par bahut alag muscle mass distribution unki poori tarah alag, turant recognizable silhouettes create karta hai."},
+      {q:"Kisi bhi interior muscle detail add hone se pehle kya check kiya jaana chahiye?", options:["Kuch nahi, detail pehle aana chahiye","Flat black silhouette, confirm karne ke liye ki ye apne aap sahi animal aur mood ki tarah read hoti hai","Fur color aur pattern","Visible muscle striations ki exact number"], correct:1, explain:"Silhouette pehle flat black shape mein check ki jaati hai; agar ye apne aap correct animal aur mood communicate nahi karta, to interior muscle detail ki kitni bhi quantity ise fix nahi karegi."},
+      {q:"Fur ya fat typically neeche wale muscle layer se kaise relate karte hain?", options:["Fur aur fat ka muscle layer se koi relationship nahi hota","Wo muscle ke upar sit karte hain aur individual muscle forms ko soften ya poori tarah hide kar sakte hain","Wo hamesha har individual muscle ko clearly reveal karte hain","Wo muscle samajhne ki zaroorat poori tarah replace kar dete hain"], correct:1, explain:"Fat, fur, aur loose skin muscle layer ke upar sit karte hain aur individual muscle forms ko soften ya poori tarah hide kar sakte hain, chahe muscle knowledge abhi bhi overall silhouette ko inform kare."}
+    ],
+    checklist: [
+      "Muscle mass ko ek animal ke actual build aur role ke hisaab se distribute karta/karti hoon, ek generic layer apply karne ke bajaye.",
+      "Interior muscle detail add karne se pehle silhouette aur gesture block karta/karti hoon.",
+      "Apni drawing ko ek flat black silhouette ki tarah check karta/karti hoon confirm karne ke liye ki ye apne aap correctly read hoti hai.",
+      "Fur, fat, aur loose skin ko unke neeche wale muscle layer ko soften ya hide karte hue account karta/karti hoon."
+    ],
+    nextStep: "Skeleton, gait, aur mass distribution ko transferable skills ki tarah establish karne ke baad, agla module inhe directly already-learned human anatomy ke against test karta hai, shared logic ko explicit banate hue."
+  },
+
+  m69: {
+    hook: "Har land vertebrate, human ho ya animal, exact same skeletal blueprint ka ek variation hai \u2014 differences proportion, angle, aur emphasis ke hain, parts ka ek alag set nahi.",
+    whyItMatters: [
+      "Human aur animal anatomy ko do unrelated subjects ki tarah treat karne ka matlab hai har naye species ke liye structure ko scratch se dubara seekhna, jabki underlying logic already Modules 31-41 mein cover ho chuki hai.",
+      "Shared blueprint ko explicit banane se animal anatomy ek transfer exercise ban jaata hai \u2014 is bone ko stretch karo, us joint ko rotate karo, is proportion ko badlo \u2014 ek poori tarah separate body of knowledge ki jagah."
+    ],
+    coreIdea: [
+      "Same landmark bones species ke across exist karti hain: skull, spine, ribcage, shoulder blade, humerus, radius aur ulna, pelvis, femur, tibia aur fibula \u2014 ek human aur ek horse ke beech jo badalta hai wo hai length, angle, aur kaunsi joints ground ko touch karti hain.",
+      "Ek human poore foot ke saath flat khada hota hai (plantigrade); ek dog apni toes pe khadi hoti hai (digitigrade); ek horse ek single toe ke nail pe khadi hoti hai, uska hoof (unguligrade) \u2014 same ankle aur toe bones teeno mein present hote hain, bas differently use hote hue.",
+      "Proportional emphasis function ke saath shift hota hai: ek human ka arm ek mobile hand wala manipulation tool hai, jabki ek horse ka equivalent limb ek rigid, elongated support column hai jo speed ke liye optimized hai, grip ke liye nahi.",
+      "<b>Mannequinization</b>, jo Module 34 mein already human body ko simplify karne ke liye use hua tha, animals pe utna hi directly apply hota hai \u2014 same simplified capsule-and-block logic, ek alag proportion mein stretched."
+    ],
+    mistakes: [
+      "Har animal ki anatomy ko ek isolated, unrelated system ki tarah seekhna, use human anatomy se already known same skeletal landmarks pe wapas map karne ke bajaye.",
+      "Ye assume karna ki ek animal ka stance (toes ya hooves pe khada hona) matlab uski bones humans se kam hain, same bones ka ek alag angle pe use hone ke bajaye.",
+      "Ek animal ki actual function ke liye proportional emphasis adjust karna bhool jaana, for example ek horse ki leg ko human-like arm proportions ke saath draw karte hue.",
+      "Animals ke liye mannequinization skip karna aur seedha detailed rendering pe jump karna, simplified structural foundation kho dete hue jo complex poses ko manageable banati hai."
+    ],
+    proTips: [
+      "Ek naya animal shuru karte waqt, pehle uski major landmark bones list karo aur draw karne se pehle explicitly har ek ko uske human equivalent se match karo.",
+      "Ek diye gaye species ke liye kaunsi joints ground ko touch karti hain (poora foot, toes, ya ek single nail) legs block karne se pehle note karo, kyunki ye poore limb ki proportions badal deta hai.",
+      "Human figures ke liye use hue same simplified mannequin blocks ko animal ke torso aur limbs pe apply karo kisi bhi specific species detail add karne se pehle.",
+      "Ek animal ki confusing anatomy pe atke hue, poocho ki same action karta hua ek human kaisa dikhega, phir wahan se proportions adjust karo dobara shuru karne ke bajaye."
+    ],
+    practice: {
+      warmup: "Ek simple human skeleton aur ek simple quadruped skeleton side by side draw karo, matching bones ko same colors ya letters se label karte hue.",
+      daily: "Is hafte ki doosri practice se ek animal lo aur use Module 34 mein human figure ke liye use hue same block-and-capsule method use karke mannequinize karo.",
+      weekly: "Teen alag animals draw karo (for example ek human, ek dog, aur ek horse) ek similar pose mein, har ek mein same landmark-bone logic visible rakhte hue.",
+      challenge: "Ek invented creature draw karo jo human aur animal proportions ko ek deliberate, anatomically consistent tareeke se blend kare, shared skeletal logic use karke har choice justify karte hue."
+    },
+    quiz: [
+      {q:"Ek human, dog, aur horse skeleton ke beech sabse zyada kya differ karta hai?", options:["Unke paas bones ka poori tarah alag set hai","Proportion, angle, aur kaunsi joints ground ko touch karti hain, underlying set of bones nahi","Sirf ribs ka number differ karta hai","Kuch bhi differ nahi karta, sabhi land vertebrates identical hote hain"], correct:1, explain:"Same landmark bones species ke across appear karti hain; jo badalta hai wo hai length, angle, aur stance \u2014 kya poora foot, toes, ya ek single hoof ground ko touch karta hai."},
+      {q:"Ek horse ke unguligrade hone ka kya matlab hai?", options:["Uski ankle bones bilkul nahi hoti","Ye ek single toe ke nail pe khadi hoti hai, jise hum uska hoof dekhte hain","Ye ek human ki tarah flat-footed khadi hoti hai","Iske paas legs bones ka ek extra set hai jo humans ke paas nahi"], correct:1, explain:"Unguligrade stance ka matlab hai ek single toe ke nail (hoof) pe khada hona; same ankle aur toe bones jo ek human foot mein present hain, wahin abhi bhi hain, bas ek bahut alag angle pe use hote hue."},
+      {q:"Mannequinization animal anatomy pe kaise apply hoti hai?", options:["Ye apply nahi hoti, mannequinization sirf human hai","Humans ke liye use hua same simplified block-and-capsule method directly apply hota hai, alag proportions mein stretched","Ye sirf quadrupeds ke liye kaam karta hai, kabhi birds ya fish ke liye nahi","Ye kisi bhi animal skeleton seekhne ki zaroorat replace kar deta hai"], correct:1, explain:"Mannequinization ka simplified block-and-capsule logic directly animals pe transfer hota hai \u2014 same method, bas ek alag skeleton ke liye stretched aur reproportioned."}
+    ],
+    checklist: [
+      "Ek animal ki major landmark bones ko draw karne se pehle unke human equivalents se match kar sakta/sakti hoon.",
+      "Ek diye gaye species ke liye kaunsi joints ground ko touch karti hain identify karta/karti hoon aur leg proportions ko uske hisaab se adjust karta/karti hoon.",
+      "Ek animal ki actual function ke basis pe proportional emphasis adjust karta/karti hoon, human proportions pe default karne ke bajaye.",
+      "Human figure ke liye seekha gaya same block-and-capsule logic use karke animals pe mannequinization apply kar sakta/sakti hoon."
+    ],
+    nextStep: "Shared blueprint establish hone ke baad, agla module ise ek specific, high-stakes case pe apply karta hai: big cats aur doosre predators, jahan subtle proportion shifts ek convincing lion ko ek stretched-out house cat se separate karte hain."
   }
 
 };
+
+const keys = Object.keys(TRANSLATIONS_HI);
