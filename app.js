@@ -31,6 +31,9 @@ const STATE = {
   checklist:{},
   quizAnswers:{},
   notes:{},
+  premadeEdits:{},
+  notesLangOverride:null,
+  notesMotionPaused:null,
   resourcesOpened:{},
   recentlyVisited:[],
   searchQuery:'',
@@ -46,6 +49,175 @@ const STATE = {
   activityLog:{},
   unlockedAchievements:new Set()
 };
+
+/* ============================================================
+   PREMADE NOTES — ready-made notes for a module (see notes-data.js).
+   The originals are never modified: each user's edits are stored as
+   per-language overrides in STATE.premadeEdits (localStorage / export),
+   so one person's edits never change what anyone else sees.
+   ============================================================ */
+let NOTES_SUB = 'premade';
+let NOTES_EDITING = false;
+let NOTES_EDIT_MOD = null;
+let premadeSaveTimer = null;
+
+const NOTES_UI = {
+  en:{premade:'Premade notes', mine:'My notes', follow:'Following site language: ', only:'Notes only: ', names:{en:'English', hi:'Hinglish'},
+      toOther:{en:'Show these notes in English', hi:'Translate these notes to Hinglish'}, back:'Back to site language', pause:'Pause motion', play:'Play motion',
+      edit:'Edit these notes', done:'Done editing', reset:'Reset to original', edited:'Edited by you \u00b7 saved on this device', saved:'Saved on this device',
+      hint:'One point per line. Use **bold** for emphasis. Your edits stay on this device only.', confirm:'Reset these notes to the original? Your edits for this language will be removed.'},
+  hi:{premade:'Premade notes', mine:'My notes', follow:'Site ki language follow ho rahi hai: ', only:'Sirf notes: ', names:{en:'English', hi:'Hinglish'},
+      toOther:{en:'Notes English mein dekho', hi:'Notes ko Hinglish mein badlo'}, back:'Site ki language pe wapas', pause:'Motion roko', play:'Motion chalao',
+      edit:'Notes edit karo', done:'Edit ho gaya', reset:'Original pe wapas', edited:'Aapne edit kiya \u00b7 is device pe saved', saved:'Is device pe saved',
+      hint:'Har point alag line mein. Zor dene ke liye **bold** use karo. Edits sirf is device pe rehte hain.', confirm:'In notes ko original pe wapas laayein? Is language ke aapke edits hat jaayenge.'}
+};
+
+function hasPremadeNotes(m){ return !!(m && typeof PREMADE_NOTES !== 'undefined' && PREMADE_NOTES[m.id]); }
+function getNotesLang(){ return STATE.notesLangOverride || STATE.language || 'en'; }
+function notesMd(s){ return escapeHtml(String(s)).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>'); }
+function premadeItems(mid, lang, sec){
+  const e = STATE.premadeEdits[mid] && STATE.premadeEdits[mid][lang];
+  return (e && Array.isArray(e[sec.id])) ? e[sec.id] : sec[lang].items;
+}
+function hasPremadeEdits(mid, lang){
+  const e = STATE.premadeEdits[mid] && STATE.premadeEdits[mid][lang];
+  return !!(e && Object.keys(e).length);
+}
+function isNotesMotionPaused(){
+  if(STATE.notesMotionPaused === true) return true;
+  if(STATE.notesMotionPaused === false) return false;
+  return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+}
+function notesSubTabsHtml(){
+  const ui = NOTES_UI[getNotesLang()];
+  return `<div class="notes-sub" role="tablist"><button class="notes-sub-btn${NOTES_SUB==='premade'?' on':''}" data-notes-sub="premade">${ui.premade}</button><button class="notes-sub-btn${NOTES_SUB==='mine'?' on':''}" data-notes-sub="mine">${ui.mine}</button></div>`;
+}
+function renderPremadeNotesView(m){
+  const data = PREMADE_NOTES[m.id];
+  if(NOTES_EDIT_MOD !== m.id) NOTES_EDITING = false;
+  const site = STATE.language || 'en';
+  const lang = getNotesLang();
+  const ui = NOTES_UI[lang];
+  const overridden = lang !== site;
+  const chip = (overridden ? ui.only : ui.follow) + ui.names[lang];
+  const other = lang === 'en' ? 'hi' : 'en';
+  const switchLabel = overridden ? (ui.back + ' (' + ui.names[site] + ')') : ui.toOther[other];
+  const edited = hasPremadeEdits(m.id, lang);
+  const paused = isNotesMotionPaused();
+  const secs = data.sections.map(sec=>{
+    const t = sec[lang];
+    const items = premadeItems(m.id, lang, sec);
+    let body;
+    if(NOTES_EDITING){
+      body = `<textarea class="note-edit" data-note-section="${sec.id}" rows="${Math.max(3, items.length * 3)}" aria-label="${escapeHtml(t.h)}">${escapeHtml(items.join('\n'))}</textarea>`;
+    } else {
+      const tag = sec.ordered ? 'ol' : 'ul';
+      body = `<${tag} class="note-list">${items.map(i=>`<li>${notesMd(i)}</li>`).join('')}</${tag}>`;
+    }
+    const figs = NOTES_EDITING ? '' : (t.figs || []).map(f=>`<figure class="note-fig">${f.svg}<figcaption>${escapeHtml(f.cap)}</figcaption></figure>`).join('');
+    return `<section class="note-sec"><h3>${escapeHtml(t.h)}</h3>${body}${figs}</section>`;
+  }).join('');
+  const acts = `<button class="notes-btn notes-primary" data-notes-edit>${NOTES_EDITING ? ui.done : ui.edit}</button>`
+    + (edited ? `<button class="notes-btn" data-notes-reset>${ui.reset}</button>` : '')
+    + `<a class="notes-btn" href="${escapeHtml(data.source.url)}" target="_blank" rel="noopener">${escapeHtml(lang === 'hi' ? data.source.openHi : data.source.openEn)}</a>`;
+  return `${notesSubTabsHtml()}
+    <div class="notes-bar"><span class="notes-chip">${escapeHtml(chip)}</span><button class="notes-btn" data-notes-motion>${paused ? ui.play : ui.pause}</button></div>
+    <button class="notes-btn notes-switch" data-notes-lang>${escapeHtml(switchLabel)}</button>
+    <div class="notes-source">${escapeHtml(data.source[lang])}</div>
+    ${edited ? `<div class="notes-chip notes-chip-edited">${ui.edited}</div>` : ''}
+    ${NOTES_EDITING ? `<p class="notes-hint">${notesMd(ui.hint)}</p>` : ''}
+    <div class="note-card">${secs}</div>
+    <div class="notes-actions">${acts}</div>
+    <div class="notes-status" id="premadeStatus"></div>`;
+}
+function resActions(r, m){
+  const hasNotes = r.hasNotes && hasPremadeNotes(m);
+  if(!hasNotes && !r.lessonUrl) return '';
+  return `<div class="res-actions">${hasNotes ? `<button class="notes-btn" data-notes-open="${m.id}">Study notes</button>` : ''}${r.lessonUrl ? `<a class="res-lesson-link" href="${escapeHtml(r.lessonUrl)}" target="_blank" rel="noopener">Open original lesson \u2197</a>` : ''}</div>`;
+}
+function rerenderNotesTab(){
+  if(STATE.route.view !== 'module' || STATE.route.tab !== 'notes') return;
+  const m = findModule(STATE.route.moduleId);
+  const panel = document.getElementById('tabpanel');
+  if(m && panel) panel.innerHTML = renderTabContent(m, 'notes', new Set());
+}
+function handlePremadeNotesClick(e){
+  const t = e.target.closest('[data-notes-open],[data-notes-sub],[data-notes-lang],[data-notes-motion],[data-notes-edit],[data-notes-reset]');
+  if(!t) return false;
+  const mid = STATE.route.moduleId;
+  if(t.dataset.notesOpen){
+    const id = t.dataset.notesOpen; const p = findPathOfModule(id);
+    NOTES_SUB = 'premade'; NOTES_EDITING = false;
+    navigateModule(p ? p.id : null, id, 'notes');
+    return true;
+  }
+  if(t.dataset.notesSub){ NOTES_SUB = t.dataset.notesSub; NOTES_EDITING = false; rerenderNotesTab(); return true; }
+  if(t.dataset.notesLang !== undefined){
+    const site = STATE.language || 'en';
+    const eff = getNotesLang();
+    const target = (eff === site) ? (site === 'en' ? 'hi' : 'en') : site;
+    STATE.notesLangOverride = (target === site) ? null : target;
+    NOTES_EDITING = false;
+    saveProgress(); rerenderNotesTab(); return true;
+  }
+  if(t.dataset.notesMotion !== undefined){
+    STATE.notesMotionPaused = !isNotesMotionPaused();
+    saveProgress(); applyNotesMotion(false); updateMotionButtons(); return true;
+  }
+  if(t.dataset.notesEdit !== undefined){ NOTES_EDITING = !NOTES_EDITING; NOTES_EDIT_MOD = mid; rerenderNotesTab(); return true; }
+  if(t.dataset.notesReset !== undefined){
+    const lang = getNotesLang();
+    if(window.confirm(NOTES_UI[lang].confirm)){
+      if(STATE.premadeEdits[mid]) delete STATE.premadeEdits[mid][lang];
+      saveProgress(); rerenderNotesTab();
+    }
+    return true;
+  }
+  return false;
+}
+function handlePremadeEditInput(el){
+  const mid = STATE.route.moduleId, lang = getNotesLang(), sid = el.dataset.noteSection;
+  const data = PREMADE_NOTES[mid]; if(!data) return;
+  const sec = data.sections.find(s=>s.id === sid); if(!sec) return;
+  const lines = el.value.split('\n').map(s=>s.trim()).filter(Boolean);
+  const orig = sec[lang].items;
+  const same = lines.length === orig.length && lines.every((l,i)=>l === orig[i]);
+  STATE.premadeEdits[mid] = STATE.premadeEdits[mid] || {};
+  STATE.premadeEdits[mid][lang] = STATE.premadeEdits[mid][lang] || {};
+  if(same) delete STATE.premadeEdits[mid][lang][sid]; else STATE.premadeEdits[mid][lang][sid] = lines;
+  const status = document.getElementById('premadeStatus'); if(status) status.textContent = '\u2026';
+  clearTimeout(premadeSaveTimer);
+  premadeSaveTimer = setTimeout(()=>{ saveProgress(); const s = document.getElementById('premadeStatus'); if(s) s.textContent = NOTES_UI[lang].saved; }, 600);
+}
+/* Diagram animations loop until the reader pauses them. A newly drawn diagram that
+   starts paused is parked on a nearly-finished frame so it isn't blank. */
+function applyNotesMotion(initial){
+  const paused = isNotesMotionPaused();
+  document.querySelectorAll('.note-fig svg').forEach(svg=>{
+    try{
+      if(initial){ if(svg.dataset.motionSet) return; svg.dataset.motionSet = '1'; }
+      if(paused){
+        if(initial) svg.setCurrentTime((parseFloat(svg.dataset.dur) || 6) * 0.85);
+        svg.pauseAnimations();
+      } else {
+        svg.unpauseAnimations();
+      }
+    }catch(err){ /* animations are decoration; never break the page over them */ }
+  });
+}
+function updateMotionButtons(){
+  const ui = NOTES_UI[getNotesLang()];
+  const label = isNotesMotionPaused() ? ui.play : ui.pause;
+  document.querySelectorAll('[data-notes-motion]').forEach(b=>{ b.textContent = label; });
+}
+function initPremadeNotes(){
+  let raf = 0;
+  const mo = new MutationObserver(()=>{
+    if(raf) return;
+    raf = requestAnimationFrame(()=>{ raf = 0; if(document.querySelector('.note-fig svg')){ applyNotesMotion(true); updateMotionButtons(); } });
+  });
+  mo.observe(document.body, {childList:true, subtree:true});
+}
 
 function getLivePaths(){
   return CURRICULUM.filter(p=>p.status==='live');
@@ -283,6 +455,9 @@ function serializeState(){
     checklist:checklistOut,
     quizAnswers:STATE.quizAnswers,
     notes:STATE.notes,
+    premadeEdits:STATE.premadeEdits,
+    notesLangOverride:STATE.notesLangOverride,
+    notesMotionPaused:STATE.notesMotionPaused,
     resourcesOpened:resOpenOut,
     recentlyVisited:STATE.recentlyVisited,
     xp:STATE.xp,
@@ -309,6 +484,9 @@ function applyState(data){
   Object.entries(data.checklist || {}).forEach(([k,v])=>{ STATE.checklist[k] = new Set(v); });
   STATE.quizAnswers = data.quizAnswers || {};
   STATE.notes = data.notes || {};
+  STATE.premadeEdits = (data.premadeEdits && typeof data.premadeEdits === 'object') ? data.premadeEdits : {};
+  STATE.notesLangOverride = (data.notesLangOverride === 'en' || data.notesLangOverride === 'hi') ? data.notesLangOverride : null;
+  STATE.notesMotionPaused = (typeof data.notesMotionPaused === 'boolean') ? data.notesMotionPaused : null;
   STATE.resourcesOpened = {};
   Object.entries(data.resourcesOpened || {}).forEach(([k,v])=>{ STATE.resourcesOpened[k] = new Set(v); });
   STATE.recentlyVisited = data.recentlyVisited || [];
@@ -1165,6 +1343,7 @@ function renderResourceCard(r, ri, m, also){
         ${r.verified ? `<span class="res-verified">${ICONS.toastCheck} Checked</span>` : ''}
         ${opened ? `<span class="res-opened">${ICONS.check} Opened</span>` : ''}
       </div>
+${resActions(r, m)}
       ${ytId ? `
       <div class="video-embed-wrap" data-yt-id="${ytId}" data-res-module="${m.id}" data-res-idx="${ri}">
         <img src="https://img.youtube.com/vi/${ytId}/hqdefault.jpg" alt="" loading="lazy">
@@ -1442,6 +1621,7 @@ function renderTabContent(m, tab, checkedSet){
             ${r.verified ? `<span class="res-verified">${ICONS.toastCheck} Checked</span>` : ''}
             ${opened ? `<span class="res-opened">${ICONS.check} Opened</span>` : ''}
           </div>
+${resActions(r, m)}
           ${ytId ? `
           <div class="video-embed-wrap" data-yt-id="${ytId}" data-res-module="${m.id}" data-res-idx="${ri}">
             <img src="https://img.youtube.com/vi/${ytId}/hqdefault.jpg" alt="" loading="lazy">
@@ -1529,8 +1709,9 @@ function renderTabContent(m, tab, checkedSet){
     </div>`;
   }
   if(tab === 'notes'){
+    if(hasPremadeNotes(m) && NOTES_SUB === 'premade') return renderPremadeNotesView(m);
     const text = STATE.notes[m.id] || '';
-    return `<p class="prose" style="margin-bottom:var(--sp-4)">Private notes for this module &mdash; what clicked, what didn't, what to revisit. Saved with the rest of your progress.</p>
+    return `${hasPremadeNotes(m) ? notesSubTabsHtml() : ''}<p class="prose" style="margin-bottom:var(--sp-4)">Private notes for this module &mdash; what clicked, what didn't, what to revisit. Saved with the rest of your progress.</p>
     <textarea id="notesArea" class="notes-textarea" placeholder="Write anything..." data-module="${m.id}">${escapeHtml(text)}</textarea>
     <div class="notes-status" id="notesStatus">${text ? 'Saved' : ''}</div>`;
   }
@@ -2540,7 +2721,9 @@ function initEvents(){
     });
   }
 
+  initPremadeNotes();
   document.body.addEventListener('click', (e)=>{
+    if(handlePremadeNotesClick(e)) return;
     const homeBtn = e.target.closest('[data-nav-home]');
     if(homeBtn){ navigateHome(); return; }
 
@@ -2727,6 +2910,7 @@ function initEvents(){
   });
 
   document.body.addEventListener('input', (e)=>{
+    if(e.target.matches && e.target.matches('[data-note-section]')){ handlePremadeEditInput(e.target); return; }
     if(e.target.id === 'notesArea'){
       handleNotesInput(e.target.dataset.module, e.target.value);
       if(e.target.dataset.module === fpModuleId){
