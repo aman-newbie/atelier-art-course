@@ -944,3 +944,30 @@ svg{display:block;}
 .soon-arcs-details[open] summary::before{transform:rotate(90deg);}
 .soon-arcs-details summary:hover{background:var(--surface); color:var(--text);}
 .soon-pathmap{margin-top:var(--sp-3);}
+
+/* ---- Premade notes (module Notes tab) + resource actions ---- */
+.notes-sub{display:flex; gap:var(--sp-1,4px); border-bottom:1px solid var(--border); margin-bottom:var(--sp-4);}
+.notes-sub-btn{background:none; border:0; border-bottom:2px solid transparent; color:var(--text-muted,#8a857b); padding:0 var(--sp-3); min-height:44px; font:inherit; font-weight:500; cursor:pointer;}
+.notes-sub-btn.on{color:var(--accent,#2f6aa8); border-bottom-color:var(--accent,#2f6aa8);}
+.notes-bar{display:flex; align-items:center; justify-content:space-between; gap:var(--sp-2); flex-wrap:wrap; margin-bottom:var(--sp-2);}
+.notes-chip{display:inline-block; font-size:calc(12px * var(--font-scale)); padding:3px 10px; border-radius:99px; border:1px solid var(--border); color:var(--text-muted,#8a857b);}
+.notes-chip-edited{margin-top:var(--sp-2); color:var(--accent,#2f6aa8); border-color:var(--accent,#2f6aa8);}
+.notes-btn{display:inline-flex; align-items:center; min-height:44px; padding:0 var(--sp-3); border-radius:var(--radius-sm,8px); border:1px solid var(--border); background:transparent; color:inherit; font:inherit; font-size:calc(13px * var(--font-scale)); text-decoration:none; cursor:pointer;}
+.notes-btn:hover{border-color:var(--accent,#2f6aa8);}
+.notes-primary{background:var(--accent,#2f6aa8); border-color:var(--accent,#2f6aa8); color:#fff;}
+.notes-switch{margin-bottom:var(--sp-3);}
+.notes-source{font-size:calc(12px * var(--font-scale)); text-transform:uppercase; letter-spacing:.06em; color:var(--text-muted,#8a857b); margin:var(--sp-2) 0;}
+.notes-hint{font-size:calc(13px * var(--font-scale)); color:var(--text-muted,#8a857b); margin:var(--sp-2) 0;}
+.notes-status{min-height:1.2em; margin-top:var(--sp-2); font-size:calc(12px * var(--font-scale)); color:var(--text-muted,#8a857b);}
+.note-card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-md); padding:var(--sp-4);}
+.note-sec h3{font-family:"Instrument Serif",serif; font-weight:400; font-size:calc(22px * var(--font-scale)); margin:var(--sp-5) 0 var(--sp-1);}
+.note-sec:first-child h3{margin-top:0;}
+.note-list{margin:0; padding-left:1.3em;}
+.note-list li{margin:var(--sp-2) 0; line-height:1.55;}
+.note-fig{margin:var(--sp-3) 0; background:#fbfaf7; color:#1d1b18; border:1px solid rgba(0,0,0,.08); border-radius:var(--radius-md); padding:var(--sp-2);}
+.note-fig svg{display:block; width:100%; height:auto;}
+.note-fig figcaption{font-size:calc(12.5px * var(--font-scale)); color:#4a463f; margin-top:var(--sp-1); padding:0 var(--sp-1) var(--sp-1);}
+.note-edit{width:100%; box-sizing:border-box; font:inherit; line-height:1.5; padding:var(--sp-2); border:1px solid var(--accent,#2f6aa8); border-radius:var(--radius-sm,8px); background:var(--surface); color:inherit; resize:vertical;}
+.notes-actions{display:flex; flex-wrap:wrap; gap:var(--sp-2); margin-top:var(--sp-4);}
+.res-actions{display:flex; flex-wrap:wrap; align-items:center; gap:var(--sp-3); margin-top:var(--sp-3);}
+.res-lesson-link{font-size:calc(13px * var(--font-scale)); color:var(--accent,#2f6aa8);}
