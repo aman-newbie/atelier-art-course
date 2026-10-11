@@ -1115,23 +1115,44 @@ function categorizeResourceType(r){
   return 'other';
 }
 
+function libResKey(r){
+  const u = (r && r.url) || '';
+  const yt = (r && r.videoId) || getYouTubeId(u);
+  if(yt) return 'yt:' + yt;
+  const pl = getYouTubePlaylistId(u);
+  if(pl) return 'ytl:' + pl;
+  if(u) return u.replace(/^https?:\/\/(www\.)?/i,'').replace(/#.*$/,'').replace(/\/+$/,'').toLowerCase();
+  return 'title:' + ((r && r.title) || '').toLowerCase() + '|' + ((r && r.creator) || '').toLowerCase();
+}
+
+/* The same free resource is deliberately cited in several modules (that's
+   useful on each module page), but the Library is one list of everything, so
+   it shows each resource once and notes the other plates it appears in. */
 function getAllLibraryResources(){
   const rows = [];
+  const byKey = new Map();
   CURRICULUM.forEach(path=>{
     if(path.status !== 'live' || !path.modules) return;
     path.modules.forEach(m=>{
       (m.resources||[]).forEach((r, ri)=>{
-        rows.push({r, ri, m, path});
+        if(!r || !r.title) return;
+        const key = libResKey(r);
+        const hit = byKey.get(key);
+        if(hit){ hit.also.push({m, ri, path}); return; }
+        const row = {r, ri, m, path, also:[]};
+        byKey.set(key, row);
+        rows.push(row);
       });
     });
   });
   return rows;
 }
 
-function renderResourceCard(r, ri, m){
+function renderResourceCard(r, ri, m, also){
+  also = also || [];
   const ytId = r.videoId || getYouTubeId(r.url);
   const playlistId = !ytId ? getYouTubePlaylistId(r.url) : null;
-  const opened = STATE.resourcesOpened[m.id] && STATE.resourcesOpened[m.id].has(ri);
+  const opened = [{m, ri}].concat(also).some(o => STATE.resourcesOpened[o.m.id] && STATE.resourcesOpened[o.m.id].has(o.ri));
   return `
   <div class="res-card">
     <span class="res-type">${r.type}</span>
@@ -1153,7 +1174,7 @@ function renderResourceCard(r, ri, m){
       <div class="video-embed-wrap playlist-embed-wrap">
         <button class="video-play-btn playlist-play-btn" aria-label="Play playlist inline" data-yt-playlist-id="${playlistId}" data-res-module="${m.id}" data-res-idx="${ri}">${ICONS.play} Play playlist inline</button>
       </div>` : ''}
-      <span class="library-source">${L(m,'title')} \u00b7 Plate ${m.plate}</span>
+      <span class="library-source">${L(m,'title')} \u00b7 Plate ${m.plate}${also.length ? ' \u00b7 also in Plate' + (also.length > 1 ? 's ' : ' ') + also.map(a=>a.m.plate).join(', ') : ''}</span>
     </div>
   </div>`;
 }
@@ -1326,7 +1347,8 @@ function renderLibrary(){
     filtered = filtered.filter(row=>
       (row.r.title||'').toLowerCase().includes(q) ||
       (row.r.creator||'').toLowerCase().includes(q) ||
-      (row.m.title||'').toLowerCase().includes(q)
+      (row.m.title||'').toLowerCase().includes(q) ||
+      (row.also||[]).some(a=>(a.m.title||'').toLowerCase().includes(q))
     );
   }
 
@@ -1358,7 +1380,7 @@ function renderLibrary(){
   if(!filtered.length){
     html += `<div class="library-empty">${ICONS.empty}<p>Nothing matches that search yet \u2014 try a different term or filter.</p></div>`;
   } else {
-    html += `<div class="library-grid">${filtered.map(row=>renderResourceCard(row.r, row.ri, row.m)).join('')}</div>`;
+    html += `<div class="library-grid">${filtered.map(row=>renderResourceCard(row.r, row.ri, row.m, row.also)).join('')}</div>`;
   }
 
   document.getElementById('main').innerHTML = html;
