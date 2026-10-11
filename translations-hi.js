@@ -3098,6 +3098,147 @@ const TRANSLATIONS_HI = {
       "Giraffe ki gardan aur legs jaisi extreme proportions pe bhi correct leg logic confidently apply karta/karti hoon."
     ],
     nextStep: "Predators aur herbivores ke across comparative anatomy establish hone ke baad, arc ab birds ki taraf move karta hai \u2014 flight, wings aur ek bilkul naye set of structural constraints introduce karte hue."
+  },
+
+  m73: {
+    hook: "Biome koi scenery nahi hai jise horizon line ke peeche paint kar diya jaaye \u2014 ye ek closed system hai jahan climate, geology aur life ek doosre ko explain karte hain, aur jaise hi koi ek piece fit nahi baithta, dimaag ke bolne se pehle aankh use pakad leti hai.",
+    whyItMatters: [
+      "Module 48 ke baad se har module ne ek-ek cheez banana sikhaya: ek tree, ek rock formation, ek mountain, ek building. Biome design synthesis ka step hai \u2014 un sab individual elements ko ek poore environment mein arrange karne ke rules, taaki wo ek coherent, believable jagah ki tarah read ho, unrelated assets ke dher ki tarah nahi.",
+      "Concept artists aur environment designers ko sabse pehle plausibility pe judge kiya jaata hai, prettiness pe nahi. Jo audience ek bhi climate rule naam se nahi bata sakti, wo bhi mehsoos kar leti hai ki tropical jungle floor ke upar snowy mountain peak 'galat' hai, aur ye instinctive bharosa tootna immersion ko kisi bhi tree ya rock drawing error se zyada tezi se tod deta hai."
+    ],
+    coreIdea: [
+      "Real biomes <b>latitude, altitude aur ocean currents</b> se tay hote hain \u2014 creative whim se nahi. Mountains apni windward side pe clouds se moisture nichod lete hain aur leeward side ko baarish se mehroom kar dete hain (rain shadow), isi wajah se real duniya mein deserts mountain ranges ke bilkul paas hote hain. Ye ek rule jaan lene se tum ek single mountain chain wale kisi bhi fictional map mein lagbhag kisi bhi biome placement ko justify kar sakte ho.",
+      "Biomes ek <b>gradient hain, grid nahi</b>. Climatically similar do biomes (temperate forest se boreal forest) bina kisi khaas transition ke ek doosre ke saath ho sakte hain. Do extreme opposites (jhulasta desert se arctic tundra) ko ya to beech mein in-between zones ki lambi band (steppe, cold steppe, taiga) chahiye ya ek dramatic geographic bahana (seedhi mountain wall, achanak altitude jump), taaki jump arbitrary na lage.",
+      "Har biome ki apni <b>silhouette language</b> hoti hai jo color ya detail se pehle read hoti hai \u2014 ye climate logic ke upar concept-art-specific layer hai. Desert: lambe, neeche, horizontal dune masses jin pe sparse, sharp vertical accents (mesas, cacti). Temperate forest: ghane, rounded, overlapping canopy masses ek consistent mid-value pe. Tundra: flat, wide, pale aur khaali, jahan shape ka kaam texture karti hai. Agar thumbnail ko grayscale mein karke bhi biome sirf silhouette se pehchana ja sake, to design kaam kar raha hai.",
+      "Atmospheric truth ko tum poori tarah yaad se invent nahi kar sakte. James Gurney ka maquette method \u2014 dune, cliff ya mountain ka ek rough physical model clay, foam ya found objects se banana aur use haath se light karna \u2014 isi liye hai kyunki real form pe real light 'accidents of truth' (specific reflected color, specific shadow softness) paida karti hai, jinhe sirf imagination se convincingly invent karna bahut mushkil hai."
+    ],
+    mistakes: [
+      "Do climatically incompatible biomes ko bina transition zone ya geographic feature (mountain wall, altitude cliff) ke seedha ek doosre ke saath rakh dena.",
+      "'Biome' ko palette swap samajhna \u2014 wahi generic rolling hills ko orange karke desert bol dena \u2014 landforms aur vegetation ki actual silhouette aur shape language badalne ke bajaye.",
+      "Har interesting biome signifier ko ek hi scene mein thoons dena (glowing mushrooms, floating rocks, twisted dead trees aur lava vents sab ek frame mein), jisse environment 'fantasy soup' lagta hai, ek specific, yaadgaar jagah nahi.",
+      "Architecture aur props (Module 59) ko us biome ko ignore karke design karna jisme wo baithe hain \u2014 heavy snowfall wale region mein flat roofs, jhulasta desert mein patli walls \u2014 jo wahi plausibility tod deta hai jise terrain ne mehnat se banaya tha.",
+      "Lighting ke liye physical ya photo reference skip kar dena kyunki scene 'imagine karna aasan' lagta hai, aur phir aisi atmosphere banana jo flat ya generically hazy lagti hai, us time of day aur us biome ki hawa ke hisaab se specific nahi."
+    ],
+    proTips: [
+      "Koi bhi detail add karne se pehle biome ko bahut chhote scale (ek-do inch) pe pure silhouette mein thumbnail karo. Agar us size pe shape-read 'desert' ya 'tundra' nahi bolta, to baad mein koi surface detail use fix nahi karegi.",
+      "Ek dominant biome signifier chuno aur zyada se zyada ek-do supporting. 'Towering mesas' plus 'sparse dry scrub' pe bana desert scene clearly read hota hai; jo desert scene dunes, oasis, quicksand aur canyon sab saath laane ki koshish kare wo noise lagta hai.",
+      "Jab scene mein lighting hi mushkil hissa ho, to Gurney-style maquette banao (crumpled foil, clay, ya desk lamp ke neeche photograph kiya hua ret ya chawal ka dher) \u2014 ye minutes mein ban jaata hai aur real shadow aur reflected-light information deta hai jo sirf imagined sketch mein nahi hogi.",
+      "Apne target biome ka specifically real-world reference study karo, generic stand-in nahi \u2014 Sonoran desert, Sahara aur ek cold high-altitude desert 'desert' shabd share karne ke bawajood bilkul alag dikhte hain."
+    ],
+    practice: {
+      warmup: "Har major biome type (desert, temperate forest, tundra, grassland, tropical rainforest, wetland) ke liye 6 chhote (1-inch) silhouettes thumbnail karo, sirf shape se \u2014 koi line detail nahi, koi color nahi.",
+      daily: "Ek biome chuno aur sirf Modules 48\u201362 ke shapes aur structures (trees, rock formations, architecture) use karke ek single environment construct karo, jo us biome ki silhouette language se match kare.",
+      weekly: "Ek canvas pe do adjacent regions design karo jo do contrasting biomes ke beech transition karein, aur transition ko ek visible geographic cause se justify karo (mountain range, coastline, achanak altitude change).",
+      challenge: "Ek biome ko teen baar redesign karo, har baar teen alag dominant signifiers ke saath (jaise desert pehle mesas ke around, phir dunes ke around, phir ek dry canyon ke around), taaki wo ek generic template ki jagah teen alag, specific jagahon ki tarah read ho."
+    },
+    quiz: [
+      {q:"Real duniya mein deserts aksar mountain ranges ke bilkul paas kyun hote hain?", options:["Mountains nearby oceans se ret kheench lete hain","Rain shadow: mountains windward side pe clouds se moisture nichod lete hain, leeward side ko sukha chhodte hue","Deserts hamesha continents ke exact center mein banate hain","Mountains dhoop rok dete hain, jisse paas mein plants nahi ug paate"], correct:1, explain:"Rain shadow tab banta hai jab ek mountain range prevailing winds se ek side pe moisture nichod leti hai aur doosri side ko baarish se mehroom kar deti hai \u2014 kai real-world desert placements ke peeche yahi asli mechanism hai."},
+      {q:"Biome gradient logic ke hisaab se, ek desert ko tundra ke paas plausibly baithne ke liye kya chahiye?", options:["Kuch nahi \u2014 koi bhi do biomes adjacent rakhe ja sakte hain","Transitional biomes ki lambi band (steppe, cold steppe, taiga) ya jump justify karne ke liye ek dramatic geographic feature","Ek body of water jo ek chhoti jheel se bada na ho","Dono taraf identical vegetation density"], correct:1, explain:"Do biomes climatically jitne alag honge, unke beech utna zyada transition zone (ya seedhe altitude change jaisa strong geographic bahana) chahiye, warna jump arbitrary lagta hai."},
+      {q:"Ek biome ki apni 'silhouette language' hone ka kya matlab hai?", options:["Har biome ko sirf black and white mein draw karna hoga","Har biome type ki ek alag shape/value read hoti hai (jaise desert ke neeche horizontal masses versus tundra ki flat, sparse khaali-pan) jo color ya detail add hone se pehle hi pehchani ja sake","Silhouettes sirf character design ke liye useful hain, environments ke liye nahi","Biomes ko text label kiye bina distinguish nahi kiya ja sakta"], correct:1, explain:"Agar thumbnail grayscale silhouette tak reduce hone ke baad bhi ek specific biome ki tarah read hota hai, to underlying shape design apna kaam kar raha hai \u2014 yahi silhouette language hai."},
+      {q:"Ek scene mein bahut saare interesting biome signifiers (glowing mushrooms, floating rocks, lava vents, dead trees) thoons dene ki main problem kya hai?", options:["Paint karne mein bahut time lagta hai","Ye ek specific, yaadgaar jagah ki bajaye generic 'fantasy soup' lagta hai","Ye copyright law violate karta hai","Isse file size bahut bada ho jaata hai"], correct:1, explain:"Ek saath har interesting idea bhar dene se wo focus khatam ho jaata hai jo jagah ko specific banata hai \u2014 ek dominant signifier plus zyada se zyada ek-do supporting kahin zyada clearly read hote hain."},
+      {q:"James Gurney landscape paintings ke liye lighting imagination se invent karne ke bajaye physical maquettes (clay, foam, found objects) kyun banate hain?", options:["Art schools mein maquettes required hote hain","Real form pe real light specific reflected color aur shadow information paida karti hai jise sirf yaad se convincingly invent karna bahut mushkil hai","Ye photo reference use karne se tez hai","Digital painting software imagined light ko correctly render nahi kar sakta"], correct:1, explain:"Gurney ka apna reasoning ye hai ki real light mein real form pe painting base karne se 'accidents of truth' \u2014 specific lighting behavior \u2014 saamne aate hain, jinhe imagination akeli shayad hi convincingly invent kar paati hai."}
+    ],
+    checklist: [
+      "Kam se kam ek real climate rule (latitude, altitude, rain shadow ya ocean current) se ek biome ki placement justify kar sakta/sakti hoon.",
+      "Do climatically alag biomes ko arbitrarily side by side rakhne ke bajaye unke beech ek transition zone ya geographic bahana design kar sakta/sakti hoon.",
+      "Ek biome ko pure silhouette mein thumbnail kar sakta/sakti hoon aur color ya detail add karne se pehle wo ek specific biome ki tarah read hota hai.",
+      "Painting se pehle scene ki lighting solve karne ke liye ek simple physical maquette bana sakta/sakti hoon ya specific photo reference jama kar sakta/sakti hoon."
+    ],
+    nextStep: "Ab tum ek aisa biome design kar sakte ho jo apne aap mein climatically aur visually coherent lage. Module 74 'kya ye jagah sense banati hai' se 'kya ye jagah koi kahani batati hai' ki taraf badhta hai \u2014 environmental storytelling, yaani biome ke andar objects aur wear ko aise arrange karna ki bina ek bhi shabd ke ek history imply ho."
+  },
+
+  m74: {
+    hook: "Ek room jisme ek ulta pada chair, thandi chai ka cup aur khula chhoda gaya darwaza ho, kisi bhi caption se zyada batata hai ki kya hua \u2014 environmental storytelling us room ko jaanbujh kar banane ka craft hai.",
+    whyItMatters: [
+      "Ek believable biome (Module 73) batata hai ki tum kahan ho. Environmental storytelling batata hai ki wahan kya hua. Yahi wo layer hai jo ek well-constructed jagah ko ek history wali jagah banati hai \u2014 wo skill jo generic concept art ko us concept art se alag karti hai jisse art director scroll karna rok deta hai.",
+      "Ye ek real, naam wali professional skill hai, koi vague creative bonus nahi: Dark Souls, Fallout aur The Last of Us jaise games isi se bina dialogue ke poori backstories batate hain, sirf object placement, wear aur lighting ke through \u2014 aur ye choices ka ek specific, seekhne layak set hai, mood ka koi accident nahi."
+    ],
+    coreIdea: [
+      "Objects evidence hain, decoration nahi. Har prop ko ek implicit sawaal ka jawab dena chahiye: ise kisne use kiya, kab, aur wo ruk kyun gaya? Gira hua tool, aadha khaya khana, barricaded darwaza \u2014 har ek ek clue hai jise viewer bina bataye kahani mein jod leta hai.",
+      "Wear aur damage timestamps hain. Rust, dust, growth, scorch marks aur structural collapse viewer ko batate hain ki kuch hone ke baad kitna time beet gaya \u2014 taaza damage recent event lagta hai; deewar ko poori tarah reclaim kar chuki ivy dashakon ka time dikhati hai.",
+      "Contrast hi ek detail ko noise ki jagah clue ki tarah readable banata hai. Agar scene mein sab kuch barabar ghisa-pita aur cluttered ho, to kuch bhi meaningful nahi dikhta. Ek consistent backdrop ke against ek jaanbujh kar rakhi gayi, thodi zyada clean ya thodi zyada disturbed object hi aankh kheenchti hai aur 'important' ki tarah read hoti hai.",
+      "Sabse strong environmental stories absence aur implication se kahi jaati hain, literal illustration se nahi \u2014 ek jala hua gaon aag aur bhaag chuke logon ko imply karta hai, dono ko paint kiye bina."
+    ],
+    mistakes: [
+      "Scene ko bahut saare 'interesting' props se bhar dena jo ek doosre se related nahi hain, isliye aankh pehchan nahi paati ki kaunsi details meaningful clues hain aur kaunsi sirf texture.",
+      "Har object ko barabar worn ya barabar pristine banana, wo contrast hata dena jo ek single detail ko deliberate clue ki tarah read karwata hai.",
+      "Kahani ko bahut literally explain karna (ek sign jo exactly likh de ki kya hua) viewer pe bharosa karne ke bajaye ki wo physical evidence se khud infer kar lega.",
+      "Ye bhool jaana ki wear ki ek direction aur ek cause hoti hai \u2014 damage ko ek plausible source ke saath consistent hona chahiye (hawa ki taraf wala erosion, water-line staining, foot-traffic wear patterns), texture ke liye randomly bikhera hua nahi.",
+      "Environmental storytelling ko environment finish hone ke baad add kiya gaya ek alag pass samajhna, props aur layout ko shuru se hi kahani ke around design karne ke bajaye."
+    ],
+    proTips: [
+      "Ek bhi prop rakhne se pehle, ek sentence likho ki is jagah pe kya hua tha. Tum jo bhi object add karo wo ya to us ek sentence ko support kare ya complicate kare.",
+      "Ek 'anchor' object rakho jo kahani ka emotional core ho (ek gira hua photograph, ek bachche ka khilona, ek abhi bhi jalta lamp) aur scene ki baaki sab cheezein use support karein, uske saath compete na karein.",
+      "Real abandoned-space photography (purani factory, doobha hua ghar) study karo ki real neglect asal mein kaisa dikhta hai \u2014 dust girne ki specific direction, water stains aur collapse yaad se convincingly invent karna bahut mushkil hai.",
+      "Sirf ye mat dekho ki kya maujood hai, ye bhi poochho ki kya gayab hai \u2014 ek khaali weapon rack ya bina bana bistar kisi bhi rakhi hui object jitni strongly kahani kah sakta hai."
+    ],
+    practice: {
+      warmup: "5 objects ki list banao jo 'ye family jaldi mein nikal gayi' wali kahani batayein, bina unme se kisi ke bhi note ya likhe hue sign hue.",
+      daily: "Ek chhoti interior space (room, shop stall, campsite) design karo sirf prop placement aur wear se, ek specific one-sentence backstory imply karte hue jo tum pehle likh lo.",
+      weekly: "Module 73 mein design kiya gaya ek biome lo aur usme ek single environmental-storytelling detail add karo \u2014 ek anchor object plus supporting wear \u2014 jo us specific jagah ki history imply kare.",
+      challenge: "Same room ko do alag backstories ke saath do baar design karo, sirf prop choice aur wear se (na text, na figures), taaki har version ek alag kahani ki tarah read ho."
+    },
+    quiz: [
+      {q:"Environmental storytelling mein har rakhe gaye prop ko ideally kya karna chahiye?", options:["Khaali jagah bharna taaki scene sparse na lage","Ek implicit sawaal ka jawab dena \u2014 ise kisne use kiya, kab, aur wo kyun ruka \u2014 aur ek clue ki tarah kaam karna","Biome ke color palette se bilkul match karna","Jitna ho sake utna detailed aur rendered hona"], correct:1, explain:"Environmental storytelling mein props evidence ki tarah kaam karte hain jinhe viewer ek narrative mein jod leta hai \u2014 har ek ko imply karna chahiye ki wahan kaun tha aur kya hua."},
+      {q:"Scene mein storytelling details rakhte waqt contrast kyun matter karta hai?", options:["Isse scene zyada colorful ho jaata hai","Agar sab kuch barabar worn ya cluttered ho, to koi ek detail meaningful clue ki tarah read nahi hota","Achhi lighting ke liye ye required hai","Readability pe iska koi asli asar nahi hota"], correct:1, explain:"Ek jaanbujh kar rakhi gayi detail sirf ek consistent backdrop ke against significant lagti hai \u2014 uniform clutter ya uniform wear wo contrast hata deta hai jo ek clue ko noticeable banata hai."},
+      {q:"Environment ke through backstory batane ki koshish mein ek common mistake kya hai?", options:["Text ki jagah props use karna","Kahani ko bahut literally explain karna, jaise ek aisa sign jo sab likh de","Objects pe wear aur damage add karna","Real abandoned spaces ki reference photography study karna"], correct:1, explain:"Over-explain karne se wo inference hat jaata hai jo viewer warna khud karta \u2014 sabse strong environmental stories evidence se imply hoti hain, seedhe state nahi."},
+      {q:"Module ke hisaab se, storytelling-driven scene mein koi bhi prop rakhne se pehle kya karna chahiye?", options:["Pehle color palette chuno","Ek sentence likho ki us jagah pe kya hua, aur har object ko use support ya complicate karne do","Architecture aur lighting poori tarah finish karo","Sabse zyada detailed props chuno"], correct:1, explain:"Ek single clear backstory sentence se shuru karne se har prop choice purposeful rehti hai, sirf decorative nahi."},
+      {q:"Sirf ye nahi ki kya maujood hai, ye bhi dekhna ki scene se kya gayab hai, kyun useful hai?", options:["Khaali jagah paint karna aasan hota hai","Ek absence \u2014 jaise khaali weapon rack ya bina bana bistar \u2014 kisi bhi maujood object jitni strongly kahani imply kar sakti hai","Gayab objects rendering time bachate hain","Isse storytelling mein koi value nahi"], correct:1, explain:"Absence khud information hai \u2014 jagah se jo gayab hai wo utna hi narratively loaded ho sakta hai jitna jo bacha hai."}
+    ],
+    checklist: [
+      "Kisi space mein props rakhne se pehle uski ek-sentence backstory likh sakta/sakti hoon.",
+      "Bahut saare competing props bikherne ke bajaye ek single anchor object aur supporting details rakh sakta/sakti hoon.",
+      "Wear aur damage ko ek specific, plausible cause aur timeframe ke saath consistent rakh sakta/sakti hoon.",
+      "Sirf jo scene mein rakhta/rakhti hoon usse nahi, absence se bhi ek kahani imply kar sakta/sakti hoon."
+    ],
+    nextStep: "Ab tum kisi jagah ko aisa bana sakte ho ki lage wahan kuch hua tha. Module 75 is par focus karta hai ki frame ko khud kaise arrange karte hain \u2014 concept art ke liye composition, wo camera-level decisions jo control karte hain ki viewer ki aankh sabse pehle kahan jaati hai."
+  },
+
+  m75: {
+    hook: "Tumhare environment ki ek bhi detail padhne se pehle, viewer ki aankh ko pehle hi bataya ja chuka hota hai ki kahan dekhna hai \u2014 composition us faisle ka naam hai ki tumne wo choice jaanbujh kar ki ya use kismat pe chhod diya.",
+    whyItMatters: [
+      "Ek biome (Module 73) aur ek story (Module 74) dono strong hone ke bawajood fail ho sakte hain agar unke around ka frame aankh ko guide na kare. Composition wo layer hai jo control karti hai ki viewer tumhari banai baaki har cheez ko kis order mein discover karta hai \u2014 wo kya pehle, kya doosre aur kya aakhir mein dekhta hai.",
+      "Ye poore curriculum ki sabse transferable skills mein se ek hai: wahi chand compositional principles (focal point, leading lines, value grouping) chahe tum ek character frame kar rahe ho, ek full environment ya ek comic panel, sab pe apply hote hain \u2014 isi liye professional concept artists ise ek alag, deliberately practice ki jaane wali skill maante hain, jo apne aap nahi ho jaati."
+    ],
+    coreIdea: [
+      "Ek composition ko exactly ek clear focal point chahiye \u2014 wo jagah jahan aankh pehle ruke aur baar baar laute. Baaki har element (value, line, color saturation, detail density) us ek point ko support karne ke liye arrange hona chahiye, uske saath compete karne ke liye nahi.",
+      "Leading lines \u2014 roads, rivers, fences, architecture, shorelines \u2014 aankh ko focal point ki taraf steer karne ka sabse seedha tool hain. Jo line aankh ko frame ke bahar ya kisi corner mein le jaaye wo apne kaam ka ulta karti hai.",
+      "Rule of Thirds (frame ko 3x3 grid mein baantna aur key elements ko lines ya intersections pe rakhna) ek reliable starting default specifically isliye hai kyunki ye beginners ki do sabse common failures se bachata hai: bilkul center mein rakha subject aur perfectly symmetrical horizon.",
+      "Koi bhi detail add karne se pehle values ko chhote number ke bade, simple shapes (aam taur pe 3\u20134 value families) mein group karna hi wo cheez hai jo composition ko door se clearly read karwati hai \u2014 detail paas se viewers ko organize karti hai, value structure kamre ke doosre kone se."
+    ],
+    mistakes: [
+      "Subject aur horizon line ko default se center mein rakhna, ek static, aam composition banana jisme aankh ke chalne ka koi rasta nahi.",
+      "Aisi leading lines lagana jo frame ke bahar ya kisi corner ki taraf point karein, intended focal point ki taraf nahi.",
+      "Clear value structure establish karne se pehle scene mein har jagah full detail render kar dena, isliye kuch bhi focus nahi kheenchta aur sab barabar attention ke liye compete karta hai.",
+      "Rule of Thirds ko mandatory rule samajhna, reliable default ki jagah \u2014 use kabhi bhi tod na paana compositions ko technically sahi par repetitive bana deta hai.",
+      "Composition ko content finalize hone ke baad design karna, pehle composition thumbnail karke content ko uske andar build karne ke bajaye."
+    ],
+    proTips: [
+      "Apne thumbnail ko squint karo (ya digitally blur karo) aur check karo ki kya ek shape ab bhi clear focal point ki tarah read hota hai \u2014 agar blur se sab kuch barabar gray aur undifferentiated ho jaaye, to value structure abhi apna kaam nahi kar raha.",
+      "Ek idea ke 3\u20135 tiny thumbnail variations alag focal-point placement ke saath sketch karo, ek pe commit karne se pehle \u2014 jo pehli composition dimaag mein aati hai wo shayad hi sabse strong hoti hai.",
+      "Rule of Thirds kyun kaam karta hai ye samajhne ke baad use deliberately todo, jab shot ko stillness, symmetry ya bechaini chahiye \u2014 dead-centered composition ek strong deliberate choice ho sakti hai, bas accidental taur pe shayad hi strong hoti hai.",
+      "Viewfinder use karo (kata hua cardboard rectangle, ya reference photo pe cropping tool) taaki real photography se strong compositions alag karke study kar sako ki wo kaam kyun karti hain."
+    ],
+    practice: {
+      warmup: "Same simple scene (landscape mein ek figure) ko teen baar thumbnail karo, har baar focal point ko ek alag rule-of-thirds intersection pe le jaate hue.",
+      daily: "Apne Module 73 ya 74 ke ek environment ko lo aur uski composition ko leading lines se redesign karo jo aankh ko ek single focal point tak clearly guide karein.",
+      weekly: "Ek full composition ko sirf 3\u20134 flat value shapes tak reduce karo, bina kisi detail ke, aur confirm karo ki us reduced level pe bhi focal point clearly read hota hai.",
+      challenge: "Same subject ko do baar compose karo \u2014 ek baar Rule of Thirds follow karke, ek baar use jaanbujh kar centered ya symmetrical composition se todke \u2014 aur ek sentence likho ki har version alag mood kaise banata hai."
+    },
+    quiz: [
+      {q:"Composition ke focal point ka main kaam kya hai?", options:["Image ka sabse colorful hissa banna","Aankh ko ek single clear jagah dena jahan wo pehle ruke aur laute, baaki sab uske support mein","Hamesha frame ke exact center mein baithna","Piece ki sabse zyada fine detail rakhna"], correct:1, explain:"Ek composition ko ek clear focal point chahiye jise baaki elements support karein, compete nahi \u2014 uski position, na ki detail level, sabse zyada matter karti hai."},
+      {q:"Ek aisi leading line ki kya problem hai jo corner ya frame ke bahar ki taraf point kare?", options:["Ye bahut zyada ink ya paint use karti hai","Ye aankh ko intended focal point ki taraf le jaane ke bajaye door le jaati hai","Ise draw karna technically mushkil hai","Koi problem nahi \u2014 sabhi leading lines ek jaise kaam karti hain"], correct:1, explain:"Leading lines ka kaam aankh ko focal point ki taraf steer karna hai; jo frame se bahar nikle ya corner mein le jaaye wo us goal ke khilaf kaam karti hai."},
+      {q:"Detail add karne se pehle values ko 3\u20134 bade shapes mein group karna composition ke liye kyun useful hai?", options:["Isse sirf time bachta hai","Isi se composition door se clearly read hoti hai, paas se koi fine detail dikhne se pehle","Detail ka composition pe koi asar hi nahi hota","Ye sirf black-and-white artwork ke liye relevant hai"], correct:1, explain:"Value structure hi composition ko kamre ke doosre kone se organize karta hai; detail tabhi matter karti hai jab viewer pehle se paas ho, isliye value grouping ko pehle kaam karna padta hai."},
+      {q:"Is module ke hisaab se Rule of Thirds ko kaise treat karna chahiye?", options:["Ek mandatory rule ki tarah jise kabhi todna nahi","Ek reliable default ki tarah jo common beginner mistakes se bachata hai, par jise samajhne ke baad jaanbujh kar toda ja sakta hai","Ek purani technique ki tarah jiska ab koi modern use nahi","Ek aise rule ki tarah jo sirf photography pe lagta hai, painting pe nahi"], correct:1, explain:"Rule of Thirds ek strong starting default ke roop mein pesh kiya gaya hai, absolute law nahi \u2014 jab tum samajh jaao ki default kyun kaam karta hai, to use jaanbujh kar todna (symmetry ya stillness ke liye) ek valid choice hai."},
+      {q:"Thumbnail composition ko squint karna ya blur karna kyun useful hai?", options:["Image ko zyada artistic dikhane ke liye","Ye check karne ke liye ki fine detail ke bina bhi value structure ek clear, differentiated focal point deta hai ya nahi","Composition mein blur ka koi diagnostic use nahi hota","Art director se galtiyan chhupane ke liye"], correct:1, explain:"Blur ya squint fine detail hata deta hai, aur dikhata hai ki akela underlying value structure aankh ko ek single focal point ki taraf direct karne ke liye kaafi strong hai ya nahi."}
+    ],
+    checklist: [
+      "Detail add karne se pehle apni composition mein ek single clear focal point pehchan sakta/sakti hoon.",
+      "Aisi leading lines design kar sakta/sakti hoon jo aankh ko focal point ki taraf guide karein, frame ke bahar nahi.",
+      "Ek composition ko 3\u20134 value shapes tak reduce karke confirm kar sakta/sakti hoon ki us stage pe bhi focal point read hota hai.",
+      "Explain kar sakta/sakti hoon ki main Rule of Thirds ko kab aur kyun jaanbujh kar todta/todti hoon."
+    ],
+    nextStep: "Ab tum direct kar sakte ho ki frame ke andar aankh kahan jaaye. Module 76 composition ke upar ek layer add karta hai: color scripting \u2014 ek piece ya project mein palettes ke planned sequence se mood aur continuity control karna, sirf placement nahi."
   }
 
 };
