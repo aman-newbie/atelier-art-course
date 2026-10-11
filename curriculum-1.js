@@ -38,7 +38,7 @@ const CURRICULUM_1 = [
         resources:[
           {type:'Read', title:'"I\'m teaching myself to draw. Now what?"', creator:'Ctrl+Paint — Matt Kohr', url:'https://www.ctrlpaint.com/blog/im-teaching-myself-to-draw-now-what', why:'A short, honest post on how to structure self-taught practice and what to draw when there\'s no assignment telling you what to do — exactly the gap this module is meant to fill.', verified:true},
           {type:'Article', title:'The Beginner\'s Guide to Deliberate Practice', creator:'James Clear', url:'https://jamesclear.com/beginners-guide-deliberate-practice', why:'A free, practical breakdown of the deliberate-practice research behind Ericsson and Pool\'s "Peak" \u2014 the same psychology, cited correctly, in a single free article instead of a book purchase.', verified:true},
-          {type:'Site', title:'Drawabox — How the course works', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/1', why:'You\'ll be using Drawabox heavily starting Module 4. Its homework-and-critique structure is itself a model of deliberate practice worth understanding before you start.', verified:true}
+          {type:'Course', title:'Lesson 0 — Using this course', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/0/3', why:"How Drawabox expects you to work: getting the most out of the lessons, community feedback versus official critique, and the warmup routine. Its homework-and-critique structure is itself a model of deliberate practice worth understanding before you start.", verified:true}
         ],
         quiz:[
           {q:"What does \"deliberate practice\" mean, based on this module?", options:["Drawing for as many hours as possible","Focused, feedback-driven repetition rather than passive volume","Only practicing subjects you already enjoy","Copying finished professional artwork exactly"], correct:1, explain:"Volume alone doesn't build skill efficiently \u2014 focused practice with feedback does."},
@@ -87,7 +87,7 @@ const CURRICULUM_1 = [
           challenge:"Draw the same simple circle with every pencil grade you own, or at three different pressures if you only own one. Compare how the tone and precision shift."
         },
         resources:[
-          {type:'Site', title:'Lesson 1 — required tools', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/1', why:"States the exact tools needed for the course you will lean on heavily starting Module 4 (specifically felt-tip fineliners for the ink-based drills). Worth reading before buying anything.", verified:true},
+          {type:'Course', title:'Lesson 0 — Required/Recommended Tools', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/0/4', why:"The course's own tools page: what it recommends and why, why ink instead of digital, 0.5 mm fineliners, paper, and a beginner's shopping list. Worth reading before buying anything.", verified:true},
           {type:'Video', title:'Unplugged: Pencils and Erasers', creator:'Ctrl+Paint (Matt Kohr)', url:'https://www.ctrlpaint.com/videos/unplugged-pencils-and-erasers', why:"The specific traditional-drawing-basics video (not just the library homepage) covering pencil and eraser setup for people without prior experience.", verified:true}
         ],
         quiz:[
@@ -185,7 +185,9 @@ const CURRICULUM_1 = [
           challenge:"Draw fifty confident straight lines of varying length and angle on one page in under ten minutes, with no ghosting pause longer than two seconds each. Speed forces genuine commitment to the stroke."
         },
         resources:[
-          {type:'Course', title:'Lesson 1 — Lines, Ellipses and Boxes', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/1', why:"The primary resource for this module. Free, extremely well structured, and built around exactly the ghosting and draw-through methods taught above, with homework and a written explanation for each drill.", verified:true},
+          {type:'Course', title:'Lines: Using Your Arm', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/1/2', why:"The physical side of line control: drawing from the shoulder instead of the wrist, the pivots of the arm, the hover-hand habit and how to hold your pen. Replaces a landing page that was only a setup intro.", verified:true},
+          {type:'Course', title:'Lines: Homework — superimposed lines, ghosted lines and planes', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/1/4', why:"Where the ghosting method is introduced (in the Ghosted Lines exercise), with the exact exercises this module's checklist asks for: superimposed lines, ghosted lines and ghosted planes.", verified:true},
+          {type:'Course', title:'Ellipses: tables of ellipses and ellipses in planes', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/1/5/homework', why:"The ellipse half of this module: what an ellipse is in 3D space, degree, and the exercises where you draw through each ellipse two or three times.", verified:true},
           {type:'Video', title:'7 Basic Lines of Drawing', creator:'Alphonso Dunn', url:'https://www.youtube.com/watch?v=8k1zbULdBRs', why:"A short, focused video demonstration of foundational line control, good as a visual companion to Drawabox's written lesson.", verified:true},
           {type:'Playlist', title:'Tutorials on Drawing Basics & Fundamentals', creator:'Alphonso Dunn', url:'https://www.youtube.com/playlist?list=PLhBKkQX9XSgeVEGuevcUrnxWYhyB31rZG', why:"A free, ordered playlist covering line control and fundamentals beyond the single video above.", verified:true}
         ],
@@ -285,7 +287,7 @@ const CURRICULUM_1 = [
           challenge:"Fill a page with ten to fifteen quick silhouette thumbnails of random objects, from memory or imagination, no more than thirty seconds each. Speed forces reliance on shape language instead of detail."
         },
         resources:[
-          {type:'Course', title:'Lesson 1 — organic and geometric shapes', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/1', why:"Its shape exercises build directly on the line and ellipse control practiced in Module 4, with the same ghosting and construction discipline applied to shape blocking.", verified:true},
+          {type:'Course', title:'Ellipses: 2D vs 3D', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/1/5/2d3d', why:"Explains how a flat circle becomes an ellipse once it sits in 3D space, which is the step from flat shapes to forms that this module sets up.", verified:true},
           {type:'Video', title:'Drawing shape: Contour Lines', creator:'Ctrl+Paint (Matt Kohr)', url:'https://www.ctrlpaint.com/videos/drawing-shape-contour', why:"A specific free video on contour-based shape drawing, replacing a generic course-browse page with the actual lesson.", verified:true}
         ],
         quiz:[
@@ -334,7 +336,7 @@ const CURRICULUM_1 = [
           challenge:"Pick one complex object — a chair, a backpack, a bicycle — and spend fifteen minutes only identifying and sketching which basic forms it's built from. No final rendering, just the construction."
         },
         resources:[
-          {type:'Course', title:'Lesson 1 — box construction', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/1', why:"The box-construction sequence begun here continues in later Drawabox lessons and is the most widely used free resource for this exact skill.", verified:true},
+          {type:'Course', title:'Boxes: homework and exercises', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/1/11', why:"The box-construction exercises (plotted, rough and rotated boxes, and organic perspective), the most widely used free practice for building solid forms out of boxes.", verified:true},
           {type:'Video', title:'Constructive Form pt. 1', creator:'Ctrl+Paint (Matt Kohr)', url:'https://www.ctrlpaint.com/videos/constructive-form-pt-1', why:"A specific free video on constructing 3D form (not a course-browse page), directly matching this module's topic.", verified:true}
         ],
         quiz:[
@@ -393,7 +395,7 @@ const CURRICULUM_1 = [
         resources:[
           {type:'Video', title:'Introduction to Perspective Drawing (1994 Chalkboard Lecture)', creator:'Marshall Vandruff', url:'https://www.youtube.com/watch?v=R60e9_ofV68', why:"A free introduction from the perspective course widely recommended across the self-taught art community (Drawabox links to it directly). Explains what perspective is and why it's difficult before getting technical.", verified:true},
           {type:'Course', title:'Drawing Basics \u2014 Structure & Perspective section', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course/drawing-basics', why:"Covers one-, two-, and three-point perspective, then deliberately transitions into freehand \"intuitive perspective\" without grids \u2014 exactly the progression this module teaches. Partly free, extends further as a paid course.", verified:true},
-          {type:'Course', title:'Lesson 1 \u2014 continuing box construction', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/1', why:"Its rough and plotted perspective exercises are the same one-point and two-point construction this module covers, with a structured critique system attached.", verified:true}
+          {type:'Course', title:'Boxes: simplified 1, 2 and 3 point perspective', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/1/9', why:"Drawabox's rules of thumb for 1-, 2- and 3-point perspective: the same one- and two-point construction this module covers, in a simplified, practical form.", verified:true}
         ],
         quiz:[
           {q:"What determines where the horizon line sits in a drawing?", options:["It's always the same height on the page","The viewer's eye level","The size of the largest object","The color of the vanishing point"], correct:1, explain:"The horizon line isn't fixed \u2014 it's wherever the viewer's eyes are, and it moves as the viewer does."},
@@ -490,7 +492,7 @@ const CURRICULUM_1 = [
         },
         resources:[
           {type:'Course', title:'Structure Basics \u2014 Making Things Look 3D', creator:'Proko (Stan Prokopenko)', url:'https://www.proko.com/course/drawing-basics', why:"A free lesson within Proko's Drawing Basics course covering exactly this combine-and-cut construction process.", verified:true},
-          {type:'Course', title:'Lesson 1 and onward', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/1', why:"Its organic and box construction exercises are the same underlying discipline this module names explicitly, continuing past Lesson 1 into more complex form combination.", verified:true}
+          {type:'Course', title:'Lesson 2 — Contour Lines, Texture and Construction', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/2', why:"The lesson that follows the basics and leads into Drawabox's constructional drawing, building complex things from simple forms, the discipline this module names.", verified:true}
         ],
         quiz:[
           {q:"In the construction hierarchy taught here, what comes first?", options:["Fine detail","Gesture or orientation and the largest primitive forms","Erasing all guide lines","Color"], correct:1, explain:"Big-to-small: orientation and primitive forms come first, detail comes last."},
