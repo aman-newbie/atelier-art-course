@@ -2192,7 +2192,8 @@ const CURRICULUM_3 = [
 "creator": "Monika Zagrobelna — Envato Tuts+",
 "url": "https://design.tutsplus.com/articles/how-to-draw-animals-birds-their-anatomy-and-how-to-draw-them--vector-21871",
 "why": "A free, thorough tutorial covering the fused bird skeleton, foot types matched to lifestyle, and beak construction — directly matching this module's core ideas.",
-"verified": true
+"verified": true,
+"summary": "Zagrobelna starts from the bird skeleton, where the chest and hips work as one rigid body part because of a fused spine, and builds a pose from that simplified frame. She then covers foot types matched to lifestyle (raptor, perching, webbed, running, scratching, climbing), a circle-and-line method for beaks, simple bird eyes, and how feathers grow in layers whose contours do the job muscles do on a mammal."
 }
 ],
 "quiz": [
@@ -2284,15 +2285,17 @@ const CURRICULUM_3 = [
 "creator": "Monika Zagrobelna — Envato Tuts+",
 "url": "https://design.tutsplus.com/articles/taking-flight-a-beginners-guide-into-drawing-wings--vector-15996",
 "why": "A free, in-depth tutorial covering wing joint structure, feather groups, and folding versus extending — directly matching this module's focus.",
-"verified": true
+"verified": true,
+"summary": "Shows that a wing is a modified arm: the feathered part starts just before the elbow, and the feathers attach in named groups (coverts, primaries on the hand, secondaries on the forearm, tertials blending into the body), each with its own direction and overlap rules. Also covers bat and dragon wings, a short flight-theory section, how wings move on the down stroke versus the up stroke, how to fold them, and common mistakes such as pointed feathers or a fully straight arm."
 },
 {
 "type": "Article",
 "title": "How to Draw Feathers",
 "creator": "Monika Zagrobelna — Envato Tuts+",
 "url": "https://design.tutsplus.com/tutorials/how-to-draw-feathers--cms-26792",
-"why": "A free companion tutorial focused specifically on individual feather structure and how feathers overlap, useful once the wing's joint skeleton is in place.",
-"verified": true
+"why": "A free pencil tutorial on drawing a single feather in three styles (cartoon, semi-realistic and realistic), covering the rachis, vane and barbs. A useful companion once the wing's joint skeleton and feather groups are in place.",
+"verified": true,
+"summary": "Walks through one feather three ways. The cartoon version is a quick outline with afterfeathers and ink contours; the semi-realistic one darkens the rachis and draws barbs row by row with white gaps between them; the realistic one builds a smooth vane with soft pencils, blends with a cotton swab, and lifts highlights with an eraser. Needs only pencils (HB to about 5B), a cotton swab and an eraser."
 }
 ],
 "quiz": [
@@ -2384,16 +2387,18 @@ const CURRICULUM_3 = [
 "title": "Fish Drawing Guide: 6 Easy Steps",
 "creator": "Goncalo Lopes — BIOWARS",
 "url": "https://www.biowars.com/blog/fish-drawing/",
-"why": "A free, professionally-illustrated step-by-step guide to constructing a fish from basic shapes, useful for the lateral S-curve and fin placement this module covers.",
-"verified": true
+"why": "A free, beginner-friendly pencil guide that builds a side-view fish from circles, then adds the tail, pectoral and pelvic fins, eye and dorsal spines. It covers fish construction only; the swimming-motion ideas in this module are not part of it.",
+"verified": true,
+"summary": "Builds a fish in six steps from basic shapes: a large circle for the widest part of the body, a smaller circle for the tail base, then the tail and head shape. Fins follow (two pectoral, one pelvic), then the eye, head details and a row of dorsal spikes that shrink toward the tail. Also suggests tools: a hard H pencil for light sketching, a soft 4B for shadows, and a kneaded eraser."
 },
 {
-"type": "Site",
-"title": "Free Video Library",
-"creator": "Ctrl+Paint — Matt Kohr",
-"url": "https://www.ctrlpaint.com/library",
-"why": "Free videos on gesture and flowing form construction that transfer directly to capturing the traveling S-curve motion central to aquatic locomotion.",
-"verified": true
+"type": "Article",
+"title": "How to Draw a Dolphin",
+"creator": "Chris Wilson",
+"url": "https://chriswilsonstudio.com/how-to-draw-a-dolphin/",
+"why": "A free observational tutorial that explains why a dolphin's tail flukes sit horizontally (unlike a fish's vertical tail) and that a dolphin swims by bending its body vertically, which matches this module's fish versus marine-mammal split.",
+"verified": true,
+"summary": "Draws a dolphin from a side-view photo through three connected contours (forehead to tail, jaw to belly, then features and fins) instead of construction shapes. Stresses horizontal flukes, since a vertical tail makes the animal read as a fish or shark, plus a rounded forehead flowing into a distinct snout. Ends with an exercise: draw the same dolphin at three moments of its swimming cycle."
 }
 ],
 "quiz": [
@@ -2485,15 +2490,17 @@ const CURRICULUM_3 = [
 "creator": "Monika Zagrobelna — Envato Tuts+",
 "url": "https://design.tutsplus.com/articles/how-to-draw-animals-butterflies-their-anatomy-and-wing-patterns--vector-19553",
 "why": "A free tutorial covering true insect body structure (head, thorax, abdomen) and wing attachment, directly matching this module's core three-part body plan.",
-"verified": true
+"verified": true,
+"summary": "Starts with the butterfly body as three overlapping ovals (head, thorax, abdomen), noting that the wings attach to the thorax, there are three pairs of legs with the first pair short, and the head carries antennae, palpi and a coiled proboscis. Wings are built from triangles with costal, outer and inner margins, an apex and a discal cell. The tutorial then walks through four species and ends with rules for designing your own butterfly pattern."
 },
 {
 "type": "Article",
 "title": "How to Draw a Spider, Step by Step",
 "creator": "Monika Zagrobelna — Envato Tuts+",
 "url": "https://design.tutsplus.com/tutorials/how-to-draw-a-spider--cms-29660",
-"why": "A free tutorial on spider anatomy, useful for contrasting the eight-legged, two-section arachnid body plan against the six-legged, three-section true insect plan.",
-"verified": true
+"why": "A short free step-by-step spider drawing: a torso circle, a tapered abdomen, the head and mandibles, eight segmented legs plus palps, and details like eight eyes and spinnerets. Useful for seeing the eight-legged arachnid plan next to the six-legged insect plan.",
+"verified": true,
+"summary": "A two-minute, twelve-step spider drawing: a circle for the torso, a tapered oval abdomen, the head and front mandibles, then eight legs built as three main segments (plus palps in front) that thin out segment by segment. Final steps add eight eyes, spinnerets, torso detail, an abdomen pattern and a little hair. It also points to the author's longer spider anatomy tutorial."
 }
 ],
 "quiz": [
