@@ -1820,7 +1820,7 @@ const CURRICULUM_3 = [
 }
     ]},
 {id:'creatures-hardsurface', title:'Creatures & Hard Surface', status:'live', order:6,
-    desc:'Comparative animal anatomy, birds, aquatic life, insects and original creature design, then vehicles, weapons, machines, and mecha. Batch 1 (comparative animal anatomy) is live; birds, aquatic life, and insects are next.',
+    desc:'Comparative animal anatomy, birds, aquatic life, insects and original creature design, then vehicles, weapons, machines, and mecha. Batches 1–2 (comparative animal anatomy, then birds, aquatic life, and insects) are live; original creature design and hard-surface vehicles are next.',
     modules:[
 {
 "id": "m67",
@@ -2144,6 +2144,400 @@ const CURRICULUM_3 = [
   "I confidently apply correct leg logic even to extreme proportions like a giraffe's neck and legs."
 ],
 "nextStep": "With comparative anatomy established across predators and herbivores, the arc moves next into birds — introducing flight, wings, and an entirely new set of structural constraints."
+},
+{
+"id": "m105",
+"plate": 105,
+"title": "Bird Anatomy & Skeletal Structure",
+"difficulty": "Intermediate",
+"studyTime": "20 min",
+"practiceTime": "25–30 min/day",
+"prereq": [
+"m69",
+"m67"
+],
+"hook": "A bird's chest and hips are fused into one rigid unit, which is exactly why six-limbed dragons could never fly — wings need a stiff frame to pick up the whole body, and a bird's skeleton is built entirely around that one requirement.",
+"whyItMatters": [
+"Birds look deceptively simple in silhouette, so beginners skip the skeleton entirely and draw a generic teardrop body with wings stuck on, producing a shape that never holds up in an unfamiliar pose.",
+"The comparative anatomy work from Module 69 applies directly here: a bird's wing is a rotated, modified arm, and once that mapping is clear, feet, beaks, and poses across every species become variations on one understood structure rather than separate problems."
+],
+"coreIdea": [
+"A bird's <b>spine, chest, and hips are fused into one rigid unit</b> so the wings can pick up the entire body as a single rigid load — there is almost no independent movement between chest and hips the way there is in a mammal.",
+"<b>Feet reveal lifestyle</b>: hooked raptor talons, thin perching toes, webbed swimming feet, and thick running toes are all the same underlying bone structure, shaped differently for what the bird actually does.",
+"<b>Beaks follow one simple construction method</b> regardless of species — a circle roughly the size of the head, a line to the tip, and a cut two-thirds along it to block the rough beak shape before refining.",
+"<b>Feathers, not muscles, define a bird's outer shape</b> — the simplified muscle pass in this module exists only to support the feather layers, not to be rendered in detail the way mammal musculature is."
+],
+"mistakes": [
+"Drawing a bird's body as a generic teardrop with wings attached, skipping the fused chest-hip skeleton that actually determines its silhouette and range of motion.",
+"Giving every bird species the same generic foot shape instead of matching foot type (raptor, perching, webbed, running) to how that species actually lives.",
+"Rendering detailed muscle definition on a bird the way one would for a mammal, when feathers — not visible muscle — are what actually shape the exterior.",
+"Constructing a beak as an afterthought stuck onto a finished head instead of blocking its basic circle-and-line structure at the same time as the skull."
+],
+"proTips": [
+"Block the fused chest-hip unit as one rigid shape first, then attach the head, wings, and legs to it — this single decision fixes most posing problems before they start.",
+"Identify the bird's foot type (raptor, perching, webbed, running) from a reference before drawing feet, rather than defaulting to a generic bird-foot shape.",
+"Use your own arm as a mental reference for wing folding — a folded wing brings the same joints closer together that folding your own arm would.",
+"Keep the muscle pass simple and treat it as a base for feather layers, not as a rendering target in its own right."
+],
+"practice": {
+"warmup": "Draw a simplified bird skeleton, labeling the fused chest-hip unit, wing joints (shoulder, elbow, wrist), and leg joints.",
+"daily": "Take one bird species and draw its head and beak using the circle-and-line beak construction method, then its foot type matched to how that species lives.",
+"weekly": "Draw a full bird in a resting pose and a second pose with wings partly spread, keeping the fused chest-hip unit and feather-layer logic consistent across both.",
+"challenge": "Draw three different bird species (for example a raptor, a perching songbird, and a water bird) side by side, showing how the same skeleton produces different feet, beaks, and proportions."
+},
+"resources": [
+{
+"type": "Article",
+"title": "How to Draw Animals: Birds, Their Anatomy and How to Draw Them",
+"creator": "Monika Zagrobelna — Envato Tuts+",
+"url": "https://design.tutsplus.com/articles/how-to-draw-animals-birds-their-anatomy-and-how-to-draw-them--vector-21871",
+"why": "A free, thorough tutorial covering the fused bird skeleton, foot types matched to lifestyle, and beak construction — directly matching this module's core ideas.",
+"verified": true
+}
+],
+"quiz": [
+{
+"q": "Why are a bird's chest and hips fused into one unit?",
+"options": [
+"It has no functional purpose, it is just how birds evolved",
+"So the wings can pick up the entire body as a single rigid load",
+"To allow more independent movement between chest and hips",
+"Only flightless birds have this fusion"
+],
+"correct": 1,
+"explain": "The fused chest-hip unit lets the wings act on the whole body as one rigid structure, which is essential for generating lift — without it, powered flight wouldn't work the way it does."
+},
+{
+"q": "What determines the differences between raptor, perching, webbed, and running bird feet?",
+"options": [
+"Different species have entirely different bone structures",
+"The same underlying bone structure shaped differently for how each bird actually lives",
+"Foot type is random and unrelated to lifestyle",
+"Only flightless birds have distinct foot types"
+],
+"correct": 1,
+"explain": "All bird feet share the same underlying bone structure; the differences in shape (hooked talons, thin toes, webbing) reflect what each species actually does, not a different skeleton."
+},
+{
+"q": "What primarily defines a bird's outer silhouette?",
+"options": [
+"Visible muscle definition, similar to mammals",
+"Feathers, layered over a simplified muscle base",
+"The skeleton alone, with no soft tissue involved",
+"Fat deposits under the skin"
+],
+"correct": 1,
+"explain": "Feathers, not visible muscle, define a bird's outer shape — the muscle pass in this module is kept simple because it exists to support feather layers, not to be rendered in mammal-like detail."
+}
+],
+"checklist": [
+"I construct a bird's chest and hips as one fused, rigid unit rather than as separate, independently moving masses.",
+"I match foot type (raptor, perching, webbed, running) to how a specific bird species actually lives.",
+"I use the circle-and-line method to block a beak's basic structure before refining it.",
+"I keep muscle rendering simple, treating it as a base for feather layers rather than a mammal-style rendering target."
+],
+"nextStep": "With the skeleton, feet, and beak logic established, the next module tackles what makes birds genuinely difficult for most artists: the wings themselves, in flight."
+},
+{
+"id": "m106",
+"plate": 106,
+"title": "Birds in Flight & Wing Mechanics",
+"difficulty": "Intermediate",
+"studyTime": "20 min",
+"practiceTime": "25–30 min/day",
+"prereq": [
+"m105"
+],
+"hook": "A wing fully extended and a wing folded flat against the body are the same skeleton — shoulder, elbow, wrist, fingers, exactly like your own arm — just carried at a different angle, which is why folded wings baffle artists who haven't mapped the joints first.",
+"whyItMatters": [
+"Wings are the single biggest reason beginners avoid drawing birds in flight: the feather shapes look complex, and without the underlying joint logic, every flight pose becomes a fresh guess instead of a variation on one understood mechanism.",
+"Once the wing is understood as a rotated arm with three joint zones (shoulder, elbow, wrist-to-fingertip), extending, folding, and angling it in any flight pose becomes a construction problem instead of a memorization problem."
+],
+"coreIdea": [
+"A wing has <b>three joint zones</b> matching a human arm: the shoulder (attached to the fused chest unit), the elbow (bending forward), and the wrist-to-fingertip section (which carries the longest flight feathers).",
+"<b>Flight feathers are organized in named, overlapping groups</b> — primaries at the wingtip (attached to the \"hand\"), secondaries along the inner wing (attached to the \"forearm\"), and coverts layered on top near the shoulder — not a uniform fringe of identical feathers.",
+"<b>Folding a wing brings the same three joint zones closer together</b>, exactly like folding your own arm, which is why a folded wing's silhouette is shorter and more compact rather than a completely different shape.",
+"<b>Wing shape reflects flight style</b>: long, narrow wings suit soaring and gliding, short, broad wings suit fast bursts and maneuvering — the same three-joint skeleton, proportioned differently for what the bird actually needs to do in the air."
+],
+"mistakes": [
+"Drawing wing feathers as a uniform fringe instead of the distinct, overlapping primary, secondary, and covert groups that actually structure a real wing.",
+"Treating a folded wing as an entirely different shape from an extended wing, instead of the same three-joint skeleton simply brought closer together.",
+"Ignoring flight style when proportioning a wing, giving a fast-maneuvering bird the long, narrow wing shape suited to a soaring species, or the reverse.",
+"Skipping the underlying joint skeleton and drawing feather shapes directly, producing a wing that looks plausible from one angle but falls apart in any other pose."
+],
+"proTips": [
+"Block the three joint zones (shoulder, elbow, wrist-to-fingertip) first, using your own arm as a physical reference, before adding a single feather.",
+"Group feathers by their real anatomical zones (primaries at the tip, secondaries along the inner wing, coverts layered near the shoulder) rather than drawing a generic fringe.",
+"Practice folding and extending the same wing skeleton in a sequence of poses, checking that the three joints stay consistent throughout.",
+"Match wing proportions (long-narrow versus short-broad) to the specific bird's flight style before finalizing a flight pose."
+],
+"practice": {
+"warmup": "Draw a wing skeleton in three joint zones (shoulder, elbow, wrist-to-fingertip), fully extended, using your own arm as reference.",
+"daily": "Take the same wing skeleton and draw it in a folded position, then add the three main feather groups (primaries, secondaries, coverts) over the extended version.",
+"weekly": "Draw one bird in three wing positions — fully extended, half-folded, and fully folded — keeping the joint skeleton and feather groups consistent across all three.",
+"challenge": "Draw two birds with different flight styles (for example a soaring raptor and a fast-maneuvering songbird) mid-flight, proportioning each wing to match its actual flight style."
+},
+"resources": [
+{
+"type": "Article",
+"title": "Taking Flight: A Beginner's Guide Into Drawing Wings",
+"creator": "Monika Zagrobelna — Envato Tuts+",
+"url": "https://design.tutsplus.com/articles/taking-flight-a-beginners-guide-into-drawing-wings--vector-15996",
+"why": "A free, in-depth tutorial covering wing joint structure, feather groups, and folding versus extending — directly matching this module's focus.",
+"verified": true
+},
+{
+"type": "Article",
+"title": "How to Draw Feathers",
+"creator": "Monika Zagrobelna — Envato Tuts+",
+"url": "https://design.tutsplus.com/tutorials/how-to-draw-feathers--cms-26792",
+"why": "A free companion tutorial focused specifically on individual feather structure and how feathers overlap, useful once the wing's joint skeleton is in place.",
+"verified": true
+}
+],
+"quiz": [
+{
+"q": "How many main joint zones does a bird's wing share with a human arm?",
+"options": [
+"One, the shoulder only",
+"Three: shoulder, elbow, and wrist-to-fingertip",
+"Five, matching each finger separately",
+"None, wings have an entirely different structure"
+],
+"correct": 1,
+"explain": "A wing shares three joint zones with a human arm: the shoulder, the elbow, and the wrist-to-fingertip section that carries the longest flight feathers."
+},
+{
+"q": "How are flight feathers actually organized on a wing?",
+"options": [
+"As a uniform fringe of identical feathers",
+"In named, overlapping groups: primaries at the tip, secondaries along the inner wing, and coverts near the shoulder",
+"Randomly, with no consistent grouping",
+"Only along the very edge of the wing"
+],
+"correct": 1,
+"explain": "Flight feathers are organized into distinct, overlapping groups — primaries at the wingtip, secondaries along the inner wing, and coverts layered near the shoulder — not a uniform fringe."
+},
+{
+"q": "What determines whether a bird has long, narrow wings versus short, broad wings?",
+"options": [
+"Random variation with no functional cause",
+"The bird's flight style — soaring/gliding versus fast bursts and maneuvering",
+"All birds have identical wing proportions",
+"Only the bird's size, not its behavior"
+],
+"correct": 1,
+"explain": "Wing shape reflects flight style: long, narrow wings suit soaring and gliding, while short, broad wings suit fast, maneuverable flight — the same three-joint skeleton, proportioned for the bird's actual needs."
+}
+],
+"checklist": [
+"I construct a wing using the three joint zones (shoulder, elbow, wrist-to-fingertip) shared with a human arm.",
+"I organize flight feathers into their real anatomical groups (primaries, secondaries, coverts) rather than a generic fringe.",
+"I can fold and extend the same wing skeleton consistently across different poses.",
+"I proportion a wing's shape to match the bird's actual flight style."
+],
+"nextStep": "From the air, the arc moves into the water — the next module applies the same construction logic to fish and marine mammals, where locomotion works on entirely different principles."
+},
+{
+"id": "m107",
+"plate": 107,
+"title": "Aquatic Life: Fish & Marine Mammals",
+"difficulty": "Intermediate",
+"studyTime": "20 min",
+"practiceTime": "25–30 min/day",
+"prereq": [
+"m69",
+"m68"
+],
+"hook": "A fish and a dolphin swim with the same S-curve body motion, but one bends side to side and the other bends up and down — the entire difference between \"fish\" and \"marine mammal\" locomotion comes down to that single axis.",
+"whyItMatters": [
+"Aquatic creatures are the last major gap in this arc's locomotion coverage — land and air are now covered, and water introduces a genuinely different propulsion axis that doesn't transfer directly from either.",
+"Fish and marine mammals are frequently drawn as stiff, static silhouettes because their underlying motion (a traveling S-curve down the body) is less intuitive to an artist used to legged or winged locomotion."
+],
+"coreIdea": [
+"A fish's entire body works as <b>one continuous S-curve that travels from head to tail</b>, bending side to side (laterally) — the tail fin is the last link in that curve, not a separate paddle.",
+"A <b>marine mammal bends the opposite way</b>: up and down (dorsally), because its spine evolved from land-mammal ancestors whose spines already bent that way when running — this is why a dolphin's tail fin (fluke) is horizontal while a fish's tail fin is vertical.",
+"<b>Fins are positioned functionally</b>, not decoratively: dorsal fins stabilize against rolling, pectoral fins steer and brake, and the tail (caudal) fin provides the actual forward thrust.",
+"<b>Body proportion reveals swimming style</b>: a torpedo-shaped body suits sustained fast swimming, a flattened or elongated body suits maneuvering near the seafloor or through tight spaces."
+],
+"mistakes": [
+"Drawing a fish or marine mammal in a straight, static line instead of the continuous S-curve that actually drives its swimming motion.",
+"Giving a marine mammal a vertical tail fin (like a fish) instead of the horizontal fluke that comes from its up-and-down spine motion, or the reverse for a fish.",
+"Placing fins in generic or decorative positions instead of their actual functional roles (dorsal for stability, pectoral for steering, caudal for thrust).",
+"Using the same body proportions for every aquatic creature regardless of whether it's built for sustained speed or close maneuvering."
+],
+"proTips": [
+"Sketch the traveling S-curve as a single flowing line first, then build the body around it, rather than drawing a straight body and bending it afterward.",
+"Before drawing any aquatic creature's tail, decide whether it's a fish (lateral bend, vertical tail) or a marine mammal (dorsal bend, horizontal fluke) — this one decision determines the whole silhouette.",
+"Place fins by function first: stability (dorsal), steering and braking (pectoral), thrust (caudal), then refine their shape.",
+"Match body proportion to swimming style — torpedo-shaped for speed, flatter or more elongated for maneuvering — before finalizing a pose."
+],
+"practice": {
+"warmup": "Draw a single flowing S-curve line, then build a simple fish body around it with a vertical tail fin at the end.",
+"daily": "Draw the same S-curve exercise for a marine mammal instead, using a dorsal (up-and-down) bend and a horizontal fluke.",
+"weekly": "Draw one fish and one marine mammal side by side in mid-swim poses, placing dorsal, pectoral, and caudal fins by function on each.",
+"challenge": "Draw a small school or pod of the same species in slightly different points along a swimming cycle, keeping the S-curve motion consistent across all of them."
+},
+"resources": [
+{
+"type": "Article",
+"title": "Fish Drawing Guide: 6 Easy Steps",
+"creator": "Goncalo Lopes — BIOWARS",
+"url": "https://www.biowars.com/blog/fish-drawing/",
+"why": "A free, professionally-illustrated step-by-step guide to constructing a fish from basic shapes, useful for the lateral S-curve and fin placement this module covers.",
+"verified": true
+},
+{
+"type": "Site",
+"title": "Free Video Library",
+"creator": "Ctrl+Paint — Matt Kohr",
+"url": "https://www.ctrlpaint.com/library",
+"why": "Free videos on gesture and flowing form construction that transfer directly to capturing the traveling S-curve motion central to aquatic locomotion.",
+"verified": true
+}
+],
+"quiz": [
+{
+"q": "What is the fundamental difference between fish and marine mammal swimming motion?",
+"options": [
+"There is no real difference between them",
+"Fish bend side to side (laterally), marine mammals bend up and down (dorsally)",
+"Marine mammals bend side to side, fish bend up and down",
+"Only fish use an S-curve motion at all"
+],
+"correct": 1,
+"explain": "Fish propel themselves with a lateral (side-to-side) S-curve, while marine mammals use a dorsal (up-and-down) bend inherited from land-mammal ancestors."
+},
+{
+"q": "Why is a dolphin's tail fin (fluke) horizontal while a fish's tail fin is vertical?",
+"options": [
+"It is a random difference with no functional cause",
+"It directly follows from each animal's different bending axis — dorsal versus lateral",
+"Dolphins evolved from fish and kept the same tail orientation",
+"Tail fin orientation has nothing to do with swimming motion"
+],
+"correct": 1,
+"explain": "A fish's vertical tail fin follows from its lateral (side-to-side) bending motion, while a marine mammal's horizontal fluke follows from its dorsal (up-and-down) bending motion."
+},
+{
+"q": "What is the functional role of a dorsal fin?",
+"options": [
+"Providing the main forward thrust",
+"Stabilizing the body against rolling",
+"Steering and braking only",
+"Purely decorative, with no functional role"
+],
+"correct": 1,
+"explain": "The dorsal fin's main functional role is stabilizing the body against rolling, while the caudal (tail) fin provides thrust and pectoral fins handle steering and braking."
+}
+],
+"checklist": [
+"I build aquatic creatures around a continuous, traveling S-curve rather than a straight, static line.",
+"I correctly match tail fin orientation (vertical or horizontal) to whether the creature is a fish or a marine mammal.",
+"I place fins according to their actual function (dorsal for stability, pectoral for steering, caudal for thrust).",
+"I adjust body proportion to match a creature's swimming style, whether built for speed or close maneuvering."
+],
+"nextStep": "Land, air, and water are now all covered — the batch's final module turns to the smallest and most varied creatures in the animal kingdom: insects and arthropods."
+},
+{
+"id": "m108",
+"plate": 108,
+"title": "Insects & Arthropod Structure",
+"difficulty": "Intermediate",
+"studyTime": "20 min",
+"practiceTime": "25–30 min/day",
+"prereq": [
+"m69"
+],
+"hook": "An insect has no internal skeleton at all — the hard shell you see on the outside is the skeleton, worn like armor, which is exactly backwards from every vertebrate covered so far in this arc.",
+"whyItMatters": [
+"Insects and arthropods are structurally the most different creatures in this entire arc: an exoskeleton, six legs, and a three-part body plan share almost nothing with the internal-skeleton vertebrates covered up to this point.",
+"Beginners often draw insects as soft, blobby shapes with legs stuck on, when the actual defining feature — hard, jointed plates covering a three-part body — is what makes an insect read as an insect rather than a cartoon bug."
+],
+"coreIdea": [
+"An insect's body is built from an <b>exoskeleton</b>: hard, jointed plates on the outside, with no internal bones — the opposite structural approach from every animal covered earlier in this arc.",
+"Every true insect body divides into <b>three parts</b>: the head, the thorax (which carries all six legs and any wings), and the abdomen — this three-part division is the single fastest way to identify true insects versus other arthropods.",
+"<b>Six legs attach to the thorax, not the abdomen</b>, and each leg is itself a chain of hard, jointed segments — the same jointed-plate logic as the rest of the exoskeleton, just narrower.",
+"<b>Not all arthropods are insects</b>: spiders have eight legs and only two body sections (no separate head), which is a structurally different plan worth recognizing rather than treating every many-legged creature as \"basically an insect.\""
+],
+"mistakes": [
+"Drawing an insect's body as one soft, undivided blob instead of the three distinct sections (head, thorax, abdomen) that actually define insect anatomy.",
+"Attaching legs to the abdomen instead of the thorax, or scattering them without regard for where they actually connect to the body.",
+"Rendering the exoskeleton as smooth, soft skin instead of hard, jointed plates, losing the armored quality that separates insects from soft-bodied creatures.",
+"Treating every arthropod (including spiders, with eight legs and two body sections) as if it followed the same six-legged, three-part insect body plan."
+],
+"proTips": [
+"Block the three body sections (head, thorax, abdomen) as separate hard shapes before adding any legs, wings, or surface detail.",
+"Attach all six legs to the thorax specifically, and draw each leg as a chain of jointed segments rather than a single smooth line.",
+"Render the exoskeleton's surface with hard edges and visible segment lines, rather than the soft shading used for skin or fur.",
+"Before drawing any arthropod, count legs and body sections to confirm whether it's a true insect (six legs, three sections) or a different arthropod like a spider (eight legs, two sections)."
+],
+"practice": {
+"warmup": "Draw a simplified insect body in three clear sections (head, thorax, abdomen), then attach six legs to the thorax.",
+"daily": "Take one insect species and render its exoskeleton with hard, jointed plate edges instead of smooth shading.",
+"weekly": "Draw one true insect (six legs, three sections) and one non-insect arthropod like a spider (eight legs, two sections) side by side, showing the structural difference clearly.",
+"challenge": "Draw an insect in a dynamic pose (flying, jumping, or climbing), keeping the three-section body plan and jointed leg structure consistent throughout the motion."
+},
+"resources": [
+{
+"type": "Article",
+"title": "How to Draw Animals: Butterflies, Their Anatomy and Wing Patterns",
+"creator": "Monika Zagrobelna — Envato Tuts+",
+"url": "https://design.tutsplus.com/articles/how-to-draw-animals-butterflies-their-anatomy-and-wing-patterns--vector-19553",
+"why": "A free tutorial covering true insect body structure (head, thorax, abdomen) and wing attachment, directly matching this module's core three-part body plan.",
+"verified": true
+},
+{
+"type": "Article",
+"title": "How to Draw a Spider, Step by Step",
+"creator": "Monika Zagrobelna — Envato Tuts+",
+"url": "https://design.tutsplus.com/tutorials/how-to-draw-a-spider--cms-29660",
+"why": "A free tutorial on spider anatomy, useful for contrasting the eight-legged, two-section arachnid body plan against the six-legged, three-section true insect plan.",
+"verified": true
+}
+],
+"quiz": [
+{
+"q": "What is an insect's exoskeleton, structurally speaking?",
+"options": [
+"A soft outer layer of skin covering internal bones",
+"A hard, jointed shell that serves as the skeleton itself, with no internal bones",
+"An optional, decorative outer layer",
+"The same structure as a vertebrate's internal skeleton, just repositioned"
+],
+"correct": 1,
+"explain": "An insect has no internal skeleton at all — the hard, jointed shell on the outside (the exoskeleton) is the skeleton, the opposite structural approach from vertebrates."
+},
+{
+"q": "Where do a true insect's six legs attach?",
+"options": [
+"The abdomen",
+"The thorax",
+"The head",
+"Legs are distributed evenly across all three body sections"
+],
+"correct": 1,
+"explain": "All six legs of a true insect attach to the thorax, the middle of the three body sections (head, thorax, abdomen)."
+},
+{
+"q": "How does a spider's body plan differ from a true insect's?",
+"options": [
+"There is no difference, spiders are simply large insects",
+"Spiders have eight legs and two body sections, while true insects have six legs and three sections",
+"Spiders have six legs like insects, but more body sections",
+"Spiders have three body sections like insects, but ten legs"
+],
+"correct": 1,
+"explain": "Spiders have eight legs and only two body sections (no separate head), a structurally different plan from the six-legged, three-section body of a true insect."
+}
+],
+"checklist": [
+"I construct an insect's body in three clear sections: head, thorax, and abdomen.",
+"I attach all six legs to the thorax, built as chains of jointed segments.",
+"I render the exoskeleton with hard, jointed plate edges rather than soft skin-like shading.",
+"I distinguish true insects (six legs, three sections) from other arthropods like spiders (eight legs, two sections) before drawing them."
+],
+"nextStep": "Comparative anatomy across land, air, water, and now the exoskeleton world of insects is complete. The arc's next batch turns to original creature design — combining everything learned so far into invented, believable creatures."
 }
     ]},
 {id:'worldbuilding', title:'World Building & Concept Art', status:'live', order:7,
