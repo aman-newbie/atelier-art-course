@@ -2966,8 +2966,138 @@ const TRANSLATIONS_HI = {
       "Human figure ke liye seekha gaya same block-and-capsule logic use karke animals pe mannequinization apply kar sakta/sakti hoon."
     ],
     nextStep: "Shared blueprint establish hone ke baad, agla module ise ek specific, high-stakes case pe apply karta hai: big cats aur doosre predators, jahan subtle proportion shifts ek convincing lion ko ek stretched-out house cat se separate karte hain."
+  },
+
+  m70: {
+    hook: "Ek lion bas bada kiya hua house cat nahi hai \u2014 uski proportions, khaaskar shoulders, paws aur skull mein, specifically ambush power aur takedown force ke hisaab se badli hui hain, jo ek chhoti billi ko kabhi chahiye hi nahi.",
+    whyItMatters: [
+      "Beginners kisi bhi feline ko draw karne ke liye ek jaani-pehchani house cat ko bada ya chhota kar dete hain, aur isse chupke se galat proportions lion, tiger jaise big cats pe chali jaati hain, jinki mechanics bilkul alag hoti hai.",
+      "Predator anatomy ab tak ki har cheez ka ek achha test case hai: shared skeleton, gait, mass distribution aur comparative proportion \u2014 sab un animals pe jahan chhoti galtiyan bhi un viewers ko turant dikh jaati hain jo in iconic species ko pehle se jaante hain."
+    ],
+    coreIdea: [
+      "Big cats ke <b>forequarters bhaari aur muscular</b> hote hain, chhoti cats ke comparison mein \u2014 kyunki unke hunting style ki grappling aur takedown power forelimb aur neck ki strength se aati hai.",
+      "<b>Retractable claws aur wide paws</b> structural hain, decorative nahi \u2014 paw pads aur claw sheaths poore foot ki silhouette ko ek non-retracting predator jaise dog se alag bana dete hain.",
+      "Species-specific <b>coat patterns body ki form ko follow karte hain</b>: stripes aur spots muscle masses aur joints ke around compress aur stretch hote hain, surface pe ek flat, unrelated print ki tarah nahi baithte.",
+      "Ek jaisa role nibhaane wali species mein bhi facial structure meaningfully alag hoti hai: lion ki heavy brow aur jaw, cheetah ki halki, zyada aerodynamic skull se alag hai, jo pure power ki jagah speed ke liye bani hai."
+    ],
+    mistakes: [
+      "Lion ya tiger draw karne ke liye ek jaani-pehchani house cat ki proportions ko scale up kar dena, bade predator ke liye forequarter mass aur skull structure ko specifically adjust karne ke bajaye.",
+      "Paws ko simple rounded shapes ki tarah draw karna, retractable claws aur wide, spread pads ka structural role account kiye bina.",
+      "Coat pattern ko finished form ke upar ek flat, evenly spaced print ki tarah lagana, stripes ya spots ko neeche ke muscle aur joints ke saath compress aur stretch hone dene ke bajaye.",
+      "Har big cat species ke liye same facial structure use karna, chahe wo species power (lion) se hunt kare ya pure speed (cheetah) se."
+    ],
+    proTips: [
+      "Chhoti cats se big cats pe jaate waqt forequarter mass ko specifically study karo \u2014 believability pe sabse zyada asar yahi ek proportion change karta hai.",
+      "Fur add karne se pehle paw ka underlying pad-and-claw structure draw karo, taaki silhouette actual mechanism dikhaye, ek generic rounded shape nahi.",
+      "Pehle muscle form sketch karo, phir uske curves follow karte hue coat pattern uske upar lagao, pattern ko ek flat afterthought ki tarah add karne ke bajaye.",
+      "Koi big cat species design karte waqt pehle decide karo ki wo power se hunt karti hai ya speed se, phir skull aur build ko us decision se follow karne do."
+    ],
+    practice: {
+      warmup: "Ek house cat aur ek lion same scale pe side by side draw karo, lion ke forequarter aur neck mass ka farak exaggerate karte hue.",
+      daily: "Ek big cat paw detail mein draw karo, fur add karne se pehle neeche ka pad aur claw structure dikhate hue.",
+      weekly: "Ek full big cat hunting pose mein draw karo (stalking ya mid-leap), species ke hisaab se coat pattern lagao jo body ki form follow kare.",
+      challenge: "Do alag big cat species draw karo jo alag hunting styles ke liye bani hain (jaise lion aur cheetah), same pose mein, aur dikhao ki unki proportions kaise alag hoti hain."
+    },
+    quiz: [
+      {q:"Lion ko ek simple scaled-up house cat ki tarah draw karna kyun galat hai?", options:["Dono mein koi meaningful proportional farak nahi hai","Big cats ke forequarters disproportionately bhaari aur muscular hote hain, jo grappling aur takedown power ke liye bane hain","House cats lions se proportion mein actually bade hote hain","Sabhi felines ke liye scale up karna hi correct technique hai"], correct:1, explain:"Big cats ke forequarters chhoti cats ke comparison mein disproportionately bhaari aur muscular hote hain, kyunki unke hunting style ki grappling aur takedown power forelimb aur neck ki strength se aati hai."},
+      {q:"Stripes ya spots jaise coat patterns ko big cat ki form pe kaise apply karna chahiye?", options:["Finished form ke upar ek flat, evenly spaced print ki tarah","Neeche ke muscle aur joints ko follow karte hue compress aur stretch karke","Randomly, kyunki pattern placement se believability pe farak nahi padta","Sirf legs pe, torso pe kabhi nahi"], correct:1, explain:"Coat patterns ko body ke muscle masses aur joints ke around compress aur stretch hona chahiye, surface pe ek unrelated flat print ki tarah nahi baithna chahiye."},
+      {q:"Lion ki skull cheetah ki skull se kaise alag hoti hai?", options:["Predator skulls mein koi meaningful farak nahi hota","Lion ki heavy brow aur jaw power-based hunting ke liye hain, jabki cheetah ki halki skull speed ke liye","Cheetah ki skull lion se zyada heavy hoti hai","Sabhi big cat species mein skull structure identical hoti hai"], correct:1, explain:"Facial structure hunting role ke saath badalti hai: lion ki heavy brow aur jaw power-based hunting support karti hain, jabki cheetah ki halki, zyada aerodynamic skull pure speed se hunting support karti hai."}
+    ],
+    checklist: [
+      "Big cats draw karte waqt house cat ko scale up karne ke bajaye forequarter mass ko specifically adjust karta/karti hoon.",
+      "Paws ko fur add karne se pehle unke underlying pad-and-claw structure ke saath draw karta/karti hoon.",
+      "Coat patterns ko aise apply karta/karti hoon ki wo body ki form follow karein, upar flat na baithein.",
+      "Power-hunting aur speed-hunting predator species ke beech skull aur build ko differentiate karta/karti hoon."
+    ],
+    nextStep: "Power aur speed ke liye bane predators ke baad, agla module canines pe aata hai \u2014 pack hunters, jinki anatomy aur behavior-driven proportions abhi cover kiye gaye akele big cats se alag hain."
+  },
+
+  m71: {
+    hook: "Ek wolf, ek chihuahua aur ek greyhound ek hi skeleton aur ek hi basic canine proportion system share karte hain \u2014 selective breeding ne usi system ko stretch, compress aur exaggerate karke bilkul alag silhouettes bana diye hain.",
+    whyItMatters: [
+      "Canines ek hi species ke liye ajeeb tareeke se extreme proportion range cover karte hain, isliye beginners ya to har dog ko ek generic dog shape mein draw kar dete hain, ya har breed ko ek alag, unrelated design problem maan lete hain.",
+      "Wolf ko baseline canine proportion aur breeds ko specific traits ke deliberate exaggerations ki tarah samajhne se koi bhi dog ya wolf-relative (jaise fox) ek naya subject nahi, ek variation ban jaata hai."
+    ],
+    coreIdea: [
+      "<b>Wolf baseline canine proportion hai</b>: ek balanced, medium-length muzzle, moderate leg length aur even overall build, jise zyada tar domestic breeds kisi ek specific direction mein exaggerate ya compress karte hain.",
+      "Domestic breeds ko wolf baseline ke <b>deliberate proportion exaggerations</b> ki tarah samajhna best hai \u2014 greyhound speed ke liye leg length stretch karta hai aur torso narrow karta hai, jabki bulldog muzzle compress karta hai aur chest wide karta hai, bilkul alag purpose ke liye.",
+      "Canines mein ear aur tail carriage <b>social aur emotional state</b> ko zyada tar doosre animal families se kahin zyada clearly communicate karte hain, jo drawing mein storytelling ke liye utna hi matter karta hai jitna raw anatomical accuracy.",
+      "Fox aur wolf-relatives ki anatomy domestic dogs se mainly <b>proportion aur head shape</b> mein alag hoti hai \u2014 ek fox ki skull noticeably narrower hoti hai aur uski legs ek similar size ki dog breed ke comparison mein zyada delicate hoti hain."
+    ],
+    mistakes: [
+      "Har dog ko breed chahe jo bhi ho, same generic proportions ke saath draw karna, wo deliberate exaggerations miss karte hue jo har breed ko recognizable banate hain.",
+      "Har dog breed ko ek poori tarah unrelated design problem ki tarah treat karna, shared wolf-baseline skeleton pe ek proportion variation samajhne ke bajaye.",
+      "Ear aur tail carriage ko storytelling tools ki tarah ignore karna, jisse anatomy accurate hone ke bawajood canine ki emotional state samajh nahi aati.",
+      "Fox ko ek similar size ke dog jaisi head aur leg proportions ke saath draw karna, uski narrower skull aur zyada delicate build miss karte hue."
+    ],
+    proTips: [
+      "Wolf ki balanced proportions ko ek mental baseline ki tarah lekar shuru karo, phir decide karo ki koi specific breed wahan se kis direction mein exaggerate karti hai.",
+      "Breed ka defining exaggeration (leg length, muzzle length, chest width) jaldi pehchano aur use drawing ke baaki har proportion decision ko inform karne do.",
+      "Ear aur tail position ko deliberately mood communicate karne ke liye use karo, bilkul waise jaise Module 29 ke expression work mein facial expression use hota hai.",
+      "Foxes ya doosre wolf-relatives draw karte waqt skull ko narrow karo aur leg build ko ek same-size domestic dog ke relative halka rakho."
+    ],
+    practice: {
+      warmup: "Ek wolf neutral standing pose mein draw karo, phir same pose dobara draw karo leg length exaggerate karke aur torso narrow karke, greyhound-type breed suggest karne ke liye.",
+      daily: "Same wolf baseline pose ko ek alag breed direction ki taraf exaggerate karke draw karo (chhoti legs, wide chest ya compressed muzzle).",
+      weekly: "Teen canines side by side draw karo \u2014 ek wolf, ek stretched breed aur ek compressed breed \u2014 har variation ke neeche shared skeleton visible rakhte hue.",
+      challenge: "Ek canine draw karo jo ek clear emotional state express kare (alert, submissive, aggressive), ear aur tail carriage ko accurate anatomy ke saath primary storytelling tool ki tarah use karte hue."
+    },
+    quiz: [
+      {q:"Wo baseline proportion kya hai jise zyada tar domestic dog breeds ek ya doosri direction mein exaggerate karti hain?", options:["Ek generic dog shape jiska koi real anatomical baseline nahi","Wolf ki balanced, medium-length proportions","Har breed ka ek poori tarah alag, unrelated baseline hota hai","Chihuahua, kyunki wo sabse extreme breed hai"], correct:1, explain:"Wolf baseline canine proportion represent karta hai \u2014 ek balanced build jise zyada tar domestic breeds kisi specific direction mein exaggerate ya compress karti hain."},
+      {q:"Wolf baseline ke relative greyhound ki proportion kya exaggerate karti hai?", options:["Muzzle width aur chest width, power ke liye","Leg length aur torso narrowness, speed ke liye","Sirf ear size","Kuch nahi, greyhound exactly wolf baseline se match karta hai"], correct:1, explain:"Greyhound speed ke liye specifically leg length stretch karta hai aur torso narrow karta hai, wolf baseline ko usi direction mein exaggerate karte hue."},
+      {q:"Canine drawings mein pure anatomy ke alawa ear aur tail carriage kyun matter karte hain?", options:["Matter nahi karte, sirf skeletal accuracy matter karti hai","Ye social aur emotional state ko clearly communicate karte hain, drawing ki storytelling support karte hue","Ear aur tail position mood chahe jo ho, hamesha fixed rehti hai","Sirf wolves ear aur tail se expression dikhate hain, domestic dogs nahi"], correct:1, explain:"Ear aur tail carriage canines mein social aur emotional state ko clearly communicate karte hain, isliye ye anatomical accuracy ke saath ek important storytelling tool hain."}
+    ],
+    checklist: [
+      "Koi specific breed draw karne se pehle wolf ki balanced proportions ko mental baseline ki tarah use karta/karti hoon.",
+      "Ek generic dog shape pe default karne ke bajaye breed ke defining proportion trait ko pehchan ke exaggerate karta/karti hoon.",
+      "Ear aur tail carriage ko deliberately canine ki emotional state communicate karne ke liye use karta/karti hoon.",
+      "Foxes draw karte waqt ek similar size ke dogs ke relative skull narrow aur build halki rakhta/rakhti hoon."
+    ],
+    nextStep: "Pack predators ke baad, agla module hooved animals aur herbivores pe aata hai \u2014 jo endurance aur defense ke liye bane hain, abhi cover kiye gaye takedown power aur pack coordination ke liye nahi."
+  },
+
+  m72: {
+    hook: "Ek horse apni har leg pe, anatomically, ek single, heavily armored fingernail pe daudta hai \u2014 hoof \u2014 aur ye ek structural fact hi hooved animal ki poori leg ke build aur movement ke baare mein lagbhag sab kuch explain kar deta hai.",
+    whyItMatters: [
+      "Hooved herbivores ko aksar aisi legs ke saath draw kiya jaata hai jo anatomically ek human ke arm ya leg ke zyada kareeb hoti hain, us actual unguligrade structure se, jispe ek horse, deer ya cow depend karta hai.",
+      "Herbivore anatomy defensive aur grazing-specific features bhi introduce karti hai, jaise horns, antlers aur wide-set eyes, jinki pichle do modules ki predator anatomy ko zaroorat nahi padti."
+    ],
+    coreIdea: [
+      "Ek unguligrade limb mein, jo visually animal ka knee ya ankle lagta hai, wo asal mein ek insaan ke ek single toe ke nail pe permanently khade hone jaisa hai, aur foot ki baaki bones uske upar vertically stacked hoti hain.",
+      "Grazing herbivores ki aankhein typically <b>wide-set aur laterally positioned</b> hoti hain, predators pe nazar rakhne ke liye broad field of view ke saath, Modules 70\u201371 ke hunting predators ki forward-facing aankhon ke unlike.",
+      "<b>Horns aur antlers structurally alag hote hain</b>: horns permanent, unbranched hote hain aur animal ki puri zindagi mein continuously badhte hain, jabki antlers temporary, aksar branched hote hain aur zyada tar deer species mein har saal shed hoke dobara ugte hain.",
+      "Lambi gardan aur lambi legs wale grazers (jaise giraffes) herbivores ke andar proportional exaggeration ko uski sabse extreme limit tak push karte hain, par wo bhi horse ya cow wali same unguligrade leg logic pe depend karte hain."
+    ],
+    mistakes: [
+      "Hooved animal ki leg ko human-arm ya human-leg proportions aur joint placement ke saath draw karna, actual unguligrade, single-toe structure ke bajaye.",
+      "Grazing herbivore ki aankhon ko forward-facing predator position mein rakhna, wide-set, lateral position ke bajaye jo use broad field of view deti hai.",
+      "Horns aur antlers ko interchangeable decorative features ki tarah treat karna, structurally alag growths ki jagah (permanent aur unbranched versus shed-and-regrown, aksar branched).",
+      "Giraffe jaise extreme lambi-gardan wale grazers ko ek generic body plan se draw karna, ye ignore karte hue ki unki proportions same underlying unguligrade leg logic ko kitna stretch karti hain."
+    ],
+    proTips: [
+      "Hooved leg draw karne se pehle, mentally use ek single raised toe pe uske nail pe khade hone tak trace karo, phir leg ki baaki proportions us fact se build karo.",
+      "Grazing herbivore ki aankhon ko skull pe wide aur side mein rakho, predator drawings ki forward-facing aankhon se clearly alag.",
+      "Horns ya antlers draw karne se pehle decide karo ki animal ke paas kya hai, kyunki unka growth pattern aur shape logic sirf visually nahi, structurally alag hai.",
+      "Giraffe ki gardan aur legs jaisi extreme proportions ke liye, timidly nahi, confidently exaggerate karo, kyunki underlying leg logic us scale pe bhi hold karti hai."
+    ],
+    practice: {
+      warmup: "Ek simple horse leg draw karo, label karte hue ki kaunsi bones human ankle, foot aur toe se correspond karti hain, single hoof pe khatam hote hue.",
+      daily: "Ek grazing herbivore ka head profile aur three-quarter view mein draw karo, aankhon ko unki correct wide-set, lateral position mein rakhte hue.",
+      weekly: "Do herbivores side by side draw karo, ek horns ke saath aur ek antlers ke saath, dono growths ke beech structural farak dikhate hue.",
+      challenge: "Ek full hooved herbivore (horse, deer ya giraffe) running ya alert pose mein draw karo, correct unguligrade leg logic, eye placement aur horn ya antler structure ko saath mein apply karte hue."
+    },
+    quiz: [
+      {q:"Ek unguligrade limb, jaise horse ki leg, actually kis pe khadi hoti hai?", options:["Poore flat foot pe, ek human ki tarah","Ek single raised toe ke nail pe \u2014 hoof","Animal ke knee joint pe seedha","Kai flattened toes pe, wide spread"], correct:1, explain:"Ek unguligrade limb ek single raised toe ke nail (hoof) pe khadi hoti hai, aur foot ki baaki bones uske upar vertically stacked hoti hain \u2014 ek human ke flat foot ki tarah nahi."},
+      {q:"Grazing herbivore ki aankhein typically forward-facing ke bajaye wide-set aur lateral kyun hoti hain?", options:["Iska koi functional fayda nahi, ye sirf decorative hai","Ye grazing karte waqt predators ko dekhne ke liye broad field of view deti hain","Herbivores mein forward-facing aankhein actually zyada common hain","Predators aur herbivores mein eye placement alag nahi hoti"], correct:1, explain:"Wide-set, laterally positioned aankhein grazing herbivores ko predators detect karne ke liye broad field of view deti hain, hunting predators ki forward-facing aankhon ke unlike."},
+      {q:"Horns aur antlers ke beech ek key structural farak kya hai?", options:["Koi structural farak nahi, sirf naam ka farak hai","Horns permanent aur unbranched hote hain; antlers har saal shed hoke dobara ugte hain, aksar branched","Antlers permanent hote hain aur horns har saal shed hote hain","Sirf male animals horns ya antlers ugate hain"], correct:1, explain:"Horns permanent, unbranched growths hain jo animal ki zindagi bhar rehte hain, jabki antlers typically branched hote hain aur zyada tar deer species mein har saal shed hoke dobara ugte hain."}
+    ],
+    checklist: [
+      "Hooved animal ki leg ko single-toe, unguligrade structure se build karta/karti hoon, human-jaisi proportions se nahi.",
+      "Grazing herbivore ki aankhon ko wide-set aur side mein rakhta/rakhti hoon, forward-facing nahi.",
+      "Horns aur antlers ko structurally alag maanta/maanti hoon, interchangeable decoration ki tarah nahi.",
+      "Giraffe ki gardan aur legs jaisi extreme proportions pe bhi correct leg logic confidently apply karta/karti hoon."
+    ],
+    nextStep: "Predators aur herbivores ke across comparative anatomy establish hone ke baad, arc ab birds ki taraf move karta hai \u2014 flight, wings aur ek bilkul naye set of structural constraints introduce karte hue."
   }
 
 };
-
-const keys = Object.keys(TRANSLATIONS_HI);
