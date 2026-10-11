@@ -238,6 +238,9 @@ const CURRICULUM_1 = [
         resources:[
           {type:'Article', title:'Blind Contour Drawing Can Help You Become a Better Artist', creator:'Artsy \u2014 on Nicola\u00efdes & Edwards\' contour method', url:'https://www.artsy.net/article/artsy-editorial-blind-contour-drawing-help-better-artist', why:"A free article covering the same blind-contour observation exercise Edwards popularized in her bestseller, with enough detail to actually run it without buying the book.", verified:true},
           {type:'Video', title:'Visual Measuring', creator:'Ctrl+Paint (Matt Kohr)', url:'https://www.ctrlpaint.com/videos/visual-measuring', why:"The specific visual-measuring video (not just the library homepage), directly teaching the comparative-measurement technique this module is about.", verified:true},
+        ],
+        quiz:[
+          {q:"What is \"symbolic seeing\"?", options:["Drawing symbols instead of real objects on purpose","Your brain's habit of substituting a fast, generic shorthand for what you're actually looking at","A style of abstract art","A way of signing your artwork"], correct:1, explain:"It's efficient for recognition and bad for drawing, since it replaces the specific shape with a generic stand-in."},
           {q:"Blind contour drawing is meant to produce a polished, accurate final image.", options:["True","False"], correct:1, explain:"It's a training drill for your eye-hand connection \u2014 messy results are expected and fine."},
           {q:"What does sighting with a pencil at arm's length help you do?", options:["Sharpen the pencil evenly","Compare relative proportions between parts of your subject","Test if the paper is too shiny","Mix graphite tones"], correct:1, explain:"It's how you check proportions by measurement instead of guessing."}
         ],
