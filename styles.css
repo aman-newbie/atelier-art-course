@@ -979,3 +979,6 @@ svg{display:block;}
 .note-fig .ico-play{display:none;}
 .note-fig.is-paused .ico-play{display:inline;}
 .note-fig.is-paused .ico-pause{display:none;}
+.note-nav{margin-top:var(--sp-4); padding:var(--sp-3); border:1px dashed var(--border); border-radius:var(--radius-md);}
+.note-nav p{margin:0 0 var(--sp-2);}
+.note-nav-btns{display:flex; flex-wrap:wrap; gap:var(--sp-2);}
