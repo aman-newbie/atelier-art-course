@@ -971,3 +971,11 @@ svg{display:block;}
 .notes-actions{display:flex; flex-wrap:wrap; gap:var(--sp-2); margin-top:var(--sp-4);}
 .res-actions{display:flex; flex-wrap:wrap; align-items:center; gap:var(--sp-3); margin-top:var(--sp-3);}
 .res-lesson-link{font-size:calc(13px * var(--font-scale)); color:var(--accent,#2f6aa8);}
+
+.note-fig{position:relative;}
+.note-fig svg[data-dur]{cursor:pointer;}
+.note-fig-toggle{position:absolute; top:6px; right:6px; z-index:2; width:40px; height:40px; border-radius:50%; border:1px solid rgba(0,0,0,.18); background:rgba(255,255,255,.92); color:#1d1b18; display:flex; align-items:center; justify-content:center; cursor:pointer; padding:0;}
+.note-fig-toggle:hover{border-color:var(--accent,#2f6aa8);}
+.note-fig .ico-play{display:none;}
+.note-fig.is-paused .ico-play{display:inline;}
+.note-fig.is-paused .ico-pause{display:none;}
