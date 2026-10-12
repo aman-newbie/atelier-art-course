@@ -63,11 +63,11 @@ let premadeSaveTimer = null;
 
 const NOTES_UI = {
   en:{premade:'Premade notes', mine:'My notes', follow:'Following site language: ', only:'Notes only: ', names:{en:'English', hi:'Hinglish'},
-      toOther:{en:'Show these notes in English', hi:'Translate these notes to Hinglish'}, back:'Back to site language', pause:'Pause motion', play:'Play motion',
+      toOther:{en:'Show these notes in English', hi:'Translate these notes to Hinglish'}, back:'Back to site language', pause:'Pause motion', play:'Play motion', figPause:'Pause this diagram', figPlay:'Play this diagram', figHint:'Tap a diagram to pause or play it.',
       edit:'Edit these notes', done:'Done editing', reset:'Reset to original', edited:'Edited by you \u00b7 saved on this device', saved:'Saved on this device',
       hint:'One point per line. Use **bold** for emphasis. Your edits stay on this device only.', confirm:'Reset these notes to the original? Your edits for this language will be removed.'},
   hi:{premade:'Premade notes', mine:'My notes', follow:'Site ki language follow ho rahi hai: ', only:'Sirf notes: ', names:{en:'English', hi:'Hinglish'},
-      toOther:{en:'Notes English mein dekho', hi:'Notes ko Hinglish mein badlo'}, back:'Site ki language pe wapas', pause:'Motion roko', play:'Motion chalao',
+      toOther:{en:'Notes English mein dekho', hi:'Notes ko Hinglish mein badlo'}, back:'Site ki language pe wapas', pause:'Motion roko', play:'Motion chalao', figPause:'Is diagram ko roko', figPlay:'Is diagram ko chalao', figHint:'Kisi bhi diagram pe tap karke use roko ya chalao.',
       edit:'Notes edit karo', done:'Edit ho gaya', reset:'Original pe wapas', edited:'Aapne edit kiya \u00b7 is device pe saved', saved:'Is device pe saved',
       hint:'Har point alag line mein. Zor dene ke liye **bold** use karo. Edits sirf is device pe rehte hain.', confirm:'In notes ko original pe wapas laayein? Is language ke aapke edits hat jaayenge.'}
 };
@@ -114,7 +114,7 @@ function renderPremadeNotesView(m){
       const tag = sec.ordered ? 'ol' : 'ul';
       body = `<${tag} class="note-list">${items.map(i=>`<li>${notesMd(i)}</li>`).join('')}</${tag}>`;
     }
-    const figs = NOTES_EDITING ? '' : (t.figs || []).map(f=>`<figure class="note-fig">${f.svg}<figcaption>${escapeHtml(f.cap)}</figcaption></figure>`).join('');
+    const figs = NOTES_EDITING ? '' : (t.figs || []).map(f=>`<figure class="note-fig${paused ? ' is-paused' : ''}"><button type="button" class="note-fig-toggle" data-fig-toggle aria-label="${paused ? ui.figPlay : ui.figPause}"><svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true"><path class="ico-pause" d="M4 3h3v10H4zM9 3h3v10H9z"/><path class="ico-play" d="M5 3l8 5-8 5z"/></svg></button>${f.svg}<figcaption>${escapeHtml(f.cap)}</figcaption></figure>`).join('');
     return `<section class="note-sec"><h3>${escapeHtml(t.h)}</h3>${body}${figs}</section>`;
   }).join('');
   const acts = `<button class="notes-btn notes-primary" data-notes-edit>${NOTES_EDITING ? ui.done : ui.edit}</button>`
@@ -123,6 +123,7 @@ function renderPremadeNotesView(m){
   return `${notesSubTabsHtml()}
     <div class="notes-bar"><span class="notes-chip">${escapeHtml(chip)}</span><button class="notes-btn" data-notes-motion>${paused ? ui.play : ui.pause}</button></div>
     <button class="notes-btn notes-switch" data-notes-lang>${escapeHtml(switchLabel)}</button>
+    ${NOTES_EDITING ? '' : `<p class="notes-hint">${ui.figHint}</p>`}
     <div class="notes-source">${escapeHtml(data.source[lang])}</div>
     ${edited ? `<div class="notes-chip notes-chip-edited">${ui.edited}</div>` : ''}
     ${NOTES_EDITING ? `<p class="notes-hint">${notesMd(ui.hint)}</p>` : ''}
@@ -142,6 +143,13 @@ function rerenderNotesTab(){
   if(m && panel) panel.innerHTML = renderTabContent(m, 'notes', new Set());
 }
 function handlePremadeNotesClick(e){
+  /* tap a diagram (or its pause button) to pause/play just that one */
+  const figHit = e.target.closest('[data-fig-toggle], svg[data-dur]');
+  if(figHit){
+    const figEl = figHit.closest('.note-fig'); const sv = figEl && figEl.querySelector('svg[data-dur]');
+    if(sv){ try{ if(sv.animationsPaused()) sv.unpauseAnimations(); else sv.pauseAnimations(); syncFigState(sv); }catch(err){} }
+    return true;
+  }
   const t = e.target.closest('[data-notes-open],[data-notes-sub],[data-notes-lang],[data-notes-motion],[data-notes-edit],[data-notes-reset]');
   if(!t) return false;
   const mid = STATE.route.moduleId;
@@ -191,9 +199,16 @@ function handlePremadeEditInput(el){
 }
 /* Diagram animations loop until the reader pauses them. A newly drawn diagram that
    starts paused is parked on a nearly-finished frame so it isn't blank. */
+function syncFigState(svg){
+  const fig = svg.closest('.note-fig'); if(!fig) return;
+  const p = svg.animationsPaused();
+  fig.classList.toggle('is-paused', p);
+  const btn = fig.querySelector('[data-fig-toggle]');
+  if(btn){ const u = NOTES_UI[getNotesLang()]; btn.setAttribute('aria-label', p ? u.figPlay : u.figPause); }
+}
 function applyNotesMotion(initial){
   const paused = isNotesMotionPaused();
-  document.querySelectorAll('.note-fig svg').forEach(svg=>{
+  document.querySelectorAll('.note-fig svg[data-dur]').forEach(svg=>{
     try{
       if(initial){ if(svg.dataset.motionSet) return; svg.dataset.motionSet = '1'; }
       if(paused){
@@ -202,6 +217,7 @@ function applyNotesMotion(initial){
       } else {
         svg.unpauseAnimations();
       }
+      syncFigState(svg);
     }catch(err){ /* animations are decoration; never break the page over them */ }
   });
 }
@@ -214,7 +230,7 @@ function initPremadeNotes(){
   let raf = 0;
   const mo = new MutationObserver(()=>{
     if(raf) return;
-    raf = requestAnimationFrame(()=>{ raf = 0; if(document.querySelector('.note-fig svg')){ applyNotesMotion(true); updateMotionButtons(); } });
+    raf = requestAnimationFrame(()=>{ raf = 0; if(document.querySelector('.note-fig svg[data-dur]')){ applyNotesMotion(true); updateMotionButtons(); } });
   });
   mo.observe(document.body, {childList:true, subtree:true});
 }
