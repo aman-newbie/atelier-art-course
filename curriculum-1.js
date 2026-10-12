@@ -185,7 +185,7 @@ const CURRICULUM_1 = [
           challenge:"Draw fifty confident straight lines of varying length and angle on one page in under ten minutes, with no ghosting pause longer than two seconds each. Speed forces genuine commitment to the stroke."
         },
         resources:[
-          {type:'Course', title:'Lines: Homework — superimposed lines, ghosted lines and planes', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/1/4', why:"Where the ghosting method is introduced (in the Ghosted Lines exercise), with the exact exercises this module's checklist asks for: superimposed lines, ghosted lines and ghosted planes.", verified:true},
+          {type:'Course', title:'Lines: Homework — superimposed lines, ghosted lines and planes', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/1/4', why:"Where the ghosting method is introduced (in the Ghosted Lines exercise), with the exact exercises this module's checklist asks for: superimposed lines, ghosted lines and ghosted planes.", verified:true, hasNotes:true},
           {type:'Course', title:'Ellipses: tables of ellipses and ellipses in planes', creator:'Drawabox (Uncomfortable)', url:'https://drawabox.com/lesson/1/5/homework', why:"The ellipse half of this module: what an ellipse is in 3D space, degree, and the exercises where you draw through each ellipse two or three times.", verified:true},
           {type:'Video', title:'7 Basic Lines of Drawing', creator:'Alphonso Dunn', url:'https://www.youtube.com/watch?v=8k1zbULdBRs', why:"A short, focused video demonstration of foundational line control, good as a visual companion to Drawabox's written lesson.", verified:true}
         ],
