@@ -115,7 +115,8 @@ function renderPremadeNotesView(m){
       body = `<${tag} class="note-list">${items.map(i=>`<li>${notesMd(i)}</li>`).join('')}</${tag}>`;
     }
     const figs = NOTES_EDITING ? '' : (t.figs || []).map(f=>`<figure class="note-fig${paused ? ' is-paused' : ''}"><button type="button" class="note-fig-toggle" data-fig-toggle aria-label="${paused ? ui.figPlay : ui.figPause}"><svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true"><path class="ico-pause" d="M4 3h3v10H4zM9 3h3v10H9z"/><path class="ico-play" d="M5 3l8 5-8 5z"/></svg></button>${f.svg}<figcaption>${escapeHtml(f.cap)}</figcaption></figure>`).join('');
-    return `<section class="note-sec"><h3>${escapeHtml(t.h)}</h3>${body}${figs}</section>`;
+    const nav = (!NOTES_EDITING && sec.nav && t.nav) ? `<div class="note-nav"><p>${escapeHtml(t.nav.text)}</p><div class="note-nav-btns"><button class="notes-btn notes-primary" data-notes-go="${sec.nav.next}">${escapeHtml(t.nav.next)}</button><button class="notes-btn" data-notes-go="${sec.nav.skip}">${escapeHtml(t.nav.skip)}</button></div></div>` : '';
+    return `<section class="note-sec"><h3>${escapeHtml(t.h)}</h3>${body}${figs}${nav}</section>`;
   }).join('');
   const acts = `<button class="notes-btn notes-primary" data-notes-edit>${NOTES_EDITING ? ui.done : ui.edit}</button>`
     + (edited ? `<button class="notes-btn" data-notes-reset>${ui.reset}</button>` : '')
@@ -150,13 +151,19 @@ function handlePremadeNotesClick(e){
     if(sv){ try{ if(sv.animationsPaused()) sv.unpauseAnimations(); else sv.pauseAnimations(); syncFigState(sv); }catch(err){} }
     return true;
   }
-  const t = e.target.closest('[data-notes-open],[data-notes-sub],[data-notes-lang],[data-notes-motion],[data-notes-edit],[data-notes-reset]');
+  const t = e.target.closest('[data-notes-open],[data-notes-sub],[data-notes-lang],[data-notes-motion],[data-notes-edit],[data-notes-reset],[data-notes-go]');
   if(!t) return false;
   const mid = STATE.route.moduleId;
   if(t.dataset.notesOpen){
     const id = t.dataset.notesOpen; const p = findPathOfModule(id);
     NOTES_SUB = 'premade'; NOTES_EDITING = false;
     navigateModule(p ? p.id : null, id, 'notes');
+    return true;
+  }
+  if(t.dataset.notesGo){
+    const gid = t.dataset.notesGo; const gp = findPathOfModule(gid); const gm = findModule(gid);
+    NOTES_SUB = 'premade'; NOTES_EDITING = false;
+    navigateModule(gp ? gp.id : null, gid, (gm && hasPremadeNotes(gm)) ? 'notes' : 'overview');
     return true;
   }
   if(t.dataset.notesSub){ NOTES_SUB = t.dataset.notesSub; NOTES_EDITING = false; rerenderNotesTab(); return true; }
