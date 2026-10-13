@@ -1058,8 +1058,8 @@ const CURRICULUM_4 = [
     moduleCount:10, sample:['Non-Destructive Workflow','Blend Modes','Photobashing','3D-Assisted Art','AI-Assisted Workflow','Speed Painting'],
     modules:[
 {
-"id": "m101",
-"plate": 101,
+"id": "m111",
+"plate": 111,
 "title": "Non-Destructive Workflow",
 "difficulty": "Advanced",
 "studyTime": "18 min",
@@ -1112,20 +1112,20 @@ const CURRICULUM_4 = [
   "I can use a mask instead of the eraser to hide part of a layer or effect reversibly.",
   "I can keep a native layered working file separate from a flattened export for sharing."
 ],
-"nextStep": "You now treat your file structure itself as a deliberate, reversible system. Module 102 goes deeper into blend modes and adjustment layers specifically, building on this non-destructive foundation with more advanced compositing and color-grading techniques."
+"nextStep": "You now treat your file structure itself as a deliberate, reversible system. Module 112 goes deeper into blend modes and adjustment layers specifically, building on this non-destructive foundation with more advanced compositing and color-grading techniques."
 }
 ,
 {
-"id": "m102",
-"plate": 102,
+"id": "m112",
+"plate": 112,
 "title": "Blend Modes & Adjustment Layers",
 "difficulty": "Advanced",
 "studyTime": "18 min",
 "practiceTime": "25\u201330 min/day",
-"prereq": ["m101"],
+"prereq": ["m111"],
 "hook": "Curves can do everything Levels can do, plus one thing Levels can't: bend the tonal range at more than one point at once, which is the real reason professional colorists reach for it over every other tool.",
 "whyItMatters": [
-  "Module 86 introduced blend modes for shadow and highlight layers, and Module 101 introduced adjustment layers as a non-destructive concept. This module goes deep on the single most powerful adjustment layer, Curves, and ties it together with blend modes into a real color-grading toolkit.",
+  "Module 86 introduced blend modes for shadow and highlight layers, and Module 111 introduced adjustment layers as a non-destructive concept. This module goes deep on the single most powerful adjustment layer, Curves, and ties it together with blend modes into a real color-grading toolkit.",
   "Color grading (adjusting the overall tone and mood of a finished piece) is a distinct skill from painting color in the first place \u2014 it's the final pass that unifies a piece's palette and can shift its entire mood without repainting a single object."
 ],
 "coreIdea": [
@@ -1144,7 +1144,7 @@ const CURRICULUM_4 = [
 "proTips": [
   "Start any color grade with an S-curve for overall contrast before adding more stylized adjustments, since contrast is usually the first thing a flat-looking image needs.",
   "Use the white, black, and gray point eyedroppers in Curves as a fast first pass for color-cast correction, then fine-tune manually from that starting point rather than guessing from scratch.",
-  "Mask a Curves adjustment layer to a specific area (using the same mask technique from Module 101) when only part of an image needs a contrast or tone change, rather than applying it globally.",
+  "Mask a Curves adjustment layer to a specific area (using the same mask technique from Module 111) when only part of an image needs a contrast or tone change, rather than applying it globally.",
   "Build a color grade in stages using several simple adjustment layers stacked together, rather than trying to solve contrast, color cast, and mood all in one complex adjustment."
 ],
 "practice": {
@@ -1170,20 +1170,20 @@ const CURRICULUM_4 = [
   "I can use the white/black/gray point eyedroppers to correct a color cast.",
   "I can stack multiple adjustment layers to build a complete color grade."
 ],
-"nextStep": "You now have a real color-grading toolkit built on non-destructive adjustment layers. Module 103 moves to photobashing \u2014 combining real photographic elements into a cohesive concept art or illustration piece, a technique that relies heavily on the color and tone matching skills from this module."
+"nextStep": "You now have a real color-grading toolkit built on non-destructive adjustment layers. Module 113 moves to photobashing \u2014 combining real photographic elements into a cohesive concept art or illustration piece, a technique that relies heavily on the color and tone matching skills from this module."
 }
 ,
 {
-"id": "m103",
-"plate": 103,
+"id": "m113",
+"plate": 113,
 "title": "Photobashing",
 "difficulty": "Advanced",
 "studyTime": "18 min",
 "practiceTime": "30 min/day",
-"prereq": ["m102"],
+"prereq": ["m112"],
 "hook": "A crowded photograph of a real city street can become a desolate warzone concept with a handful of confident edits \u2014 which is exactly why photobashing became standard practice for game and film concept artists working against tight deadlines.",
 "whyItMatters": [
-  "Photobashing pulls together nearly everything from this arc: non-destructive layers and masks (Module 101), blend modes and color grading (Module 102), and the material and lighting knowledge from the entire Digital Painting arc, all applied to blending real photographic elements into a single believable piece.",
+  "Photobashing pulls together nearly everything from this arc: non-destructive layers and masks (Module 111), blend modes and color grading (Module 112), and the material and lighting knowledge from the entire Digital Painting arc, all applied to blending real photographic elements into a single believable piece.",
   "This technique exists specifically to solve a real production problem: concept artists are responsible for visualizing an overwhelming amount of content for a film or game, and photobashing lets a skilled artist reach a highly detailed, realistic result far faster than painting every element from scratch."
 ],
 "coreIdea": [
@@ -1228,20 +1228,20 @@ const CURRICULUM_4 = [
   "I can blend a photographic element into a painted or photographic scene by adjusting its lighting and color to match.",
   "I can use free, legitimate photo sources and software for photobashing."
 ],
-"nextStep": "You can now blend real photographic elements into a cohesive piece. Module 104 extends this further with 3D-assisted art \u2014 using free 3D software to build blockouts, lighting studies, and reference geometry that can be painted over, another major speed and accuracy tool for concept work."
+"nextStep": "You can now blend real photographic elements into a cohesive piece. Module 114 extends this further with 3D-assisted art \u2014 using free 3D software to build blockouts, lighting studies, and reference geometry that can be painted over, another major speed and accuracy tool for concept work."
 }
 ,
 {
-"id": "m104",
-"plate": 104,
+"id": "m114",
+"plate": 114,
 "title": "3D-Assisted Art",
 "difficulty": "Advanced",
 "studyTime": "18 min",
 "practiceTime": "30 min/day",
-"prereq": ["m103"],
+"prereq": ["m113"],
 "hook": "A concept artist doesn't need to be a 3D modeler to use 3D \u2014 a handful of rough, ugly cubes arranged in free software can solve a perspective and lighting problem that would take hours to get right freehand.",
 "whyItMatters": [
-  "Like photobashing (Module 103), 3D-assisted art is a speed and accuracy tool that sits on top of your existing fundamentals, not a replacement for them \u2014 it's a widely used, well-established professional technique, not a shortcut unique to beginners.",
+  "Like photobashing (Module 113), 3D-assisted art is a speed and accuracy tool that sits on top of your existing fundamentals, not a replacement for them \u2014 it's a widely used, well-established professional technique, not a shortcut unique to beginners.",
   "3D blocking is especially valuable for exactly the kind of environments and hard-surface subjects this curriculum has focused on: anything with straight lines, consistent perspective, or complex lighting benefits the most, since 3D software calculates perspective and light physically instead of you estimating it by eye."
 ],
 "coreIdea": [
@@ -1286,20 +1286,20 @@ const CURRICULUM_4 = [
   "I can move flexibly between 2D and 3D stages rather than following a strict one-way pipeline.",
   "I can paint over a 3D render with deliberate texture and imperfection rather than leaving it looking sterile."
 ],
-"nextStep": "You now have a genuine 3D-to-2D workflow in your toolkit. Module 105 turns to a newer, actively-debated tool \u2014 AI-assisted workflows \u2014 covering what responsible, disclosed use actually looks like for a working artist."
+"nextStep": "You now have a genuine 3D-to-2D workflow in your toolkit. Module 115 turns to a newer, actively-debated tool \u2014 AI-assisted workflows \u2014 covering what responsible, disclosed use actually looks like for a working artist."
 }
 ,
 {
-"id": "m105",
-"plate": 105,
+"id": "m115",
+"plate": 115,
 "title": "Responsible AI-Assisted Workflow",
 "difficulty": "Advanced",
 "studyTime": "20 min",
 "practiceTime": "20\u201325 min (research + reflection)",
-"prereq": ["m104"],
+"prereq": ["m114"],
 "hook": "This is the one module in the entire curriculum where the honest answer to \"what's the right way to do this\" is genuinely contested \u2014 by working artists, by courts, and by AI companies themselves \u2014 and pretending otherwise would do you a disservice.",
 "whyItMatters": [
-  "AI image tools are now a real part of many working artists' pipelines, used for reference gathering, rapid ideation, and mood-boarding, alongside the photobashing (Module 103) and 3D-assisted (Module 104) speed tools you've already learned. Understanding how professional and industry organizations think about using them responsibly is now a practical, professional skill, not an optional add-on.",
+  "AI image tools are now a real part of many working artists' pipelines, used for reference gathering, rapid ideation, and mood-boarding, alongside the photobashing (Module 113) and 3D-assisted (Module 114) speed tools you've already learned. Understanding how professional and industry organizations think about using them responsibly is now a practical, professional skill, not an optional add-on.",
   "This is also a genuinely unresolved area: artists, legal scholars, and AI companies disagree on core questions like training-data consent and what counts as meaningful human authorship. This module gives you the actual landscape and a practical decision framework, rather than a single verdict, so you can navigate it with your own judgment intact."
 ],
 "coreIdea": [
@@ -1344,17 +1344,17 @@ const CURRICULUM_4 = [
   "I can identify disclosure to clients/audiences as a baseline professional practice rather than an optional extra.",
   "I can name the two practices (living-artist style mimicry, misrepresenting AI work as hand-made) most consistently flagged as serious concerns."
 ],
-"nextStep": "You now have a grounded, practical framework for a genuinely contested area, rather than a single unexamined opinion. Module 106 turns to speed painting \u2014 a purely technical skill for producing strong work quickly under real time constraints, building on the full toolkit from this arc."
+"nextStep": "You now have a grounded, practical framework for a genuinely contested area, rather than a single unexamined opinion. Module 116 turns to speed painting \u2014 a purely technical skill for producing strong work quickly under real time constraints, building on the full toolkit from this arc."
 }
 ,
 {
-"id": "m106",
-"plate": 106,
+"id": "m116",
+"plate": 116,
 "title": "Speed Painting",
 "difficulty": "Advanced",
 "studyTime": "16 min",
 "practiceTime": "25\u201345 min/day",
-"prereq": ["m105"],
+"prereq": ["m115"],
 "hook": "A striking speed painting often looks messy up close and only fully makes sense from across the room \u2014 which is exactly the point, since the time limit forces you to solve the big problems and abandon the small ones.",
 "whyItMatters": [
   "Speed painting is a deliberate practice constraint, not a shortcut around everything you've learned \u2014 it forces you to apply composition (Module 75), value (Module 92), and color (Module 91) decisions instantly, without the safety net of unlimited time to second-guess them.",
@@ -1403,21 +1403,21 @@ const CURRICULUM_4 = [
   "I can concentrate detail in a few key areas rather than trying to render everything evenly.",
   "I can use speed painting as a structured study tool focused on one specific lesson (composition, value, or color) from a reference."
 ],
-"nextStep": "You now have a real toolkit for working fast and decisively under real time constraints. Module 107 turns that same time-limited discipline toward copying master paintings directly \u2014 master studies, one of the oldest and most reliable ways to absorb technique from artists whose work has already stood the test of time."
+"nextStep": "You now have a real toolkit for working fast and decisively under real time constraints. Module 117 turns that same time-limited discipline toward copying master paintings directly \u2014 master studies, one of the oldest and most reliable ways to absorb technique from artists whose work has already stood the test of time."
 }
 ,
 {
-"id": "m107",
-"plate": 107,
+"id": "m117",
+"plate": 117,
 "title": "Master Studies",
 "difficulty": "Advanced",
 "studyTime": "18 min",
 "practiceTime": "1\u20132 hours (project)",
-"prereq": ["m106"],
+"prereq": ["m116"],
 "hook": "One artist copied over 50 master paintings with no specific goal, and the only thing he actually learned was to accidentally paint every face like a pin-up girl regardless of gender \u2014 proof that copying itself teaches nothing without a clear question in mind.",
 "whyItMatters": [
   "Master studies are one of the oldest training methods in art history, going back centuries, and they remain a standard part of professional training today for a simple reason: a finished master painting already contains solved problems in composition, color, and technique that would take much longer to discover through trial and error alone.",
-  "This module also directly connects to the responsible-use principles from Module 105: a master study is a well-established, ethically clear form of learning from another artist's work, but only when it's treated as a labeled study, not represented or sold as original work \u2014 a distinction worth understanding clearly, not just assuming."
+  "This module also directly connects to the responsible-use principles from Module 115: a master study is a well-established, ethically clear form of learning from another artist's work, but only when it's treated as a labeled study, not represented or sold as original work \u2014 a distinction worth understanding clearly, not just assuming."
 ],
 "coreIdea": [
   "A master study works best with one specific, narrow learning goal chosen in advance \u2014 the design matrix and composition of a piece, its color relationships, or the paint application in one small section \u2014 rather than an unfocused, whole-canvas copy with no particular question in mind.",
@@ -1461,21 +1461,21 @@ const CURRICULUM_4 = [
   "I can compare a color's relationship to its neighbors rather than matching it in isolation.",
   "I can clearly label a master study and apply its lesson to an original piece afterward."
 ],
-"nextStep": "You now have a disciplined, focused approach to learning from finished paintings. Module 108 turns to advanced compositing techniques, combining multiple painted and photographic elements into a single cohesive scene at a professional level of polish."
+"nextStep": "You now have a disciplined, focused approach to learning from finished paintings. Module 118 turns to advanced compositing techniques, combining multiple painted and photographic elements into a single cohesive scene at a professional level of polish."
 }
 ,
 {
-"id": "m108",
-"plate": 108,
+"id": "m118",
+"plate": 118,
 "title": "Advanced Compositing Techniques",
 "difficulty": "Advanced",
 "studyTime": "18 min",
 "practiceTime": "30 min/day",
-"prereq": ["m107"],
+"prereq": ["m117"],
 "hook": "The single biggest giveaway of a fake composite has nothing to do with cutting an edge cleanly \u2014 it's mismatched light, and a professional compositor checks that before touching a mask or a blend mode.",
 "whyItMatters": [
-  "Photobashing (Module 103) introduced combining photo elements into a piece; this module goes deeper into the specific professional techniques \u2014 check layers, layer organization, and systematic light-and-color matching \u2014 that separate an amateur collage from a composite viewers accept as one real scene.",
-  "Compositing pulls together nearly every technical skill from this arc: non-destructive layers and masks (Module 101), blend modes and adjustment layers (Module 102), and photobashing (Module 103) all combine here into one cohesive professional workflow."
+  "Photobashing (Module 113) introduced combining photo elements into a piece; this module goes deeper into the specific professional techniques \u2014 check layers, layer organization, and systematic light-and-color matching \u2014 that separate an amateur collage from a composite viewers accept as one real scene.",
+  "Compositing pulls together nearly every technical skill from this arc: non-destructive layers and masks (Module 111), blend modes and adjustment layers (Module 112), and photobashing (Module 113) all combine here into one cohesive professional workflow."
 ],
 "coreIdea": [
   "Mismatched lighting is the most common giveaway of a fake composite: your background photo's own lighting is very difficult to change, so the reliable approach is to treat the background as the fixed reference and adjust every added element's light and color to match it, not the other way around.",
@@ -1519,21 +1519,21 @@ const CURRICULUM_4 = [
   "I can create a Multiply shadow layer colored from the surface it falls on, rather than using plain black.",
   "I can organize and clearly name layers in a growing composite so elements can be isolated and adjusted individually."
 ],
-"nextStep": "You now have a professional-level compositing toolkit. Module 109 shifts from technique to identity \u2014 personal style development, how the choices you've been making across this entire course start to combine into a recognizable artistic voice."
+"nextStep": "You now have a professional-level compositing toolkit. Module 119 shifts from technique to identity \u2014 personal style development, how the choices you've been making across this entire course start to combine into a recognizable artistic voice."
 }
 ,
 {
-"id": "m109",
-"plate": 109,
+"id": "m119",
+"plate": 119,
 "title": "Personal Style Development",
 "difficulty": "Advanced",
 "studyTime": "16 min",
 "practiceTime": "30\u201345 min/day",
-"prereq": ["m108"],
+"prereq": ["m118"],
 "hook": "Nobody wakes up with a style. Style is what is left over after you have made enough deliberate choices that you can finally name them, and that is something you can build on purpose.",
 "whyItMatters": [
   "Across this arc you learned to copy, bash, composite and speed-paint your way through a lot of techniques. At some point a portfolio needs to look like it came from one person, and that consistency is style: the recurring choices in color, shape, line and subject that make your work recognizable.",
-  "This also connects directly to the ethics you studied in Module 105 and the master-study discipline from Module 107: the sustainable way to develop a style is to analyze what you admire, understand why it works, and rebuild those elements around your own subjects, not to imitate one living artist's surface look."
+  "This also connects directly to the ethics you studied in Module 115 and the master-study discipline from Module 117: the sustainable way to develop a style is to analyze what you admire, understand why it works, and rebuild those elements around your own subjects, not to imitate one living artist's surface look."
 ],
 "coreIdea": [
   "Style is built, not discovered by accident. A practical method is to pick three artists or styles you truly love, choose one favorite image for each, and write down the single artistic element in each image that grabs you first, why it grabs you, and how the artist achieved it, in specific terms like line quality, color relationships or light-and-dark structure.",
@@ -1568,7 +1568,7 @@ const CURRICULUM_4 = [
   {"q": "In the three-artist method, what should you do with each chosen reference image?", "options": ["Trace it exactly to learn the artist's hand", "Copy its subject matter into your own work", "Identify the single artistic element that makes it work and analyze what, why and how", "Blur it until only the colors remain"], "correct": 2, "explain": "The method asks you to find the one standout artistic element in each image and analyze what grabs you, why it grabs you, and how it was achieved, so you can rebuild that element yourself."},
   {"q": "What should you combine from your references when building an original piece?", "options": ["The artistic elements you identified, applied to your own subject", "Their subject matter", "Their signatures", "Whole compositions pasted together"], "correct": 0, "explain": "You combine the analyzed artistic elements (line quality, color relationships, light structure) into a subject you draw often, not the subjects themselves, so the result stays yours."},
   {"q": "Why is working in a series of small pieces useful for finding style?", "options": ["Small pieces are always better art", "Each piece can carry forward what worked in the last one, and recurring choices quickly become visible", "It removes the need to practice fundamentals", "It guarantees a unique style by the third piece"], "correct": 1, "explain": "A series of small, quickly finished pieces lets each one inform the next, and the choices that keep repeating show you what is becoming your style."},
-  {"q": "How does this module connect style development to Module 105's ethics guidance?", "options": ["Style development requires using AI tools", "It encourages mimicking one living artist as closely as possible", "Ethics only apply to commercial work", "It builds style by analyzing what you admire and rebuilding the elements around your own subjects, rather than imitating one living artist's look"], "correct": 3, "explain": "Analyzing and recombining elements is the sustainable, ethical route to style, in line with the earlier warning against mimicking a specific living artist's distinctive style for commercial use."},
+  {"q": "How does this module connect style development to Module 115's ethics guidance?", "options": ["Style development requires using AI tools", "It encourages mimicking one living artist as closely as possible", "Ethics only apply to commercial work", "It builds style by analyzing what you admire and rebuilding the elements around your own subjects, rather than imitating one living artist's look"], "correct": 3, "explain": "Analyzing and recombining elements is the sustainable, ethical route to style, in line with the earlier warning against mimicking a specific living artist's distinctive style for commercial use."},
   {"q": "After you have finished a dozen or so pieces, what is the recommended way to see your style?", "options": ["Delete the weakest pieces", "Lay them side by side and list the colors, textures, shapes and themes that keep repeating", "Ask software to label your style", "Start over in a different medium"], "correct": 1, "explain": "Recurring elements across a body of work are what make up a style, so comparing finished pieces and listing what repeats shows you what to push further."}
 ],
 "checklist": [
@@ -1577,27 +1577,27 @@ const CURRICULUM_4 = [
   "I can use a small series of pieces to see which of my choices keep recurring.",
   "I can explain why analyzing and rebuilding elements is a more sustainable way to build style than imitating one living artist."
 ],
-"nextStep": "You now have a method for turning scattered technique into a recognizable voice. Module 110 is the capstone of Advanced Digital Art: one finished piece that combines non-destructive workflow, color grading, photobashing or 3D assistance, compositing and your emerging style."
+"nextStep": "You now have a method for turning scattered technique into a recognizable voice. Module 120 is the capstone of Advanced Digital Art: one finished piece that combines non-destructive workflow, color grading, photobashing or 3D assistance, compositing and your emerging style."
 }
 ,
 {
-"id": "m110",
-"plate": 110,
+"id": "m120",
+"plate": 120,
 "title": "Capstone: A Portfolio-Grade Digital Piece",
 "difficulty": "Advanced",
 "studyTime": "15 min",
 "practiceTime": "4\u20138 hours (project)",
-"prereq": ["m109"],
+"prereq": ["m119"],
 "hook": "You now have a non-destructive file, a color grade, composite and 3D tricks, speed discipline, master-study habits and the beginnings of a style. The capstone asks one question: can you use them together on one piece without losing control of any of them?",
 "whyItMatters": [
   "This closes Advanced Digital Art the same way Modules 82 and 100 closed their arcs: no new theory, just one finished piece that forces every skill to cooperate. Portfolios are built from finished work, and working under real scope and time limits is the skill studios actually hire for.",
-  "It is also the clearest diagnostic you will get. Isolated exercises hide weak spots; a full piece exposes whichever skill from Modules 101\u2013109 is currently holding you back, which tells you exactly what to train next."
+  "It is also the clearest diagnostic you will get. Isolated exercises hide weak spots; a full piece exposes whichever skill from Modules 111\u2013119 is currently holding you back, which tells you exactly what to train next."
 ],
 "coreIdea": [
   "Start with a one-sentence brief and a realistic scope. Choose a piece you can finish with real care in the time you have, then plan backward from that, because an over-ambitious scope is the most common reason capstone pieces stall before lighting and finishing.",
-  "Build the file non-destructively from the first layer (Module 101): Smart Objects for imported elements, adjustment layers for tone and color, masks instead of the eraser, and clearly named layers so any single decision can be revisited late in the process.",
-  "Use the speed tools deliberately and disclose them honestly. Decide whether photobashing (103), a 3D blockout (104) or neither fits the brief, keep your use of any AI assistance in line with the disclosure practices from Module 105, and paint over everything so the lighting and edges are yours.",
-  "Match light and color using check layers (Module 108) before polishing detail, grade the whole piece with stacked adjustment layers (Module 102), and let your own recurring choices from Module 109 steer the final look rather than copying any single reference."
+  "Build the file non-destructively from the first layer (Module 111): Smart Objects for imported elements, adjustment layers for tone and color, masks instead of the eraser, and clearly named layers so any single decision can be revisited late in the process.",
+  "Use the speed tools deliberately and disclose them honestly. Decide whether photobashing (113), a 3D blockout (114) or neither fits the brief, keep your use of any AI assistance in line with the disclosure practices from Module 115, and paint over everything so the lighting and edges are yours.",
+  "Match light and color using check layers (Module 118) before polishing detail, grade the whole piece with stacked adjustment layers (Module 112), and let your own recurring choices from Module 119 steer the final look rather than copying any single reference."
 ],
 "mistakes": [
   "Choosing a scope so large that mood, lighting and finishing get rushed or skipped.",
@@ -1610,13 +1610,13 @@ const CURRICULUM_4 = [
   "Write the brief and your time budget at the top of the working file, and check them before each session to catch scope creep early.",
   "Save a thumbnail spread and one early block-in alongside the finished piece. Showing process is part of what makes a portfolio piece credible.",
   "Run the check-layer routine (black and white, then saturation) at least twice: once at block-in and once before final polish.",
-  "When you finish, score the piece against the checklists from Modules 101\u2013109 and pick one weakest area to train deliberately next."
+  "When you finish, score the piece against the checklists from Modules 111\u2013119 and pick one weakest area to train deliberately next."
 ],
 "practice": {
-  "warmup": "Write a one-sentence brief and a time budget for your capstone, and list which techniques from Modules 101\u2013109 it will use and which it will deliberately not use.",
+  "warmup": "Write a one-sentence brief and a time budget for your capstone, and list which techniques from Modules 111\u2013119 it will use and which it will deliberately not use.",
   "daily": "Work one stage per session: thumbnails and block-in, then composite or 3D base, then light and color matching, then grade and finishing.",
   "weekly": "Complete one finished piece with a non-destructive layered file, keeping your thumbnails, early block-in and layered working file.",
-  "challenge": "Score the finished piece honestly against each checklist from Modules 101\u2013109, name your single weakest skill, and write one specific exercise you will do next to improve it."
+  "challenge": "Score the finished piece honestly against each checklist from Modules 111\u2013119, name your single weakest skill, and write one specific exercise you will do next to improve it."
 },
 "resources": [
   {"type": "Article", "title": "Tips for Creating a Piece for Your Environment Art Portfolio Within Scope and Time", "creator": "Joyce Jiao, The Rookies", "url": "https://discover.therookies.co/2023/08/28/tips-for-creating-a-piece-for-your-environment-art-portfolio-within-scope-and-time/", "why": "A free first-person breakdown of taking one portfolio piece from planning to finish under real scope and time limits.", "summary": "A working artist walks through a full portfolio project: analyzing the concept, gathering reference, blocking out early, building and refining assets, and finishing with realistic atmosphere, ending with practical advice on keeping scope and energy under control inside a tight timeframe.", "verified": true},
@@ -1626,8 +1626,8 @@ const CURRICULUM_4 = [
   {"q": "What should a capstone start from?", "options": ["The most detailed rendering you can attempt", "A one-sentence brief and a realistic scope for your time budget", "A flattened copy of an old piece", "A random preset"], "correct": 1, "explain": "A clear brief and a scope you can actually finish keep every later decision purposeful and prevent the common failure of running out of time before lighting and finishing."},
   {"q": "Why build the file non-destructively from the beginning?", "options": ["It makes the file smaller", "So any decision can be revised late without rebuilding the work", "It is required for exporting", "It removes the need for masks"], "correct": 1, "explain": "Smart Objects, adjustment layers and masks keep every decision editable, which matters because revisions are normal in real production."},
   {"q": "What is the right order for polishing a composited piece?", "options": ["Fine detail first, then match light and color", "Match light and color with check layers first, then polish detail", "Export first, then adjust", "Add texture before any color work"], "correct": 1, "explain": "Light and color mismatches are the biggest giveaway of a fake composite, so they must be solved before detail effort is spent."},
-  {"q": "How should AI assistance or photo and 3D elements be handled in the capstone?", "options": ["Used silently with no adjustment", "Painted over and matched to the scene, with any AI use disclosed in line with Module 105", "Avoided entirely in every case", "Left untouched for speed"], "correct": 1, "explain": "Any imported element should be integrated by painting and matching light, and any AI-assisted use should follow the disclosure practices discussed earlier."},
-  {"q": "What is the best use of the finished capstone afterward?", "options": ["Move on without reflection", "Score it against Modules 101\u2013109's checklists and pick one weakest skill to train", "Compare it only to other people's finished pieces", "Delete the layered file"], "correct": 1, "explain": "Checking the finished piece against each checklist turns it into a diagnostic that tells you exactly what to practice next."}
+  {"q": "How should AI assistance or photo and 3D elements be handled in the capstone?", "options": ["Used silently with no adjustment", "Painted over and matched to the scene, with any AI use disclosed in line with Module 115", "Avoided entirely in every case", "Left untouched for speed"], "correct": 1, "explain": "Any imported element should be integrated by painting and matching light, and any AI-assisted use should follow the disclosure practices discussed earlier."},
+  {"q": "What is the best use of the finished capstone afterward?", "options": ["Move on without reflection", "Score it against Modules 111\u2013119's checklists and pick one weakest skill to train", "Compare it only to other people's finished pieces", "Delete the layered file"], "correct": 1, "explain": "Checking the finished piece against each checklist turns it into a diagnostic that tells you exactly what to practice next."}
 ],
 "checklist": [
   "I can write a one-sentence brief and a realistic scope before starting.",
