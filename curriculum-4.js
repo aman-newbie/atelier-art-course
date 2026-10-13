@@ -1053,7 +1053,7 @@ const CURRICULUM_4 = [
 "nextStep": "You've completed Digital Painting & Rendering \u2014 from the three properties of color to a fully rendered, material-aware illustration. These skills carry forward directly into Advanced Digital Art, where techniques like blend-mode compositing, photobashing, and speed painting build on everything rendered here."
 }
 ]},
-{id:'advanced-digital', title:'Advanced Digital Art', status:'soon', order:10,
+{id:'advanced-digital', title:'Advanced Digital Art', status:'live', order:10,
     desc:'Non-destructive workflow, blend modes, adjustment layers, photobashing, 3D-assisted painting, responsible AI-assisted workflow, speed painting, and master studies.',
     moduleCount:10, sample:['Non-Destructive Workflow','Blend Modes','Photobashing','3D-Assisted Art','AI-Assisted Workflow','Speed Painting'],
     modules:[
