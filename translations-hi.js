@@ -3380,6 +3380,147 @@ const TRANSLATIONS_HI = {
       "Plain safed ke bajaye ek deliberate, saturated light color chun sakta/sakti hoon."
     ],
     nextStep: "Ab tumhare paas ek single strong environment design karne ka poora toolkit hai \u2014 biome, story, composition, color, mood aur lighting. Module 79 process pe jaata hai: thumbnailing aur concept iteration, ek final piece pe commit karne se pehle bahut saare chhote ideas generate aur narrow karne ki practical aadat."
+  },
+
+  m79: {
+    hook: "Tumhara best idea lagbhag kabhi pehle nahi aata \u2014 professionals idea number one pe bharosa nahi karte, wo kisi bhi cheez pe commit karne se pehle chhote, disposable sketches ka poora page bana lete hain.",
+    whyItMatters: [
+      "Ab tak ki har skill \u2014 biome, story, composition, color, mood, lighting \u2014 ek chune hue idea pe lagani padti hai, tabhi wo aage develop karne layak hota hai. Thumbnailing wo process hai jo un ideas ko sasta generate aur filter karta hai, us se pehle ki tum ek weak direction pe ghanto lagao.",
+      "Ye professional pipelines mein ek naam wala, standard step isliye hai kyunki pehle idea pe commit karna ek jaana-pehchana trap hai: jo cheez sabse pehle dimaag mein aati hai wo aksar sabse obvious, generic solution hoti hai, aur options ka asli spread banane par hi zyada interesting ideas saamne aate hain."
+    ],
+    coreIdea: [
+      "Thumbnails design se hi disposable hote hain \u2014 chhote (lagbhag hatheli ke size ke), tez, aur sirf 1\u20132 values ya ek rough gesture se bane \u2014 taaki tum kisi ek se emotionally attach na ho jao jab tak use alternatives se compare na kar lo.",
+      "Is stage pe quality se pehle quantity aati hai: ek hi idea ke liye lagbhag 5 ya zyada thumbnails se shuru karna ek reasonable baseline hai, kyunki goal alag-alag compositions aur solutions ka coverage hai, kisi ek ko polish karna nahi.",
+      "Thumbnails composition aur structure test karte hain, render quality nahi \u2014 is stage pe color, brush technique ya detail add karna asli goal ko delay karta hai, jo ye decide karna hai ki piece kya hai, us se pehle ki ye decide ho ki wo finished kaisa dikhega.",
+      "Thumbnail ka aspect ratio intended final piece se match hona chahiye, aur ek pre-drawn grid bharne ke bajaye khali space ke saath ek literal rectangle draw karna har idea ko visually alag aur compare karne mein aasan rakhta hai."
+    ],
+    mistakes: [
+      "Jo pehla thumbnail dimaag mein aaye usi pe commit kar dena, use compare karne ke liye alternatives ka asli spread generate kiye bina.",
+      "Thumbnails mein rendering, color ya fine detail add karna, jisse focus composition aur structure se hat jaata hai aur poora process dheema ho jaata hai.",
+      "Thumbnails bade size mein draw karna ya pehle se bani grid bharna, jisse har idea ko ek nazar mein doosron se compare karna mushkil ho jaata hai.",
+      "Sirf ek-do thumbnails ke baad ruk jaana, alag-alag compositional solutions ka genuine spread banane ke liye push karne ke bajaye.",
+      "Jab feedback mil sakta ho tab thumbnails ke set pe feedback skip karna \u2014 commit karne se pehle ideas ke spread pe doosron ki nazar lena process ka normal, useful hissa hai, kamzori ka sign nahi."
+    ],
+    proTips: [
+      "Ek page pe ek thumbnail ke bajaye ek wide canvas pe kai chhote rectangles side by side banao, taaki ideas ko ek nazar mein ek doosre se compare kar sako.",
+      "Agar atak jao, to rough ya messy line se aaye 'surprises' ko agla idea drive karne do \u2014 ek accidental shape tumhare shuru kiye gaye direction se bilkul alag, zyada interesting direction ban sakti hai.",
+      "Thumbnail ka aspect ratio shuru se hi apne intended final piece se match karo, taaki ek strong thumbnail composition scale up karne par bikhre nahi.",
+      "Thumbnailing ko time-management tool ki tarah lo: ideas ka asli spread jitni jaldi neeche utaroge, utni jaldi confident final direction tak pahunchoge, early polishing se us faisle ko delay karne ke bajaye."
+    ],
+    practice: {
+      warmup: "10 minute se kam mein ek single simple prompt (ek doorway, ek creature silhouette, ek room) ke 8\u201310 chhote, one-value thumbnails banao, basic shapes ke alawa zero detail ke saath.",
+      daily: "Apne Module 73\u201378 ke ek environment ko lo aur decide karne se pehle ki original composition sach mein sabse strong option thi ya nahi, uske 5 alternate thumbnail compositions generate karo.",
+      weekly: "Ek naye environment concept ke liye poora thumbnail spread (8+ ideas) banao, apne final piece ke aspect ratio se match karte hue, phir sabse strong chuno aur ek sentence mein explain karo ki wo doosron se kyun jeeta.",
+      challenge: "Final karne se pehle apne thumbnail spread pe kisi doosre insaan (dost, classmate, online critique group) se feedback lo, aur note karo ki unki pick tumhari pick se match hui ya nahi."
+    },
+    quiz: [
+      {q:"Thumbnails ko jaanbujh kar chhota aur rough kyun rakha jaata hai, polished nahi?", options:["Kyunki polished sketches erase karne mein bahut time lagta hai","Taaki asli alternatives se compare karne se pehle tum kisi ek idea se emotionally attach na ho jao","Kyunki software bade, detailed sketches handle nahi kar sakta","Koi asli wajah nahi, ye bas ek stylistic parampara hai"], correct:1, explain:"Thumbnails ko chhota, tez aur disposable rakhna intentional hai \u2014 ye alternatives ka asli spread generate aur compare hone se pehle ek idea se premature attachment ko rokta hai."},
+      {q:"Thumbnails ka primarily kya test karne ke liye use hona chahiye?", options:["Final rendering aur brush technique","Composition aur structure, render quality nahi","Sirf color palette choices","File size optimization"], correct:1, explain:"Thumbnails composition aur structure test karne ke liye hain; is stage pe color ya fine rendering add karna asli goal ko delay karta hai, jo ye decide karna hai ki piece kya hai, us se pehle ki wo finished kaisa dikhega."},
+      {q:"Ek hi idea ke liye lagbhag 5 ya zyada thumbnails se shuru karne ki salah kyun di jaati hai?", options:["Ye ek strict rule hai jisme koi flexibility nahi","Quantity alag compositional solutions ka real coverage deti hai, pehle idea pe sab kuch daav pe lagane ke bajaye","5 se kam thumbnails technically impossible hain","Ye kisi specific software ke grid default se match karta hai"], correct:1, explain:"Options ka asli spread (lagbhag 5 ya zyada) generate karne se possible compositions ka real coverage milta hai, pehle, aksar sabse obvious idea pe commit karne ke bajaye."},
+      {q:"Thumbnail ka aspect ratio intended final piece se match kyun hona chahiye?", options:["Iska outcome pe koi real asar nahi hota","Ek aspect ratio mein strong composition final ratio pe scale up karne par bikhar sakti hai","Aspect ratio sirf printed artwork ke liye matter karta hai","Aspect ratio match karna sirf ek stylistic preference hai, koi functional wajah nahi"], correct:1, explain:"Agar thumbnail ki proportions final piece se match nahi karti, to thumbnail size pe kaam karne wali composition actual final aspect ratio pe scale hone ke baad ek saath nahi tik sakti."},
+      {q:"Module ke hisaab se, thumbnailing mein atak jao to kya madad karta hai?", options:["Sab kuch erase karke ek khali safed canvas se shuru karna","Rough sketch mein kisi unexpected ya accidental mark ko ek naye, alag direction ka suggestion dene dena","Turant full color aur rendering add karna","Ruk jaana aur kuch aur draw karne se pehle inspiration ka intezaar karna"], correct:1, explain:"Ek accidental shape ya rough mark ek asli alag, zyada interesting idea spark kar sakta hai \u2014 surprises ko iteration drive karne dena atak jaane se nikalne ka practical tareeka hai."}
+    ],
+    checklist: [
+      "Ek single idea ke liye chunne se pehle kam se kam 5 distinct thumbnail compositions generate kar sakta/sakti hoon.",
+      "Apne thumbnails ko chhota, rough aur color ya fine detail se door rakh sakta/sakti hoon.",
+      "Thumbnail ka aspect ratio intended final piece se match kar sakta/sakti hoon.",
+      "Rough sketch mein kisi unexpected mark ya accident se naya compositional idea nikal sakta/sakti hoon."
+    ],
+    nextStep: "Ab tum ideas ka asli spread jaldi generate aur filter kar sakte ho. Module 80 poore concept art production pipeline pe jaata hai \u2014 ek chuna hua thumbnail ek professional studio workflow mein value, color aur final stages se actually kaise guzarta hai."
+  },
+
+  m80: {
+    hook: "Ek finished concept art piece ek hi pass mein nahi banta \u2014 ye ek multi-step pipeline ka aakhri visible stage hai, jo darjano disposable sketches se shuru hota hai jinhe studio ke bahar koi kabhi nahi dekhta.",
+    whyItMatters: [
+      "Is arc mein tumne jo bhi skills banayi hain \u2014 biome, story, composition, color, mood, lighting aur thumbnailing \u2014 wo sab isi ek process ke through assemble hoti hain. Production pipeline wo professional structure hai jo in individual skills ko schedule pe ek single, deliverable piece mein badalta hai.",
+      "Studios expensive production shuru hone se pehle risk kam karne ke liye hote hain, aur art directors ke industry interviews consistently dikhate hain ki visual decision-making ka bada hissa isi pre-production phase mein hota hai, jabki ye project ke total schedule ka chhota fraction hai. Is pipeline ko samajhna hi ek junior concept artist ko akele personal pieces banane ke bajaye ek real studio team ke andar kaam karne deta hai."
+    ],
+    coreIdea: [
+      "Pipeline chaar broad stages se guzarta hai: ideation aur visual exploration (tez, loose, kai directions), direction locking (precision badhti hai, visual rules establish hote hain), detailed reference development (turnarounds, material breakdowns, orthographic views), aur production support (jaise real technical constraints saamne aate hain, designs ko adjust karna).",
+      "Stage 1 range ke baare mein hai, correctness ke nahi \u2014 rough sketches, silhouette explorations aur ek hi idea ke kai competing directions banana, jinme se zyada tar jaanbujh kar discard ho jaate hain aur internal folders ke bahar kabhi nahi dikhte.",
+      "Jaise hi ek direction approve hoti hai, kaam exploration se decision-making pe shift hota hai: material logic define karna, ek consistent shape language establish karna aur visual rules lock karna jo project ke kai artists mein scale hone par consistency ko protect karte hain.",
+      "Pipeline ek pretty final image pe khatam nahi hoti \u2014 ye production support mein chalti rehti hai, jahan ek concept artist ek design ko real technical constraints (jaise real-time performance ke liye bahut dense environment) ke hisaab se adapt karta hai, original visual intent ko bachane ki koshish karte hue."
+    ],
+    mistakes: [
+      "Direction approve hone se pehle hi high-detail, fully rendered art pe jump kar jaana, ek aise design pe effort waste karte hue jo discard ho sakta hai.",
+      "Time pressure mein exploration stage skip karke pehle idea ko lock kar dena, asli alternatives generate aur compare karne ke bajaye.",
+      "Direction-locking stage ko 'decision time' ke bajaye 'rendering time' maanna \u2014 is stage ka asli kaam material logic aur visual rules define karna hai, sirf polish add karna nahi.",
+      "Sirf polished, finished images ka portfolio banana jisme koi visible process na ho, jo studios ko problem solve karne ki ability ke bajaye risk ka signal deta hai.",
+      "Ye maan lena ki strong final image banne ke baad kaam khatam ho gaya, jabki real technical constraints aane par designs ko adjust karke production ko support karte rehna chahiye."
+    ],
+    proTips: [
+      "Exploration stage mein ek hi idea ke kai genuinely alag directions jaanbujh kar banao (alag materials, alag dominant shapes), ek safe concept ki chhoti variations banane ke bajaye.",
+      "Jab direction approve ho jaaye, jo specific visual rules lock ho rahe hain (materials, shape language, ek khaas tarah ka damage ya wear kaisa dikhna chahiye) unhe likh lo, taaki baad mein consistency unke against check ho sake.",
+      "Apne rough, discarded exploration sketches mein se kuch apne portfolio ya process documentation mein visible rakho \u2014 range aur decision-making dikhana aksar studio ke liye sirf finished pieces dikhane se zyada valuable hota hai.",
+      "Jab koi finished design real production constraint se takraye, to fix ko failure nahi, ek design problem ki tarah lo \u2014 apne core intent ko khoye bina design adapt kar paana ek alag, valuable skill hai."
+    ],
+    practice: {
+      warmup: "Ek simple environment idea chuno aur uske 3 genuinely alag visual directions banao (alag dominant material, alag shape language), ek hi idea ki 3 chhoti variations nahi.",
+      daily: "Apne Module 73\u201379 ke ek concept ko ek mini two-stage pipeline se guzaro: ek loose exploration pass, phir ek direction-locked pass jisme specific material aur shape rules likhe hon.",
+      weekly: "Ek finished environment concept lo aur wo specific visual rules ki ek chhoti list likho jo wo lock karta hai, jaise use consistent rakhne ke liye kisi doosre artist ko handoff kar rahe ho.",
+      challenge: "Ek finished piece lo aur uspar ek artificial technical constraint lagao (detail aadhi kam karo, time budget badlo, ek major structure hata do) aur use original intent ko jitna ho sake bachate hue us constraint mein fit karne ke liye redesign karo."
+    },
+    quiz: [
+      {q:"Concept art pipeline mein Stage 1 (ideation aur exploration) ka primary goal kya hai?", options:["Ek single, highly polished final image banana","Range generate karna \u2014 kai loose, competing directions \u2014 jinme se zyada tar discard ho jaayengi","Final material aur shape rules establish karna","3D team ko reference sheets handoff karna"], correct:1, explain:"Stage 1 speed aur range ke baare mein hai: kai loose, competing directions banana taaki sabse achhi pehchani ja sake, aur zyada tar kaam baad mein jaanbujh kar discard ho jaata hai."},
+      {q:"Direction-locking stage ko 'rendering time' ke bajaye 'decision time' kyun samajhna behtar hai?", options:["Kyunki is stage pe koi drawing nahi hoti","Kyunki iska asli maqsad material logic aur visual rules establish karna hai jo consistency protect karte hain, sirf polish add karna nahi","Kyunki final stage tak rendering ki ijazat nahi hoti","Dono framings mein koi meaningful farak nahi hai"], correct:1, explain:"Beginners aksar is stage ko polishing samajh lete hain, par iska asli function wo visual rules (materials, shape language) define karna hai jo project ke scale hone par use consistent rakhte hain."},
+      {q:"Production support stage mein ek concept artist typically kya karta hai?", options:["Kuch nahi \u2014 final image banne ke baad uska kaam khatam","Real technical constraints (jaise performance limits) ke hisaab se designs adjust karta hai, original visual intent bachane ki koshish karte hue","Exploration stage ko scratch se dobara shuru karta hai","Sirf marketing materials pe kaam karta hai"], correct:1, explain:"Pipeline final image ke baad bhi production support tak chalti hai, jahan designs ko apne core visual intent ko khoye bina real technical constraints ke hisaab se adapt kiya jaata hai."},
+      {q:"Sirf polished, finished images dikhane wala portfolio studio mein apply karte waqt nuksaan kyun de sakta hai?", options:["Studios ko polished images kabhi nahi chahiye","Ye risk ka signal de sakta hai, kyunki studios process aur decision-making bhi dekhna chahte hain, sirf final results nahi","Finished images portfolio site pe load hone mein bahut time lete hain","Is approach mein koi nuksaan nahi"], correct:1, explain:"Module ke hisaab se, visible process ke bina sirf polished art dikhane wale portfolios studios ko risk ka signal de sakte hain, kyunki decision-making ability utni hi matter karti hai jitni final rendering quality."},
+      {q:"Module ke hisaab se, direction lock hone ke baad consistency check karne ka ek practical tareeka kya hai?", options:["Documentation ke bina sirf yaad pe bharosa karna","Lock kiye gaye specific visual rules (materials, shape language, wear patterns) likh lena taaki baad mein unke against check ho sake","Flexible rehne ke liye kuch bhi likhne se bachna","Rules sirf art director ko pata hone chahiye"], correct:1, explain:"Direction-locking ke dauraan lock kiye gaye specific rules likh lene se doosre artists (aur khud ko) ek concrete reference milta hai jiske against project ke scale hone par consistency check ho sakti hai."}
+    ],
+    checklist: [
+      "Professional concept art pipeline ke chaar broad stages bata sakta/sakti hoon.",
+      "Ek hi idea ke kai genuinely alag directions generate kar sakta/sakti hoon, ek safe concept ki chhoti variations ke bajaye.",
+      "Direction lock hone ke baad specific visual rules (materials, shape language) likh sakta/sakti hoon.",
+      "Ek finished design ko naye constraint ke hisaab se adapt kar sakta/sakti hoon, uska original intent bachate hue."
+    ],
+    nextStep: "Ab tum samajhte ho ki ek idea rough exploration se production-ready piece tak kaise pahunchta hai. Module 81 ek single piece se bade picture pe zoom out karta hai \u2014 world systems aur culture design, yaani geography, history aur society poori fictional duniya mein coherent design decisions ko kaise inform karte hain."
+  },
+
+  m81: {
+    hook: "Floating towers wala ek fantasy city, jiske baare mein pata nahi ki use kisne banaya, kyun, ya wo kya maante hain, bas ek tasveer hai \u2014 ek specific culture ne ek specific wajah se banaye floating towers wala fantasy city ek duniya hai.",
+    whyItMatters: [
+      "Ab tak sab kuch \u2014 biome, story, composition, color, mood, lighting, thumbnailing, pipeline \u2014 ek strong piece design karne ke baare mein tha. World systems aur culture design uske upar ki layer hai: geography, history aur society ko jodne wala logic jo kai alag-alag pieces ko ek hi coherent duniya ka hissa mehsoos karwata hai.",
+      "Yahi cheez unrelated, bhale hi individually strong, environments ke portfolio ko ek cohesive world bible ya IP se alag karti hai jiske around ek studio asal mein project bana sake \u2014 original IP ya long-running franchises pe kaam karne wale concept artists se expect kiya jaata hai ki wo is level pe sochein, sirf ek single scene ke level pe nahi."
+    ],
+    coreIdea: [
+      "Geography culture ko visually express hone se pehle constrain karti hai: climate, resources aur terrain jaise physical factors tay karte hain ki ek society realistically kya bana, kha, pehen aur value de sakti hai \u2014 culture ko pehle uski geography (Module 73) mein ground kiye bina design karne se aksar disconnected, arbitrary-lagne wale results aate hain.",
+      "Cultural values ko chhote set of dimensions pe useful tareeke se map kiya ja sakta hai \u2014 individualism versus communitarianism, society apne moral principles kaise apply karti hai, wo time, hierarchy ya self-expression ko kaise treat karti hai \u2014 aur apni fictional culture ko in mein se kuch dimensions pe place karne se vague mood-board impressions ke bajaye concrete, checkable jawab milte hain.",
+      "Language, architecture aur material culture in deeper values ke downstream signals hain, baad mein lagaye gaye decorations nahi \u2014 ek status-driven, hierarchical society aur ek egalitarian society ye farak visibly express karengi, apni buildings, kapdon aur art mein scale, symmetry aur ornament ko treat karne ke tareeke mein.",
+      "Tum culture ka ek piece (architecture, economy, religion, government) akele design nahi kar sakte \u2014 ye ek doosre ko inform karte hain, isliye believable world system ko sirf ek area mein deep detail ke bajaye kai interconnected areas mein kam se kam ek rough pass chahiye."
+    ],
+    mistakes: [
+      "Striking visual culture (architecture, fashion, symbols) design karna, pehle ye decide kiye bina ki wo culture asal mein kaunse values ya beliefs rakhti hai, jisse underlying logic ke bina sirf style banti hai.",
+      "Real-world cultural aesthetics ko apni duniya ki geography aur history ke hisaab se adapt kiye bina seedha copy kar dena, jo ek lived-in culture ki jagah costume jaisa lagta hai.",
+      "Cultural values ko one-dimensional stereotypes ('the warrior culture', 'the peaceful culture') ki tarah treat karna, unhe ek saath kai dimensions pe situate karne ke bajaye, jaise real cultures complex, kabhi kabhi contradictory values rakhti hain.",
+      "Architecture, economy aur belief systems ko disconnected pieces ki tarah design karna, unhe ek doosre ko inform aur constrain karne dene ke bajaye.",
+      "Un areas mein lore aur detail over-build karna jinki current project ko abhi zaroorat nahi, bas utna worldbuild karne ke bajaye jo abhi banaye ja rahe piece ya story ko support kare."
+    ],
+    proTips: [
+      "Koi bhi visual culture design karne se pehle, cultural-dimensions framework ke kuch concrete sawaalon ke jawab do (individualism vs. communitarianism, status kaise dikhaya jaata hai, time ko kaise treat kiya jaata hai) taaki tumhare paas checkable design constraints ho.",
+      "Culture ke visual choices ko pehle uski geography aur history mein ground karo (unke climate aur resources ko dekhte hue wo aise kyun banate hain?), phir decide karo ki wo dikhni kaisi chahiye.",
+      "Jab tumhari duniya ki do cultures ek doosre ke contact mein hon, to unke beech kuch influence leak hone do \u2014 real padosi cultures hamesha trade, borrow aur clash karti hain, aur yahi duniya ko static ki jagah historically real feel karwata hai.",
+      "Sirf utna worldbuild karo jitna tumhare current piece ya story ko asal mein chahiye \u2014 kai systems (geography, economy, belief) mein ek rough, consistent pass aksar kisi ek area mein exhaustive depth se behtar kaam karta hai jise koi dekhega bhi nahi."
+    ],
+    practice: {
+      warmup: "Ek real-world cultural-dimensions sawaal chuno (individualism vs. communitarianism, status kaise dikhaya jaata hai) aur ek paragraph likho ki tumhari apni ek fictional culture us par kahan baithti hai.",
+      daily: "Apne Module 73 ke ek biome ko lo aur ek concrete cultural output design karo (ek building type, ek clothing style, ek craft object) jo us biome ki geography aur resources se logically nikalta ho.",
+      weekly: "Teen interconnected areas mein ek saath ek chhoti culture design karo (geography-driven economy, ek belief system aur dono ki ek visual/architectural expression), har ek ko deeply detailed ke bajaye rough rakhte hue.",
+      challenge: "Do padosi cultures design karo jinke beech contact aur tension ho, aur ek specific tareeka pehchano jisme har culture ka visual ya material output doosri se influence dikhata ho."
+    },
+    quiz: [
+      {q:"Module ke hisaab se, ek fictional culture ke visual design ko generally kis cheez pe ground karna chahiye?", options:["Jo bhi sabse visually striking lage, pehle decide karke","Uski geography aur history, jo constrain aur inform karte hain ki culture realistically kya bana, kha aur value de sakti hai","Real-world aesthetics ka ek random selection","Genre ke sabse popular fantasy tropes"], correct:1, explain:"Geography aur history pehle aani chahiye, jo tay karti hain ki culture realistically kya produce karti hai; visual style us logic se nikalni chahiye, akele mein decide nahi honi chahiye."},
+      {q:"Ek fictional culture ko cultural-value dimensions (jaise individualism vs. communitarianism) pe map karna useful kyun hai?", options:["Iska koi practical use nahi, ye sirf academic hai","Ye vague mood-board impressions ke bajaye concrete, checkable design jawab deta hai","Original settings ke liye copyright law ise zaroori banati hai","Ye sirf real-world cultures pe lagta hai, fictional pe nahi"], correct:1, explain:"Fictional culture ko kuch concrete dimensions pe place karne se specific, checkable jawab milte hain jo design decisions guide kar sakte hain, ek vague overall impression pe rely karne ke bajaye."},
+      {q:"Cultural values ko 'the warrior culture' jaise one-dimensional stereotypes ki tarah treat karne mein kya problem hai?", options:["Stereotypes draw karna bahut complicated hai","Real cultures kai dimensions mein complex, kabhi kabhi contradictory values rakhti hain, aur ek label mein reduce karne se wo complexity kho jaati hai","Koi problem nahi, simple labels hamesha best hote hain","Stereotypes complex cultures se zyada time lete hain design karne mein"], correct:1, explain:"Real cultures complex aur multidimensional hoti hain; ek fictional culture ko ek single stereotype tak reduce karne se wo nuance kho jaata hai jo use ek real, lived-in society jaisa banata hai."},
+      {q:"Duniya ki padosi cultures ko ek doosre se kuch influence dikhane ki salah kyun di jaati hai?", options:["Isse assets reuse karke design time bachta hai","Real padosi cultures trade, borrow aur clash karti hain, aur ye exchange duniya ko static ki jagah historically real feel karwane ka hissa hai","Contact mein aayi cultures ko hamesha ek mein merge ho jaana chahiye","Cultural influence dikhane ka koi fayda nahi"], correct:1, explain:"Padosi cultures ko kuch mutual influence dikhane dena real cultures ke trade, contact aur conflict ke through interact karne ko reflect karta hai, jisse fictional duniya mein history aur realism ka ehsaas aata hai."},
+      {q:"Module world ke kitne systems build karne ki salah deta hai?", options:["Project ki zaroorat chahe jo ho, har system ko maximum depth tak build karo","Sirf utna worldbuild karo jitna current piece ya story ko asal mein chahiye, bina use hone wali lore over-build kiye","Ek se zyada system kabhi worldbuild mat karo","Worldbuilding poori tarah skip karo aur sirf rendering pe focus karo"], correct:1, explain:"Module un systems mein ek rough, consistent pass ki salah deta hai jinki current project ko asal mein zaroorat hai, un areas mein exhaustively depth over-build karne ke bajaye jo dikhenge ya use nahi honge."}
+    ],
+    checklist: [
+      "Ek fictional culture ke visual output ko uski aesthetics design karne se pehle uski geography aur history mein ground kar sakta/sakti hoon.",
+      "Vague impression pe rely karne ke bajaye ek fictional culture ko kam se kam ek concrete cultural-value dimension pe place kar sakta/sakti hoon.",
+      "Ek chhoti culture ko kai interconnected systems (economy, belief, visual expression) mein design kar sakta/sakti hoon, ek ko akele nahi.",
+      "Do padosi, interact karti cultures ke beech visible mutual influence dikha sakta/sakti hoon."
+    ],
+    nextStep: "Ab tumhare paas ek coherent duniya design karne ka poora toolkit hai, ek single environment se lekar unhe jodne wale systems tak. Module 82 capstone hai \u2014 is arc ki har skill ko ek complete, finished environment concept piece mein saath laana."
   }
 
 };
