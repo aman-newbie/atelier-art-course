@@ -3239,6 +3239,147 @@ const TRANSLATIONS_HI = {
       "Explain kar sakta/sakti hoon ki main Rule of Thirds ko kab aur kyun jaanbujh kar todta/todti hoon."
     ],
     nextStep: "Ab tum direct kar sakte ho ki frame ke andar aankh kahan jaaye. Module 76 composition ke upar ek layer add karta hai: color scripting \u2014 ek piece ya project mein palettes ke planned sequence se mood aur continuity control karna, sirf placement nahi."
+  },
+
+  m76: {
+    hook: "Ek bhi frame animate hone ya ek bhi wall texture hone se pehle, professional studios ko pehle se pata hota hai ki har scene ka color kaisa feel karega \u2014 kyunki unhone use mahino pehle paper pe plan kiya hota hai.",
+    whyItMatters: [
+      "Composition (Module 75) ek image mein aankh ki direction control karti hai. Color script images ke poore sequence ka feel time ke saath control karta hai \u2014 ye wo tool hai jo poore project ka mood aur emotional arc consistent rakhta hai, scene-by-scene ittefaq pe nahi chhodta.",
+      "Ye ek real, naam wala production tool hai jo har bade animation aur game studio (Pixar, Blender Studio aur kai game teams) mein use hota hai, kyunki kai artists ke saath chalne wale non-linear production ko ek aisa document chahiye jise sab check kar sakein ki scene ko kaisa feel karna chahiye \u2014 ise skip karna project ka color inconsistent hone ki ek common wajah hai."
+    ],
+    coreIdea: [
+      "Color script ek sequential map hai \u2014 aam taur pe chhote thumbnails ki ek strip ya grid \u2014 jisme kahani ke har key scene ka color aur lighting final art shuru hone se pehle plan hota hai, taaki poore project mein color ka emotional arc soch-samajh ke decide ho.",
+      "Color scripting color choices se nahi, story ke sawaalon se shuru hoti hai: ek character ya jagah end tak kaise badalti hai? Har beat pe audience ko kya feel karna chahiye? In jawabon ke baad hi tum unhe color aur light mein translate karte ho.",
+      "Consistency ko anchors chahiye: pehle hi decide kar lo ki kaunse colors 'locked' hain (character ke baal, kisi location ki signature palette), taaki baaki sab kuch un fixed points ke around shift ho sake aur poora piece random na lage.",
+      "'Color bridges' \u2014 do alag-alag scenes ke transition mein ek color ko jaanbujh kar saath le jaana \u2014 wahi cheez hai jo achanak mood swings ko jarring ke bajaye intentional banati hai."
+    ],
+    mistakes: [
+      "Color ko har scene mein us waqt ka faisla maanna, poore piece ya project mein color ke emotional arc ko pehle se plan karne ke bajaye.",
+      "Kahani ke 'locked' colors (character ki signature palette, kisi location ka established look) ko bina strong reason ke badal dena, jisse audience ke liye ye track karna mushkil ho jaata hai ki kaun ya kahan hai.",
+      "Har dramatic color shift ko barabar abrupt banana, isliye shocking swings ka asar khatam ho jaata hai kyunki unke saamne shaant, dheere sections hain hi nahi.",
+      "Story ke sawaal (kya badalta hai, audience ko kya feel karna chahiye) chhod ke seedha aise colors chun lena jo akele mein achhe lagte hain.",
+      "Color script ko ek rigid final document ki tarah banana, working document ki jagah \u2014 piece develop hone par jab purane assumptions galat nikle, tab bhi use adjust karne se inkaar karna."
+    ],
+    proTips: [
+      "Koi bhi color chunne se pehle, har key beat pe audience ko kya feel karna chahiye ek seedhe sentence mein likho ('mujhe ye achanak unsafe lagna chahiye') \u2014 phir us sentence ko color aur light mein translate karo.",
+      "Poore project ke color arc ko pehle thumbnails ki ek chhoti strip mein condense karke dekho, tab bhi jab saare scenes ki detail pata na ho \u2014 isse tum shuru mein hi bade emotional shape pe commit karne ko majboor hote ho.",
+      "Experiment shuru karne se pehle apne 'locked' colors pehchan lo (jo cheezein scene-to-scene badal nahi sakti), taaki pata ho ki kin constraints ke around design kar rahe ho.",
+      "Jab do adjacent scenes ko bahut alag moods chahiye par wo disconnected nahi lagne chahiye, to color bridge use karo \u2014 ek shared color jo hard scene transition ke paar jaaye."
+    ],
+    practice: {
+      warmup: "Ek jaani-pehchani kahani (short film ya fairy tale) ko sirf color aur value se 5-frame color strip mein condense karo, koi characters ya detail nahi.",
+      daily: "Apni Module 75 ki ek composition lo aur ek sentence likho ki wo kaunsa emotional beat hit kare, phir uska color aur value us sentence ke hisaab se adjust karo.",
+      weekly: "Ek original short scene ke liye ek chhota color script (4\u20136 thumbnails) banao, pehchano ki kaunse colors 'locked' hain aur do beats ke beech color bridge kahan use kiya.",
+      challenge: "Same color script ko do baar banao \u2014 ek baar beats ke beech abrupt, high-contrast mood swings ke saath, ek baar slow, gradual shifts ke saath \u2014 aur note karo ki har approach kis tarah ki kahani ke liye zyada suit karti hai."
+    },
+    quiz: [
+      {q:"Color script mainly kis cheez ko plan karne ke liye use hoti hai?", options:["Final rendering ki exact brush settings","Final art shuru hone se pehle poori kahani ya project ke color, lighting aur emotional beats ka sequence","Production pipeline ki file naming convention","Film ke poster ki marketing palette"], correct:1, explain:"Color script poore scenes ke sequence mein color aur lighting pehle se map karti hai, taaki color ka emotional arc plan ho, us waqt ke feel pe nahi chhoda jaaye."},
+      {q:"Module ke hisaab se, color script ke liye actual colors chunne se pehle kya decide karna chahiye?", options:["Final render ka resolution","Har key story beat pe audience ko kya feel karna chahiye","Painting ke liye kaunsa software use hoga","Final film ka runtime"], correct:1, explain:"Color scripting story aur emotion ke sawaalon se shuru hoti hai; color choices un jawabon ka translation hain, shuruaat nahi."},
+      {q:"Color scripting mein 'color bridge' kya hai?", options:["Set pe use hone wala ek physical prop","Do alag-alag scenes ke transition mein ek shared color ko jaanbujh kar saath le jaana, taaki wo intentional lage","Image-editing software ka ek gradient tool","Ek rule ki sabhi scenes ek hi colors use karein"], correct:1, explain:"Color bridge ek deliberate continuity technique hai \u2014 hard scene transition ke paar ek color le jaana, taaki achanak mood swing bhi random ke bajaye connected lage."},
+      {q:"Project mein 'locked' colors ko shuru mein pehchanna kyun useful hai?", options:["Locked colors file storage bachate hain","Ye aise fixed points banate hain jinse viewer character ya jagah track kar sake, aur baaki sab kuch random lage bina un ke around shift ho sake","Locked colors copyright law ki zaroorat hain","Ye final film ka aspect ratio decide karte hain"], correct:1, explain:"Fixed, na badalne wale colors (jaise character ke baalon ka signature color) audience ko identity aur jagah track karne ka anchor dete hain, aur baaki palette un ke around meaningfully shift ho sakti hai."},
+      {q:"Color script mein har mood change ke liye abrupt, high-contrast color shifts kyun nahi use karne chahiye?", options:["Abrupt shifts technically paint karna impossible hai","Agar har shift barabar dramatic ho, to wo contrast kho jaata hai jo ek sach mein shocking moment ko alag dikhata hai","Abrupt shifts hamesha bure lagte hain","Koi wajah nahi \u2014 sabhi shifts abrupt hone chahiye"], correct:1, explain:"Contrast hi ek dramatic shift ko significant banata hai; agar har transition barabar abrupt ho to koi ek moment baaki se zyada important nahi lagta."}
+    ],
+    checklist: [
+      "Scene ke colors chunne se pehle uska ek-sentence emotional goal likh sakta/sakti hoon.",
+      "Project mein kaunse colors 'locked' hone chahiye aur kaunse free shift kar sakte hain, ye pehchan sakta/sakti hoon.",
+      "Bahut alag moods wale do scenes ko jodne ke liye color bridge use kar sakta/sakti hoon.",
+      "Poori kahani ke color arc ko thumbnails ki ek chhoti strip mein condense kar sakta/sakti hoon."
+    ],
+    nextStep: "Ab tumhare paas composition aur color dono deliberate, planned layers ki tarah hain. Module 77 mood aur atmosphere pe jaata hai \u2014 weather, light quality aur time of day se ek single scene ko emotionally specific banana, is module ke color-arc thinking pe build karte hue."
+  },
+
+  m77: {
+    hook: "Wahi landscape dawn pe paint karo to umeed lagti hai, aur dusk mein kohre ke saath paint karo to warning \u2014 geography mein kuch nahi badla, bas uske around ka mood aur atmosphere badla.",
+    whyItMatters: [
+      "Color scripting (Module 76) poore project mein emotion plan karti hai. Mood aur atmosphere wo jagah hai jahan wo plan ek single scene ke andar execute hota hai \u2014 light, weather aur value ke wo specific choices jo ek moment ko calm, tense, nostalgic ya ominous banate hain.",
+      "Ye wo layer hai jo ek technically correct environment ko aisa banati hai jiske baare mein log sach mein kuch mehsoos karte hain. Art director aksar kuch seconds mein bata deta hai ki piece mein intentional atmosphere hai ya sirf accurate geometry \u2014 mood hi in dono mein farak hai."
+    ],
+    coreIdea: [
+      "Mood (emotional response) aur atmosphere (scene mein hawa, light aur depth ka ehsaas) related hain par alag: atmosphere zyada tar value aur edge control se banti hai (door hote hue cheezein softer, cooler aur kam detailed), jabki mood color, lighting direction aur weather ke us atmospheric structure ke upar layer hone se aata hai.",
+      "Light ki direction aur quality zyada tar emotional kaam karti hai: hard shadows wali strong single light source (chiaroscuro) dramatic ya tense lagti hai, jabki soft, diffused light calm ya nostalgic \u2014 ek hi subject ka mood sirf ye badalne se palat sakta hai ki use kaise light kiya gaya.",
+      "Weather aur time of day mood ke sabse reliable, direct tools mein se hain kyunki viewers ke dimaag mein inke saath pehle se strong associations hote hain \u2014 kohra mystery ya melancholy, golden low sun nostalgia, aur toofan tension lagta hai, scene mein baaki kuch bhi ho.",
+      "Light source ki consistency hi atmosphere ko jodke rakhti hai. Ek baar jab tum decide kar lo ki light kahan se aa rahi hai aur kitni strong hai, scene ka har shadow, highlight aur edge us faisle se match hona chahiye, warna atmosphere tooti hui lagti hai, chahe har element akele mein theek dikhe."
+    ],
+    mistakes: [
+      "Mood tab decide karna jab scene pehle se poori tarah render ho chuka ho, pehle emotional target chunke light, weather aur value ko uske around shuru se build karne ke bajaye.",
+      "Light source ko ignore karna ya inconsistently apply karna, jisse scene ke shadows aur highlights ek doosre se disagree karte hain aur chupke se atmosphere tod dete hain.",
+      "Mood ko sirf color se carry karwana jabki value aur edge control ko ignore karna, jabki wahi depth aur hawa ka ehsaas banate hain jispe atmosphere depend karti hai.",
+      "Scene mein bahut saare competing colors thoons dena, jisse clear emotional read ki jagah chaotic, confusing image banti hai \u2014 palette limit karna aksar mood ko land karwata hai.",
+      "Weather aur time of day ko decoration samajhna, ek specific mood set karne ke sabse direct, reliable tools mein se ek ki tarah nahi."
+    ],
+    proTips: [
+      "Shuru karne se pehle apna emotional target ek shabd mein chuno (nostalgic, threatening, serene) aur har agla choice \u2014 light direction, weather, palette \u2014 is par test karo ki wo us ek shabd ki seva karta hai ya nahi.",
+      "Pehle light source aur direction decide karo, aur koi bhi doosri detail add karne se pehle scene ke har shadow ko uske against check karo \u2014 inconsistent light atmosphere todne ke sabse tez tareekon mein se ek hai.",
+      "Same scene ko kuch alag time of day ya weather conditions mein paint ya study karo, taaki seedha dikhe ki subject ke bina sirf light se mood kitna shift hota hai.",
+      "Jab koi scene emotionally read nahi ho raha, to zyada color ke liye haath badhane se pehle value aur edge control check karo \u2014 atmosphere aksar color se pehle value ki problem hoti hai."
+    ],
+    practice: {
+      warmup: "Ek shabd chuno (nostalgic, threatening, serene, triumphant) aur same simple landscape shape ko teen baar thumbnail karo, har baar sirf light direction aur weather badalke us shabd ko hit karte hue.",
+      daily: "Apne Module 73\u201376 ke ek environment ko lo aur uski lighting aur atmosphere ko do baar dobara paint karo \u2014 ek baar calm mood ke liye, ek baar tense ke liye \u2014 geometry ko identical rakhte hue.",
+      weekly: "Ek scene ek single consistent light source ke saath banao, aur use finished bolne se pehle har shadow aur highlight ko us source ke against deliberately check karo.",
+      challenge: "Same location ko dawn, midday aur dusk pe recreate karo, aur har ek ke liye ek sentence likho ki sirf wo lighting condition kaunsa specific mood banati hai."
+    },
+    quiz: [
+      {q:"Is module ke hisaab se mood aur atmosphere mein key farak kya hai?", options:["Dono bilkul ek hi cheez hain","Atmosphere mainly value aur edge control se banti hai (hawa aur depth ka ehsaas); mood color, light aur weather ke us structure ke upar layer hone se aata hai","Mood sirf portraits pe lagta hai, atmosphere sirf landscapes pe","Atmosphere sirf kohre ya baarish jaise weather effects ko kehte hain"], correct:1, explain:"Atmosphere depth aur hawa ka underlying ehsaas hai, jo value aur edges se banta hai; mood us foundation ke upar color, lighting aur weather choices se bana emotional read hai."},
+      {q:"Hard shadows wali strong single light source dramatic ya tense kyun lagti hai?", options:["Hard shadows technically paint karna zyada mushkil hai","High-contrast, directional light (chiaroscuro) ka drama aur tension ke saath strong association hai, jabki soft diffused light calm lagti hai","Hard shadows hamesha raat ka matlab hain","Light quality ka koi real emotional association nahi hota"], correct:1, explain:"Chiaroscuro-style strong, directional light jisme hard shadow edges hon reliably dramatic ya tense lagti hai, jabki soft, diffused light zyada calm ya nostalgic."},
+      {q:"Atmosphere ke liye consistent light direction kyun important hai?", options:["Ye professional artwork ke liye legal requirement hai","Har shadow aur highlight ko ek light source se agree karna padta hai, warna individual elements akele mein theek dikhne par bhi atmosphere tooti hui lagti hai","Consistent light direction sirf photography ke liye matter karti hai, painting ke liye nahi","Scene ke read hone pe iska koi asli asar nahi hota"], correct:1, explain:"Ek baar light source chun liya jaaye, scene ke har shadow aur highlight ko uske saath consistent hona chahiye; elements ke beech disagreement atmosphere ko tod deta hai, chahe har piece akele mein theek dikhe."},
+      {q:"Module ke hisaab se weather aur time of day mood set karne ke liye especially reliable tools kyun hain?", options:["Wahi akele tools hain jo mood ko affect karte hain","Viewers ke paas pehle se inke strong associations hote hain (kohra = mystery, golden light = nostalgia), jisse ye direct aur effective hote hain","Ye lighting se render karna aasan hain","Viewer ki emotional response pe inka koi measurable asar nahi hota"], correct:1, explain:"Weather aur time of day isliye reliably kaam karte hain kyunki viewers inke saath pehle se emotional associations laate hain, scene ke baaki hisse se lagbhag independent."},
+      {q:"Agar koi scene tumhare intended tareeke se emotionally read nahi ho raha, to zyada color add karne se pehle kya check karna chahiye?", options:["File ka resolution badhao","Pehle value aur edge control check karo, kyunki atmosphere aksar color se pehle value ki problem hoti hai","Scene mein aur objects add karo","Doosra software use karo"], correct:1, explain:"Module zyada color ke liye haath badhane se pehle value aur edge control check karne ki salah deta hai, kyunki atmosphere ki problems zyada tar value relationships mein hoti hain, color ki kami mein nahi."}
+    ],
+    checklist: [
+      "Scene ki lighting aur weather chunne se pehle uska ek-shabd emotional target bata sakta/sakti hoon.",
+      "Scene ke har shadow aur highlight ko ek consistent light source ke against check kar sakta/sakti hoon.",
+      "Pehchan sakta/sakti hoon ki atmosphere ki problem asal mein value/edge ki problem hai ya nahi, zyada color ke liye jaane se pehle.",
+      "Explain kar sakta/sakti hoon ki kohra, golden hour aur toofan ki lighting har ek ek specific, reliable emotional association kyun carry karti hai."
+    ],
+    nextStep: "Ab tumhare paas composition, color aur mood saath mein kaam karti hui deliberate layers ki tarah hain. Module 78 specifically concept art ke liye lighting pe jaata hai \u2014 light sources, time of day aur environmental lighting physically kaise behave karti hai ka practical logic, yahan ke mood work pe seedha build karte hue."
+  },
+
+  m78: {
+    hook: "Do artists ek hi rock, tree aur building paint kar sakte hain \u2014 aur ek painting photo reference ki copy lagegi jabki doosri ek jagah, kyunki doosre artist ne sach mein decide kiya tha ki light kahan se aa rahi hai.",
+    whyItMatters: [
+      "Mood aur atmosphere (Module 77) ne bataya ki scene ko kya feel karna chahiye. Lighting us feeling ko actually produce karne ka physical, technical toolkit hai \u2014 primary aur secondary light sources, ambient bounce aur plane logic \u2014 ab tak ke har mood decision ke peeche ki mechanics.",
+      "Ye intermediate aur professional-looking piece ke beech ke sabse common technical gaps mein se ek hai: geometry, color aur composition sab sahi ho sakte hain jabki lighting logic inconsistent ho, aur wo inconsistency aksar experienced aankh ki pakad mein pehle aati hai, chahe wo turant na bata paaye ki piece 'off' kyun lag raha hai."
+    ],
+    coreIdea: [
+      "Objects mein nahi, planes mein socho. Koi bhi complex form \u2014 face, rock, building \u2014 tab kahin aasani se light hoti hai jab tum use mentally flat facets mein simplify karo, phir har facet ko light source se uske angle ke hisaab se light karo, poori complicated silhouette ko ek saath light karne ki koshish karne ke bajaye.",
+      "Ambient (bounce) light wo bharti hai jahan primary light nahi pahunch paati, aur wo apna color aas-paas ke environment se leti hai \u2014 neeli roshni wale kamre mein ek safed object ke shadows black nahi, blue-tinted honge, kyunki deewarein shadow side mein blue light bounce kar rahi hain.",
+      "Primary ke lagbhag opposite rakhi gayi ek second light source scene ke main lighting logic ko contradict kiye bina dimension aur visual interest add karti hai \u2014 wo faint aur sirf supportive ho sakti hai, ya zyada dramatic, dynamic look ke liye primary jitni hi strong.",
+      "Saturated, colored light aam taur pe plain safed ya desaturated light se zyada jeeti-jagti aur intentional lagti hai, jo flat, washed-out ya unconvincing dikhti hai \u2014 safed light ki apni jagah hai par use default ki tarah nahi, deliberately use karna chahiye."
+    ],
+    mistakes: [
+      "Complex form ko pehle planes mein simplify kiye bina, aankh se ek saath light kar dena, har simplified facet ko light source se uske actual angle ke hisaab se light karne ke bajaye.",
+      "Shadow areas ko pure black ya neutral gray chhod dena, unhe aas-paas ke environment ke ambient/bounce color se tint karne ke bajaye.",
+      "Har light source ko paint karne ke liye poori tarah soft airbrush pe rely karna, jisse confidently lit scene ki jagah hazy, kamzor, artificial lagta result aata hai.",
+      "Doosri ya teesri light source add karna jo primary light ke logic ko support karne ke bajaye uske saath contradict ya compete kare.",
+      "Aadat se plain safed light pe default karna, jabki ek saturated, soch-samajh ke chuna gaya light color zyada vivid aur intentional lagta."
+    ],
+    proTips: [
+      "Jab koi form pareshaan kare, pehle use mentally flat planes mein reduce karo (Asaro head ek achha practice reference hai) aur koi softening ya detail add karne se pehle har plane ko uske angle ke hisaab se light karo.",
+      "Ambient/bounce color apne subject ke aas-paas ke environment ke dominant color se chuno, aur shadow areas ko neutral chhodne ke bajaye usse tint karo.",
+      "Primary light source ko confidence se 'sculpt' karne ke liye harder-edged brush use karo, aur airbrush ko mainly faint bounce light ya glow jaise soft secondary effects ke liye reserve rakho.",
+      "Secondary light source ka color chunte waqt aisa color try karo jiska primary light ke saath deliberate color-theory relationship ho (complementary ya triadic), zyada cohesive, intentional-looking result ke liye."
+    ],
+    practice: {
+      warmup: "Ek simple geometric form (sphere, cube aur cone) lo aur teeno ko same direction se light karo, phir sirf unki shadow sides pe ek colored ambient bounce add karo.",
+      daily: "Apne Module 73\u201377 ke ek environment ko lo aur use poori silhouette ko ek saath light karne ke bajaye plane-by-plane thinking se re-light karo.",
+      weekly: "Ek scene ko ek primary light source se light karo, phir lagbhag opposite direction se ek second, complementary-colored light source add karo, primary light ke logic ko contradict kiye bina.",
+      challenge: "Same subject ko do baar paint karo \u2014 ek baar poori lighting ke liye sirf soft airbrush se, ek baar harder brush se light ko 'sculpt' karke \u2014 aur compare karo doosra version kitna zyada confident aur readable lagta hai."
+    },
+    quiz: [
+      {q:"Complex form ko light karne se pehle flat planes mein simplify karne ki salah kyun di jaati hai?", options:["Isse artwork ka file size kam hota hai","Har simplified facet ko light source se uske angle ke hisaab se light karna ek complicated silhouette ko ek saath light karne se kahin zyada manageable hai","Planes sirf architectural subjects ke liye relevant hain","Isse koi real fayda nahi, ye bas ek stylistic preference hai"], correct:1, explain:"Planes mein sochne se ek complex form simple facets mein tut jaata hai jinki lighting light source se unke angle se tay hoti hai, jisse poori form ko consistently light karna kahin aasan ho jaata hai."},
+      {q:"Shadow areas ko pure black ya neutral gray chhodne ke bajaye aam taur pe tint kyun karna chahiye?", options:["Pure black shadows paint karna technically impossible hai","Aas-paas ke environment ki ambient/bounce light shadow areas ko bharti hai aur us environment ka color le leti hai","Tinted shadows professional style guides mein required hain","Koi wajah nahi \u2014 pure black shadows hamesha correct hote hain"], correct:1, explain:"Kyunki primary light shadow areas tak nahi pahunch paati, environment ki ambient bounce light unhe bharti hai, aur wo bounce light colorless nahi, apne aas-paas ka color carry karti hai."},
+      {q:"Poore scene ko sirf soft airbrush se light karne ka ek common downside kya hai?", options:["Zyada tar software mein ye technically impossible hai","Ye confident, readable light ki jagah hazy, kamzor, artificial-looking result deta hai","Image-editing software mein ye bahut memory use karta hai","Koi downside nahi \u2014 airbrush hamesha best choice hai"], correct:1, explain:"Lighting ke liye poori tarah airbrush pe rely karna aksar hazy aur unconvincing lagta hai; primary light source ko confidently sculpt karne ke liye harder-edged brushes generally behtar hain."},
+      {q:"Secondary light source add karte waqt wo primary light ke relative aam taur pe kya kare?", options:["Primary light ke logic ko poori tarah override aur replace kar de","Primary light ke logic ko support ya complement kare, aksar lagbhag opposite direction se","Hamesha primary light jitni hi bright ho","Clashing se bachne ke liye hamesha pure safed use kare"], correct:1, explain:"Secondary light source ka kaam primary light ke overall logic ko support karte hue dimension aur interest add karna hai, use contradict ya compete karna nahi."},
+      {q:"Saturated, colored light aksar plain safed light se zyada vivid aur intentional kyun lagti hai?", options:["Saturated light hamesha technically zyada bright hoti hai","Plain safed ya desaturated light zyada tar scenarios mein flat aur washed-out lagti hai, jabki deliberate color choices zyada jeeti-jagti lagti hain","Safed light digitally render karna zyada mushkil hai","Dono ke beech koi actual visual farak nahi hota"], correct:1, explain:"Saturated, soch-samajh ke chune gaye light colors aam taur pe zyada vibrant, intentional-feeling result dete hain, jabki plain safed light neeche ke colors ko desaturate aur flat kar deti hai."}
+    ],
+    checklist: [
+      "Ek complex form ko light karne se pehle use planes mein simplify kar sakta/sakti hoon.",
+      "Shadow area ko aas-paas ke environment se liye gaye ambient bounce color se tint kar sakta/sakti hoon.",
+      "Ek secondary light source add kar sakta/sakti hoon jo meri primary light ke logic ko contradict nahi, support kare.",
+      "Plain safed ke bajaye ek deliberate, saturated light color chun sakta/sakti hoon."
+    ],
+    nextStep: "Ab tumhare paas ek single strong environment design karne ka poora toolkit hai \u2014 biome, story, composition, color, mood aur lighting. Module 79 process pe jaata hai: thumbnailing aur concept iteration, ek final piece pe commit karne se pehle bahut saare chhote ideas generate aur narrow karne ki practical aadat."
   }
 
 };
