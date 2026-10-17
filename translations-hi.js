@@ -3521,6 +3521,141 @@ const TRANSLATIONS_HI = {
       "Do padosi, interact karti cultures ke beech visible mutual influence dikha sakta/sakti hoon."
     ],
     nextStep: "Ab tumhare paas ek coherent duniya design karne ka poora toolkit hai, ek single environment se lekar unhe jodne wale systems tak. Module 82 capstone hai \u2014 is arc ki har skill ko ek complete, finished environment concept piece mein saath laana."
+  },
+
+  m82: {
+    hook: "Nau modules ne tumhe nau alag skills sikhayi. Is module mein koi nayi theory nahi \u2014 ye bas tumse kehta hai ki un sab ko ek saath, ek single piece pe use karo, bilkul waise jaise ek real studio brief kaam karta hai.",
+    whyItMatters: [
+      "Portfolio isolated exercises se nahi banta \u2014 ye finished pieces se banta hai jo saabit karte hain ki tum ek saath nau alag decisions dimaag mein sambhal sakte ho: ek believable biome, ek implied story, ek guided composition, ek planned color arc, ek specific mood, consistent lighting, ek real thumbnail-to-final process, aur (agar relevant ho) uske peeche ek coherent culture.",
+      "Ye apni current weak point dhoondhne ka sabse honest tareeka bhi hai. Alag-alag skills pe kaam karna un gaps ko chhupa deta hai jo tabhi saamne aate hain jab sab kuch ek saath kaam karna ho \u2014 capstone piece wo skill saamne laa dega jo nau mein se asal mein sabse kamzor hai, aur wahi information chahiye ye jaanne ke liye ki aage kya practice karna hai."
+    ],
+    coreIdea: [
+      "Ek one-sentence brief se shuru karo, jaise ek real project mein hota hai: kaunsa biome, kaunsi story imply ho rahi hai, kaunsa emotional target. Har baad ka decision (composition, color, light) is baat pe test hona chahiye ki wo us ek sentence ko serve karta hai, akele mein chuna hua nahi.",
+      "Module 80 ka real pipeline order follow karo: pehle loose thumbnail exploration (kai chhote, disposable options), phir direction-locking (ek composition aur value structure pe commit karna), phir detailed pass (color, light, finished rendering) \u2014 seedha final detail pe jump karne se bacho.",
+      "Ise ek-ek decision ki tarah treat karo, jo us module se check ho jahan se wo aaya: biome logic (73), ek storytelling detail (74), ek clear focal point (75), ek planned color arc agar ye kisi bade idea ka hissa hai (76), ek deliberate mood (77), ek consistent light source (78). Shuru se hi nau cheezein ek saath perfect karne ki koshish hi overwhelm karti hai; inhe lagbhag isi order mein kaam karte hue nibhao.",
+      "Capstone piece ko complete hone ke liye bada ya complex hone ki zaroorat nahi \u2014 ek single, soch-samajh ke banaya hua environment jisme har skill clearly apply hui ho, us ambitious piece se zyada valuable hai jisne final render ki jaldi mein process skip kar diya."
+    ],
+    mistakes: [
+      "Thumbnail aur exploration stage skip karke seedha detailed final piece mein kood jaana, commit karne se pehle alternatives compare karne ka mauka kho dete hue.",
+      "Pehle mark se hi har skill ko ek saath perfect karne ki koshish karna, unhe ek rough, deliberate order mein (pehle structure aur biome, rendering sabse aakhir mein) kaam karne ke bajaye.",
+      "Itna bada ya complex scene chunna ki use reasonable scope mein khatam karna hi asli rukavat ban jaaye, skills apply karne ke bajaye.",
+      "Storytelling details, mood ya culture ko piece 'done' hone ke baad decoration ki tarah add karna, unhe shuru se decisions inform karne dene ke bajaye.",
+      "Finished piece ko process ka end maanna, use ye honestly pehchanne ke liye use karne ke bajaye ki nau mein se kaunsi skill abhi sabse kamzor hai."
+    ],
+    proTips: [
+      "Ek bhi mark lagane se pehle apna one-sentence brief likh lo, aur kaam karte waqt use saamne rakho \u2014 original intent se bhatakte hue khud ko pakadne ka ye sabse tez tareeka hai.",
+      "Scope jaanbujh kar limit karo: har stage pe asli intention ke saath execute kiya hua chhota, focused environment us ambitious environment se behtar hai jiska lighting aur mood pass tak pahunchte pahunchte time khatam ho jaaye.",
+      "Khatam karne ke baad, Modules 73\u201381 ek-ek karke wapas dekho aur apne piece ko har ek ki checklist ke against honestly check karo \u2014 isse capstone ek real diagnostic ban jaata hai, sirf ek finished picture nahi.",
+      "Apna thumbnail stage aur koi bhi discarded alternate directions sambhal ke rakho \u2014 final piece ke saath wo process dikhana wahi process documentation hai jise Module 80 ne studios ke liye valuable bataya tha."
+    ],
+    practice: {
+      warmup: "Ek original environment ke liye one-sentence brief likho: uska biome, ek implied story detail aur ek emotional target naam lo.",
+      daily: "Har session mein ek pipeline stage pe kaam karo \u2014 thumbnails, phir direction-locking, phir color/mood, phir lighting \u2014 poore piece ko ek baithak mein khatam karne ki koshish karne ke bajaye.",
+      weekly: "Brief se finished piece tak ek poora capstone environment complete karo, apna thumbnail stage aur discarded alternates final image ke saath rakhte hue.",
+      challenge: "Apne finished capstone piece pe wapas jao aur use Modules 73\u201381 mein se har ek ki checklist ke against honestly score karo \u2014 apna sabse kamzor area pehchano aur ek specific cheez naam lo jise tum uski wajah se aage practice karoge."
+    },
+    quiz: [
+      {q:"Is capstone module ke hisaab se, ek naye environment piece pe koi bhi mark lagane se pehle kisse shuru karna chahiye?", options:["Tumhe aati sabse detailed rendering technique se","Ek one-sentence brief jisme biome, ek implied story detail aur ek emotional target ho","Ek random color palette se","Tum jo sabse bada, sabse ambitious scene imagine kar sako"], correct:1, explain:"Ek one-sentence brief se shuru karne par har baad ke decision (composition, color, light) ke paas test hone ke liye kuch concrete hota hai, akele mein chune jaane ke bajaye."},
+      {q:"Module 80 ke basis pe, module kaunsa pipeline order follow karne ki salah deta hai?", options:["Pehle finished rendering, phir thumbnails baad mein documentation ke liye","Pehle loose thumbnail exploration, phir direction-locking, phir detailed pass","Pehle mark se hi nau skills ko ek saath perfect karna","Planning poori tarah skip karke sirf instinct pe rely karna"], correct:1, explain:"Recommended order Module 80 ke professional pipeline ko mirror karta hai: pehle loosely explore karo, ek direction lock karo, phir detailed color, light aur rendering mein jao."},
+      {q:"Module capstone piece ka scope limit karne ki salah kyun deta hai?", options:["Chhote pieces hamesha behtar art hote hain, execution chahe jo ho","Har stage pe asli intention ke saath execute kiya focused environment us ambitious environment se behtar hai jiska mood aur lighting tak pahunchne se pehle time khatam ho jaaye","Scope ka piece ke succeed hone pe koi asar nahi hota","Bade environments technically finish karna impossible hain"], correct:1, explain:"Bahut ambitious scope ka risk ye hai ki later-stage skills (mood, lighting) ko real attention milne se pehle time khatam ho jaaye, isliye ek chhota, poori tarah realize kiya hua piece ek adhura ambitious piece se zyada valuable hai."},
+      {q:"Capstone piece khatam hone ke baad use kaise use karne ki salah di gayi hai?", options:["Bina aage reflect kiye turant aage badh jaana","Pichle har module ki checklist se wapas guzarna aur honestly apni sabse kamzor skill pehchanna","Discarded thumbnails aur alternate directions delete kar dena","Use sirf doosron ke kaam se compare karna, checklists se nahi"], correct:1, explain:"Finished piece ko har pichle module ki checklist ke against check karne se capstone ek asli diagnostic tool ban jaata hai, jo dikhata hai ki abhi kaunsi specific skill sabse kamzor hai aur aage practice karne layak hai."},
+      {q:"Finished capstone piece ke saath discarded thumbnail alternatives rakhna valuable kyun hai?", options:["Iska koi real value nahi, ise delete kar dena chahiye","Ye tumhara process document karta hai, jise Module 80 ne bataya ki studios sirf polished final image ke alawa khaas taur pe dhoondhte hain","Discarded thumbnails copyright law ke hisaab se required hain","Ye sirf traditional media ke liye matter karta hai, digital ke liye nahi"], correct:1, explain:"Visible process work, discarded directions samet, decision-making ability dikhata hai \u2014 wahi documentation jise Module 80 ne portfolio evaluate karne wale studios ke liye valuable bataya."}
+    ],
+    checklist: [
+      "Naya environment piece shuru karne se pehle ek one-sentence brief likh sakta/sakti hoon.",
+      "Seedha rendering pe jump karne ke bajaye pipeline order (explore, direction lock, detail) mein piece pe kaam kar sakta/sakti hoon.",
+      "Ek finished piece ko Modules 73\u201381 ki checklists ke against honestly check karke apni sabse kamzor skill pehchan sakta/sakti hoon.",
+      "Discarded thumbnails aur alternate directions ko apne process ka hissa banake rakh aur dikha sakta/sakti hoon."
+    ],
+    nextStep: "Tumne World Building & Concept Art arc complete kar liya \u2014 ek single believable biome se lekar ek real professional process se bane poore environment piece tak. Yahan ki skills (composition, color, mood, lighting, pipeline thinking) agle jis bhi arc ko tum uthaoge, usme seedha aage kaam aayengi."
+  },
+
+  m105: {
+    hook: "Ek bird ki chest aur hips ek hi rigid unit mein fused hote hain, aur yahi wajah hai ki six-limbed dragons kabhi ud nahi sakte \u2014 wings ko poore body ko uthane ke liye ek stiff frame chahiye, aur bird ka skeleton poori tarah isi ek requirement ke around bana hai.",
+    whyItMatters: [
+      "Silhouette mein birds dhokha dene wale tareeke se simple lagte hain, isliye beginners skeleton ko poori tarah skip karke ek generic teardrop body banate hain jisme wings chipka diye jaate hain, aur wo shape kisi anjaan pose mein tik nahi paati.",
+      "Module 69 ka comparative anatomy kaam yahan seedha lagta hai: bird ka wing ek rotated, modified arm hai, aur ek baar ye mapping clear ho jaaye, to har species ke feet, beaks aur poses ek samjhe hue structure ke variations ban jaate hain, alag-alag problems nahi."
+    ],
+    coreIdea: [
+      "Bird ki <b>spine, chest aur hips ek rigid unit mein fused</b> hote hain taaki wings poore body ko ek single rigid load ki tarah utha sakein \u2014 chest aur hips ke beech lagbhag koi independent movement nahi hota, jaisa mammal mein hota hai.",
+      "<b>Feet lifestyle batate hain</b>: hooked raptor talons, patli perching toes, webbed swimming feet aur moti running toes \u2014 sab ek hi underlying bone structure hain, jo bird ke asal kaam ke hisaab se alag shape mein dhale hain.",
+      "<b>Beaks species chahe jo ho, ek simple construction method follow karte hain</b> \u2014 head ke size ka lagbhag ek circle, tip tak ek line, aur uske do-tihai hisse pe ek cut, rough beak shape block karne ke liye, refine karne se pehle.",
+      "<b>Bird ki outer shape feathers define karte hain, muscles nahi</b> \u2014 is module ka simplified muscle pass sirf feather layers ko support karne ke liye hai, mammal musculature ki tarah detail mein render karne ke liye nahi."
+    ],
+    mistakes: [
+      "Bird ki body ko ek generic teardrop ki tarah wings chipka ke draw karna, fused chest-hip skeleton ko skip karte hue jo actually uski silhouette aur movement range tay karta hai.",
+      "Har bird species ko same generic foot shape dena, foot type (raptor, perching, webbed, running) ko ye dekhe bina ki wo species asal mein kaise rehti hai.",
+      "Bird pe detailed muscle definition render karna jaise mammal ke liye karte, jabki bahar ki shape feathers banate hain, visible muscle nahi.",
+      "Beak ko ek afterthought ki tarah finished head pe chipka dena, skull ke saath hi uska basic circle-and-line structure block karne ke bajaye."
+    ],
+    proTips: [
+      "Pehle fused chest-hip unit ko ek rigid shape ki tarah block karo, phir head, wings aur legs usse attach karo \u2014 ye ek single decision posing ki zyada tar problems shuru hone se pehle hi fix kar deta hai.",
+      "Feet draw karne se pehle reference se bird ka foot type (raptor, perching, webbed, running) pehchano, ek generic bird-foot shape pe default karne ke bajaye.",
+      "Wing folding ke liye apne khud ke arm ko mental reference ki tarah use karo \u2014 ek folded wing wahi joints paas laata hai jo tumhare apne arm ko modne se paas aate hain.",
+      "Muscle pass ko simple rakho aur use feather layers ka base maano, ek rendering target nahi."
+    ],
+    practice: {
+      warmup: "Ek simplified bird skeleton draw karo, fused chest-hip unit, wing joints (shoulder, elbow, wrist) aur leg joints label karte hue.",
+      daily: "Ek bird species lo aur circle-and-line beak construction method se uska head aur beak draw karo, phir uska foot type jo us species ke jeene ke tareeke se match kare.",
+      weekly: "Ek full bird ko resting pose mein aur ek doosre pose mein partly spread wings ke saath draw karo, dono mein fused chest-hip unit aur feather-layer logic consistent rakhte hue.",
+      challenge: "Teen alag bird species (jaise ek raptor, ek perching songbird aur ek water bird) side by side draw karo, dikhate hue ki wahi ek skeleton alag feet, beaks aur proportions kaise produce karta hai."
+    },
+    quiz: [
+      {q:"Bird ki chest aur hips ek unit mein fused kyun hote hain?", options:["Iska koi functional purpose nahi, bas evolution ka natija hai","Taaki wings poore body ko ek single rigid load ki tarah utha sakein","Chest aur hips ke beech zyada independent movement ke liye","Sirf flightless birds mein ye fusion hota hai"], correct:1, explain:"Fused chest-hip unit wings ko poore body pe ek rigid structure ki tarah kaam karne deta hai, jo lift generate karne ke liye zaroori hai \u2014 iske bina powered flight us tareeke se kaam nahi karti."},
+      {q:"Raptor, perching, webbed aur running bird feet ke beech ke farak ko kya tay karta hai?", options:["Alag species ke bones ka bilkul alag structure hota hai","Wahi underlying bone structure, jo har bird ke jeene ke tareeke ke hisaab se alag shape mein dhala hota hai","Foot type random hai aur lifestyle se unrelated","Sirf flightless birds ke alag foot types hote hain"], correct:1, explain:"Sabhi bird feet ka underlying bone structure same hota hai; shape ke farak (hooked talons, patli toes, webbing) ye dikhate hain ki har species asal mein kya karti hai, alag skeleton nahi."},
+      {q:"Bird ki outer silhouette primarily kya define karta hai?", options:["Mammals ki tarah visible muscle definition","Feathers, jo ek simplified muscle base ke upar layer hote hain","Akela skeleton, bina kisi soft tissue ke","Skin ke neeche fat deposits"], correct:1, explain:"Bird ki outer shape visible muscle nahi, feathers define karte hain \u2014 is module ka muscle pass isliye simple rakha gaya hai kyunki wo feather layers ko support karne ke liye hai, mammal jaisi detail mein render hone ke liye nahi."}
+    ],
+    checklist: [
+      "Bird ki chest aur hips ko ek fused, rigid unit ki tarah construct karta/karti hoon, alag, independently moving masses ki tarah nahi.",
+      "Foot type (raptor, perching, webbed, running) ko ek specific bird species ke jeene ke tareeke se match karta/karti hoon.",
+      "Beak ke basic structure ko refine karne se pehle circle-and-line method se block karta/karti hoon.",
+      "Muscle rendering ko simple rakhta/rakhti hoon, use feather layers ka base maante hue, mammal-style rendering target nahi."
+    ],
+    nextStep: "Skeleton, feet aur beak ka logic establish hone ke baad, agla module us cheez pe aata hai jo zyada tar artists ke liye birds ko genuinely mushkil banati hai: khud wings, flight mein."
+  },
+
+  m106: {
+    hook: "Poori tarah khula hua wing aur body se chipka hua folded wing ek hi skeleton hain \u2014 shoulder, elbow, wrist, fingers, bilkul tumhare apne arm ki tarah \u2014 bas alag angle pe uthaye hue, aur isi wajah se folded wings un artists ko uljha dete hain jinhone pehle joints map nahi kiye.",
+    whyItMatters: [
+      "Wings beginners ke flight mein birds draw karne se bachne ki sabse badi wajah hain: feather shapes complex lagti hain, aur neeche ke joint logic ke bina har flight pose ek samjhe hue mechanism ka variation banne ke bajaye ek naya guess ban jaata hai.",
+      "Ek baar wing ko ek rotated arm ki tarah samajh liya jaaye jisme teen joint zones hain (shoulder, elbow, wrist-to-fingertip), to kisi bhi flight pose mein use extend, fold aur angle karna memorization ki nahi, construction ki problem ban jaata hai."
+    ],
+    coreIdea: [
+      "Wing ke <b>teen joint zones</b> insaan ke arm se match karte hain: shoulder (fused chest unit se juda), elbow (aage ki taraf bend hota hua), aur wrist-to-fingertip section (jo sabse lambe flight feathers carry karta hai).",
+      "<b>Flight feathers naam wale, overlapping groups mein organize hote hain</b> \u2014 primaries wingtip pe ('hand' se jude), secondaries inner wing ke along ('forearm' se jude), aur coverts shoulder ke paas upar layer hote hue \u2014 identical feathers ki ek uniform fringe nahi.",
+      "<b>Wing fold karne par wahi teen joint zones paas aa jaate hain</b>, bilkul apne arm ko modne ki tarah, isliye folded wing ki silhouette ek bilkul alag shape nahi, balki chhoti aur zyada compact hoti hai.",
+      "<b>Wing ki shape flight style reflect karti hai</b>: lambe, patle wings soaring aur gliding ke liye, chhote, chaude wings tez bursts aur maneuvering ke liye \u2014 wahi teen-joint skeleton, hawa mein bird ko asal mein jo karna hai uske hisaab se alag proportions mein."
+    ],
+    mistakes: [
+      "Wing feathers ko identical fringe ki tarah draw karna, un distinct, overlapping primary, secondary aur covert groups ki jagah jo ek real wing ko structure dete hain.",
+      "Folded wing ko extended wing se poori tarah alag shape maanna, wahi teen-joint skeleton ko bas paas laaye hue ki jagah.",
+      "Wing proportion karte waqt flight style ignore karna, fast-maneuvering bird ko soaring species ke layak lamba, patla wing dena, ya iska ulta.",
+      "Neeche ka joint skeleton chhod ke seedha feather shapes draw karna, jisse ek wing ek angle se plausible lagta hai par kisi bhi doosre pose mein bikhar jaata hai."
+    ],
+    proTips: [
+      "Ek bhi feather add karne se pehle teen joint zones (shoulder, elbow, wrist-to-fingertip) block karo, apne khud ke arm ko physical reference ki tarah use karke.",
+      "Feathers ko unke real anatomical zones ke hisaab se group karo (primaries tip pe, secondaries inner wing ke along, coverts shoulder ke paas layer), ek generic fringe draw karne ke bajaye.",
+      "Same wing skeleton ko poses ke ek sequence mein fold aur extend karne ki practice karo, check karte hue ki teeno joints poore time consistent rahein.",
+      "Flight pose finalize karne se pehle wing proportions (lambe-patle versus chhote-chaude) ko us specific bird ke flight style se match karo."
+    ],
+    practice: {
+      warmup: "Ek wing skeleton teen joint zones mein (shoulder, elbow, wrist-to-fingertip) fully extended draw karo, apne khud ke arm ko reference ki tarah use karke.",
+      daily: "Same wing skeleton ko folded position mein draw karo, phir extended version ke upar teen main feather groups (primaries, secondaries, coverts) add karo.",
+      weekly: "Ek bird ko teen wing positions mein draw karo \u2014 fully extended, half-folded aur fully folded \u2014 teeno mein joint skeleton aur feather groups consistent rakhte hue.",
+      challenge: "Alag flight styles wale do birds (jaise ek soaring raptor aur ek fast-maneuvering songbird) mid-flight draw karo, har ek ka wing uski asli flight style se match karte hue proportion karke."
+    },
+    quiz: [
+      {q:"Bird ke wing ke kitne main joint zones insaan ke arm se match karte hain?", options:["Ek, sirf shoulder","Teen: shoulder, elbow aur wrist-to-fingertip","Paanch, har finger alag-alag match karta hua","Koi nahi, wings ka bilkul alag structure hota hai"], correct:1, explain:"Wing insaan ke arm ke saath teen joint zones share karta hai: shoulder, elbow aur wrist-to-fingertip section jo sabse lambe flight feathers carry karta hai."},
+      {q:"Flight feathers wing pe asal mein kaise organize hote hain?", options:["Identical feathers ki ek uniform fringe ki tarah","Naam wale, overlapping groups mein: primaries tip pe, secondaries inner wing ke along aur coverts shoulder ke paas","Randomly, bina kisi consistent grouping ke","Sirf wing ke bilkul edge ke along"], correct:1, explain:"Flight feathers distinct, overlapping groups mein organize hote hain \u2014 primaries wingtip pe, secondaries inner wing ke along aur coverts shoulder ke paas layer \u2014 ek uniform fringe nahi."},
+      {q:"Kya tay karta hai ki kisi bird ke lambe, patle wings honge ya chhote, chaude wings?", options:["Random variation jiska koi functional karan nahi","Bird ki flight style \u2014 soaring/gliding versus tez bursts aur maneuvering","Sabhi birds ke wing proportions identical hote hain","Sirf bird ka size, uska behavior nahi"], correct:1, explain:"Wing ki shape flight style reflect karti hai: lambe, patle wings soaring aur gliding ke liye, chhote, chaude wings tez, maneuverable flight ke liye \u2014 wahi teen-joint skeleton, bird ki asli zaroorat ke hisaab se proportion kiya hua."}
+    ],
+    checklist: [
+      "Wing ko insaan ke arm ke saath share hone wale teen joint zones (shoulder, elbow, wrist-to-fingertip) se construct karta/karti hoon.",
+      "Flight feathers ko generic fringe ke bajaye unke real anatomical groups (primaries, secondaries, coverts) mein organize karta/karti hoon.",
+      "Same wing skeleton ko alag poses mein consistently fold aur extend kar sakta/sakti hoon.",
+      "Wing ki shape ko bird ki asli flight style se match karke proportion karta/karti hoon."
+    ],
+    nextStep: "Hawa se ab arc paani mein jaata hai \u2014 agla module wahi construction logic fish aur marine mammals pe lagata hai, jahan locomotion bilkul alag principles pe kaam karti hai."
   }
 
 };
