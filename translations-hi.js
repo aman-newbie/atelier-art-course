@@ -3656,6 +3656,94 @@ const TRANSLATIONS_HI = {
       "Wing ki shape ko bird ki asli flight style se match karke proportion karta/karti hoon."
     ],
     nextStep: "Hawa se ab arc paani mein jaata hai \u2014 agla module wahi construction logic fish aur marine mammals pe lagata hai, jahan locomotion bilkul alag principles pe kaam karti hai."
+  },
+
+  m107: {
+    hook: "Ek fish aur ek dolphin same S-curve body motion se tairte hain, par ek side to side bend hota hai aur doosra up and down \u2014 'fish' aur 'marine mammal' ki locomotion ka poora farak usi ek axis pe aa jaata hai.",
+    whyItMatters: [
+      "Aquatic creatures is arc ki locomotion coverage ka aakhri bada gap hain \u2014 zameen aur hawa ab cover ho chuki hain, aur paani ek aisi propulsion axis laata hai jo na zameen se seedha transfer hoti hai na hawa se.",
+      "Fish aur marine mammals ko aksar stiff, static silhouettes ki tarah draw kiya jaata hai kyunki unki underlying motion (body ke along travel karti S-curve) un artists ke liye kam intuitive hai jo legged ya winged locomotion ke aadi hain."
+    ],
+    coreIdea: [
+      "Ek fish ka poora body <b>ek continuous S-curve ki tarah head se tail tak travel karta hai</b>, side to side (laterally) bend hote hue \u2014 tail fin us curve ki aakhri kadi hai, koi alag paddle nahi.",
+      "<b>Marine mammal ulte tareeke se bend hota hai</b>: up aur down (dorsally), kyunki uski spine un land-mammal ancestors se evolve hui hai jinki spine daudte waqt pehle se isi tarah bend hoti thi \u2014 isi liye dolphin ka tail fin (fluke) horizontal hota hai jabki fish ka tail fin vertical.",
+      "<b>Fins functionally position hote hain</b>, decorative taur pe nahi: dorsal fins rolling ke against stabilize karte hain, pectoral fins steer aur brake karte hain, aur tail (caudal) fin asli forward thrust deta hai.",
+      "<b>Body proportion swimming style batata hai</b>: torpedo-shaped body sustained fast swimming ke liye, aur flattened ya elongated body seafloor ke paas ya tang jagahon mein maneuvering ke liye."
+    ],
+    mistakes: [
+      "Fish ya marine mammal ko ek seedhi, static line mein draw karna, us continuous S-curve ke bajaye jo asal mein uski swimming motion chalati hai.",
+      "Marine mammal ko fish ki tarah vertical tail fin dena, us horizontal fluke ke bajaye jo uski up-and-down spine motion se aata hai, ya fish ke liye iska ulta.",
+      "Fins ko generic ya decorative jagahon pe rakhna, unke actual functional roles (stability ke liye dorsal, steering ke liye pectoral, thrust ke liye caudal) ke bajaye.",
+      "Har aquatic creature ke liye same body proportions use karna, chahe wo sustained speed ke liye bana ho ya close maneuvering ke liye."
+    ],
+    proTips: [
+      "Pehle travel karti S-curve ko ek single flowing line ki tarah sketch karo, phir uske around body build karo, ek seedha body draw karke baad mein use bend karne ke bajaye.",
+      "Kisi bhi aquatic creature ka tail draw karne se pehle decide karo ki wo fish hai (lateral bend, vertical tail) ya marine mammal (dorsal bend, horizontal fluke) \u2014 ye ek decision poori silhouette tay kar deta hai.",
+      "Fins ko pehle function ke hisaab se place karo: stability (dorsal), steering aur braking (pectoral), thrust (caudal), phir unki shape refine karo.",
+      "Pose finalize karne se pehle body proportion ko swimming style se match karo \u2014 speed ke liye torpedo-shaped, maneuvering ke liye flatter ya zyada elongated."
+    ],
+    practice: {
+      warmup: "Ek single flowing S-curve line draw karo, phir uske around ek simple fish body banao jiske end pe ek vertical tail fin ho.",
+      daily: "Wahi S-curve exercise ek marine mammal ke liye draw karo, dorsal (up-and-down) bend aur horizontal fluke ke saath.",
+      weekly: "Ek fish aur ek marine mammal ko mid-swim poses mein side by side draw karo, dono pe dorsal, pectoral aur caudal fins function ke hisaab se place karte hue.",
+      challenge: "Ek hi species ka ek chhota school ya pod swimming cycle ke thode-thode alag points pe draw karo, sab mein S-curve motion consistent rakhte hue."
+    },
+    quiz: [
+      {q:"Fish aur marine mammal ki swimming motion mein buniyadi farak kya hai?", options:["Dono mein koi real farak nahi hai","Fish side to side (laterally) bend hote hain, marine mammals up aur down (dorsally)","Marine mammals side to side bend hote hain, fish up aur down","Sirf fish hi S-curve motion use karte hain"], correct:1, explain:"Fish lateral (side-to-side) S-curve se aage badhte hain, jabki marine mammals land-mammal ancestors se mili dorsal (up-and-down) bend use karte hain."},
+      {q:"Dolphin ka tail fin (fluke) horizontal aur fish ka tail fin vertical kyun hota hai?", options:["Ye ek random farak hai jiska koi functional karan nahi","Ye seedha har animal ki alag bending axis \u2014 dorsal versus lateral \u2014 se nikalta hai","Dolphins fish se evolve hue the aur unhone wahi tail orientation rakhi","Tail fin orientation ka swimming motion se koi lena dena nahi"], correct:1, explain:"Fish ka vertical tail fin uski lateral (side-to-side) bending motion se aata hai, jabki marine mammal ka horizontal fluke uski dorsal (up-and-down) bending motion se."},
+      {q:"Dorsal fin ka functional role kya hai?", options:["Main forward thrust dena","Body ko rolling ke against stabilize karna","Sirf steering aur braking","Purely decorative, koi functional role nahi"], correct:1, explain:"Dorsal fin ka main functional role body ko rolling ke against stabilize karna hai, jabki caudal (tail) fin thrust deta hai aur pectoral fins steering aur braking sambhalte hain."}
+    ],
+    checklist: [
+      "Aquatic creatures ko ek seedhi, static line ke bajaye ek continuous, travel karti S-curve ke around build karta/karti hoon.",
+      "Tail fin ki orientation (vertical ya horizontal) ko sahi match karta/karti hoon ki creature fish hai ya marine mammal.",
+      "Fins ko unke asli function ke hisaab se place karta/karti hoon (stability ke liye dorsal, steering ke liye pectoral, thrust ke liye caudal).",
+      "Creature ki body proportion ko uski swimming style se match karta/karti hoon, chahe wo speed ke liye bana ho ya close maneuvering ke liye."
+    ],
+    nextStep: "Zameen, hawa aur paani ab teeno cover ho chuke hain \u2014 is batch ka aakhri module animal kingdom ke sabse chhote aur sabse varied creatures pe jaata hai: insects aur arthropods."
+  },
+
+  m108: {
+    hook: "Ek insect ke andar koi skeleton nahi hota \u2014 bahar jo hard shell dikhta hai wahi skeleton hai, armor ki tarah pehna hua, jo is arc mein ab tak cover kiye gaye har vertebrate ke bilkul ulta hai.",
+    whyItMatters: [
+      "Insects aur arthropods is poore arc ke structurally sabse alag creatures hain: ek exoskeleton, chhe legs aur teen-part body plan ab tak cover kiye gaye internal-skeleton vertebrates se lagbhag kuch bhi share nahi karte.",
+      "Beginners aksar insects ko soft, blobby shapes ki tarah legs chipka ke draw karte hain, jabki asli defining feature \u2014 teen-part body ko dhakne wali hard, jointed plates \u2014 wahi cheez hai jo ek insect ko cartoon bug ki jagah insect jaisa read karwati hai."
+    ],
+    coreIdea: [
+      "Ek insect ki body ek <b>exoskeleton</b> se bani hoti hai: bahar hard, jointed plates, aur andar koi bones nahi \u2014 is arc mein pehle cover kiye har animal ke bilkul ulta structural approach.",
+      "Har true insect ki body <b>teen parts</b> mein baanti hoti hai: head, thorax (jo saari chhe legs aur koi bhi wings carry karta hai) aur abdomen \u2014 ye teen-part division true insects ko doosre arthropods se pehchanne ka sabse tez tareeka hai.",
+      "<b>Chhe legs thorax se judti hain, abdomen se nahi</b>, aur har leg khud hard, jointed segments ki ek chain hai \u2014 wahi jointed-plate logic jo baaki exoskeleton ka hai, bas patla.",
+      "<b>Sabhi arthropods insects nahi hote</b>: spiders ki aath legs aur sirf do body sections hote hain (alag head nahi), jo ek structurally alag plan hai jise pehchanna chahiye, har kai-pairon wale creature ko 'basically ek insect' maanne ke bajaye."
+    ],
+    mistakes: [
+      "Insect ki body ko ek soft, undivided blob ki tarah draw karna, un teen distinct sections (head, thorax, abdomen) ki jagah jo asal mein insect anatomy define karte hain.",
+      "Legs ko thorax ki jagah abdomen se attach karna, ya unhe bina ye dekhe ki wo body se actually kahan judti hain, bikher dena.",
+      "Exoskeleton ko hard, jointed plates ki jagah smooth, soft skin ki tarah render karna, wo armored quality kho dete hue jo insects ko soft-bodied creatures se alag karti hai.",
+      "Har arthropod (spiders samet, jinke aath legs aur do body sections hote hain) ko aise treat karna jaise wo sab ek hi chhe-legged, teen-part insect body plan follow karte hon."
+    ],
+    proTips: [
+      "Legs, wings ya surface detail add karne se pehle teen body sections (head, thorax, abdomen) ko alag hard shapes ki tarah block karo.",
+      "Saari chhe legs ko specifically thorax se attach karo, aur har leg ko ek single smooth line ki jagah jointed segments ki chain ki tarah draw karo.",
+      "Exoskeleton ki surface ko hard edges aur visible segment lines se render karo, skin ya fur ke liye use hone wali soft shading se nahi.",
+      "Kisi bhi arthropod ko draw karne se pehle legs aur body sections gino taaki confirm ho ki wo true insect hai (chhe legs, teen sections) ya spider jaisa koi doosra arthropod (aath legs, do sections)."
+    ],
+    practice: {
+      warmup: "Ek simplified insect body teen clear sections (head, thorax, abdomen) mein draw karo, phir thorax se chhe legs attach karo.",
+      daily: "Ek insect species lo aur uska exoskeleton smooth shading ki jagah hard, jointed plate edges ke saath render karo.",
+      weekly: "Ek true insect (chhe legs, teen sections) aur ek non-insect arthropod jaise spider (aath legs, do sections) side by side draw karo, structural farak clearly dikhate hue.",
+      challenge: "Ek insect ko dynamic pose mein (udte, kudte ya chadhte hue) draw karo, poori motion mein teen-section body plan aur jointed leg structure consistent rakhte hue."
+    },
+    quiz: [
+      {q:"Structurally dekhein to ek insect ka exoskeleton kya hai?", options:["Internal bones ko dhakne wali ek soft outer layer","Ek hard, jointed shell jo khud skeleton ka kaam karta hai, andar koi bones nahi","Ek optional, decorative outer layer","Vertebrate ke internal skeleton jaisa hi structure, bas dusri jagah rakha hua"], correct:1, explain:"Ek insect ke andar koi skeleton nahi hota \u2014 bahar ka hard, jointed shell (exoskeleton) hi skeleton hai, vertebrates ke bilkul ulta structural approach."},
+      {q:"Ek true insect ki chhe legs kahan attach hoti hain?", options:["Abdomen","Thorax","Head","Legs teeno body sections mein barabar baanti hoti hain"], correct:1, explain:"Ek true insect ki saari chhe legs thorax se attach hoti hain, jo teen body sections (head, thorax, abdomen) mein beech wala hissa hai."},
+      {q:"Spider ka body plan true insect se kaise alag hai?", options:["Koi farak nahi, spiders bas bade insects hain","Spiders ki aath legs aur do body sections hote hain, jabki true insects ki chhe legs aur teen sections","Spiders ki insects ki tarah chhe legs hoti hain, par zyada body sections","Spiders ke insects ki tarah teen body sections hote hain, par das legs"], correct:1, explain:"Spiders ki aath legs aur sirf do body sections hote hain (alag head nahi), jo ek true insect ke chhe-legged, teen-section body se structurally alag plan hai."}
+    ],
+    checklist: [
+      "Insect ki body ko teen clear sections mein construct karta/karti hoon: head, thorax aur abdomen.",
+      "Saari chhe legs ko thorax se attach karta/karti hoon, jointed segments ki chains ki tarah banake.",
+      "Exoskeleton ko soft skin-jaisi shading ke bajaye hard, jointed plate edges se render karta/karti hoon.",
+      "Draw karne se pehle true insects (chhe legs, teen sections) ko spiders jaise doosre arthropods (aath legs, do sections) se alag pehchanta/pehchanti hoon."
+    ],
+    nextStep: "Zameen, hawa, paani aur ab insects ki exoskeleton wali duniya ka comparative anatomy cover ho chuka hai. Arc ka agla batch original creature design pe jaata hai \u2014 ab tak seekhi har cheez ko invented, believable creatures mein combine karna."
   }
 
 };
