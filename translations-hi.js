@@ -3744,6 +3744,147 @@ const TRANSLATIONS_HI = {
       "Draw karne se pehle true insects (chhe legs, teen sections) ko spiders jaise doosre arthropods (aath legs, do sections) se alag pehchanta/pehchanti hoon."
     ],
     nextStep: "Zameen, hawa, paani aur ab insects ki exoskeleton wali duniya ka comparative anatomy cover ho chuka hai. Arc ka agla batch original creature design pe jaata hai \u2014 ab tak seekhi har cheez ko invented, believable creatures mein combine karna."
+  },
+
+  m83: {
+    hook: "Digital art software pehli baar mein kisi alag-alag alien cockpit jaisa lagta hai \u2014 par menus ke neeche sab ek hi chhote se concepts ke set se bane hain, aur ek baar unhe pehchaan liya to har jagah dikhne lagte hain.",
+    whyItMatters: [
+      "Ye module (aur ye poora arc) jaanbujh kar software-agnostic hai: tum Krita, Clip Studio Paint, Procreate ya Photoshop kuch bhi use karo, neeche ke workspace concepts \u2014 canvas, panels, layers, tools \u2014 wahi hain. Concepts ek baar seekh lo to har naya software bas purani cheezein nayi jagah dhoondhne ka kaam ban jaata hai, zero se seekhna nahi.",
+      "Cluttered, default aur anjaan interface beginners ke ek bhi line draw karne se pehle hi overwhelm ho jaane ki sabse common wajahon mein se ek hai. Jo workspace tumne soch-samajh ke aisa set kiya ho ki sirf wahi dikhe jo tum sach mein use karte ho, wo ye friction hata deta hai aur menus mein bhatakne ke bajaye drawing pe focus karne deta hai."
+    ],
+    coreIdea: [
+      "Har digital art application ek hi core pieces ke around bani hai: ek canvas (jahan draw karte ho), tools ka ek set (brush, eraser, selection, fill), ek layers panel (ek ke upar ek rakhi, independently editable sheets) aur ek color picker \u2014 kisi bhi naye software mein ye chaar cheezein dhoondhna seekh lo to tum uske zyada tar kaam ke ho jaate ho.",
+      "Pehle din har menu yaad karne ki zaroorat nahi. Blank canvas pe ek mark banane ke liye jo minimum chahiye bas wahi configure karo \u2014 canvas size set karo, ek default brush chuno, confirm karo ki ek layer hai \u2014 aur aur features tabhi seekho jab koi specific problem aaye jo basics solve na kar sakein.",
+      "Default workspace mein aksar aise panels bhare hote hain jo tum shayad hi kabhi use karoge. Zyada tar working artists apna workspace sirf kuch panels tak trim kar lete hain jinhe wo baar baar dekhte hain \u2014 aam taur pe layers, color aur brush settings \u2014 aur use apne custom layout ki tarah save kar lete hain.",
+      "Ye concepts seekhne ke liye mehenge hardware ki zaroorat nahi. Ek budget entry-level tablet aur free software (jaise Krita) wahi underlying skills sikhate hain jo professional setup sikhata hai \u2014 tool tab limiting factor banta hai bahut baad mein, jab tumhe pehle se pata ho ki tum kya kar rahe ho."
+    ],
+    mistakes: [
+      "Blank canvas kholkar ek mark banane se pehle 'best' software, brush ya settings ki research mein bahut zyada time lagana \u2014 research progress jaisi lagti hai par practice ke barabar nahi hoti.",
+      "Har default panel khula aur visible chhod dena, jisse itna visual clutter ho jaata hai ki wo kuch tools dhoondhna mushkil ho jaata hai jo tum asal mein baar baar use karte ho.",
+      "Ye maan lena ki drawing shuru karne se pehle har menu aur feature seekhna zaroori hai, bare minimum configure karke specific problems aane par aur seekhne ke bajaye.",
+      "Ye maanna ki behtar ya mehenga hardware abhi ki rukavat hai, jabki zyada tar cases mein ek basic setup ke saath consistent practice kahin zyada improvement deti.",
+      "Layers se anjaan hone ki wajah se sab kuch ek hi layer pe draw karna, jisse color ya line work add karte waqt sketch ko galti se kharab kar dena aasan ho jaata hai."
+    ],
+    proTips: [
+      "Kisi bhi naye software mein pehle sirf ye chaar cheezein dhoondho aur kuch nahi: canvas, brush tool, layers panel aur color picker. Itna draw karna shuru karne ke liye kaafi hai.",
+      "Sirf wahi panels rakhkar ek custom workspace layout banao aur save karo jo tum asal mein use karte ho (aam taur pe layers, color, brush), taaki har session mein clutter mein na dhoondhna pade.",
+      "Khud ke liye ek five-drawing rule rakho: apne current setup pe kam se kam paanch finished drawings complete karne aur ek specific, real problem hone tak 'behtar' brush, software ya setting ki research mat karo.",
+      "Apne pehle pieces ke liye default round brush aur ek basic three-layer structure (sketch, line, color) use karo \u2014 jab tak koi specific limitation na aaye, kuch aur advanced chahiye hi nahi."
+    ],
+    practice: {
+      warmup: "Apna chuna hua software kholo, ek blank canvas set up karo, aur bina tutorial follow kiye chaar core cheezein (canvas, brush tool, layers panel, color picker) dhoondho.",
+      daily: "20\u201330 minute sirf default round brush aur ek basic three-layer setup (sketch, line, color) se draw karo \u2014 koi naya tool ya setting nahi.",
+      weekly: "Apna workspace layout customize karo: hafte bhar jo panels use nahi kiye unhe hata do aur result ko apne default ki tarah save karo.",
+      challenge: "Ek chhoti drawing sirf ek single layer pe aur bina undo ke complete karo, taaki mehsoos ho ki layers aur undo aam taur pe tumhe kitna farak dete hain."
+    },
+    quiz: [
+      {q:"Is module ke hisaab se lagbhag har digital art application mein kaunse chaar core pieces hote hain?", options:["Filters, plugins, presets aur templates","Canvas, tools, layers panel aur color picker","Export settings, cloud sync, subscriptions aur updates","Text tool, shape tool, gradient tool aur crop tool"], correct:1, explain:"Ye chaar core pieces \u2014 canvas, tools, layers panel aur color picker \u2014 lagbhag har digital art application mein hote hain, isi liye inhe ek baar seekhna alag-alag software mein transfer ho jaata hai."},
+      {q:"Module ke hisaab se, naye software mein pehle drawing session se pehle kya configure karna chahiye?", options:["Har available menu aur setting","Sirf wahi minimum jo blank canvas pe ek mark banane ke liye chahiye","Internet se download kiya custom brush pack","Premium features ka subscription"], correct:1, explain:"Recommended approach hai sirf bare minimum configure karna \u2014 canvas size, ek default brush, ek layer \u2014 aur aur features tabhi seekhna jab koi specific problem unki zaroorat bataye."},
+      {q:"Default workspace ko kuch key panels tak trim karne ki salah kyun di jaati hai?", options:["Software license ke liye ye required hai","Cluttered default interface un kuch tools ko dhoondhna mushkil kar deta hai jo tum asal mein baar baar use karte ho","Isse file size chhota ho jaata hai","Extra panels computer ko kaafi dheema kar dete hain"], correct:1, explain:"Zyada tar working artists apna workspace sirf kuch frequently-used panels (jaise layers, color aur brush) dikhane ke liye customize karte hain, default layout ka visual clutter hata dete hue."},
+      {q:"Beginner ke pehle digital drawings ke liye recommended basic three-layer structure kya hai?", options:["Background, midground, foreground","Sketch, line, color","Highlights, shadows, midtones","Text, image, effects"], correct:1, explain:"Ek simple starting structure \u2014 sketch layer, clean line layer aur color layer \u2014 beginner ko advanced layer setup ki zaroorat ke bina drawing ke stages alag rakhne deta hai."},
+      {q:"Digital art seekhna shuru karne ke liye mehenge hardware ki zaroorat ke baare mein module kya kehta hai?", options:["Mehenga hardware pehle din se zaroori hai","Ek budget entry-level tablet aur free software wahi underlying skills sikhate hain jo professional setup","Hardware ka seekhne pe koi asar hi nahi hota","Beginners ke liye sirf screen wale tablets (pen displays) hi use ho sakte hain"], correct:1, explain:"Module ka tark hai ki ek basic, sasta tablet aur free software mehenge professional equipment jaisi hi underlying skills seekhne ke liye kaafi hain, jo bahut baad mein hi limiting factor banta hai."}
+    ],
+    checklist: [
+      "Kisi naye digital art software mein canvas, brush tool, layers panel aur color picker dhoondh sakta/sakti hoon.",
+      "Ek drawing ke liye basic three-layer structure (sketch, line, color) set up kar sakta/sakti hoon.",
+      "Cluttered default workspace ko sirf un panels tak trim kar sakta/sakti hoon jo main asal mein use karta/karti hoon.",
+      "Pehle zyada research kiye bina drawing shuru karne ke liye minimum settings configure kar sakta/sakti hoon."
+    ],
+    nextStep: "Ab tum kisi bhi digital art software ke core workspace mein navigate kar sakte ho. Module 84 primary input device ke andar jaata hai \u2014 drawing tablets, pressure sensitivity, aur ek flat surface pe pen chalate hue screen dekhne ka specific hand-eye adjustment."
+  },
+
+  m84: {
+    hook: "Tablet pe pehli baar draw karte waqt tumhara haath ek flat pad pe chalta hai jabki aankhein ek bilkul alag screen dekhti hain \u2014 aur lagbhag ek hafte tak dimaag ise ek sach-much ajeeb problem ki tarah solve karta rehta hai.",
+    whyItMatters: [
+      "Aage jo bhi skill tum banaoge wo isi ek hardware se guzarti hai. Ye samajhna ki tablet asal mein kya sense karta hai \u2014 position, pressure aur kabhi kabhi tilt \u2014 aur use sahi configure kaise karte hain, yahi tay karta hai ki tumhari lines natural lagengi ya har waqt tumse ladengi.",
+      "Beginner ki frustrating, tirchi ya unpredictable lines ki sabse common wajah skill ki kami nahi hoti \u2014 wo ek unconfigured tablet hota hai: galat area mapping, uncalibrated pressure curve ya missing driver. Hardware layer pehle theek karne se tumhara practice time drawing skill banane mein lagta hai, tool se ladne mein nahi."
+    ],
+    coreIdea: [
+      "Tablet teen cheezein track karta hai: position (pen kahan hai), pressure (tum kitna dabate ho, aam taur pe 2,048+ levels) aur kai tablets pe tilt (surface ke relative pen ka angle). Rozmarra mein pressure sabse zyada matter karta hai, kyunki ye lagbhag har brush mein line thickness aur opacity ko seedha drive karta hai.",
+      "Tablet area mapping tumhare monitor ke aspect ratio se match honi chahiye, warna tumhara bana circle screen pe oval ban jaata hai. Ye ek aasan, jab tak pata na ho tab tak dikhne wala nahi setup step hai jo 'meri lines off lag rahi hain' wali frustration ka bahut bada hissa fix kar deta hai.",
+      "Pressure curve (kitna physical force kitna digital effect banata hai) tablet driver aur tumhare software dono mein adjust ho sakti hai, aur zyada tar factory defaults ko natural se zyada pressure chahiye \u2014 curve ko soft karne se lines aam taur pe turant zyada responsive lagti hain.",
+      "Screenless tablet pe draw karne ka hand-eye disconnect (flat surface pe haath chalana jabki ek alag monitor dekhna) ek real, temporary adjustment hai jise zyada tar log ek-do hafte ki consistent, chhoti daily practice ke andar consciously notice karna band kar dete hain \u2014 ye is baat ka sign nahi ki tum galat tool use kar rahe ho."
+    ],
+    mistakes: [
+      "Driver installation skip karna, jisse tablet sirf basic cursor movement tak simit reh jaata hai, pressure sensitivity, tilt detection ya shortcut button support ke bina.",
+      "Tablet area mapping kabhi check ya correct na karna, isliye circles oval aate hain aur lines bina kisi obvious wajah ke thodi galat lagti hain.",
+      "Sirf do-teen sessions ke baad tool ko 'mere liye nahi hai' maan lena, jabki normal hand-eye adjustment period consistent practice ke ek-do hafte ke kareeb hota hai.",
+      "Factory-default pressure curve ko jyon ka tyon chhod dena jab wo bahut stiff lage, driver panel mein use natural hand pressure se match karne ke liye soft karne ke bajaye.",
+      "Pressure control confident aur automatic lagne se pehle hi tilt-sensitive brushes aur advanced features ko priority dena, jisse dhyan ek saath bahut saare variables mein bikhar jaata hai."
+    ],
+    proTips: [
+      "Apni pehli asli drawing session se pehle driver panel mein tablet ka active area monitor ke aspect ratio pe lock kar do \u2014 ye ek single setting 'meri lines off lag rahi hain' wali frustration ka bahut bada hissa rok deti hai.",
+      "Agar lines unresponsive lagein ya bahut force maangein, to maan lene ke bajaye ki tablet hi problem hai, driver ki pressure curve settings kholkar use 'soft' ki taraf le jao.",
+      "Bilkul shuruaati sessions mein asli artwork skip karo aur bas alag-alag sizes ki lambi seedhi lines, smooth curves aur circles draw karo \u2014 pure hand-eye calibration, finished pictures nahi.",
+      "Stylus ko mouse ki tarah nahi, pen ki tarah pakdo, aur lambi, smoother strokes ke liye sirf wrist se nahi, shoulder aur elbow se chalo."
+    ],
+    practice: {
+      warmup: "Apne poore canvas pe 20 seedhi lines aur 20 smooth curves draw karo, sirf control pe focus karte hue, kuch achha dikhane pe nahi.",
+      daily: "20\u201330 minute sirf default brush se simple shapes aur lines draw karo, dhyan dete hue ki pressure se line ki thickness kaise badalti hai.",
+      weekly: "Apne tablet ki area mapping aur pressure curve check karo aur zaroorat ho to sahi karo, phir ek simple finished sketch draw karke compare karo ki adjustment se pehle kaisa feel hota tha.",
+      challenge: "Ek hi simple shape (spiral, wave) lagatar 10 baar draw karo, har baar pichli se zyada smooth aur consistent banane ki koshish karte hue, sirf wrist nahi, poore arm ki movement se."
+    },
+    quiz: [
+      {q:"Drawing tablet primarily kaunsi teen cheezein track karta hai?", options:["Color, brightness aur contrast","Position, pressure aur (kai tablets pe) tilt","File size, resolution aur DPI","Layer count, blend mode aur opacity"], correct:1, explain:"Drawing tablet pen ki position (hover samet), tum kitna dabate ho (pressure sensitivity) aur kai models pe pen ka angle (tilt) sense karta hai."},
+      {q:"Tablet ki active area ko monitor ke aspect ratio se sahi map karna kyun important hai?", options:["Drawing quality pe iska koi real asar nahi hota","Mismatch hone par circles jaise shapes screen pe skewed ovals ban jaate hain","Ye sirf wireless tablets ki battery life affect karta hai","Ye tablet ke pressure sensitivity levels badal deta hai"], correct:1, explain:"Agar tablet ka physical drawing area monitor ke aspect ratio se proportionally match na kare, to screen pe shapes distort ho jaate hain, jo 'meri lines off lag rahi hain' ki ek common, dikhne wali nahi wajah hai."},
+      {q:"Agar lines unresponsive lagein aur bahut force maangein to recommended pehla response kya hai?", options:["Turant ek mehenga tablet kharido","Driver panel mein pressure curve ko soft karo","Mouse pe switch kar jao","Apne monitor ki brightness badhao"], correct:1, explain:"Stiff, unresponsive feel aksar default mein bahut hard set pressure curve ki wajah se hota hai; hardware ko hi problem maanne se pehle driver panel mein use soft karna recommended pehla fix hai."},
+      {q:"Module ke hisaab se, screenless drawing tablet ka hand-eye adjustment period typically kitna lagta hai?", options:["Ye kabhi khatam nahi hota","Consistent, chhoti daily practice ke lagbhag ek se do hafte","Bas ek single session","Kam se kam kai mahine"], correct:1, explain:"Zyada tar log lagbhag ek-do hafte ki consistent practice ke baad hand-eye disconnect ko consciously notice karna band kar dete hain \u2014 sirf do-teen sessions ke baad chhod dena tool ko judge karne ke liye bahut jaldi hai."},
+      {q:"Tilt-sensitive brushes aur advanced features explore karne se pehle module kya priority dene ki salah deta hai?", options:["Additional hardware accessories kharidna","Pehle confident, automatic pressure control banana","Har available keyboard shortcut seekhna","Kai alag tablets ke beech switch karna"], correct:1, explain:"Pressure control natural lagne se pehle tilt jaise advanced features jodne se dhyan bahut saare variables mein bikhar jaata hai; pehle pressure master karna ek zyada solid foundation deta hai."}
+    ],
+    checklist: [
+      "Drawing tablet pe position, pressure aur tilt tracking ka farak explain kar sakta/sakti hoon.",
+      "Apne tablet ki area mapping monitor ke aspect ratio se match karne ke liye check aur correct kar sakta/sakti hoon.",
+      "Agar lines bahut stiff ya unresponsive lagein to pressure curve adjust kar sakta/sakti hoon.",
+      "Hand-eye adjustment period ko galat tool ka sign nahi, ek normal aur temporary cheez ki tarah pehchan sakta/sakti hoon."
+    ],
+    nextStep: "Ab tum us hardware layer ko samajhte ho jisse tumhara haath seedha interact karta hai. Module 85 usi interaction ke software side pe jaata hai \u2014 brushes aur brush engines, aur opacity, flow aur blending jaisi settings presets ke neeche asal mein kaise kaam karti hain."
+  },
+
+  m85: {
+    hook: "Do settings jinhe tum lagbhag har stroke pe chhoge \u2014 opacity aur flow \u2014 menu mein ek jaisi dikhti hain aur behave bilkul alag karti hain, aur inhe confuse karna hi beginner ki blending ke muddy ya patchy dikhne ki sabse common wajah hai.",
+    whyItMatters: [
+      "Ab tumhare paas workspace (Module 83) aur hardware (Module 84) sort ho chuke hain \u2014 brushes tumhare haath aur image ke beech ka asli contact point hain. Brush ki core settings asal mein kya karti hain ye samajhna, presets randomly chunne ke bajaye, hi tumhe ek specific, intentional result dilata hai, tool se ladne ke bajaye.",
+      "Beginners baar baar muddy, patchy ya 'atke hue' lagne wali digital paintings ki shikayat karte hain, aur jad lagbhag hamesha kuch gine-chune brush settings \u2014 mainly opacity, flow aur hardness \u2014 ko confuse karna hoti hai, drawing skill ki kami nahi. Is samajh ko theek karne ka tumhare kaam ke finished dikhne pe bahut bada asar padta hai."
+    ],
+    coreIdea: [
+      "Opacity ek single stroke ke liye maximum color tay karti hai \u2014 pen uthate hi wo stroke us opacity pe capped ho jaata hai, chahe tumhara path khud ko kitni bhi baar cross kare, jisse stack hone par ek hard, glass-jaisi layering banti hai.",
+      "Flow tay karta hai ki paint karte waqt color kis rate se build hota hai, ek hi continuous stroke ke andar bhi \u2014 low-flow stroke bhi full opacity tak pahunch sakta hai agar tum ek hi jagah pe aage-peeche paint karo, jisse akele opacity se zyada soft, gradual, 'painterly' buildup milta hai.",
+      "Hardness brush ki edge control karti hai: hard brush crisp, clean edge deta hai jo linework aur details ke liye achha hai, jabki soft brush feathered, gradual edge deta hai jo blending aur atmosphere ke liye achha hai \u2014 dono ko poore piece ke liye ek chunne ke bajaye jaanbujh kar mix karna wahi cheez hai jispe zyada tar blending techniques bani hain.",
+      "Shuru karne ke liye bahut brushes ki zaroorat nahi. Ek single hard round brush aur ek single soft round brush, alag opacity, flow aur hardness combinations ke saath, poora finished illustration utha sakte hain \u2014 in core settings ko samajhne se pehle aur brushes ke peeche bhaagna ek common aur aasani se bachne wala trap hai."
+    ],
+    mistakes: [
+      "Opacity aur flow ko confuse karna, ya unka farak na jaanna, jisse color ko gradually blend ya build up karte waqt unpredictable results aate hain.",
+      "Poori painting ke liye ek hi hardness/opacity setting use karna, blocking in aur detail ke liye harder settings aur blending aur atmosphere ke liye softer settings ke beech deliberately switch karne ke bajaye.",
+      "Un core settings (opacity, flow, hardness) ko samajhne se pehle bahut saare alag brush packs download aur research karna jo tay karti hain ki koi bhi brush asal mein kaise behave karta hai.",
+      "Un edges ke liye bahut soft, low-opacity brush use karna jinhe clean aur crisp rehna chahiye, jisse controlled result ki jagah hazy, undefined result aata hai.",
+      "Kuch muddy koshishon ke baad blending chhod dena, ye pehchane bina ki poori painting mein hardness aur opacity ko constantly adjust karte rehna, ek perfect setting dhoondhna nahi, asli normal workflow hai."
+    ],
+    proTips: [
+      "Agar tumhe translucent color ki ek flat, capped layer chahiye to opacity kam karo. Agar ek natural, dheere-dheere build hota painterly feel chahiye to opacity high rakho aur flow kam karo.",
+      "Blending ke dauraan eyedropper tool (aam taur pe Alt/Option plus brush tool) lagatar use karo \u2014 apne canvas se seedha color uthakar uske bagal mein naya stroke paint karna zyada tar manual color blending ke peeche ki core technique hai.",
+      "General blending practice ke liye brush Hardness aur Opacity dono lagbhag 50% pe shuru karo, phir ek-ek setting ko deliberately uski extreme ki taraf le jao aur mehsoos karo ki kya badalta hai.",
+      "Pehle kuch finished pieces ke liye khud ko ek hard round brush aur ek soft round brush tak limit karo, specialty brushes explore karne se pehle \u2014 do core settings master karna brush shape se kahin zyada matter karta hai."
+    ],
+    practice: {
+      warmup: "Ek stroke 100% opacity/100% flow pe paint karo, phir ek 100% opacity/20% flow pe, phir ek 20% opacity/100% flow pe, aur compare karo ki khud ke upar wapas paint karne par har ek kaisa dikhta aur build hota hai.",
+      daily: "Do colors chuno aur unhe sirf eyedropper-aur-repaint technique se ek doosre mein blend karo, tab tak practice karo jab tak transition smooth na dikhe aur koi hard edge na rahe.",
+      weekly: "Ek chhoti study paint karo jisme construction ke liye sirf hard round brush aur blending ke liye soft round brush ho, piece ke dauraan kai baar hardness aur opacity ko jaanbujh kar switch karte hue.",
+      challenge: "Ek hi chhote color blend ko teen baar recreate karo \u2014 ek baar sirf opacity changes se, ek baar sirf flow changes se, ek baar dono mix karke \u2014 aur ek sentence likho ki har result ko control karna kaisa laga."
+    },
+    quiz: [
+      {q:"Ek single brush stroke pe opacity aur flow ke asar mein key farak kya hai?", options:["Dono bilkul ek hi setting hain, alag naam ke saath","Opacity ek stroke ki opacity ko cap karti hai chahe wo khud pe kitna overlap kare; flow ek hi continuous stroke ke andar bhi color ko dheere-dheere build hone deta hai","Flow sirf erasers ko affect karta hai, brushes ko nahi","Opacity sirf soft brushes ke saath kaam karti hai"], correct:1, explain:"Opacity ek single stroke ke liye hard ceiling tay karti hai, jabki flow tay karta hai ki color kitni gradually accumulate hota hai, tab bhi jab stroke khud pe overlap kare, jisse softer buildup milta hai."},
+      {q:"Brush hardness primarily kya control karti hai?", options:["Brush ki color saturation","Brush ki edge kitni crisp ya feathered hai","Brush kitni speed se chalta hai","Final image ka file size"], correct:1, explain:"Hardness brush ki edge quality control karti hai: hard brush crisp, clean edge deta hai, jabki soft brush feathered, gradual edge deta hai, jo ek hi piece mein alag-alag kaam ke liye useful hain."},
+      {q:"Module ke hisaab se, ek beginner ko ek poora finished illustration banane ke liye asal mein kitne brushes chahiye?", options:["Kam se kam 20 alag specialty brushes","Shayad sirf ek hard round brush aur ek soft round brush, alag settings ke saath use kiye hue","Har color ke liye ek alag brush","Sirf paid brush pack se kharide hue brushes"], correct:1, explain:"Ek single hard round brush aur ek single soft round brush, opacity, flow aur hardness mein deliberate badlav ke saath, poora finished piece utha sakte hain \u2014 in settings ko samajhne se pehle aur brushes ke peeche bhaagna ek common trap hai."},
+      {q:"Tuts+ resource mein bataya gaya core manual blending technique kya hai?", options:["Poori image pe ek single blur filter lagana","Eyedropper tool se baar baar ek stroke ki edge sample karna aur uske bagal mein naya stroke paint karna taaki colors dheere-dheere ek doosre mein fade ho jaayein","Sabhi color transitions ke liye sirf fill tool use karna","Har color ko 100% opacity aur flow pe paint karna"], correct:1, explain:"Technique mein brush tool aur eyedropper tool ke beech alternate karte hain, ek stroke ki edge sample karke uske bagal mein naya stroke paint karte hain, aur colors ke beech dheere-dheere ek smooth transition banate hain."},
+      {q:"Module ke hisaab se, poori painting mein hardness aur opacity ke saath ek common beginner mistake kya hai?", options:["Unhe piece ke dauraan bahut baar adjust karna","Poori painting ke liye ek hi hardness/opacity setting use karna, alag-alag kaam ke liye harder aur softer settings ke beech deliberately switch karne ke bajaye","Sirf hard brushes use karna, soft kabhi nahi","Eyedropper tool kabhi use na karna"], correct:1, explain:"Poori painting ke liye ek hi setting pe atke rehna ek common mistake hai; normal workflow mein blocking-in/detail ke liye harder settings aur blending ke liye softer settings ke beech lagatar deliberately switch karna shamil hai."}
+    ],
+    checklist: [
+      "Opacity aur flow ka farak apne shabdon mein explain kar sakta/sakti hoon.",
+      "Ek hi piece ke andar alag-alag kaam ke liye hard aur soft brush settings ke beech deliberately switch kar sakta/sakti hoon.",
+      "Eyedropper tool aur brush ko saath use karke do colors ko manually blend kar sakta/sakti hoon.",
+      "Sirf ek hard round brush aur ek soft round brush se ek reasonably finished piece bana sakta/sakti hoon."
+    ],
+    nextStep: "Ab tum samajhte ho ki ek single brush stroke kaise behave karta hai. Module 86 ek stroke se poori image pe jaata hai \u2014 layers, aur layer level pe stacking, opacity aur blend modes se ek piece ko non-destructively organize aur edit kaise karte hain."
   }
 
 };
