@@ -3885,6 +3885,147 @@ const TRANSLATIONS_HI = {
       "Sirf ek hard round brush aur ek soft round brush se ek reasonably finished piece bana sakta/sakti hoon."
     ],
     nextStep: "Ab tum samajhte ho ki ek single brush stroke kaise behave karta hai. Module 86 ek stroke se poori image pe jaata hai \u2014 layers, aur layer level pe stacking, opacity aur blend modes se ek piece ko non-destructively organize aur edit kaise karte hain."
+  },
+
+  m86: {
+    hook: "Traditional painter ke paas canvas pe ek mark sahi karne ka bas ek hi mauka hota hai. Digital artists ke paas layers hain \u2014 wo ek feature jo digital art ki lagbhag har doosri cheez ko forgiving, editable aur non-destructive bana deta hai.",
+    whyItMatters: [
+      "Module 83 ne tumhe drawing shuru karwane ke liye bas ek basic sketch/line/color layer structure diya tha. Ye module aur gehraai mein jaata hai ki layers asal mein kya karne deti hain \u2014 stacking, opacity aur blend modes \u2014 jo wo organizational backbone hai jispe ab se tumhara har piece tika hoga.",
+      "Blend modes khaaskar digital art ke sabse high-leverage tools mein se hain: ek single Multiply layer seconds mein poore piece pe convincing shadow daal sakti hai, aur ek single Overlay ya Soft Light layer scene ka poora mood badal sakti hai \u2014 wo effects jo har affected pixel ko haath se paint karne mein kahin zyada time lete."
+    ],
+    coreIdea: [
+      "Layer stack transparent sheets ke ek ke upar ek rakhe hone jaisa kaam karta hai: upar ki layers default mein neeche wali ko dhak leti hain (Normal blend mode), aur tum kisi bhi ek layer ko baaki ko chhue bina hide, reorder ya delete kar sakte ho \u2014 yahi 'non-destructive' ka matlab hai.",
+      "Blend mode badalta hai ki ek layer ke colors neeche wali layers ke saath kaise combine hote hain, unhe sirf dhakne ke bajaye. Teen jo tum lagatar use karoge: Multiply darken karta hai (shadows ke liye perfect), Screen lighten karta hai (highlights, glows aur baarish ya snow jaise light effects ke liye perfect) aur Overlay dono ko mila ke contrast badhata hai (light areas ko aur bright aur dark ko aur dark karte hue).",
+      "Layer opacity aur blend mode saath mein kaam karte hain, alag-alag nahi \u2014 ek common workflow hai pehle layer ko Multiply ya Overlay jaise blend mode pe set karna, phir uski opacity kam karke effect ki strength control karna, Normal layer pe bilkul sahi color nikalne ki koshish karne ke bajaye.",
+      "Related layers ko group karna (jaise ek character ya ek prop banane wali saari layers) badhte layer stack ko manageable rakhta hai, aur ek layer ko doosri se clip karna ek effect (jaise shadow ya color adjustment) ko sirf neeche wali layer pe pehle se maujood pixels tak restrict kar deta hai."
+    ],
+    mistakes: [
+      "Sab kuch ek hi layer pe paint karna, jisse piece ke ek hissa ko alag karke adjust karna bina use dobara paint kiye namumkin ho jaata hai.",
+      "Normal layer pe bilkul sahi shadow ya highlight color haath se chunke paint karne ki koshish karna, Multiply ya Screen ko kam opacity pe use karke kahin tez similar result lene ke bajaye.",
+      "Ye bhool jaana ki Multiply layer pe safed invisible hota hai aur Screen layer pe kaala, aur phir confuse hona ki effect layer ka ek hissa kyun nahi dikh raha.",
+      "Piece bade hone par bhi layers ko kabhi group ya organize na karna, jisse ek lambi, unmanageable list ban jaati hai jise baad mein navigate ya edit karna mushkil hota hai.",
+      "Blend-mode layer ko poore piece pe globally lagana jab effect sirf ek specific object ko affect karna chahiye, use us object ki layer se clip karne ke bajaye."
+    ],
+    proTips: [
+      "Shadows ke liye kam opacity pe Multiply layer aur highlights ya glow effects ke liye kam opacity pe Screen layer use karo \u2014 ye Normal layer pe exact colors haath se mix karne se tez aur zyada flexible hai.",
+      "Jab effect sirf ek object (ek character, ek prop) pe lagna chahiye, poore canvas pe paint karke object ke edges se bahar bleed hone ka risk lene ke bajaye effect layer ko us object ki layer se clip karo.",
+      "Jaise hi piece lagbhag 8\u201310 layers se bada ho, related layers ko group kar do, taaki ek lambi flat list mein scroll karne ke bajaye sections ko collapse karke navigate kar sako.",
+      "Kaam karte waqt layered working file rakho (flattened export nahi), taaki piece ko baad mein revise karna ho to masks, groups aur individual layers editable rahein."
+    ],
+    practice: {
+      warmup: "Ek layer pe ek chhota flat-colored shape banao, phir uske upar ek Multiply layer add karke shadow shape paint karo, aur uske upar ek Screen layer highlight ke liye, har ek ki opacity adjust karte hue.",
+      daily: "Ek simple piece lo aur poori composition pe ek Multiply shadow layer aur ek Overlay color-mood layer add karo, har layer ki opacity tab tak adjust karo jab tak effect sahi na lage.",
+      weekly: "Kam se kam teen organized layer groups (jaise: background, main subject, effects) ke saath ek chhota piece banao, har group ko tab ke alawa collapsed rakhte hue jab tum usme kaam kar rahe ho.",
+      challenge: "Ek finished flat-colored piece lo aur uska poora mood sirf blend-mode layers (Multiply, Screen, Overlay) aur unki opacity se badlo \u2014 original colors ko dobara paint karne ki ijazat nahi."
+    },
+    quiz: [
+      {q:"Layers ke context mein 'non-destructive' ka kya matlab hai?", options:["File kabhi delete nahi ho sakti","Tum ek single layer ko hide, reorder ya delete kar sakte ho bina doosri layers ke pixels ko permanently badle","Layers khule hone par software crash nahi ho sakta","Layers har kuch seconds mein automatically save ho jaati hain"], correct:1, explain:"Non-destructive editing ka matlab hai ki ek layer pe badlav (ya use poori tarah hata dena) doosri layers ke pixels ko permanently affect nahi karta, sab kuch ek flat layer pe paint karne ke unlike."},
+      {q:"Poore piece pe jaldi shadow daalne ke liye kaunsa blend mode sabse suitable hai?", options:["Screen","Multiply","Normal","Difference"], correct:1, explain:"Multiply apne neeche ke colors ko darken karta hai aur shadow ke liye standard choice hai, kyunki Multiply layer pe safed invisible hota hai aur gehre tones neeche ki cheez ko progressively darken karte hain."},
+      {q:"Multiply ya Screen jaise blend-mode layer ko use karne ka ek common, efficient workflow kya hai?", options:["Blend mode set karo, phir us layer ki opacity adjust karo taaki effect kitna strong dikhe wo control ho","Blend mode chunne ke baad opacity kabhi adjust mat karo","Blend modes sirf sabse neeche wali layer pe use karo","Blend modes hamesha 100% opacity pe rehne chahiye"], correct:0, explain:"Blend mode ko adjusted opacity ke saath combine karna \u2014 Normal layer pe bilkul sahi color haath se mix karne ki koshish ke bajaye \u2014 shadow ya color mood layer jaise effect ki strength control karne ka tez, flexible tareeka hai."},
+      {q:"Ek layer ko uske neeche wali layer se clip karne se kya hota hai?", options:["Do layers permanently ek mein merge ho jaati hain","Clipped layer ka effect sirf neeche wali layer pe pehle se maujood pixels tak restrict ho jaata hai","Neeche wali layer automatically delete ho jaati hai","Image ka file format badal jaata hai"], correct:1, explain:"Clipping ek effect layer (jaise shadow ya color adjustment) ko neeche wali layer ki shape tak restrict karti hai, jisse effect us object ke edges se bahar bleed nahi hota."},
+      {q:"Piece bade hone par related layers ko group karne ki salah kyun di jaati hai?", options:["Isse image quality automatically behtar hoti hai","Isse badhta layer stack ek lambi flat list ke mukable manageable aur navigate karne mein aasan rehta hai","Grouped layers har case mein tez render hoti hain","File export karne se pehle ye required hai"], correct:1, explain:"Related layers (jaise ek character ya prop ki saari layers) ko groups mein organize karne se badhta stack navigable rehta hai, aur jis section pe abhi kaam nahi kar rahe use collapse kiya ja sakta hai."}
+    ],
+    checklist: [
+      "Explain kar sakta/sakti hoon ki layer editing ko non-destructive kya banata hai.",
+      "Shadow ke liye Multiply layer aur highlights ya glow ke liye Screen layer use kar sakta/sakti hoon, strength control karne ke liye opacity adjust karte hue.",
+      "Ek effect layer ko clip kar sakta/sakti hoon taaki wo poore canvas ke bajaye ek specific object tak restrict rahe.",
+      "Badhte layer stack ko logical groups mein organize kar sakta/sakti hoon."
+    ],
+    nextStep: "Ab tum samajhte ho ki layers ko kaise structure aur combine karte hain. Module 87 selection tools cover karta hai \u2014 edit, fill ya protect karne ke liye ek specific area ko kaise isolate karte hain, jo layers aur masks ke saath milkar precise, controlled badlav deta hai."
+  },
+
+  m87: {
+    hook: "Kuch sabse clean, confident dikhne wali digital paintings brush se banti hi nahi \u2014 wo ek hard-edged shape select karke use fill karne se banti hain, jo construction ke baare mein sochne ka freehand drawing se bilkul alag tareeka hai.",
+    whyItMatters: [
+      "Selections Module 86 ki layers aur masks ke saath haath mein haath daalkar kaam karte hain: selection se tum software ko exactly bataate ho ki fill, adjustment ya mask kin pixels ko affect kare, poori layer pe lagne ke bajaye.",
+      "Obvious use (kisi object ko cut out karne ya protect karne ke liye isolate karna) ke alawa, selection-based construction \u2014 lasso tool se shapes banana aur unhe fill karna \u2014 professional concept artists aur illustrators ke beech ek real, widely used technique hai jo clean, confident, graphic shapes deti hai, jo freehand brushwork se paana kahin mushkil hota hai."
+    ],
+    coreIdea: [
+      "Marquee tool basic rectangular ya oval shapes select karta hai, lasso tool tumhe haath se ek freeform (ya polygonal, point-by-point) selection outline draw karne deta hai, aur magic wand ek adjustable tolerance ke andar color similarity ke basis pe pixels select karta hai \u2014 har ek ek alag tarah ki shape ke liye suit karta hai.",
+      "Selections ko combine kiya ja sakta hai: naya selection banate waqt Shift dabane se wo existing mein add hota hai, Alt/Option dabane se usme se subtract hota hai, jisse kai simple selections se ek complex selection area banaya ja sakta hai.",
+      "Inverse selection (selection ko palatna taaki jo select nahi tha wo select ho jaaye) ek powerful shortcut hai: aksar ek complicated object ko seedha trace karne ke bajaye ek plain background ko magic wand se select karke selection invert karna kahin aasan hota hai.",
+      "Feathering selection ki edge ko soft karti hai taaki fill ya cutout ek harsh, jagged boundary ke bajaye zyada natural blend ho \u2014 object ko clean cut out karne aur vignette-style fades banane, dono ke liye useful."
+    ],
+    mistakes: [
+      "Ek complicated object ko seedha lasso se trace karne ki koshish karna, jabki uske simpler background ko select karke selection invert karna kahin tez aur accurate hota.",
+      "Kisi aur jagah paint karne se pehle active selection clear karna bhool jaana, aur phir confuse hona ki naye brush strokes sirf ek chhote, bhoole hue selected area ke andar kyun aa rahe hain.",
+      "Har image ke liye magic wand ki ek hi flat tolerance setting use karna, us area mein asal mein kitni color variation hai uske hisaab se adjust karne ke bajaye.",
+      "Cutout ki edge ko poori tarah hard aur unfeathered chhod dena jab use naye background mein blend hona ho, jisse saaf dikhta pasted-in look aata hai.",
+      "Selection tools ko combine na karna \u2014 sirf ek (aam taur pe sirf lasso) pe rely karna, ek zyada precise selection jaldi banane ke liye add/subtract ke saath marquee, lasso aur magic wand ko mix karne ke bajaye."
+    ],
+    proTips: [
+      "Kisi plain ya simple background se object cut out karte waqt object ko trace karne ke bajaye magic wand se background select karo aur selection invert kar do.",
+      "Complex selection ko ek hi pass mein sahi karne ki koshish ke bajaye default aadat ki tarah Shift se selection mein add karo aur Alt/Option se subtract karo.",
+      "Lasso-and-fill construction technique ko kam se kam ek baar jaanbujh kar try karo: shape ko brush se bharne ke bajaye uski outline lasso tool se select karo aur paint bucket se fill karo, clean, confident, graphic result ke liye.",
+      "Kisi object ko cut out karne ya naye scene mein paste karne se pehle thodi si feathering add karo taaki edge saaf pasted-in dikhne ke bajaye blend ho."
+    ],
+    practice: {
+      warmup: "Ek simple shape ko teen alag tareekon se select karne ki practice karo: ek baar marquee se, ek baar freeform lasso se aur ek baar magic wand se, compare karte hue ki har ek ko control karna kaisa laga.",
+      daily: "Magic wand se ek simple object ke peeche ka plain background select karo, selection invert karo, aur isolate hue object ko naye background layer pe le jao.",
+      weekly: "Ek chhota shape (ek rock, ek building silhouette, ek simple prop) freehand brushing ke bajaye poori tarah lasso-and-fill technique se banao, aur uski edge quality ko brushed version se compare karo.",
+      challenge: "Ek single image mein kam se kam teen selection tools (marquee, lasso, magic wand) ko Shift/Alt add-and-subtract ke saath combine karke ek complex, precise selection area banao."
+    },
+    quiz: [
+      {q:"Color similarity ke basis pe pixels select karne ke liye kaunsa selection tool sabse suitable hai?", options:["Marquee tool","Magic wand tool","Eraser tool","Eyedropper tool"], correct:1, explain:"Magic wand tool ek adjustable tolerance range ke andar similar color wale pixels select karta hai, jo solid-color ya kam-variation areas ke liye ideal hai."},
+      {q:"Inverse selection tumhe kya karne deta hai?", options:["Aakhri banaya selection undo karna","Ek selection ko palatna taaki jo NOT selected tha wo selected ho jaaye aur ulta","Selection ki edges ko automatically feather karna","Selection ko ek naye layer mein convert karna"], correct:1, explain:"Inverse selection selected aur unselected areas ko palat deta hai, jo ek complex object ko uske simpler background ko pehle select karke isolate karne ke liye khaas taur pe useful hai."},
+      {q:"Lasso-and-fill construction technique kya hai?", options:["Ek drawing erase karke dobara shuru karna","Ek shape ki outline lasso tool se select karke use fill karna, shape ko freehand brush se bharne ke bajaye","Brush pressure sensitivity adjust karne ka ek tareeka","Layers ko groups mein organize karne ka ek tareeka"], correct:1, explain:"Ye technique lasso tool se outline select karke use color se fill karke shapes banati hai, jisse clean, confident, graphic edges milte hain jo freehand brushwork se paana mushkil hota hai."},
+      {q:"Selection ko feather karne se kya hota hai?", options:["Selected area permanently delete ho jaata hai","Selection ki edge soft ho jaati hai taaki fill ya cutout harsh boundary ke bajaye zyada natural blend ho","Selection ki color tolerance badh jaati hai","Selection ek perfect circle mein convert ho jaata hai"], correct:1, explain:"Feathering selection ki edge pe ek soft, gradual transition banati hai, jo natural-looking cutouts ya vignette-style fades ke liye useful hai."},
+      {q:"Module ke hisaab se, existing selection mein add ya usme se subtract karne ke liye aam taur pe kaunse keyboard modifiers use hote hain?", options:["Sirf spacebar","Add ke liye Shift, subtract ke liye Alt/Option","Sirf Tab key","Dono ke liye Ctrl+Z"], correct:1, explain:"Naya selection banate waqt Shift dabane se wo existing mein add hota hai, jabki Alt/Option dabane se naya area subtract hota hai, jisse simpler pieces se complex selections banaye ja sakte hain."}
+    ],
+    checklist: [
+      "Select karne wali shape ke hisaab se sahi selection tool (marquee, lasso ya magic wand) chun sakta/sakti hoon.",
+      "Ek complex object ko uske simpler background ko pehle select karke inverse selection se isolate kar sakta/sakti hoon.",
+      "Shift aur Alt/Option se ek selection mein add ya usme se subtract kar sakta/sakti hoon.",
+      "Ek clean shape ko freehand brush ke bajaye lasso-and-fill technique se construct kar sakta/sakti hoon."
+    ],
+    nextStep: "Ab tumhare paas is par precise control hai ki ek edit kin pixels ko affect karta hai. Module 88 transform tools cover karta hai \u2014 ek selection ya layer ko move, scale, rotate aur distort karna, aur piece develop hote hue ye non-destructively kaise karte hain."
+  },
+
+  m88: {
+    hook: "Traditional artists ek finished drawing ko uthakar do second mein use wide kheench nahi sakte, rotate nahi kar sakte ya uski mirrored copy nahi bana sakte \u2014 digital artists ye lagatar karte hain, aur isse tum kitni freely experiment kar sakte ho wo badal jaata hai.",
+    whyItMatters: [
+      "Transform tools seedha un layers (Module 86) aur selections (Module 87) ke saath kaam karte hain jo tum pehle seekh chuke ho \u2014 inhi se tum asal mein jo kuch bhi isolate kiya hai use move, resize, rotate ya reshape karte ho, use scratch se dobara paint kiye bina.",
+      "Achhe se use karne par transforming sirf cleanup nahi, ek genuine construction technique hai: ek symmetrical shape ko mirror karna, ek flat texture ko 3D-looking surface pe distort karna, ya baad mein ek proportion ko nudge karna \u2014 ye sab haath se dobara karne mein transform karne se kahin zyada time lete."
+    ],
+    coreIdea: [
+      "Core transform operations hain scale (resize), rotate, skew (tirchha karna), distort (har corner ko independently move karna) aur perspective (corners ko linked opposite pairs mein move karna, surface ki perspective match karne ke liye useful) \u2014 zyada tar software mein in sab tak alag menu items ke bajaye ek combined tool se pahunch sakte ho.",
+      "Reference point (kabhi kabhi transform box ke center mein ek chhote target icon ki tarah dikhta hai) wo anchor mark karta hai jiske around transformation hota hai \u2014 rotate ya scale karne se pehle ise kisi edge ya corner pe le jaane se poora effect badal jaata hai, aur yahi mirrored ya radial copies jaise tricks ka base hai.",
+      "Ek normal (rasterized) layer ko har baar transform karne par software ko uske pixels dobara draw karne padte hain, jo baar baar karne se quality gradually girata hai \u2014 ye ek destructive edit hai. Uski jagah smart object (ya jahan available ho vector layer) pe kaam karne se original data intact rehta hai, chahe tum use kitni bhi baar transform karo.",
+      "Scale handle drag karte waqt Shift dabana image ka proportional aspect ratio rakhne (ya, software ke default ke hisaab se, jaanbujh kar todne) ka standard shortcut hai \u2014 apne software mein kaunsa behavior default hai ye jaanna galti se kisi cheez ko squish ya stretch karne se bachata hai jise tum evenly scale karna chahte the."
+    ],
+    mistakes: [
+      "Ek hi rasterized layer ko baar baar seedha scale, rotate ya distort karna, smart object ya vector layer pe kaam karne ke bajaye jo undamaged rehti, uski quality gradually girate hue.",
+      "Transform se pehle reference point ko notice ya jaanbujh kar move na karna, aur phir confuse hona ki rotation ya scale wahan centered kyun nahi hai jahan expect kiya tha.",
+      "Distort (har corner independently move karta hai) ko Perspective (opposite corners linked pairs mein saath move karte hain) se confuse karna aur intended effect ke liye galat wala chun lena.",
+      "Software ka default Shift behavior jaisa expect kiya tha waisa na hone ki wajah se galti se image ko non-proportionally scale kar dena, jisse anjaane mein squished ya stretched result aata hai.",
+      "Har transform finalize hone ki confirmation se pehle piece ko flatten kar dena, aur transformation ko non-destructively wapas jaakar adjust karne ka mauka kho dena."
+    ],
+    proTips: [
+      "Kisi layer ko transform karne se pehle use smart object mein convert karo (ya jahan available ho vector mein kaam karo), khaaskar agar use ek se zyada baar scale ya rotate karne ki ummeed ho.",
+      "Kisi shape ki copy ko flip ya rotate karne se pehle reference point ko jaanbujh kar kisi edge pe le jao \u2014 ye quick mirrored ya radial-symmetry effects ke peeche ki core trick hai.",
+      "Jab ek flat texture ya image ko apne scene ki kisi surface ke converging angles se match karna ho, to use eyeball karne ya Distort se karne ke bajaye specifically Perspective mode use karo.",
+      "Kisi doosre program ki muscle memory pe rely karne se pehle check karo ki tumhare software ka default Shift behavior proportional scaling ko lock karta hai ya todta hai."
+    ],
+    practice: {
+      warmup: "Ek simple shape lo aur uski copies pe paanchon core transforms practice karo: scale, rotate, skew, distort aur perspective, label karte hue ki kaunsa kaunsa hai.",
+      daily: "Ek layer ko smart object mein convert karo, phir use kai baar lagatar scale aur rotate karo, aur uski quality ko ek non-smart-object version se compare karo jise utni hi baar transform kiya gaya ho.",
+      weekly: "Reference point ko edge pe le jaakar aur ek duplicated layer ko uske around flip ya rotate karke ek mirrored ya radially-symmetric shape banao.",
+      challenge: "Ek flat texture ya pattern lo aur Distort ya Perspective mode se use ek angled surface (jaise building ki deewar pe sign) pe realistically wrap hota hua dikhao."
+    },
+    quiz: [
+      {q:"Distort aur Perspective transform modes ke beech key farak kya hai?", options:["Dono identical hain, bas naam alag hain","Distort har corner handle ko independently move karta hai, jabki Perspective opposite corners ko linked pairs mein saath move karta hai","Distort sirf text layers pe kaam karta hai","Perspective sirf circular shapes pe use ho sakta hai"], correct:1, explain:"Distort har corner ko freely aur independently move karne deta hai, jabki Perspective opposite corners ko link karta hai taaki wo opposite directions mein saath move karein, jo surface ke converging angles match karne ke liye useful hai."},
+      {q:"Ek regular rasterized layer ko baar baar transform karne ke bajaye smart object ko transform karna kyun prefer kiya jaata hai?", options:["Smart objects har case mein tez load hote hain","Regular layers har destructive transform ke saath quality kho deti hain, jabki smart object baar baar transforms ke baad bhi original image data bacha ke rakhta hai","Smart objects ko transform hi nahi kiya ja sakta","Dono mein koi real farak nahi hai"], correct:1, explain:"Rasterized layer ko baar baar transform karne se har baar uske pixels dobara draw hote hain, jisse quality gradually girti hai; smart object original data ko intact rakhta hai, chahe use kitni bhi baar transform karo."},
+      {q:"Transform ke dauraan reference point (target icon) kya control karta hai?", options:["Transform ki hui layer ka color","Wo anchor point jiske around rotation ya scale hota hai","Exported image ka file format","Uske baad use hone wala brush size"], correct:1, explain:"Reference point wo center mark karta hai jiske around transformation pivot ya scale hota hai; ise kisi edge pe le jaane se, for example, rotation ek jagah ghumne ke bajaye us edge ke around jhoolne lagta hai."},
+      {q:"Reference point ko move karne pe rely karne wali ek practical technique kya hai?", options:["Brush opacity adjust karna","Moved reference point ke around flip ya rotate karke ek mirrored ya radially-symmetric copy banana","Canvas resolution badalna","Color picker se color select karna"], correct:1, explain:"Duplicated layer ko flip ya rotate karne se pehle reference point ko edge pe le jaana quick mirror-image ya radial-symmetry effects ke peeche ki core technique hai."},
+      {q:"Scale handle drag karte waqt Shift dabane se aam taur pe kya control hota hai?", options:["Layer ka blend mode","Image proportionally (aspect ratio rakhte hue) scale hoti hai ya nahi, software ke default behavior ke hisaab se","Brush hardness setting","Kaunsa selection tool use ho raha hai"], correct:1, explain:"Shift proportional versus non-proportional scaling toggle karne ka standard modifier hai, halaanki default aur Shift-modified behavior mein se kaunsa kya hai ye software ke hisaab se alag ho sakta hai, isliye jis bhi program ko use karo usme confirm karna worth hai."}
+    ],
+    checklist: [
+      "Distort aur Perspective transform modes ka farak explain kar sakta/sakti hoon.",
+      "Quality loss se bachne ke liye kisi layer ko transform karne se pehle smart object mein convert kar sakta/sakti hoon.",
+      "Mirrored ya radial-symmetry effect banane ke liye reference point move kar sakta/sakti hoon.",
+      "Image ko galti se nahi, jaanbujh kar proportionally ya non-proportionally scale kar sakta/sakti hoon."
+    ],
+    nextStep: "Ab tumhare paas koi bhi digital piece construct aur edit karne ka core toolkit hai \u2014 workspace, hardware, brushes, layers, selections, transforms. Module 89 specifically clean digital line art pe focus karta hai, in mein se kai tools ko confident, controlled linework ke liye saath laate hue."
   }
 
 };
