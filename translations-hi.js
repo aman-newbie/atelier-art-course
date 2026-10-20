@@ -4026,6 +4026,147 @@ const TRANSLATIONS_HI = {
       "Image ko galti se nahi, jaanbujh kar proportionally ya non-proportionally scale kar sakta/sakti hoon."
     ],
     nextStep: "Ab tumhare paas koi bhi digital piece construct aur edit karne ka core toolkit hai \u2014 workspace, hardware, brushes, layers, selections, transforms. Module 89 specifically clean digital line art pe focus karta hai, in mein se kai tools ko confident, controlled linework ke liye saath laate hue."
+  },
+
+  m89: {
+    hook: "Tumhare software ke menu mein jo line stabilizer setting tumne shayad ignore ki hai, wahi ek shaky, unsure haath ko confident, clean linework mein badalne ka sabse bada lever hai \u2014 aur zyada tar beginners use kabhi chhute hi nahi.",
+    whyItMatters: [
+      "Ye module Modules 83\u201388 ke workspace, tablet, brushes, layers, selections aur transforms ko ek concrete, practice ki hui skill mein jodta hai: clean, confident line art illustration, comics aur character work ka sabse common finishing step hai, aur shaky ya inconsistent lines ek strong underlying drawing ko bhi kamzor bana deti hain.",
+      "Clean linework ek genuinely seekhne layak, mechanical skill hai, sirf raw talent nahi \u2014 stabilization settings, canvas rotation aur controlled pressure jaisi specific aadatein hi ek beginner ki shaky lines aur ek professional ki confident lines ke beech ke zyada tar visible farak ko explain karti hain."
+    ],
+    coreIdea: [
+      "Line stabilizer (kabhi kabhi smoothing kehte hain) tumhare pen ki movement ko thoda delay aur average karta hai taaki chhote hand tremors smooth ho jaayein, jisse lines zyada steady aati hain \u2014 ek moderate setting (aksar available range ke beech ke aas-paas) smoothness aur responsiveness ke beech balance rakhti hai, kyunki bahut zyada stabilization noticeable lag laata hai.",
+      "Confident lines slow, steady, poori strokes se aati hain, kai chhoti hichkichati strokes se nahi \u2014 agar koi stroke sahi nahi aaya, to use patch karne ya ek kharab line ke upar trace karne se behtar hai undo karke dobara try karna.",
+      "Draw karte waqt canvas ko rotate aur move karna (sirf haath nahi) har stroke ko ek comfortable angle se approach karne deta hai, bilkul jaise traditional artists physically kaagaz ghumate hain \u2014 awkward strokes bahut baar canvas-angle ki problem hoti hain, skill ki nahi.",
+      "Line weight (ek line ki thickness ko uski lambai ke saath badalna, aam taur pe pen pressure vary karke) form, connection aur depth ka ehsaas jodta hai \u2014 wahan thicker jahan lines judti hain ya object viewer ke kareeb hai, wahan thinner jahan wo peeche jaata hai ya simple khuli jagah mein."
+    ],
+    mistakes: [
+      "Har line ko identical, flat weight se draw karna, jisse ek stiff aur uniform result aata hai, un lines ke bajaye jo unki define ki gayi shapes se connected aur grounded lagti hain.",
+      "Ek kharab stroke ko baar baar trace ya patch karne ki koshish karna, use undo karke poori stroke ek confident pass mein dobara draw karne ke bajaye.",
+      "Canvas rotation kabhi adjust na karna, aur aisi strokes pe awkward wrist angles force karna jo rotated position se aasan hoti.",
+      "Har situation mein stabilization bahut high set kar dena, loose sketching ya fast hatching samet, jahan resulting lag madad se zyada nuksaan karta hai.",
+      "Ek poore character ya scene ki lineart ek hi layer pe draw karna, jisse baad mein cleanup, recoloring ya part-specific edits zaroorat se kahin mushkil ho jaate hain."
+    ],
+    proTips: [
+      "Apne software ki range ke beech ke aas-paas ki stabilizer value se shuru karo aur wahan se adjust karo \u2014 bahut kam shaky strokes ko smooth nahi karega, bahut zyada laggy aur unresponsive lagega.",
+      "Itna zoom in karo ki jis area ko ink kar rahe ho wo screen ka zyada tar hissa bhar de; is scale pe galtiyan zoom out karke kaam karne se kahin aasani se pakad mein aati hain.",
+      "Ink karte waqt kabhi kabhi canvas ko horizontally flip karo \u2014 ye tumhari aankh ko reset karta hai aur proportion ya symmetry ki wo problems dikha deta hai jinke liye tum ek hi orientation ko dekhte-dekhte andhe ho gaye the.",
+      "Line weight ek hi stroke mein pen pressure vary karke banao (shuru mein halka, beech mein bhaari, end mein phir halka), ek flat line draw karke baad mein uske hisse mote karne ki koshish ke bajaye."
+    ],
+    practice: {
+      warmup: "Sirf poori arm ki movement (sirf wrist nahi) se 15 lambi, confident lines draw karo, har ek ko beech mein pen uthaye bina shuru se end tak steady rakhne ki koshish karte hue.",
+      daily: "Kisi pichle module ka ek chhota sketch ek moderate stabilizer setting se ink karo, zaroorat ke hisaab se canvas rotate karte hue, aur major parts (jaise head versus body) ko alag layers pe rakhte hue.",
+      weekly: "Ek thoda complex piece ink karo, line weight ko jaanbujh kar vary karte hue taaki connected areas (jaise jahan do shapes overlap karti hain) khuli, simple areas se zyada heavy lagein.",
+      challenge: "Ek hi simple shape do baar ink karo \u2014 ek baar low stabilizer setting se, ek baar high se \u2014 aur compare karo ki kaunsi strokes zyada clean aayi aur kaunsi control ke liye kam ya zyada responsive lagi."
+    },
+    quiz: [
+      {q:"Line stabilizer (ya smoothing) setting asal mein kya karti hai?", options:["Finished line art ko automatically color karti hai","Pen ki movement ko thoda delay aur average karti hai taaki chhote hand tremors smooth ho jaayein","Canvas ko permanently lock kar deti hai","Raster layer ko vector layer mein convert karti hai"], correct:1, explain:"Stabilizer pen ki tracked movement ko thoda delay aur average karke line ko smooth karta hai, chhote tremors kam karke zyada steady strokes deta hai, high settings pe thoda lag add hone ki keemat pe."},
+      {q:"Jab ek single inked stroke galat aaye to recommended response kya hai?", options:["Use baar baar trace karte raho jab tak behtar na lage","Use undo karo aur poori stroke ek confident pass mein dobara draw karo","Jaise hai waise chhod do aur piece ke kisi doosre hisse pe chale jao","Use theek karne ke liye canvas resolution badhao"], correct:1, explain:"Poori stroke undo karke dobara draw karne se aam taur pe ek clean result milta hai, ek pehle se galat gayi stroke ko patch ya trace karne se behtar."},
+      {q:"Ink karte waqt canvas rotate karne ki salah kyun di jaati hai?", options:["Ye file ka color profile badal deta hai","Ye har stroke ko ek comfortable angle se approach karne deta hai, kyunki awkward strokes aksar skill ki nahi, canvas-angle ki problem hoti hain","Ye automatically stabilizer effect laga deta hai","Canvas rotation ka line quality pe koi real asar nahi hota"], correct:1, explain:"Canvas ko rotate karna (jaise traditional artist physically kaagaz ghumata hai) har stroke ko ek comfortable angle se approach karne deta hai, aur kai strokes jo sirf hand position ki wajah se awkward lagti hain unhe fix kar deta hai."},
+      {q:"Ek stroke ke saath line weight (thickness) vary karna typically kya communicate karta hai?", options:["File ki resolution setting","Form, connection aur depth ka ehsaas, jahan thicker lines aksar connection points ya viewer ke kareeb ke points pe aati hain","Brush ki opacity setting","Kuch meaningful nahi; ye sirf decorative hai"], correct:1, explain:"Line weight vary karna, aam taur pe stroke ke dauraan pen pressure adjust karke, ye dikhata hai ki forms kahan connect hoti hain aur kaunse elements viewer ke kareeb hain, jisse lineart ko uniformly flat lines se zyada depth milti hai."},
+      {q:"Lineart ko ek single layer ke bajaye kai layers mein organize karne ki salah kyun di jaati hai?", options:["Iska koi practical fayda nahi, ye sirf stylistic hai","Isse baad mein cleanup, recoloring ya specific parts (jaise baal versus chehra) ko edit karna kahin aasan ho jaata hai","Zyada tar software licenses ke liye multiple layers required hain","Ye automatically line stabilization behtar kar deta hai"], correct:1, explain:"Lineart ko multiple layers mein alag karna (jaise body part ya material ke hisaab se) baaki linework ko affect kiye bina ek part ko edit, recolor ya clean up karna kahin aasan bana deta hai."}
+    ],
+    checklist: [
+      "Jis tarah ki stroke draw kar raha/rahi hoon uske hisaab se ek moderate line stabilizer value set kar sakta/sakti hoon.",
+      "Awkward stroke ko zyada comfortable angle se approach karne ke liye apna canvas rotate kar sakta/sakti hoon.",
+      "Connection aur depth suggest karne ke liye pen pressure se ek stroke ke andar line weight vary kar sakta/sakti hoon.",
+      "Ek piece ki lineart ko sab kuch ek hi layer pe draw karne ke bajaye kai layers mein organize kar sakta/sakti hoon."
+    ],
+    nextStep: "Tumne Digital Art Fundamentals ka core toolkit complete kar liya \u2014 workspace, tablet, brushes, layers, selections, transforms aur clean line art. Module 90 is arc ko canvas setup aur export ke saath close karta hai: resolution, DPI, color modes, aur ek finished piece ko print ya web ke liye apne software se sahi tareeke se bahar nikalna."
+  },
+
+  m90: {
+    hook: "DPI shayad har digital art software ki sabse zyada galat samjhi jaane wali setting hai \u2014 aur sach ye hai ki jo kuch bhi sirf screen pe rehne wala hai, uske liye ye bilkul kuch nahi karti.",
+    whyItMatters: [
+      "Ye Digital Art Fundamentals arc ko un do moments ko cover karke close karta hai jo tumhare banaye har piece ko bookend karte hain: shuru karne se pehle canvas sahi set karna, aur khatam hone par use sahi export karna, taaki is arc ki workspace, brush, layer aur line-art ki saari skills asal mein viewer tak full quality mein pahunchein.",
+      "Isse galat karna aisi tareeke se mehenga hai jaise doosri galtiyan nahi hoti: kharab brush stroke undo ho sakta hai, par bahut chhota shuru kiya gaya canvas baad mein visible quality loss ke bina bada nahi kiya ja sakta \u2014 jo resolution draw karte waqt capture nahi ki, wo tum kabhi add nahi kar sakte."
+    ],
+    coreIdea: [
+      "Resolution bas tumhare canvas ka total pixel count hai (width \u00d7 height); DPI (dots per inch) sirf ye control karta hai ki print karne par wo pixels kaagaz pe kitne dense pack hote hain. Screen pe DPI ka koi matlab nahi \u2014 identical pixel dimensions wale do canvases monitor pe bilkul same dikhte hain, DPI number chahe jo set ho.",
+      "Practical rule: sirf screen wale kaam ke liye DPI poori tarah ignore karo aur pixel dimensions pe focus karo; print wale kaam ke liye DPI 300 pe set karo (sharp prints ka standard) aur apne chune hue pixel dimensions ko physical print size tay karne do.",
+      "Color mode bhi setup pe matter karta hai: RGB har us cheez ke liye sahi hai jo screen pe dekhi jaayegi (jo tumhare zyada tar kaam hain), jabki CMYK sirf professional offset printing ke liye hai, aur painting ke baad mode badalne se tumhare colors shift ho sakte hain.",
+      "Tum canvas ko kabhi bhi safely chhota kar sakte ho ya existing art ke around khali jagah add kar sakte ho, par existing art ko bada scale karne se wo degrade hoti hai, kyunki software ko wo pixel data invent karna padta hai jo kabhi capture hi nahi hua \u2014 isliye reasonably bade size se shuru karna (ek common default lagbhag A4 at 300 DPI hai) bahut chhote se shuru karne se safe hai."
+    ],
+    mistakes: [
+      "Canvas bahut chhota shuru karna aur baad mein finished art ko bada scale karne ki koshish karna, jisse visible blurring aati hai kyunki nayi pixel information kuch nahi se invent nahi ho sakti.",
+      "Aise art ke liye DPI ki chinta karna jo sirf screen pe dekhi jaayegi, jabki screen display ke liye sirf pixel dimensions hi asal mein matter karte hain.",
+      "Working file ki ek hi copy ko flattened JPG ki tarah export karke original layered file discard kar dena, jisse aage koi bhi edit karne ki ability chali jaati hai.",
+      "Sirf digitally dekhne wale kaam ke liye color mode CMYK pe chhod dena, jisse RGB ke mukable on-screen colors dull dikhte hain.",
+      "Canvas itna bada start karna ki software har brush stroke pe lag kare, jabki ek zyada modest size final shared image mein utna hi achha dikhta."
+    ],
+    proTips: [
+      "Canvas banane se pehle poocho ki piece asal mein kis liye hai: purely digital (DPI ignore karo, pixel size pe focus karo) ya shayad print (shuru se 300 DPI aur physical dimensions set karo) \u2014 ye pehle decide karne se baad mein upscale karne wala kahin zyada dardnaak fix bach jaata hai.",
+      "Sharing ke liye flattened PNG ya JPG export karne ke baad bhi apni native, layered working file (jaise .psd, .clip ya .kra) hamesha rakho \u2014 export disposable hai, working file nahi.",
+      "Lossless sharing ya transparency chahiye wali cheezon ke liye PNG use karo, aur chhoti files ke liye jahan transparency nahi chahiye wahan high quality setting pe JPG, kyunki social platforms waise bhi uploads ko compress karte hain.",
+      "Agar tumhara software tumhare chune hue canvas size pe laggy lage, to ye ek real signal hai ki chhote size pe kaam karo, push through karne ke bajaye \u2014 ek smooth, confidently execute kiya chhota piece aam taur pe ek laggy, jaldbaazi mein bane bade piece se behtar dikhta hai."
+    ],
+    practice: {
+      warmup: "Teen alag purposes ke liye teen canvases set up karo (ek square social media post, ek A4-equivalent print piece aur ek 16:9 wallpaper) aur har ek ke liye resolution aur DPI ke alag choices note karo.",
+      daily: "Kisi pichle module ka ek finished piece lo aur use do baar export karo \u2014 ek baar portfolio site ke liye PNG, ek baar social sharing ke liye JPG \u2014 aur file size aur kisi bhi visible quality farak ko compare karo.",
+      weekly: "Scale-up problem ko jaanbujh kar test karo: ek chhote canvas ka piece lo, use 300% bada scale karo aur close se blurring examine karo, taaki 'kabhi scale up mat karo' rule sirf padhne ke bajaye khud mehsoos ho.",
+      challenge: "Specifically print ke liye ek canvas set up karo (300 DPI, inches ya cm mein physical dimensions) aur ek print-ready file export karo, confirm karte hue ki exported pixel dimensions DPI ke hisaab se tumhari expectation se match karte hain."
+    },
+    quiz: [
+      {q:"DPI asal mein kya control karta hai?", options:["Image ka total pixel count","Print karne par pixels kaagaz pe kitne dense pack hote hain; screen pe image kaisi dikhti hai us par iska koi asar nahi","Canvas ka color mode","Ek document mein available layers ki sankhya"], correct:1, explain:"DPI (dots per inch) sirf print density ko affect karta hai. Identical pixel dimensions wali do images screen pe bilkul same dikhti hain, chahe unki DPI setting kuch bhi ho."},
+      {q:"Aise art ke liye jo sirf screen pe dekhi jaayegi (social media, portfolio sites), DPI ke bajaye kaunsi setting pe focus karna chahiye?", options:["Sirf color mode","Pixel dimensions (resolution)","Sirf file format","Brush hardness"], correct:1, explain:"Kyunki DPI screen display ke liye meaningless hai, pixel dimensions (asli resolution) hi tay karte hain ki koi image kisi bhi monitor pe kitni sharp dikhegi."},
+      {q:"Ek finished art ko bade canvas size pe scale karna risky kyun hai?", options:["Is mein koi real risk nahi hai","Software ko wo pixel data invent karna padta hai jo kabhi capture nahi hua, jisse visible blurring aati hai","Ye automatically color mode badal deta hai","Ye sirf file format ko affect karta hai, image quality ko nahi"], correct:1, explain:"Scale up karne ke liye software ko wo nayi pixel information generate karni padti hai jo original mein hai hi nahi, jisse quality girti hai \u2014 scale down ke unlike, jo sirf unneeded data discard karta hai."},
+      {q:"Sirf digitally dekhe jaane wale art ke liye kaunsa color mode sahi hai?", options:["CMYK","RGB","Hamesha Greyscale","Isse koi farak hi nahi padta"], correct:1, explain:"RGB har us cheez ke liye sahi mode hai jo screen pe dikhai jaati hai; CMYK professional offset printing ke liye reserved hai aur bina zaroorat use karne par on-screen colors ko dull dikha sakta hai."},
+      {q:"Sharing ke liye flattened PNG ya JPG export karne ke baad kya hamesha rakhna chahiye?", options:["Kuch nahi, export kaafi hai","Native, layered working file (jaise .psd, .clip ya .kra)","Sirf ek low-resolution thumbnail","Export ke baad canvas turant delete kiya ja sakta hai"], correct:1, explain:"Native layered file har layer aur setting ko preserve karti hai aur aage edits karne deti hai; flattened export sharing ke liye hai, tumhare kaam ki ek hi saved copy ke roop mein nahi."}
+    ],
+    checklist: [
+      "Explain kar sakta/sakti hoon ki DPI ka screen pe image kaisi dikhti hai us par koi asar kyun nahi hota.",
+      "Piece screen ke liye hai ya print ke liye, uske hisaab se appropriate pixel dimensions aur DPI chun sakta/sakti hoon.",
+      "Piece ke intended use ke hisaab se RGB versus CMYK sahi chun sakta/sakti hoon.",
+      "Apni native layered working file rakhte hue piece ko ek appropriate file format mein export kar sakta/sakti hoon."
+    ],
+    nextStep: "Tumne Digital Art Fundamentals complete kar liya \u2014 workspace, tablet, brushes, layers, selections, transforms, line art aur canvas setup. In mein se har skill seedha agle arc, Digital Painting & Rendering, mein aage jaati hai, jahan inhe full-color, fully-rendered kaam pe apply kiya jaata hai."
+  },
+
+  m91: {
+    hook: "Do colors color wheel pe mathematically 'sahi' ho sakte hain aur phir bhi ek painting ko mara hua feel karwa sakte hain \u2014 kyunki color teen alag ingredients nahi, ek hi relationship hai, aur zyada tar beginners ek baar mein sirf ek dial adjust karte hain.",
+    whyItMatters: [
+      "Digital Art Fundamentals (Modules 83\u201390) mein jo kuch banaya usne tumhe canvas pe kahin bhi color daalne ka mechanical control diya. Ye arc ye jaanne ke baare mein hai ki kaunsa color, aur kyun \u2014 color theory full-color rendering ki pehli aur sabse buniyadi decision-making layer hai.",
+      "Working artists consistently ek specific insight ko apne color understanding ka turning point batate hain: color ki teen properties mein hue sabse kam important hai, aur value wo cheez hai jo asal mein ek painting ko jodke rakhti hai \u2014 value control ke bina seedha hue choices pe jump karna colorful paintings ke phir bhi muddy ya flat dikhne ki sabse common wajahon mein se ek hai."
+    ],
+    coreIdea: [
+      "Har color ki teen independent properties hoti hain: hue (uska naam \u2014 red, blue, green), value (wo kitna light ya dark hai) aur saturation (wo kitna intense ya muted hai). Ek painting har ek mein alag tareeke se fail ho sakti hai: galat hues off lagte hain, kamzor values flat lagti hain aur galat saturation ya to chaotic ya dull lagti hai.",
+      "Ek painting ki basic readability ke liye value hue se zyada matter karti hai. Jo composition grayscale mein bhi clearly read hoti hai uska value structure sound hai; agar color ke sahare ke bina wo gray mush mein dhah jaaye, to hue choices wo kaam kar rahi thi jo values ko karna chahiye tha.",
+      "Alag-alag pure hues ki apni inherent values hoti hain \u2014 ek pure yellow naturally maximum saturation pe pure blue se bahut zyada light hota hai. Value structure plan karte waqt ye lagatar matter karta hai, kyunki sirf 'nice colors' chunne se anjaane mein weak value contrast ban sakta hai.",
+      "Saturation ko soch-samajh ke kharch karna chahiye, evenly faila ke nahi: apna sabse saturated color ek focal point (ek glowing object, ek key light source) ke liye bachakar baaki palette ko zyada muted rakhna ek clear hierarchy banata hai ki viewer ko pehle kahan dekhna chahiye."
+    ],
+    mistakes: [
+      "Sirf hue ke basis pe colors chunna ('ye ek achha blue lag raha hai') bina ye check kiye ki underlying value structure asal mein readability ka kaam kar raha hai ya nahi.",
+      "Ye maan lena ki colorful ka matlab automatically achha hai \u2014 painting mein har cheez ko barabar saturate karna wo contrast hata deta hai jo warna aankh ko focal point ki taraf direct karta.",
+      "Ye bhool jaana ki alag hues ki natural values alag hoti hain, jisse sirf aankh se colors chunne par value contrast anjaane mein intended se kamzor (ya strong) ho jaata hai.",
+      "Hue, value aur saturation ko ek combined 'color' decision ki tarah treat karna, teen alag, individually adjustable properties ke bajaye jinhe har ek akele diagnose aur fix kiya ja sakta hai.",
+      "Painting ko kabhi grayscale mein test na karna, aur ye check karne ka ek aasan, tez tareeka miss kar dena ki value structure color se alag bhi tikta hai ya nahi."
+    ],
+    proTips: [
+      "Jab painting galat lage, use property-by-property diagnose karo: agar colors off lagein to hue check karo; agar flat dikhe to value check karo; agar chaotic ya dull lage to saturation check karo \u2014 teeno ko ek hi badlav se theek karne ki koshish mat karo.",
+      "Kaam karte waqt regularly apni painting ko squint karo ya grayscale filter lagao, khaaskar block-in stage pe, taaki uske upar aur detail commit karne se pehle confirm ho ki tumhara value structure read hota hai.",
+      "Apni sabse high saturation us ek area ke liye bachao jahan tum chahte ho ki aankh sabse pehle ruke, aur baaki har jagah saturation ko jaanbujh kar mute karo taaki wo hierarchy support ho.",
+      "Limited palette chunte waqt pehle grayscale value study se apne values plan karo, phir colors chunke values ke theek baithne ki ummeed karne ke bajaye us maujooda value structure par hues assign karo."
+    ],
+    practice: {
+      warmup: "Full saturation pe paanch random color swatches lo aur bina kisi tool ke unhe sabse light se sabse dark value tak rank karo, phir grayscale filter se apna ranking check karo.",
+      daily: "Pehle sirf value (grayscale) mein ek chhoti study paint karo, phir uske upar kam opacity pe ek single limited hue add karo aur dekho ki maujooda value structure piece ko kitna carry karta hai.",
+      weekly: "Same chhota scene do baar paint karo: ek baar poori image mein saturation evenly faila ke, ek baar saturation sirf ek focal point pe concentrate karke, aur compare karo ki kaunsa zyada clearly read hota hai.",
+      challenge: "Kisi pichle module ka ek finished piece lo aur use grayscale test se property-by-property (hue, value, saturation) diagnose karo, phir sirf sabse kamzor property mein ek deliberate fix karo."
+    },
+    quiz: [
+      {q:"Is module ke hisaab se, ek painting ki basic readability ke liye color ki teen properties mein se kaunsi sabse zyada matter karti hai?", options:["Hue","Value","Saturation","Teeno barabar matter karti hain, koi priority nahi"], correct:1, explain:"Value (lightness ya darkness) ko readability ke liye sabse important property bataya gaya hai \u2014 strong value contrast wali painting grayscale mein bhi clearly read hoti hai, jabki weak values hue choices chahe jo bhi ho, flat ya muddy result deti hain."},
+      {q:"Ye check karne ka ek simple, tez tareeka kya hai ki painting ka value structure kaam kar raha hai ya nahi?", options:["Har color ki saturation badha do","Grayscale filter lagao ya painting ko squint karo aur dekho ki color ke bina bhi wo clearly read hoti hai ya nahi","Har area mein barabar aur detail add karo","Canvas ko CMYK color mode mein switch karo"], correct:1, explain:"Grayscale mein convert karna ya squint karna hue hata deta hai aur dikhata hai ki akela underlying value structure clearly read hone ke liye kaafi strong hai ya nahi."},
+      {q:"Alag-alag pure hues ki inherent values alag kyun hoti hain?", options:["Ye ek myth hai jiska color ke kaam karne mein koi aadhar nahi","Maximum saturation pe kuch hues (jaise yellow) doosron (jaise blue) se naturally bahut zyada light hote hain, jo value contrast ko affect karta hai tab bhi jab colors sirf aankh se chune gaye ho","Definition ke hisaab se sabhi hues ki value identical hoti hai","Ye sirf physical paint pe lagta hai, digital color pe nahi"], correct:1, explain:"Same saturation pe pure yellow pure blue se naturally bahut zyada light value ka hota hai, isi liye sirf 'nice' hues chunne se anjaane mein unintended value contrast (ya uski kami) ban sakti hai."},
+      {q:"Module ke hisaab se, ek painting mein saturation ideally kaise distribute honi chahiye?", options:["Poori image mein jitna ho sake utna evenly aur high faila hua","Jaanbujh kar ek focal point ke liye reserved, baaki palette zyada muted","Har jagah same low level pe, bina kisi variation ke","Saturation ka is par koi asar nahi ki aankh kahan dekhti hai"], correct:1, explain:"Sabse high saturation ko ek single focal area pe concentrate karke baaki ko mute karne se ek clear visual hierarchy banti hai, saturation ko evenly faila ke wo focus kho dene ke bajaye."},
+      {q:"Ek aisi painting ko diagnose karne ka recommended tareeka kya hai jo 'galat lag rahi ho'?", options:["Hue, value aur saturation teeno ek saath badlo aur behtar hone ki ummeed rakho","Har property alag-alag check karo \u2014 hue, value aur saturation \u2014 kyunki har ek alag tarah ki visual problem karti hai","Sirf saturation adjust karte raho, kyunki wo sabse important property hai","Painting ko poori tarah dobara shuru kar do"], correct:1, explain:"Kyunki hue, value aur saturation independent properties hain jo har ek alag visual problems cause karti hain, unhe ek-ek karke diagnose aur adjust karna teeno ko ek saath badalne se kahin zyada effective hai."}
+    ],
+    checklist: [
+      "Color ki teen independent properties ke naam bata sakta/sakti hoon: hue, value aur saturation.",
+      "Grayscale test se ek painting ka value structure check kar sakta/sakti hoon.",
+      "Explain kar sakta/sakti hoon ki full saturation pe alag hues ki inherent values alag kyun hoti hain.",
+      "Saturation ko evenly faila ke rakhne ke bajaye jaanbujh kar ek focal point pe concentrate kar sakta/sakti hoon."
+    ],
+    nextStep: "Ab tum color ko teen alag, diagnose ho sakne wali properties ki tarah samajhte ho. Module 92 specifically value mein aur gehra jaata hai \u2014 color introduce hone se pehle hi ek poori painting mein value structure ko kaise plan aur control karte hain."
   }
 
 };
