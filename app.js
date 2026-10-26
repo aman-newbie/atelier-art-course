@@ -114,7 +114,7 @@ function renderPremadeNotesView(m){
       const tag = sec.ordered ? 'ol' : 'ul';
       body = `<${tag} class="note-list">${items.map(i=>`<li>${notesMd(i)}</li>`).join('')}</${tag}>`;
     }
-    const figs = NOTES_EDITING ? '' : (t.figs || []).map(f=>`<figure class="note-fig${paused ? ' is-paused' : ''}"><button type="button" class="note-fig-toggle" data-fig-toggle aria-label="${paused ? ui.figPlay : ui.figPause}"><svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true"><path class="ico-pause" d="M4 3h3v10H4zM9 3h3v10H9z"/><path class="ico-play" d="M5 3l8 5-8 5z"/></svg></button>${f.svg}<figcaption>${escapeHtml(f.cap)}</figcaption></figure>`).join('');
+    const figs = NOTES_EDITING ? '' : (t.figs || []).map(f=>`<figure class="note-fig${paused ? ' is-paused' : ''}">${f.svg}<div class="note-fig-foot"><figcaption>${escapeHtml(f.cap)}</figcaption><button type="button" class="note-fig-toggle" data-fig-toggle aria-label="${paused ? ui.figPlay : ui.figPause}"><svg viewBox="0 0 16 16" width="12" height="12" fill="currentColor" aria-hidden="true"><path class="ico-pause" d="M4 3h3v10H4zM9 3h3v10H9z"/><path class="ico-play" d="M5 3l8 5-8 5z"/></svg></button></div></figure>`).join('');
     const nav = (!NOTES_EDITING && sec.nav && t.nav) ? `<div class="note-nav"><p>${escapeHtml(t.nav.text)}</p><div class="note-nav-btns"><button class="notes-btn notes-primary" data-notes-go="${sec.nav.next}">${escapeHtml(t.nav.next)}</button><button class="notes-btn" data-notes-go="${sec.nav.skip}">${escapeHtml(t.nav.skip)}</button></div></div>` : '';
     return `<section class="note-sec"><h3>${escapeHtml(t.h)}</h3>${body}${figs}${nav}</section>`;
   }).join('');
