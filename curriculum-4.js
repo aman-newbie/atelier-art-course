@@ -1638,7 +1638,7 @@ const CURRICULUM_4 = [
 "nextStep": "You have completed Advanced Digital Art: from a non-destructive foundation through grading, photobashing, 3D assistance, speed, master studies, compositing and the start of a personal style. These skills carry forward into Professional Production, where they get applied to specialization pipelines like comics, manga, webtoon and game art."
 }
 ]},
-{id:'professional-production', title:'Professional Production & Specializations', status:'soon', order:11,
+{id:'professional-production', title:'Professional Production & Specializations', status:'live', order:11,
     desc:'Editorial illustration, comics, manga, webtoon, visual development, concept art, game art, animation pre-production, print production, and client work.',
     moduleCount:11, sample:['Comic Art','Manga','Webtoon','Concept Art','Game Art Pipeline','Animation Pre-Production'],
     modules:[
