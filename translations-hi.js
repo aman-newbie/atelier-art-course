@@ -4167,6 +4167,147 @@ const TRANSLATIONS_HI = {
       "Saturation ko evenly faila ke rakhne ke bajaye jaanbujh kar ek focal point pe concentrate kar sakta/sakti hoon."
     ],
     nextStep: "Ab tum color ko teen alag, diagnose ho sakne wali properties ki tarah samajhte ho. Module 92 specifically value mein aur gehra jaata hai \u2014 color introduce hone se pehle hi ek poori painting mein value structure ko kaise plan aur control karte hain."
+  },
+
+  m92: {
+    hook: "Jo painting grayscale mein bikhar jaati hai wo color mein kabhi sach mein kaam kar hi nahi rahi thi \u2014 aur value study wo sabse sasta tareeka hai ye pata karne ka, ghanton rendering mein lagane se pehle.",
+    whyItMatters: [
+      "Module 91 ne establish kiya ki painting ki readability ke liye value sabse important property hai. Ye module use control karne ki asli practice deta hai \u2014 grayscale studies, limited value ranges aur thumbnail value planning, ye wahi concrete techniques hain jo us principle ke peeche hain.",
+      "Ye ek genuinely universal professional aadat hai: working illustrators lagatar ek hi sequence follow karte hain \u2014 value sketch, phir grayscale ya tonal study, phir full color \u2014 specifically isliye ki structurally fail hoti painting ko thumbnail stage pe theek karna ghanton ki color rendering ke baad theek karne se kahin sasta hai."
+    ],
+    coreIdea: [
+      "Value study kisi reference ya idea ko sirf light aur dark masses tak utaar deti hai, aam taur pe poori smooth range ke bajaye 3\u20135 distinct values tak limited \u2014 kam values tumhe bade shapes aur unke relationships ke baare mein sochne par majboor karti hain, bahut jaldi detail mein kho jaane ke bajaye.",
+      "Local value (kisi object ki apni natural value, light padne se pehle) sirf shuruaati point hai. Ek believable value study light source, core shadow, cast shadow aur shadow side mein wapas bounce hoti reflected light ko bhi account karti hai \u2014 reflected light chhod dena grayscale studies ke flat dikhne ki ek common wajah hai.",
+      "Alag materials same light mein value alag tarah se hold karte hain: zyada reflective material apni lit aur shadow sides ke beech zyada contrast banata hai, jabki matte material narrow value range rakhta hai \u2014 ye wo jaankari hai jise tum Module 94 ke material rendering mein aage use karoge.",
+      "Contrast wo tool hai jo value study ke andar focal point banata hai \u2014 sabse strong value contrast wala area (light aur dark ke beech sabse bada jump) wahi hai jahan aankh naturally pehle jaati hai, isliye strong local contrast ke bina focal point kho jaata hai."
+    ],
+    mistakes: [
+      "Pehle sirf 3\u20135 simplified values mein test kiye bina seedha poori smooth value range mein kood jaana, wo step skip karte hue jo ek weak composition ko jaldi pakad leta.",
+      "Har object ko same local value dena, jo (color mein translate hone par) har object ka same color hona hoga \u2014 nateeja flat, undifferentiated hota hai.",
+      "Shadow areas mein reflected light bhool jaana, shadows ko environment se aati halki bounce of light aur color dikhane ke bajaye pure flat dark chhod dena.",
+      "Sabse strong value contrast ko intended focal point ke alawa kahin aur rakhna, aur anjaane mein aankh ko image ke galat hisse ki taraf kheench lena.",
+      "Value study ko bekaar ka busywork maanna, ek genuine diagnostic tool ki jagah jo full rendering se pehle problems pakad ke jitna time lagata hai usse kahin zyada bachata hai."
+    ],
+    proTips: [
+      "Naya piece shuru karte waqt aur values add karne se pehle kam se kam ek 3-value study (light, midtone, dark) karo \u2014 agar composition 3 values pe read nahi hoti, to zyada values use theek nahi karengi.",
+      "Shadow areas mein jaanbujh kar paas ki surfaces ke color se kheenchi hui halki reflected light add karo, shadows ko uniformly dark aur flat chhodne ke bajaye.",
+      "Kaam karte waqt kabhi kabhi posterize adjustment lagao (ya study ko haath se kuch discrete tones tak flatten karo), ye quick check hai ki detail add hote hue bhi value structure tika hua hai ya nahi.",
+      "Sabse strong value contrast ko exactly wahan rakho jahan tum chahte ho ki aankh pehle ruke, aur baaki image mein contrast comparatively kam rakho taaki wo hierarchy support ho."
+    ],
+    practice: {
+      warmup: "Same simple scene ki teen 5-minute thumbnail value studies karo, har ek mein sirf 3 values, aur compare karo ki kaunsi composition sabse clearly read hoti hai.",
+      daily: "Ek reference photo ya apne pehle ka koi piece lo aur use desaturate karo, phir uski grayscale study paint karo, shadow areas mein reflected light pe dhyan dete hue.",
+      weekly: "Same chhota scene pehle 3 values mein, phir 5 values mein, phir full smooth range mein paint karo, aur compare karo ki value range ka har agla step kitni extra clarity add karta hai.",
+      challenge: "Ek finished value study lo aur sabse strong contrast ko jaanbujh kar kisi doosre area mein le jao, phir dekho ki ek single change se aankh ke pehle jaane ki jagah kitni shift hoti hai."
+    },
+    quiz: [
+      {q:"Artists aksar value study ko poori smooth range ke bajaye sirf 3\u20135 distinct values tak kyun limit karte hain?", options:["Software 5 se zyada values render nahi kar sakta","Kam values dhyan bade shapes aur unke relationships pe laati hain, bahut jaldi detail mein kho jaane ke bajaye","Zyada tar digital painting software mein ye required hai","Zyada values hamesha kharab dikhti hain"], correct:1, explain:"Limited value range major light aur dark masses aur unki composition pe focus karwati hai, jise poori smooth value range ko shuru se judge karne se kahin aasani se evaluate aur fix kiya ja sakta hai."},
+      {q:"Reflected light kya hai, aur use chhodne se value study flat kyun lagti hai?", options:["Ye sirf digital software mein use hone wala lighting effect hai, traditional value theory mein nahi","Aas-paas ki surfaces se wapas shadow area mein bounce hoti light; ise chhodne se shadows uniformly flat aur dark reh jaate hain, subtle variation ke bajaye","Ye object ka sabse bright highlight hai, shadows se unrelated","Ye sirf glass jaise transparent objects ke liye matter karta hai"], correct:1, explain:"Reflected light environment se wapas shadow area mein bounce hoti light hai; iske bina shadows real lighting ki subtle variation ke bajaye flat, uniform dark shapes ki tarah read hote hain."},
+      {q:"Zyada reflective materials same light mein matte materials se zyada value contrast kyun dikhate hain?", options:["Reflective materials hamesha overall zyada dark dikhte hain","Wo zyada light bounce karte hain, jisse unki lit aur shadow sides ke beech zyada farak banta hai","Material type ka value contrast pe koi asar nahi hota","Matte materials hamesha reflective se zyada contrast dikhate hain"], correct:1, explain:"Zyada reflective surface zyada light bounce karti hai, jo uske sabse bright lit areas aur shadow side ke beech contrast badha deti hai, matte surface ki narrow value range ke mukable."},
+      {q:"Value study mein contrast focal point establish karne mein kaise madad karta hai?", options:["Contrast ka aankh kahan dekhti hai usse koi relation nahi","Sabse strong value contrast wala area (light se dark ka sabse bada jump) aankh ko naturally pehle kheenchta hai","Sirf color contrast focal point bana sakta hai, value contrast nahi","Focal points hamesha composition ke exact center mein hone chahiye"], correct:1, explain:"Aankh naturally sabse strong value contrast wale area ki taraf kheenchti hai, isliye us contrast ko jaanbujh kar intended focal point pe rakhna ek clear visual hierarchy support karta hai."},
+      {q:"Module ke hisaab se, professional value-first workflow mein recommended order kya hai?", options:["Pehle full color painting, phir value study, phir thumbnail sketch","Value sketch ya thumbnail, phir grayscale ya tonal study, phir full color painting","Sirf full color painting, value studies poori tarah skip karke","Value studies painting ke finished hone ke baad hi useful hain"], correct:1, explain:"Typical professional sequence ek chhote value sketch ya thumbnail se shuru hota hai, phir grayscale ya tonal study, aur tabhi full color, structural problems ko tab pakadte hue jab unhe theek karna sasta ho."}
+    ],
+    checklist: [
+      "Zyada detailed piece shuru karne se pehle ek 3-value thumbnail study bana sakta/sakti hoon.",
+      "Shadow area ko flat aur uniformly dark chhodne ke bajaye usme reflected light add kar sakta/sakti hoon.",
+      "Explain kar sakta/sakti hoon ki zyada reflective material same light mein matte material se zyada value contrast kyun dikhata hai.",
+      "Sabse strong value contrast ko jaanbujh kar apne intended focal point pe rakh sakta/sakti hoon."
+    ],
+    nextStep: "Ab tum color se independent value ko plan aur control kar sakte ho. Module 93 specifically rendering ke liye lighting mein jaata hai \u2014 form shadow, cast shadow, core shadow aur occlusion, yahan study ki gayi value relationships ke peeche ka physical logic."
+  },
+
+  m93: {
+    hook: "Shadow ek flat shape nahi hai \u2014 wo asal mein chaar alag cheezein ek saath kaam kar rahi hain (form shadow, cast shadow, core shadow aur occlusion shadow), aur zyada tar beginners chaaron ko ek single uniform dark blob ki tarah paint kar dete hain.",
+    whyItMatters: [
+      "Module 92 ne value structure plan karna sikhaya; ye module un values ke peeche ka asli physical logic deta hai \u2014 wo specific, naam wale shadow types jo kisi bhi single light source ke neeche ek form ko convincingly three-dimensional dikhate hain.",
+      "Ye foundational, transferable knowledge hai: wahi shadow logic chahe tum character render karo, prop ya environment, sab pe lagta hai, isi liye ye Module 94 ke material rendering se thik pehle aata hai \u2014 pehle ye samajhna padta hai ki generic form pe light kaise behave karti hai, tabhi seekh sakte ho ki alag materials us behavior ko kaise modify karte hain."
+    ],
+    coreIdea: [
+      "Ek light source ke neeche ek form ek light zone aur ek shadow zone mein baant jaata hai, jinhe terminator alag karta hai (wo edge jahan planes light se door mudte hain). Form shadow tab banta hai jab koi surface bas light se door face kare; cast shadow ek alag shape hai jo tab banti hai jab ek object doosri surface tak light pahunchne se rok de.",
+      "Shadows reflected (bounce) light ki wajah se shayad hi kabhi pure black hote hain \u2014 aas-paas ki surfaces se light wapas shadow side mein bounce hoti hai. Core shadow ek alag, aksar zyada dark band hai jo terminator ke paas specifically wahan aata hai jahan reflected light utni strongly nahi pahunchti.",
+      "Occlusion shadow scene ka sabse dark shadow hai, jo un tight jagahon mein aata hai jahan do surfaces milti ya lagbhag chhoti hain (jaise jahan koi object zameen pe baitha ho) \u2014 wahan na main light pahunch paati hai na reflected light, isliye ye aas-paas ki form ya cast shadow se zyada dark read hota hai.",
+      "Highlight aur center light aksar confuse hote hain par alag cheezein hain: center light bas wo plane hai jo light source ki taraf sabse seedha face karta hai, jabki highlight khud light source ka reflection hai aur viewer ki position ke saath move karta hai, bilkul sheeshe mein reflection ki tarah."
+    ],
+    mistakes: [
+      "Poore shadow area ko ek flat, uniform dark shape ki tarah treat karna, form shadow, cast shadow, core shadow aur occlusion shadow ko alag-alag causes aur values wale distinct elements ki tarah pehchane bina.",
+      "Shadows ko reflected light ke bina pure black paint karna, jisse wo subtle bounce of color aur light dikhane ke bajaye harsh, artificial lagta hai jo real shadows aam taur pe dikhate hain.",
+      "Highlight (light source ka moving reflection) ko center light (light ki taraf face karne wala plane, jo viewer ke saath move nahi karta) se confuse karna.",
+      "Occlusion shadow poori tarah bhool jaana, jo aksar wahi cheez hoti hai jo missing hone par do touching objects (zameen pe khada figure, table pe rakha prop) ek saath properly grounded nahi lagte.",
+      "Reference ki cast shadow shape ko bilkul waisa hi copy kar dena, jabki cast shadow ko us form ko behtar describe karne ke liye reshape kiya ja sakta hai jispe wo gir rahi hai, believability todne ke bina."
+    ],
+    proTips: [
+      "Classic 'shade an egg' exercise karo: ek asli ande ko safed kaagaz pe ek single desk lamp se light karo aur har shadow type (form, cast, core, occlusion) ko imagination se invent karne se pehle seedha observation se uspe pehchano.",
+      "Jab koi shadow area flat ya dead lage to specifically missing core shadow ya missing reflected light check karo \u2014 convincing dimensionality add karne ke liye aam taur pe yahi do cheezein chahiye.",
+      "Cast shadow ki shape ko us form ko behtar describe karne ke liye adjust karne se mat daro jispe wo girti hai (jaise ek cylindrical object ke around wrap karna) \u2014 audience chhoti geometric inaccuracies ko shayad hi notice karti hai jab tak shadow believable lage.",
+      "Blender jaise free 3D software se ek simple sphere-and-ground scene banao aur light source ko seedha manipulate karo, form shadow, cast shadow, core shadow aur occlusion shadow ko real time mein badalte dekho \u2014 isse abstract concepts concrete aur controllable ban jaate hain."
+    ],
+    practice: {
+      warmup: "Ek asli object (ek anda, ek ball, ek seb) ko ek single desk lamp ke neeche rakho aur uspe chaaron shadow types pehchano: form shadow, cast shadow, core shadow aur occlusion shadow.",
+      daily: "Ek simple sphere ya geometric form ko digitally render karo, jaanbujh kar chaaron shadow types aur ek alag dikhne wali highlight aur center light include karte hue.",
+      weekly: "Apni Module 92 ki koi pehli value study lo aur agar uske shadow areas mein reflected light aur core shadow missing ho to use add karo.",
+      challenge: "Do touching objects (zameen pe khada figure, table pe rakha cup) render karo aur specifically wahan jahan wo milte hain ek convincing occlusion shadow render karne pe dhyan do."
+    },
+    quiz: [
+      {q:"Form shadow aur cast shadow mein kya farak hai?", options:["Dono ek hi cheez hain, alag naam ke saath","Form shadow light source se door face karti surface se banta hai; cast shadow ek alag shape hai jo ek object doosri surface tak light pahunchne se rokne par banti hai","Form shadow sirf spheres pe aata hai, cast shadow sirf flat surfaces pe","Cast shadow hamesha form shadow se zyada dark hoti hai"], correct:1, explain:"Form shadow tab banta hai jab koi surface bas light se door mudti hai, jabki cast shadow ek bilkul alag shape hai jo tab banti hai jab ek object doosri surface tak light pahunchne se rok deta hai."},
+      {q:"Shadows aam taur pe pure black se halke kyun dikhte hain?", options:["Software pure black render nahi kar sakta","Aas-paas ki surfaces se aati reflected (bounce) light shadow area ko bhar deti hai","Shadows sirf traditional media mein dark hote hain, digital mein nahi","Professional kaam mein pure black shadows legal requirement hain"], correct:1, explain:"Aas-paas ki surfaces se bounce hoti light (reflected ya bounce light) aam taur pe shadow areas ko kuch brightness aur color se bhar deti hai, isi liye real shadows shayad hi pure black hote hain."},
+      {q:"Occlusion shadow kis wajah se banti hai, aur wo scene ki sabse dark shadow kyun hoti hai?", options:["Ye un tight jagahon mein banti hai jahan do surfaces milti ya lagbhag chhoti hain, jahan na main light pahunchti hai na reflected light","Ye sirf direct sunlight se banti hai aur indoors kabhi nahi aati","Ye sirf reflective materials pe aati hai","Ye highlight jaisi hi cheez hai"], correct:0, explain:"Occlusion shadow touching ya lagbhag-touching surfaces ke beech tight gaps mein banti hai, jahan primary aur reflected dono light blocked hoti hain, isliye wo aam taur pe scene ki sabse dark shadow hoti hai."},
+      {q:"Ek form pe highlight aur center light ke beech key farak kya hai?", options:["Dono identical aur interchangeable terms hain","Center light wo plane hai jo light source ki taraf face karta hai aur fixed rehta hai; highlight light source ka reflection hai jo viewer ki position ke saath move karta hai","Highlight sirf matte surfaces pe aata hai","Center light sirf raat ko aata hai"], correct:1, explain:"Center light light source ki taraf face karne wala fixed plane hai, jabki highlight khud light source ka reflection hai, jo viewer (ya camera) ki position badalne par shift hota hai, sheeshe mein reflection ki tarah."},
+      {q:"Module ke hisaab se, kya cast shadow ki exact shape ko strict geometric accuracy se adjust karna acceptable hai?", options:["Nahi, cast shadows hamesha geometrically perfect honi chahiye","Haan, cast shadow ko us form ko behtar describe karne ke liye reshape kiya ja sakta hai jispe wo girti hai, kyunki chhoti deviations shayad hi believability todti hain","Cast shadows ko rendering mein kabhi include nahi karna chahiye","Sirf professional software hi correct cast shadow shapes calculate kar sakta hai"], correct:1, explain:"Module batata hai ki cast shadow ki shape ko us surface ko behtar describe karne ke liye adjust karna (jaise ek cylindrical form ke around wrap karna) ek common, acceptable technique hai, kyunki audience chhoti geometric deviations ko shayad hi notice karti hai."}
+    ],
+    checklist: [
+      "Ek asli ya rendered object pe form shadow, cast shadow, core shadow aur occlusion shadow pehchan sakta/sakti hoon.",
+      "Shadow area ko pure black chhodne ke bajaye usme reflected light add kar sakta/sakti hoon.",
+      "Highlight (ek moving reflection) aur center light (light ki taraf face karne wala fixed plane) mein farak kar sakta/sakti hoon.",
+      "Jahan do objects milte ya touch karte hain wahan ek convincing occlusion shadow render kar sakta/sakti hoon."
+    ],
+    nextStep: "Ab tum kisi generic form pe light aur shadow ka physical logic samajhte ho. Module 94 isi pe seedha build karta hai specific materials ko render karke \u2014 skin aur organic surfaces \u2014 jahan wahi shadow logic is baat se modify hota hai ki koi particular material light ke neeche asal mein kaise behave karta hai."
+  },
+
+  m94: {
+    hook: "Skin sirf ek colored surface nahi hai \u2014 light uske andar jaati hai, surface ke neeche bounce karti hai aur kahin aur se wapas bahar aati hai, aur isi wajah se flat, single-tone skin kitni bhi carefully shade ki jaaye plastic jaisi hi dikhti hai.",
+    whyItMatters: [
+      "Module 93 ne kisi bhi form ke liye universal shadow logic diya. Ye module un kai modules mein se pehla hai jo dikhate hain ki ek specific material us generic logic ko kaise modify karta hai \u2014 skin sabse common aur sabse demanding surfaces mein se ek hai, kyunki insaani aankhein chehre mein kisi bhi thodi galat cheez ke prati bahut sensitive hoti hain.",
+      "Subsurface scattering, jo yahan ka core skin-specific effect hai, Module 93 ki kisi bhi cheez se genuinely alag hai: ye shadow type hai hi nahi, balki material ki khud ki property hai jo light ko penetrate karke wapas nikalne deti hai, isi liye skin ko sirf generic shadow logic nahi, apna dedicated rendering approach chahiye."
+    ],
+    coreIdea: [
+      "Subsurface scattering matlab light skin ke andar jaati hai, surface ke neeche bounce karti hai aur paas hi bahar nikalti hai, ek hard material ki tarah surface se seedha reflect hone ke bajaye. Isi liye kaan, nostrils aur fingertips jaise patle hisse strong backlight mein aksar halki laal-garam chamak dikhate hain \u2014 light unke aar-paar partly guzar rahi hoti hai.",
+      "Terminator (light se shadow ka transition) wahi jagah hai jahan subsurface scattering sabse zyada dikhti hai: ek flat, even transition ke bajaye skin pe terminator aksar highlight ya shadow dono se zyada warm, saturated color dikhata hai, kyunki light us edge pe internally scatter ho rahi hoti hai.",
+      "Realistic lighting mein skin ki shadows aam taur pe mid-tones se zyada muted aur desaturated rehni chahiye, kyunki shadows light ko reflect karne ke bajaye absorb karti hain \u2014 mid-tones, jo overexposed hue bina direct illumination lete hain, aam taur pe sabse saturated color information carry karte hain.",
+      "Skin akeli exist nahi karti: aas-paas ke environment (ek laal shirt, neela aasman, ek warm lamp) ki bounce light skin ke shadow areas mein halka sa reflect hoti hai, aur ise include karna aksar wahi cheez hoti hai jo ek rendered figure ko apne scene ka hissa lagwati hai, uske upar chipka hua nahi."
+    ],
+    mistakes: [
+      "Skin ko ek hard, opaque material ki tarah flat, single-tone shadow ke saath treat karna, subsurface scattering se banne wali warm internal glow miss karte hue, khaaskar kaan aur fingertips jaise patle areas mein.",
+      "Skin ke shadow areas ko mid-tones se zyada saturated aur colorful banana, jo realistic lighting mein unnatural lagta hai (halaanki stylized ya dramatically lit kaam mein ye ek intentional stylistic choice ho sakta hai).",
+      "Skin ko apne environment se alag-thalag render karna, paas ki colored surfaces se aati bounce light ko ignore karna jo naturally shadow areas mein halki si reflect hoti.",
+      "Form ko define karne ke liye sirf mid-tones pe rely karna, jabki ye kaam light aur shadow ke beech ke transition ko karna chahiye, jisse dull, flat look aata hai.",
+      "Skin ko bilkul smooth, zero texture ke saath banana, jo convincingly organic ke bajaye artificial aur plastic jaisa read hota hai."
+    ],
+    proTips: [
+      "Terminator pe specifically ek soft, warm glaze (aksar orange-laal) add karo, low-opacity airbrush ya overlay-mode layer se, taaki subsurface scattering jo light-to-shadow transition pe sabse strongly dikhti hai use simulate kar sako.",
+      "Realistic look ke liye shadow saturation ko mid-tone saturation se kam rakho, aur higher-saturation shadows ko dramatic ya stylized lighting ke liye ek deliberate stylistic choice ki tarah lo, default ki tarah nahi.",
+      "Kisi dominant nearby surface (kapde, background) se ek bounce-light color uthao aur use skin ke shadow areas mein low opacity pe halka sa add karo, figure ko uske environment se visually jodne ke liye.",
+      "Skin render ke end mein ek bahut subtle noise ya texture pass add karo taaki perfectly smooth gradients tootein, jo warna artificial ya plastic jaise lagte hain."
+    ],
+    practice: {
+      warmup: "Skin-toned color se ek simple sphere render karo, warm terminator glaze aur reflected bounce light add karte hue, phir use wahi sphere flat, single-tone shading ke saath render karke compare karo.",
+      daily: "Ek simple portrait ya head study lo aur uski skin ko ek base color, ek Multiply shadow layer, ek warm terminator glaze aur lit areas ke liye ek Screen ya Add layer se render karo.",
+      weekly: "Ek chhota figure illustration render karo jisme paas mein ek dominant colored surface ho (ek laal shirt, ek hara background) aur us color ko jaanbujh kar skin ke shadow areas mein bounce light ki tarah add karo.",
+      challenge: "Wahi chehra do baar render karo \u2014 ek baar muted, desaturated shadows aur vibrant mid-tones ke saath (realistic), ek baar zyada saturated shadows ke saath (stylized) \u2014 aur compare karo ki har approach overall feel kaise badalta hai."
+    },
+    quiz: [
+      {q:"Subsurface scattering kya hai, aur skin pe wo sabse zyada kahan dikhti hai?", options:["Ek shadow type jo sirf raat ko aata hai, sabse zyada maathe pe dikhta hai","Light ka skin ke andar jaakar internally bounce hona aur paas hi bahar nikalna; sabse zyada kaan, nostrils aur fingertips jaise patle areas mein dikhti hai jab backlit ho","Digital painting software ki ek brush setting jiska koi real-world basis nahi","Ek blend mode jo sirf hard, reflective materials ke liye use hota hai"], correct:1, explain:"Subsurface scattering light ke skin mein penetrate karke surface se seedha reflect hone ke bajaye paas hi wapas nikalne ko kehte hain, aur ye kaan aur fingertips jaise patle, backlit areas mein sabse zyada dikhti hai, jo garam chamakte hain."},
+      {q:"Module ke hisaab se, skin pe terminator (light-to-shadow transition) aksar kya dikhata hai?", options:["Bina kisi color variation ke ek flat, even gray transition","Highlight ya shadow dono se zyada warm, saturated color, internal light scattering ki wajah se","Pure black, bina kisi color ke","Bilkul highlight wala hi color"], correct:1, explain:"Kyunki subsurface scattering terminator pe khaaskar active hoti hai, skin pe ye transition zone aam taur pe aas-paas ke highlight ya shadow se zyada warm, saturated hue dikhata hai."},
+      {q:"Realistic lighting mein skin pe shadow saturation ki mid-tone saturation se tulna kaisi honi chahiye?", options:["Shadows hamesha mid-tones se zyada saturated honi chahiye","Shadows aam taur pe mid-tones se zyada muted/desaturated honi chahiye, kyunki shadows light reflect karne ke bajaye absorb karti hain","Shadows aur mid-tones mein saturation identical honi chahiye","Skin rendering pe saturation ka koi relevant asar nahi hota"], correct:1, explain:"Realistic lighting mein mid-tones (jo direct illumination lete hain) aam taur pe sabse saturated color carry karte hain, jabki shadows zyada muted hoti hain kyunki wo light ko reflect karne ke bajaye absorb karti hain."},
+      {q:"Skin render karte waqt environment se aati bounce light kyun important hai?", options:["Scene mein skin kaisi dikhti hai us par iska koi real asar nahi hota","Wo shadow areas mein halki si reflect hoti hai, jisse figure apne environment se visually jud ke lagta hai, upar chipka hua nahi","Ye sirf metal jaise hard, reflective materials render karne ke liye matter karti hai","Logon ko render karte waqt bounce light hamesha avoid karni chahiye"], correct:1, explain:"Skin akeli exist nahi karti \u2014 paas ki colored surfaces se shadow areas mein halki si reflect hoti bounce light ek rendered figure ko apne scene mein integrated feel karwati hai, alag se chipke hue ki tarah nahi."},
+      {q:"Skin rendering ke aakhri step ki tarah subtle texture ya noise pass add karne ki salah kyun di jaati hai?", options:["Isse file size kaafi kam ho jaata hai","Perfectly smooth skin artificial ya plastic jaisi dikhti hai, isliye subtle texture use convincingly organic read hone mein madad karta hai","Zyada tar software licenses ke liye ye required hai","Ye subsurface scattering ki zaroorat poori tarah replace kar deta hai"], correct:1, explain:"Skin pe bilkul smooth gradients artificial ya plastic jaise lagte hain; ek halka noise ya texture pass us smoothness ko todta hai aur result ko zyada convincingly organic banata hai."}
+    ],
+    checklist: [
+      "Explain kar sakta/sakti hoon ki subsurface scattering kya hai aur wo skin pe sabse zyada kahan dikhti hai.",
+      "Light-to-shadow transition pe subsurface scattering simulate karne ke liye warm terminator glaze add kar sakta/sakti hoon.",
+      "Realistic result ke liye shadow saturation ko mid-tone saturation se zyada muted rakh sakta/sakti hoon (ya stylized look ke liye jaanbujh kar ye rule tod sakta/sakti hoon).",
+      "Figure ko uske environment se jodne ke liye paas ki kisi surface se bounce light uske shadow areas mein add kar sakta/sakti hoon."
+    ],
+    nextStep: "Ab tum samajhte ho ki ek specific material (skin) Module 93 ke generic shadow logic ko kaise modify karta hai. Module 95 wahi modify-the-logic approach hard surfaces pe lagata hai \u2014 metal, glass aur stone \u2014 jo organic material se bilkul alag behave karte hain."
   }
 
 };
